@@ -1,0 +1,2526 @@
+{
+  "consorcios": {
+    "10152": {
+      "consorcio_id": "10152",
+      "municipios": [
+        {
+          "codigo_ibge": "2900108",
+          "municipio": "Abaíra",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2901304",
+          "municipio": "Andaraí",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2902807",
+          "municipio": "Barra da Estiva",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2903805",
+          "municipio": "Boa Vista do Tupim",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2904001",
+          "municipio": "Boninal",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2904050",
+          "municipio": "Bonito",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2911907",
+          "municipio": "Iaçu",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2912202",
+          "municipio": "Ibicoara",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2912608",
+          "municipio": "Ibiquera",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2913002",
+          "municipio": "Ibitiara",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2914307",
+          "municipio": "Iramaia",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2914406",
+          "municipio": "Iraquara",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2915007",
+          "municipio": "Itaeté",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2919009",
+          "municipio": "Lajedinho",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2919306",
+          "municipio": "Lençóis",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2919603",
+          "municipio": "Macajuba",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2920809",
+          "municipio": "Marcionílio Souza",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2921906",
+          "municipio": "Mucugê",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922854",
+          "municipio": "Nova Redenção",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2923035",
+          "municipio": "Novo Horizonte",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2923506",
+          "municipio": "Palmeiras",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2924306",
+          "municipio": "Piatã",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2924801",
+          "municipio": "Piritiba",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2927200",
+          "municipio": "Ruy Barbosa",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2929909",
+          "municipio": "Seabra",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2930808",
+          "municipio": "Souto Soares",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2933406",
+          "municipio": "Wagner",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO CIRCUITO DO DIAMANTE DA CHAPADA DIAMANTINA",
+      "total_municipios": 27
+    },
+    "10247": {
+      "consorcio_id": "10247",
+      "municipios": [
+        {
+          "codigo_ibge": "2904803",
+          "municipio": "Caatiba",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2910909",
+          "municipio": "Firmino Alves",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2912301",
+          "municipio": "Ibicuí",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2913507",
+          "municipio": "Iguaí",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2916807",
+          "municipio": "Itarantim",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2917102",
+          "municipio": "Itororó",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2919702",
+          "municipio": "Macarani",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2920007",
+          "municipio": "Maiquinique",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2925402",
+          "municipio": "Potiraguá",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2927804",
+          "municipio": "Santa Cruz da Vitória",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO PÚBLICO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO DE IDENTIDADE DO MEIO SUDOESTE DA BAHIA - COTEMESB",
+      "total_municipios": 10
+    },
+    "11048": {
+      "consorcio_id": "11048",
+      "municipios": [
+        {
+          "codigo_ibge": "2903409",
+          "municipio": "Belmonte",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2910727",
+          "municipio": "Eunápolis",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2911808",
+          "municipio": "Guaratinga",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2914653",
+          "municipio": "Itabela",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2915304",
+          "municipio": "Itagimirim",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2916302",
+          "municipio": "Itapebi",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2925303",
+          "municipio": "Porto Seguro",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2927705",
+          "municipio": "Santa Cruz Cabrália",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DA COSTA DO DESCOBRIMENTO - CONDESC",
+      "total_municipios": 8
+    },
+    "11558": {
+      "consorcio_id": "11558",
+      "municipios": [
+        {
+          "codigo_ibge": "2901155",
+          "municipio": "América Dourada",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2903003",
+          "municipio": "Barra do Mendes",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2903235",
+          "municipio": "Barro Alto",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2905305",
+          "municipio": "Cafarnaum",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2907608",
+          "municipio": "Central",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2912400",
+          "municipio": "Ibipeba",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2913101",
+          "municipio": "Ibititá",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2914604",
+          "municipio": "Irecê",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2915353",
+          "municipio": "Itaguaçu da Bahia",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2918357",
+          "municipio": "João Dourado",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2918506",
+          "municipio": "Jussara",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2919157",
+          "municipio": "Lapão",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2921708",
+          "municipio": "Morro do Chapéu",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922052",
+          "municipio": "Mulungu do Morro",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2925600",
+          "municipio": "Presidente Dutra",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2929255",
+          "municipio": "São Gabriel",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO DE IRECÊ",
+      "total_municipios": 16
+    },
+    "11666": {
+      "consorcio_id": "11666",
+      "municipios": [
+        {
+          "codigo_ibge": "2900900",
+          "municipio": "Almadina",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2902401",
+          "municipio": "Aurelino Leal",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2903300",
+          "municipio": "Barro Preto",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2908002",
+          "municipio": "Coaraci",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2911006",
+          "municipio": "Floresta Azul",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2912103",
+          "municipio": "Ibicaraí",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2913606",
+          "municipio": "Ilhéus",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2914802",
+          "municipio": "Itabuna",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2914901",
+          "municipio": "Itacaré",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2915502",
+          "municipio": "Itajuípe",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2916203",
+          "municipio": "Itapé",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2916609",
+          "municipio": "Itapitanga",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2920700",
+          "municipio": "Maraú",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2932200",
+          "municipio": "Ubaitaba",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2932705",
+          "municipio": "Uruçuca",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO DE DESENVOLVIMENTO SUSTENTAVEL DO TERRITÓRIO LITORAL SUL",
+      "total_municipios": 15
+    },
+    "12128": {
+      "consorcio_id": "12128",
+      "municipios": [
+        {
+          "codigo_ibge": "2901007",
+          "municipio": "Amargosa",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2904308",
+          "municipio": "Brejões",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2909505",
+          "municipio": "Cravolândia",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2910305",
+          "municipio": "Elísio Medrado",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2914208",
+          "municipio": "Irajuba",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2916708",
+          "municipio": "Itaquara",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2916906",
+          "municipio": "Itiruçu",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2917607",
+          "municipio": "Jaguaquara",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2918209",
+          "municipio": "Jiquiriçá",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2918704",
+          "municipio": "Lafaiete Coutinho",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2918803",
+          "municipio": "Laje",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2919058",
+          "municipio": "Lajedo do Tabocal",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2920502",
+          "municipio": "Maracás",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2921302",
+          "municipio": "Milagres",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922409",
+          "municipio": "Mutuípe",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922805",
+          "municipio": "Nova Itarana",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2924900",
+          "municipio": "Planaltino",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2927903",
+          "municipio": "Santa Inês",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2929404",
+          "municipio": "São Miguel das Matas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2932101",
+          "municipio": "Ubaíra",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO VALE DO JIQUIRIÇÁ",
+      "total_municipios": 20
+    },
+    "12838": {
+      "consorcio_id": "12838",
+      "municipios": [
+        {
+          "codigo_ibge": "2905008",
+          "municipio": "Caculé",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2905206",
+          "municipio": "Caetité",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2906600",
+          "municipio": "Candiba",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2911709",
+          "municipio": "Guanambi",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2912004",
+          "municipio": "Ibiassucê",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2913408",
+          "municipio": "Igaporã",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2917334",
+          "municipio": "Iuiu",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2918753",
+          "municipio": "Lagoa Real",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2920205",
+          "municipio": "Malhada",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2923407",
+          "municipio": "Palmas de Monte Alto",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2924504",
+          "municipio": "Pindaí",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2926400",
+          "municipio": "Riacho de Santana",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2926806",
+          "municipio": "Rio do Antônio",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2930006",
+          "municipio": "Sebastião Laranjeiras",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2931004",
+          "municipio": "Tanhaçu",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2931053",
+          "municipio": "Tanque Novo",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2932606",
+          "municipio": "Urandi",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO ALTO SERTÃO",
+      "total_municipios": 17
+    },
+    "13427": {
+      "consorcio_id": "13427",
+      "municipios": [
+        {
+          "codigo_ibge": "2906857",
+          "municipio": "Capela do Alto Alegre",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2906873",
+          "municipio": "Capim Grosso",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2920106",
+          "municipio": "Mairi",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922730",
+          "municipio": "Nova Fátima",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2924058",
+          "municipio": "Pé de Serra",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2924652",
+          "municipio": "Pintadas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2925931",
+          "municipio": "Quixabeira",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2929370",
+          "municipio": "São José do Jacuípe",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2930600",
+          "municipio": "Serrolândia",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2933059",
+          "municipio": "Várzea da Roça",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2933109",
+          "municipio": "Várzea do Poço",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO PÚBLICO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO BACIA DO JACUÍPE",
+      "total_municipios": 11
+    },
+    "14618": {
+      "consorcio_id": "14618",
+      "municipios": [
+        {
+          "codigo_ibge": "2904100",
+          "municipio": "Boquira",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2904209",
+          "municipio": "Botuporã",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2904605",
+          "municipio": "Brumado",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2907558",
+          "municipio": "Caturama",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2910107",
+          "municipio": "Dom Basílio",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2900504",
+          "municipio": "Érico Cardoso",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2912509",
+          "municipio": "Ibipitanga",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2917201",
+          "municipio": "Ituaçu",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2918605",
+          "municipio": "Jussiape",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2919504",
+          "municipio": "Livramento de Nossa Senhora",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2919801",
+          "municipio": "Macaúbas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2923209",
+          "municipio": "Oliveira dos Brejinhos",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2923605",
+          "municipio": "Paramirim",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2926707",
+          "municipio": "Rio de Contas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2926905",
+          "municipio": "Rio do Pires",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO PÚBLICO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO BACIA DO PARAMIRIM",
+      "total_municipios": 15
+    },
+    "15198": {
+      "consorcio_id": "15198",
+      "municipios": [
+        {
+          "codigo_ibge": "2905107",
+          "municipio": "Caém",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2917508",
+          "municipio": "Jacobina",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2921203",
+          "municipio": "Miguel Calmon",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2921401",
+          "municipio": "Mirangaba",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2923357",
+          "municipio": "Ourolândia",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2929800",
+          "municipio": "Saúde",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2932457",
+          "municipio": "Umburanas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2933158",
+          "municipio": "Várzea Nova",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO PIEMONTE DA DIAMANTINA",
+      "total_municipios": 8
+    },
+    "23423": {
+      "consorcio_id": "23423",
+      "municipios": [
+        {
+          "codigo_ibge": "2900801",
+          "municipio": "Alcobaça",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2906907",
+          "municipio": "Caravelas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2912806",
+          "municipio": "Ibirapuã",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2915601",
+          "municipio": "Itamaraju",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2916005",
+          "municipio": "Itanhém",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2918456",
+          "municipio": "Jucuruçu",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2918902",
+          "municipio": "Lajedão",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2921104",
+          "municipio": "Medeiros Neto",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922003",
+          "municipio": "Mucuri",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2923001",
+          "municipio": "Nova Viçosa",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2925501",
+          "municipio": "Prado",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2931350",
+          "municipio": "Teixeira de Freitas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2933257",
+          "municipio": "Vereda",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO PUBLICO INTERMUNICIPAL DE INFRA ESTRUTURA DO EXTREMO SUL DA BAHIA - CONSTRUIR",
+      "total_municipios": 13
+    },
+    "29296": {
+      "consorcio_id": "29296",
+      "municipios": [
+        {
+          "codigo_ibge": "2904852",
+          "municipio": "Cabaceiras do Paraguaçu",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2904902",
+          "municipio": "Cachoeira",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2907301",
+          "municipio": "Castro Alves",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2908309",
+          "municipio": "Conceição do Almeida",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2909802",
+          "municipio": "Cruz das Almas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2910206",
+          "municipio": "Dom Macedo Costa",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2911600",
+          "municipio": "Governador Mangabeira",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2920601",
+          "municipio": "Maragogipe",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922201",
+          "municipio": "Muniz Ferreira",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922300",
+          "municipio": "Muritiba",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922508",
+          "municipio": "Nazaré",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2928505",
+          "municipio": "Santa Terezinha",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2928604",
+          "municipio": "Santo Amaro",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2928703",
+          "municipio": "Santo Antônio de Jesus",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2929107",
+          "municipio": "São Felipe",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2929008",
+          "municipio": "São Félix",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2929750",
+          "municipio": "Saubara",
+          "nivel": "1",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO DO TERRITÓRIO DO RECÔNCAVO - CTR",
+      "total_municipios": 17
+    },
+    "29301": {
+      "consorcio_id": "29301",
+      "municipios": [
+        {
+          "codigo_ibge": "2903904",
+          "municipio": "Bom Jesus da Lapa",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2904506",
+          "municipio": "Brotas de Macaúbas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2907103",
+          "municipio": "Carinhanha",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2908101",
+          "municipio": "Cocos",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2913200",
+          "municipio": "Ibotirama",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2921054",
+          "municipio": "Matina",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2921609",
+          "municipio": "Morpará",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2923704",
+          "municipio": "Paratinga",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2930154",
+          "municipio": "Serra do Ramalho",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2930758",
+          "municipio": "Sítio do Mato",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO VELHO CHICO",
+      "total_municipios": 10
+    },
+    "29302": {
+      "consorcio_id": "29302",
+      "municipios": [
+        {
+          "codigo_ibge": "2901205",
+          "municipio": "Anagé",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2902005",
+          "municipio": "Aracatu",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2903508",
+          "municipio": "Belo Campo",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2906709",
+          "municipio": "Cândido Sales",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2906899",
+          "municipio": "Caraíbas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2908705",
+          "municipio": "Condeúba",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2909000",
+          "municipio": "Cordeiros",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2910404",
+          "municipio": "Encruzilhada",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2911659",
+          "municipio": "Guajeru",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2915809",
+          "municipio": "Itambé",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2919405",
+          "municipio": "Licínio de Almeida",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2919959",
+          "municipio": "Maetinga",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2920304",
+          "municipio": "Malhada de Pedras",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2921807",
+          "municipio": "Mortugaba",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2924702",
+          "municipio": "Piripá",
+          "nivel": "1",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2925709",
+          "municipio": "Presidente Jânio Quadros",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2926657",
+          "municipio": "Ribeirão do Largo",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2931806",
+          "municipio": "Tremedal",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2933307",
+          "municipio": "Vitória da Conquista",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO INTERMUNICIPAL DO VALE DO RIO GAVIÃO - CIVALERG",
+      "total_municipios": 19
+    },
+    "29307": {
+      "consorcio_id": "29307",
+      "municipios": [
+        {
+          "codigo_ibge": "2900207",
+          "municipio": "Abaré",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2907707",
+          "municipio": "Chorrochó",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2911402",
+          "municipio": "Glória",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2918100",
+          "municipio": "Jeremoabo",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2919900",
+          "municipio": "Macururé",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2924009",
+          "municipio": "Paulo Afonso",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2924207",
+          "municipio": "Pedro Alexandre",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2927101",
+          "municipio": "Rodelas",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2927606",
+          "municipio": "Santa Brígida",
+          "nivel": null,
+          "status": "nao_habilitado"
+        }
+      ],
+      "nome": "CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO DO SERTÃO BAIANO",
+      "total_municipios": 9
+    },
+    "29308": {
+      "consorcio_id": "29308",
+      "municipios": [
+        {
+          "codigo_ibge": "2906105",
+          "municipio": "Canápolis",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2909109",
+          "municipio": "Coribe",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2909307",
+          "municipio": "Correntina",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2910776",
+          "municipio": "Feira da Mata",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2917359",
+          "municipio": "Jaborandi",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2928109",
+          "municipio": "Santa Maria da Vitória",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2928208",
+          "municipio": "Santana",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2929057",
+          "municipio": "São Félix do Coribe",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2930303",
+          "municipio": "Serra Dourada",
+          "nivel": "2",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO INTERMUNICIPAL BACIA DO RIO CORRENTE - CIBARC",
+      "total_municipios": 9
+    },
+    "29310": {
+      "consorcio_id": "29310",
+      "municipios": [
+        {
+          "codigo_ibge": "2929206",
+          "municipio": "São Francisco do Conde",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO INTERMUNICIPAL SOMAR",
+      "total_municipios": 1
+    },
+    "29311": {
+      "consorcio_id": "29311",
+      "municipios": [
+        {
+          "codigo_ibge": "2905909",
+          "municipio": "Campo Alegre de Lourdes",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2906824",
+          "municipio": "Canudos",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2907202",
+          "municipio": "Casa Nova",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2909901",
+          "municipio": "Curaçá",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2918407",
+          "municipio": "Juazeiro",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2924405",
+          "municipio": "Pilão Arcado",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2926004",
+          "municipio": "Remanso",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2930204",
+          "municipio": "Sento Sé",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2930774",
+          "municipio": "Sobradinho",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2932002",
+          "municipio": "Uauá",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO SUSTENTÁVEL TERRITÓRIO DO SÃO FRANCISCO - CONSTESF",
+      "total_municipios": 10
+    },
+    "29322": {
+      "consorcio_id": "29322",
+      "municipios": [
+        {
+          "codigo_ibge": "2914703",
+          "municipio": "Itaberaba",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2916856",
+          "municipio": "Itatim",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922102",
+          "municipio": "Mundo Novo",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2925956",
+          "municipio": "Rafael Jambeiro",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2931301",
+          "municipio": "Tapiramutá",
+          "nivel": "2",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO PÚBLICO DO PIEMONTE DO PARAGUAÇU",
+      "total_municipios": 5
+    },
+    "29323": {
+      "consorcio_id": "29323",
+      "municipios": [
+        {
+          "codigo_ibge": "2900355",
+          "municipio": "Adustina",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2901601",
+          "municipio": "Antas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2902658",
+          "municipio": "Banzaê",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2907806",
+          "municipio": "Cícero Dantas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2907905",
+          "municipio": "Cipó",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2909208",
+          "municipio": "Coronel João Sá",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2910701",
+          "municipio": "Euclides da Cunha",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2910750",
+          "municipio": "Fátima",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2911857",
+          "municipio": "Heliópolis",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2916500",
+          "municipio": "Itapicuru",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922904",
+          "municipio": "Nova Soure",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2923050",
+          "municipio": "Novo Triunfo",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2923100",
+          "municipio": "Olindina",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2923803",
+          "municipio": "Paripiranga",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2926509",
+          "municipio": "Ribeira do Amparo",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2926608",
+          "municipio": "Ribeira do Pombal",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2930766",
+          "municipio": "Sítio do Quinto",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO INTERMUNICIPAL SEMIÁRIDO NORDESTE II - CISAN",
+      "total_municipios": 17
+    },
+    "29326": {
+      "consorcio_id": "29326",
+      "municipios": [
+        {
+          "codigo_ibge": "2900306",
+          "municipio": "Acajutiba",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2900702",
+          "municipio": "Alagoinhas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2901908",
+          "municipio": "Aporá",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2902054",
+          "municipio": "Araçás",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2902203",
+          "municipio": "Aramari",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2907004",
+          "municipio": "Cardeal da Silva",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2907509",
+          "municipio": "Catu",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2908606",
+          "municipio": "Conde",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2909604",
+          "municipio": "Crisópolis",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2910503",
+          "municipio": "Entre Rios",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2910602",
+          "municipio": "Esplanada",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2913705",
+          "municipio": "Inhambupe",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2915908",
+          "municipio": "Itanagra",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2917904",
+          "municipio": "Jandaíra",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2923308",
+          "municipio": "Ouriçangas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2924108",
+          "municipio": "Pedrão",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2927002",
+          "municipio": "Rio Real",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2929701",
+          "municipio": "Sátiro Dias",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO LITORAL NORTE E AGRESTE BAIANO",
+      "total_municipios": 18
+    },
+    "45429": {
+      "consorcio_id": "45429",
+      "municipios": [
+        {
+          "codigo_ibge": "2902906",
+          "municipio": "Barra do Choça",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2903706",
+          "municipio": "Boa Nova",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2903953",
+          "municipio": "Bom Jesus da Serra",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2905156",
+          "municipio": "Caetanos",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2920403",
+          "municipio": "Manoel Vitorino",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2921450",
+          "municipio": "Mirante",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2922706",
+          "municipio": "Nova Canaã",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2925006",
+          "municipio": "Planalto",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2925105",
+          "municipio": "Poções",
+          "nivel": null,
+          "status": "nao_habilitado"
+        }
+      ],
+      "nome": "CONSORCIO INTERMUNICIPAL DO SUDOESTE DA BAHIA  CISUDOESTE",
+      "total_municipios": 9
+    },
+    "8108": {
+      "consorcio_id": "8108",
+      "municipios": [
+        {
+          "codigo_ibge": "2900405",
+          "municipio": "Água Fria",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2901106",
+          "municipio": "Amélia Rodrigues",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2901502",
+          "municipio": "Anguera",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2901700",
+          "municipio": "Antônio Cardoso",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2908200",
+          "municipio": "Conceição da Feira",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2908507",
+          "municipio": "Conceição do Jacuípe",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2908903",
+          "municipio": "Coração de Maria",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2913804",
+          "municipio": "Ipecaetá",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2914505",
+          "municipio": "Irará",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2927507",
+          "municipio": "Santa Bárbara",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2928307",
+          "municipio": "Santanópolis",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2928802",
+          "municipio": "Santo Estêvão",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2929305",
+          "municipio": "São Gonçalo dos Campos",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2930402",
+          "municipio": "Serra Preta",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2931103",
+          "municipio": "Tanquinho",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2931400",
+          "municipio": "Teodoro Sampaio",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2931707",
+          "municipio": "Terra Nova",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO PORTAL DO SERTÃO",
+      "total_municipios": 17
+    },
+    "8514": {
+      "consorcio_id": "8514",
+      "municipios": [
+        {
+          "codigo_ibge": "2901353",
+          "municipio": "Andorinha",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2901809",
+          "municipio": "Antônio Gonçalves",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2905503",
+          "municipio": "Caldeirão Grande",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2906006",
+          "municipio": "Campo Formoso",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2910859",
+          "municipio": "Filadélfia",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2917706",
+          "municipio": "Jaguarari",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2924603",
+          "municipio": "Pindobaçu",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2925253",
+          "municipio": "Ponto Novo",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2930105",
+          "municipio": "Senhor do Bonfim",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO PÚBLICO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO PIEMONTE NORTE DO ITAPICURU",
+      "total_municipios": 9
+    },
+    "8565": {
+      "consorcio_id": "8565",
+      "municipios": [
+        {
+          "codigo_ibge": "2902302",
+          "municipio": "Aratuípe",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2905404",
+          "municipio": "Cairu",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2905800",
+          "municipio": "Camamu",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2911204",
+          "municipio": "Gandu",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2912707",
+          "municipio": "Ibirapitanga",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2913457",
+          "municipio": "Igrapiúna",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2917300",
+          "municipio": "Ituberá",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2917805",
+          "municipio": "Jaguaripe",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922607",
+          "municipio": "Nilo Peçanha",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2924678",
+          "municipio": "Piraí do Norte",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2925758",
+          "municipio": "Presidente Tancredo Neves",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2931202",
+          "municipio": "Taperoá",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2931608",
+          "municipio": "Teolândia",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2932903",
+          "municipio": "Valença",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2933505",
+          "municipio": "Wenceslau Guimarães",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO INTERMUNICIPAL DO MOSAICO DAS APAS DO BAIXO SUL - CIAPRA",
+      "total_municipios": 15
+    },
+    "8801": {
+      "consorcio_id": "8801",
+      "municipios": [
+        {
+          "codigo_ibge": "2900603",
+          "municipio": "Aiquara",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2901957",
+          "municipio": "Apuarema",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2903102",
+          "municipio": "Barra do Rocha",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2911501",
+          "municipio": "Gongogi",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2912905",
+          "municipio": "Ibirataia",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2913903",
+          "municipio": "Ipiaú",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2915106",
+          "municipio": "Itagi",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2915205",
+          "municipio": "Itagibá",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2915700",
+          "municipio": "Itamari",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2918001",
+          "municipio": "Jequié",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2918308",
+          "municipio": "Jitaúna",
+          "nivel": "2",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922755",
+          "municipio": "Nova Ibiá",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2932309",
+          "municipio": "Ubatã",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO INTERMUNICIPAL DO MÉDIO RIO DAS CONTAS - CIMURC",
+      "total_municipios": 13
+    },
+    "9273": {
+      "consorcio_id": "9273",
+      "municipios": [
+        {
+          "codigo_ibge": "2901403",
+          "municipio": "Angical",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2902500",
+          "municipio": "Baianópolis",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2902708",
+          "municipio": "Barra",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2903201",
+          "municipio": "Barreiras",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2904407",
+          "municipio": "Brejolândia",
+          "nivel": "1",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2904753",
+          "municipio": "Buritirama",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2907400",
+          "municipio": "Catolândia",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2909406",
+          "municipio": "Cotegipe",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2909703",
+          "municipio": "Cristópolis",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2911105",
+          "municipio": "Formosa do Rio Preto",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2919553",
+          "municipio": "Luís Eduardo Magalhães",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2920452",
+          "municipio": "Mansidão",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922250",
+          "municipio": "Muquém do São Francisco",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2928406",
+          "municipio": "Santa Rita de Cássia",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2928901",
+          "municipio": "São Desidério",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2930907",
+          "municipio": "Tabocas do Brejo Velho",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2933455",
+          "municipio": "Wanderley",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO INTERMUNICIPAL DO OESTE DA BAHIA - CONSID",
+      "total_municipios": 17
+    },
+    "9546": {
+      "consorcio_id": "9546",
+      "municipios": [
+        {
+          "codigo_ibge": "2902252",
+          "municipio": "Arataca",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2904704",
+          "municipio": "Buerarema",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2905602",
+          "municipio": "Camacan",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2906303",
+          "municipio": "Canavieiras",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2915403",
+          "municipio": "Itaju do Colônia",
+          "nivel": "1",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2918555",
+          "municipio": "Jussari",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2920908",
+          "municipio": "Mascote",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2923902",
+          "municipio": "Pau Brasil",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2928059",
+          "municipio": "Santa Luzia",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2929354",
+          "municipio": "São José da Vitória",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2932507",
+          "municipio": "Una",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO INTERMUNICIPAL DA MATA ATLÂNTICA - CIMA",
+      "total_municipios": 11
+    },
+    "9742": {
+      "consorcio_id": "9742",
+      "municipios": [
+        {
+          "codigo_ibge": "2902104",
+          "municipio": "Araci",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2903276",
+          "municipio": "Barrocas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2903607",
+          "municipio": "Biritinga",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2906402",
+          "municipio": "Candeal",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2906808",
+          "municipio": "Cansanção",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2908408",
+          "municipio": "Conceição do Coité",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2913309",
+          "municipio": "Ichu",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2917003",
+          "municipio": "Itiúba",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2919108",
+          "municipio": "Lamarão",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2921500",
+          "municipio": "Monte Santo",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2922656",
+          "municipio": "Nordestina",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2925808",
+          "municipio": "Queimadas",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2925907",
+          "municipio": "Quijingue",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2926103",
+          "municipio": "Retirolândia",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2928000",
+          "municipio": "Santaluz",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2928950",
+          "municipio": "São Domingos",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2930501",
+          "municipio": "Serrinha",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2931509",
+          "municipio": "Teofilândia",
+          "nivel": "3",
+          "status": "habilitado"
+        },
+        {
+          "codigo_ibge": "2931905",
+          "municipio": "Tucano",
+          "nivel": null,
+          "status": "nao_habilitado"
+        },
+        {
+          "codigo_ibge": "2933000",
+          "municipio": "Valente",
+          "nivel": "3",
+          "status": "habilitado"
+        }
+      ],
+      "nome": "CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO DO SISAL - CONSISAL",
+      "total_municipios": 20
+    }
+  },
+  "data_consulta": "2026-08-01",
+  "fonte_url": "https://gestor.meioambiente.ba.gov.br/Consultas/ConsultaGAC/",
+  "gerado_em": "2026-08-01"
+}
