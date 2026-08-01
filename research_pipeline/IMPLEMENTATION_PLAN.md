@@ -422,9 +422,52 @@ e se prova que as armadilhas estão tratadas.
 
 ---
 
-## Patch 5 — Derivação mecânica de aliases
+## Patch 5 — Derivação mecânica de aliases ✅ feito
 
 **Objetivo:** a camada que faz `CONSORCIO` casar com `Consórcio`, como funções puras sem I/O.
+
+**Feito**, como planejado, sem divergência de `GOAL.md`.
+
+Medido nos 29 nomes reais de consórcio: exatamente **14** trazem `" - SIGLA"` (uma delas via o
+mojibake `\x96` do CISUDOESTE, não `"-"`) — as outras 15 não têm separador e a sigla fica `None`.
+A cascata de `PREFIXOS_FRENTE` descasca o boilerplate (`CONSORCIO`, `PÚBLICO`/`INTERFEDERATIVO`,
+`INTERMUNICIPAL`, `DE DESENVOLVIMENTO SUSTENTÁVEL`, `DO TERRITÓRIO [DE IDENTIDADE]`, `DE`/`DO`
+soltos, mais o sufixo `DA BAHIA`/`BAIANO`) e sobra a `chave_curta`: `9742` → `sisal`, `8108` →
+`portal do sertao`, `29308` → `bacia do rio corrente`, entre outras. Nenhum item para `"da"` solto
+na cascata — nos 29 nomes reais ela só aparece dentro do que importa (`"da costa do
+descobrimento"`) ou no sufixo composto `"da bahia"`, nunca como boilerplate isolado; forçá-la
+cortaria nome de verdade.
+
+A ordem da cascata é carga estrutural, não estética: `"do territorio"` tem de ser tentado **antes**
+de `"do"` solto, senão o `"do"` sozinho consome a primeira metade da frase e `"territorio"` sobra
+grudado no que deveria ser a chave curta — confirmado por mutação (ver abaixo).
+
+Sigla sai do nome **cru**, nunca do dobrado — `fold()` destrói a caixa alta que a distingue do
+resto do nome, e é o mesmo motivo pelo qual o `GOAL.md` §7.2 já registrava essa regra para o alias
+de município (ela só ficou explícita agora para o de consórcio). `SEPARADOR_SIGLA` inclui o mesmo
+conjunto de traços/mojibakes que `common/text.py` trata do lado do nome (`\x96`, `\x97`, en/em-dash),
+porque a sigla vive do outro lado do mesmo separador.
+
+`derive_municipio_aliases` devolve `{fold(nome)}` mais a variante sem conectivo (`de`/`do`/`da`)
+quando ela difere — `"Barra do Choça"` vira `{"barra do choca", "barra choca"}`. `"Dias d'Ávila"`
+gera só uma forma: o apóstrofo já foi absorvido por `fold()` antes de virar token, então não sobra
+`d` solto para remover — o `"d"` na lista de conectivos é defesa contra uma fonte hipotética que
+escreva `"Dias D Ávila"` com espaço, não algo exercitado pelos 417 nomes atuais.
+
+`config/aliases.yaml` recebeu o único override real, migrado (copiado, não removido) de
+`scripts/lib/municipios_ba.py:67`: `2928505 → ["santa teresinha"]`. O motivo, como o patch 4 já
+tinha confirmado para os nomes de município em geral: **não** é divergência GAC × IBGE — as duas
+fontes escrevem `Santa Terezinha`, com z. É alias para a grafia com **s** de texto de terceiro.
+
+27 testes novos, 142 no total, todos passando. Mutação: extrair a sigla do nome dobrado em vez do
+cru quebra 5 testes; remover `\x96`/`\x97` de `SEPARADOR_SIGLA` quebra 3 (inclusive o de
+CISUDOESTE); inverter a ordem `"do"` / `"do territorio"` na cascata quebra a chave curta de `9742`
+(`"territorio do sisal"` em vez de `"sisal"`); remover a variante sem conectivo de
+`derive_municipio_aliases` quebra os casos parametrizados com `de`/`do`.
+
+**Não faz ainda:** nenhum matching de fato (patch 6) — aqui só se deriva o conjunto de grafias
+possíveis. `load_overrides` não é consumido por ninguém ainda; existe para o patch 6 somar aos
+aliases derivados.
 
 **Arquivos**
 - **criar** `research_pipeline/aliases.py`
@@ -801,7 +844,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | 2 | `common/`: `fold()` + `read_dbf()` ✅ | não | `pytest common/tests` (paridade 417) |
 | 3 | Carregador + **AC8** ✅ | não | `python -m research_pipeline.refs` |
 | 4 | Vocabulários + 2 armadilhas XLSX ✅ | não | `python -m research_pipeline.vocab` |
-| 5 | Aliases mecânicos | não | `python -m research_pipeline.aliases` |
+| 5 | Aliases mecânicos ✅ | não | `python -m research_pipeline.aliases` |
 | 6 | Matcher determinístico | não | `pytest test_matcher.py` |
 | 7 | Schemas + validador | não | `pytest test_validate.py` |
 | 8 | Estruturador fixture + `extract` + **fixture semente** | não | `check_golden extract` |
