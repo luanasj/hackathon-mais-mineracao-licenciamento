@@ -16,7 +16,7 @@ import type { IndiceProcessos, RegistroIndice } from '@/lib/processos'
 import { normalizarProcesso } from '@/lib/processos'
 
 import { CORES, MONO, SERIF, fmt2 } from './dados'
-import { s } from './ui'
+import { Aviso, s } from './ui'
 
 export interface BuscaProcessoProps {
   indice: IndiceProcessos | null
@@ -37,13 +37,13 @@ export default function BuscaProcesso({
   const [aberto, setAberto] = useState(false)
   const containerRef = useRef<HTMLDivElement | null>(null)
 
-  // Reflete a seleção vinda de fora (botões de virada) no campo de texto, para
-  // que o campo nunca contradiga o que está sendo caracterizado.
+  // Reflete a seleção vinda de fora (botões de virada, desenho manual) no
+  // campo de texto, para que ele nunca contradiga o que está sendo
+  // caracterizado — inclusive limpando quando a origem deixa de ser um
+  // processo (ex.: usuário desenhou a área por cima de uma busca anterior).
   useEffect(() => {
-    if (selecionado) {
-      setEntrada(selecionado.processo)
-      setAberto(false)
-    }
+    setEntrada(selecionado ? selecionado.processo : '')
+    setAberto(false)
   }, [selecionado])
 
   useEffect(() => {
@@ -185,6 +185,16 @@ export default function BuscaProcesso({
             </li>
           ))}
         </ul>
+      )}
+
+      {/* O índice é o que faz a busca existir. Quando ele não carrega, o botão
+          fica desabilitado — sem esta linha, desabilitado e mudo, e o usuário
+          fica clicando num controle que nunca vai responder. */}
+      {erroIndice && (
+        <Aviso erro>
+          {erroIndice} A busca por processo está indisponível — desenhe a poligonal no mapa para
+          seguir com a análise.
+        </Aviso>
       )}
 
       {semSaida && (

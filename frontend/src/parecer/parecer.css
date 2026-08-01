@@ -184,6 +184,16 @@ button:disabled {
   .pc-col-right {
     border: none;
   }
+
+  /* O caminho até a resposta sai inteiro no papel, com fatos, regras,
+     precedência e dispositivo — independente do que estava aberto na tela. */
+  .pc-etapa-detalhe {
+    display: block !important;
+  }
+
+  .maplibregl-map {
+    break-inside: avoid;
+  }
 }
 
 .pc-lupa:hover {

@@ -26,11 +26,11 @@ import * as maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 
 import type { Caixa } from './dados'
-import { CAIXA_BAHIA, CAIXA_BRASIL, CAIXA_RELEVO, CORES } from './dados'
+import { CAIXA_BAHIA, CAIXA_RELEVO, CORES } from './dados'
 
 const BASE = `${import.meta.env.BASE_URL}data`
 
-export type NivelZoom = 'brasil' | 'bahia' | 'area'
+export type NivelZoom = 'bahia' | 'area'
 
 export interface MapaHandle {
   /** Aproxima (fator > 1) ou afasta (fator < 1) sobre o centro atual. */
@@ -270,5 +270,5 @@ function enquadrar(
     return
   }
 
-  map.fitBounds(limites(nivel === 'brasil' ? CAIXA_BRASIL : CAIXA_BAHIA), opcoes)
+  map.fitBounds(limites(CAIXA_BAHIA), opcoes)
 }

@@ -26,9 +26,10 @@ import {
 } from '@/lib/porte'
 import type { IndiceProcessos, RegistroIndice } from '@/lib/processos'
 import { carregarIndice } from '@/lib/processos'
-import type { StatusHabilitacao, Tipologia } from '@/lib/schemas'
+import type { IncidenciaMunicipal, ProcessoProps, StatusHabilitacao, Tipologia } from '@/lib/schemas'
 import { FASES_ANM, SUBSTANCIAS_FREQUENTES } from '@/lib/vocabulario'
-import { validar } from '@/lib/validacao'
+import type { CampoFormulario, Pendencia } from '@/lib/validacao'
+import { pendenciaDe, validar } from '@/lib/validacao'
 import { useFormulario } from '@/state/formulario'
 import type { UsoHidrico } from '@/state/tipos'
 
@@ -38,12 +39,12 @@ import type { ResultadoDesenho } from './MapaDesenho'
 import MapaProcesso from './MapaProcesso'
 import type { MapaHandle, NivelZoom } from './MapaProcesso'
 import PainelParecer from './PainelParecer'
-import { CORES, SERIF, fmt, fmt2, nomeOrgao } from './dados'
+import TelaInicial from './TelaInicial'
+import { CORES, SERIF, fmt, fmt2, nomeOrgao, pct } from './dados'
 import { baixarPedidoLai } from './lai'
-import { Etiqueta, GrupoSegmentado, Pendente, estiloSegmento, s } from './ui'
+import { Aviso, Etiqueta, GrupoSegmentado, Pendente, estiloSegmento, s } from './ui'
 
 const ZOOMS: { k: NivelZoom; rotulo: string }[] = [
-  { k: 'brasil', rotulo: 'Brasil' },
   { k: 'bahia', rotulo: 'Bahia' },
   { k: 'area', rotulo: 'A área' },
 ]
@@ -67,7 +68,7 @@ const COR_STATUS: Record<StatusHabilitacao, string> = {
 }
 
 export default function ParecerCompetencia() {
-  const { estado, despachar, tipologia, parecer, ms_avaliacao } = useFormulario()
+  const { estado, despachar, tipologia, parecer } = useFormulario()
 
   const [indice, setIndice] = useState<IndiceProcessos | null>(null)
   const [erroIndice, setErroIndice] = useState<string | null>(null)
@@ -115,6 +116,19 @@ export default function ParecerCompetencia() {
   const municipioPrincipal = municipios[0] ?? null
   const areaHa = estado.processo?.area_ha ?? estado.area?.area_ha ?? null
 
+  /**
+   * Quanto da poligonal cai em cada município. O índice de A.5 é enxuto de
+   * propósito e não carrega a proporção; ela vem da feição do SIGMINE, que já
+   * foi buscada para o mapa. Sem isso, quem consulta por processo — o caminho
+   * principal — via só a lista de nomes, sem saber se o segundo município leva
+   * 40% da área ou uma lasca de borda.
+   */
+  const incidencias: IncidenciaMunicipal[] =
+    (geometria?.properties as ProcessoProps | null)?.municipios ??
+    estado.area?.municipios ??
+    []
+  const incidenciaDe = (nome: string) => incidencias.find((m) => m.nm_mun === nome) ?? null
+
   const teto = tipologia ? tetoSlider(tipologia) : 0
   const porte = estado.porte_valor
   const faixaAtual = tipologia && porte !== null ? linhaFaixa(tipologia, porte) : null
@@ -139,6 +153,22 @@ export default function ParecerCompetencia() {
     setDesenhando(false)
   }
 
+  /**
+   * Sem área não há o que caracterizar: a tela inicial pede só o processo ou o
+   * desenho. Os dois desembocam aqui embaixo — pelo número, com o cadastro do
+   * SIGMINE preenchido; pelo desenho, com os mesmos campos em branco.
+   */
+  if (!temArea) {
+    return (
+      <TelaInicial
+        indice={indice}
+        erroIndice={erroIndice}
+        onSelecionar={selecionarProcesso}
+        onConcluirDesenho={concluirDesenho}
+      />
+    )
+  }
+
   return (
     <div style={{ minHeight: '100vh' }}>
       <header
@@ -151,19 +181,6 @@ export default function ParecerCompetencia() {
           padding: 'clamp(16px, 4vw, 30px) clamp(20px, 6vw, 56px)',
         }}
       >
-        {!temArea && (
-          <div
-            style={{
-              fontFamily: SERIF,
-              fontSize: 'clamp(22px, 5vw, 30px)',
-              color: CORES.cinza,
-              ...s.fade,
-            }}
-          >
-            Quem licencia esta operação
-          </div>
-        )}
-
         {temArea && parecer.estado === 'DEFINIDA' && (
           <div style={s.fade}>
             <Etiqueta cor={CORES.verde}>competência definida</Etiqueta>
@@ -259,6 +276,8 @@ export default function ParecerCompetencia() {
               onDesenhar={() => setDesenhando(true)}
             />
 
+            <AvisoCampo pendencias={pendencias} campo="area" />
+
             {/* Cadastro: o que veio do SIGMINE e o que dá para corrigir. */}
             {temArea && (
               <>
@@ -277,13 +296,13 @@ export default function ParecerCompetencia() {
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                         {municipios.map((m) => {
                           const st = statusDe(m)
-                          const incidencia = estado.area?.municipios.find((x) => x.nm_mun === m)
+                          const incidencia = incidenciaDe(m)
                           return (
                             <div key={m}>
                               <span style={{ fontFamily: SERIF, fontSize: 19 }}>{m}</span>
                               {incidencia && (
                                 <span style={{ fontSize: 13, color: CORES.cinza, marginLeft: 8 }}>
-                                  {fmt2(incidencia.proporcao * 100)}%
+                                  {pct(incidencia.proporcao)} · {fmt2(incidencia.area_ha)} ha
                                 </span>
                               )}
                               <div
@@ -331,6 +350,7 @@ export default function ParecerCompetencia() {
                         }
                       />
                     )}
+                    <AvisoCampo pendencias={pendencias} campo="substancia" />
                   </Celula>
 
                   <Celula rotulo="Fase na ANM" indice={3}>
@@ -352,6 +372,7 @@ export default function ParecerCompetencia() {
                         onRestaurar={() => despachar({ tipo: 'restaurar-sigmine', campo: 'fase' })}
                       />
                     )}
+                    <AvisoCampo pendencias={pendencias} campo="fase" />
                   </Celula>
                 </div>
 
@@ -391,80 +412,12 @@ export default function ParecerCompetencia() {
                   <span>
                     {tipologia.grupo} · potencial poluente {tipologia.potencial_poluente}
                   </span>
+                  {/* C.6 — faixa de porte não conferida contra a CEPRAM não
+                      pode aparecer como se estivesse. */}
                   {!tipologia.fundamento.verificado && <Pendente />}
                 </div>
               )}
-            </div>
-
-            {/* O mapa. Geometria real do SIGMINE, ou a poligonal desenhada. */}
-            <div style={{ marginTop: 26 }}>
-              <div style={{ marginBottom: 12 }}>
-                <GrupoSegmentado>
-                  {ZOOMS.map(({ k, rotulo }, i) => (
-                    <button
-                      type="button"
-                      key={k}
-                      onClick={() => setZoom(k)}
-                      disabled={k === 'area' && !geometria}
-                      style={{
-                        ...estiloSegmento(zoom === k, i === 0, false),
-                        opacity: k === 'area' && !geometria ? 0.45 : 1,
-                      }}
-                    >
-                      {rotulo}
-                    </button>
-                  ))}
-                </GrupoSegmentado>
-              </div>
-
-              <div style={{ position: 'relative' }}>
-                <MapaProcesso ref={mapaRef} geometria={geometria} nivel={zoom} />
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: 12,
-                    right: 12,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    border: `1px solid ${CORES.linhaForte}`,
-                    background: CORES.branco,
-                  }}
-                >
-                  <button
-                    type="button"
-                    className="pc-lupa"
-                    onClick={() => mapaRef.current?.escalar(1.7)}
-                    aria-label="Aproximar o mapa"
-                    style={botaoLupa}
-                  >
-                    +
-                  </button>
-                  <button
-                    type="button"
-                    className="pc-lupa"
-                    onClick={() => mapaRef.current?.escalar(1 / 1.7)}
-                    aria-label="Afastar o mapa"
-                    style={{ ...botaoLupa, borderTop: `1px solid ${CORES.linhaForte}` }}
-                  >
-                    −
-                  </button>
-                </div>
-              </div>
-
-
-              <button
-                type="button"
-                onClick={() => setDesenhando(true)}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  padding: '12px 0 0',
-                  color: CORES.verde,
-                  fontSize: 15,
-                }}
-              >
-                Desenhar ou marcar a área manualmente
-              </button>
+              <AvisoCampo pendencias={pendencias} campo="tipologia" />
             </div>
           </section>
 
@@ -555,9 +508,7 @@ export default function ParecerCompetencia() {
                       </span>
                     </>
                   ) : (
-                    <span style={{ fontSize: 15, color: CORES.cinza }}>
-                      Informe o porte para enquadrar a faixa.
-                    </span>
+                    <AvisoCampo pendencias={pendencias} campo="porte" />
                   )}
                 </div>
 
@@ -638,6 +589,9 @@ export default function ParecerCompetencia() {
                       <span style={{ fontSize: 15, color: CORES.cinza }}>hectares</span>
                     </div>
                   )}
+                  {estado.condicionais.supressao_vegetacao === true && (
+                    <AvisoCampo pendencias={pendencias} campo="supressao_ha" />
+                  )}
                 </div>
               )}
 
@@ -717,11 +671,80 @@ export default function ParecerCompetencia() {
             background: CORES.painel,
           }}
         >
+          {/* O mapa. Geometria real do SIGMINE, ou a poligonal desenhada. */}
+          <div style={{ marginBottom: 32 }}>
+            <div style={{ marginBottom: 12 }}>
+              <GrupoSegmentado>
+                {ZOOMS.map(({ k, rotulo }, i) => (
+                  <button
+                    type="button"
+                    key={k}
+                    onClick={() => setZoom(k)}
+                    disabled={k === 'area' && !geometria}
+                    style={{
+                      ...estiloSegmento(zoom === k, i === 0, false),
+                      opacity: k === 'area' && !geometria ? 0.45 : 1,
+                    }}
+                  >
+                    {rotulo}
+                  </button>
+                ))}
+              </GrupoSegmentado>
+            </div>
+
+            <div style={{ position: 'relative' }}>
+              <MapaProcesso ref={mapaRef} geometria={geometria} nivel={zoom} />
+              <div
+                style={{
+                  position: 'absolute',
+                  top: 12,
+                  right: 12,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  border: `1px solid ${CORES.linhaForte}`,
+                  background: CORES.branco,
+                }}
+              >
+                <button
+                  type="button"
+                  className="pc-lupa"
+                  onClick={() => mapaRef.current?.escalar(1.7)}
+                  aria-label="Aproximar o mapa"
+                  style={botaoLupa}
+                >
+                  +
+                </button>
+                <button
+                  type="button"
+                  className="pc-lupa"
+                  onClick={() => mapaRef.current?.escalar(1 / 1.7)}
+                  aria-label="Afastar o mapa"
+                  style={{ ...botaoLupa, borderTop: `1px solid ${CORES.linhaForte}` }}
+                >
+                  −
+                </button>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setDesenhando(true)}
+              style={{
+                background: 'none',
+                border: 'none',
+                padding: '12px 0 0',
+                color: CORES.verde,
+                fontSize: 15,
+              }}
+            >
+              Desenhar ou marcar a área manualmente
+            </button>
+          </div>
+
           <PainelParecer
             parecer={parecer}
             temArea={temArea}
             municipioPrincipal={municipioPrincipal}
-            msAvaliacao={ms_avaliacao}
           />
         </div>
       </div>
@@ -751,6 +774,24 @@ const botaoLupa = {
 
 function maiuscula(s2: string): string {
   return s2.charAt(0).toUpperCase() + s2.slice(1)
+}
+
+/**
+ * B.7 na tela. A validação já existia e era descartada — o formulário calculava
+ * as pendências e nunca as mostrava, então o usuário via o parecer dar
+ * INDETERMINADO sem saber qual campo seu resolveria isso. Fica ao lado do
+ * campo, não numa lista no rodapé: a mensagem só ajuda onde a ação acontece.
+ */
+function AvisoCampo({
+  pendencias,
+  campo,
+}: {
+  pendencias: Pendencia[]
+  campo: CampoFormulario
+}) {
+  const p = pendenciaDe(pendencias, campo)
+  if (!p) return null
+  return <Aviso erro={p.severidade === 'erro'}>{p.mensagem}</Aviso>
 }
 
 function Celula({

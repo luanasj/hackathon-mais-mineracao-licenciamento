@@ -141,8 +141,6 @@ export interface ContextoFormulario {
   fatos: FactBase
   /** Saída do motor para o estado atual. Nunca é estado armazenado. */
   parecer: Parecer
-  /** Milissegundos da última reavaliação — o aceite de B.4 é < 100 ms. */
-  ms_avaliacao: number
 }
 
 const Ctx = createContext<ContextoFormulario | null>(null)
@@ -151,10 +149,8 @@ export function ProvedorFormulario({ children }: { children: ReactNode }) {
   const [estado, despachar] = useReducer(reducer, ESTADO_INICIAL)
 
   const derivado = useMemo(() => {
-    const t0 = performance.now()
     const fatos = construirFactBase(estado)
-    const parecer = avaliar(fatos)
-    return { fatos, parecer, ms_avaliacao: performance.now() - t0 }
+    return { fatos, parecer: avaliar(fatos) }
   }, [estado])
 
   const valor = useMemo<ContextoFormulario>(

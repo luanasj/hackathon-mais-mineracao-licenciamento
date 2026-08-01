@@ -43,7 +43,10 @@ export interface ResultadoDesenho {
 
 export interface MapaDesenhoProps {
   onConcluir: (resultado: ResultadoDesenho) => void
-  onCancelar: () => void
+  /** Ausente na tela inicial: lá o desenho não é um desvio, é o caminho. */
+  onCancelar?: () => void
+  altura?: number | string
+  rotuloConcluir?: string
 }
 
 const MODOS: { k: ModoDesenho; rotulo: string }[] = [
@@ -51,7 +54,12 @@ const MODOS: { k: ModoDesenho; rotulo: string }[] = [
   { k: 'ponto-raio', rotulo: 'Ponto e raio' },
 ]
 
-export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps) {
+export default function MapaDesenho({
+  onConcluir,
+  onCancelar,
+  altura = 380,
+  rotuloConcluir = 'Concluir',
+}: MapaDesenhoProps) {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const mapRef = useRef<maplibregl.Map | null>(null)
 
@@ -266,7 +274,7 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
       {falhou ? (
         <div
           style={{
-            height: 380,
+            height: altura,
             width: '100%',
             border: `1px solid ${CORES.linhaForte}`,
             background: CORES.terraMapa,
@@ -286,7 +294,7 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
       ) : (
         <div
           ref={containerRef}
-          style={{ height: 380, width: '100%', border: `1px solid ${CORES.linhaForte}` }}
+          style={{ height: altura, width: '100%', border: `1px solid ${CORES.linhaForte}` }}
         />
       )}
 
@@ -350,20 +358,22 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
           >
             Limpar
           </button>
-          <button
-            type="button"
-            onClick={onCancelar}
-            disabled={calculando}
-            style={{
-              height: 46,
-              padding: '0 18px',
-              background: 'transparent',
-              border: `1px solid ${CORES.linhaForte}`,
-              fontSize: 15,
-            }}
-          >
-            Cancelar
-          </button>
+          {onCancelar && (
+            <button
+              type="button"
+              onClick={onCancelar}
+              disabled={calculando}
+              style={{
+                height: 46,
+                padding: '0 18px',
+                background: 'transparent',
+                border: `1px solid ${CORES.linhaForte}`,
+                fontSize: 15,
+              }}
+            >
+              Cancelar
+            </button>
+          )}
           <button
             type="button"
             className="pc-primario"
@@ -371,7 +381,7 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
             disabled={!pronto || calculando}
             style={{ ...s.primario, height: 46, padding: '0 22px', opacity: pronto ? 1 : 0.5 }}
           >
-            {calculando ? 'Calculando…' : 'Concluir'}
+            {calculando ? 'Calculando…' : rotuloConcluir}
           </button>
         </div>
       </div>

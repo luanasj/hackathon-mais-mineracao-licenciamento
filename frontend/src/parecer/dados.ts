@@ -39,7 +39,6 @@ export const MONO = "'IBM Plex Mono', monospace"
 
 export type Caixa = [number, number, number, number]
 
-export const CAIXA_BRASIL: Caixa = [-74.0, -33.8, -34.8, 5.3]
 export const CAIXA_BAHIA: Caixa = [-46.7, -18.4, -37.3, -8.5]
 
 /**
