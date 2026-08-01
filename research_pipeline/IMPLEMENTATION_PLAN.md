@@ -645,7 +645,7 @@ ele a seguia e passava com qualquer valor dela.
 
 ---
 
-## Patch 8 — Interface do estruturador, fixture semente, nó `extract`
+## Patch 8 — Interface do estruturador, fixture semente, nó `extract` ✅ feito
 
 **Objetivo:** `extract` rodável e verificável ponta a ponta **sem nenhuma chamada de API** — o
 portão offline que precede todo trabalho pago.
@@ -697,6 +697,28 @@ RP_LLM=fixture python -m research_pipeline.tools.check_golden extract
 ```
 esperado: `extract: OK (11 linhas, idêntico ao golden)`. A linha sem URL está ausente;
 `Fevereiro/2025` virou `None`.
+
+**Feito.** Municípios reais usados na semente (`load_reference_data()`): Caturama (`2907558`,
+consórcio cadastral `14618`), Tremedal (`2931806`, consórcio cadastral `29302` CIVALERG),
+Pintadas (`2924652`), Ruy Barbosa (`2927200`, consórcio cadastral `10152`), Santa Bárbara
+(`2927507`), Caetité (`2905206`, grafado sem acento na semente), Aiquara (`2900603`, **não
+apto**), Baixa Grande (`2902609`, apto e **sem** consórcio cadastral). As 11 armadilhas da tabela
+viram 11 linhas extraídas (a de Granito conta duas: revestimento em Tremedal → uso B3.5,
+britagem/agregados em Caturama e Tremedal → uso B3.4) mais 1 linha sob
+`## Indícios não confirmados`, sem URL, corretamente ausente do resultado.
+
+`extract_v1.md` instrui a **converter** data não-ISO para `null` (regra 3), não a transcrever o
+texto cru — por isso a linha de Pintadas (`"fevereiro de 2025"` em prosa no relatório) sai como
+`data_concessao: null` já na fixture de resposta do LLM (`extract.json`), e o golden foi gerado
+**rodando o código real** contra as duas fixtures (não transcrito por inspeção), exatamente para
+que uma divergência de comportamento do nó apareça como falha do `check_golden`.
+
+`check_golden.py` guarda o registro nó→executor como `dict`, para que o `normalize` (patch 9)
+entre como uma nova chave sem reescrever o dispatch. `test_llm.py` e `test_extract.py` são puros
+(decisão D): nenhum dos dois toca a fixture semente ou o golden — cobrem só a mecânica de
+`FixtureStructurer` (tag/case, `FixtureMissing`, deriva de `prompt_sha`) e a acumulação de erros
+de `extract()` com um `Structurer` fake em memória. 14 testes novos, 240 no total; suíte inteira
+verde.
 
 ---
 
@@ -927,7 +949,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | 5 | Aliases mecânicos ✅ | não | `python -m research_pipeline.aliases` |
 | 6 | Matcher determinístico ✅ | não | `pytest test_matcher.py` |
 | 7 | Schemas + validador ✅ | não | `pytest test_validate.py` |
-| 8 | Estruturador fixture + `extract` + **fixture semente** | não | `check_golden extract` |
+| 8 | Estruturador fixture + `extract` + **fixture semente** ✅ | não | `check_golden extract` |
 | 9 | `normalize` + cruzamentos | não | `check_golden normalize` |
 | 10 | Ranking + manifesto | não | `pytest test_emit.py` |
 | 11 | **Grafo + CLI + checkpointer + `--resume`/`--report`** | não | run offline completo, AC1–AC6+AC8 |
