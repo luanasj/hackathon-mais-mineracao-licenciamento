@@ -19,6 +19,23 @@ isso este script SEMPRE roda um probe (size=1, sem querystring) antes da
 coleta de verdade e marca no relatório os municípios sem cobertura — esses
 caem em `sem_evidencia`, não travam o pipeline (mesmo tratamento do GAC).
 
+ATENÇÃO — qualidade da busca (testado em 01/08/2026 contra Campo Formoso):
+o endpoint faz correspondência por palavra solta, não frase exata, e alguns
+termos óbvios geram falso-positivo em massa:
+  - "lavra" bate com "lavra-se o presente Termo/Contrato" — verbo notarial
+    comum, nada a ver com lavra mineral. Mesmo entre aspas continua pegando
+    "lavra-se".
+  - "gestao ambiental compartilhada" sem aspas é dominado por menções soltas
+    de "gestão"; com aspas (frase exata) cai a ZERO resultados.
+  - "atividade minerária" deu 1167 resultados pra 1 município só — maioria
+    linha de orçamento genérica ("Manutenção das Ações da Secretaria...").
+  - "anm" (sigla) casa com fragmentos tipo "Anmo" (erro de OCR/ementa) — sigla
+    curta demais pra ser termo de busca sozinha.
+Termos abaixo têm sinal real testado manualmente (primeiro resultado
+genuinamente relevante), mas isso NÃO elimina falso-positivo — cada `ato`
+sai marcado `confirmado_manualmente: false` e precisa de revisão antes de
+virar afirmação na interface (mesma trava de honestidade do resto do projeto).
+
 Escopo: os municípios vêm de data/processed/municipios_habilitados.json,
 filtrados por status == "habilitado" (decisão do time: coletar para todos os
 habilitados no GAC, não um recorte fixo). Rode collect_gac.py antes.
@@ -49,17 +66,23 @@ API_URL = "https://api.queridodiario.ok.org.br/gazettes"
 
 TERMOS_PADRAO = [
     "licenciamento ambiental",
-    "lavra",
     "mineracao",
-    "gestao ambiental compartilhada",
+    "extracao mineral",
+    "cfem",
 ]
 
 
-def carregar_municipios_habilitados() -> list[dict]:
+def carregar_municipios_habilitados(apenas_nomes: list[str] | None = None) -> list[dict]:
     if not MUNICIPIOS_PATH.exists():
         raise SystemExit(f"{MUNICIPIOS_PATH} não existe. Rode `python scripts/collect_gac.py scrape` antes.")
     lista = json.loads(MUNICIPIOS_PATH.read_text(encoding="utf-8"))["municipios"]
-    return [m for m in lista.values() if m["status"] == "habilitado"]
+    habilitados = [m for m in lista.values() if m["status"] == "habilitado"]
+    if apenas_nomes:
+        from lib.municipios_ba import _normalize  # reaproveita a mesma normalização de nome
+
+        alvo = {_normalize(n) for n in apenas_nomes}
+        habilitados = [m for m in habilitados if _normalize(m["municipio"]) in alvo]
+    return habilitados
 
 
 def checar_cobertura(session, codigo_ibge: str) -> bool:
@@ -99,10 +122,18 @@ def main() -> None:
     parser.add_argument("--termos", default=",".join(TERMOS_PADRAO), help="lista separada por vírgula")
     parser.add_argument("--desde", default=None, help="published_since, YYYY-MM-DD")
     parser.add_argument("--ate", default=None, help="published_until, YYYY-MM-DD")
+    parser.add_argument(
+        "--apenas-municipios",
+        default=None,
+        help="lista de nomes separada por vírgula, para reprocessar só quem falhou por erro de rede",
+    )
     args = parser.parse_args()
 
     termos = [t.strip() for t in args.termos.split(",") if t.strip()]
-    municipios = carregar_municipios_habilitados()
+    apenas_nomes = (
+        [n.strip() for n in args.apenas_municipios.split(",") if n.strip()] if args.apenas_municipios else None
+    )
+    municipios = carregar_municipios_habilitados(apenas_nomes)
     if not municipios:
         raise SystemExit("nenhum município com status 'habilitado' em municipios_habilitados.json")
 
