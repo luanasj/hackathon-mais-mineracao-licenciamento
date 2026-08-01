@@ -572,7 +572,7 @@ PROMPT 2 que não é município.
 
 ---
 
-## Patch 7 — Schemas Pydantic + validador duro
+## Patch 7 — Schemas Pydantic + validador duro ✅ feito
 
 **Objetivo:** o contrato contra o qual AC1–AC4 são medidos, testável com objetos à mão, sem I/O.
 
@@ -598,6 +598,50 @@ PROMPT 2 que não é município.
   por aviso, mais os dois casos "não pode rejeitar".
 
 **Verificar:** `python -m pytest research_pipeline/tests/test_validate.py`.
+
+**Feito.** `schemas.py` (contrato do §8), `nodes/validate.py` (`validate_licencas`) e
+`tests/test_validate.py`. 56 testes novos, **226 no total**, todos passando. Três achados e uma
+decisão que o plano acima não previa:
+
+1. **`date.fromisoformat` sozinho não valida data ISO no Python 3.12.** Medido:
+   `"20250204"` devolve `date(2025, 2, 4)` (forma compacta) e `"2025-W05-1"` devolve
+   `date(2025, 1, 27)` (data-semana ISO) — as duas viram datas plausíveis em silêncio, e o §6.1
+   pede `AAAA-MM-DD`. `_data_iso` casa `\d{4}-\d{2}-\d{2}` **antes** e continua chamando
+   `fromisoformat` depois, porque só ele pega `"2025-02-30"`. Sem o regex, `"20250204"` entraria
+   como 4 de fevereiro.
+2. **`Renovação` × `Renovacao`, divergência §5 × este plano.** O §5 manda o prompt de pesquisa
+   pedir `Renovação`, com til; o plano declarava o `Literal` sem. Resolvido com o canônico em ASCII
+   (`"Renovacao"`) mais um normalizador `mode="before"` que dobra caixa e acento e mapeia as 6
+   formas conhecidas — mesma classe do `fold()` do patch 6, mecânica e fechada.
+   `"Licença Unificada"` continua erro duro. O `GOAL.md` fica **anotado, não reaberto**, como o
+   §7.2 no patch 3 e o §6.3 no patch 4.
+3. **O exemplo de licença do §8 fecha com as referências reais**, então virou teste literal em vez
+   de fixture inventada: `2907558` é Caturama, o consórcio cadastral dela é o `14618` com o nome
+   idêntico ao do §8, `B3.1` existe com aquele nome e potencial `M`, e `"AREIA"` está entre os 169
+   `SUBS`. `test_exemplo_do_goal_8_...` exige zero erro e zero aviso; se o schema divergir do
+   documento, quebra.
+
+Decisões de forma que o plano deixou em aberto: `verificado` é `Literal[False]`, não `bool` (o §8
+diz *sempre*, e travar no tipo custa menos que uma regra); `total_por_licenciado_por` é submodelo e
+não `dict[str, int]`, para que as três chaves existam mesmo zeradas (AC5);
+`MetodoMatch` e `PotencialPoluidor` passam a morar em `schemas.py` e são **importados** por
+`matcher.py` e `vocab.py` (dois `Literal` iguais em dois módulos divergem em silêncio; o
+`POTENCIAIS_VALIDOS` do `vocab.py` agora é `get_args` do literal). `nivel_uniforme` exige mínimo de
+**5 linhas** e usa o total de linhas válidas como denominador: com uma linha só, 100% de
+uniformidade é trivial, e contar só as linhas com nível daria 100% para um lote de 8 em que uma
+única traz nível.
+
+`municipio_nao_resolvido` **não** entra aqui — quem o emite é o `normalize` (§6.2), patch 9. O nó
+LangGraph `validate(state, config)` e o laço de reparo também não: patch 11, quando existir grafo.
+
+Mutação, todas conferidas quebrando teste nomeado: tirar o regex de data
+(`test_data_concessao_rejeitada[20250204]` e `[2025-W05-1]`), trocar `extra="forbid"` por
+`"ignore"` (`test_campo_desconhecido_e_erro_duro`), transformar `consorcio_id` +
+`municipio_proprio` em erro duro (`test_consorcio_com_municipio_proprio_e_valido`, a não-regra do
+§6.4) e baixar o mínimo do `nivel_uniforme` de 5 para 1
+(`test_nivel_uniforme_nao_dispara_abaixo_do_minimo`). Esta última só passou a quebrar depois de o
+teste trocar `NIVEL_UNIFORME_MINIMO - 1` por tamanhos literais — escrito em função da constante,
+ele a seguia e passava com qualquer valor dela.
 
 ---
 
@@ -882,7 +926,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | 4 | Vocabulários + 2 armadilhas XLSX ✅ | não | `python -m research_pipeline.vocab` |
 | 5 | Aliases mecânicos ✅ | não | `python -m research_pipeline.aliases` |
 | 6 | Matcher determinístico ✅ | não | `pytest test_matcher.py` |
-| 7 | Schemas + validador | não | `pytest test_validate.py` |
+| 7 | Schemas + validador ✅ | não | `pytest test_validate.py` |
 | 8 | Estruturador fixture + `extract` + **fixture semente** | não | `check_golden extract` |
 | 9 | `normalize` + cruzamentos | não | `check_golden normalize` |
 | 10 | Ranking + manifesto | não | `pytest test_emit.py` |

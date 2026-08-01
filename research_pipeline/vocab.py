@@ -39,13 +39,14 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Literal
+from typing import Any, get_args
 
 import openpyxl
 
 from common.dbf import read_dbf
 from common.text import fold
 from research_pipeline.errors import RefLoadError
+from research_pipeline.schemas import PotencialPoluidor
 
 LEAF_CODE_RE = re.compile(r"B\d+(?:\.\d+){1,2}")
 """Usado com `.fullmatch()`, e isso é carga estrutural.
@@ -80,9 +81,11 @@ CAUDAS_VAZIAS = frozenset({"dentre outros", "dentre outras", "e outras", "e outr
 
 RUIDO_SUBSTANCIA = frozenset({"etc", "etc.", "outras", "outros"})
 
-POTENCIAIS_VALIDOS = ("P", "M", "A")
+POTENCIAIS_VALIDOS = get_args(PotencialPoluidor)
 """O §6.3 admite os três. Medido: as 17 folhas usam só `M` (7) e `A` (10) — a matriz do Art. 109
-tem coluna `P` e o `Literal` acompanha a matriz, não o snapshot."""
+tem coluna `P` e o `Literal` acompanha a matriz, não o snapshot. Derivado do literal de
+`schemas.py` em vez de reescrito: a checagem em tempo de carga e a do schema têm de ser o mesmo
+conjunto, sempre."""
 
 PORTES = ("pequeno", "medio", "grande")
 
@@ -106,7 +109,7 @@ class Tipologia:
     porte_pequeno: str | None
     porte_medio: str | None
     porte_grande: str | None
-    potencial_poluidor: Literal["P", "M", "A"]
+    potencial_poluidor: PotencialPoluidor
     classe_pequeno: str
     classe_medio: str
     classe_grande: str

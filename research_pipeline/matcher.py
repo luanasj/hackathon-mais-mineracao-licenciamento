@@ -24,7 +24,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Literal
 
 import yaml
 from rapidfuzz import fuzz
@@ -37,6 +36,7 @@ from research_pipeline.aliases import (
 )
 from research_pipeline.errors import RefLoadError
 from research_pipeline.refs import Consorcio, Municipio, ReferenceData
+from research_pipeline.schemas import MetodoMatch
 
 MATCHING_CONFIG_PATH = Path(__file__).resolve().parent / "config" / "matching.yaml"
 
@@ -50,10 +50,10 @@ _CAMPOS_CONFIG = (
     "confianca_heranca",
 )
 
-MetodoMatch = Literal["exato", "alias", "fuzzy", "inferido", "nenhum"]
-"""`"inferido"` não é produzido por este módulo — é o método da herança de consórcio cadastral
-(decisão 15, patch 9). Faz parte do tipo aqui porque `Match.metodo` é o mesmo campo nos dois
-lugares."""
+# `MetodoMatch` vem de `schemas.py` (patch 7) e não é redeclarado aqui: `Match.metodo` e
+# `LicencaNormalizada.municipio_match_metodo` são o mesmo campo, e dois `Literal` iguais em dois
+# módulos divergem em silêncio. Nem todo valor é produzido daqui — `"inferido"` é a herança de
+# consórcio cadastral (decisão 15, patch 9).
 
 
 @dataclass(frozen=True, slots=True)
