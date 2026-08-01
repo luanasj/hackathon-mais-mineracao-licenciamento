@@ -77,16 +77,7 @@ export default function MapaProcesso({ geometria, nivel, altura = 340, ref }: Ma
     })
     mapRef.current = map
 
-    // @ts-expect-error debug temporário
-    window.__mapa = map
-    // @ts-expect-error debug temporário
-    window.__erros = []
-    map.on('error', (e) => {
-      // @ts-expect-error debug temporário
-      window.__erros.push({ fonte: e.sourceId ?? '(mapa)', msg: String(e.error?.message ?? e.error), pilha: String(e.error?.stack ?? '').split('\n').slice(0,3).join(' | ') })
-    })
     map.on('load', () => {
-      try {
       map.addSource('relevo', {
         type: 'raster-dem',
         tiles: [`${BASE}/terrain/{z}/{x}/{y}.png`],
@@ -137,10 +128,6 @@ export default function MapaProcesso({ geometria, nivel, altura = 340, ref }: Ma
       prontoRef.current = true
       pintar(map, geometria)
       enquadrar(map, nivel, geometria, false)
-      } catch (err) {
-        // @ts-expect-error debug temporário
-        window.__erroLoad = 'THROW no load: ' + String(err)
-      }
     })
 
     return () => {
