@@ -2,7 +2,8 @@
 
 > **Status:** escopo definido, implementação não iniciada.
 > **Branch:** `feature/deep-research-pipeline`
-> **Documento de escopo — versão 1.2 — 2026-08-01**
+> **Documento de escopo — versão 1.3 — 2026-08-01**
+> *v1.3: dados canônicos reais em `data/processed/` — formato, aliases derivados e cruzamento município↔consórcio (§6.2, §7, §11).*
 > *v1.2: prompt de pesquisa sem lista de municípios — pergunta em aberto, rigidez só no formato de saída (§5, §7.1).*
 > *v1.1: `licenciado_por` como indicador obrigatório (§6.4); universo ampliado para todos os municípios aptos (§7.1).*
 
@@ -53,11 +54,12 @@ O produto final do pipeline é **o JSON estruturado**. Nada mais.
 
 1. `python -m research_pipeline.run --ano 2025` produz um JSON que valida contra o schema Pydantic sem erro.
 2. Toda linha tem ao menos uma `fonte_url` e uma `data_consulta`.
-3. Todo `municipio_id` e `consorcio_id` não-nulo existe nos arquivos canônicos.
+3. Todo `municipio_id` não-nulo pertence aos **417** `codigo_ibge` de `municipios_habilitados.json`; todo `consorcio_id` não-nulo pertence aos **29** ids de `consorcios.json`.
 4. Toda `tipologia_codigo` não-nula pertence ao vocabulário fechado (§6.3).
 5. Rodar duas vezes o mesmo ano produz JSONs com o **mesmo formato e as mesmas chaves**; divergências ficam restritas às *descobertas* da pesquisa, não à sua estrutura.
 6. O ranking é calculado em Python por contagem — **nunca pedido a um LLM**.
 7. Uma execução interrompida retoma do checkpoint sem repagar a tarefa de Deep Research.
+8. O carregador confere na inicialização: 417 municípios, 29 consórcios, `sum(total_municipios) == 386`, união dos membros ⊆ chaves de municípios. Divergência **falha alto**, antes de qualquer chamada de API.
 
 ---
 
@@ -68,7 +70,9 @@ Grafo linear com estado tipado, um checkpointer SQLite e artefatos em disco.
 ```
                     ┌──────────────────────────────────────────┐
    --ano 2025 ─────▶│ 0. load_refs                             │
-                    │    municipios.json + consorcios.json     │
+                    │    data/processed/                       │
+                    │      municipios_habilitados.json (417)   │
+                    │      consorcios.json (29)                │
                     │    + vocabulário de tipologias (XLSX)    │
                     │    + vocabulário de minerais (SIGMINE)   │
                     └────────────────────┬─────────────────────┘
@@ -242,6 +246,21 @@ descobre um join errado só quando o dado já está no banco.
 Pré-filtro barato antes do LLM: normalização Unicode + `rapidfuzz` contra nomes e aliases.
 Acerto exato/alias resolve sem chamar o modelo; o LLM só decide os casos ambíguos.
 
+**Cruzamento município ↔ consórcio.** O cadastro já traz `consorcio_id`/`consorcio_nome` em
+cada município (§7), e o vínculo é 1:1. Isso habilita três regras — nenhuma delas rejeita
+linha, todas produzem aviso:
+
+1. **Herança quando o relatório não nomeia consórcio.** Herda-se o consórcio cadastral do
+   município resolvido, com `consorcio_match_metodo: "inferido"` e
+   `consorcio_match_confianca <= 0.5`. Herança é vínculo cadastral, **não** evidência de que
+   o consórcio licenciou — `licenciado_por` continua governado exclusivamente pelo §6.4.
+2. **Contradição.** Consórcio resolvido do relatório ≠ consórcio cadastral do município:
+   prevalece o do relatório, e o run emite `consorcio_divergente`. Pode ser mudança de
+   composição posterior ao snapshot do GAC ou erro do relatório; os dois merecem olho humano,
+   nenhum merece descarte silencioso.
+3. **Município sem consórcio.** Município entre os 27 habilitados sem vínculo consorcial,
+   mas o relatório atribui um: aviso `consorcio_inesperado`.
+
 ### 6.3 Vocabulário fechado de tipologia
 
 Extraído de `data_source/Anexo_IV_Divisao_B_Mineracao_Bahia.xlsx` (aba *Divisão B - Mineração*).
@@ -313,67 +332,111 @@ informativa, não erro. Validador não deve rejeitá-la.
 
 ## 7. Dados canônicos e o carregador com mapeamento
 
-**Você fornecerá** `municipios.json` e `consorcios.json`. Para não acoplar o código às suas
-chaves, o carregador lê um arquivo de mapeamento de campos —
+Os dois arquivos canônicos **já existem no repositório**, produzidos por
+`scripts/collect_gac.py` a partir do GAC/SEMA-BA (ver `data/README.md`):
+
+| Arquivo | Conteúdo |
+|---|---|
+| `data/processed/municipios_habilitados.json` | 417 municípios — a Bahia inteira. 367 `habilitado`/`CAPAZ`, 50 `nao_habilitado`/`NÃO CAPAZ` |
+| `data/processed/consorcios.json` | 29 consórcios públicos intermunicipais, com a lista completa de membros |
+
+Ambos são **dicionários indexados pelo id** (`codigo_ibge` e `consorcio_id`), não arrays, sob
+uma chave-raiz. Para não acoplar o código a esse formato, o carregador lê
 `research_pipeline/config/ref_mapping.yaml`:
 
 ```yaml
 municipios:
-  path: data/municipios.json
-  root: null              # ou "data", "items"… se o array estiver aninhado
+  path: data/processed/municipios_habilitados.json
+  root: municipios          # chave que contém os registros
+  container: dict           # dict (chave = id) | list
   fields:
-    id: id                # ← chave no SEU arquivo
-    nome: nome
+    id: codigo_ibge
+    nome: municipio
     codigo_ibge: codigo_ibge
-    aliases: aliases      # opcional; ausente → []
+    consorcio_id: consorcio_id
+    consorcio_nome: consorcio_nome
+    nivel_habilitacao: nivel      # string "1"|"2"|"3"|null -> int|None
+    situacao_gac: situacao_gac
+    status: status                # habilitado | nao_habilitado
+    fonte_url: fonte_url
+    data_consulta: data_consulta
 
 consorcios:
-  path: data/consorcios.json
-  root: null
+  path: data/processed/consorcios.json
+  root: consorcios
+  container: dict
   fields:
-    id: id
+    id: consorcio_id
     nome: nome
-    sigla: sigla          # opcional
-    aliases: aliases      # opcional
-    municipios_ids: municipios   # opcional
+    total_municipios: total_municipios
+    municipios: municipios        # [{codigo_ibge, municipio, nivel, status}]
 ```
 
 O carregador normaliza para um modelo interno (`Municipio`, `Consorcio`), valida na
 inicialização e **falha alto** se um campo mapeado não existir — nada de descobrir isso no meio
 de uma tarefa de US$ 3.
 
-Fallback: se `municipios.json` não for fornecido, um script gera a lista dos 417 municípios
-baianos a partir de `data_source/Malha municipal IBGE-BA/BA_Municipios_2025.dbf`
-(**atenção: encoding Latin-1**, conforme o `.cpg`). Para consórcios não há fallback — hoje
-o repositório não tem nenhuma lista de consórcios intermunicipais, e essa é a maior lacuna
-de dados de referência do projeto.
+Duas coerções, porque o arquivo não traz os campos na forma que o pipeline usa:
+
+- `nivel` vem como **string** (`"1"`/`"2"`/`"3"`), `null` quando não habilitado → `int | None`.
+  Valor fora de `{"1","2","3",null}` é erro de carregamento, não valor tolerado.
+- `apto_licenciar` **não existe no arquivo** — é derivado de `status == "habilitado"`.
+  `situacao_gac` (`CAPAZ`/`NÃO CAPAZ`) é redundante com `status` e serve de conferência: os
+  dois discordarem é falha de carregamento.
+
+Não há fallback nem para municípios nem para consórcios: os 417 já estão no arquivo e a lista
+de consórcios está completa. `data_source/Malha municipal IBGE-BA/BA_Municipios_2025.dbf`
+(**Latin-1**, conforme o `.cpg`) deixa de ser fonte alternativa e permanece apenas como
+conferência opcional dos `codigo_ibge`.
 
 ### 7.1 Universo de municípios
 
 **Todos os municípios baianos aptos a licenciar** — não os 10 do MVP do `BACKLOG.md`.
 Os 10 permanecem como fixtures do motor de enquadramento; não limitam esta pesquisa.
 
-Duas populações, ambas no escopo:
+Os números do cadastro atual:
 
-1. municípios com gestão ambiental própria habilitada (licenciam sozinhos);
-2. municípios atendidos por consórcio público intermunicipal.
+| População | Total |
+|---|---|
+| Municípios na Bahia | 417 |
+| Habilitados (`status = habilitado`, `situacao_gac = CAPAZ`) | 367 |
+| Não habilitados | 50 |
+| Vinculados a consórcio | 386 |
+| Sem consórcio | 31 — dos quais **27 habilitados** |
 
-Elas se sobrepõem — daí o §6.4. Um município pode aparecer nas duas.
+Os **27 habilitados sem consórcio** são a população pura `municipio_proprio`: licenciam por
+estrutura própria, sem arranjo compartilhado disponível.
+
+O vínculo é **1:1** — nenhum município integra dois consórcios. Corrige a suposição da v1.2 de
+que as duas populações se sobrepõem: no snapshot atual **não se sobrepõem**, todo habilitado
+está em exatamente um consórcio ou em nenhum. O §6.4 continua valendo por outro motivo — o que
+decide `licenciado_por` é o órgão emissor, e município consorciado licencia por conta própria
+com frequência.
 
 **O universo não é injetado no prompt de pesquisa.** Pergunta vai em aberto — "municípios da
 Bahia" — e a pesquisa devolve quem de fato licenciou. Listas canônicas atuam **só depois**, no
 nó `normalize` (§6.2), para amarrar os nomes encontrados aos ids do banco.
 
-Campos opcionais em `municipios.json`, mapeáveis em `ref_mapping.yaml`:
+`apto_licenciar` (derivado, §7) e `nivel_habilitacao` enriquecem a saída e sinalizam no
+manifesto quando a pesquisa atribuir licença a município marcado como não apto — divergência
+que merece olho humano. Nunca filtram a pesquisa.
 
-```yaml
-  fields:
-    apto_licenciar: apto_licenciar      # opcional
-    nivel_habilitacao: nivel            # opcional; 1 | 2 | 3
-```
+### 7.2 Aliases derivados
 
-Uso: enriquecer a saída e sinalizar no manifesto quando a pesquisa atribuir licença a município
-marcado como não apto — divergência que merece olho humano. Nunca filtra a pesquisa.
+**Nenhum dos dois arquivos traz `aliases`, e `consorcios.json` não traz `sigla`.** O casamento
+do §6.2 depende de gerá-los. As regras são mecânicas — nada de curadoria escondida no código:
+
+- **Município:** dobra Unicode NFKD sem acento, minúsculo, sem hífen nem apóstrofo
+  (`Dias d'Ávila` → `dias davila`).
+- **Consórcio:** dobra de acento mais equivalência `CONSORCIO` ↔ `CONSÓRCIO` — os nomes vêm em
+  caixa alta e **sem acento em "CONSORCIO"**, enquanto relatórios escrevem `Consórcio`.
+  Sigla = token após `" - "` (13 dos 29), ou último token em caixa alta quando não houver traço
+  (cobre `CISUDOESTE`, separado por espaço duplo). Chave curta por remoção do prefixo genérico
+  `CONSORCIO (PÚBLICO|INTERMUNICIPAL)? DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO`
+  (`…DO SISAL` → `sisal`).
+
+Casos que regra mecânica não alcança vão para um override versionado em
+`research_pipeline/config/aliases.yaml`.
 
 ---
 
@@ -402,16 +465,16 @@ Um registro = **uma licença concedida**. O ranking é derivado, nunca pedido ao
   "licencas": [
     {
       "id": "2025-caturama-lau-01",
-      "municipio_id": "2907103",
+      "municipio_id": "2907558",
       "municipio_nome": "Caturama",
       "municipio_raw": "Caturama",
       "municipio_match_metodo": "exato",
       "municipio_match_confianca": 1.0,
-      "consorcio_id": "cons-bacia-paramirim",
-      "consorcio_nome": "Consórcio Bacia do Paramirim",
+      "consorcio_id": "14618",
+      "consorcio_nome": "CONSORCIO PÚBLICO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO BACIA DO PARAMIRIM",
       "consorcio_raw": "Consórcio Bacia do Paramirim",
-      "consorcio_match_metodo": "exato",
-      "consorcio_match_confianca": 1.0,
+      "consorcio_match_metodo": "alias",
+      "consorcio_match_confianca": 0.92,
       "licenciado_por": "consorcio",
       "orgao_emissor_raw": "Consórcio Público Interfederativo da Bacia do Paramirim",
       "licenciado_por_evidencia": "Licença assinada pelo Diretor Técnico do Consórcio...",
@@ -433,8 +496,8 @@ Um registro = **uma licença concedida**. O ranking é derivado, nunca pedido ao
     }
   ],
   "ranking_municipios": [
-    { "posicao": 1, "municipio_id": "2907103", "municipio_nome": "Caturama",
-      "consorcio_nome": "Consórcio Bacia do Paramirim",
+    { "posicao": 1, "municipio_id": "2907558", "municipio_nome": "Caturama",
+      "consorcio_nome": "CONSORCIO PÚBLICO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO BACIA DO PARAMIRIM",
       "total_licencas": 2,
       "licencas_gestao_propria": 0,
       "licencas_via_consorcio": 2,
@@ -442,7 +505,7 @@ Um registro = **uma licença concedida**. O ranking é derivado, nunca pedido ao
       "modo_predominante": "consorcio" }
   ],
   "ranking_consorcios": [
-    { "posicao": 1, "consorcio_id": "cons-bacia-paramirim", "total_licencas": 2,
+    { "posicao": 1, "consorcio_id": "14618", "total_licencas": 2,
       "municipios_atendidos": 1 }
   ]
 }
@@ -490,8 +553,10 @@ por inteiro, o que permite iterar de graça nos prompts do DeepSeek usando um re
 | Checkpoint | `langgraph-checkpoint-sqlite` |
 | Config | `.env` → `GEMINI_API_KEY`, `DEEPSEEK_API_KEY` |
 
-`requirements.txt` precisa ser criado — o `devcontainer.json` já o invoca no
-`postCreateCommand` e **hoje esse comando falha**, porque o arquivo não existe.
+`requirements.txt` **já existe** e hoje declara as dependências dos scripts de coleta
+(`requests`, `beautifulsoup4`, `lxml`, `pdfplumber`), invocado pelo `postCreateCommand` do
+`devcontainer.json`. As dependências do pipeline são **acrescentadas** a ele — não é arquivo
+novo, e o bloco de coleta não sai.
 
 Estrutura de código prevista:
 
@@ -517,7 +582,9 @@ research_pipeline/
 
 | Risco | Mitigação |
 |---|---|
-| Não existe lista canônica de consórcios baianos no repositório | Bloqueia a normalização de `consorcio`. Você fornecerá o JSON; sem ele, o campo sai `null` e o pipeline registra o aviso. |
+| Cadastro município↔consórcio é um **snapshot datado** do GAC (`2026-08-01`); composição de consórcio muda | `data_consulta` propagada do arquivo para o manifesto. Divergência entre relatório e cadastro vira aviso `consorcio_divergente` (§6.2), nunca rejeição de linha. |
+| Arquivos canônicos não trazem `aliases` nem `sigla` — casamento depende de derivá-los | Derivação mecânica e documentada (§7.2) mais override versionado em `config/aliases.yaml`. Sem isso, `CONSORCIO` vs. `Consórcio` já derrubaria o match exato de todos os 29. |
+| `nivel` vem como string e `apto_licenciar` não existe no arquivo | Coerção explícita no carregador (§7), com falha alta para valor fora de `{"1","2","3",null}` e para desacordo entre `status` e `situacao_gac`. |
 | "Sempre atribuir o mais próximo" pode gerar joins errados no banco | `*_raw` preservado, método e confiança em toda linha, confiança `< 0.7` promovida a aviso no manifesto. |
 | Deep Research pode alucinar licenças plausíveis | `fonte_url` + `trecho_citado` obrigatórios; sem fonte a linha não entra. `verificado: false` sempre. |
 | Cobertura variável entre execuções | Aceito por decisão de escopo. Travamos a forma, não os achados. O `run_id` mantém cada resultado auditável. |
@@ -535,7 +602,7 @@ research_pipeline/
 |---|---|
 | 1 | Deep Research via API oficial (`deep-research-preview-04-2026`), assíncrona com polling. |
 | 2 | Uma execução = um ano, toda a Bahia. Uma única tarefa de pesquisa por run. |
-| 3 | `municipios.json` e `consorcios.json` fornecidos pelo usuário; lidos via `ref_mapping.yaml`. |
+| 3 | Referências vêm de `data/processed/municipios_habilitados.json` (417) e `data/processed/consorcios.json` (29), geradas por `scripts/collect_gac.py`. Lidas via `ref_mapping.yaml`, que **mantém o mapeamento completo de campos** e ganha `container: dict \| list`. |
 | 4 | Normalização sempre atribui o candidato mais próximo, com método + confiança obrigatórios. |
 | 5 | Procedência obrigatória: `fonte_urls`, `trecho_citado`, `data_consulta`, `verificado: false`. |
 | 6 | Grão do JSON: uma licença concedida por registro; ranking derivado em Python. |
@@ -546,3 +613,5 @@ research_pipeline/
 | 11 | `licenciado_por` (`municipio_proprio` / `consorcio` / `indeterminado`) é campo obrigatório, com órgão emissor, evidência e confiança. Nunca deduzido do vínculo consorcial. |
 | 12 | Universo = todos os municípios baianos aptos a licenciar, não os 10 do MVP do backlog. |
 | 13 | Prompt de pesquisa pergunta em aberto por "municípios da Bahia" — sem lista de municípios ou consórcios. Rígido no prompt é o **formato de saída**. Listas canônicas só no nó `normalize`. |
+| 14 | Aliases e siglas são **derivados mecanicamente** (§7.2), com override versionado em `config/aliases.yaml`. Os arquivos canônicos não os trazem. |
+| 15 | Consórcio cadastral do município é herdado como `inferido` (confiança `<= 0.5`) quando o relatório cala; divergência entre relatório e cadastro vira aviso, nunca rejeição. Herança **não** define `licenciado_por` — isso continua sendo decisão do órgão emissor (§6.4). |
