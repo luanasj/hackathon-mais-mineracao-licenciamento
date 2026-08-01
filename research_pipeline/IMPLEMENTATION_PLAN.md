@@ -500,9 +500,45 @@ afirma: exatamente **14** consórcios com sigla; `29302 → CIVALERG`; `45429 �
 
 ---
 
-## Patch 6 — Matcher determinístico (o pré-filtro barato)
+## Patch 6 — Matcher determinístico (o pré-filtro barato) ✅ feito
 
 **Objetivo:** resolver nomes a ids canônicos com método + confiança, **sem nenhum LLM**.
+
+**Feito**, como planejado, com uma correção ao exemplo do plano e um achado estrutural.
+
+**A ordem exato → alias → fuzzy exigiu particionar a sigla também do lado da consulta.** O nome
+oficial de 14 consórcios traz a sigla colada (`"...DA BAHIA - COTEMESB"`). Comparar `fold(raw)`
+puro contra `item.folded` (que já está sem sigla, herdado do patch 5) fazia esses 14 nomes
+oficiais caírem em `alias` em vez de `exato` — o próprio nome cru não batia consigo mesmo.
+Corrigido rodando `derive_consorcio_aliases(raw)` também na consulta e comparando o `folded`
+resultante (sem sigla dos dois lados). Confirmado por mutação: reverter para `fold(raw)` puro
+quebra `test_todos_os_29_consorcios_match_exato` nos 14 casos com sigla.
+
+**O exemplo `"Caetite" → 2905404 fuzzy ≥ 0.90` do rascunho deste patch estava errado em dois
+pontos**, medido contra os dados reais: `2905404` é Cairu, não Caetité (`2905206`); e `fold()`
+remove acento dos dois lados, então `"Caetite"` sem acento e `"Caetité"` oficial dobram para a
+mesma string — é `exato`, não `fuzzy`. Substituído por `"Caetitte"` (erro de letra, não de
+acento), que mede `0.933` contra `2905206` e exercita o caminho fuzzy de verdade.
+
+As quatro formas curtas do teste manual (`"Consórcio Bacia do Paramirim"` → `14618`, `"Consórcio
+Portal do Sertão"` → `8108`, `"Consórcio Piemonte do Paraguaçu"` → `29322`, `"Consórcio do Vale do
+Rio Gavião"` → `29302`) resolvem via `alias`: cada uma reduz, pela mesma cascata do patch 5, à
+`chave_curta` do nome oficial — nenhuma bate o nome inteiro nem precisa do fuzzy.
+
+Decisão 16 medida: `"Bacia do Paramirim (Região)"` (nome de território de consórcio, não de
+município — linha real do PROMPT 2) mede `0.58` contra o município mais próximo, abaixo do piso
+de `0.60` → `municipio_id=None`, `metodo="nenhum"`, `candidatos` continua com o top-5. Decisão 4
+medida: consórcio nunca zera — até lixo puro (`"xxxxxxxxxxxxxxxxxxxx"`) recebe o mais próximo,
+`metodo="fuzzy"`, porque `consorcio_fuzzy_minimo` é `0.0` de propósito.
+
+28 testes novos, 170 no total, todos passando. Mutação, 4 pontos: reverter a partição de sigla no
+lado da consulta quebra o `exato` dos 14 nomes oficiais com sigla; desligar o piso do município
+quebra o `nenhum` de `"Bacia do Paramirim (Região)"`; zerar o delta de ambiguidade quebra
+`"Santa Rita"` (`ambiguo=True` esperado); introduzir um piso no consórcio quebra o "nunca vira
+nenhum" para lixo puro.
+
+**Não faz ainda:** nenhum uso do `Match` fora deste módulo — schemas (patch 7) e `normalize`
+(patch 9) são quem de fato consome `id`/`metodo`/`confianca`/`ambiguo`.
 
 **Arquivos**
 - **criar** `research_pipeline/config/matching.yaml` — `confianca_exato: 1.0`, `confianca_alias: 0.92`,
@@ -526,7 +562,7 @@ afirma: exatamente **14** consórcios com sigla; `29302 → CIVALERG`; `45429 �
 - **criar** `research_pipeline/tests/test_matcher.py`
 
 **Verificar:** `python -m pytest research_pipeline/tests/test_matcher.py`, afirmando:
-os 417 nomes exatos → `exato`, `1.0`; os 29 nomes exatos → `exato`; `"Caetite" → 2905404` `fuzzy ≥ 0.90`;
+os 417 nomes exatos → `exato`, `1.0`; os 29 nomes exatos → `exato`; `"Caetitte" → 2905206` `fuzzy ≥ 0.90`;
 `"CIVALERG" → 29302` `alias`; `"Consórcio Bacia do Paramirim" → 14618`;
 `"Consórcio Portal do Sertão" → 8108`; `"Consórcio Piemonte do Paraguaçu" → 29322`;
 `"Consórcio do Vale do Rio Gavião" → 29302` (as quatro são as strings reais do teste manual);
@@ -845,7 +881,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | 3 | Carregador + **AC8** ✅ | não | `python -m research_pipeline.refs` |
 | 4 | Vocabulários + 2 armadilhas XLSX ✅ | não | `python -m research_pipeline.vocab` |
 | 5 | Aliases mecânicos ✅ | não | `python -m research_pipeline.aliases` |
-| 6 | Matcher determinístico | não | `pytest test_matcher.py` |
+| 6 | Matcher determinístico ✅ | não | `pytest test_matcher.py` |
 | 7 | Schemas + validador | não | `pytest test_validate.py` |
 | 8 | Estruturador fixture + `extract` + **fixture semente** | não | `check_golden extract` |
 | 9 | `normalize` + cruzamentos | não | `check_golden normalize` |

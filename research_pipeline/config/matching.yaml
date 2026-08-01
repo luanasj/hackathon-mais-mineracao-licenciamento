@@ -1,0 +1,21 @@
+# Limiares do matcher determinístico (patch 6, GOAL.md §7 / decisões 4 e 16).
+#
+# `municipio_fuzzy_minimo` é o único piso que existe: abaixo dele, `municipio_id = null`,
+# `metodo = "nenhum"` — decisão 16. `consorcio_fuzzy_minimo: 0.0` não filtra nada de propósito:
+# consórcio SEMPRE recebe o candidato mais próximo (decisão 4), nunca `null`.
+#
+# `fuzzy_delta_ambiguidade` decide `ambiguo`: quando o primeiro e o segundo colocado do fuzzy
+# ficam a menos que esta distância, a linha é candidata a ir para o LLM desempatador (patch 9).
+#
+# `confianca_aviso` e `confianca_heranca` não são consumidos por `matcher.py` — são lidos pelo
+# patch 7 (`validate.py`, aviso `*_match_confianca < confianca_aviso`) e pelo patch 9 (herança de
+# consórcio cadastral, decisão 15: `confianca <= confianca_heranca`). Ficam neste arquivo porque
+# são limiares do mesmo domínio (confiança de match) e não do domínio de cada nó.
+
+confianca_exato: 1.0
+confianca_alias: 0.92
+municipio_fuzzy_minimo: 0.60
+consorcio_fuzzy_minimo: 0.0
+fuzzy_delta_ambiguidade: 0.05
+confianca_aviso: 0.7
+confianca_heranca: 0.5
