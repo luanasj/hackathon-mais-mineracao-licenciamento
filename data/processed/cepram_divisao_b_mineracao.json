@@ -1,0 +1,250 @@
+{
+  "fundamento": {
+    "resolucao": "Resolução CEPRAM nº 4.327, de 31 de outubro de 2013",
+    "publicacao": "Diário Oficial do Estado da Bahia, 3 de dezembro de 2013, Ano XCVIII, Nº 21.301",
+    "arquivo_fonte": "documentation/Resolucao-CEPRAM-4.327-2013.pdf",
+    "secao": "Anexo Único — Tipologia e Porte dos Empreendimentos e Atividades Sujeitos a Licença ou Autorização Ambiental — Competência Municipal — Divisão B: Mineração",
+    "paginas_fonte": "11-15",
+    "data_extracao": "2026-08-01",
+    "metodo": "Extração direta de texto e tabela do PDF com pdfplumber, célula a célula. data_source/Anexo_IV_Divisao_B_Mineracao_Bahia.xlsx foi checada e DESCARTADA como fonte: seus limiares numéricos e sua matriz de Classe divergem deste PDF para as mesmas tipologias (ex. B3.1: planilha diz <150.000/500.000, este PDF diz <75.000/375.000) — confirmado com o usuário em 01/08/2026 que o PDF é a fonte correta, não a planilha.",
+    "verificado": true
+  },
+  "classificacao_impacto_art_3": {
+    "fundamento": "Art. 3º, parágrafo único, da Resolução CEPRAM 4.327/2013",
+    "descricao": "Classe do empreendimento por cruzamento de Porte x Potencial Poluidor Geral",
+    "matriz": {
+      "porte_pequeno": {
+        "poluidor_pequeno": "Classe 1",
+        "poluidor_medio": "Classe 1",
+        "poluidor_alto": "Classe 3"
+      },
+      "porte_medio": {
+        "poluidor_pequeno": "Classe 2",
+        "poluidor_medio": "Classe 3",
+        "poluidor_alto": "Classe 5"
+      },
+      "porte_grande": {
+        "poluidor_pequeno": "Classe 4",
+        "poluidor_medio": "Classe 5",
+        "poluidor_alto": "Classe 6"
+      }
+    },
+    "verificado": true
+  },
+  "niveis_gestao_municipal": {
+    "fundamento": "Art. 2º §2º e Art. 7º da Resolução CEPRAM 4.327/2013",
+    "descricao": "O licenciamento de impacto local é dividido em 3 níveis, em ordem crescente de complexidade ambiental (porte, potencial poluidor, natureza da atividade). Município comunica à SEMA qual nível assume (Art. 7º); sem manifestação, assume-se os 3 níveis (Art. 7º, parágrafo único).",
+    "interpretacao_colunas_nivel_1_2_3": "As colunas 'nivel_1'/'nivel_2'/'nivel_3' de cada tipologia abaixo indicam quais Classes (ver classificacao_impacto_art_3) esse nível de gestão municipal autoriza licenciar para aquela tipologia+porte. Esta é uma INTERPRETAÇÃO deste script a partir do texto dos Art. 2º/7º — o documento não tem uma legenda explícita do tipo 'coluna 1 = nível 1 do Art. 7º'. Tratar como pendente de confirmação, não como fato.",
+    "verificado": false
+  },
+  "divisao": "B",
+  "nome_divisao": "Mineração",
+  "grupos": [
+    {
+      "grupo": "B1",
+      "nome": "Minerais Metálicos e Não Metálicos",
+      "status": "ausente_no_documento",
+      "nota": "Não aparece neste arquivo: a tabela pula de 'DIVISÃO B: MINERAÇÃO' (fim da página 11) direto para 'Grupo B3' (início da página 12), sem conteúdo intermediário. Conferido via extract_text(), extract_text(layout=True) e extract_table() — não há imagem nem tabela oculta na página, o espaço está genuinamente em branco. Não preenchido com dado da planilha porque a planilha já mostrou divergência de fonte nos grupos que dá para comparar (B3/B4) — preencher aqui seria arriscar citar fundamento errado.",
+      "tipologias": []
+    },
+    {
+      "grupo": "B2",
+      "nome": "Gemas ou Pedras Preciosas e Semi-Preciosas",
+      "status": "ausente_no_documento",
+      "nota": "Mesma lacuna do Grupo B1 (ver nota acima) — conteúdo ausente deste arquivo.",
+      "tipologias": []
+    },
+    {
+      "grupo": "B3",
+      "nome": "Minerais Utilizados na Construção Civil, Ornamentos e Outros",
+      "status": "presente",
+      "tipologias": [
+        {
+          "codigo": "B3.1",
+          "tipologia": "Areias, Arenoso, Cascalhos, Filitos",
+          "unidade_medida_porte": "Produção Bruta de Minério (t/ano)",
+          "porte": {
+            "pequeno": "< 75.000",
+            "medio": "> 75.000 < 375.000",
+            "grande": "> 375.000"
+          },
+          "potencial_poluidor": "M",
+          "nivel_gestao_municipal": {
+            "nivel_1": "C1",
+            "nivel_2": "C1",
+            "nivel_3": "C1 e C3"
+          },
+          "pagina_fonte": 12
+        },
+        {
+          "codigo": "B3.2",
+          "tipologia": "Areias em Recursos Hídricos",
+          "unidade_medida_porte": "Produção Bruta de Minério (t/ano)",
+          "porte": {
+            "pequeno": "< 20.000",
+            "medio": "> 20.000 < 100.000",
+            "grande": "> 100.000"
+          },
+          "potencial_poluidor": "M",
+          "nivel_gestao_municipal": {
+            "nivel_1": "C1",
+            "nivel_2": "C1",
+            "nivel_3": "C1 e C3"
+          },
+          "pagina_fonte": 12
+        },
+        {
+          "codigo": "B3.3",
+          "tipologia": "Gesso, Caulim e Saibro",
+          "unidade_medida_porte": "Produção Bruta de Minério (t/ano)",
+          "porte": {
+            "pequeno": "< 50.000",
+            "medio": "> 50.000 < 250.000",
+            "grande": "> 250.000"
+          },
+          "potencial_poluidor": "A",
+          "nivel_gestao_municipal": {
+            "nivel_1": null,
+            "nivel_2": "C3",
+            "nivel_3": "C3 e C5"
+          },
+          "pagina_fonte": 12
+        },
+        {
+          "codigo": "B3.4",
+          "tipologia": "Basalto, Calcários, Gnaisses, Granitos, Granulitos, Metarenitos, Quartzitos, Sienitos, Dentre Outras Utilizadas Para a Produção de Agregados e Beneficiamento Associado (Britamento)",
+          "unidade_medida_porte": "Produção Bruta de Minério (t/ano)",
+          "porte": {
+            "pequeno": "< 50.000",
+            "medio": "> 50.000 < 500.000",
+            "grande": "> 500.000"
+          },
+          "potencial_poluidor": "M",
+          "nivel_gestao_municipal": {
+            "nivel_1": "C1",
+            "nivel_2": "C1",
+            "nivel_3": "C1 e C3"
+          },
+          "pagina_fonte": 13
+        },
+        {
+          "codigo": "B3.5",
+          "tipologia": "Ardósia, Dioritos, Granitos, Mármores, Quartzitos, Sienitos, Dentre Outras Utilizadas Para Revestimento",
+          "unidade_medida_porte": "Produção Bruta de Minério (t/ano)",
+          "porte": {
+            "pequeno": "< 20.000",
+            "medio": "> 20.000 < 60.000",
+            "grande": "> 60.000"
+          },
+          "potencial_poluidor": "A",
+          "nivel_gestao_municipal": {
+            "nivel_1": null,
+            "nivel_2": "C3",
+            "nivel_3": "C3 e C5"
+          },
+          "pagina_fonte": 13
+        }
+      ]
+    },
+    {
+      "grupo": "B4",
+      "nome": "Minerais Utilizados na Indústria",
+      "status": "presente",
+      "tipologias": [
+        {
+          "codigo": "B4.1",
+          "tipologia": "Materiais Cerâmicos (Argilas, Caulinita, Diatomita, Ilita e Montmorilonita, Dentre Outros)",
+          "unidade_medida_porte": "Produção Bruta de Minério (t/ano)",
+          "porte": {
+            "pequeno": "< 30.000",
+            "medio": "> 30.000 < 100.000",
+            "grande": "> 100.000"
+          },
+          "potencial_poluidor": "M",
+          "nivel_gestao_municipal": {
+            "nivel_1": "C1",
+            "nivel_2": "C1",
+            "nivel_3": "C1 e C3"
+          },
+          "pagina_fonte": 13
+        },
+        {
+          "codigo": "B4.2",
+          "tipologia": "Cianita, Feldspato, Fluorita, Leucita, Moscovita, Nefelina, Quartzo e Turmalina, Dentre Outros, Para Manufatura de Vidro/Vitrificação, Esmaltação e Indústria Óptica, Eletrônica, etc",
+          "unidade_medida_porte": "Produção Bruta de Minério (t/Ano)",
+          "porte": {
+            "pequeno": "< 20.000",
+            "medio": "> 20.000 < 200.000",
+            "grande": "> 200.000"
+          },
+          "potencial_poluidor": "A",
+          "nivel_gestao_municipal": {
+            "nivel_1": null,
+            "nivel_2": "C3",
+            "nivel_3": "C3 E C5"
+          },
+          "pagina_fonte": 14,
+          "nota": "nivel_3 mantido exatamente como impresso no PDF ('C3 E C5', com E maiúsculo) — as demais tipologias desta divisão usam 'e' minúsculo nessa mesma posição; não corrigido por suposição de padronização, é o que está na página 14. A planilha data_source/Anexo_IV_Divisao_B_Mineracao_Bahia.xlsx (não usada como fonte deste JSON) afirma que os limiares de pequeno/médio porte desta tipologia 'não são expressos na publicação oficial'. Isso é FALSO para este documento: o PDF, página 14, traz os dois limiares com clareza (< 20.000 e > 20.000 < 200.000). Registrado aqui para não repetir o erro da planilha."
+        },
+        {
+          "codigo": "B4.3",
+          "tipologia": "Apatita, Bentonita, Calcário, Calcita, Carnalita, Dolomita, Fosfatos, Guano, Minerais de Borato, Potássio, Salgema, Salitre, Silvita e Sódio, Dentre Outros, Para Produção de Fertilizantes e Corretivos Agrícolas, etc",
+          "unidade_medida_porte": "Produção Bruta de Minério (t/Ano)",
+          "porte": {
+            "pequeno": "< 100.000",
+            "medio": "> 100.000 < 500.000",
+            "grande": "> 500.000"
+          },
+          "potencial_poluidor": "A",
+          "nivel_gestao_municipal": {
+            "nivel_1": null,
+            "nivel_2": "C3",
+            "nivel_3": "C3"
+          },
+          "pagina_fonte": 14,
+          "nota": "nivel_2 e nivel_3 saíram idênticos ('C3') na extração da tabela do PDF — diferente do padrão de escalonamento visto nas outras tipologias (onde nivel_3 costuma acrescentar uma classe a mais, ex. 'C3 e C5'). Mantido como extraído, sem corrigir por suposição; pode ser erratum do próprio Diário Oficial."
+        },
+        {
+          "codigo": "B4.4",
+          "tipologia": "Anidrita, Andalusita, Anfibólios, Barita, Calcário Conchífero, Calcita, Caulinita, Cianita, Coríndon, Feldspato, Gipsita, Grafita, Magnesita, Moscovita, Pegmatito, Quartzo Leitoso, Serpentinito, Sílex, Talco, Vermiculita, Wollastonita, Xisto e Zirconita, Dentre Outros, Para Uso Industrial Não Especificado Anteriormente",
+          "unidade_medida_porte": "Produção Bruta de Minério (t/Ano)",
+          "porte": {
+            "pequeno": "< 50.000",
+            "medio": "> 50.000 < 500.000",
+            "grande": "> 500.000"
+          },
+          "potencial_poluidor": "A",
+          "nivel_gestao_municipal": {
+            "nivel_1": "C3",
+            "nivel_2": "C3",
+            "nivel_3": "C5"
+          },
+          "pagina_fonte": "14-15",
+          "nota": "Descrição da tipologia continua da página 14 para a 15 no PDF original (quebra de página no meio da lista de minerais); texto unificado aqui."
+        }
+      ]
+    }
+  ],
+  "lacunas": [
+    {
+      "item": "Grupo B1 — Minerais Metálicos e Não Metálicos (esperado: Ferro, Manganês, e um grupo extenso de metais como Alumínio/Cobre/Ouro/Níquel/etc, conforme B1.1, e um item B1.2 de minerais não metálicos)",
+      "motivo": "conteúdo ausente do arquivo PDF fornecido (ver nota do grupo B1)",
+      "acao_recomendada": "obter cópia completa/oficial do Diário Oficial de 03/12/2013 (Ano XCVIII, Nº 21.301) para confirmar o conteúdo real de B1 — não usar a planilha data_source/Anexo_IV_Divisao_B_Mineracao_Bahia.xlsx sem antes confirmar que ela de fato transcreve esta mesma resolução, já que seus números divergem do que este PDF traz para B3/B4"
+    },
+    {
+      "item": "Grupo B2 — Gemas ou Pedras Preciosas e Semi-Preciosas",
+      "motivo": "conteúdo ausente do arquivo PDF fornecido (ver nota do grupo B2)",
+      "acao_recomendada": "mesma ação recomendada do Grupo B1"
+    },
+    {
+      "item": "Legenda oficial das colunas nivel_1/nivel_2/nivel_3",
+      "motivo": "inferida do texto dos Art. 2º §2º e Art. 7º, mas o documento não define explicitamente 'coluna 1 do Anexo = nível 1 do Art. 7º' — é a leitura mais razoável, não uma citação literal",
+      "acao_recomendada": "marcar como verificado:false na interface até alguém confirmar"
+    },
+    {
+      "item": "B4.3: nivel_2 e nivel_3 idênticos ('C3')",
+      "motivo": "foge do padrão de escalonamento das outras 8 tipologias desta divisão",
+      "acao_recomendada": "conferir contra o Diário Oficial original — pode ser erratum da própria publicação, não da extração"
+    }
+  ]
+}
