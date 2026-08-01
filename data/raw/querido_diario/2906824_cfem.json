@@ -1,0 +1,144 @@
+{
+  "total_gazettes": 9,
+  "gazettes": [
+    {
+      "territory_id": "2906824",
+      "date": "2025-12-17",
+      "scraped_at": "2025-12-18T01:49:48.118378",
+      "url": "https://data.queridodiario.ok.org.br/2906824/2025-12-17/04425abfd8b956bd0ef6c75e25b85fe261ef0bae.pdf",
+      "territory_name": "Canudos",
+      "state_code": "BA",
+      "excerpts": [
+        "77.748,0072.633,00 109.461,00\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            5.934,00 6.141,00 5.451,00 6.279,00 5.175,00 6.417,00 5.313,00 5.037,00 69.000,005.727,00 5.244,004.899,00 7.383,00\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            5.934,00 6.141,00 5.451,00 6.279,00 5.175,00 6.417,00 5.313,00 5.037,00 69.000,005.727,00 5.244,004.899,00 7"
+      ],
+      "edition": "3.557",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906824/2025-12-17/04425abfd8b956bd0ef6c75e25b85fe261ef0bae.txt"
+    },
+    {
+      "territory_id": "2906824",
+      "date": "2024-12-26",
+      "scraped_at": "2024-12-27T01:15:56.765696",
+      "url": "https://data.queridodiario.ok.org.br/2906824/2024-12-26/3cfdafdda63b68a01db9ebcd10a1d6ec9aef8d17.pdf",
+      "territory_name": "Canudos",
+      "state_code": "BA",
+      "excerpts": [
+        "000,0071.337,00 69.531,0060.501,00 100.233,00\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            912,00 816,00 1.260,00 1.212,00 936,00 876,00 852,00 1.128,00 12.000,00948,00 924,00804,00 1.332,00\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal            912,00 816,00 1.260,00 1.212,00 936,00 876,00 852,00 1.128,00 12.000,00948,00 924,00804,00 1.332,00\n\n1.7.1.2.52.0.0.00.00"
+      ],
+      "edition": "3.110",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906824/2024-12-26/3cfdafdda63b68a01db9ebcd10a1d6ec9aef8d17.txt"
+    },
+    {
+      "territory_id": "2906824",
+      "date": "2023-12-28",
+      "scraped_at": "2023-12-28T21:23:52.779548",
+      "url": "https://data.queridodiario.ok.org.br/2906824/2023-12-28/2ec801d5458866f967708bd99d5ffbfd7c4d2226.pdf",
+      "territory_name": "Canudos",
+      "state_code": "BA",
+      "excerpts": [
+        "00106.650,00 103.950,0090.450,00 149.850,00\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            760,00 680,00 1.050,00 1.010,00 780,00 730,00 710,00 940,00 10.000,00790,00 770,00670,00 1.110,00\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal            760,00 680,00 1.050,00 1.010,00 780,00 730,00 710,00 940,00 10.000,00790,00 770,00670,00 1.110,00\n\n1.7.1.2.52.0.0.00.00.00"
+      ],
+      "edition": "2.735",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906824/2023-12-28/2ec801d5458866f967708bd99d5ffbfd7c4d2226.txt"
+    },
+    {
+      "territory_id": "2906824",
+      "date": "2023-12-28",
+      "scraped_at": "2023-12-28T21:23:52.771921",
+      "url": "https://data.queridodiario.ok.org.br/2906824/2023-12-28/1a210f1b1a0ac093bc4a0642424f43d46532e285.pdf",
+      "territory_name": "Canudos",
+      "state_code": "BA",
+      "excerpts": [
+        "00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM10.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal10.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal\n             \n\n1.708.000010.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo740.000,00   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte da"
+      ],
+      "edition": "2.734",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906824/2023-12-28/1a210f1b1a0ac093bc4a0642424f43d46532e285.txt"
+    },
+    {
+      "territory_id": "2906824",
+      "date": "2024-12-23",
+      "scraped_at": "2024-12-24T01:11:46.110990",
+      "url": "https://data.queridodiario.ok.org.br/2906824/2024-12-23/eb834f143271003656141822bf5c38b5779d9632.pdf",
+      "territory_name": "Canudos",
+      "state_code": "BA",
+      "excerpts": [
+        "00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM12.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal12.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal\n             \n\n1.708.000012.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo686.000,00   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte da"
+      ],
+      "edition": "3.108",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906824/2024-12-23/eb834f143271003656141822bf5c38b5779d9632.txt"
+    },
+    {
+      "territory_id": "2906824",
+      "date": "2013-12-20",
+      "scraped_at": "2023-08-18T14:42:43.441103",
+      "url": "https://data.queridodiario.ok.org.br/2906824/2013-12-20/d410f0b831664961bd2acd27ccde7b48987e2264.pdf",
+      "territory_name": "Canudos",
+      "state_code": "BA",
+      "excerpts": [
+        "25000\n\n1721.01.05.02 Cota-Parte do ITR - Saúde 15% 229.05002\n\n1721.01.05.03 Cota-Parte do ITR - Educação 25% 152.70001\n\n1721.22.00.00 Transferências da Compensação Financeira 355,300.00\n\n1721.22.20.00 Cota-Parte da Comp. Financeira de Rec. Minerais - CFEM 174,000.00042\n\n1721.22.30.00 Cota-Parte Royalties 17,300.00042\n\n1721.22.70.00 Cota-Parte do Fundo Especial do Petróleo - FEP 164,000.00042\n\n1721.33.00.00 Transferência de Recursos do Sistema Único de Saúde 2,062,600.00\n\n1721.33.01.00 Piso de Atenção"
+      ],
+      "edition": "598",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906824/2013-12-20/d410f0b831664961bd2acd27ccde7b48987e2264.txt"
+    },
+    {
+      "territory_id": "2906824",
+      "date": "2014-12-15",
+      "scraped_at": "2023-08-18T14:40:33.938820",
+      "url": "https://data.queridodiario.ok.org.br/2906824/2014-12-15/b1b257aa973999ad168b7f345c3ee28e3776969a.pdf",
+      "territory_name": "Canudos",
+      "state_code": "BA",
+      "excerpts": [
+        "Rem. de Depósitos  - DEMAIS REC. VINCULADOS 14,532.00\n\n1325.56.01.00 Remuneração de Depósitos Bancários -  CIDE 238.00094\n\n1325.56.02.00 Remuneração de Depósitos Bancários - FIES 500.00094\n\n1325.56.03.00 Rem. de Depósitos Bancários - FEP/ ROYALTIES/ CFEM 3,794.00094\n\n1325.56.04.00 Rem. de Depósitos Bancários - Outros Rec. Vinculados 10,000.00094\n\n1325.57.00.00 Rem. de Depósitos  - RECURSOS NÃO VINCULADOS 70,676.00\n\n1325.57.01.00 REN Fundos de Rendimentos 1,200.00000\n\n1325.57.04.00 Rem. de Depósitos"
+      ],
+      "edition": "754",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906824/2014-12-15/b1b257aa973999ad168b7f345c3ee28e3776969a.txt"
+    },
+    {
+      "territory_id": "2906824",
+      "date": "2025-12-04",
+      "scraped_at": "2025-12-05T01:22:41.890767",
+      "url": "https://data.queridodiario.ok.org.br/2906824/2025-12-04/5952f8e59ccb43efabcc52201cc067db8f84fd79.pdf",
+      "territory_name": "Canudos",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM69.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n69.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n1.708.000069.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo954.000,00   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte"
+      ],
+      "edition": "3.535",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906824/2025-12-04/5952f8e59ccb43efabcc52201cc067db8f84fd79.txt"
+    },
+    {
+      "territory_id": "2906824",
+      "date": "2025-12-03",
+      "scraped_at": "2025-12-05T01:22:41.893851",
+      "url": "https://data.queridodiario.ok.org.br/2906824/2025-12-03/c7ef7280701629ccfab79739ada108c37ca60d81.pdf",
+      "territory_name": "Canudos",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM69.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n69.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n1.708.000069.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo954.000,00   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte"
+      ],
+      "edition": "3.534",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906824/2025-12-03/c7ef7280701629ccfab79739ada108c37ca60d81.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2906824",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2906824",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

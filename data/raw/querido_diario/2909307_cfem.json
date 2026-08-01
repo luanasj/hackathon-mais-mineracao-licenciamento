@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 23,
+  "gazettes": [
+    {
+      "territory_id": "2909307",
+      "date": "2025-12-30",
+      "scraped_at": "2025-12-31T04:33:26.055190",
+      "url": "s3://okbr-qd-migration//2909307/2025-12-30/063357ed218a3c6d1e14fa510a549770140093cf.pdf",
+      "territory_name": "Correntina",
+      "state_code": "BA",
+      "excerpts": [
+        "60 144,40 169,20 2.000,00171,20 176,6066,00 346,80\n\n1.3.2.1.01.0.1.56.16.00 Remun. Dep. Banc - ClDE            581,70 483,00 631,40 491,40 518,70 534,10 505,40 592,20 7.000,00599,20 618,10231,00 1.213,80\n\n1.3.2.1.01.0.1.56.17.00 Remun. Dep. Banc -  CFEM            166,20 138,00 180,40 140,40 148,20 152,60 144,40 169,20 2.000,00171,20 176,6066,00 346,80\n\n1.3.2.1.01.0.1.56.18.00 Remun. Dep. Banc -  Vinc transf. Esp. União-emendas            1.329,60 1.104,00 1.443,20 1.123,20 1.185,60 1.220,80 1.155"
+      ],
+      "edition": "8.058",
+      "is_extra_edition": false,
+      "txt_url": "s3://okbr-qd-migration//2909307/2025-12-30/063357ed218a3c6d1e14fa510a549770140093cf.txt"
+    },
+    {
+      "territory_id": "2909307",
+      "date": "2023-01-11",
+      "scraped_at": "2024-03-22T11:08:17.562219",
+      "url": "https://data.queridodiario.ok.org.br/2909307/2023-01-11/9a1277b7c0d6dade994a28f549fbc0ca217af615.pdf",
+      "territory_name": "Correntina",
+      "state_code": "BA",
+      "excerpts": [
+        "de Recursos Naturais385.479,90 414.899,55 480.887,55 503.433,45 416.274,30 548.525,25 2.749.500,00\n\n1.7.1.2.51.0.0.00.00.00         Cota-Parte da Comp.Financ.de Rec.Minerais-CFEM 3.645,20 3.923,40 4.547,40 4.760,60 3.936,40 5.187,00 26.000,00\n\n1.7.1.2.51.0.1.00.00.00             Cota-Parte da Comp.Financ.de Rec.Minerais-CFEM-Princ 3.645,20 3.923,40 4.547,40 4.760,60 3.936,40 5.187,00 26.000,00\n\nPágina 5 de 13\n\n\n\nQuarta-feira\n11 de Janeiro de 2023\n8 - Ano XVII - Nº 6135\n\nCorrentina\n\nCERTIFICAÇÃO DIGITAL:"
+      ],
+      "edition": "6135",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909307/2023-01-11/9a1277b7c0d6dade994a28f549fbc0ca217af615.txt"
+    },
+    {
+      "territory_id": "2909307",
+      "date": "2013-04-03",
+      "scraped_at": "2024-03-22T09:57:25.861113",
+      "url": "https://data.queridodiario.ok.org.br/2909307/2013-04-03/f66c36887f4746d46b3b494740b9afcedc617ada.pdf",
+      "territory_name": "Correntina",
+      "state_code": "BA",
+      "excerpts": [
+        "25.354,50 21.243,37 21.778,27 27.234,31 152.830,00\n1.7.2.1.99.00.00         Outras Transferências da União 61.006,59 55.587,93 51.664,08 43.286,96 44.376,92 55.494,51 311.417,00\n1.7.2.1.99.02.00           Compensação financeira de Extração Mineral-CFEM 12.089,97 11.016,13 10.238,52 8.578,38 8.794,39 10.997,61 61.715,00\n1.7.2.1.99.04.00           Transf. Aux. Financ. p/Fomento Exp. FEX 3.240,19 2.952,39 2.743,99 2.299,06 2.356,95 2.947,43 16.540,00\n1.7.2.1.99.09.00           Demais Transferências"
+      ],
+      "edition": "448",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909307/2013-04-03/f66c36887f4746d46b3b494740b9afcedc617ada.txt"
+    },
+    {
+      "territory_id": "2909307",
+      "date": "2011-01-06",
+      "scraped_at": "2024-03-22T09:51:14.097755",
+      "url": "https://data.queridodiario.ok.org.br/2909307/2011-01-06/12028686af21cb91719cdc32ca075845642c986e.pdf",
+      "territory_name": "Correntina",
+      "state_code": "BA",
+      "excerpts": [
+        "399,65 75.764,75 346.274,00\n\n1.7.2.1.99.01.00           Transf. Financeira - ICMS DESONERAÇÃO LC No. 87/96 13.933,28 19.454,23 21.264,19 16.392,10 17.883,32 24.906,88 113.834,00\n\n1.7.2.1.99.02.00           Compensação financeira de Extração Mineral-CFEM 4.162,82 5.812,31 6.353,07 4.897,44 5.342,97 7.441,39 34.010,00\n\n1.7.2.1.99.09.00           Demais Transferências da União 24.287,83 33.911,69 37.066,72 28.573,92 31.173,35 43.416,48 198.430,00\n\n1.7.2.2.00.00.00       Transferencias dos estados 2.723"
+      ],
+      "edition": "232",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909307/2011-01-06/12028686af21cb91719cdc32ca075845642c986e.txt"
+    },
+    {
+      "territory_id": "2909307",
+      "date": "2010-01-11",
+      "scraped_at": "2024-03-22T09:51:53.618350",
+      "url": "https://data.queridodiario.ok.org.br/2909307/2010-01-11/e5d11b56e719a2c1e8f7358b496ab1863d4534da.pdf",
+      "territory_name": "Correntina",
+      "state_code": "BA",
+      "excerpts": [
+        "204,5812.105,62\n\n17219900       Outras Transferências da União 8.435,06 10.375,27 9.962,46 10.843,12 10.843,12 13.705,26 137.603,009.329,48 11.943,94 15.439,06 10.911,92 12.012,7410.237,66\n\n17219902       Compensação financeira de Extração Mineral-CFEM 1.950,26 2.398,85 2.303,41 2.507,02 2.507,02 3.168,77 31.815,002.157,06 2.761,54 3.569,64 2.522,93 2.777,452.367,04\n\n17219909       Demais Transferências da União 6.484,80 7.976,42 7.659,05 8.336,09 8.336,09 10.536,48 105.788,007.172,43 9.182,40 11"
+      ],
+      "edition": "90",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909307/2010-01-11/e5d11b56e719a2c1e8f7358b496ab1863d4534da.txt"
+    },
+    {
+      "territory_id": "2909307",
+      "date": "2024-01-02",
+      "scraped_at": "2024-03-22T11:16:01.533470",
+      "url": "https://data.queridodiario.ok.org.br/2909307/2024-01-02/3602eb7d6ed10d83a6537eb37f60748a8eb2447c.pdf",
+      "territory_name": "Correntina",
+      "state_code": "BA",
+      "excerpts": [
+        "   Remun.Dep.Banc-FCBA 133,54 196,24 223,08 162,25 163,68 221,21 1.100,00\n\n1.3.2.1.01.0.1.56.16.00                 Remun.Dep.Banc-CIDE 691,98 1.016,88 1.155,96 840,75 848,16 1.146,27 5.700,00\n\n1.3.2.1.01.0.1.56.17.00                 Remun.Dep.Banc-CFEM 169,96 249,76 283,92 206,50 208,32 281,54 1.400,00\n\n1.3.2.1.01.0.1.56.30.00                 Remun.Dep.Banc-FIES 133,54 196,24 223,08 162,25 163,68 221,21 1.100,00\n\n1.3.2.1.01.0.1.56.42.00                 Remun.Dep.Banc-ROYALTIES 4.431,10 6.511,60 7"
+      ],
+      "edition": "6791",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909307/2024-01-02/3602eb7d6ed10d83a6537eb37f60748a8eb2447c.txt"
+    },
+    {
+      "territory_id": "2909307",
+      "date": "2025-12-04",
+      "scraped_at": "2025-12-05T00:46:16.750480",
+      "url": "https://data.queridodiario.ok.org.br/2909307/2025-12-04/365f1388f9d4188d7c73859e8fdc703fd38b11fb.pdf",
+      "territory_name": "Correntina",
+      "state_code": "BA",
+      "excerpts": [
+        "00   \n\n1.3.2.1.01.0.1.56.16.00 Remun. Dep. Banc - ClDE7.000,00   \n\n1.3.2.1.01.0.1.56.16.00 Remun. Dep. Banc - ClDE              17507.000,00   \n\n1.3.2.1.01.0.1.56.17.00 Remun. Dep. Banc -  CFEM2.000,00   \n\n1.3.2.1.01.0.1.56.17.00 Remun. Dep. Banc -  CFEM              17082.000,00   \n\n1.3.2.1.01.0.1.56.18.00 Remun. Dep. Banc -  Vinc transf. Esp. União-emendas16.000,00   \n\n1.3.2.1.01.0.1.56.18.00 Remun. Dep. Banc -  Vinc transf. Esp. União-emendas              15013.000,00   \n\n1.3.2.1.01.0.1.56.18.00"
+      ],
+      "edition": "8.020",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909307/2025-12-04/365f1388f9d4188d7c73859e8fdc703fd38b11fb.txt"
+    },
+    {
+      "territory_id": "2909307",
+      "date": "2013-01-31",
+      "scraped_at": "2024-03-22T09:57:44.455499",
+      "url": "https://data.queridodiario.ok.org.br/2909307/2013-01-31/c46137f6a3888c7e7bec6a5f3ba94c37231a56ca.pdf",
+      "territory_name": "Correntina",
+      "state_code": "BA",
+      "excerpts": [
+        "25.354,50 21.243,37 21.778,27 27.234,31 152.830,00\n1.7.2.1.99.00.00         Outras Transferências da União 61.006,59 55.587,93 51.664,08 43.286,96 44.376,92 55.494,51 311.417,00\n1.7.2.1.99.02.00           Compensação financeira de Extração Mineral-CFEM 12.089,97 11.016,13 10.238,52 8.578,38 8.794,39 10.997,61 61.715,00\n1.7.2.1.99.04.00           Transf. Aux. Financ. p/Fomento Exp. FEX 3.240,19 2.952,39 2.743,99 2.299,06 2.356,95 2.947,43 16.540,00\n1.7.2.1.99.09.00           Demais Transferências"
+      ],
+      "edition": "411",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909307/2013-01-31/c46137f6a3888c7e7bec6a5f3ba94c37231a56ca.txt"
+    },
+    {
+      "territory_id": "2909307",
+      "date": "2013-10-11",
+      "scraped_at": "2024-03-22T09:55:10.066935",
+      "url": "https://data.queridodiario.ok.org.br/2909307/2013-10-11/6c15f7006c1d08961f4b33e62b11e724f8f44e5c.pdf",
+      "territory_name": "Correntina",
+      "state_code": "BA",
+      "excerpts": [
+        "FUNDAMENTO\nCORRENTINA - BA\nCNPJ: 14221741000107\n\n1.7.2.1.22.00.00         Transf.Compens.Financeira pela Expl.Rec.Naturais 247.342,50 508.085,00 608.774,00 656.501,88 714.536,65205.260,77\n1.7.2.1.22.20.00           Cota parte Comp. Financ. Recursos Minerais CFEM 0,00 0,00 65.936,00 71.105,38 77.391,100,00\n1.7.2.1.22.70.00           Cota-parte Fundo Especial do Petróleo-FEP 247.342,50 463.560,00 495.268,00 534.097,01 581.311,19205.260,77\n1.7.2.1.22.90.00           Outras Transf.Decor.de Comp. Financeira p/Expl"
+      ],
+      "edition": "695",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909307/2013-10-11/6c15f7006c1d08961f4b33e62b11e724f8f44e5c.txt"
+    },
+    {
+      "territory_id": "2909307",
+      "date": "2025-06-25",
+      "scraped_at": "2025-06-26T01:08:36.066259",
+      "url": "https://data.queridodiario.ok.org.br/2909307/2025-06-25/771d9c2911fab4764e3a13d3c65a0c2d2e7fddba.pdf",
+      "territory_name": "Correntina",
+      "state_code": "BA",
+      "excerpts": [
+        "14.000,00                       \n\nRemun. Dep. Banc - ClDE              7.000,00                     8.000,00                     9.000,00                      10.000,00                     1750 34.000,00                       \n\nRemun. Dep. Banc -  CFEM              2.000,00                     3.000,00                     4.000,00                      5.000,00                       1708 14.000,00                       \n\nRemun. Dep. Banc -  Vinc transf. Esp. União-emendas              13.000,00  "
+      ],
+      "edition": "7.768",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909307/2025-06-25/771d9c2911fab4764e3a13d3c65a0c2d2e7fddba.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2909307",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2909307",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

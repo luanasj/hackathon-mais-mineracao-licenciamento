@@ -1,0 +1,46 @@
+{
+  "total_gazettes": 2,
+  "gazettes": [
+    {
+      "territory_id": "2917607",
+      "date": "2025-01-17",
+      "scraped_at": "2025-01-18T01:41:44.088965",
+      "url": "https://data.queridodiario.ok.org.br/2917607/2025-01-17/d4b8929b6f2b38972c289fdb4f93dda2c2504a35.pdf",
+      "territory_name": "Jaguaquara",
+      "state_code": "BA",
+      "excerpts": [
+        " Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n1.330.000,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n10.000,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n10.000,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 1.320.000,00\n171252100000       Cota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "1.854",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2917607/2025-01-17/d4b8929b6f2b38972c289fdb4f93dda2c2504a35.txt"
+    },
+    {
+      "territory_id": "2917607",
+      "date": "2024-12-30",
+      "scraped_at": "2024-12-31T02:24:56.372544",
+      "url": "https://data.queridodiario.ok.org.br/2917607/2024-12-30/2fa3262877833d2f97905343f25e3d909bd098eb.pdf",
+      "territory_name": "Jaguaquara",
+      "state_code": "BA",
+      "excerpts": [
+        " Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n1.330.000,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n10.000,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n10.000,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 1.320.000,00\n171252100000       Cota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "1.823",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2917607/2024-12-30/2fa3262877833d2f97905343f25e3d909bd098eb.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2917607",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2917607",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

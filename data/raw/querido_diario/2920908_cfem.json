@@ -1,0 +1,102 @@
+{
+  "total_gazettes": 6,
+  "gazettes": [
+    {
+      "territory_id": "2920908",
+      "date": "2023-10-02",
+      "scraped_at": "2023-10-03T11:19:35.867668",
+      "url": "https://data.queridodiario.ok.org.br/2920908/2023-10-02/1d36eb83cbb93b74f0870484f7c4eed20640a324.pdf",
+      "territory_name": "Mascote",
+      "state_code": "BA",
+      "excerpts": [
+        "Compensação Financeira pela Exploração de Recursos Hídricos\n- Principal\n\n5.175,00   \n\n1.7.1.2.51.0.0.00.00.0\n0 \n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais -\nCFEM\n\n5.175,00   \n\n1.7.1.2.51.0.1.00.00.0\n0 \n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais\n- CFEM - Principal\n\n5.175,00   \n\n1.7.1.2.52.0.0.00.00.0\n0 \n\nCota-parte da Compensação Financeira pela Produção de Petróleo13.421.933,30   \n\n1.7.1.2.52.1.0.00.00.0\n0 \n\nCota-parte da Compensação Financeira"
+      ],
+      "edition": "1.625",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2920908/2023-10-02/1d36eb83cbb93b74f0870484f7c4eed20640a324.txt"
+    },
+    {
+      "territory_id": "2920908",
+      "date": "2024-11-13",
+      "scraped_at": "2024-11-15T01:46:15.798094",
+      "url": "https://data.queridodiario.ok.org.br/2920908/2024-11-13/9ecd1f9970be5504d8adcf24a38bf21bb1f3fec3.pdf",
+      "territory_name": "Mascote",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM5.589,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n5.589,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n170800005.589,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo14.234.647,97   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte"
+      ],
+      "edition": "1.840",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2920908/2024-11-13/9ecd1f9970be5504d8adcf24a38bf21bb1f3fec3.txt"
+    },
+    {
+      "territory_id": "2920908",
+      "date": "2023-12-26",
+      "scraped_at": "2023-12-26T21:47:40.536242",
+      "url": "https://data.queridodiario.ok.org.br/2920908/2023-12-26/aa022880cb30ae6b9c2ee446da98f2861eda28d7.pdf",
+      "territory_name": "Mascote",
+      "state_code": "BA",
+      "excerpts": [
+        "Hídricos - Principal 170,78 430,04 600,82 357,08 442,98 800,06 1.400,8817090000 5.175,00 1.400,88\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 170,78 430,04 600,82 357,08 442,98 800,06 1.400,885.175,00 1.400,88\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal 170,78 430,04 600,82 357,08 442,98 800,06 1.400,8817080000 5.175,00 1.400,88\n\nCota-parte da Compensação Financeira pela Produção de Petróleo 442.923,81 1.115.362"
+      ],
+      "edition": "1.674",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2920908/2023-12-26/aa022880cb30ae6b9c2ee446da98f2861eda28d7.txt"
+    },
+    {
+      "territory_id": "2920908",
+      "date": "2022-12-28",
+      "scraped_at": "2023-08-18T14:47:15.370826",
+      "url": "https://data.queridodiario.ok.org.br/2920908/2022-12-28/42ff6beea124502e7c1cbf9e37d02af7ce7858a3.pdf",
+      "territory_name": "Mascote",
+      "state_code": "BA",
+      "excerpts": [
+        "Hídricos - Principal 165,00 415,50 580,50 345,00 428,00 773,00 1.353,5017090000 5.000,00 1.353,50\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 165,00 415,50 580,50 345,00 428,00 773,00 1.353,505.000,00 1.353,50\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal 165,00 415,50 580,50 345,00 428,00 773,00 1.353,5017080000 5.000,00 1.353,50\n\nCota-parte da Compensação Financeira pela Produção de Petróleo 424.804,10 1.069.733"
+      ],
+      "edition": "1.472",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2920908/2022-12-28/42ff6beea124502e7c1cbf9e37d02af7ce7858a3.txt"
+    },
+    {
+      "territory_id": "2920908",
+      "date": "2024-12-19",
+      "scraped_at": "2024-12-20T02:13:00.926075",
+      "url": "https://data.queridodiario.ok.org.br/2920908/2024-12-19/b5d48e3ad011baf249311291b4029484b4a3dfe4.pdf",
+      "territory_name": "Mascote",
+      "state_code": "BA",
+      "excerpts": [
+        "Principal            184,44 464,45 648,89 385,64 478,42 864,06 1.512,9517090000 5.589,00 1.512,95\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            184,44 464,45 648,89 385,64 478,42 864,06 1.512,955.589,00 1.512,95\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            184,44 464,45 648,89 385,64 478,42 864,06 1.512,9517080000 5.589,00 1.512,95\n\nCota-parte da Compensação Financeira pela Produção de Petróleo    "
+      ],
+      "edition": "1.861",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2920908/2024-12-19/b5d48e3ad011baf249311291b4029484b4a3dfe4.txt"
+    },
+    {
+      "territory_id": "2920908",
+      "date": "2025-12-19",
+      "scraped_at": "2025-12-21T02:18:46.286654",
+      "url": "https://data.queridodiario.ok.org.br/2920908/2025-12-19/8d804bfc8a27dc853f0cb7227d28f76aa39c6dd8.pdf",
+      "territory_name": "Mascote",
+      "state_code": "BA",
+      "excerpts": [
+        "00.00 \nTransferências das Compensações Financeiras pela Exploração de Recursos \nNaturais \n\n1.7.1.2.51.0.0.00.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais \n- CFEM \n\n1.7.1.2.51.0.1.00.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos \nMinerais - CFEM - Principal \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo \n\n1.7.1.2.52.1.0.00.00.00 \nCota-parte da Compensação Financeira pela Produção de Petróleo - Lei"
+      ],
+      "edition": "2.139",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2920908/2025-12-19/8d804bfc8a27dc853f0cb7227d28f76aa39c6dd8.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2920908",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2920908",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

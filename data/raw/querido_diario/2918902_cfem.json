@@ -1,0 +1,88 @@
+{
+  "total_gazettes": 5,
+  "gazettes": [
+    {
+      "territory_id": "2918902",
+      "date": "2024-12-05",
+      "scraped_at": "2024-12-06T01:47:01.550783",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2024-12-05/64028d4a35701b1277844857a747de0d231be6d5.pdf",
+      "territory_name": "Lajedão",
+      "state_code": "BA",
+      "excerpts": [
+        "000,0062.410,00 60.830,0052.930,00 87.690,00\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            760,00 680,00 1.050,00 1.010,00 780,00 730,00 710,00 940,00 10.000,00790,00 770,00670,00 1.110,00\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal            760,00 680,00 1.050,00 1.010,00 780,00 730,00 710,00 940,00 10.000,00790,00 770,00670,00 1.110,00\n\n1.7.1.2.52.0.0.00.00.00"
+      ],
+      "edition": "751",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2024-12-05/64028d4a35701b1277844857a747de0d231be6d5.txt"
+    },
+    {
+      "territory_id": "2918902",
+      "date": "2025-12-22",
+      "scraped_at": "2025-12-23T02:16:39.029621",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2025-12-22/bd03ee613eceb863ebb511afe0d2c39b96300a25.pdf",
+      "territory_name": "Lajedão",
+      "state_code": "BA",
+      "excerpts": [
+        "0043.990,00 40.280,0037.630,00 56.710,00\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            860,00 890,00 790,00 910,00 750,00 930,00 770,00 730,00 10.000,00830,00 760,00710,00 1.070,00\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            860,00 890,00 790,00 910,00 750,00 930,00 770,00 730,00 10.000,00830,00 760,00710,00 1.070,00\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte"
+      ],
+      "edition": "984",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2025-12-22/bd03ee613eceb863ebb511afe0d2c39b96300a25.txt"
+    },
+    {
+      "territory_id": "2918902",
+      "date": "2022-01-10",
+      "scraped_at": "2023-10-29T00:01:57.880043",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2022-01-10/941cec8f4b4895ab34dbad630d815e439eb7cc76.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "0 ,00 0,00 0,00 \n\n17 1802110000 Cota -pa rt e da Compensação Fi nanceira de Recursos Hi\"d ricos • Principal \n\n0,00 0,00 0,00 \n171802200000 Cota -parte da CompensaçJo Financeira de Rec ursos Mi~ is • CFEM \n\n0 ,00 0,00 0,00 \n\n171802210000 Cota -parte da Compensação Financeira de Recursos Minera is - CFEM - Principal \n\n1.136,40 1.769,50 8.031, 17 \n\n171802300000 Cota-parte Royalties - Compensação Financeira pel a Produção de Pe tróleo - Lei nt 7 .990/89 \n1. 136,40 1.769,SO 8 .031 ,17 \n\n171802310000 Cota"
+      ],
+      "edition": "142",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2022-01-10/941cec8f4b4895ab34dbad630d815e439eb7cc76.txt"
+    },
+    {
+      "territory_id": "2918902",
+      "date": "2024-12-03",
+      "scraped_at": "2024-12-04T01:44:51.248760",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2024-12-03/7f93c21910ec541ef828716aef3f9c92ec48afbc.pdf",
+      "territory_name": "Lajedão",
+      "state_code": "BA",
+      "excerpts": [
+        "00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM10.000,00 \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal10.000,00 \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal1.708.000010.000,00 \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo530.000,00 \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte da Compensação Financeira"
+      ],
+      "edition": "749",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2024-12-03/7f93c21910ec541ef828716aef3f9c92ec48afbc.txt"
+    },
+    {
+      "territory_id": "2918902",
+      "date": "2025-12-19",
+      "scraped_at": "2025-12-20T02:47:28.171149",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2025-12-19/7d4cbb2292a14fa2768afea339dd8715f7b1c4fd.pdf",
+      "territory_name": "Lajedão",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM10.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n10.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n1.708.000010.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo520.000,00   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte"
+      ],
+      "edition": "982",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2025-12-19/7d4cbb2292a14fa2768afea339dd8715f7b1c4fd.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2918902",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2918902",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

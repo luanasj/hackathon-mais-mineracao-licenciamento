@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 27,
+  "gazettes": [
+    {
+      "territory_id": "2901601",
+      "date": "2019-12-17",
+      "scraped_at": "2024-10-28T18:53:45.818646",
+      "url": "https://data.queridodiario.ok.org.br/2901601/2019-12-17/9c5a745092427e13b3a1abbd2ad8452b7116a830.pdf",
+      "territory_name": "Antas",
+      "state_code": "BA",
+      "excerpts": [
+        "-------------\n\nIsento\nR$ 2.300,00 R$ 2.800,00 R$ 3.000,00\n\n1.20.00 De fornecimento de energia elétrica -------------\nIsento\n\nR$ 2.300,00 R$ 2.800,00 R$ 3.000,00\n\n1.21.00 De extração mineral R$ 432,20 Isento R$ 575,80 R$ 719,75 R$ 863,70\n\n1.21.01 Extração mineral (areia) R$ 211,87 Isento R$ 282,26 R$ 352,83 R$ 423,39\n\n1.22.00 De extração vegetal Isento\nR$ 6.000,00\n\n1.23.00\n\nEstabelecimento não classificado nos \nitens 1.01.00 a 1.20.00\n\nIsento\nR$ 60,00\n\n2.00.00 Estabelecimento comercial:\n\n2.01.00 Atacadista"
+      ],
+      "edition": "649",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901601/2019-12-17/9c5a745092427e13b3a1abbd2ad8452b7116a830.txt"
+    },
+    {
+      "territory_id": "2901601",
+      "date": "2020-12-21",
+      "scraped_at": "2024-10-28T18:53:53.019114",
+      "url": "https://data.queridodiario.ok.org.br/2901601/2020-12-21/735dda293c5cfb2273e55670de39f45ece45ac67.pdf",
+      "territory_name": "Antas",
+      "state_code": "BA",
+      "excerpts": [
+        "------------- Isento R$ 2.300,00 R$ 2.800,00 R$ 3.000,00 \n\n1.20.00 De fornecimento de energia elétrica ------------- Isento R$ 2.300,00 R$ 2.800,00 R$ 3.000,00 \n\n1.21.00 De extração mineral R$ 432,20 Isento R$ 575,80 R$ 719,75 R$ 863,70 \n\n1.21.01 Extração mineral (areia) R$ 211,87 Isento R$ 282,26 R$ 352,83 R$ 423,39 \n\n1.22.00 De extração vegetal  Isento   R$ 6.000,00 \n\n1.23.00 \nEstabelecimento não classificado nos itens \n1.01.00 a 1.20.00 R$ 50,00 Isento R$100,00 R$200,00 R$ 260,00 \n\n2.00.00 ESTABELECIMENTO"
+      ],
+      "edition": "956",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901601/2020-12-21/735dda293c5cfb2273e55670de39f45ece45ac67.txt"
+    },
+    {
+      "territory_id": "2901601",
+      "date": "2024-12-17",
+      "scraped_at": "2025-01-29T23:04:36.774691",
+      "url": "https://data.queridodiario.ok.org.br/2901601/2024-12-17/01b1810e0809264800bf5c69508b20076039bd3d.pdf",
+      "territory_name": "Antas",
+      "state_code": "BA",
+      "excerpts": [
+        "2.890,00 \n\n \nR$ 3.515,00 \n\n \nR$ 3.768,00 \n\n1.20.00 \nDe fornecimento de energia elétrica \n\n------------- \nIsento \n\nR$ 2.890,00 R$ 3.515,00 R$ 3.768,00 \n\n1.21.00 \nDe extração mineral R$ 543,00 Isento R$ 723,00 R$ 904,00 R$ 1.085,00 \n\n1.21.01 \nExtração mineral (areia) R$ 266,00 Isento R$ 355,00 R$ 443,00 R$ 532,00 \n\n1.22.00 \nDe extração vegetal  Isento   \n\nR$ 7.532,00 \n\n \n1.23.00 \n\nEstabelecimento não classificado nos itens \n\n1.01.00 a 1.20.00 \n\n \nR$ 63,00 \n\nIsento \n \n\nR$126,00 \n\n \nR$252,00 \n\n \nR$ 327"
+      ],
+      "edition": "2400",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901601/2024-12-17/01b1810e0809264800bf5c69508b20076039bd3d.txt"
+    },
+    {
+      "territory_id": "2901601",
+      "date": "2021-12-14",
+      "scraped_at": "2024-10-28T20:20:20.037951",
+      "url": "https://data.queridodiario.ok.org.br/2901601/2021-12-14/24f7237e36eea3f4ce9c12c49544f464799e4a40.pdf",
+      "territory_name": "Antas",
+      "state_code": "BA",
+      "excerpts": [
+        "a capacitação dos servidores integrantes dos órgãos do SISMUMA para o \ndesempenho o exercício da gestão ambiental com eficiência. \n\nX. A orientação e difusão de conceitos de gestão e de tecnologias ambientalmente compatíveis \nnos processos de extração mineral; \n\nXI. A articulação e a compatibilização da política municipal com as políticas de gestão e \nproteção ambiental no âmbito federal e estadual, visando a integração do município ao:\n\na. O Sistema Nacional do Meio Ambiente (SISNAMA) e o Sistema"
+      ],
+      "edition": "1308",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901601/2021-12-14/24f7237e36eea3f4ce9c12c49544f464799e4a40.txt"
+    },
+    {
+      "territory_id": "2901601",
+      "date": "2021-04-07",
+      "scraped_at": "2024-10-28T20:23:48.742648",
+      "url": "https://data.queridodiario.ok.org.br/2901601/2021-04-07/c4b79f9773445370954571b8eb12590ffa6d3761.pdf",
+      "territory_name": "Antas",
+      "state_code": "BA",
+      "excerpts": [
+        "decorrência de haver essa Comissão \n\nEspecial de Licitação, ter exigido explicitamente no edital a necessidade da empresa \n\napresentar “Licença Ambiental da jazida e autorização para exploração de recursos \n\nminerais emitido para o órgão de origem da extração (rocha quando aparelhados \n\npara paralelepípedos, guias, sarjetas, moirões ou lajes) para calçamentos emitidos \n\npelo MUNICIPIO da sede da jazida e pela AGENCIA NACIONAL DE MINERAÇÃO, \ncontendo carta de anuência emitida pelo proprietário da pedreira"
+      ],
+      "edition": "1061",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901601/2021-04-07/c4b79f9773445370954571b8eb12590ffa6d3761.txt"
+    },
+    {
+      "territory_id": "2901601",
+      "date": "2022-09-30",
+      "scraped_at": "2024-10-28T20:20:27.204058",
+      "url": "https://data.queridodiario.ok.org.br/2901601/2022-09-30/f6efd9c984cbe66c2d0b9908af5f7a9ba60a3ab1.pdf",
+      "territory_name": "Antas",
+      "state_code": "BA",
+      "excerpts": [
+        "fornecimento de energia \n\nelétrica ------------- \n\nIsent\n\no ----------- ---------- \nR$ \n\n4.000,00 \n\n1.21.00 \n\nEstabelecimento de extração \n\nmineral não relacionados nesta \n\nlista. \nR$ 1.600,00 \n\nIsent\n\no \nR$ \n\n2.000.00 \n\nR$ \n\n2.500,00 \n\nR$ \n\n3.000,00 \n\n1.21.00 \nExtração mineral (areia) R$ 800,00 \n\nIsent\n\no \n\nR$ \n\n1.000,00 \n\nR$ \n\n1.500,00 \n\nR$ \n\n2.000,00 \n\n1.22.00 \nDe extração vegetal \n\nR$1.000,00 \n\nIsent\n\no \nR$2.000,\n\n00 \n\nR$3.000,0\n\n0 \n\nR$ \n\n6.000,00 \n\n1.23.00 \n\nEstabelecimento não classificado \n\nnos"
+      ],
+      "edition": "1619",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901601/2022-09-30/f6efd9c984cbe66c2d0b9908af5f7a9ba60a3ab1.txt"
+    },
+    {
+      "territory_id": "2901601",
+      "date": "2024-07-11",
+      "scraped_at": "2024-10-28T19:10:28.916563",
+      "url": "https://data.queridodiario.ok.org.br/2901601/2024-07-11/7814180b2a20660709321b9cbb1f3a833dbe0c6c.pdf",
+      "territory_name": "Antas",
+      "state_code": "BA",
+      "excerpts": [
+        "conhecida como Lima Seldin, material aço inoxidável e autoclavável.\n\nLote:\n1\n\nQuantidade:\n10,00\n\nUnidade:\nUnidade\n\nMarca: ABC Modelo: ABC Preço Unitário: R$\n96,14\n\nValor Total: R$961,40\n\nDescrição: Martelo De Mead. Indicado para intervenções cirúrgicas, extração de dentes, secção de dentes e raízes dentárias. Comprimento total\nde 17cm. A cabeça possui 4 cm de comprimento e 2cm de diâmetro.\n\nLote:\n1\n\nQuantidade:\n30,00\n\nUnidade:\nUnidade\n\nMarca: MAQUIRA Modelo: MAQUIRA Preço Unitário: R$\n32,07\n\nValor Total:"
+      ],
+      "edition": "2259",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901601/2024-07-11/7814180b2a20660709321b9cbb1f3a833dbe0c6c.txt"
+    },
+    {
+      "territory_id": "2901601",
+      "date": "2020-07-10",
+      "scraped_at": "2024-10-28T18:55:34.891937",
+      "url": "https://data.queridodiario.ok.org.br/2901601/2020-07-10/00b5dc1dffc5958bdb130221670b3239460ac222.pdf",
+      "territory_name": "Antas",
+      "state_code": "BA",
+      "excerpts": [
+        "pavimentação; ainda em sua decisão o presidente, \n\ncontinua alegando que não foi apresentado a documentação exigida no item 6.5, alinha “f” \n\n“licença Ambiental da Jazida e autorização para exploração de recursos minerais emitido \n\npara o órgão de origem da extração (rocha quando aparelhados para paralelepípedos,\n\nguias, sarjetas, moirões ou lajes) para calçamento emitidos pelo MUNICIPIO  e pela \n\nAGENCIA NACIONAL DE MINERAÇÃO”. \n\nA Recorrente citou ainda que apresentou a certidão, “item 6.3, alinea “g”, juntada"
+      ],
+      "edition": "839",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901601/2020-07-10/00b5dc1dffc5958bdb130221670b3239460ac222.txt"
+    },
+    {
+      "territory_id": "2901601",
+      "date": "2021-07-06",
+      "scraped_at": "2024-10-28T20:21:02.624134",
+      "url": "https://data.queridodiario.ok.org.br/2901601/2021-07-06/e1087b449771b681df7cf0891623551435a044e6.pdf",
+      "territory_name": "Antas",
+      "state_code": "BA",
+      "excerpts": [
+        "embasamento técnico-científico e aprovação do \n\nServiço de Inspeção Municipal. \n\n \n\nDOS ESTABELECIMENTOS DE PRODUTOS DE ABELHAS E DERIVADOS \n\n \n\nArt. 66 - Os estabelecimentos de produtos de abelhas e derivados são classificados em: \n\nI -  Unidade de extração e beneficiamento de produtos de abelhas;  \n\nII -  Entreposto de beneficiamento de produtos de abelhas e derivados. \n\nEsta edição encontra-se no site oficial deste ente.\n\nAntas\n\nCERTIFICAÇÃO DIGITAL: YXHWQC+QKOAAZU2WULTAFQ\n\nTerça-feira\n6 de Julho"
+      ],
+      "edition": "1167",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901601/2021-07-06/e1087b449771b681df7cf0891623551435a044e6.txt"
+    },
+    {
+      "territory_id": "2901601",
+      "date": "2016-03-08",
+      "scraped_at": "2024-10-28T18:39:53.794362",
+      "url": "https://data.queridodiario.ok.org.br/2901601/2016-03-08/9fa9031899f9433320c169350848a437929b8885.pdf",
+      "territory_name": "Antas",
+      "state_code": "BA",
+      "excerpts": [
+        "Municipal de Antas\n1 Terça-feira • 8 de Março de 2016 • Ano IV • Nº 187 \n\n \n\nPrefeitura Municipal de  \nAntas publica: \n\n \n \n \n \n• Aviso de Licitação Pregão Presencial Nº 006/2016 - Objeto: aquisição \n\nparcelada de Almoços, quentinhas acompanhados de água mineral ou \nsuco, para atender a demanda do Gabinete; e Secretarias de Educação, \nSaúde, Administração, Infraestrutura, Esporte e Lazer, Assistência Social \ne demais Órgãos deste Município \n\n• Aviso de Licitação Pregão Presencial Nº 007/2016 - Objeto: \ncontratação"
+      ],
+      "edition": "187",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901601/2016-03-08/9fa9031899f9433320c169350848a437929b8885.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2901601",
+    "termo": "extracao mineral",
+    "params": {
+      "territory_ids": "2901601",
+      "querystring": "extracao mineral",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

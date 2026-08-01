@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 23,
+  "gazettes": [
+    {
+      "territory_id": "2918100",
+      "date": "2011-04-29",
+      "scraped_at": "2024-07-15T06:51:51.826287",
+      "url": "https://data.queridodiario.ok.org.br/2918100/2011-04-29/4bca340bc1cd38bf5f088c3080848f169f2905a5.pdf",
+      "territory_name": "Jeremoabo",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências da Compensação Financeira pela Exploração de\nRecursos Naturais = (76+...+82)\n\n193.699,79\n\n76 1.7.21.22.11 Cota-parte da Compensação Financeira de Recursos Hídricos 0,00\n\n77 1.7.21.22.20\nCota-parte da Compensação Financeira de Recursos Minerais -\nCFEM\n\n0,00\n\n78 1.7.21.22.30\nCota-parte Royalties - Compensação Financeira pela Produção de\nPetróleo - Lei n° 7.990/89 \n\n18.595,92\n\n79 1.7.21.22.40\nCota-Parte Royalties pelo Excedente da Produção do Petróleo - Lei\nnº 9.478/97, artigo 49, I e II \n\n0,00\n\n80"
+      ],
+      "edition": "122",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918100/2011-04-29/4bca340bc1cd38bf5f088c3080848f169f2905a5.txt"
+    },
+    {
+      "territory_id": "2918100",
+      "date": "2023-02-17",
+      "scraped_at": "2024-03-22T12:13:42.205439",
+      "url": "https://data.queridodiario.ok.org.br/2918100/2023-02-17/0987344edf4f3d463eb0c056b5861c3f003d66d4.pdf",
+      "territory_name": "Jeremoabo",
+      "state_code": "BA",
+      "excerpts": [
+        "SAÚDE  15% 3.800,001.7.1.1.52.0.1.00.00\n\n150010\n02\n\nTRANSFERÊNCIA.COMP.FINANCEIRA PELA EXPLORAÇÃO DE RECURSOS NATURAIS 1.235.000,001.7.1.2.00.0.0.00.00\nCOTA PARTE COMPENSAÇÃO FINANC DE RECURSOS MINERAIS -CFEM 10.000,001.7.1.2.50.0.0.00.00\n  COTA PARTE COMPENSAÇÃO FINANC DE RECURSOS MINERAIS -CFEM - PRINCIPAL -\nROYALTIES/RECURSOS MINERAIS 10.000,001.7.1.2.50.0.1.00.00\n\n170800\n00\n\nCOTA PARTE ROYALTIES-PELO EXCEDENTE DA PRODUÇÃO DE PETROLEO LEI Nº\n9.478/97/89, ARTIGO 49, I e II - PRINCIPAL 25.000,001"
+      ],
+      "edition": "4609",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918100/2023-02-17/0987344edf4f3d463eb0c056b5861c3f003d66d4.txt"
+    },
+    {
+      "territory_id": "2918100",
+      "date": "2024-12-12",
+      "scraped_at": "2025-01-29T23:30:26.472164",
+      "url": "https://data.queridodiario.ok.org.br/2918100/2024-12-12/537779c25306279e4ed5023d61a9696e41fbecd5.pdf",
+      "territory_name": "Jeremoabo",
+      "state_code": "BA",
+      "excerpts": [
+        "1\n\n150\n010 p 000  3.800,00\n\n1.7.1.2.00.0.0.00.00 TRANSFERÊNCIA.COMP.FINANCEIRA PELA EXPLORAÇÃO DE\nRECURSOS NATURAIS 1.635.000,00\n\n1.7.1.2.51.0.0.00.00 COTA PARTE COMPENSAÇÃO FINANC DE RECURSOS MINERAIS -CFEM 10.000,00\n\n1.7.1.2.51.0.1.00.00   COTA PARTE COMPENSAÇÃO FINANC DE RECURSOS MINERAIS -CFEM\n- PRINCIPAL 0 1\n\n170\n400 p 000  10.000,00\n\n1.7.1.2.52.2.0.00.00 COTA PARTE ROYALTIES-PELO EXCEDENTE DA PRODUÇÃO DE\nPETROLEO LEI Nº 9.478/97/89, ARTIGO 49, I e II - PRINCIPAL 25.000,00\n\n1.7.1.2.52.2.1.00"
+      ],
+      "edition": "5374",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918100/2024-12-12/537779c25306279e4ed5023d61a9696e41fbecd5.txt"
+    },
+    {
+      "territory_id": "2918100",
+      "date": "2013-05-13",
+      "scraped_at": "2024-07-15T06:49:51.331283",
+      "url": "https://data.queridodiario.ok.org.br/2918100/2013-05-13/16799486f09268d9491e0fbf60f7c4e8c0f1047a.pdf",
+      "territory_name": "Jeremoabo",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências da Compensação Financeira pela Exploração de Recursos\nNaturais = (76+...+82)\n\n296.573,23\n\n76 1.7.21.22.11 Cota-parte da Compensação Financeira de Recursos Hídricos 0,00\n77 1.7.21.22.20 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 0,00\n\n78 1.7.21.22.30\nCota-parte Royalties - Compensação Financeira pela Produção de Petróleo\n- Lei n° 7.990/89 \n\n18.312,91\n\n79 1.7.21.22.40\nCota-Parte Royalties pelo Excedente da Produção do Petróleo - Lei nº\n9.478/97, artigo 49, I e II \n\n0,00\n\n80"
+      ],
+      "edition": "484",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918100/2013-05-13/16799486f09268d9491e0fbf60f7c4e8c0f1047a.txt"
+    },
+    {
+      "territory_id": "2918100",
+      "date": "2018-02-02",
+      "scraped_at": "2024-03-22T11:33:29.841357",
+      "url": "https://data.queridodiario.ok.org.br/2918100/2018-02-02/7a0f35fcb912ab75b67086b4cdde6fb8b82389f9.pdf",
+      "territory_name": "Jeremoabo",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de Recursos Na 63.617,90 59.379,45 61.107,75 106.167,00 411.500,0073.452,7547.775,15\n\n1.7.1.8.02.2.0.0.000  Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 1.546,00 1.443,00 1.485,00 2.580,00 10.000,001.785,001.161,00\n\n1.7.1.8.02.2.1.0.000  Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - P 1.546,00 1.443,00 1.485,00 2.580,00 10.000,001.785,001.161,00\n\n1.7.1.8.02.3.0.0.000  Cota-parte Royalties   Compensação Financeira pela Produção de Petróleo 3.092,00 2.886"
+      ],
+      "edition": "1921",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918100/2018-02-02/7a0f35fcb912ab75b67086b4cdde6fb8b82389f9.txt"
+    },
+    {
+      "territory_id": "2918100",
+      "date": "2012-05-02",
+      "scraped_at": "2024-07-15T06:45:21.676490",
+      "url": "https://data.queridodiario.ok.org.br/2918100/2012-05-02/cb34d6d00723d5289af7614630cca9807032f94d.pdf",
+      "territory_name": "Jeremoabo",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências da Compensação Financeira pela Exploração de Recursos\nNaturais = (76+...+82)\n\n243.180,65\n\n76 1.7.21.22.11 Cota-parte da Compensação Financeira de Recursos Hídricos 0,00\n77 1.7.21.22.20 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 0,00\n\n78 1.7.21.22.30\nCota-parte Royalties - Compensação Financeira pela Produção de Petróleo\n- Lei n° 7.990/89 \n\n12.262,27\n\n79 1.7.21.22.40\nCota-Parte Royalties pelo Excedente da Produção do Petróleo - Lei nº\n9.478/97, artigo 49, I e II \n\n0,00\n\n80"
+      ],
+      "edition": "298",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918100/2012-05-02/cb34d6d00723d5289af7614630cca9807032f94d.txt"
+    },
+    {
+      "territory_id": "2918100",
+      "date": "2014-05-06",
+      "scraped_at": "2024-07-15T06:48:59.139635",
+      "url": "https://data.queridodiario.ok.org.br/2918100/2014-05-06/9212dd749ac3a54cea8709ad021d059e55c7b775.pdf",
+      "territory_name": "Jeremoabo",
+      "state_code": "BA",
+      "excerpts": [
+        "00 - Transferências da Compensação Financeira pela Exploração de Recursos Naturais 310.161,96\n1.7.2.1.22.11.00 - Cota-parte da Compensação Financeira de Recursos Hídricos\n1.7.2.1.22.20.00 - Cota-parte da Compensação Financeira de Recursos Minerais - CFEM\n1.7.2.1.22.30.00 - Cota-parte Royalties – Compensação Financeira pela Produção de Petróleo – Lei nº\n7.990/89 21.099,16\n\n1.7.2.1.22.40.00 - Cota-Parte Royalties pelo Excedente da Produção do Petróleo - Lei nº 9.478/97\nartigo 49 I e II\n1.7.2.1.22.50"
+      ],
+      "edition": "721",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918100/2014-05-06/9212dd749ac3a54cea8709ad021d059e55c7b775.txt"
+    },
+    {
+      "territory_id": "2918100",
+      "date": "2015-04-30",
+      "scraped_at": "2024-07-15T06:53:20.025184",
+      "url": "https://data.queridodiario.ok.org.br/2918100/2015-04-30/559b99f30f5711dbe5ae164b21d17cfa844dd7fe.pdf",
+      "territory_name": "Jeremoabo",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências da Compensação Financeira pela\nExploração de Recursos Naturais 346.961,67 0,00 0,00 0,00\n\n1.7.2.1.22.11.00 - Cota-Parte da Compensação Financeira de Recursos\nHídricos\n1.7.2.1.22.20.00 - Cota-Parte da Compensação Financeira de Recursos\nMinerais - CFEM 1.535,81\n\n1.7.2.1.22.30.00 - Cota-Parte Royalties – Compensação Financeira\npela Produção de Petróleo – Lei nº 7.990/89 23.656,06\n\n1.7.2.1.22.40.00 - Cota-Parte Royalties pelo Excedente da Produção do\nPetróleo - Lei nº 9.478/97 artigo 49 I e II\n1.7"
+      ],
+      "edition": "972",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918100/2015-04-30/559b99f30f5711dbe5ae164b21d17cfa844dd7fe.txt"
+    },
+    {
+      "territory_id": "2918100",
+      "date": "2019-12-23",
+      "scraped_at": "2024-03-22T11:40:25.381027",
+      "url": "https://data.queridodiario.ok.org.br/2918100/2019-12-23/d6cdc8acc17868b8c33c6fda3660a8a552108571.pdf",
+      "territory_name": "Jeremoabo",
+      "state_code": "BA",
+      "excerpts": [
+        "TERRITORIAL\nRURAL-PRINCIPAL 6 2 2 P 015  4.800,00 4.800,00\n\n171802000000\nTRANSFERÊNCIA.COMP.FINANCEIRA PELA EXPLORAÇÃO DE\nRECURSOS NATURAIS 535.000,00\n\n171802200000 COTA PARTE COMPENSAÇÃO FINANC DE RECUR MINERAIS -CFEM 10.000,00\n\n171802210000\n  COTA PARTE COMPENSAÇÃO FINANC DE RECUR MINERAIS -CFEM -\nPRINCIPAL 0 2 42 P 027  10.000,00 10.000,00\n\n171802400000\nCOTA PARTE ROYALTIES-PELO ESCEDENTE DA PRODUÇÃO DE\nPETROLEO LEI Nº 9.478/97/89 25.000,00\n\n171802410000\n  COTA PARTE ROYALTIES-PELO ESCEDENTE DA PRODUÇÃO"
+      ],
+      "edition": "2745",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918100/2019-12-23/d6cdc8acc17868b8c33c6fda3660a8a552108571.txt"
+    },
+    {
+      "territory_id": "2918100",
+      "date": "2023-01-06",
+      "scraped_at": "2024-03-22T12:14:40.571202",
+      "url": "https://data.queridodiario.ok.org.br/2918100/2023-01-06/05adff1cb0509a5238edf205eec3796cfd19632c.pdf",
+      "territory_name": "Jeremoabo",
+      "state_code": "BA",
+      "excerpts": [
+        "SAÚDE  15% 3.800,001.7.1.1.52.0.1.00.00\n\n150010\n02\n\nTRANSFERÊNCIA.COMP.FINANCEIRA PELA EXPLORAÇÃO DE RECURSOS NATURAIS 1.235.000,001.7.1.2.00.0.0.00.00\nCOTA PARTE COMPENSAÇÃO FINANC DE RECURSOS MINERAIS -CFEM 10.000,001.7.1.2.50.0.0.00.00\n  COTA PARTE COMPENSAÇÃO FINANC DE RECURSOS MINERAIS -CFEM - PRINCIPAL -\nROYALTIES/RECURSOS MINERAIS 10.000,001.7.1.2.50.0.1.00.00\n\n170800\n00\n\nCOTA PARTE ROYALTIES-PELO EXCEDENTE DA PRODUÇÃO DE PETROLEO LEI Nº\n9.478/97/89, ARTIGO 49, I e II - PRINCIPAL 25.000,001"
+      ],
+      "edition": "4531",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918100/2023-01-06/05adff1cb0509a5238edf205eec3796cfd19632c.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2918100",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2918100",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

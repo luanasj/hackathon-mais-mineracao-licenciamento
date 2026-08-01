@@ -1,0 +1,102 @@
+{
+  "total_gazettes": 6,
+  "gazettes": [
+    {
+      "territory_id": "2902054",
+      "date": "2024-11-14",
+      "scraped_at": "2024-11-15T00:09:30.948190",
+      "url": "https://data.queridodiario.ok.org.br/2902054/2024-11-14/67318d07092b24c79b197a7071ae49a1968cca7b.pdf",
+      "territory_name": "Araças",
+      "state_code": "BA",
+      "excerpts": [
+        "00 Transferências das Compensações Financeiras pela Exploração de Recursos\nNaturais              60.000,00   \n\n1.7.2.2.51.0.0.00.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM             10.000,00   \n\n1.7.2.2.51.0.1.00.01 Cota-parte da Compensação Financeira de Recursos Minerais -\nCFEM - Principal              10.000,00   \n\n1.7.2.2.52.0.0.00.00 Cota-parte Royalties - Compensação Financeira pela Produção do Petróleo      \n       50.000,00   \n\n1.7.2.2.52.0.1.00.00 Cota-parte Royalties"
+      ],
+      "edition": "2272",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2902054/2024-11-14/67318d07092b24c79b197a7071ae49a1968cca7b.txt"
+    },
+    {
+      "territory_id": "2902054",
+      "date": "2023-12-14",
+      "scraped_at": "2024-10-31T20:33:52.162370",
+      "url": "https://data.queridodiario.ok.org.br/2902054/2023-12-14/a437c69333b685f1ac03ec17ead37d6f08a90e41.pdf",
+      "territory_name": "Araças",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de Recursos Naturais 9.276,00 8.658,00 8.910,00 15.480,00 60.000,0010.710,006.966,00\n\n1.7.2.2.51.0.0.00.00  Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 1.546,00 1.443,00 1.485,00 2.580,00 10.000,001.785,001.161,00\n\n1.7.2.2.51.0.1.00.01  Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 1.546,00 1.443,00 1.485,00 2.580,00 10.000,001.785,001.161,00\n\n1.7.2.2.52.0.0.00.00  Cota-parte Royalties - Compensação Financeira pela Produção do Petróleo 7.730"
+      ],
+      "edition": "1810",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2902054/2023-12-14/a437c69333b685f1ac03ec17ead37d6f08a90e41.txt"
+    },
+    {
+      "territory_id": "2902054",
+      "date": "2023-11-23",
+      "scraped_at": "2024-10-31T20:33:52.211654",
+      "url": "https://data.queridodiario.ok.org.br/2902054/2023-11-23/d1f97a94dffc0c81e0996d351a834a2c30cbb92c.pdf",
+      "territory_name": "Araças",
+      "state_code": "BA",
+      "excerpts": [
+        "EXERCÍCIO DE 2024 \n\nSIAFIC - Página: 6 de 8 \n\n \n\n \n\n \n\nDesdobramento Fontes \nCategoria \n\nEconômica \nConta \n\n10.000,00 1.7.2.2.51.0.0.00.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM \n\n10.000,00 1.7.2.2.51.0.1.00.01 \nCota-parte da Compensação Financeira de Recursos Minerais - \n\nCFEM - Principal \n\n50.000,00 \n \n\n1.7.2.2.52.0.0.00.00 \nCota-parte Royalties - Compensação Financeira pela Produção do Petróleo \n\n50.000,00 \n \n\n1.7.2.2.52.0.1.00.00 \nCota-parte Royalties - Compensação Financeira"
+      ],
+      "edition": "1776",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2902054/2023-11-23/d1f97a94dffc0c81e0996d351a834a2c30cbb92c.txt"
+    },
+    {
+      "territory_id": "2902054",
+      "date": "2022-12-28",
+      "scraped_at": "2024-10-31T20:33:43.045511",
+      "url": "https://data.queridodiario.ok.org.br/2902054/2022-12-28/c39e6372ba1860cf2147d25049be91877a09cd0d.pdf",
+      "territory_name": "Araças",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de Recursos Naturais 9.276,00 8.658,00 8.910,00 15.480,00 60.000,0010.710,006.966,00\n\n1.7.2.2.51.0.0.00.00  Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 1.546,00 1.443,00 1.485,00 2.580,00 10.000,001.785,001.161,00\n\n1.7.2.2.51.0.1.00.00  Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 1.546,00 1.443,00 1.485,00 2.580,00 10.000,001.785,001.161,00\n\n1.7.2.2.52.0.0.00.00  Cota-parte Royalties - Compensação Financeira pela Produção do Petróleo 7.730"
+      ],
+      "edition": "1175",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2902054/2022-12-28/c39e6372ba1860cf2147d25049be91877a09cd0d.txt"
+    },
+    {
+      "territory_id": "2902054",
+      "date": "2024-11-14",
+      "scraped_at": "2024-11-15T00:09:30.943182",
+      "url": "https://data.queridodiario.ok.org.br/2902054/2024-11-14/5ad53de26ced6463fe1f3ebcc0331146c6e20eca.pdf",
+      "territory_name": "Araças",
+      "state_code": "BA",
+      "excerpts": [
+        "505.224,50\n\n1.7.2.2.00.0.0.00.00 Transferências das Compensações Financeiras pela Exploração de Recur 9.276,00 8.658,00 8.910,00 15.480,00 60.000,0010.710,006.966,00\n\n1.7.2.2.51.0.0.00.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 1.546,00 1.443,00 1.485,00 2.580,00 10.000,001.785,001.161,00\n\n1.7.2.2.51.0.1.00.01 Cota-parte da Compensação Financeira de Recursos Minerais 1.546,00 1.443,00 1.485,00 2.580,00 10.000,001.785,001.161,00\n\n1.7.2.2.52.0.0.00.00 Cota-parte Royalties -"
+      ],
+      "edition": "2273",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2902054/2024-11-14/5ad53de26ced6463fe1f3ebcc0331146c6e20eca.txt"
+    },
+    {
+      "territory_id": "2902054",
+      "date": "2021-12-28",
+      "scraped_at": "2024-10-31T16:49:37.751502",
+      "url": "https://data.queridodiario.ok.org.br/2902054/2021-12-28/7015d7151162fa41d17d2c2afc4ea78ae9f5e19f.pdf",
+      "territory_name": "Araças",
+      "state_code": "BA",
+      "excerpts": [
+        "004.876,20\n\n1.7.2.2.00.0.0.00.00  Transferências das Compensações Financeiras pela Exploração de Recur 1.546,00 1.443,00 1.485,00 2.580,00 10.000,001.785,001.161,00\n\n1.7.2.2.51.0.0.00.00  Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 1.546,00 1.443,00 1.485,00 2.580,00 10.000,001.785,001.161,00\n\n1.7.2.2.51.0.1.00.00  Cota-parte da Compensação Financeira de Recursos Minerais - CFE 1.546,00 1.443,00 1.485,00 2.580,00 10.000,001.785,001.161,00\n\n1.7.2.3.00.0.0.00.00  Transferências"
+      ],
+      "edition": "670",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2902054/2021-12-28/7015d7151162fa41d17d2c2afc4ea78ae9f5e19f.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2902054",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2902054",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

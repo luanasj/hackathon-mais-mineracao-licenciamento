@@ -1,0 +1,116 @@
+{
+  "total_gazettes": 7,
+  "gazettes": [
+    {
+      "territory_id": "2900801",
+      "date": "2025-02-05",
+      "scraped_at": "2025-02-06T04:12:10.760985",
+      "url": "https://data.queridodiario.ok.org.br/2900801/2025-02-05/208fb4fb3448bd34d0fd75510dc2834626a0442d.pdf",
+      "territory_name": "Alcobaça",
+      "state_code": "BA",
+      "excerpts": [
+        "das Compensações Financeiras pela Exploração de Recursos Naturais 13.228.000,00\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 67.000,00\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 67.000,00\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 12.510.000,00\n\n1.7.1.2.52.1.0.00.00                Cota-parte da Compensação"
+      ],
+      "edition": "2.381",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900801/2025-02-05/208fb4fb3448bd34d0fd75510dc2834626a0442d.txt"
+    },
+    {
+      "territory_id": "2900801",
+      "date": "2025-12-16",
+      "scraped_at": "2025-12-17T09:02:52.873161",
+      "url": "https://data.queridodiario.ok.org.br/2900801/2025-12-16/2f434b4f11f618c728e98998203d367f4d0194d9.pdf",
+      "territory_name": "Alcobaça",
+      "state_code": "BA",
+      "excerpts": [
+        "Financeiras pela Exploração de Recursos Na 10.467.000,00    \n\n1.7.1.2.51.0.0.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais 67.000,00    \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Pri 67.000,00    \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo 10.000.000,00    \n\n1.7.1.2.52.1.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo - Lei nº 7. 9.000.000,00    \n\n1.7.1.2.52"
+      ],
+      "edition": "2.663",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900801/2025-12-16/2f434b4f11f618c728e98998203d367f4d0194d9.txt"
+    },
+    {
+      "territory_id": "2900801",
+      "date": "2022-12-23",
+      "scraped_at": "2023-10-18T22:15:47.296040",
+      "url": "https://data.queridodiario.ok.org.br/2900801/2022-12-23/de431fa32f75ee6fbdc96893c188671a44e833d1.pdf",
+      "territory_name": "Alcobaça",
+      "state_code": "BA",
+      "excerpts": [
+        "00         Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM5.805,00 7.730,00 8.925,00 7.215,00 7.425,00 12.900,00 50.000,00\n\n1.7.1.2.51.0.1.00.00             Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal5.805,00 7.730,00 8.925,00 7.215,00 7.425,00 12.900,00 50.000,00\n\n1.7.1.2.52.0.0.00.00         Cota-parte da Compensação Financeira pela Produção de Petróleo 1.329.345,00 1.770.170,00 2.043.825,00 1.652.235,00 1.700.325,00 2.954.100,00 11"
+      ],
+      "edition": "1.779",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900801/2022-12-23/de431fa32f75ee6fbdc96893c188671a44e833d1.txt"
+    },
+    {
+      "territory_id": "2900801",
+      "date": "2023-12-28",
+      "scraped_at": "2023-12-28T21:15:25.712567",
+      "url": "https://data.queridodiario.ok.org.br/2900801/2023-12-28/4346bc862a038255847b3c28740ed1f482c24478.pdf",
+      "territory_name": "Alcobaça",
+      "state_code": "BA",
+      "excerpts": [
+        "       Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM7.778,70 10.358,20 11.959,50 9.668,10 9.949,50 17.286,00 67.000,00\n\n1.7.1.2.51.0.1.00.00             Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal7.778,70 10.358,20 11.959,50 9.668,10 9.949,50 17.286,00 67.000,00\n\nPágina 3 de 10\n\nEdição 2.102 | Ano 11\n28 de dezembro de 2023\n\nPágina 37\n\nCertificação Digital: CZOREHVC-JJDZA9WP-RJPB6JZJ-AWO42BSH\nVersão eletrônica disponível em: http://alcobaca"
+      ],
+      "edition": "2.102",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900801/2023-12-28/4346bc862a038255847b3c28740ed1f482c24478.txt"
+    },
+    {
+      "territory_id": "2900801",
+      "date": "2025-12-17",
+      "scraped_at": "2025-12-18T01:40:28.809697",
+      "url": "https://data.queridodiario.ok.org.br/2900801/2025-12-17/14f70c4163dd7756cd1384b7afcf5b8f829dc840.pdf",
+      "territory_name": "Alcobaça",
+      "state_code": "BA",
+      "excerpts": [
+        "       Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM7.778,70 10.358,20 11.959,50 9.668,10 9.949,50 17.286,00 67.000,00\n\n1.7.1.2.51.0.1.00.00             Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal7.778,70 10.358,20 11.959,50 9.668,10 9.949,50 17.286,00 67.000,00\n\n1.7.1.2.52.0.0.00.00         Cota-parte da Compensação Financeira pela Produção de Petróleo 1.161.000,00 1.546.000,00 1.785.000,00 1.443.000,00 1.485.000,00 2.580.000,00"
+      ],
+      "edition": "2.664",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900801/2025-12-17/14f70c4163dd7756cd1384b7afcf5b8f829dc840.txt"
+    },
+    {
+      "territory_id": "2900801",
+      "date": "2021-12-23",
+      "scraped_at": "2023-10-18T22:18:40.811877",
+      "url": "https://data.queridodiario.ok.org.br/2900801/2021-12-23/5d8d5fcf3c039a446d077989119fea735181bddc.pdf",
+      "territory_name": "Alcobaça",
+      "state_code": "BA",
+      "excerpts": [
+        "00        Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM5.805,00 7.730,00 8.925,00 7.215,00 7.425,00 12.900,00 50.000,00\n\n1.7.1.2.51.0.1.00.00            Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal5.805,00 7.730,00 8.925,00 7.215,00 7.425,00 12.900,00 50.000,00\n\n1.7.1.2.52.0.0.00.00        Cota-parte da Compensação Financeira pela Produção de Petróleo 1.079.730,00 1.437.780,00 1.660.050,00 1.341.990,00 1.381.050,00 2.399.400,00 9"
+      ],
+      "edition": "1.536",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900801/2021-12-23/5d8d5fcf3c039a446d077989119fea735181bddc.txt"
+    },
+    {
+      "territory_id": "2900801",
+      "date": "2022-12-12",
+      "scraped_at": "2023-10-18T22:15:54.542208",
+      "url": "https://data.queridodiario.ok.org.br/2900801/2022-12-12/62b6bab46b61c36e696597e74af89ee90572f136.pdf",
+      "territory_name": "Alcobaça",
+      "state_code": "BA",
+      "excerpts": [
+        "Financeiras pela Exploração de Recursos Na 11.500.000,00   \n\n1.7.1.2.51.0.0.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais 50.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Pri 50.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo 11.450.000,00   \n\n1.7.1.2.52.1.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo - Lei nº 7. 11.000.000,00   \n\n1.7.1.2.52.1"
+      ],
+      "edition": "1.769",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900801/2022-12-12/62b6bab46b61c36e696597e74af89ee90572f136.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2900801",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2900801",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

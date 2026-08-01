@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 11,
+  "gazettes": [
+    {
+      "territory_id": "2900306",
+      "date": "2023-12-29",
+      "scraped_at": "2023-12-29T21:22:05.117736",
+      "url": "https://data.queridodiario.ok.org.br/2900306/2023-12-29/b96c5c16a0b1d30cb40000c6e4eafeb6bb1b4d44.pdf",
+      "territory_name": "Acajutiba",
+      "state_code": "BA",
+      "excerpts": [
+        "65.165,4024.354,00 127.969,20\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            2.576,10 2.139,00 2.796,20 2.176,20 2.297,10 2.365,30 2.238,20 2.622,60 31.000,002.653,60 2.737,301.023,00 5.375,40\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            2.576,10 2.139,00 2.796,20 2.176,20 2.297,10 2.365,30 2.238,20 2.622,60 31.000,002.653,60 2.737,301.023,00 5"
+      ],
+      "edition": "1.668",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900306/2023-12-29/b96c5c16a0b1d30cb40000c6e4eafeb6bb1b4d44.txt"
+    },
+    {
+      "territory_id": "2900306",
+      "date": "2025-12-30",
+      "scraped_at": "2025-12-31T11:53:33.662456",
+      "url": "s3://okbr-qd-migration//2900306/2025-12-30/bf9e35fde5cbc4c8ea96f151c5d076d4745b3e75.pdf",
+      "territory_name": "Acajutiba",
+      "state_code": "BA",
+      "excerpts": [
+        "79.116,8029.568,00 155.366,40\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            3.988,80 3.312,00 4.329,60 3.369,60 3.556,80 3.662,40 3.465,60 4.060,80 48.000,004.108,80 4.238,401.584,00 8.323,20\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            3.988,80 3.312,00 4.329,60 3.369,60 3.556,80 3.662,40 3.465,60 4.060,80 48.000,004.108,80 4.238,401.584,00 8"
+      ],
+      "edition": "2.439",
+      "is_extra_edition": false,
+      "txt_url": "s3://okbr-qd-migration//2900306/2025-12-30/bf9e35fde5cbc4c8ea96f151c5d076d4745b3e75.txt"
+    },
+    {
+      "territory_id": "2900306",
+      "date": "2022-12-29",
+      "scraped_at": "2022-12-29T21:05:58.570061",
+      "url": "https://data.queridodiario.ok.org.br/2900306/2022-12-29/c751c68a501227ed1772f2a5a130873097a44228.pdf",
+      "territory_name": "Acajutiba",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de Recursos Minerais - CFEM1.329,60 1.104,00 1.443,20 1.123,20 1.185,60 1.220,80 1.155,20 1.353,60 16.000,001.369,60 1.412,80528,00 2.774,40\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal1.329,60 1.104,00 1.443,20 1.123,20 1.185,60 1.220,80 1.155,20 1.353,60 16.000,001.369,60 1.412,80528,00 2.774,40\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo55.095,30 45.747,00 59.802,60 46.542"
+      ],
+      "edition": "1.261",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900306/2022-12-29/c751c68a501227ed1772f2a5a130873097a44228.txt"
+    },
+    {
+      "territory_id": "2900306",
+      "date": "2021-12-03",
+      "scraped_at": "2022-10-19T00:21:08.707081",
+      "url": "https://data.queridodiario.ok.org.br/2900306/2021-12-03/69852a15d59355abdf5f6cac9ff4516612fab17b.pdf",
+      "territory_name": "Acajutiba",
+      "state_code": "BA",
+      "excerpts": [
+        "284.000,00   \n\n1.7.1.2.51.0.0.00.00.0\n0 \n\nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM\n\n14.000,00   \n\n1.7.1.2.51.0.1.00.00.0\n0 \n\nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n14.000,00   \n\n1.7.1.2.51.0.1.00.00.0\n0 \n\n   Cota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n4214.000,00   \n\n1.7.1.2.52.0.0.00.00.0\n0 \n\nCota-parte da Compensação Financeira pela Produção de Petróleo270"
+      ],
+      "edition": "997",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900306/2021-12-03/69852a15d59355abdf5f6cac9ff4516612fab17b.txt"
+    },
+    {
+      "territory_id": "2900306",
+      "date": "2021-12-10",
+      "scraped_at": "2022-10-19T00:21:02.046604",
+      "url": "https://data.queridodiario.ok.org.br/2900306/2021-12-10/62e5c6339e4157aecdff997a16ba8725e69db9ed.pdf",
+      "territory_name": "Acajutiba",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de Recursos Minerais - CFEM1.163,40 966,00 1.262,80 982,80 1.037,40 1.068,20 1.010,80 1.184,40 14.000,001.198,40 1.236,20462,00 2.427,60\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal1.163,40 966,00 1.262,80 982,80 1.037,40 1.068,20 1.010,80 1.184,40 14.000,001.198,40 1.236,20462,00 2.427,60\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo22.437,00 18.630,00 24.354,00 18.954,00"
+      ],
+      "edition": "1.006",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900306/2021-12-10/62e5c6339e4157aecdff997a16ba8725e69db9ed.txt"
+    },
+    {
+      "territory_id": "2900306",
+      "date": "2023-12-15",
+      "scraped_at": "2023-12-16T21:07:54.166312",
+      "url": "https://data.queridodiario.ok.org.br/2900306/2023-12-15/09594f157cb74ac58a179e3dfc726c0b010bdc9b.pdf",
+      "territory_name": "Acajutiba",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM31.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n31.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n70831.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo707.000,00   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte da"
+      ],
+      "edition": "1.653",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900306/2023-12-15/09594f157cb74ac58a179e3dfc726c0b010bdc9b.txt"
+    },
+    {
+      "territory_id": "2900306",
+      "date": "2022-12-09",
+      "scraped_at": "2022-12-09T21:11:09.296343",
+      "url": "https://data.queridodiario.ok.org.br/2900306/2022-12-09/47263c0568e92a93d96b335a92a0f14961038baf.pdf",
+      "territory_name": "Acajutiba",
+      "state_code": "BA",
+      "excerpts": [
+        "Compensação Financeira pela Exploração de Recursos Minerais - CFEM16.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n16.000,00   \n\n1.7.1.2.51.0.1.00.00.00    Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais -\nCFEM - Principal\n\n170816.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo663.000,00   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte da Compensação"
+      ],
+      "edition": "1.253",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900306/2022-12-09/47263c0568e92a93d96b335a92a0f14961038baf.txt"
+    },
+    {
+      "territory_id": "2900306",
+      "date": "2024-11-21",
+      "scraped_at": "2024-11-23T00:05:27.481420",
+      "url": "https://data.queridodiario.ok.org.br/2900306/2024-11-21/cb79f81cdb5df52295b1c0b126c304fd5bd0e2ed.pdf",
+      "territory_name": "Acajutiba",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM33.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n33.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n170833.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo749.000,00   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte da"
+      ],
+      "edition": "2.040",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900306/2024-11-21/cb79f81cdb5df52295b1c0b126c304fd5bd0e2ed.txt"
+    },
+    {
+      "territory_id": "2900306",
+      "date": "2023-12-29",
+      "scraped_at": "2023-12-29T21:22:05.109877",
+      "url": "https://data.queridodiario.ok.org.br/2900306/2023-12-29/0f6f67c972fdf40ca00c96ea8652365c271616c2.pdf",
+      "territory_name": "Acajutiba",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM31.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n31.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n70831.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo707.000,00   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte da"
+      ],
+      "edition": "1.667",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900306/2023-12-29/0f6f67c972fdf40ca00c96ea8652365c271616c2.txt"
+    },
+    {
+      "territory_id": "2900306",
+      "date": "2021-11-26",
+      "scraped_at": "2022-10-19T00:21:10.414361",
+      "url": "https://data.queridodiario.ok.org.br/2900306/2021-11-26/dad08167db7f0df8170577cd4d93467cf9983b36.pdf",
+      "territory_name": "Acajutiba",
+      "state_code": "BA",
+      "excerpts": [
+        "Territorial Rural - Principal 00. 13.000,00                    \n\n Cota-Parte da Contribuição de Intervenção no Domínio Econômico - Principal 16. 58.000,00                    \n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal 42. 62.000,00                    \n\nCota-Parte do Fundo Especial do Petróleo – FEP - Principal 42. 1.179.000,00               \n\nTransferências de Recursos do Bloco de Manutenção das Ações e Serviços Públicos de Saúde - Atenção Primária -"
+      ],
+      "edition": "987",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900306/2021-11-26/dad08167db7f0df8170577cd4d93467cf9983b36.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2900306",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2900306",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

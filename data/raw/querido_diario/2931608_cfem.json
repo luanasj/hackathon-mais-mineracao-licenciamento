@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 14,
+  "gazettes": [
+    {
+      "territory_id": "2931608",
+      "date": "2024-05-09",
+      "scraped_at": "2024-05-09T23:06:51.097103",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2024-05-09/9dab20fe2500a94a588cc43fb6184a6dbafbf242.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências das Compensações Financeiras pela Exploração de Recursos Naturais\n\n0,001.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n\n0,001.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal\n\n549.168,781.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo \n\n11.481,421.7.1.2.52.1.0.00.00                Cota-parte da Compensação Financeira"
+      ],
+      "edition": "2.096",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2024-05-09/9dab20fe2500a94a588cc43fb6184a6dbafbf242.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2023-12-06",
+      "scraped_at": "2023-12-06T22:23:00.112580",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2023-12-06/500a1f91ec3aa72637880fcb3348e5be25d81385.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "expressos em R$\n\nCódigo Especificação Espécie Origem Categoria EconômicaDesdobramento\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 5.000,00\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 5.000,00\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 1.155.000,00\n\n1.7.1.2.52.1.0.00.00                Cota-parte da Compensação"
+      ],
+      "edition": "1.997",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2023-12-06/500a1f91ec3aa72637880fcb3348e5be25d81385.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2014-05-02",
+      "scraped_at": "2023-09-18T20:56:10.936941",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2014-05-02/8aaa63ec7f3472c941c991ce7e92f64fa5480d4e.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "- Transferências da Compensação Financeira pela Exploração de Recursos Naturais 176.766,47\n\n1.7.2.1.22.11.00 - Cota-parte da Compensação Financeira de Recursos Hídricos\n\n1.7.2.1.22.20.00 - Cota-parte da Compensação Financeira de Recursos Minerais - CFEM\n\n1.7.2.1.22.30.00 - Cota-parte Royalties – Compensação Financeira pela Produção de Petróleo – Lei nº\n7.990/89\n\n16.176,01\n\n1.7.2.1.22.40.00 - Cota-Parte Royalties pelo Excedente da Produção do Petróleo - Lei nº 9.478/97\nartigo 49 I e II\n\n1.7.2.1.22"
+      ],
+      "edition": "330",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2014-05-02/8aaa63ec7f3472c941c991ce7e92f64fa5480d4e.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2015-04-22",
+      "scraped_at": "2023-09-18T20:54:13.533361",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2015-04-22/554116e9626126dd3db7d6b92975a787df64fbed.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela\nExploração de Recursos Naturais\n\n196.897,31 0,00 0,00 0,00\n\n1.7.2.1.22.11.00 - Cota-Parte da Compensação Financeira de Recursos\nHídricos\n\n1.7.2.1.22.20.00 - Cota-Parte da Compensação Financeira de Recursos\nMinerais - CFEM\n\n1.7.2.1.22.30.00 - Cota-Parte Royalties – Compensação Financeira\npela Produção de Petróleo – Lei nº 7.990/89\n\n18.136,29\n\n1.7.2.1.22.40.00 - Cota-Parte Royalties pelo Excedente da Produção do\nPetróleo - Lei nº 9.478/97 artigo 49 I e II\n\n1.7.2.1.22"
+      ],
+      "edition": "450",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2015-04-22/554116e9626126dd3db7d6b92975a787df64fbed.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2021-12-22",
+      "scraped_at": "2023-09-18T21:08:04.625959",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2021-12-22/34f6513a6097ad72e920bbe010889293c163856a.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências das Compensações Financeiras pela Exploração de Recursos Naturais 2.249.000,00\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 5.000,00\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 5.000,00\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 2.244.000,00\n\n1.7.1.2.52.1.0.00.00                Cota-parte da Compensação"
+      ],
+      "edition": "1.541",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2021-12-22/34f6513a6097ad72e920bbe010889293c163856a.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2015-01-14",
+      "scraped_at": "2023-09-18T20:54:46.734325",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2015-01-14/c7fbe519c264ba0fdd2cddbd4a2c4af30b5d99b6.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "41 17.000,70 13.743,42 14.143,44 24.572,44 95.242,00\n\n1.7.2.1.22.00.00         Transf.Compens.Financeira Expl.Rec.Naturais 20.898,00 27.828,00 32.130,00 25.974,00 26.730,00 46.440,00 180.000,00\n\n1.7.2.1.22.20.00           Cota-parte da Compensação CFEM 580,50 773,00 892,50 721,50 742,50 1.290,00 5.000,00\n\n1.7.2.1.22.30.00           COTA - PARTE ROYALTIES - Lei nº 7.990/89 3.725,53 4.960,96 5.727,89 4.630,44 4.765,22 8.278,96 32.089,00\n\n1.7.2.1.22.70.00           Cota-Parte Fundo Especial do Petroleo"
+      ],
+      "edition": "409",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2015-01-14/c7fbe519c264ba0fdd2cddbd4a2c4af30b5d99b6.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2022-12-16",
+      "scraped_at": "2023-09-18T21:15:22.766074",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2022-12-16/63651f06a1041e4d2b5ed24b8b17569cd3cc1974.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências das Compensações Financeiras pela Exploração de Recursos Naturais 1.130.000,00\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 5.000,00\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 5.000,00\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 1.125.000,00\n\n1.7.1.2.52.1.0.00.00                Cota-parte da Compensação"
+      ],
+      "edition": "1.751",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2022-12-16/63651f06a1041e4d2b5ed24b8b17569cd3cc1974.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2023-12-15",
+      "scraped_at": "2023-12-15T22:37:03.176899",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2023-12-15/0105fdc2773f251bc5edbab7961f5e094af629c8.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "51.0.0.00.00         Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM580,50 773,00 892,50 721,50 742,50 1.290,00 5.000,00\n\n1.7.1.2.51.0.1.00.00             Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal580,50 773,00 892,50 721,50 742,50 1.290,00 5.000,00\n\n1.7.1.2.52.0.0.00.00         Cota-parte da Compensação Financeira pela Produção de Petróleo 134.095,50 178.563,00 206.167,50 166.666,50 171.517,50 297.990,00 1.155.000,00\n\n1.7.1.2.52"
+      ],
+      "edition": "2.004",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2023-12-15/0105fdc2773f251bc5edbab7961f5e094af629c8.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2022-12-19",
+      "scraped_at": "2023-09-18T21:15:22.759434",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2022-12-19/d43399387a99f76226f25cbe47400575f800dafe.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "51.0.0.00.00         Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM580,50 773,00 892,50 721,50 742,50 1.290,00 5.000,00\n\n1.7.1.2.51.0.1.00.00             Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal580,50 773,00 892,50 721,50 742,50 1.290,00 5.000,00\n\n1.7.1.2.52.0.0.00.00         Cota-parte da Compensação Financeira pela Produção de Petróleo 130.612,50 173.925,00 200.812,50 162.337,50 167.062,50 290.250,00 1.125.000,00\n\n1.7.1.2.52"
+      ],
+      "edition": "1.752",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2022-12-19/d43399387a99f76226f25cbe47400575f800dafe.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2025-12-04",
+      "scraped_at": "2025-12-05T02:06:10.347667",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2025-12-04/b2baa4eb50d85b4463778cbc6196c56484d40608.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências das Compensações Financeiras pela Exploração de Recursos Naturais 981.000,00\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 6.000,00\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 6.000,00\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 975.000,00\n\n1.7.1.2.52.1.0.00.00                Cota-parte da Compensação"
+      ],
+      "edition": "2.579",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2025-12-04/b2baa4eb50d85b4463778cbc6196c56484d40608.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2931608",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2931608",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

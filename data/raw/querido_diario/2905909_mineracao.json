@@ -1,0 +1,32 @@
+{
+  "total_gazettes": 1,
+  "gazettes": [
+    {
+      "territory_id": "2905909",
+      "date": "2025-05-27",
+      "scraped_at": "2025-05-27T21:43:01.932193",
+      "url": "https://data.queridodiario.ok.org.br/2905909/2025-05-27/9a9c487d0f92ebcc9d289de348217694bfcf6c1a.pdf",
+      "territory_name": "Campo Alegre de Lourdes",
+      "state_code": "BA",
+      "excerpts": [
+        "( LDO ): 2026 \n\n20282027202620252024Código Descrição da Rubrica 2023\n\n1.7.1.2.51.0.0.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 1.286.224,22 1.000.000,00 1.080.000,00 1.122.120,00 1.164.536,141.255.944,84\n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal 1.286.224,22 1.000.000,00 1.080.000,00 1.122.120,00 1.164.536,141.255.944,84\n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela"
+      ],
+      "edition": "114",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2905909/2025-05-27/9a9c487d0f92ebcc9d289de348217694bfcf6c1a.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2905909",
+    "termo": "mineracao",
+    "params": {
+      "territory_ids": "2905909",
+      "querystring": "mineracao",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

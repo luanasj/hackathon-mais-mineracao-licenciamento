@@ -1,0 +1,88 @@
+{
+  "total_gazettes": 5,
+  "gazettes": [
+    {
+      "territory_id": "2909406",
+      "date": "2025-12-22",
+      "scraped_at": "2025-12-23T01:59:54.089540",
+      "url": "https://data.queridodiario.ok.org.br/2909406/2025-12-22/590bb5724d5e2f226b6d44e78c677c96e7ccdaf4.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM10.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n10.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n1708000010.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo650.000,00   \n\n1.7.1.2.52.4.0.00.00.00 Cota-Parte"
+      ],
+      "edition": "754",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909406/2025-12-22/590bb5724d5e2f226b6d44e78c677c96e7ccdaf4.txt"
+    },
+    {
+      "territory_id": "2909406",
+      "date": "2025-12-30",
+      "scraped_at": "2025-12-31T05:21:29.544156",
+      "url": "s3://okbr-qd-migration//2909406/2025-12-30/a638bb3965fb5a81e6484cdb8f2f522122baa726.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "17500000 Outros Servicos de Terceiros - Pessoa Juridica     .    .         3.600,00\n\n4.4.90.51.00 17500000 Obras e Instalacoes     .    .         2.400,00\n\n19.000,00Total da Ação (ATIVIDADE): \n\nATIVIDADE: 15.451.006.2.017 - GESTÃO DAS AÇÕES DO ROYALTIES - CFEM/FEP/CFH\n\n3.3.90.30.00 17080000 Material de Consumo     .    .         4.000,00\n\n3.3.90.30.00 17200000 Material de Consumo     .    .         534.000,00\n\n3.3.90.36.00 17080000 Outros Servicos de Terceiros - Pessoa Fisica     .    .         1.000,00"
+      ],
+      "edition": "758",
+      "is_extra_edition": false,
+      "txt_url": "s3://okbr-qd-migration//2909406/2025-12-30/a638bb3965fb5a81e6484cdb8f2f522122baa726.txt"
+    },
+    {
+      "territory_id": "2909406",
+      "date": "2025-10-01",
+      "scraped_at": "2025-10-02T03:09:23.903735",
+      "url": "https://data.queridodiario.ok.org.br/2909406/2025-10-01/dc6b28cb978497b2769293eac470c4ada7c30c9c.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "Unidade de Medida Meta\n\nMODERNIZAÇÃO E AMPLIAÇÃO DE PRÉDIOS PÚBLICOS\n \n\nCONSTRUÇÃO /\nAMPLIAÇÃO\n\nUnidade 1\n\nRegionalização Quantidade Unidade de Medida\n\nSEDE E ZONA RUAL 100 PERCENTUAL\n\nAção Produto Unidade de Medida Meta\n\nGESTÃO DAS AÇÕES DO ROYALTIES - CFEM/FEP/CFH\n \n\nMANUTENÇÃO PERCENTUAL 100\n\nRegionalização Quantidade Unidade de Medida\n\nSEDE E ZONA RUAL 100 PERCENTUAL\n\nPágina: 23 de 36 SIAFIC - FATOR SISTEMAS E CONSULTORIAS LTDA - ME - CNPJ: 08.003.823/0001-82\n\nEdição 706 | Ano 2025\n01 de outubro de"
+      ],
+      "edition": "706",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909406/2025-10-01/dc6b28cb978497b2769293eac470c4ada7c30c9c.txt"
+    },
+    {
+      "territory_id": "2909406",
+      "date": "2024-12-23",
+      "scraped_at": "2024-12-24T01:16:13.258045",
+      "url": "https://data.queridodiario.ok.org.br/2909406/2024-12-23/918934a7000fc4ec71307b25972939aaf5340ea9.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM5.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n5.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n170400005.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo400.000,00   \n\n1.7.1.2.52.4.0.00.00 Cota-Parte do Fundo"
+      ],
+      "edition": "492",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909406/2024-12-23/918934a7000fc4ec71307b25972939aaf5340ea9.txt"
+    },
+    {
+      "territory_id": "2909406",
+      "date": "2026-06-19",
+      "scraped_at": "2026-06-20T02:45:53.288892",
+      "url": "https://data.queridodiario.ok.org.br/2909406/2026-06-19/cbe6f5cbd79a447490ded50f066dd168be91e8a7.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "Naturais 611.922,23 660.000,00 726.000,00 762.300,00 800.415,00579.001,97\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 546,50 10.000,00 11.000,00 11.550,00 12.127,501.419,24\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal 546,50 10.000,00 11.000,00 11.550,00 12.127,501.419,24\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo 611.375,73 650"
+      ],
+      "edition": "862",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909406/2026-06-19/cbe6f5cbd79a447490ded50f066dd168be91e8a7.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2909406",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2909406",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}
