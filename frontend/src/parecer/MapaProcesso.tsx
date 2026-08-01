@@ -6,8 +6,8 @@
  * `public/data/processos.geojson` pelo índice de A.5.
  *
  * Sem tiles remotos (DoD — roda com a rede desligada): fundo neutro, malha
- * municipal do IBGE e relevo `terrain-rgb` baixado uma vez por
- * `pipeline/relevo.py`, ambos servidos de `public/data/`.
+ * municipal do IBGE, tinta hipsométrica (`pipeline/relevo_cor.py`) e relevo
+ * `terrain-rgb` (`pipeline/relevo.py`) — todos servidos de `public/data/`.
  *
  * ⚠️ A versão do MapLibre está presa em 5.x de propósito. A 6.x carrega o
  * worker de um arquivo separado, por `new URL(\`./${nome}\`, import.meta.url)`
@@ -26,7 +26,7 @@ import * as maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 
 import type { Caixa } from './dados'
-import { CAIXA_BAHIA, CAIXA_BRASIL, CORES } from './dados'
+import { CAIXA_BAHIA, CAIXA_BRASIL, CAIXA_RELEVO, CORES } from './dados'
 
 const BASE = `${import.meta.env.BASE_URL}data`
 
@@ -99,13 +99,31 @@ export default function MapaProcesso({ geometria, nivel, altura = 340, ref }: Ma
     }
     mapRef.current = map
 
+    // Canvas trava no tamanho do container no instante da construção — se o
+    // container mudar de tamanho depois (reflow de layout, troca de aba),
+    // o mapa fica com canvas velho, menor que a moldura. `resize()` refaz.
+    const observador = new ResizeObserver(() => map.resize())
+    observador.observe(containerRef.current)
+
     map.on('load', () => {
+      // tinta hipsométrica (cor por altitude) por baixo, sombra por cima —
+      // ordem clássica de relevo sombreado colorido.
+      map.addSource('relevo-cor', {
+        type: 'raster',
+        tiles: [`${BASE}/relevo_cor/{z}/{x}/{y}.png`],
+        tileSize: 256,
+        maxzoom: 9,
+        bounds: CAIXA_RELEVO,
+      })
+      map.addLayer({ id: 'relevo-cor', type: 'raster', source: 'relevo-cor' })
+
       map.addSource('relevo', {
         type: 'raster-dem',
         tiles: [`${BASE}/terrain/{z}/{x}/{y}.png`],
         tileSize: 256,
         maxzoom: 9,
         encoding: 'terrarium',
+        bounds: CAIXA_RELEVO,
       })
       map.addLayer({
         id: 'relevo-sombra',
@@ -153,6 +171,7 @@ export default function MapaProcesso({ geometria, nivel, altura = 340, ref }: Ma
     })
 
     return () => {
+      observador.disconnect()
       // `remove()` também lança quando o mapa nunca terminou de montar: ele
       // tenta destruir um painter que não existe.
       try {

@@ -42,6 +42,15 @@ export type Caixa = [number, number, number, number]
 export const CAIXA_BRASIL: Caixa = [-74.0, -33.8, -34.8, 5.3]
 export const CAIXA_BAHIA: Caixa = [-46.7, -18.4, -37.3, -8.5]
 
+/**
+ * Bbox coberto pelos tiles de relevo (`pipeline/relevo.py` /
+ * `pipeline/relevo_cor.py`). Precisa bater com `MINX, MINY, MAXX, MAXY` de
+ * lá — fora dela não existe tile, e sem declarar isso na fonte o maplibre
+ * pede um PNG que não existe, o Vite devolve o `index.html` do SPA no lugar,
+ * e o navegador falha ao decodificar.
+ */
+export const CAIXA_RELEVO: Caixa = [-45.008441, -14.5092, -38.137166, -9.740468]
+
 // ---------------------------------------------------------------------------
 // Rótulos do vocabulário do motor
 // ---------------------------------------------------------------------------

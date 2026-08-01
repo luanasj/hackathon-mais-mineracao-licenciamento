@@ -116,8 +116,8 @@ export const VIRADAS: readonly Virada[] = [
     esperado: 'MUNICIPAL — definida',
     prova: 'Caminho feliz, com fundamento citado',
     processo: GRANITO_BRUMADO,
-    // 8.000 t/ano cai em `micro` (0–10.000), dentro da faixa delegada.
-    preset: { tipologia_id: 'extracao-rocha-ornamental', porte_valor: 8_000 },
+    // 8.000 t/ano cai em `pequeno` (0–50.000), dentro da faixa delegada.
+    preset: { tipologia_id: 'b3-5', porte_valor: 8_000 },
     centro: [-41.48388, -13.96943],
     pendencias: [
       'C.2 — confirmar que Brumado está habilitado e que a tipologia de extração de granito está entre as delegadas',
@@ -133,7 +133,7 @@ export const VIRADAS: readonly Virada[] = [
     processo: GRANITO_BRUMADO,
     // Único campo que muda em relação à virada 1: 120.000 t/ano cai em
     // `medio`, acima da faixa delegada, e a competência sobe para o Estado.
-    preset: { tipologia_id: 'extracao-rocha-ornamental', porte_valor: 120_000 },
+    preset: { tipologia_id: 'b3-5', porte_valor: 120_000 },
     centro: [-41.48388, -13.96943],
     pendencias: [
       'C.1 — as fronteiras de faixa vêm da CEPRAM; sem elas D.4 não tem onde varrer',
@@ -147,7 +147,7 @@ export const VIRADAS: readonly Virada[] = [
     prova: 'Precedência federal absorve tudo abaixo',
     processo: URANIO_CAETITE,
     // Porte irrelevante aqui: a precedência federal absorve tudo abaixo.
-    preset: { tipologia_id: 'lavra-ceu-aberto-metalico', porte_valor: 8_000 },
+    preset: { tipologia_id: 'b1-1-1', porte_valor: 8_000 },
     centro: [-42.277, -13.869],
     pendencias: [],
   },
@@ -159,7 +159,7 @@ export const VIRADAS: readonly Virada[] = [
     prova: 'O sistema não chuta, e a limitação vira ação',
     processo: OURO_TRIPLICE,
     // A poligonal repartida decide sozinha; o porte não muda o resultado.
-    preset: { tipologia_id: 'lavra-ceu-aberto-metalico', porte_valor: 8_000 },
+    preset: { tipologia_id: 'b1-1-3', porte_valor: 8_000 },
     centro: [-40.23189, -10.34654],
     pendencias: [],
   },

@@ -126,16 +126,6 @@ export default function BuscaProcesso({
         </button>
       </div>
 
-      <div style={{ fontSize: 13, color: CORES.cinza, marginTop: 8 }}>
-        {erroIndice ? (
-          <span style={{ color: CORES.vermelho }}>{erroIndice}</span>
-        ) : indice ? (
-          `${indice.total.toLocaleString('pt-BR')} processos do SIGMINE na amostra`
-        ) : (
-          'Carregando o índice do SIGMINE…'
-        )}
-      </div>
-
       {aberto && sugestoes.length > 0 && (
         <ul
           id="sugestoes-processo"

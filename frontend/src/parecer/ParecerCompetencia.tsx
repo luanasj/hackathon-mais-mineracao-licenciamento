@@ -13,8 +13,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Feature } from 'geojson'
 
-import { VIRADAS } from '@/data/viradas'
-import type { Virada } from '@/data/viradas'
 import { TIPOLOGIAS } from '@/data/fixtures'
 import { habilitacaoDe, statusDe } from '@/lib/fatos'
 import {
@@ -28,7 +26,7 @@ import {
 } from '@/lib/porte'
 import type { IndiceProcessos, RegistroIndice } from '@/lib/processos'
 import { carregarIndice } from '@/lib/processos'
-import type { ProcessoProps, StatusHabilitacao } from '@/lib/schemas'
+import type { StatusHabilitacao, Tipologia } from '@/lib/schemas'
 import { FASES_ANM, SUBSTANCIAS_FREQUENTES } from '@/lib/vocabulario'
 import { validar } from '@/lib/validacao'
 import { useFormulario } from '@/state/formulario'
@@ -68,20 +66,6 @@ const COR_STATUS: Record<StatusHabilitacao, string> = {
   sem_evidencia: CORES.terraClara,
 }
 
-/** As viradas trazem `ProcessoProps`; o formulário fala `RegistroIndice`. */
-function comoRegistro(p: ProcessoProps): RegistroIndice {
-  return {
-    processo: p.processo,
-    processo_norm: p.processo_norm,
-    fase: p.fase,
-    substancia: p.substancia,
-    titular: p.titular,
-    area_ha: p.area_ha,
-    municipios: p.municipios.map((m) => m.nm_mun),
-    cruza_divisa: p.cruza_divisa,
-  }
-}
-
 export default function ParecerCompetencia() {
   const { estado, despachar, tipologia, parecer, ms_avaliacao } = useFormulario()
 
@@ -94,19 +78,12 @@ export default function ParecerCompetencia() {
 
   const mapaRef = useRef<MapaHandle>(null)
 
-  // Índice de A.5 — 588 KB, carregado uma vez. Falhar aqui não derruba a tela:
-  // as quatro viradas estão no bundle justamente para isso (A.8).
+  // Índice de A.5 — 588 KB, carregado uma vez.
   useEffect(() => {
     let vivo = true
     carregarIndice()
       .then((i) => vivo && setIndice(i))
-      .catch(
-        () =>
-          vivo &&
-          setErroIndice(
-            'Índice do SIGMINE indisponível — as quatro viradas da demo continuam funcionando.',
-          ),
-      )
+      .catch(() => vivo && setErroIndice('Índice do SIGMINE indisponível.'))
     return () => {
       vivo = false
     }
@@ -146,17 +123,6 @@ export default function ParecerCompetencia() {
   function selecionarProcesso(r: RegistroIndice) {
     despachar({ tipo: 'selecionar-processo', processo: r })
     setGeometria(null)
-  }
-
-  function aplicarVirada(v: Virada) {
-    // Prefere o registro do índice — é o dado real, com os municípios do join
-    // de A.3. Sem índice, cai no literal embarcado e a demo segue de pé.
-    selecionarProcesso(indice?.porNumero(v.processo.processo_norm) ?? comoRegistro(v.processo))
-    // A virada precisa chegar ao veredito que anuncia. Selecionar só o
-    // processo deixa tipologia e porte em branco, e o motor devolve
-    // INDETERMINADO por falta de fato — correto, mas não é o que o botão diz.
-    despachar({ tipo: 'tipologia', id: v.preset.tipologia_id })
-    despachar({ tipo: 'porte', valor: v.preset.porte_valor })
   }
 
   function concluirDesenho(r: ResultadoDesenho) {
@@ -293,40 +259,6 @@ export default function ParecerCompetencia() {
               onDesenhar={() => setDesenhando(true)}
             />
 
-            <div style={{ marginTop: 20 }}>
-              <div style={{ fontSize: 13, color: CORES.cinzaClaro, marginBottom: 10 }}>
-                As quatro viradas da demo
-              </div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                {VIRADAS.map((v) => (
-                  <button
-                    key={v.n}
-                    type="button"
-                    className="pc-opcao"
-                    onClick={() => aplicarVirada(v)}
-                    title={`${v.titulo} — esperado: ${v.esperado}`}
-                    style={{
-                      textAlign: 'left',
-                      padding: '10px 14px',
-                      background: CORES.branco,
-                      border: `1px solid ${
-                        estado.processo?.processo_norm === v.processo.processo_norm
-                          ? CORES.verde
-                          : CORES.linhaForte
-                      }`,
-                      fontSize: 14,
-                      maxWidth: 260,
-                    }}
-                  >
-                    <span style={{ color: CORES.terraClara }}>{v.n}.</span> {v.titulo}
-                    <div style={{ fontSize: 12, color: CORES.cinza, marginTop: 3 }}>
-                      {v.esperado}
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-
             {/* Cadastro: o que veio do SIGMINE e o que dá para corrigir. */}
             {temArea && (
               <>
@@ -431,6 +363,39 @@ export default function ParecerCompetencia() {
               </>
             )}
 
+            {/* Tipologia — define o parâmetro de porte, as faixas e os condicionais.
+                Em destaque, acima do mapa: é a primeira decisão que reconfigura tudo
+                o que vem depois. */}
+            <div style={{ marginTop: 26 }}>
+              <label htmlFor="tipologia" style={s.rotuloCampo}>
+                Tipo de operação
+              </label>
+              <SeletorTipologia
+                id="tipologia"
+                tipologias={TIPOLOGIAS}
+                selecionadoId={estado.tipologia_id}
+                onEscolher={(id) => despachar({ tipo: 'tipologia', id })}
+              />
+              {tipologia && (
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 10,
+                    flexWrap: 'wrap',
+                    fontSize: 13,
+                    color: CORES.cinza,
+                    marginTop: 8,
+                  }}
+                >
+                  <span>
+                    {tipologia.grupo} · potencial poluente {tipologia.potencial_poluente}
+                  </span>
+                  {!tipologia.fundamento.verificado && <Pendente />}
+                </div>
+              )}
+            </div>
+
             {/* O mapa. Geometria real do SIGMINE, ou a poligonal desenhada. */}
             <div style={{ marginTop: 26 }}>
               <div style={{ marginBottom: 12 }}>
@@ -486,11 +451,6 @@ export default function ParecerCompetencia() {
                 </div>
               </div>
 
-              <div style={{ fontSize: 13, color: CORES.cinza, marginTop: 8, lineHeight: 1.5 }}>
-                {geometria
-                  ? 'Poligonal real · malha municipal IBGE 2025 · relevo SRTM local'
-                  : 'Sem poligonal carregada — busque um processo ou desenhe a área.'}
-              </div>
 
               <button
                 type="button"
@@ -506,46 +466,6 @@ export default function ParecerCompetencia() {
                 Desenhar ou marcar a área manualmente
               </button>
             </div>
-          </section>
-
-          {/* Tipologia — define o parâmetro de porte, as faixas e os condicionais. */}
-          <section>
-            <label htmlFor="tipologia" style={s.rotuloCampo}>
-              Tipo de operação
-            </label>
-            <select
-              id="tipologia"
-              value={estado.tipologia_id ?? ''}
-              onChange={(e) => despachar({ tipo: 'tipologia', id: e.target.value })}
-              style={{ ...s.select, marginTop: 10 }}
-            >
-              <option value="" disabled>
-                Escolha a tipologia licenciável
-              </option>
-              {TIPOLOGIAS.map((t) => (
-                <option key={t.id} value={t.id}>
-                  {t.atividade}
-                </option>
-              ))}
-            </select>
-            {tipologia && (
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 10,
-                  flexWrap: 'wrap',
-                  fontSize: 13,
-                  color: CORES.cinza,
-                  marginTop: 8,
-                }}
-              >
-                <span>
-                  {tipologia.grupo} · potencial poluente {tipologia.potencial_poluente}
-                </span>
-                {!tipologia.fundamento.verificado && <Pendente />}
-              </div>
-            )}
           </section>
 
           {/* Porte — escala logarítmica, faixas da tipologia, viradas do motor. */}
@@ -784,36 +704,7 @@ export default function ParecerCompetencia() {
             </section>
           )}
 
-          {pendencias.length > 0 && (
-            <section
-              style={{
-                borderTop: `1px solid ${CORES.linha}`,
-                paddingTop: 20,
-              }}
-            >
-              <div style={{ ...s.etiqueta, fontSize: 12, color: CORES.terraClara }}>
-                ainda em aberto
-              </div>
-              <ul
-                style={{
-                  margin: '12px 0 0',
-                  padding: '0 0 0 20px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 10,
-                }}
-              >
-                {pendencias.map((p) => (
-                  <li
-                    key={p.campo}
-                    style={{ fontSize: 15, lineHeight: 1.55, color: CORES.cinzaEscuro }}
-                  >
-                    {p.mensagem}
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
+          
         </div>
 
         {/* ----------------------------------------------------------------
@@ -1001,6 +892,135 @@ function SeletorLivre({
           <option key={o} value={o} />
         ))}
       </datalist>
+    </div>
+  )
+}
+
+/**
+ * Seletor de tipologia — combobox custom no lugar do `<select>` nativo, para
+ * o menu aberto seguir a mesma linguagem visual do resto da tela (painel
+ * branco, borda `linhaForte`, opções no estilo `pc-opcao` de BuscaProcesso)
+ * em vez do popup do sistema operacional.
+ */
+function SeletorTipologia({
+  id,
+  tipologias,
+  selecionadoId,
+  onEscolher,
+}: {
+  id: string
+  tipologias: Tipologia[]
+  selecionadoId: string | null
+  onEscolher: (id: string) => void
+}) {
+  const [aberto, setAberto] = useState(false)
+  const containerRef = useRef<HTMLDivElement | null>(null)
+
+  const atual = tipologias.find((t) => t.id === selecionadoId) ?? null
+
+  useEffect(() => {
+    function aoClicarFora(e: MouseEvent) {
+      if (!containerRef.current?.contains(e.target as Node)) setAberto(false)
+    }
+    document.addEventListener('mousedown', aoClicarFora)
+    return () => document.removeEventListener('mousedown', aoClicarFora)
+  }, [])
+
+  return (
+    <div ref={containerRef} style={{ position: 'relative', marginTop: 10 }}>
+      <button
+        type="button"
+        id={id}
+        role="combobox"
+        aria-expanded={aberto}
+        aria-controls={`${id}-opcoes`}
+        aria-haspopup="listbox"
+        onClick={() => setAberto((a) => !a)}
+        onKeyDown={(e) => {
+          if (e.key === 'Escape') setAberto(false)
+        }}
+        style={{
+          ...s.select,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: 10,
+          textAlign: 'left',
+          color: atual ? CORES.tinta : CORES.cinzaClaro,
+          cursor: 'pointer',
+        }}
+      >
+        <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+          {atual?.atividade ?? 'Escolha a tipologia licenciável'}
+        </span>
+        <span
+          aria-hidden
+          style={{
+            flex: 'none',
+            width: 0,
+            height: 0,
+            borderLeft: '5px solid transparent',
+            borderRight: '5px solid transparent',
+            borderTop: `6px solid ${CORES.terra}`,
+            transform: aberto ? 'rotate(180deg)' : 'none',
+          }}
+        />
+      </button>
+
+      {aberto && (
+        <ul
+          id={`${id}-opcoes`}
+          role="listbox"
+          style={{
+            position: 'absolute',
+            zIndex: 20,
+            left: 0,
+            right: 0,
+            margin: '4px 0 0',
+            padding: 0,
+            listStyle: 'none',
+            background: CORES.branco,
+            border: `1px solid ${CORES.linhaForte}`,
+            boxShadow: '0 12px 28px rgba(34, 32, 28, .14)',
+            maxHeight: 360,
+            overflowY: 'auto',
+          }}
+        >
+          {tipologias.map((t) => (
+            <li key={t.id}>
+              <button
+                type="button"
+                role="option"
+                aria-selected={t.id === selecionadoId}
+                className="pc-opcao"
+                onClick={() => {
+                  onEscolher(t.id)
+                  setAberto(false)
+                }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'baseline',
+                  gap: 8,
+                  width: '100%',
+                  textAlign: 'left',
+                  padding: '12px 14px',
+                  background: 'transparent',
+                  border: 'none',
+                  borderBottom: `1px solid ${CORES.linhaSuave}`,
+                }}
+              >
+                <span
+                  aria-hidden
+                  style={{ width: 14, flex: 'none', color: CORES.verde, fontSize: 14 }}
+                >
+                  {t.id === selecionadoId ? '✓' : ''}
+                </span>
+                <span style={{ fontSize: 16 }}>{t.atividade}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }

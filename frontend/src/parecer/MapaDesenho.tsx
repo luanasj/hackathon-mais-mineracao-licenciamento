@@ -3,8 +3,9 @@
  *
  * Critério de aceite: círculo em graus decimais é elipse deformada — o modo
  * ponto+raio usa `turf.circle` em quilômetros, nunca um raio construído em
- * graus. Mapa sem tiles (F.6): só as camadas GeoJSON da amostra, sobre fundo
- * neutro, para carregar instantâneo e offline.
+ * graus. Sem tiles remotos (F.6): malha GeoJSON da amostra, tinta
+ * hipsométrica e relevo `terrain-rgb`, todos locais — mesma base de
+ * `MapaProcesso`, para carregar instantâneo e offline.
  *
  * Porte do app antigo para a linguagem visual desta tela: mesmos cálculos,
  * controles em HTML puro.
@@ -19,7 +20,7 @@ import 'maplibre-gl/dist/maplibre-gl.css'
 import { derivarMunicipios } from '@/lib/municipios'
 import type { IncidenciaMunicipal } from '@/lib/schemas'
 
-import { CAIXA_BAHIA, CORES, fmt2 } from './dados'
+import { CAIXA_BAHIA, CAIXA_RELEVO, CORES, fmt2 } from './dados'
 import { GrupoSegmentado, estiloSegmento, s } from './ui'
 
 const BASE = `${import.meta.env.BASE_URL}data`
@@ -85,6 +86,37 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
     mapRef.current = map
 
     map.on('load', () => {
+      // tinta hipsométrica por baixo, sombra por cima — mesma ordem de
+      // `MapaProcesso`.
+      map.addSource('relevo-cor', {
+        type: 'raster',
+        tiles: [`${BASE}/relevo_cor/{z}/{x}/{y}.png`],
+        tileSize: 256,
+        maxzoom: 9,
+        bounds: CAIXA_RELEVO,
+      })
+      map.addLayer({ id: 'relevo-cor', type: 'raster', source: 'relevo-cor' })
+
+      map.addSource('relevo', {
+        type: 'raster-dem',
+        tiles: [`${BASE}/terrain/{z}/{x}/{y}.png`],
+        tileSize: 256,
+        maxzoom: 9,
+        encoding: 'terrarium',
+        bounds: CAIXA_RELEVO,
+      })
+      map.addLayer({
+        id: 'relevo-sombra',
+        type: 'hillshade',
+        source: 'relevo',
+        paint: {
+          'hillshade-exaggeration': 0.55,
+          'hillshade-shadow-color': '#8d8674',
+          'hillshade-highlight-color': '#fffdf8',
+          'hillshade-accent-color': '#a89f89',
+        },
+      })
+
       map.addSource('municipios', { type: 'geojson', data: `${BASE}/municipios10.geojson` })
       map.addLayer({
         id: 'municipios-preenchimento',
