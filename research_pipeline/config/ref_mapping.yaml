@@ -1,0 +1,63 @@
+# Mapeamento das tabelas canônicas -> modelo interno de `research_pipeline/refs.py`.
+#
+# Por que existe: os dois JSONs são produzidos por `scripts/collect_gac.py` e podem mudar de
+# forma sem que este pipeline mude. O mapeamento é o ponto único onde essa mudança é absorvida
+# — nenhum nome de campo da fonte aparece hardcoded em `refs.py`.
+#
+# Contrato do bloco `fields:` — é uma PROJEÇÃO, não um esquema:
+#   - campo mapeado ausente no registro  -> RefLoadError nomeando arquivo, campo e id
+#   - campo da fonte NÃO mapeado         -> ignorado em silêncio
+# Hoje o único ignorado é `data_publicacao` (presente nos 417, `dd/mm/yyyy`): o §8 do GOAL.md
+# não o usa. É o oposto do `extra="forbid"` dos schemas do patch 7, e de propósito — lá o
+# contrato é nosso, aqui a fonte é de terceiro e ganhar um campo novo não pode quebrar a carga.
+#
+# `meta:` é bloco NOVO, fora do §7 do GOAL.md, e existe porque `data_consulta` não está
+# simétrico nos dois arquivos: `municipios_habilitados.json` só o traz POR REGISTRO (417×
+# "2026-08-01", nada na raiz) e `consorcios.json` só o traz NA RAIZ. Como
+# `ReferenceData.data_consulta` é escalar e vira `meta.refs_data_consulta` no manifesto (§11),
+# sem este bloco o lado dos consórcios não teria de onde ser lido nem conferido.
+
+municipios:
+  path: data/processed/municipios_habilitados.json
+  root: municipios          # chave que contém os registros
+  container: dict           # dict (chave = id) | list
+  meta:                     # chaves na raiz do arquivo, fora de `root`
+    fonte_url: fonte_url
+  fields:
+    id: codigo_ibge
+    nome: municipio
+    codigo_ibge: codigo_ibge
+    consorcio_id: consorcio_id
+    consorcio_nome: consorcio_nome
+    nivel_habilitacao: nivel      # string "1"|"2"|"3"|null -> int|None
+    situacao_gac: situacao_gac
+    status: status                # habilitado | nao_habilitado
+    fonte_url: fonte_url
+    data_consulta: data_consulta
+
+consorcios:
+  path: data/processed/consorcios.json
+  root: consorcios
+  container: dict
+  meta:
+    fonte_url: fonte_url
+    data_consulta: data_consulta  # só na raiz; não há por registro
+  fields:
+    id: consorcio_id
+    nome: nome
+    total_municipios: total_municipios
+    municipios: municipios        # lista aninhada; forma em `membro_fields:`
+  membro_fields:                  # forma dos registros dentro de `municipios`
+    codigo_ibge: codigo_ibge      # o único que vira estado (`Consorcio.membros`)
+    nome: municipio               # os três abaixo são redundantes com o registro do
+    nivel_habilitacao: nivel      # município e existem aqui só para virar invariante
+    status: status                # de conferência — nunca estado duplicado
+
+# Contagens do snapshot atual. Ficam aqui, e não como constante em três arquivos, para que
+# trocar de snapshot seja uma edição auditável em vez de um número mágico caçado no código.
+# `_check_invariants` falha alto quando o arquivo discorda destes valores — é o AC8: o custo
+# de descobrir um JSON truncado aqui é zero, no meio de uma tarefa de US$ 3 é a tarefa.
+invariantes:
+  municipios_esperados: 417
+  consorcios_esperados: 29
+  soma_total_municipios: 386

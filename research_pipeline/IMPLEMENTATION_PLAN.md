@@ -218,13 +218,63 @@ de nome dobrado entre os 417.
 
 ---
 
-## Patch 3 — Carregador de referências + invariantes (AC8)
+## Patch 3 — Carregador de referências + invariantes (AC8) ✅ feito
 
 **Objetivo:** satisfazer o critério de aceite 8 por completo e falhar alto antes de qualquer gasto.
 
+**Feito**, com três achados que a forma real dos arquivos impôs:
+
+1. **`data_consulta` não está simétrico nos dois arquivos.** `municipios_habilitados.json` o traz
+   **por registro** e não na raiz; `consorcios.json` só **na raiz** e não por registro. O bloco
+   `fields:` do §7 mapeia apenas o do município, então `ReferenceData.data_consulta` — que é escalar
+   e vira `meta.refs_data_consulta` no manifesto (§11) — não teria de onde ler nem conferir o lado
+   dos consórcios. Resolvido com um bloco **`meta:`** novo no YAML para as chaves de raiz, sem tocar
+   no `fields:` do §7. Os 417 têm de concordar entre si e com a raiz de `consorcios.json`;
+   discordância é `RefLoadError`, não aviso — um manifesto com uma data quando as referências vieram
+   de duas coletas é procedência falsa, e recoletar é barato.
+2. **O mapeamento é projeção, não esquema.** `data_publicacao` existe nos 417 (`dd/mm/yyyy`, nenhum
+   nulo, inclusive nos 50 não habilitados) e não está no §7. Não entra: o §8 não o usa. A regra
+   ficou explícita e testada nos dois sentidos — campo *mapeado* ausente é `RefLoadError` nomeando
+   arquivo, campo e id; campo da fonte **não** mapeado é ignorado em silêncio. É o oposto do
+   `extra="forbid"` do patch 7, de propósito: lá o contrato é nosso, aqui a fonte é de terceiro e
+   ganhar coluna não pode derrubar a carga.
+3. **O `GOAL.md` §7.2 erra sobre Santa Terezinha.** Diz *"`SANTA TERESINHA` (GAC) ↔ `Santa Terezinha`
+   (IBGE)"*. Medido: o GAC escreve `Santa Terezinha`, com **z**, idêntico ao IBGE — e os 417 nomes
+   batem crus **e** dobrados, 0 divergências, que é justamente a conferência que o patch 2 adiou
+   para cá. O `ALIASES` de `scripts/lib/municipios_ba.py:67` não corrige divergência entre as duas
+   fontes: é alias para a grafia com **s** que aparece em texto de terceiro, e continua necessário no
+   patch 5 por esse motivo — a prosa do patch 5 abaixo está corrigida. O `GOAL.md` **não** foi
+   reaberto (não é escopo deste patch); fica registrado aqui para correção futura.
+
+Mais dois desvios menores: `membro_fields:` no YAML, para que o formato dos registros aninhados de
+`consorcios.json` também saia do mapeamento em vez de virar nome de campo hardcoded no carregador; e
+`_check_invariants` **acumula** todos os problemas antes de levantar, em vez de parar no primeiro —
+num arquivo recoletado com defeito sistemático, parar no primeiro esconde os outros 416 e transforma
+a conferência em laço de tentativa e erro.
+
+Às invariantes da especificação abaixo somaram-se cinco que os arquivos permitiam afirmar de graça,
+todas medidas em 0 divergências: chave do dict == campo `id` mapeado (pega um arquivo rechaveado);
+`nivel is None` ⟺ `nao_habilitado`; `consorcio_nome is None` ⟺ `consorcio_id is None`;
+`consorcio_nome` == nome do consórcio nos 386 vínculos; e os três campos redundantes embutidos em
+`consorcios.json` (`municipio`, `nivel`, `status`) batendo com o registro do município. Esses três
+redundantes **não viram estado** — `Consorcio.membros` guarda só `codigo_ibge`, porque duplicá-los
+criaria duas fontes de verdade para o mesmo fato.
+
+38 testes novos, 75 no total, todos passando. 15 deles são corrupções em `tmp_path`, uma por vez,
+cada uma casando a **mensagem** e não só o tipo — casar só `RefLoadError` deixaria a invariante certa
+passar a ser pega por acidente pela invariante errada depois de um refactor. Suíte verificada por
+mutação: neutralizar `_check_invariants` quebra 7 testes, deixar `_coerce_nivel` aceitar `int` quebra
+2, fixar `apto_licenciar=True` quebra 2.
+
+Dataclass e não pydantic, decidido aqui: `refs` não entra no estado checkpointado (decisão G, vai em
+`config["configurable"]`), logo não há serialização a validar, e é caminho quente do matcher do
+patch 6. A validação precisa apontar *qual* dos 417 registros está errado, coisa que
+`ValidationError` não dá de graça em invariante cruzada.
+
 **Arquivos**
 - **criar** `research_pipeline/config/ref_mapping.yaml` — o mapeamento do §7, mais bloco
-  `invariantes:` (`municipios_esperados: 417`, `consorcios_esperados: 29`, `soma_total_municipios: 386`).
+  `invariantes:` (`municipios_esperados: 417`, `consorcios_esperados: 29`, `soma_total_municipios: 386`)
+  e os dois blocos que os achados 1 e 3 exigiram: `meta:` (chaves de raiz) e `membro_fields:`.
   Números viram config auditável em vez de constante mágica em três arquivos.
 - **criar** `research_pipeline/refs.py`
   - `class RefLoadError(Exception)`
@@ -249,7 +299,8 @@ de nome dobrado entre os 417.
 python -m research_pipeline.refs
 ```
 esperado: `417 municípios (367 aptos / 50 não aptos)`, `29 consórcios (soma=386, membros distintos=386)`,
-`data_consulta: 2026-08-01`, `invariantes: OK`. Mais `python -m pytest research_pipeline/tests/test_refs.py`.
+`27 habilitados sem consórcio`, `data_consulta: 2026-08-01`, a `fonte:` do GAC e `invariantes: OK`.
+Mais `python -m pytest research_pipeline/tests/test_refs.py`.
 
 Todos esses números já foram conferidos contra os arquivos reais, inclusive os dois que o GOAL.md
 não afirma: `status`↔`situacao_gac` nunca discordam, e `consorcio_nome` é idêntico entre os dois
@@ -325,7 +376,9 @@ e se prova que as armadilhas estão tratadas.
   `municipios: {<codigo_ibge>: [alias, ...]}` /
   `consorcios: {<consorcio_id>: {sigla: str|null, aliases: [...]}}`, semeado com o único override
   real conhecido, migrado (copiado, não removido) de `scripts/lib/municipios_ba.py:ALIASES`:
-  `2928505: ["santa teresinha"]` — o GAC escreve *Santa Teresinha*, o IBGE *Santa Terezinha*.
+  `2928505: ["santa teresinha"]`. **Atenção ao motivo, que o `GOAL.md` §7.2 registra errado:** não é
+  divergência GAC × IBGE — os dois escrevem `Santa Terezinha`, com z (medido no patch 3, 0
+  divergências nos 417). O alias existe para a grafia com **s** que aparece em texto de terceiro.
 - **criar** `research_pipeline/tests/test_aliases.py`
 
 **Verificar:** `python -m research_pipeline.aliases` imprime tabela de 29 linhas
@@ -674,7 +727,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | 0 | Corrigir GOAL.md → v1.4 ✅ | não | revisão do diff |
 | 1 | Andaime: deps, `.env`, pytest ✅ | não | `pip install -r requirements.txt` + imports |
 | 2 | `common/`: `fold()` + `read_dbf()` ✅ | não | `pytest common/tests` (paridade 417) |
-| 3 | Carregador + **AC8** | não | `python -m research_pipeline.refs` |
+| 3 | Carregador + **AC8** ✅ | não | `python -m research_pipeline.refs` |
 | 4 | Vocabulários + 2 armadilhas XLSX | não | `pytest test_vocab.py` |
 | 5 | Aliases mecânicos | não | `python -m research_pipeline.aliases` |
 | 6 | Matcher determinístico | não | `pytest test_matcher.py` |
