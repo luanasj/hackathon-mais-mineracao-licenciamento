@@ -1,0 +1,15 @@
+# dependências
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# artefatos de build
+app/dist/
+*.tsbuildinfo
+
+# intermediários do pipeline (regeneráveis por `python pipeline/prep.py`)
+app/public/data/*.raw.geojson
+
+# sistema
+.DS_Store
