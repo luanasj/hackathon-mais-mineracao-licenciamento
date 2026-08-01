@@ -147,23 +147,70 @@ do repo — que é o que fará `import common.text` funcionar nos testes do patc
 
 ---
 
-## Patch 2 — `common/`: dobra de texto e leitor DBF
+## Patch 2 — `common/`: dobra de texto e leitor DBF ✅ feito
 
 **Objetivo:** pacote compartilhado importável, sem tocar em `scripts/`.
 
+**Feito**, com quatro registros — o primeiro é uma contradição deste plano, achada antes de
+escrever código:
+
+1. **Apóstrofo é removido, não vira espaço.** A especificação abaixo dizia *"apóstrofos (`' ‘ ’ \``)
+   **e hífens** → espaço"*, o que daria `dias d avila`, mas a linha de verificação do próprio patch
+   exigia `fold("Dias d'Ávila") == "dias davila"`. O `GOAL.md` §7.2 (escopo travado) é inequívoco e
+   concorda com a verificação: *"sem hífen nem apóstrofo (`Dias d'Ávila` → `dias davila`,
+   `Xique-Xique` → `xique xique`)"*. Prevalece o `GOAL.md`; a especificação abaixo está corrigida.
+   Assimetria de propósito: hífen une duas palavras (vira espaço), apóstrofo marca elisão dentro de
+   uma (é removido). Medido com `rapidfuzz` nas duas políticas contra 8 grafias plausíveis daquele
+   nome — remover dá 6/8 exatos, mapear para espaço dá 5/8, e nenhuma das duas cai abaixo do piso de
+   0.60 do patch 6 em caso algum. A escolha não era arriscada; deixar dois documentos discordando era.
+   **Consequência: a paridade com `_normalize` tem duas exceções, não uma** (`Dias d'Ávila` e
+   `Xique-Xique`), e as duas estão travadas com os valores exatos dos dois lados.
+2. **`\x96` entrou em `TRACOS`.** `'\x96'.isspace()` é `False` e o NFKD não o toca, então sem
+   tratamento o consórcio `45429` dobrava para
+   `'consorcio intermunicipal do sudoeste da bahia \x96 cisudoeste'` — caractere de controle C1 no
+   meio da chave de match, que o `token_set_ratio` do patch 6 veria como token e a cascata de
+   prefixos do patch 5 arrastaria para dentro da `chave_curta`. É en-dash mojibake de cp1252, isto
+   é, semanticamente um traço: tratá-lo junto com o hífen é a leitura fiel de *"sem hífen"* do §7.2,
+   não escopo novo. `TRACOS = ("-", "–", "—", "\x96", "\x97")`. Depois disso os 29 nomes dobrados
+   ficam ASCII puro. Isso **não** conflita com o `SEPARADOR_SIGLA` do patch 5: a sigla sai do nome
+   **cru**, porque a regra do §7.2 exige caixa alta e a dobra destrói a caixa — o docstring de
+   `common/text.py` registra essa ordem.
+3. **`read_dbf` ganhou duas guardas** que o `_read_dbf` original não tem: versão DBF fora de `0x03`
+   e flag de deleção fora de `0x20` levantam `DbfError`. Os dois arquivos reais são dBASE III com
+   zero registros deletados (medido: todas as flags `0x20`), então a paridade continua exata; as
+   guardas só trocam corrupção silenciosa por falha alta, que é a política do plano inteiro. Sem a
+   segunda, um `.dbf` regenerado com registros marcados devolveria contagem errada sem avisar.
+4. **`common/tests/conftest.py`** acrescentado para o fixture que carrega o original por
+   `spec_from_file_location`, usado pelos dois testes de paridade em vez de duplicado.
+
+37 testes, todos passando. Fatos medidos que eles agora travam: divergência com `_normalize` em
+exatamente 2 dos 417 nomes; **zero colisões** entre os 417 nomes dobrados (a premissa do match
+exato do patch 6) e entre os 29 consórcios; `fold` idempotente; `BA.dbf` = 31.858 × 12 com 169
+`SUBS` distintos; `BA_Municipios_2025.dbf` = 417 × 15 com acento intacto (prova o UTF-8 do `.cpg`).
+Suíte verificada por mutação — trocar a política de apóstrofo quebra 4 testes, remover `\x96` de
+`TRACOS` quebra 1.
+
+Conferido de passagem, mas **o teste fica para o patch 3**, onde `load_reference_data` existe e
+`data/processed/` já está em escopo: os 417 nomes de `municipios_habilitados.json` são idênticos aos
+do IBGE, 0 divergências.
+
 **Arquivos**
-- **criar** `common/text.py` — `fold(text) -> str`: NFKD → remove combinantes → apóstrofos
-  (`' ‘ ’ \``) **e hífens** → espaço → minúsculo → colapsa espaços. Docstring aponta a origem
-  (`scripts/lib/municipios_ba.py:_normalize`) e a única divergência intencional: aquele não dobra
-  hífen, este dobra (§7.2 exige).
-- **criar** `common/dbf.py` — `read_dbf(path, encoding="utf-8")`, cópia do `_read_dbf` original.
-  Docstring registra por que existe cópia em vez de import: `scripts/` não tem `__init__.py` e
-  usa `sys.path` hack; acoplar um script de coleta pontual ao produto de longa vida é pior que
-  35 linhas duplicadas.
+- **criar** `common/text.py` — `fold(text) -> str`: NFKD → remove combinantes → **remove**
+  apóstrofos (`' ‘ ’ \``) → traços (`- – —` e os mojibakes `\x96 \x97`) viram espaço → minúsculo →
+  colapsa espaços. Docstring aponta a origem (`scripts/lib/municipios_ba.py:_normalize`) e as
+  **duas** divergências intencionais que o §7.2 exige: aquele põe espaço no apóstrofo e mantém o
+  hífen; este remove o apóstrofo e dobra o traço.
+- **criar** `common/dbf.py` — `read_dbf(path, encoding="utf-8")`, cópia do `_read_dbf` original mais
+  `DbfError` e as duas guardas. Docstring registra por que existe cópia em vez de import: `scripts/`
+  não tem `__init__.py` e usa `sys.path` hack; acoplar um script de coleta pontual ao produto de
+  longa vida é pior que 35 linhas duplicadas. Registra também que todo valor volta `str` stripado,
+  inclusive os campos `N`.
 - **criar** `common/tests/test_text_parity.py` — carrega `scripts/lib/municipios_ba.py` via
   `importlib.util.spec_from_file_location` e afirma `fold(n) == _normalize(n)` para os 417 nomes,
-  **exceto** `Xique-Xique`, onde deve divergir. Trava a divergência para que uma mudança futura
-  em qualquer lado quebre alto.
+  **exceto** `Xique-Xique` e `Dias d'Ávila`, onde deve divergir. Trava a divergência para que uma
+  mudança futura em qualquer lado quebre alto.
+- **criar** `common/tests/test_text.py` (contrato de `fold` isolado), `common/tests/test_dbf.py`
+  (paridade nos dois `.dbf` reais + as duas negativas em `tmp_path`) e `common/tests/conftest.py`.
 
 **Verificar:** `python -m pytest common/tests` → passa. Fatos já medidos que os testes fixam:
 `fold("Dias d'Ávila") == "dias davila"`, `fold("Xique-Xique") == "xique xique"`, **zero colisões**
@@ -626,7 +673,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 |---|---|---|---|
 | 0 | Corrigir GOAL.md → v1.4 ✅ | não | revisão do diff |
 | 1 | Andaime: deps, `.env`, pytest ✅ | não | `pip install -r requirements.txt` + imports |
-| 2 | `common/`: `fold()` + `read_dbf()` | não | `pytest common/tests` (paridade 417) |
+| 2 | `common/`: `fold()` + `read_dbf()` ✅ | não | `pytest common/tests` (paridade 417) |
 | 3 | Carregador + **AC8** | não | `python -m research_pipeline.refs` |
 | 4 | Vocabulários + 2 armadilhas XLSX | não | `pytest test_vocab.py` |
 | 5 | Aliases mecânicos | não | `python -m research_pipeline.aliases` |
