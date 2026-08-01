@@ -10,9 +10,17 @@ import { useEffect, useState } from 'react'
 import { AlertTriangle } from 'lucide-react'
 
 import { BuscaProcesso } from '@/components/BuscaProcesso'
+import { MapaDesenho } from '@/components/MapaDesenho'
+import type { ResultadoDesenho } from '@/components/MapaDesenho'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog'
 import { Separator } from '@/components/ui/separator'
 import { carregarIndice } from '@/lib/processos'
 import type { IndiceProcessos, RegistroIndice } from '@/lib/processos'
@@ -31,6 +39,8 @@ export default function App() {
   const [indice, setIndice] = useState<IndiceProcessos | null>(null)
   const [erro, setErro] = useState<string | null>(null)
   const [sel, setSel] = useState<RegistroIndice | null>(null)
+  const [modoMapa, setModoMapa] = useState<'poligono' | 'ponto-raio' | null>(null)
+  const [areaManual, setAreaManual] = useState<ResultadoDesenho | null>(null)
 
   useEffect(() => {
     carregarIndice().then(setIndice, (e: unknown) => setErro(String(e)))
@@ -63,17 +73,76 @@ export default function App() {
           {indice && (
             <BuscaProcesso
               indice={indice}
-              onSelecionar={setSel}
-              onDesenhar={() =>
-                alert('A.9 — desenho de poligonal, ainda não implementado')
-              }
-              onPontoRaio={() =>
-                alert('A.9 — ponto e raio geodésico, ainda não implementado')
-              }
+              onSelecionar={(r) => {
+                setSel(r)
+                setAreaManual(null)
+              }}
+              onDesenhar={() => setModoMapa('poligono')}
+              onPontoRaio={() => setModoMapa('ponto-raio')}
             />
           )}
         </CardContent>
       </Card>
+
+      <Dialog open={modoMapa !== null} onOpenChange={(v) => !v && setModoMapa(null)}>
+        <DialogContent className="sm:max-w-2xl">
+          <DialogHeader>
+            <DialogTitle>
+              {modoMapa === 'poligono'
+                ? 'A.9 — desenhar poligonal'
+                : 'A.9 — ponto e raio geodésico'}
+            </DialogTitle>
+          </DialogHeader>
+          {modoMapa && (
+            <MapaDesenho
+              modo={modoMapa}
+              onCancelar={() => setModoMapa(null)}
+              onConcluir={(resultado) => {
+                setAreaManual(resultado)
+                setSel(null)
+                setModoMapa(null)
+              }}
+            />
+          )}
+        </DialogContent>
+      </Dialog>
+
+      {areaManual && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-titulo">Área desenhada manualmente</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col gap-4">
+            <dl className="grid grid-cols-2 gap-x-8 gap-y-2 text-corpo">
+              <Linha rotulo="Área" valor={`${nf.format(areaManual.area_ha)} ha`} num />
+            </dl>
+            <Separator />
+            <div className="flex flex-col gap-1">
+              <p className="text-nota font-medium">
+                Municípios atingidos — interseção calculada no cliente contra
+                municipios10.geojson, mesmo método de A.3
+              </p>
+              {areaManual.municipios.length === 0 ? (
+                <p className="text-corpo text-muted-foreground">
+                  Nenhum dos 10 municípios da amostra intercepta esta área.
+                </p>
+              ) : (
+                <p className="text-corpo">
+                  {areaManual.municipios
+                    .map((m) => `${m.nm_mun} ${pf.format(m.proporcao)}`)
+                    .join(' · ')}
+                </p>
+              )}
+              {areaManual.municipios.length > 1 && (
+                <Badge variant="outline" className="mt-2 w-fit">
+                  <AlertTriangle aria-hidden className="size-3" />
+                  poligonal cruza divisa municipal
+                </Badge>
+              )}
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {sel && (
         <Card>
