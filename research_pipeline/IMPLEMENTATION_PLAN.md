@@ -1,6 +1,6 @@
 # Plano de implementação — `research_pipeline`
 
-> **15 patches (0–14).** Derivado de `research_pipeline/GOAL.md` v1.3.
+> **15 patches (0–14).** Derivado de `research_pipeline/GOAL.md` — **v1.4** desde o patch 0.
 > **Branch:** `feature/deep-research-pipeline` · **Escrito em:** 2026-08-01
 > Patches 0–12 verificáveis com **custo zero**. Patch 13 ~US$ 0,01. Patch 14 US$ 1–3.
 
@@ -37,9 +37,15 @@ US$ 1–3 só no patch 14, depois de a retomada já estar provada offline.
 
 ---
 
-## Patch 0 — Corrigir GOAL.md para v1.4
+## Patch 0 — Corrigir GOAL.md para v1.4 ✅ criado
 
 **Objetivo:** eliminar os erros factuais antes que alguém implemente contra eles.
+
+**Feito.** As 13 correções abaixo estão aplicadas em `GOAL.md` v1.4, mais três itens que a revisão
+do diff expôs: o exemplo do §8 tinha `nivel_licenciamento: 3` na **mesma** licença que o §6.1 agora
+traz como `null` (`normalize` não vê o relatório, logo não pode preencher nível que `extract`
+devolveu nulo); a decisão travada 4 foi emendada para apontar a exceção do piso de 0.60, em vez de
+contradizer o §6.2 corrigido; e as decisões E–H entraram no §12 como itens **16–19**.
 
 **Arquivo:** `research_pipeline/GOAL.md`.
 
@@ -594,7 +600,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 
 | # | Patch | Chave? | Verificação |
 |---|---|---|---|
-| 0 | Corrigir GOAL.md → v1.4 | não | revisão do diff |
+| 0 | Corrigir GOAL.md → v1.4 ✅ | não | revisão do diff |
 | 1 | Andaime: deps, `.env`, pytest | não | `pip install -r requirements.txt` + imports |
 | 2 | `common/`: `fold()` + `read_dbf()` | não | `pytest common/tests` (paridade 417) |
 | 3 | Carregador + **AC8** | não | `python -m research_pipeline.refs` |
