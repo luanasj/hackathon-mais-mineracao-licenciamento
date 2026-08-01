@@ -16,3 +16,6 @@ frontend/public/data/*.raw.geojson
 
 # cache do Vite
 .vite/
+
+data/db/*.db
+data/db/*.db-journal
