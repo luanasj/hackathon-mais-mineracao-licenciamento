@@ -25,6 +25,14 @@ export interface Virada {
   /** O que a virada prova para a banca. */
   prova: string
   processo: ProcessoProps
+  /**
+   * Caracterização mínima que a virada precisa para o motor chegar ao
+   * `esperado`. Não é dado do SIGMINE — é o preenchimento do formulário que o
+   * demonstrador faria à mão, aqui declarado para que o botão prove o que diz.
+   * O `tipologia_id` referencia `data/fixtures.ts`; o porte está na unidade da
+   * tipologia.
+   */
+  preset: { tipologia_id: string; porte_valor: number }
   /** Centro da poligonal, para o mapa enquadrar sem calcular. */
   centro: [number, number]
   /**
@@ -108,6 +116,8 @@ export const VIRADAS: readonly Virada[] = [
     esperado: 'MUNICIPAL — definida',
     prova: 'Caminho feliz, com fundamento citado',
     processo: GRANITO_BRUMADO,
+    // 8.000 t/ano cai em `micro` (0–10.000), dentro da faixa delegada.
+    preset: { tipologia_id: 'extracao-rocha-ornamental', porte_valor: 8_000 },
     centro: [-41.48388, -13.96943],
     pendencias: [
       'C.2 — confirmar que Brumado está habilitado e que a tipologia de extração de granito está entre as delegadas',
@@ -121,6 +131,9 @@ export const VIRADAS: readonly Virada[] = [
     esperado: 'ESTADUAL — INEMA',
     prova: 'Existe função de porte real, e o limiar é exibido',
     processo: GRANITO_BRUMADO,
+    // Único campo que muda em relação à virada 1: 120.000 t/ano cai em
+    // `medio`, acima da faixa delegada, e a competência sobe para o Estado.
+    preset: { tipologia_id: 'extracao-rocha-ornamental', porte_valor: 120_000 },
     centro: [-41.48388, -13.96943],
     pendencias: [
       'C.1 — as fronteiras de faixa vêm da CEPRAM; sem elas D.4 não tem onde varrer',
@@ -133,6 +146,8 @@ export const VIRADAS: readonly Virada[] = [
     esperado: 'UNIÃO — IBAMA',
     prova: 'Precedência federal absorve tudo abaixo',
     processo: URANIO_CAETITE,
+    // Porte irrelevante aqui: a precedência federal absorve tudo abaixo.
+    preset: { tipologia_id: 'lavra-ceu-aberto-metalico', porte_valor: 8_000 },
     centro: [-42.277, -13.869],
     pendencias: [],
   },
@@ -143,6 +158,8 @@ export const VIRADAS: readonly Virada[] = [
     esperado: 'INDETERMINADO → gera pedido LAI',
     prova: 'O sistema não chuta, e a limitação vira ação',
     processo: OURO_TRIPLICE,
+    // A poligonal repartida decide sozinha; o porte não muda o resultado.
+    preset: { tipologia_id: 'lavra-ceu-aberto-metalico', porte_valor: 8_000 },
     centro: [-40.23189, -10.34654],
     pendencias: [],
   },

@@ -14,6 +14,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Feature } from 'geojson'
 
 import { VIRADAS } from '@/data/viradas'
+import type { Virada } from '@/data/viradas'
 import { TIPOLOGIAS } from '@/data/fixtures'
 import { habilitacaoDe, statusDe } from '@/lib/fatos'
 import {
@@ -147,10 +148,15 @@ export default function ParecerCompetencia() {
     setGeometria(null)
   }
 
-  function aplicarVirada(p: ProcessoProps) {
+  function aplicarVirada(v: Virada) {
     // Prefere o registro do índice — é o dado real, com os municípios do join
     // de A.3. Sem índice, cai no literal embarcado e a demo segue de pé.
-    selecionarProcesso(indice?.porNumero(p.processo_norm) ?? comoRegistro(p))
+    selecionarProcesso(indice?.porNumero(v.processo.processo_norm) ?? comoRegistro(v.processo))
+    // A virada precisa chegar ao veredito que anuncia. Selecionar só o
+    // processo deixa tipologia e porte em branco, e o motor devolve
+    // INDETERMINADO por falta de fato — correto, mas não é o que o botão diz.
+    despachar({ tipo: 'tipologia', id: v.preset.tipologia_id })
+    despachar({ tipo: 'porte', valor: v.preset.porte_valor })
   }
 
   function concluirDesenho(r: ResultadoDesenho) {
@@ -297,7 +303,7 @@ export default function ParecerCompetencia() {
                     key={v.n}
                     type="button"
                     className="pc-opcao"
-                    onClick={() => aplicarVirada(v.processo)}
+                    onClick={() => aplicarVirada(v)}
                     title={`${v.titulo} — esperado: ${v.esperado}`}
                     style={{
                       textAlign: 'left',

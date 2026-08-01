@@ -59,20 +59,29 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
   const [centro, setCentro] = useState<[number, number] | null>(null)
   const [raioKm, setRaioKm] = useState(1)
   const [calculando, setCalculando] = useState(false)
+  const [falhou, setFalhou] = useState(false)
 
   useEffect(() => {
     if (!containerRef.current) return
 
-    const map = new maplibregl.Map({
-      container: containerRef.current,
-      style: ESTILO,
-      bounds: [
-        [CAIXA_BAHIA[0], CAIXA_BAHIA[1]],
-        [CAIXA_BAHIA[2], CAIXA_BAHIA[3]],
-      ],
-      fitBoundsOptions: { padding: 20 },
-      attributionControl: false,
-    })
+    // Mesma proteção do mapa de leitura: sem WebGL2 o construtor lança, e um
+    // erro aqui derrubaria a aplicação inteira.
+    let map: maplibregl.Map
+    try {
+      map = new maplibregl.Map({
+        container: containerRef.current,
+        style: ESTILO,
+        bounds: [
+          [CAIXA_BAHIA[0], CAIXA_BAHIA[1]],
+          [CAIXA_BAHIA[2], CAIXA_BAHIA[3]],
+        ],
+        fitBoundsOptions: { padding: 20 },
+        attributionControl: false,
+      })
+    } catch {
+      setFalhou(true)
+      return
+    }
     mapRef.current = map
 
     map.on('load', () => {
@@ -118,7 +127,11 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
     })
 
     return () => {
-      map.remove()
+      try {
+        map.remove()
+      } catch {
+        /* nada a desmontar */
+      }
       mapRef.current = null
     }
   }, [])
@@ -218,10 +231,32 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
           : 'Clique no mapa para marcar o centro, depois ajuste o raio.'}
       </div>
 
-      <div
-        ref={containerRef}
-        style={{ height: 380, width: '100%', border: `1px solid ${CORES.linhaForte}` }}
-      />
+      {falhou ? (
+        <div
+          style={{
+            height: 380,
+            width: '100%',
+            border: `1px solid ${CORES.linhaForte}`,
+            background: CORES.terraMapa,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: 24,
+            textAlign: 'center',
+            fontSize: 15,
+            color: CORES.cinzaEscuro,
+            lineHeight: 1.55,
+          }}
+        >
+          Este navegador não expõe WebGL2, necessário para desenhar no mapa. Use a busca por
+          processo da ANM.
+        </div>
+      ) : (
+        <div
+          ref={containerRef}
+          style={{ height: 380, width: '100%', border: `1px solid ${CORES.linhaForte}` }}
+        />
+      )}
 
       {modo === 'ponto-raio' && (
         <div>

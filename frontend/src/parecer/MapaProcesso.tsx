@@ -8,9 +8,17 @@
  * Sem tiles remotos (DoD — roda com a rede desligada): fundo neutro, malha
  * municipal do IBGE e relevo `terrain-rgb` baixado uma vez por
  * `pipeline/relevo.py`, ambos servidos de `public/data/`.
+ *
+ * ⚠️ A versão do MapLibre está presa em 5.x de propósito. A 6.x carrega o
+ * worker de um arquivo separado, por `new URL(\`./${nome}\`, import.meta.url)`
+ * — referência que nenhum bundler consegue enxergar estaticamente, então o
+ * arquivo nunca é emitido e o worker morre calado. Sem worker não há
+ * processamento de GeoJSON nem decodificação de raster-DEM, e o mapa pinta só
+ * o fundo. A 5.x embute o worker no bundle. Antes de subir para 6.x, conferir
+ * se o mapa ainda desenha a poligonal.
  */
 
-import { useEffect, useImperativeHandle, useRef } from 'react'
+import { useEffect, useImperativeHandle, useRef, useState } from 'react'
 import type { Ref } from 'react'
 import * as turf from '@turf/turf'
 import type { Feature, FeatureCollection } from 'geojson'
@@ -55,6 +63,7 @@ export default function MapaProcesso({ geometria, nivel, altura = 340, ref }: Ma
   const containerRef = useRef<HTMLDivElement | null>(null)
   const mapRef = useRef<maplibregl.Map | null>(null)
   const prontoRef = useRef(false)
+  const [falhou, setFalhou] = useState<string | null>(null)
 
   useImperativeHandle(ref, () => ({
     escalar(fator) {
@@ -68,13 +77,26 @@ export default function MapaProcesso({ geometria, nivel, altura = 340, ref }: Ma
   useEffect(() => {
     if (!containerRef.current) return
 
-    const map = new maplibregl.Map({
-      container: containerRef.current,
-      style: ESTILO,
-      bounds: limites(CAIXA_BAHIA),
-      fitBoundsOptions: { padding: 24 },
-      attributionControl: false,
-    })
+    // O construtor lança quando não há WebGL2 (máquina antiga, VM, acesso
+    // remoto). Sem este try o erro sobe pela árvore do React e derruba a
+    // aplicação inteira — o parecer é a entrega, e ele não depende do mapa.
+    let map: maplibregl.Map
+    try {
+      map = new maplibregl.Map({
+        container: containerRef.current,
+        style: ESTILO,
+        bounds: limites(CAIXA_BAHIA),
+        fitBoundsOptions: { padding: 24 },
+        attributionControl: false,
+      })
+    } catch (erro) {
+      setFalhou(
+        erro instanceof Error && /webgl/i.test(erro.message)
+          ? 'Este navegador não expõe WebGL2, necessário para desenhar o mapa. O parecer ao lado continua válido.'
+          : 'Não foi possível iniciar o mapa. O parecer ao lado continua válido.',
+      )
+      return
+    }
     mapRef.current = map
 
     map.on('load', () => {
@@ -131,7 +153,13 @@ export default function MapaProcesso({ geometria, nivel, altura = 340, ref }: Ma
     })
 
     return () => {
-      map.remove()
+      // `remove()` também lança quando o mapa nunca terminou de montar: ele
+      // tenta destruir um painter que não existe.
+      try {
+        map.remove()
+      } catch {
+        /* nada a desmontar */
+      }
       mapRef.current = null
       prontoRef.current = false
     }
@@ -154,6 +182,29 @@ export default function MapaProcesso({ geometria, nivel, altura = 340, ref }: Ma
     enquadrar(map, nivel, geometria, true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [nivel])
+
+  if (falhou) {
+    return (
+      <div
+        style={{
+          height: altura,
+          width: '100%',
+          border: `1px solid ${CORES.linhaForte}`,
+          background: CORES.terraMapa,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: 24,
+          textAlign: 'center',
+          fontSize: 15,
+          color: CORES.cinzaEscuro,
+          lineHeight: 1.55,
+        }}
+      >
+        {falhou}
+      </div>
+    )
+  }
 
   return (
     <div
