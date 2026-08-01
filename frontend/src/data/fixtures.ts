@@ -6,19 +6,15 @@
  * aqui tem `verificado: false`, de propósito: a interface é obrigada a marcar
  * pendência, e é assim que se descobre se a marcação funciona.
  *
- * Substituição: C.1 troca `TIPOLOGIAS`, C.2 troca `MUNICIPIOS`, C.4 troca
- * `REGRAS`. Os tipos não mudam — é esse o ponto do congelamento em 0.2.
+ * Substituição: C.1 troca `TIPOLOGIAS`, C.4 troca `REGRAS`. C.2 já trocou
+ * `MUNICIPIOS` — ver `@/data/municipios_gac.ts`. Os tipos não mudam — é esse
+ * o ponto do congelamento em 0.2.
  *
  * Os nomes são reais do contexto baiano. Os NÚMEROS não são: as faixas de
  * porte abaixo são plausíveis, não normativas.
  */
 
-import type {
-  MunicipioHabilitacao,
-  Parecer,
-  Regra,
-  Tipologia,
-} from '@/lib/schemas'
+import type { Parecer, Regra, Tipologia } from '@/lib/schemas'
 
 /** Marca única para varrer o repo antes do congelamento e não sobrar nada. */
 export const FIXTURE = 'PROVISORIO-0.3' as const
@@ -366,41 +362,12 @@ export const TIPOLOGIAS: Tipologia[] = [
 ]
 
 // ---------------------------------------------------------------------------
-// 2 municípios — um habilitado, um sem evidência
+// MUNICIPIOS — C.2 entregou. Ver `@/data/municipios_gac.ts` (417 municípios,
+// gerado por `pipeline/gerar_municipios.py` a partir do Sistema GAC real).
+// `tipologias_delegadas` ainda sai `[]` de lá — ver a nota no gerador.
 // ---------------------------------------------------------------------------
 
-export const MUNICIPIOS: MunicipioHabilitacao[] = [
-  {
-    cd_mun: '2904605',
-    nm_mun: 'Brumado',
-    status: 'habilitado',
-    nivel: 'a confirmar por C.2',
-    tipologias_delegadas: ['b3-5'],
-    ato: null,
-    vigencia_desde: null,
-    procedencia: {
-      fonte: 'FIXTURE 0.3 — habilitação NÃO consultada no GAC',
-      data_consulta: '2026-08-01',
-    },
-    observacao:
-      'Valor provisório para destravar D e F. C.2 substitui com o dossiê real.',
-  },
-  {
-    cd_mun: '2930105',
-    nm_mun: 'Senhor do Bonfim',
-    status: 'sem_evidencia',
-    nivel: null,
-    tipologias_delegadas: [],
-    ato: null,
-    vigencia_desde: null,
-    procedencia: {
-      fonte: 'Fora da amostra dos 10 — sem levantamento previsto',
-      data_consulta: '2026-08-01',
-    },
-    observacao:
-      'Estado válido do produto: leva a INDETERMINADO e aciona o pedido LAI.',
-  },
-]
+export { MUNICIPIOS } from '@/data/municipios_gac'
 
 // ---------------------------------------------------------------------------
 // 3 regras — uma por caminho de precedência
