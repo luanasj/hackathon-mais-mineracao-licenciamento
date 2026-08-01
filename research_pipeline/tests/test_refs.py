@@ -91,11 +91,21 @@ def test_procedencia(refs: ReferenceData) -> None:
     assert refs.fonte_urls == ("https://gestor.meioambiente.ba.gov.br/Consultas/ConsultaGAC/",)
 
 
-def test_vocabularios_vazios_ate_o_patch_4(refs: ReferenceData) -> None:
-    """Contrato explícito: este patch não carrega XLSX nem DBF de substâncias, e não gera aviso."""
-    assert refs.tipologias == {}
-    assert refs.minerais == ()
-    assert refs.avisos == ()
+def test_vocabularios_entram_no_mesmo_carregamento(refs: ReferenceData) -> None:
+    """O AC8 cobre o vocabulário também: XLSX e DBF carregam junto, não sob demanda.
+
+    Substitui o `test_vocabularios_vazios_ate_o_patch_4` do patch 3, que existia para travar o
+    contrato *deste* patch e era para morrer aqui. O detalhe de cada carregador está em
+    `test_vocab.py`; o que se afirma aqui é só que `load_reference_data` os liga.
+    """
+    assert len(refs.tipologias) == 17
+    assert len(refs.minerais) == 169
+    assert len(refs.indice_substancias) == 128
+    assert len(refs.indice_minerais) == 169
+    assert refs.avisos == (
+        "tipologia_porte_ausente:B4.2:porte_pequeno",
+        "tipologia_porte_ausente:B4.2:porte_medio",
+    )
 
 
 def test_mapeamento_e_projecao_nao_esquema(refs: ReferenceData) -> None:
@@ -129,7 +139,11 @@ def _raiz_corrompida(tmp_path: Path, mutacao: Callable[[dict, dict], None]) -> P
 
     O mapeamento continua sendo o real — só a raiz de resolução dos `path:` muda. Assim o teste
     exercita exatamente o carregador de produção, não uma configuração paralela.
+
+    `data_source/` entra por symlink porque desde o patch 4 `load_reference_data` também carrega o
+    XLSX e o `BA.dbf` — 13 MB que não faz sentido copiar 16 vezes para corromper um campo de JSON.
     """
+    (tmp_path / "data_source").symlink_to(REPO_ROOT / "data_source")
     destino = tmp_path / "data" / "processed"
     destino.mkdir(parents=True)
     municipios = json.loads(ORIGEM_MUNICIPIOS.read_text(encoding="utf-8"))

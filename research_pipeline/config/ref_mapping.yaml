@@ -53,6 +53,42 @@ consorcios:
     nivel_habilitacao: nivel      # município e existem aqui só para virar invariante
     status: status                # de conferência — nunca estado duplicado
 
+# Vocabulário fechado do Anexo IV (§6.3). As colunas são localizadas pelo TEXTO do cabeçalho,
+# não por posição: uma coluna inserida à esquerda não desloca a leitura, e uma coluna renomeada
+# falha alto nomeando o cabeçalho que existe, em vez de ler a coluna vizinha em silêncio.
+#
+# ⚠️ A planilha é lida com `data_only=True`, e isso é carga estrutural, não preferência.
+# A célula PORTE PEQUENO de B4.2 está gravada como FÓRMULA com resultado em cache:
+#   <c r="D20" t="str"><f> 20.000 &lt; 200.000 (redação…)</f><v>#ERROR!</v></c>
+# Com o default do openpyxl (`data_only=False`) ela devolve o TEXTO DA FÓRMULA, que não contém
+# `#ERROR!` e não casa `faixa não expressa` — a sentinela não dispara e um porte-lixo entra como
+# válido. O §6.3 do GOAL.md descreve essa célula como *shared string* (`t="s"`); ela é `t="str"`.
+tipologias:
+  path: data_source/Anexo_IV_Divisao_B_Mineracao_Bahia.xlsx
+  aba: Divisão B - Mineração
+  aba_matriz: Matriz Porte x PP (Art. 109)   # 3x3 do Art. 109, só para CONFERIR as classes
+  linha_cabecalho: 1
+  colunas:
+    codigo: CÓDIGO
+    nome: TIPOLOGIA
+    unidade_porte: UNIDADE DE MEDIDA DE PORTE
+    porte_pequeno: PORTE PEQUENO
+    porte_medio: PORTE MÉDIO
+    porte_grande: PORTE GRANDE
+    potencial_poluidor: POTENCIAL POLUIDOR
+    classe_pequeno: CLASSE (Pequeno)
+    classe_medio: CLASSE (Médio)
+    classe_grande: CLASSE (Grande)
+  esperadas: 17               # 24 linhas úteis - 6 de grupo - 1 de cabeçalho
+
+# Vocabulário de mineral do SIGMINE/ANM. Mesmo arquivo que o resto do projeto usa no join
+# espacial, para que `mineral` fale a mesma língua que a camada geográfica.
+minerais:
+  path: data_source/BA-shapefile/BA.dbf
+  coluna: SUBS
+  encoding: utf-8             # o .cpg diz UTF-8; latin-1 corrompe os acentuados
+  esperados: 169              # distintos em 31.858 linhas
+
 # Contagens do snapshot atual. Ficam aqui, e não como constante em três arquivos, para que
 # trocar de snapshot seja uma edição auditável em vez de um número mágico caçado no código.
 # `_check_invariants` falha alto quando o arquivo discorda destes valores — é o AC8: o custo

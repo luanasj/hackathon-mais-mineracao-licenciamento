@@ -14,3 +14,7 @@ from pathlib import Path
 # Raiz do repo. Os carregadores (refs.py, vocab.py) resolvem data/processed/ e
 # data_source/ a partir daqui, nunca do diretório de trabalho.
 REPO_ROOT = Path(__file__).resolve().parents[1]
+
+# Aqui e não em refs.py: `vocab.py` também precisa dele no `__main__`, e importá-lo de
+# `refs.py` fecharia o ciclo que `errors.py` existe para evitar.
+MAPPING_PATH = Path(__file__).resolve().parent / "config" / "ref_mapping.yaml"

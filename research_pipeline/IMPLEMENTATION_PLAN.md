@@ -65,7 +65,9 @@ Correções verificadas contra os arquivos reais:
    (B4.1/B4.5), `feldspato` (B4.2/B4.4), `granitos` (B3.4/B3.5), `moscovita` (B4.2/B4.4),
    `selenio` (B1.1.3/B1.2.1), `sienitos` (B3.4/B3.5), `turmalina` (B2.1/B4.2) — **dez**.
    O prompt de normalização deve ser gerado a partir do conjunto derivado, não com uma frase
-   fixa sobre Granito.
+   fixa sobre Granito. **Emenda do patch 4:** são **treze**, não dez — `caulim` estava escondido
+   atrás de uma chave-lixo e `quartzo`/`quartzito` só não colidiam por causa do plural. Também
+   muda a grafia de duas: `granitos` e `sienitos` viram `granito` e `sienito`.
 5. **§7.2, sigla** — "último token em caixa alta quando não houver traço" produz siglas-lixo
    (`SERTÃO`, `PARAGUAÇU`, `SUL`, `CHICO`, `IRECÊ`) em 15 dos 29. E **CISUDOESTE não é separado
    por espaço duplo**: o separador real é o byte `\x96` (en-dash mojibake de cp1252) em
@@ -310,10 +312,74 @@ arquivos nos 386 vínculos (0 divergências).
 
 ---
 
-## Patch 4 — Vocabulários: tipologias (XLSX) + minerais (DBF), com as duas armadilhas
+## Patch 4 — Vocabulários: tipologias (XLSX) + minerais (DBF), com as duas armadilhas ✅ feito
 
 **Objetivo:** carregar as 17 folhas do vocabulário fechado e os 169 `SUBS` do SIGMINE, tratando
 toda célula malformada explicitamente.
+
+**Feito**, com três divergências do que o `GOAL.md` §6.3 afirma — as duas primeiras mudam o
+carregador, a terceira muda o que o patch 9 pode supor:
+
+1. **`#ERROR!` não é *shared string* — é célula de fórmula com resultado em cache.** O §6.3 diz
+   `t="s"`; o XML diz
+   `<c r="D20" t="str"><f> 20.000 &lt; 200.000 (redação…)</f><v>#ERROR!</v></c>`. A consequência é
+   maior que a etiqueta: **com o default do openpyxl (`data_only=False`) a célula devolve o texto da
+   fórmula**, que não contém `#ERROR!` e não casa `faixa não expressa` — a sentinela não dispara e o
+   porte-lixo entra como válido. Detectar por sentinela de texto é necessário e **não é suficiente**.
+   Daí a leitura com `data_only=True` mais uma segunda abertura com `data_only=False`: célula
+   mapeada que seja fórmula precisa de valor em cache **e** de resultado sentinela, senão é
+   `RefLoadError`. Sem essa guarda, um XLSX regravado por ferramenta que não avalia fórmula
+   devolveria `None`, que a camada de porte trataria como faixa ausente e seguiria em frente com o
+   aviso de sempre, escondendo que o arquivo mudou.
+   De passagem, a fórmula mostra o que a corrupção comeu: comparada a B4.6
+   (`< 20.000` / `>= 20.000 < 300.000` / `>= 300.000`), a faixa ` 20.000 < 200.000` que sobrou em
+   PEQUENO é a faixa **MÉDIO** deslocada. Não é erro de cálculo, é dado deslocado, e não se sabe
+   para onde — o que confirma `None` nas duas colunas por um motivo melhor que "a célula deu erro".
+2. **As substâncias ambíguas são 13, não 10.** Duas causas independentes. `caulim` estava escondido
+   atrás da chave-lixo `caulim dentre outros`, produzida por um corte de cauda que exige vírgula
+   antes de `Dentre` — B4.1 escreve `"…, Ilita, Caulim Dentre Outros"` **sem** vírgula. A colisão
+   importa: B3.3 é Caulim sozinho (poluidor **A**, Classe 4/5/6) e B4.1 é Caulim junto das argilas
+   (poluidor **M**, Classe 2/3/5). E `quartzo`/`quartzito` só não colidiam por causa do `s` do
+   plural: `Quartzo` está em B4.2 (vidro/óptica) e `Quartzos` em B3.5 (revestimento); `Quartzito` em
+   B4.4 (industrial) e `Quartzitos` em B3.4 (britagem). Sob dobra exata `"Quartzo"` resolveria
+   sozinho para B4.2 e nunca chegaria ao LLM — o mesmo defeito do Granito, sem o alarme. Decidido
+   nesta sessão: `chave_substancia()` desingulariza o `s` final da **última** palavra, com mais de 3
+   letras. Medido nas 130 chaves cruas, isso funde exatamente esses 2 pares e nenhum outro, não
+   sobra chave terminada em `s`, e nos 169 `SUBS` não funde nada. Resultado: 128 chaves, 13 ambíguas.
+3. **Os dois vocabulários são largamente disjuntos.** Só **69 dos 169** `SUBS` existem no índice do
+   Anexo IV (56 sem a desingularização). O SIGMINE nomeia minério e rocha (`MINERIO DE FERRO`,
+   `MIGMATITO`, `GRANODIORITO`), o Anexo IV nomeia elemento e mineral. Não é defeito de nenhum dos
+   dois e não é deste patch resolver — são duas buscas distintas no patch 9, `substancia_raw` contra
+   `indice_substancias` e `mineral` contra `indice_minerais` — mas fica travado por teste para que
+   o patch 9 não seja desenhado supondo sobreposição que não existe. De passagem: o SIGMINE já
+   codifica uso em 6 valores (`GRANITO P/ REVESTIMENTO`, `QUARTZITO P/ REVESTIMENTO`,
+   `AREIA P/ VIDRO`…), o que é sinal a favor da desambiguação por uso do patch 9.
+
+Dois desvios menores de forma. `research_pipeline/errors.py` foi criado só para `RefLoadError`:
+`refs.py` importa `vocab.py` e os dois precisam da mesma exceção — deixá-la em `refs.py` fecharia um
+ciclo de import e duplicá-la faria `except RefLoadError` pegar uma das duas conforme o caminho do
+import, que é pior que o ciclo. `refs.py` a reexporta, então
+`from research_pipeline.refs import RefLoadError` continua valendo e é o mesmo objeto. E as colunas
+da planilha são localizadas pelo **texto** do cabeçalho, não por posição: coluna inserida à esquerda
+não desloca a leitura, e coluna renomeada falha alto nomeando o cabeçalho que existe.
+
+A divisão erro × aviso ficou assim, e não é arbitrária: célula malformada **conhecida** (as
+sentinelas) e divergência da matriz do Art. 109 viram aviso, porque a publicação oficial é a fonte e
+não vai ser corrigida; qualquer outra coisa fora de forma é `RefLoadError`, porque significa que o
+arquivo mudou. Por isso a carga do vocabulário entra em `load_reference_data` junto das tabelas, e
+não sob demanda — o AC8 é *falhar antes de gastar*, e um `BA.dbf` truncado descoberto no `normalize`
+já custou o relatório. Medido: DBF 0,29 s, XLSX 0,05 s, tabelas 0,011 s.
+
+40 testes novos, 115 no total, todos passando. Suíte verificada por mutação: trocar `data_only=True`
+por `False` quebra 5 e derruba 22 por erro de fixture (a guarda de fórmula pega o texto da fórmula
+como resultado não-sentinela); remover a desingularização quebra 9; exigir vírgula no corte de cauda
+quebra 5. O `test_vocabularios_vazios_ate_o_patch_4` do patch 3 foi substituído pela afirmação
+positiva — ele existia para travar o contrato deste patch e era para morrer aqui. O
+`_raiz_corrompida` de `test_refs.py` ganhou um symlink de `data_source/`: 13 MB que não faz sentido
+copiar 16 vezes para corromper um campo de JSON.
+
+O `GOAL.md` §6.3 **não** foi reaberto (não é escopo deste patch), como o §7.2 no patch 3. Fica
+registrado aqui: a etiqueta `t="s"` está errada, e a lista de dez colisões está incompleta.
 
 **Arquivos**
 - **criar** `research_pipeline/vocab.py`
@@ -343,10 +409,12 @@ toda célula malformada explicitamente.
 - **modificar** `research_pipeline/config/ref_mapping.yaml` — blocos `tipologias:`
   (aba `Divisão B - Mineração`) e `minerais:` (`BA-shapefile/BA.dbf`, coluna `SUBS`, `utf-8`).
 
-**Verificar:** `python -m pytest research_pipeline/tests/test_vocab.py`, afirmando:
-17 tipologias e as 6 linhas de grupo excluídas; `tipologias["B4.2"].porte_pequeno is None` com os
-2 avisos; `indice["granitos"] == ("B3.4", "B3.5")`; `SUBSTANCIAS_AMBIGUAS` igual às **10** colisões
-medidas (snapshot congelado, para que mudança de vocabulário quebre alto); `len(minerais) == 169`;
+**Verificar:** `python -m research_pipeline.vocab` imprime `17 tipologias (10 A / 7 M / 0 P)`,
+`128 chaves de substância, 13 ambíguas`, `169 minerais (69 casam com o Anexo IV)` e os 2 avisos.
+Mais `python -m pytest research_pipeline/tests/test_vocab.py`, afirmando: 17 tipologias e as 6
+linhas de grupo excluídas; `tipologias["B4.2"].porte_pequeno is None` com os 2 avisos;
+`indice["granito"] == ("B3.4", "B3.5")`; `substancias_ambiguas` igual às **13** colisões medidas
+(snapshot congelado, para que mudança de vocabulário quebre alto); `len(minerais) == 169`;
 `read_dbf` devolve 31.858 linhas e as 12 colunas esperadas.
 
 **Não faz ainda:** nenhuma *resolução* substância→tipologia (patch 9). Aqui só se constrói o índice
@@ -517,9 +585,13 @@ nas linhas genuinamente ambíguas.
 **Arquivos**
 - **criar** `research_pipeline/prompts/normalize_v1.md` — recebe só os `*_raw` e, por linha, o
   **top-5 de candidatos** (nunca as listas de 417/29, §7 final). A seção de desambiguação de
-  substância é **renderizada em tempo de execução a partir de `SUBSTANCIAS_AMBIGUAS`** (patch 4),
-  para que as dez colisões recebam a instrução por *uso*, não só Granito, com "na dúvida devolva
-  `null` com justificativa".
+  substância é **renderizada em tempo de execução a partir de `substancias_ambiguas()`** (patch 4),
+  para que as **treze** colisões recebam a instrução por *uso*, não só Granito, com "na dúvida
+  devolva `null` com justificativa". Ver o patch 4: são 13 e não as 10 do §6.3, e o uso declarado
+  na planilha não cobre todas — 6 têm cauda de uso dos **dois** lados (`granito`, `sienito`,
+  `quartzo`, `quartzito`, `feldspato`, `moscovita`), 4 só de um (`calcita`, `caulinita`, `cianita`,
+  `turmalina`) e **3 de nenhum** (`caulim`, `diatomita`, `selenio`). Nessas três o prompt não tem
+  uso a oferecer e só resta o `null`.
 - **criar** `research_pipeline/nodes/normalize.py`
   - passe determinístico: `RefIndex.match_municipio/match_consorcio` em toda linha;
     `substancia_raw` dobrada contra `build_substancia_index` (acerto único resolve sem LLM);
@@ -728,7 +800,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | 1 | Andaime: deps, `.env`, pytest ✅ | não | `pip install -r requirements.txt` + imports |
 | 2 | `common/`: `fold()` + `read_dbf()` ✅ | não | `pytest common/tests` (paridade 417) |
 | 3 | Carregador + **AC8** ✅ | não | `python -m research_pipeline.refs` |
-| 4 | Vocabulários + 2 armadilhas XLSX | não | `pytest test_vocab.py` |
+| 4 | Vocabulários + 2 armadilhas XLSX ✅ | não | `python -m research_pipeline.vocab` |
 | 5 | Aliases mecânicos | não | `python -m research_pipeline.aliases` |
 | 6 | Matcher determinístico | não | `pytest test_matcher.py` |
 | 7 | Schemas + validador | não | `pytest test_validate.py` |

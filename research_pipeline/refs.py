@@ -1,4 +1,10 @@
-"""Carregador das tabelas canônicas — 417 municípios e 29 consórcios — com invariantes.
+"""Carregador das referências canônicas — 417 municípios, 29 consórcios e os vocabulários.
+
+As tipologias e os minerais moram em `vocab.py` e são carregados **aqui**, junto das tabelas, em
+vez de sob demanda: o AC8 é *falhar antes de gastar*, e um `BA.dbf` truncado descoberto no nó
+`normalize` já custou o relatório. Medido: DBF 0,29 s, XLSX 0,05 s, tabelas 0,011 s — 0,35 s de
+pré-voo antes de uma tarefa de US$ 3.
+
 
 Este módulo **é** o critério de aceite 8: *falhar alto antes de qualquer gasto*. `run.py`
 (patch 11) chama `load_reference_data()` como primeira instrução de `main()`, antes de qualquer
@@ -35,9 +41,22 @@ from typing import Any
 
 import yaml
 
-from research_pipeline import REPO_ROOT
+from research_pipeline import MAPPING_PATH, REPO_ROOT
+from research_pipeline.errors import RefLoadError
+from research_pipeline.vocab import (
+    Tipologia,
+    build_substancia_index,
+    load_minerais,
+    load_tipologias,
+)
 
-MAPPING_PATH = REPO_ROOT / "research_pipeline" / "config" / "ref_mapping.yaml"
+__all__ = [
+    "Consorcio",
+    "Municipio",
+    "RefLoadError",
+    "ReferenceData",
+    "load_reference_data",
+]
 
 STATUS_HABILITADO = "habilitado"
 STATUS_NAO_HABILITADO = "nao_habilitado"
@@ -50,10 +69,6 @@ NIVEIS_VALIDOS = {"1": 1, "2": 2, "3": 3}
 
 _LIMITE_PROBLEMAS = 20
 """Quantos problemas de invariante entram na mensagem antes de virar contagem."""
-
-
-class RefLoadError(Exception):
-    """Referência canônica inválida. Sempre nomeia arquivo e registro."""
 
 
 @dataclass(frozen=True, slots=True)
@@ -92,16 +107,24 @@ class Consorcio:
 class ReferenceData:
     """Tudo que o pipeline precisa saber antes de gastar o primeiro centavo.
 
-    `tipologias` e `minerais` ficam vazios até o patch 4. `avisos` fica vazio neste patch: aqui
-    toda anomalia é erro. Os avisos do vocabulário (porte ausente em B4.2) chegam com ele.
+    Os dois índices existem porque o patch 9 faz **duas buscas distintas** e não uma:
+    `substancia_raw` contra `indice_substancias` (Anexo IV, 128 chaves) e `mineral` contra
+    `indice_minerais` (SIGMINE, 169). Medido: só 69 dos 169 existem nos dois — o SIGMINE nomeia
+    minério e rocha, o Anexo IV nomeia elemento e mineral. Colapsá-los num índice só perderia a
+    distinção entre "não achei a tipologia" e "não achei o mineral".
+
+    `avisos` deixa de ser vazio aqui: são os do vocabulário (porte ausente em B4.2). Nas
+    referências canônicas toda anomalia continua sendo erro, não aviso.
     """
 
     municipios: dict[str, Municipio]
     consorcios: dict[str, Consorcio]
     data_consulta: str
     fonte_urls: tuple[str, ...]
-    tipologias: dict[str, Any] = field(default_factory=dict)
+    tipologias: dict[str, Tipologia] = field(default_factory=dict)
     minerais: tuple[str, ...] = ()
+    indice_substancias: dict[str, tuple[str, ...]] = field(default_factory=dict)
+    indice_minerais: dict[str, str] = field(default_factory=dict)
     avisos: tuple[str, ...] = ()
 
 
@@ -126,7 +149,7 @@ def _load_mapping(mapping_path: Path) -> dict[str, Any]:
         raise RefLoadError(f"{mapping_path}: YAML inválido ({erro})") from erro
     if not isinstance(conteudo, dict):
         raise RefLoadError(f"{mapping_path}: esperado mapeamento no topo, veio {type(conteudo).__name__}")
-    for bloco in ("municipios", "consorcios", "invariantes"):
+    for bloco in ("municipios", "consorcios", "tipologias", "minerais", "invariantes"):
         if bloco not in conteudo:
             raise RefLoadError(f"{mapping_path}: bloco {bloco!r} ausente")
     return conteudo
@@ -425,6 +448,11 @@ def load_reference_data(
 
     _check_invariants(municipios, consorcios, membros_brutos, mapeamento["invariantes"])
 
+    # Vocabulários depois das referências, e não em paralelo: as contagens 417/29/386 são o que
+    # mais provavelmente muda entre coletas, e falhar nelas primeiro dá a mensagem mais útil.
+    tipologias, avisos = load_tipologias(mapeamento["tipologias"], root)
+    minerais, indice_minerais = load_minerais(mapeamento["minerais"], root)
+
     fonte_urls = {m.fonte_url for m in municipios.values()}
     fonte_urls |= {url for url in (meta_m.get("fonte_url"), meta_c.get("fonte_url")) if url}
 
@@ -433,6 +461,11 @@ def load_reference_data(
         consorcios=consorcios,
         data_consulta=_resolver_data_consulta(municipios, meta_c),
         fonte_urls=tuple(sorted(fonte_urls)),
+        tipologias=tipologias,
+        minerais=minerais,
+        indice_substancias=build_substancia_index(tipologias),
+        indice_minerais=indice_minerais,
+        avisos=avisos,
     )
 
 
@@ -447,7 +480,14 @@ if __name__ == "__main__":
     print(f"{len(refs.municipios)} municípios ({aptos} aptos / {len(refs.municipios) - aptos} não aptos)")
     print(f"{len(refs.consorcios)} consórcios (soma={soma}, membros distintos={len(membros)})")
     print(f"{sem_consorcio_aptos} habilitados sem consórcio")
+    ambiguas = sum(1 for codigos in refs.indice_substancias.values() if len(codigos) > 1)
     print(f"data_consulta: {refs.data_consulta}")
+    print(
+        f"{len(refs.tipologias)} tipologias · {len(refs.indice_substancias)} chaves de substância "
+        f"({ambiguas} ambíguas) · {len(refs.minerais)} minerais"
+    )
     for url in refs.fonte_urls:
         print(f"fonte: {url}")
+    for aviso in refs.avisos:
+        print(f"aviso: {aviso}")
     print("invariantes: OK")
