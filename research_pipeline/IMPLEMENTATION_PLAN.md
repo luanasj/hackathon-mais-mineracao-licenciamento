@@ -98,10 +98,34 @@ Correções verificadas contra os arquivos reais:
 
 ---
 
-## Patch 1 — Andaime: dependências, pacotes, `.env`, pytest
+## Patch 1 — Andaime: dependências, pacotes, `.env`, pytest ✅ feito
 
 **Objetivo:** fazer `python -m research_pipeline...` e `pytest` funcionarem, com segredo tratado
 antes de existir chave.
+
+**Feito**, com três desvios do que estava escrito abaixo:
+
+1. `.gitignore` recebeu `.env` + `.env.*` + `!.env.example` em vez de listar `.env.local` literal —
+   pega `.env.production`, `.env.gemini` e o que mais aparecer, e a negação mantém o template
+   rastreado. Verificado com `git check-ignore -v`.
+2. `research_pipeline/tools/__init__.py` entrou junto com os irmãos: o patch 8 chama
+   `python -m research_pipeline.tools.check_golden`, e criar o pacote agora é mais barato que um
+   commit de andaime avulso depois.
+3. **`PyYAML` não era "usado implicitamente"** — nenhum `.py` do repo importa `yaml` hoje; ele só
+   estava instalado no ambiente por acaso. Passa a ser dependência de verdade no patch 3, que lê
+   `config/ref_mapping.yaml`. Declarado de todo modo.
+
+Resolução conferida em Python 3.12.1, sem conflito: `langgraph 1.2.10`,
+`langgraph-checkpoint-sqlite 3.1.1`, `langchain-core 1.5.3`, `langchain-openai 1.4.1`,
+`google-genai 2.16.0`, `pydantic 2.13.4`, `rapidfuzz 3.14.5`, `openpyxl 3.1.5`,
+`python-dotenv 1.2.2`, `pytest 9.1.1`. `SqliteSaver.from_conn_string` existe nessa versão —
+checagem adiantada e grátis do que o patch 11 precisa.
+
+Os `__init__.py` de `tests/` são carga estrutural, não formalidade: no `importmode=prepend`, o
+pytest sobe do arquivo de teste enquanto achar `__init__.py` e insere no `sys.path` o primeiro
+diretório **sem** um. Com `common/tests/__init__.py` + `common/__init__.py` esse diretório é a raiz
+do repo — que é o que fará `import common.text` funcionar nos testes do patch 2 sem nenhum hack de
+`sys.path` como o de `scripts/collect_gac.py:60`.
 
 **Arquivos**
 - **modificar** `requirements.txt` — acrescentar bloco do pipeline abaixo do bloco de coleta (que
@@ -601,7 +625,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | # | Patch | Chave? | Verificação |
 |---|---|---|---|
 | 0 | Corrigir GOAL.md → v1.4 ✅ | não | revisão do diff |
-| 1 | Andaime: deps, `.env`, pytest | não | `pip install -r requirements.txt` + imports |
+| 1 | Andaime: deps, `.env`, pytest ✅ | não | `pip install -r requirements.txt` + imports |
 | 2 | `common/`: `fold()` + `read_dbf()` | não | `pytest common/tests` (paridade 417) |
 | 3 | Carregador + **AC8** | não | `python -m research_pipeline.refs` |
 | 4 | Vocabulários + 2 armadilhas XLSX | não | `pytest test_vocab.py` |

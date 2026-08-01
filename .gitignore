@@ -3,3 +3,13 @@ __pycache__/
 node_modules/
 dist/
 .DS_Store
+
+# Segredos — .env.* pega .env.local, .env.production e o que mais aparecer;
+# a negação mantém o template rastreado.
+.env
+.env.*
+!.env.example
+
+# Testes e artefatos de run (§9 do GOAL.md)
+.pytest_cache/
+research_pipeline/runs/
