@@ -1,0 +1,34 @@
+{
+  "resolucoes": [
+    {
+      "indice": 0,
+      "municipio_id": null,
+      "tipologia_codigo": "B3.4",
+      "justificativa": "Uso declarado 'britagem/agregados' corresponde ao uso de B3.4 (produção de agregados e beneficiamento associado/britamento)."
+    },
+    {
+      "indice": 2,
+      "municipio_id": null,
+      "tipologia_codigo": "B3.5",
+      "justificativa": "Uso declarado 'revestimento' corresponde exatamente ao uso de B3.5 (revestimento)."
+    },
+    {
+      "indice": 3,
+      "municipio_id": null,
+      "tipologia_codigo": "B3.4",
+      "justificativa": "Uso declarado 'britagem/agregados' corresponde ao uso de B3.4, mesma decisão da linha de Caturama."
+    },
+    {
+      "indice": 6,
+      "municipio_id": null,
+      "tipologia_codigo": null,
+      "justificativa": "'Quartzito' sem uso declarado no texto; ambíguo entre B3.4 (britagem/agregados) e B4.4 (uso industrial não especificado), não é possível decidir com segurança."
+    },
+    {
+      "indice": 8,
+      "municipio_id": null,
+      "tipologia_codigo": null,
+      "justificativa": "'Bacia do Paramirim (Região)' designa o território de atuação de um consórcio, não um dos 417 municípios; nenhum candidato da lista corresponde."
+    }
+  ]
+}

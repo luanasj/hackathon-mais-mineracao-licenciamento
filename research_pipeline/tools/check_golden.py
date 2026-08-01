@@ -7,8 +7,12 @@ checagem de regressão de integração — mais barata como comando manual
 roda a cada `pytest -q`. Sempre com `RP_LLM=fixture` (o default): nunca gasta e nunca precisa de
 chave.
 
-Registro `_NOS` é intencionalmente um dict nome→executor: o `normalize` do patch 9 entra como uma
-nova entrada, sem reescrever o dispatch nem o formato de saída.
+Registro `_NOS` é intencionalmente um dict nome→executor: `normalize` (patch 9) entrou como uma
+nova entrada, sem reescrever o dispatch nem o formato de saída. `_run_normalize` encadeia
+`_run_extract` em vez de ler o golden de `extract` do disco — o `licencas_brutas` que alimenta
+`normalize` é o que `extract` realmente produziu agora, não uma cópia congelada; se `extract`
+regredir, `check_golden normalize` também diverge, em vez de validar contra um `licencas_brutas`
+que já não é mais o que o nó anterior devolve.
 """
 
 from __future__ import annotations
@@ -19,10 +23,17 @@ import sys
 from pathlib import Path
 from typing import Any, Callable
 
+from research_pipeline.aliases import load_overrides
 from research_pipeline.llm import Structurer, get_structurer
+from research_pipeline.matcher import build_ref_index, load_matching_config
 from research_pipeline.nodes.extract import extract
+from research_pipeline.nodes.normalize import normalize
+from research_pipeline.refs import load_reference_data
 
 FIXTURES_DIR = Path(__file__).resolve().parent.parent / "tests" / "fixtures"
+
+_RUN_ID_SEMENTE = "2025_20260801T000000Z"
+"""Fixo, não `utcnow()`: o golden precisa do mesmo `data_consulta` toda vez que rodar."""
 
 
 def _run_extract(structurer: Structurer) -> tuple[dict[str, Any], Path]:
@@ -34,8 +45,34 @@ def _run_extract(structurer: Structurer) -> tuple[dict[str, Any], Path]:
     return resultado, golden
 
 
+def _run_normalize(structurer: Structurer) -> tuple[dict[str, Any], Path]:
+    extraido, _ = _run_extract(structurer)
+    refs = load_reference_data()
+    overrides = load_overrides()
+    matching_config = load_matching_config()
+    ref_index = build_ref_index(refs, overrides, matching_config)
+
+    state = {
+        "ano": 2025,
+        "run_id": _RUN_ID_SEMENTE,
+        "licencas_brutas": extraido["licencas_brutas"],
+    }
+    config = {
+        "configurable": {
+            "refs": refs,
+            "ref_index": ref_index,
+            "matching_config": matching_config,
+            "structurer": structurer,
+        }
+    }
+    resultado = normalize(state, config)
+    golden = FIXTURES_DIR / "normalizadas_2025_seed.golden.json"
+    return resultado, golden
+
+
 _NOS: dict[str, Callable[[Structurer], tuple[dict[str, Any], Path]]] = {
     "extract": _run_extract,
+    "normalize": _run_normalize,
 }
 
 
@@ -59,7 +96,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  esperado: {esperado_json[:1000]}", file=sys.stderr)
         return 1
 
-    total = len(resultado.get("licencas_brutas", []))
+    total = len(resultado.get("licencas_brutas") or resultado.get("licencas_normalizadas") or [])
     print(f"{no}: OK ({total} linhas, idêntico ao golden)")
     return 0
 

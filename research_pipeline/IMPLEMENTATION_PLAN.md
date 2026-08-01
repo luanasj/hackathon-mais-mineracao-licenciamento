@@ -722,7 +722,7 @@ verde.
 
 ---
 
-## Patch 9 — Nó `normalize`: núcleo determinístico + cruzamentos + avisos
+## Patch 9 — Nó `normalize`: núcleo determinístico + cruzamentos + avisos ✅ feito
 
 **Objetivo:** `LicencaBruta[]` → `LicencaNormalizada[]` usando o matcher do patch 6, com LLM só
 nas linhas genuinamente ambíguas.
@@ -766,6 +766,58 @@ linha de herança com `metodo="inferido" confianca<=0.5`; `consorcio_divergente`
 Mais um teste puro em `research_pipeline/tests/test_normalize_payload.py` (parte pura, decisão D):
 afirma que o payload enviado ao estruturador contém **menos de 20** dos 417 nomes dobrados —
 guarda mecânica contra reintroduzir a lista canônica no prompt.
+
+**Feito.** Medido contra o matcher (patch 6) e o vocabulário (patch 4) reais, quatro achados
+corrigem a prosa acima:
+
+1. **`"Caetite"` é `exato`, não `fuzzy` — o exemplo acima estava errado, do mesmo jeito que o
+   próprio patch 6 já tinha corrigido para si.** `fold()` remove acento dos dois lados, então
+   `"Caetite"` sem acento e `"Caetité"` oficial dobram para a mesma string. O plano acima repete o
+   erro que o patch 6 já registrou (`"Caetitte"`, erro de letra, é o exemplo real de fuzzy). Não
+   reaberto acima — corrigido aqui, mesmo padrão dos achados 1 do patch 3 e 4 do patch 4.
+2. **São 5 linhas na LLM, não 3.** `quartzito` é uma das 13 substâncias ambíguas do patch 4
+   (`B3.4`/`B4.4`, não contava no "10" do §6.3 original) e a linha de Santa Bárbara usa
+   exatamente essa palavra, sem uso declarado — vai para a LLM e volta `null` (ambíguo demais para
+   chutar). Somado às duas linhas de Granito-britagem (Caturama, Tremedal), à de
+   Granito-revestimento (Tremedal) e à de `"Bacia do Paramirim (Região)"`
+   (`municipio_match_metodo="nenhum"`), o lote é `{0, 2, 3, 6, 8}` — 5 de 11. O "3" do rascunho
+   contava só *substâncias distintas* (Granito, Bacia do Paramirim), não linhas.
+3. **`substancia_raw` casa em duas etapas, nunca uma.** `chave_substancia(texto inteiro)` primeiro
+   — necessário para as chaves compostas do SIGMINE (`"minério de ferro"` bate direto com
+   `"MINÉRIO DE FERRO"`, e não bateria se cada palavra fosse tentada primeiro: `"ferro"` sozinho
+   também é chave válida, mas de um valor diferente). Só se a frase inteira não casar, tenta-se
+   palavra a palavra — é o que resolve `"Granito para britagem/agregados"` (a frase inteira não é
+   chave de nada; `"granito"` isolado é). A mesma função serve as duas buscas do §6.3 achado 4
+   (`indice_substancias`, Anexo IV; `indice_minerais`, SIGMINE), só trocando o dicionário.
+4. **Cruzamentos medidos, exatamente como a fixture semente (patch 8) foi desenhada para
+   exercitar:** herança em 5 linhas (Tremedal-indeterminado, Pintadas, Santa Bárbara, Caetité,
+   Aiquara — `metodo="inferido"`, `confianca=0.5`); `consorcio_divergente` 1× (Ruy Barbosa: o
+   relatório aponta `14618` Bacia do Paramirim, o cadastro do município é `10152` Circuito do
+   Diamante); `consorcio_inesperado` 1× (Baixa Grande: apto e sem consórcio cadastral, o relatório
+   atribui `29302` CIVALERG mesmo assim); `municipio_nao_resolvido` 1× (`"Bacia do Paramirim
+   (Região)"`, `0.58` abaixo do piso `0.60`).
+
+**Um desvio de escopo, não previsto na prosa acima:** `LicencaNormalizada.id` (a chave humana,
+`"2025-caturama-lau-01"`) precisou ser atribuído **aqui**, não em `nodes/emit.py` (patch 10).
+`validate_licencas` (patch 7) já exige `id` único por linha, e o patch 10 ainda não existe —
+adiar o slug para lá deixaria este nó incapaz de produzir `LicencaNormalizada` válida.
+`_slug_licenca` (privada de `normalize.py`) é a função que o `emit.py` do patch 10 vai
+reaproveitar; o slug não muda depois daqui, só ranking e manifesto são calculados lá. Cai em
+`municipio_raw` quando `municipio_id` é `None` e usa sufixo `-2`/`-3` em colisão — mesma regra
+que o plano do patch 10 já descrevia para `slug_licenca`, só que implementada uma etapa antes.
+
+`data_consulta` de cada licença (a data do run, não a do snapshot do GAC) é lida de `state["ano"]`
++ `state["run_id"]` (formato `"{ano}_{AAAAMMDD}T..."`, o mesmo que `run.py` do patch 11 vai
+produzir); `check_golden.py` fixa um `run_id` sintético (`"2025_20260801T000000Z"`) para que o
+golden seja estável entre execuções.
+
+`check_golden.py` ganhou `_run_normalize`, que **encadeia** `_run_extract` em vez de ler o golden
+de `extract` do disco — se `extract` regredir, `check_golden normalize` diverge também, em vez de
+validar contra um `licencas_brutas` que já não é mais o que o nó anterior devolve.
+
+3 testes novos (`test_normalize_payload.py`), **243 no total**, suíte inteira verde.
+`RP_LLM=fixture python -m research_pipeline.tools.check_golden extract normalize` →
+`extract: OK (11 linhas, idêntico ao golden)` e `normalize: OK (11 linhas, idêntico ao golden)`.
 
 ---
 
@@ -950,7 +1002,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | 6 | Matcher determinístico ✅ | não | `pytest test_matcher.py` |
 | 7 | Schemas + validador ✅ | não | `pytest test_validate.py` |
 | 8 | Estruturador fixture + `extract` + **fixture semente** ✅ | não | `check_golden extract` |
-| 9 | `normalize` + cruzamentos | não | `check_golden normalize` |
+| 9 | `normalize` + cruzamentos ✅ | não | `check_golden normalize` |
 | 10 | Ranking + manifesto | não | `pytest test_emit.py` |
 | 11 | **Grafo + CLI + checkpointer + `--resume`/`--report`** | não | run offline completo, AC1–AC6+AC8 |
 | 12 | `deep_research_v1.md` | não | `pytest test_prompt_deep_research.py` |
