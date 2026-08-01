@@ -80,10 +80,10 @@ export default function MapaProcesso({ geometria, nivel, altura = 340, ref }: Ma
     // @ts-expect-error debug temporário
     window.__mapa = map
     // @ts-expect-error debug temporário
-    window.__erroLoad = null
+    window.__erros = []
     map.on('error', (e) => {
       // @ts-expect-error debug temporário
-      window.__erroLoad = String(e.error?.message ?? e.error ?? e)
+      window.__erros.push({ fonte: e.sourceId ?? '(mapa)', msg: String(e.error?.message ?? e.error), pilha: String(e.error?.stack ?? '').split('\n').slice(0,3).join(' | ') })
     })
     map.on('load', () => {
       try {
