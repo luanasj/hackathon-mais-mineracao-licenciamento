@@ -13,3 +13,6 @@ frontend/public/data/*.raw.geojson
 
 # sistema
 .DS_Store
+
+# cache do Vite
+.vite/

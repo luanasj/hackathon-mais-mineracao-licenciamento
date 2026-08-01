@@ -2,14 +2,14 @@
 """
 Relevo — baixa tiles terrain-rgb (encoding `terrarium`) do dataset público
 "Terrain Tiles" (s3://elevation-tiles-prod, AWS Open Data, CC0 — mistura
-SRTM/GMTED) e grava em `app/public/data/terrain/{z}/{x}/{y}.png`.
+SRTM/GMTED) e grava em `frontend/public/data/terrain/{z}/{x}/{y}.png`.
 
     python pipeline/relevo.py
 
 Único passo do pipeline que sai à rede: `prep.py` trabalha só com os brutos
 versionados em `data_source/`. Aqui não há bruto equivalente versionável — um
 DEM global não cabe no repo — então os tiles baixados são o próprio artefato,
-committed como os demais dados de `app/public/data/`. Idempotente: tile já
+committed como os demais dados de `frontend/public/data/`. Idempotente: tile já
 presente no disco não é baixado de novo.
 
 Depois de baixados, o app consome só os arquivos locais — nenhuma chamada de
@@ -27,10 +27,10 @@ import urllib.request
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
-SAIDA = RAIZ / "app" / "public" / "data" / "terrain"
+SAIDA = RAIZ / "frontend" / "public" / "data" / "terrain"
 BASE_URL = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium"
 
-# bbox dos 10 municípios da amostra (extraído de app/public/data/municipios10.geojson)
+# bbox dos 10 municípios da amostra (extraído de frontend/public/data/municipios10.geojson)
 MINX, MINY, MAXX, MAXY = -45.008441, -14.5092, -38.137166, -9.740468
 ZOOM_MIN, ZOOM_MAX = 4, 9
 

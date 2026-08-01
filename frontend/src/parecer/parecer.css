@@ -155,6 +155,37 @@ input[type='range']::-moz-range-thumb {
   background: #37472a;
 }
 
+.pc-opcao:hover {
+  background: #f4f1e8;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* O MapLibre injeta o próprio canvas; herdar a fonte do documento evita que o
+   controle de atribuição apareça com a fonte do sistema no meio da página. */
+.maplibregl-map {
+  font: inherit;
+}
+
+/* Exportar parecer em PDF = imprimir. Sai só a coluna do parecer, sem os
+   controles de entrada, que não fazem sentido no papel. */
+@media print {
+  .pc-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pc-nao-imprime,
+  .pc-grid > div:first-child {
+    display: none;
+  }
+
+  .pc-col-right {
+    border: none;
+  }
+}
+
 .pc-lupa:hover {
   background: #ede8dc;
 }

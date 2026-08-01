@@ -20,7 +20,7 @@ acesso à informação que falta, em vez de chutar.
 | **A — SIGMINE e processo ANM** | ✅ P0 completo (A.1–A.8) · 🚧 A.9 (P1), A.10 (P2) |
 | **B — Formulário** | ✅ P0 completo (B.1–B.8) |
 | **C — Base de regras dos 10 municípios** | 🚧 caminho crítico, trabalho documental |
-| **D — Motor de match** | ⚠️ stub provisório em `app/src/lib/motor.ts` — assinatura final, corpo descartável (D.2–D.6 já utilizáveis) |
+| **D — Motor de match** | ⚠️ stub provisório em `frontend/src/lib/motor.ts` — assinatura final, corpo descartável (D.2–D.6 já utilizáveis) |
 | **E — Análise comparativa** | 🚧 não iniciado |
 | **F — Shell e interface** | 🚧 tela provisória de banco de provas |
 | **G — Integração com o gerador LAI** | 🚧 não iniciado |
@@ -35,10 +35,10 @@ de execução: os dados geoespaciais já vêm processados no repositório.
 
 ```bash
 # aplicação
-cd app
+cd frontend
 npm install
 npm run dev        # http://localhost:5173
-npm run build      # bundle estático em app/dist/, servível de qualquer diretório
+npm run build      # bundle estático em frontend/dist/, servível de qualquer diretório
 ```
 
 ```bash
@@ -49,7 +49,7 @@ python3 -m venv .venv
 ```
 
 `prep.py` é idempotente: lê exclusivamente os brutos de `data_source/` e
-reescreve tudo o que está em `app/public/data/`. Para mudar o recorte de
+reescreve tudo o que está em `frontend/public/data/`. Para mudar o recorte de
 municípios, edite `pipeline/municipios.py` e rode de novo — nada mais muda.
 
 ---
@@ -87,7 +87,7 @@ pipeline/
   municipios.py                   o recorte da amostra — única fonte da lista
   prep.py                         A.2 · A.3 · A.4 · A.5 · A.7
   requirements.txt
-app/
+frontend/
   public/data/                    artefatos gerados, consumidos em runtime
   src/lib/schemas.ts              ⚠️ CONTRATO CONGELADO (0.2)
   src/lib/processos.ts            índice e normalização de busca (A.5)
@@ -99,7 +99,8 @@ app/
   src/lib/vocabulario.ts          fases ANM e substâncias do recorte (B.2/B.3)
   src/state/formulario.tsx        estado global único (B.6)
   src/data/fixtures.ts            dado provisório dos 4 schemas (0.3)
-  src/components/                 interface
+  src/parecer/                    a tela — cabeçalho de veredito, mapa,
+                                  caracterização e painel do parecer (F)
 documentation/BACKLOG.md        o plano
 ```
 
@@ -167,7 +168,7 @@ documentation/BACKLOG.md        o plano
 - A malha municipal é simplificada a 8% (Visvalingam, com preservação de
   topologia) para caber no orçamento de 300 KB. As poligonais dos processos
   **não** são simplificadas.
-- Os dados em `app/src/data/fixtures.ts` são **provisórios e não conferidos**.
+- Os dados em `frontend/src/data/fixtures.ts` são **provisórios e não conferidos**.
   Estão marcados com a constante `FIXTURE` e devem sumir antes do congelamento.
 - 🚧 Fundamentos ainda não conferidos contra a fonte primária aparecem marcados
   como pendentes na interface (C.6).

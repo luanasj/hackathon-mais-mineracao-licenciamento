@@ -1,7 +1,13 @@
+import { ProvedorFormulario } from '@/state/formulario'
+
 import ParecerCompetencia from './parecer/ParecerCompetencia'
 
 function App() {
-  return <ParecerCompetencia />
+  return (
+    <ProvedorFormulario>
+      <ParecerCompetencia />
+    </ProvedorFormulario>
+  )
 }
 
 export default App

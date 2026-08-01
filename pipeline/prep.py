@@ -5,7 +5,7 @@ ESCOPO 0.4 — pipeline de pré-processamento geoespacial.
     python pipeline/prep.py
 
 Regenera, a partir exclusivamente dos brutos versionados em `data_source/`,
-todos os artefatos que a aplicação consome em `app/public/data/`. Idempotente:
+todos os artefatos que a aplicação consome em `frontend/public/data/`. Idempotente:
 rodar duas vezes produz byte a byte o mesmo resultado.
 
 Cobre as tasks:
@@ -60,7 +60,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 BRUTOS = RAIZ / "data_source"
 SIGMINE_SHP = BRUTOS / "BA-shapefile" / "BA.shp"
 MALHA_SHP = BRUTOS / "Malha municipal IBGE-BA" / "BA_Municipios_2025.shp"
-SAIDA = RAIZ / "app" / "public" / "data"
+SAIDA = RAIZ / "frontend" / "public" / "data"
 
 # SIRGAS 2000 / Albers cônica equivalente para o Brasil (parâmetros IBGE).
 # Não há código EPSG oficial para esta projeção; a string PROJ é o contrato.
