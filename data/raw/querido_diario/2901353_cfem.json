@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 16,
+  "gazettes": [
+    {
+      "territory_id": "2901353",
+      "date": "2024-12-27",
+      "scraped_at": "2025-01-29T14:29:22.423317",
+      "url": "https://data.queridodiario.ok.org.br/2901353/2024-12-27/00b2853c71a0bc867aac23eb3d96a5b9a8f36bfd.pdf",
+      "territory_name": "Andorinha",
+      "state_code": "BA",
+      "excerpts": [
+        "463,00 816.887,40\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            299.243,10 248.469,00 324.810,20 252.790,20 266.834,10 274.756,30 259.992,20 304.644,60 3.601.000,00308.245,60 317.968,30118.833,00 624.413,40\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            299.243,10 248.469,00 324.810,20 252.790,20 266.834,10 274.756,30 259.992,20 304.644,60 3.601.000"
+      ],
+      "edition": "5774",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901353/2024-12-27/00b2853c71a0bc867aac23eb3d96a5b9a8f36bfd.txt"
+    },
+    {
+      "territory_id": "2901353",
+      "date": "2023-12-22",
+      "scraped_at": "2024-06-14T11:27:50.065402",
+      "url": "https://data.queridodiario.ok.org.br/2901353/2023-12-22/23add7484bba17e1b23cb24e5f7cfddab434fee6.pdf",
+      "territory_name": "Andorinha",
+      "state_code": "BA",
+      "excerpts": [
+        "CFEM282.540,00 234.600,00 306.680,00 238.680,00 251.940,00 259.420,00 245.480,00 287.640,00 3.400.000,00291.040,00 300.220,00112.200,00 589.560,00\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal282.540,00 234.600,00 306.680,00 238.680,00 251.940,00 259.420,00 245.480,00 287.640,00 3.400.000,00291.040,00 300.220,00112.200,00 589.560,00\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo82.518"
+      ],
+      "edition": "5101",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901353/2023-12-22/23add7484bba17e1b23cb24e5f7cfddab434fee6.txt"
+    },
+    {
+      "territory_id": "2901353",
+      "date": "2013-11-20",
+      "scraped_at": "2024-06-14T10:14:03.717655",
+      "url": "https://data.queridodiario.ok.org.br/2901353/2013-11-20/46d47cd69fe0f4ca7c7dfec658289fc9c6e2b88a.pdf",
+      "territory_name": "Andorinha",
+      "state_code": "BA",
+      "excerpts": [
+        "provenientes da venda de editais; \n\nVIII - Doações de pessoas físicas ou jurídicas, públicas ou privadas, \nnacionais, estrangeiras ou multinacionais; \n\nIX - O repasse específico advindo da Compensação Financeira pela \nExploração de Recursos Minerais (CFEM) no município de \nAndorinha, correspondente a 1% (um por cento) do seu valor total \nmensal; \n \n\nX - Outros recursos eventuais \n\nParágrafo único - Os recursos do FMMA destinados a custear a \nPolítica Ambiental do Município, serão aplicados em: \n\nI -"
+      ],
+      "edition": "252",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901353/2013-11-20/46d47cd69fe0f4ca7c7dfec658289fc9c6e2b88a.txt"
+    },
+    {
+      "territory_id": "2901353",
+      "date": "2021-12-10",
+      "scraped_at": "2024-06-14T11:07:43.074333",
+      "url": "https://data.queridodiario.ok.org.br/2901353/2021-12-10/b9192f95eff9afe66d1931476bfc482c26003088.pdf",
+      "territory_name": "Andorinha",
+      "state_code": "BA",
+      "excerpts": [
+        "000,00   \n\n1.7.1.2.51.0.0.00.00.0\n0 \n\nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM\n\n2.946.000,00   \n\n1.7.1.2.51.0.1.00.00.0\n0 \n\nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n2.946.000,00   \n\n1.7.1.2.51.0.1.00.00.0\n0 \n\n   Cota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n422.946.000,00   \n\n1.7.1.2.52.0.0.00.00.0\n0 \n\nCota-parte da Compensação Financeira pela Produção de Petróleo823"
+      ],
+      "edition": "3534",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901353/2021-12-10/b9192f95eff9afe66d1931476bfc482c26003088.txt"
+    },
+    {
+      "territory_id": "2901353",
+      "date": "2022-12-22",
+      "scraped_at": "2024-06-14T11:07:51.906812",
+      "url": "https://data.queridodiario.ok.org.br/2901353/2022-12-22/9e00c27e0f00368be6133bc23da6306ab969ba48.pdf",
+      "territory_name": "Andorinha",
+      "state_code": "BA",
+      "excerpts": [
+        "Recursos Naturais2.542.000,00   \n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM1.647.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n1.647.000,00   \n\nPágina: 3 de 8\n\n\n\nQuinta-feira\n22 de Dezembro de 2022\n12 - Ano X - Nº 4335\n\nAndorinha\n\nCERTIFICAÇÃO DIGITAL: QZYYRDQ3QJCWQUI0MTC3MZ\nEsta edição encontra-se no site oficial deste ente.\n\nPREFEITURA MUNICIPAL DE  ANDORINHA"
+      ],
+      "edition": "4335",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901353/2022-12-22/9e00c27e0f00368be6133bc23da6306ab969ba48.txt"
+    },
+    {
+      "territory_id": "2901353",
+      "date": "2019-12-20",
+      "scraped_at": "2024-06-14T10:54:13.610540",
+      "url": "https://data.queridodiario.ok.org.br/2901353/2019-12-20/07edab75f5bc132abc6802a98ded9109c1e9869b.pdf",
+      "territory_name": "Andorinha",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferência da Compensação Financeira pela Exploração de Recursos Naturais 2.995.700,00\n1.7.1.8.02.2.0.00.00.00                Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 2.732.300,00\n1.7.1.8.02.2.1.00.00.00 9.2.42.042                  Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Princ 2.732.300,00\n1.7.1.8.02.6.0.00.00.00                Cota-Parte do Fundo Especial do Petróleo – FEP 263.400,00\n1.7.1.8.02.6.1.00.00.00 9.2.42.042                  Cota-Parte do"
+      ],
+      "edition": "2521",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901353/2019-12-20/07edab75f5bc132abc6802a98ded9109c1e9869b.txt"
+    },
+    {
+      "territory_id": "2901353",
+      "date": "2017-12-22",
+      "scraped_at": "2024-06-14T10:39:38.155644",
+      "url": "https://data.queridodiario.ok.org.br/2901353/2017-12-22/b2c25bde3fc9240a9d9c35a2038fac7e692ff5b4.pdf",
+      "territory_name": "Andorinha",
+      "state_code": "BA",
+      "excerpts": [
+        "01.5.1.00.00 0\nTransferência da Compensação Financeira pela Exploração de Recursos Naturais   2.088.000,00     1.7.1.8.02.0.0.00.00  \nCota-parte da Compensação Financeira de Recursos Minerais - CFEM  1.957.000,00      1.7.1.8.02.2.0.00.00  \n  Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal - ROYALTIES/ 1.957.000,00 1.957.000,00      1.7.1.8.02.2.1.00.00 42\nCota-Parte do Fundo Especial do Petróleo – FEP  131.000,00      1.7.1.8.02.6.0.00.00  \n  Cota-Parte do Fundo Especial"
+      ],
+      "edition": "1611",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901353/2017-12-22/b2c25bde3fc9240a9d9c35a2038fac7e692ff5b4.txt"
+    },
+    {
+      "territory_id": "2901353",
+      "date": "2022-12-29",
+      "scraped_at": "2024-06-14T11:07:51.867853",
+      "url": "https://data.queridodiario.ok.org.br/2901353/2022-12-29/fb1d8ede114cad29643cf28b1fd72726d688a8da.pdf",
+      "territory_name": "Andorinha",
+      "state_code": "BA",
+      "excerpts": [
+        "- CFEM136.865,70 113.643,00 148.559,40 115.619,40 122.042,70 125.666,10 118.913,40 139.336,20 1.647.000,00140.983,20 145.430,1054.351,00 285.589,80\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal136.865,70 113.643,00 148.559,40 115.619,40 122.042,70 125.666,10 118.913,40 139.336,20 1.647.000,00140.983,20 145.430,1054.351,00 285.589,80\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo52.851,60"
+      ],
+      "edition": "4353",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901353/2022-12-29/fb1d8ede114cad29643cf28b1fd72726d688a8da.txt"
+    },
+    {
+      "territory_id": "2901353",
+      "date": "2018-12-18",
+      "scraped_at": "2024-06-14T10:39:45.689294",
+      "url": "https://data.queridodiario.ok.org.br/2901353/2018-12-18/e8c8a3fe113772cd89aca61e09e14f6e1fc26152.pdf",
+      "territory_name": "Andorinha",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferência da Compensação Financeira pela Exploração de Recursos Naturais 3.307.900,00\n1.7.1.8.02.2.0.00.00.00                Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 3.100.000,00\n1.7.1.8.02.2.1.00.00.00 9.2.42.042                  Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Princ 3.100.000,00\n1.7.1.8.02.6.0.00.00.00                Cota-Parte do Fundo Especial do Petróleo – FEP 207.900,00\n1.7.1.8.02.6.1.00.00.00 9.2.42.042                  Cota-Parte do"
+      ],
+      "edition": "2085",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901353/2018-12-18/e8c8a3fe113772cd89aca61e09e14f6e1fc26152.txt"
+    },
+    {
+      "territory_id": "2901353",
+      "date": "2020-12-17",
+      "scraped_at": "2024-06-14T10:54:19.979228",
+      "url": "https://data.queridodiario.ok.org.br/2901353/2020-12-17/373de67243603018c0b694d4653b32d966ad8ce2.pdf",
+      "territory_name": "Andorinha",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferência da Compensação Financeira pela Exploração de Recursos Naturais 2.880.600,00\n\n1.7.1.8.02.2.0.00.00.00                Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 2.652.100,00\n\n1.7.1.8.02.2.1.00.00.00 9.2.42.042                  Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Princ 2.652.100,00\n\n1.7.1.8.02.6.0.00.00.00                Cota-Parte do Fundo Especial do Petróleo – FEP 228.500,00\n\n1.7.1.8.02.6.1.00.00.00 9.2.42.042                  Cota-Parte"
+      ],
+      "edition": "2959",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901353/2020-12-17/373de67243603018c0b694d4653b32d966ad8ce2.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2901353",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2901353",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

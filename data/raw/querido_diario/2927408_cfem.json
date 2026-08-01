@@ -1,0 +1,148 @@
+{
+  "total_gazettes": 38,
+  "gazettes": [
+    {
+      "territory_id": "2927408",
+      "date": "2016-01-29",
+      "scraped_at": "2020-11-26T19:10:21.023302",
+      "url": "https://data.queridodiario.ok.org.br/2927408/2016-01-29/6f4d015d0a9f683ca9f670442aab4a5ffe7385f3.pdf",
+      "territory_name": "Salvador",
+      "state_code": "BA",
+      "excerpts": [
+        "4.532.783,50            1.345.339,55        -                     -                        -                        3.187.443,95                    -                            -                               \nRoyalties/ FEP (Fundo Esp. Petróleo)/ CFEM (Comp. Financ. Expl. Rec. Minerais) 8.262.326,12            27.393,06             809.679,47         -                        -                        7.425.253,59                    4.279.073,11            -                               \nConvênio"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927408/2016-01-29/6f4d015d0a9f683ca9f670442aab4a5ffe7385f3.txt"
+    },
+    {
+      "territory_id": "2927408",
+      "date": "2015-07-23",
+      "scraped_at": "2020-11-26T19:06:40.602065",
+      "url": "https://data.queridodiario.ok.org.br/2927408/2015-07-23/5fe43f787950dab0717c9512df92f747edcfa987.pdf",
+      "territory_name": "Salvador",
+      "state_code": "BA",
+      "excerpts": [
+        "                 4.263.089,01          (1.516.939,25)            \nTransferência do FIES (Fundo de Investimento Econômico Social) 6.078.037,23                   152.303,82             5.925.733,41              \nRoyalties/ FEP (Fundo Esp. Petróleo)/ CFEM (Comp. Financ. Expl. Rec. Minerais) 12.053.117,00                 27.398,06               12.025.718,94            \nConvênio de Entidades da Administração Indireta 2.143.918,44                   33.642,55               2.110.275,89              \nRecursos"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927408/2015-07-23/5fe43f787950dab0717c9512df92f747edcfa987.txt"
+    },
+    {
+      "territory_id": "2927408",
+      "date": "2014-01-10",
+      "scraped_at": "2020-11-26T18:54:26.006234",
+      "url": "https://data.queridodiario.ok.org.br/2927408/2014-01-10/793d1698fe2ab994f6544ea0dd00545997ca719f.pdf",
+      "territory_name": "Salvador",
+      "state_code": "BA",
+      "excerpts": [
+        "Investimento em Renda \nFixa\n\n257.000\n\n1.3.2.5.05.00 Remun. de Depósitos de Recursos \nVinculados\n\n31.606.000\n\n1.3.2.5.05.01 FUNDEB 607.000\n\n1.3.2.5.05.02 FMS 10.984.000\n\n1.3.2.5.05.03 Royalties 258.000\n\n1.3.2.5.05.05 FUNCIP 1.250.000\n\n1.3.2.5.05.10 CFEM 48.000\n\n1.3.2.5.05.11 FIES 431.000\n\n1.3.2.5.05.12 FMAS 924.000\n\n1.3.2.5.05.99 Outros Rec. Vinculados 17.104.000\n\n1.3.2.5.06.00 Remun. de Depósitos de Recursos não \nVinculados\n\n16.278.000\n\n1.3.2.5.06.99 Outros Recursos não Vinculados 16.278.000\n\nPMS"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927408/2014-01-10/793d1698fe2ab994f6544ea0dd00545997ca719f.txt"
+    },
+    {
+      "territory_id": "2927408",
+      "date": "2016-02-25",
+      "scraped_at": "2020-11-26T19:09:55.528409",
+      "url": "https://data.queridodiario.ok.org.br/2927408/2016-02-25/5d74691dffa8e79f29d4a99e82370fb1d4531a31.pdf",
+      "territory_name": "Salvador",
+      "state_code": "BA",
+      "excerpts": [
+        "Social) 4.532.783,50            1.345.339,55        -                     -                        10.799,19           3.176.644,76                    -                            -                               \nRoyalties/ FEP (Fundo Esp. Petróleo)/ CFEM (Comp. Financ. Expl. Rec. Minerais) 8.262.326,12            27.393,06             809.679,47         -                        -                     7.425.253,59                    4.279.073,11            -                               \nConvênio de"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927408/2016-02-25/5d74691dffa8e79f29d4a99e82370fb1d4531a31.txt"
+    },
+    {
+      "territory_id": "2927408",
+      "date": "2024-12-30",
+      "scraped_at": "2024-12-31T02:37:25.773380",
+      "url": "https://data.queridodiario.ok.org.br/2927408/2024-12-30/32abbe6c9304948528e05406a409cf7430bd9211.pdf",
+      "territory_name": "Salvador",
+      "state_code": "BA",
+      "excerpts": [
+        "Fonte 600.3 25.426.000\n\n- -1.3.2.1.01.1.1.25 FMS - Fonte 631.3 203.000\n\n- -1.3.2.1.01.1.1.26 Royalties - Fonte 720.1 1.643.000\n\n- -1.3.2.1.01.1.1.28 FUNDURBS - FONTE 799.1 912.000\n\n- -1.3.2.1.01.1.1.29 CIDE - Fonte 750.1 105.000\n\n- -1.3.2.1.01.1.1.30 CFEM - Fonte 720.1 75.000\n\n- -1.3.2.1.01.1.1.32 FMAS - Fonte 660.3 2.755.000\n\n- -1.3.2.1.01.1.1.33 Fundo Municipal da Pessoa Idosa - \n\nFMPI - Fonte 669.3\n\n1.531.000\n\n- -1.3.2.1.01.1.1.34 Salário de Educação - Fonte 550.3 2.358.000\n\n- -1.3.2.1.01.1.1.35"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927408/2024-12-30/32abbe6c9304948528e05406a409cf7430bd9211.txt"
+    },
+    {
+      "territory_id": "2927408",
+      "date": "2015-02-20",
+      "scraped_at": "2020-11-26T19:03:13.011826",
+      "url": "https://data.queridodiario.ok.org.br/2927408/2015-02-20/0ba9ce2857d6e9909b51386ce0e219df894462f5.pdf",
+      "territory_name": "Salvador",
+      "state_code": "BA",
+      "excerpts": [
+        "54                   639.453,92           2.149.187,62              \nTransferência do FIES (Fundo de Investimento Econômico Social) 6.078.037,23                   152.303,82           5.925.733,41              \nRoyalties/ FEP (Fundo Esp. Petróleo)/ CFEM (Comp. Financ. Expl. Rec. Minerais) 2.486.502,38                   27.393,06             2.459.109,32              \nConvênio de Entidades da Administração Indireta 2.105.486,06                   33.642,55             2.071.843,51              \nRecursos"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927408/2015-02-20/0ba9ce2857d6e9909b51386ce0e219df894462f5.txt"
+    },
+    {
+      "territory_id": "2927408",
+      "date": "2013-03-01",
+      "scraped_at": "2020-11-26T17:19:12.538122",
+      "url": "https://data.queridodiario.ok.org.br/2927408/2013-03-01/70e5e275980d011de7bcb474ca4d5fc15a18aff8.pdf",
+      "territory_name": "Salvador",
+      "state_code": "BA",
+      "excerpts": [
+        "Construir;\n\nV -   Fonte 15 -  FNDE;\n\nVI -  Fonte 17 -  COSIP;\n\nVII - Fonte 18 -  FUNDEB;\n\nVIII - Fonte 19 -  FUNDEB;\n\nIX -  Fonte 22 -  Convênios Educação;\n\nX -   Fonte 23 -  Convênios Saúde;\n\nXI -  Fonte 30 -  FIES; e\n\nXII - Fonte 42 -  Royalties / PEP / CFEM\n\nParágrafo único. Os pagamentos das despesas indicadas no art. 1º deverão observar \n\nos saldos financeiros disponíveis nas fontes e contas bancárias vinculadas, em 31 de dezembro \n\nde 2012.\n\nArt. 2º Ficam autorizados os pagamentos de despesas de exercícios"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927408/2013-03-01/70e5e275980d011de7bcb474ca4d5fc15a18aff8.txt"
+    },
+    {
+      "territory_id": "2927408",
+      "date": "2022-12-28",
+      "scraped_at": "2022-12-28T21:12:22.679313",
+      "url": "https://data.queridodiario.ok.org.br/2927408/2022-12-28/f0a4d87cc03422b42f2aa31068171bdd828b6e2c.pdf",
+      "territory_name": "Salvador",
+      "state_code": "BA",
+      "excerpts": [
+        "Fonte 600.3 15.637.000\n\n- -1.3.2.1.01.1.1.25 FMS - Fonte 631.3 130.000\n\n- -1.3.2.1.01.1.1.26 Royalties - Fonte 704.1 1.295.000\n\n- -1.3.2.1.01.1.1.28 FUNDURBS - FONTE 799.1 1.162.000\n\n- -1.3.2.1.01.1.1.29 CIDE - Fonte 750.1 180.000\n\n- -1.3.2.1.01.1.1.30 CFEM - Fonte 704.1 83.000\n\n- -1.3.2.1.01.1.1.32 FMAS - Fonte 660.3 1.588.000\n\n- -1.3.2.1.01.1.1.33 Fundo Municipal da Pessoa Idosa - FMPI - \n\nFonte 669.3\n\n118.000\n\n- -1.3.2.1.01.1.1.34 Salário de Educação - Fonte 550.3 1.653.000\n\n- -1.3.2.1.01.1.1.35 FNDE"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927408/2022-12-28/f0a4d87cc03422b42f2aa31068171bdd828b6e2c.txt"
+    },
+    {
+      "territory_id": "2927408",
+      "date": "2018-12-28",
+      "scraped_at": "2020-11-26T17:14:55.652882",
+      "url": "https://data.queridodiario.ok.org.br/2927408/2018-12-28/be7688620a508f93382a0fb54ba4204259bf4e88.pdf",
+      "territory_name": "Salvador",
+      "state_code": "BA",
+      "excerpts": [
+        "3.2.1.05.1.1.00 Remuneração de Depósitos de Recursos \n\nVinculados\n\n4.678.000\n\n- -1.3.2.1.05.1.1.06 Royalties - Fonte 42 341.000\n\n- -1.3.2.1.05.1.1.08 FUNDETUR - FONTE 13 1.060.000\n\n- -1.3.2.1.05.1.1.09 CIDE - Fonte 16 643.000\n\n- -1.3.2.1.05.1.1.10 CFEM - Fonte 42 297.000\n\n- -1.3.2.1.05.1.1.17 COSIP - FONTE 17 2.271.000\n\n- -1.3.2.1.05.1.1.18 FCBA - FONTE 10 66.000\n\n- -1.3.2.2.00.0.0.00 Dividendos 1.000\n\nPREFEITURA MUNICIPAL DE SALVADOR Resumo Geral da Receita\n\nAno Base: 2019 Recursos de Todas as Fontes"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927408/2018-12-28/be7688620a508f93382a0fb54ba4204259bf4e88.txt"
+    },
+    {
+      "territory_id": "2927408",
+      "date": "2021-12-29",
+      "scraped_at": "2021-12-30T08:29:54.726813",
+      "url": "https://data.queridodiario.ok.org.br/2927408/2021-12-29/ac3db260489f2de7106ee2dbd576b87f5ce1fe79.pdf",
+      "territory_name": "Salvador",
+      "state_code": "BA",
+      "excerpts": [
+        "01.1.1.24 FMS - Fonte 14 4.144.000\n\n- -1.3.2.1.01.1.1.25 FMS - Fonte 23 46.000\n\n- -1.3.2.1.01.1.1.26 Royalties - Fonte 42 400.000\n\n- -1.3.2.1.01.1.1.28 FUNDETUR - FONTE 13 222.000\n\n- -1.3.2.1.01.1.1.29 CIDE - Fonte 16 198.000\n\n- -1.3.2.1.01.1.1.30 CFEM - Fonte 42 39.000\n\n- -1.3.2.1.01.1.1.32 FMAS - Fonte 29 623.000\n\n- -1.3.2.1.01.1.1.33 Fundo Municipal da Pessoa Idosa - FMPI - \n\nFonte 11\n\n236.000\n\n- -1.3.2.1.01.1.1.34 Salário de Educação - Fonte 04 378.000\n\n- -1.3.2.1.01.1.1.36 FMAS - FONTE 28 2"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927408/2021-12-29/ac3db260489f2de7106ee2dbd576b87f5ce1fe79.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2927408",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2927408",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

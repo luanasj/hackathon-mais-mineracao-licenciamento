@@ -1,0 +1,144 @@
+{
+  "total_gazettes": 9,
+  "gazettes": [
+    {
+      "territory_id": "2928406",
+      "date": "2023-09-06",
+      "scraped_at": "2023-10-28T01:17:50.155193",
+      "url": "https://data.queridodiario.ok.org.br/2928406/2023-09-06/39f9c320b4ad65c3e2affddac20280158812206e.pdf",
+      "territory_name": "Santa Rita de Cássia",
+      "state_code": "BA",
+      "excerpts": [
+        "70 857.991,34 873.092,00 888.807,660,00\n\n1.3.2.1.01.0.1.00.01.00 Remuneração de Depósitos de Recursos Vinculados - Royalties 6.887,96 9.485,00 9.722,13 9.893,24 10.071,320,00\n\n1.3.2.1.01.0.1.00.01.01 Remuneração de Depósitos de Recursos Vinculados - CFEM 0,00 2.200,00 2.255,00 2.294,69 2.335,990,00\n\n1.3.2.1.01.0.1.00.01.02 Remuneração de Depósitos de Recursos Vinculados - FEP 0,00 2.200,00 2.255,00 2.294,69 2.335,990,00\n\n1.3.2.1.01.0.1.00.01.03 Remuneração de Depósitos de Recursos Vinculados - Cessão"
+      ],
+      "edition": "901",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928406/2023-09-06/39f9c320b4ad65c3e2affddac20280158812206e.txt"
+    },
+    {
+      "territory_id": "2928406",
+      "date": "2025-10-01",
+      "scraped_at": "2025-10-02T03:44:12.131297",
+      "url": "https://data.queridodiario.ok.org.br/2928406/2025-10-01/9f03325299a5d720b157f49bab97066102ace221.pdf",
+      "territory_name": "Santa Rita de Cássia",
+      "state_code": "BA",
+      "excerpts": [
+        "117,74 895.562,45 935.862,77623.783,17\n\n1.3.2.1.01.0.1.00.01.00 Remuneração de Depósitos de Recursos Vinculados - Royalties 1.425,16 2.648,84 2.751,88 2.861,96 2.990,75916,41\n\n1.3.2.1.01.0.1.00.01.01 Remuneração de Depósitos de Recursos Vinculados - CFEM 373,46 529,36 549,95 571,95 597,69209,88\n\n1.3.2.1.01.0.1.00.01.02 Remuneração de Depósitos de Recursos Vinculados - FEP 1.051,68 1.598,26 1.660,43 1.726,85 1.804,56706,48\n\n1.3.2.1.01.0.1.00.01.03 Remuneração de Depósitos de Recursos Vinculados - Cessão"
+      ],
+      "edition": "1.813",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928406/2025-10-01/9f03325299a5d720b157f49bab97066102ace221.txt"
+    },
+    {
+      "territory_id": "2928406",
+      "date": "2023-01-02",
+      "scraped_at": "2023-10-28T01:21:33.876861",
+      "url": "https://data.queridodiario.ok.org.br/2928406/2023-01-02/2561e533b078c3e1f93aa6f5d3c460faf89b0fac.pdf",
+      "territory_name": "Santa Rita de Cássia",
+      "state_code": "BA",
+      "excerpts": [
+        "064,70141.045,42105.553,87\n\n1.3.2.1.01.0.1.00.01.00  Remuneração de Depósitos de Recursos Vinculados - Royalties 1.561,23 1.463,54 1.503,37 2.162,58 9.485,001.598,221.196,06\n\n1.3.2.1.01.0.1.00.01.01  Remuneração de Depósitos de Recursos Vinculados - CFEM 362,12 339,46 348,70 501,60 2.200,00370,70277,42\n\n1.3.2.1.01.0.1.00.01.02  Remuneração de Depósitos de Recursos Vinculados - FEP 362,12 339,46 348,70 501,60 2.200,00370,70277,42\n\n1.3.2.1.01.0.1.00.01.03  Remuneração de Depósitos de Recursos Vinculados"
+      ],
+      "edition": "575",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928406/2023-01-02/2561e533b078c3e1f93aa6f5d3c460faf89b0fac.txt"
+    },
+    {
+      "territory_id": "2928406",
+      "date": "2023-12-28",
+      "scraped_at": "2023-12-28T21:59:30.298501",
+      "url": "https://data.queridodiario.ok.org.br/2928406/2023-12-28/7de51bc5a6e4eca935c1d11d4254bcaeb4df7099.pdf",
+      "territory_name": "Santa Rita de Cássia",
+      "state_code": "BA",
+      "excerpts": [
+        "0.1.00.01.00 Remuneração de Depósitos de Recursos Vinculados - Royalties2.602,00   \n\n1.3.2.1.01.0.1.00.01.01 Remuneração de Depósitos de Recursos Vinculados - CFEM520,00   \n\n1.3.2.1.01.0.1.00.01.01 Remuneração de Depósitos de Recursos Vinculados - CFEM              1708520,00   \n\n1.3.2.1.01.0.1.00.01.02 Remuneração de Depósitos de Recursos Vinculados - FEP1.570,00   \n\n1.3.2.1.01.0.1.00.01.02 Remuneração de Depósitos de Recursos Vinculados - FEP              17201.570,00   \n\n1.3.2.1.01.0.1.00.01.03"
+      ],
+      "edition": "1.055",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928406/2023-12-28/7de51bc5a6e4eca935c1d11d4254bcaeb4df7099.txt"
+    },
+    {
+      "territory_id": "2928406",
+      "date": "2024-12-27",
+      "scraped_at": "2024-12-28T01:52:01.361759",
+      "url": "https://data.queridodiario.ok.org.br/2928406/2024-12-27/a510fe06c6325aa5a769e7339fc6ccfc2071e7ff.pdf",
+      "territory_name": "Santa Rita de Cássia",
+      "state_code": "BA",
+      "excerpts": [
+        "0.1.00.01.00 Remuneração de Depósitos de Recursos Vinculados - Royalties2.648,84   \n\n1.3.2.1.01.0.1.00.01.01 Remuneração de Depósitos de Recursos Vinculados - CFEM529,36   \n\n1.3.2.1.01.0.1.00.01.01 Remuneração de Depósitos de Recursos Vinculados - CFEM              1708529,36   \n\n1.3.2.1.01.0.1.00.01.02 Remuneração de Depósitos de Recursos Vinculados - FEP1.598,26   \n\n1.3.2.1.01.0.1.00.01.02 Remuneração de Depósitos de Recursos Vinculados - FEP              17201.598,26   \n\n1.3.2.1.01.0.1.00.01.03"
+      ],
+      "edition": "1.458",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928406/2024-12-27/a510fe06c6325aa5a769e7339fc6ccfc2071e7ff.txt"
+    },
+    {
+      "territory_id": "2928406",
+      "date": "2024-01-02",
+      "scraped_at": "2024-01-02T22:14:32.446324",
+      "url": "https://data.queridodiario.ok.org.br/2928406/2024-01-02/114711accdd3fad88c199ee0880804cf06b671f7.pdf",
+      "territory_name": "Santa Rita de Cássia",
+      "state_code": "BA",
+      "excerpts": [
+        "363,77118.621,38138.256,38\n\n1.3.2.1.01.0.1.00.01.00  Remuneração de Depósitos de Recursos Vinculados - Royalties            362,19 488,66 383,01 544,36 2.602,00380,40443,38\n\n1.3.2.1.01.0.1.00.01.01  Remuneração de Depósitos de Recursos Vinculados - CFEM            72,38 97,66 76,54 108,79 520,0076,0288,61\n\n1.3.2.1.01.0.1.00.01.02  Remuneração de Depósitos de Recursos Vinculados - FEP            218,54 294,85 231,10 328,45 1.570,00229,53267,53\n\n1.3.2.1.01.0.1.00.01.03  Remuneração de Depósitos de Recursos"
+      ],
+      "edition": "1.066",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928406/2024-01-02/114711accdd3fad88c199ee0880804cf06b671f7.txt"
+    },
+    {
+      "territory_id": "2928406",
+      "date": "2025-12-29",
+      "scraped_at": "2026-01-02T14:29:31.046269",
+      "url": "s3://okbr-qd-migration//2928406/2025-12-29/b83183a76638172a5aee9bb0b27198896e4cf5c5.pdf",
+      "territory_name": "Santa Rita de Cássia",
+      "state_code": "BA",
+      "excerpts": [
+        "0.1.00.01.00 Remuneração de Depósitos de Recursos Vinculados - Royalties2.751,88   \n\n1.3.2.1.01.0.1.00.01.01 Remuneração de Depósitos de Recursos Vinculados - CFEM549,95   \n\n1.3.2.1.01.0.1.00.01.01 Remuneração de Depósitos de Recursos Vinculados - CFEM              1708549,95   \n\n1.3.2.1.01.0.1.00.01.02 Remuneração de Depósitos de Recursos Vinculados - FEP1.660,43   \n\n1.3.2.1.01.0.1.00.01.02 Remuneração de Depósitos de Recursos Vinculados - FEP              17201.660,43   \n\n1.3.2.1.01.0.1.00.01.03"
+      ],
+      "edition": "1.947",
+      "is_extra_edition": false,
+      "txt_url": "s3://okbr-qd-migration//2928406/2025-12-29/b83183a76638172a5aee9bb0b27198896e4cf5c5.txt"
+    },
+    {
+      "territory_id": "2928406",
+      "date": "2026-01-02",
+      "scraped_at": "2026-01-02T14:29:36.685966",
+      "url": "s3://okbr-qd-migration//2928406/2026-01-02/19150026b61287b782d6c7754db25383ebe6767d.pdf",
+      "territory_name": "Santa Rita de Cássia",
+      "state_code": "BA",
+      "excerpts": [
+        "801,41140.654,95140.827,12\n\n1.3.2.1.01.0.1.00.01.00  Remuneração de Depósitos de Recursos Vinculados - Royalties            332,71 439,48 534,15 545,68 2.751,88449,65450,21\n\n1.3.2.1.01.0.1.00.01.01  Remuneração de Depósitos de Recursos Vinculados - CFEM            66,49 87,83 106,75 109,05 549,9589,8689,97\n\n1.3.2.1.01.0.1.00.01.02  Remuneração de Depósitos de Recursos Vinculados - FEP            200,75 265,17 322,29 329,26 1.660,43271,31271,65\n\n1.3.2.1.01.0.1.00.01.03  Remuneração de Depósitos de"
+      ],
+      "edition": "1.954",
+      "is_extra_edition": false,
+      "txt_url": "s3://okbr-qd-migration//2928406/2026-01-02/19150026b61287b782d6c7754db25383ebe6767d.txt"
+    },
+    {
+      "territory_id": "2928406",
+      "date": "2025-11-21",
+      "scraped_at": "2025-11-22T02:10:57.607109",
+      "url": "https://data.queridodiario.ok.org.br/2928406/2025-11-21/2da548ee7324392c432a554c5d6b6c88ea2c8b85.pdf",
+      "territory_name": "Santa Rita de Cássia",
+      "state_code": "BA",
+      "excerpts": [
+        "278,10 267.810,62\n\n916,41 1.425,16 2.648,84 2.751,88 2.848,20Remuneração de Depósitos de Recursos Vinculados -\nRoyalties\n\n1.3.2.1.01.0.1.00.01.00 2.962,13 3.095,43\n\n209,88 373,46 529,36 549,95 569,20Remuneração de Depósitos de Recursos Vinculados -\nCFEM\n\n1.3.2.1.01.0.1.00.01.01 591,97 618,61\n\n706,48 1.051,68 1.598,26 1.660,43 1.718,55Remuneração de Depósitos de Recursos Vinculados -\nFEP\n\n1.3.2.1.01.0.1.00.01.02 1.787,29 1.867,72\n\n0,05 0,02 521,22 541,50 560,45Remuneração de Depósitos de Recursos Vinculados"
+      ],
+      "edition": "1.885",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928406/2025-11-21/2da548ee7324392c432a554c5d6b6c88ea2c8b85.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2928406",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2928406",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

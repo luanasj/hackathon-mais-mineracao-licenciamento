@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 11,
+  "gazettes": [
+    {
+      "territory_id": "2918902",
+      "date": "2021-12-20",
+      "scraped_at": "2023-10-29T00:02:07.667444",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2021-12-20/74b3d76164117eb90e0a6c6fddb2df74b18d66b9.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "de Recursos do Fundo Nacional de Assistência Social – FNAS 719.739,00 \n0130000 Transferências do Fundo de Investimento Econômico Social - FIES 1.731,55 \n\n0142000 \nRoyalties/Fundo Especial do Petróleo/Compensação Financeira Exploração \nde Recursos Minerais \n\n286.853,00 \n\n0144000 Cessão Onerosa - volumes excedentes do Pré-Sal 61.438,65 \n\n0190000 Operações de Crédito Internas 104.310,00 \n\n0192000 Alienações de Bens 104.310,00 \n\n0194000 Remuneração de Depósitos Bancários 5.194,65 \n\n0195000 Ação Judicial"
+      ],
+      "edition": "132",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2021-12-20/74b3d76164117eb90e0a6c6fddb2df74b18d66b9.txt"
+    },
+    {
+      "territory_id": "2918902",
+      "date": "2024-12-05",
+      "scraped_at": "2024-12-06T01:47:01.550783",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2024-12-05/64028d4a35701b1277844857a747de0d231be6d5.pdf",
+      "territory_name": "Lajedão",
+      "state_code": "BA",
+      "excerpts": [
+        "Dep. Bancários - Não Vinculados - Outros Rec. Não Vinculados            380,00 340,00 525,00 505,00 390,00 365,00 355,00 470,00 5.000,00395,00 385,00335,00 555,00\n\n1.3.2.1.01.0.1.04.03.00 Remun. de Dep. Bancários - Comp. Financ. Pela Expl. de Rec. Minerais - Royalties            380,00 340,00 525,00 505,00 390,00 365,00 355,00 470,00 5.000,00395,00 385,00335,00 555,00\n\n1.3.2.1.01.0.1.04.07.00 Remun. de Dep. Bancários - Cessão Onerosa de Petróleo            228,00 204,00 315,00 303,00 234,00 219,00"
+      ],
+      "edition": "751",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2024-12-05/64028d4a35701b1277844857a747de0d231be6d5.txt"
+    },
+    {
+      "territory_id": "2918902",
+      "date": "2025-12-22",
+      "scraped_at": "2025-12-23T02:16:39.029621",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2025-12-22/bd03ee613eceb863ebb511afe0d2c39b96300a25.pdf",
+      "territory_name": "Lajedão",
+      "state_code": "BA",
+      "excerpts": [
+        "Vinculados - Impostos            3.526,00 3.649,00 3.239,00 3.731,00 3.075,00 3.813,00 3.157,00 2.993,00 41.000,003.403,00 3.116,002.911,00 4.387,00\n\n1.3.2.1.01.0.1.04.03.00 Remuneração de Depósitos Bancários - Comp. Financ. Pela Exploração de Rec. Minerais - Royalties            344,00 356,00 316,00 364,00 300,00 372,00 308,00 292,00 4.000,00332,00 304,00284,00 428,00\n\n1.3.2.1.01.0.1.04.08.00 Remuneração de Depósitos Bancários - Cessão Onerosa de Petróleo            430,00 445,00 395,00 455,00 375"
+      ],
+      "edition": "984",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2025-12-22/bd03ee613eceb863ebb511afe0d2c39b96300a25.txt"
+    },
+    {
+      "territory_id": "2918902",
+      "date": "2025-02-18",
+      "scraped_at": "2025-02-19T02:49:40.438831",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2025-02-18/398aa1107cd20bd9e33a0d5930bfd7648eed9089.pdf",
+      "territory_name": "Lajedão",
+      "state_code": "BA",
+      "excerpts": [
+        "de compartilhamento de saberes; \n\nh) Manter uma atitude de pró-atividade diante de situações de emergência e de \nperigos relacionados a processos produtivos no território, a exemplo de situações de \ntra balho infantil , exposição a agrotóxicos, mineração etc; \n\nArt. 3° - As determinações impostas pela presente Portaria são expressas no âmbito \nda Secretaria Municipal de Saúde e serão temporárias e durarão até a expressa \nrevogação da mesma ou até outra alteração de seus termos, mediante a edição"
+      ],
+      "edition": "811",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2025-02-18/398aa1107cd20bd9e33a0d5930bfd7648eed9089.txt"
+    },
+    {
+      "territory_id": "2918902",
+      "date": "2024-12-03",
+      "scraped_at": "2024-12-04T01:44:51.248760",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2024-12-03/7f93c21910ec541ef828716aef3f9c92ec48afbc.pdf",
+      "territory_name": "Lajedão",
+      "state_code": "BA",
+      "excerpts": [
+        "02.00 Remun. de Dep. Bancários - Não Vinculados - Outros Rec. Não Vinculados       1.501.00005.000,00 \n\n1.3.2.1.01.0.1.04.03.00 Remun. de Dep. Bancários - Comp. Financ. Pela Expl. de Rec. Minerais -\nRoyalties\n\n5.000,00 \n\n1.3.2.1.01.0.1.04.03.00 Remun. de Dep. Bancários - Comp. Financ. Pela Expl. de Rec. Minerais -\nRoyalties\n\n1.704.00005.000,00 \n\n1.3.2.1.01.0.1.04.07.00 Remun. de Dep. Bancários - Cessão Onerosa de Petróleo3.000,00 \n\n1.3.2.1.01.0.1.04.07.00 Remun. de Dep. Bancários - Cessão Onerosa"
+      ],
+      "edition": "749",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2024-12-03/7f93c21910ec541ef828716aef3f9c92ec48afbc.txt"
+    },
+    {
+      "territory_id": "2918902",
+      "date": "2021-12-17",
+      "scraped_at": "2023-10-29T00:02:07.675368",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2021-12-17/cf7382a33d89df19c6a84c2b8ce352c3d6843ba0.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "de Recursos do Fundo Nacional de Assistência Social – FNAS 719.739,00 \n0130000 Transferências do Fundo de Investimento Econômico Social - FIES 1.731,55 \n\n0142000 \nRoyalties/Fundo Especial do Petróleo/Compensação Financeira Exploração \nde Recursos Minerais \n\n286.853,00 \n\n0144000 Cessão Onerosa - volumes excedentes do Pré-Sal 61.438,65 \n\n0190000 Operações de Crédito Internas 104.310,00 \n\n0192000 Alienações de Bens 104.310,00 \n\n0194000 Remuneração de Depósitos Bancários 5.194,65 \n\n0195000 Ação Judicial"
+      ],
+      "edition": "131",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2021-12-17/cf7382a33d89df19c6a84c2b8ce352c3d6843ba0.txt"
+    },
+    {
+      "territory_id": "2918902",
+      "date": "2025-12-19",
+      "scraped_at": "2025-12-20T02:47:28.171149",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2025-12-19/7d4cbb2292a14fa2768afea339dd8715f7b1c4fd.pdf",
+      "territory_name": "Lajedão",
+      "state_code": "BA",
+      "excerpts": [
+        "Depósitos Bancários - Não Vinculados - Impostos              1.500.000041.000,00   \n\n1.3.2.1.01.0.1.04.03.00 Remuneração de Depósitos Bancários - Comp. Financ. Pela Exploração de Rec.\nMinerais - Royalties\n\n4.000,00   \n\n1.3.2.1.01.0.1.04.03.00 Remuneração de Depósitos Bancários - Comp. Financ. Pela Exploração de\nRec. Minerais - Royalties              \n\n1.704.00004.000,00   \n\n1.3.2.1.01.0.1.04.08.00 Remuneração de Depósitos Bancários - Cessão Onerosa de Petróleo5.000,00   \n\n1.3.2.1.01.0.1.04.08.00 Remuneração"
+      ],
+      "edition": "982",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2025-12-19/7d4cbb2292a14fa2768afea339dd8715f7b1c4fd.txt"
+    },
+    {
+      "territory_id": "2918902",
+      "date": "2025-04-16",
+      "scraped_at": "2025-04-17T02:59:05.941425",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2025-04-16/87a3647a455b7704a2f791935bd83679dfc62471.pdf",
+      "territory_name": "Lajedão",
+      "state_code": "BA",
+      "excerpts": [
+        "e de caracteres \norganolépticos anormais, não podendo apresentar \nexcesso de dureza. Pacote de 100g. \n\nUND 1000 SABOR DO \nSERTAO \n\nR$ 17,49 \n\n6 EXTRATO SOLÚVEL DE SOJA (leite de soja), em pó, \ninstantâneo. Alimento com soja, rico em vitaminas e \nminerais. Sem adição de açúcar e sem lactose. Sabor \noriginal. Embalagem (lata) 300g, apresentando dados  \nde  identificação,  procedência,  informações  \nnutricionais,  número  de  lote  data  de  validade, \nquantidade do produto, e número do registro no"
+      ],
+      "edition": "852",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2025-04-16/87a3647a455b7704a2f791935bd83679dfc62471.txt"
+    },
+    {
+      "territory_id": "2918902",
+      "date": "2021-11-25",
+      "scraped_at": "2023-10-29T00:02:21.612057",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2021-11-25/df5503dde46538b6775667ff29bf87a536dcceee.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências de Recursos do Fundo Nacional de Assistência Social - FNAS 3.069.529,00\n\n30 - Transferências do Fundo de Investimento Econômico Social - FIES 7.227,93\n\n42 - Royalties/Fundo Especial do Petróleo/Compensação Financeira Exploração de Recursos Minerais 1.197.401,00\n\n44 - Cessão Onerosa - volumes excedentes do Pré-Sal 256.460,75\n\n90 - Operações de Crédito Internas 445.000,00\n\n92 - Alienações de Bens 445.000,00\n\n94 - Remuneração de Depósitos Bancários 21.683,79\n\n95 - Ação Judicial FUNDEF - Precatórios"
+      ],
+      "edition": "114",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2021-11-25/df5503dde46538b6775667ff29bf87a536dcceee.txt"
+    },
+    {
+      "territory_id": "2918902",
+      "date": "2021-06-09",
+      "scraped_at": "2023-10-29T00:03:17.167270",
+      "url": "https://data.queridodiario.ok.org.br/2918902/2021-06-09/4bd882c57dc067fff83d48c9755a18fafb9f13f1.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "embalagem, depósito, \nrotulagem e trânsito; \n \nXXIV - inspeção local: Serviço de Inspeção Municipal implantado no estabelecimento registrado no SIM, \nrepresentado pelo Médico Veterinário Oficial; \n \nXXV - limpeza: remoção física de resíduos orgânicos e minerais ou outro material indesejável das \nsuperfícies das instalações, equipamentos e utensílios, seguidos da lavagem prévia com água, aplicação de \ndetergente e posterior enxágue ou remoção a seco por meios mecânicos; \n \nXXVI - MAPA: Ministério da Agricultura"
+      ],
+      "edition": "36",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918902/2021-06-09/4bd882c57dc067fff83d48c9755a18fafb9f13f1.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2918902",
+    "termo": "mineracao",
+    "params": {
+      "territory_ids": "2918902",
+      "querystring": "mineracao",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

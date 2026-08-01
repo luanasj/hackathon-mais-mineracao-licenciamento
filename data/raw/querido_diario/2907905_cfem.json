@@ -1,0 +1,144 @@
+{
+  "total_gazettes": 9,
+  "gazettes": [
+    {
+      "territory_id": "2907905",
+      "date": "2021-12-15",
+      "scraped_at": "2023-11-17T20:21:08.798194",
+      "url": "https://data.queridodiario.ok.org.br/2907905/2021-12-15/d4e0f25a8bb5ef721916958b1507c9a7f75781c6.pdf",
+      "territory_name": "Cipó",
+      "state_code": "BA",
+      "excerpts": [
+        "      \n\nCota-Parte do Imposto Sobre a Propriedade Territorial Rural - Principal 00. 8.000,00                   \n\nDedução da Receita para a Formação do FUNDEB - ITR 00. 1.900,00-                   \n\nCota-parte Royalties pela Participação Especial – CFEM Principal 42. 79.000,00                 \n\nCota-Parte do Fundo Especial do Petróleo – FEP - Principal 42. 1.851.000,00            \n\nTransferências de Recursos do Bloco de Manutenção das Ações e Serviços Públicos de \nSaúde – Atenção Primária\n\n14. 14"
+      ],
+      "edition": "1.350",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907905/2021-12-15/d4e0f25a8bb5ef721916958b1507c9a7f75781c6.txt"
+    },
+    {
+      "territory_id": "2907905",
+      "date": "2025-12-30",
+      "scraped_at": "2025-12-31T05:20:03.212957",
+      "url": "s3://okbr-qd-migration//2907905/2025-12-30/60120db2128e33bca7d8b924ba7bafa81d524914.pdf",
+      "territory_name": "Cipó",
+      "state_code": "BA",
+      "excerpts": [
+        "0010.956,80 11.302,404.224,00 22.195,20\n\n1.7.1.2.51.0.0.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            1.994,40 1.656,00 2.164,80 1.684,80 1.778,40 1.831,20 1.732,80 2.030,40 24.000,002.054,40 2.119,20792,00 4.161,60\n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            1.994,40 1.656,00 2.164,80 1.684,80 1.778,40 1.831,20 1.732,80 2.030,40 24.000,002.054,40 2.119,20792,00 4.161"
+      ],
+      "edition": "3.330",
+      "is_extra_edition": false,
+      "txt_url": "s3://okbr-qd-migration//2907905/2025-12-30/60120db2128e33bca7d8b924ba7bafa81d524914.txt"
+    },
+    {
+      "territory_id": "2907905",
+      "date": "2024-12-19",
+      "scraped_at": "2024-12-20T01:47:49.152874",
+      "url": "https://data.queridodiario.ok.org.br/2907905/2024-12-19/e4f8a1a83b8c3394b3329cc17dce7efca85eab5b.pdf",
+      "territory_name": "Cipó",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM21.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n21.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n70821.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo808.000,00   \n\n1.7.1.2.52.1.0.00.00 Cota-parte da Compensação"
+      ],
+      "edition": "2.699",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907905/2024-12-19/e4f8a1a83b8c3394b3329cc17dce7efca85eab5b.txt"
+    },
+    {
+      "territory_id": "2907905",
+      "date": "2024-12-17",
+      "scraped_at": "2024-12-18T00:55:48.977740",
+      "url": "https://data.queridodiario.ok.org.br/2907905/2024-12-17/6293d47f6a6f6a884e4ba8595fde617f9d87d41d.pdf",
+      "territory_name": "Cipó",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM21.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n21.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n70821.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo808.000,00   \n\n1.7.1.2.52.1.0.00.00 Cota-parte da Compensação"
+      ],
+      "edition": "2.695",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907905/2024-12-17/6293d47f6a6f6a884e4ba8595fde617f9d87d41d.txt"
+    },
+    {
+      "territory_id": "2907905",
+      "date": "2024-11-22",
+      "scraped_at": "2024-11-23T00:45:37.439903",
+      "url": "https://data.queridodiario.ok.org.br/2907905/2024-11-22/2910d6659b4eb05eef9b84f20ed01f42381038c4.pdf",
+      "territory_name": "Cipó",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM21.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n21.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n70821.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo808.000,00   \n\n1.7.1.2.52.1.0.00.00 Cota-parte da Compensação"
+      ],
+      "edition": "2.657",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907905/2024-11-22/2910d6659b4eb05eef9b84f20ed01f42381038c4.txt"
+    },
+    {
+      "territory_id": "2907905",
+      "date": "2023-12-01",
+      "scraped_at": "2023-12-02T21:22:40.995629",
+      "url": "https://data.queridodiario.ok.org.br/2907905/2023-12-01/3792c50970600597208728da6f2ac0f4f84f66db.pdf",
+      "territory_name": "Cipó",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM19.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n19.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n70819.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo651.000,00   \n\n1.7.1.2.52.1.0.00.00 Cota-parte da Compensação"
+      ],
+      "edition": "2.139",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907905/2023-12-01/3792c50970600597208728da6f2ac0f4f84f66db.txt"
+    },
+    {
+      "territory_id": "2907905",
+      "date": "2023-12-04",
+      "scraped_at": "2023-12-04T21:20:24.154477",
+      "url": "https://data.queridodiario.ok.org.br/2907905/2023-12-04/578622eef7fff82442bd4dee35ce59c94d75e40d.pdf",
+      "territory_name": "Cipó",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de Recursos Minerais - CFEM1.578,90 1.311,00 1.713,80 1.333,80 1.407,90 1.449,70 1.371,80 1.607,40 19.000,001.626,40 1.677,70627,00 3.294,60\n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal1.578,90 1.311,00 1.713,80 1.333,80 1.407,90 1.449,70 1.371,80 1.607,40 19.000,001.626,40 1.677,70627,00 3.294,60\n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo54.098,10 44.919,00 58.720,20 45.700,20"
+      ],
+      "edition": "2.141",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907905/2023-12-04/578622eef7fff82442bd4dee35ce59c94d75e40d.txt"
+    },
+    {
+      "territory_id": "2907905",
+      "date": "2021-11-25",
+      "scraped_at": "2023-11-17T20:21:16.245074",
+      "url": "https://data.queridodiario.ok.org.br/2907905/2021-11-25/618e8eaf72290374c1cb774bc81ff397b0d1c738.pdf",
+      "territory_name": "Cipó",
+      "state_code": "BA",
+      "excerpts": [
+        "Naturais\n\n452.000,00   \n\n1.7.1.2.51.0.0.00.00 \nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM\n\n18.000,00   \n\n1.7.1.2.51.0.1.00.00 \nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n18.000,00   \n\n1.7.1.2.51.0.1.00.00 \n   Cota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n4218.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo434.000,00"
+      ],
+      "edition": "1.335",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907905/2021-11-25/618e8eaf72290374c1cb774bc81ff397b0d1c738.txt"
+    },
+    {
+      "territory_id": "2907905",
+      "date": "2025-12-16",
+      "scraped_at": "2025-12-17T01:42:44.356063",
+      "url": "https://data.queridodiario.ok.org.br/2907905/2025-12-16/731a31b63517680db54b664ca474a94eee6714e4.pdf",
+      "territory_name": "Cipó",
+      "state_code": "BA",
+      "excerpts": [
+        "MUNICÍPIO DE CIPÓ\n\nPLANO PLURIANUAL 2026-2029\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Hídricos - Principal              1709 556.000,00                 \n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal              1708 106.000,00                 \n\nCota-parte da Compensação Financeira pela Produção de Petróleo - Lei nº 7.990/89 - Principal              1720 1.159.000,00              \n\nCota-Parte do Fundo Especial do Petróleo - FEP - Principal"
+      ],
+      "edition": "3.310",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907905/2025-12-16/731a31b63517680db54b664ca474a94eee6714e4.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2907905",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2907905",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 64,
+  "gazettes": [
+    {
+      "territory_id": "2913903",
+      "date": "2024-05-27",
+      "scraped_at": "2024-05-27T23:08:08.083484",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2024-05-27/f605a2aac527c104abe653d6150cf37a2a4aa3ce.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "937,43 482.937,43 131.000,00 131.000,00 351.937,43\n707- Transferências da União - inciso I do art. 5º da Lei Complementar 173/2020 34.584,97 34.584,97 29.440,32 29.440,32 5.144,65\n708 - Transferência da União Referente à Comp Financeira de Recursos Minerais 26.229,01 26.229,01 0,00 26.229,01\n709 - Transferência da União referente à Comp Financeira de Recursos Hídricos 0,00 0,00 0,00 0,00\n711 - Demais Transferências Obrigatórias não Decorrentes de Repartições de Receitas 1.223.084,64 1.223.084,64 0,00"
+      ],
+      "edition": "3.195",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2024-05-27/f605a2aac527c104abe653d6150cf37a2a4aa3ce.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2023-01-27",
+      "scraped_at": "2023-11-17T22:30:18.644395",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2023-01-27/ff5371cad12b30e896d0ae43eecf953547ac99cf.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de Recursos Naturais\n\n25.620,00 30.065,00 25.305,00 25.340,00 27.160,00 26.180,00 30.240,00 30.520,00 25.340,00 26.670,00 30.695,00 46.865,00 350.000,00\n\n132101010000 Transferência da União Referente à Compensação\nFinanceira de Recursos Minerais\n\n73,20 85,90 72,30 72,40 77,60 74,80 86,40 87,20 72,40 76,20 87,70 133,90 1.000,00\n\n132101010000 Recursos da Contribuição de Intervenção no Domínio\nEconômico - CIDE\n\n146,40 171,80 144,60 144,80 155,20 149,60 172,80 174,40 144,80 152,40 175,40 267"
+      ],
+      "edition": "2.201",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2023-01-27/ff5371cad12b30e896d0ae43eecf953547ac99cf.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2021-04-09",
+      "scraped_at": "2023-11-17T22:10:34.293096",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2021-04-09/b93c1548ca2b08fcc6070bb17fa2d9aa110d90fd.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "VALOR\nTOTAL\n\nFÓRMULA  INFANTIL  0  A  6  MESES  -  SORO  DE  LEITE\nDESMINERALIZADO*,  LACTOSE,  ÓLEÍNA  DE  PALMA,  LEITE\nDESNATADO*,  ÓLEO  DE  PALMISTE,  ÓLEO  DE  CANOLA  COM\nBAIXO  TEOR  ERÚCICO,  GALACTOOLIGOSSACARÍDEOS,  ÓLEO\nDE MILHO, SAIS MINERAIS (CITRATO DE CÁLCIO, CITRATO DE\nPOTÁSSIO,  CLORETO  DE  CÁLCIO,  FOSFATO  DE  SÓDIO,\nCLORETO  DE  MAGNÉSIO,  CLORETO  DE  SÓDIO,  SULFATO\nFERROSO, SULFATO DE ZINCO, SULFATO DE COBRE, SULFATO\nDE  MANGANÊS,  IODETO  DE  POTÁSSIO  E  SELENATO  DE\nSÓDIO)"
+      ],
+      "edition": "1.300",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2021-04-09/b93c1548ca2b08fcc6070bb17fa2d9aa110d90fd.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2024-04-01",
+      "scraped_at": "2024-04-01T22:21:13.413731",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2024-04-01/002a26e0fbfc6ed3c1f1d516b1877c5bda97d5dd.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "- SECRETARIA MUNICIPAL DA FAZENDA - SEFAZ\n06.001 - SECRETARIA MUNICIPAL DA FAZENDA - SEFAZ\n\n06.001.28.846.999.0005-3.3.90.47.00.00.00.00 - Obrigações Tributárias e Contributivas\nR$ 10.000,001.708 - Transf da União Ref. à Comp. Finan. de Recursos Minerais\n\n06.001.4.122.2.2105-3.3.90.14.00.00.00.00 - DIÁRIAS - CIVIL\nR$ 15.000,001.500 - Recursos não Vinculados de Impostos\n\nR$ 25.000,00Total do Órgão\n07.000 - SECRETARIA MUNICIPAL DE SAÚDE - SESAU\n07.001 - FUNDO MUNICIPAL DE SAÚDE\n\n07.001.10.122.2.2106-3"
+      ],
+      "edition": "3.046",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2024-04-01/002a26e0fbfc6ed3c1f1d516b1877c5bda97d5dd.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2024-01-05",
+      "scraped_at": "2024-01-06T21:28:03.718477",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2024-01-05/63e8d3870188fbd8fdc64d4dfaa77473d0d78dba.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "2.957,42 0,00 2.957,42 0,00 2.957,42\n\n708 Transferência da União Referente à Compensação Financeira de Recursos Minerais\n1.615,92              1.234,74 102,4 1.939,74 221,42 195,39 805,15 2.213,86 199,83 2.134,54              766,05 1.048,15                12.477,19 29.660,00 -17.182,81 0,00 -17.182,81\n\n711 Transferência da União Referente à Compensação Financeira de Recursos Minerais\n-                       0,00 0 0,00 0 0 0 0,00 0 -                       1.235.439,03 0,00 1.235.439,03 0,00 1.235"
+      ],
+      "edition": "2.855",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2024-01-05/63e8d3870188fbd8fdc64d4dfaa77473d0d78dba.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2025-01-02",
+      "scraped_at": "2025-01-03T07:58:31.308687",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2025-01-02/d5b6f210d5589035a7320ff1cc75f8fe29b28a61.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "00 30.220,00Previsto\n\nTransf. da União – inciso I do art. 5º da Lei Comple.173/2020\n280,00\n\n1.707.0000.0000\n3.500,00280,00 210,00 280,00 560,00245,00 245,00 245,00 245,00280,00280,00 350,00Previsto\n\nTransf da União Ref. à Comp. Finan. de Recursos Minerais\n56.816,00\n\n1.708.0000.0000\n710.200,0056.816,00 42.612,00 56.816,00 113.632,0049.714,00 49.714,00 49.714,00 49.714,0056.816,0056.816,00 71.020,00Previsto\n\nTransf. Dest. ao Setor Cult. - LC nº 195/2022 – Art. 5º - Audiovisual\n30.600,00\n\n1.715.0000"
+      ],
+      "edition": "3.638",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2025-01-02/d5b6f210d5589035a7320ff1cc75f8fe29b28a61.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2024-06-20",
+      "scraped_at": "2024-06-20T23:34:54.597124",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2024-06-20/0403c0fed159472fbacad98ff57bf42b643d3321.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "937,43 131.000,00 110.000,00 241.000,00 241.937,43\n707- Transferências da União - inciso I do art. 5º da Lei Complementar 173/2020 34.584,97 34.584,97 29.440,32 29.440,32 5.144,65\n708 - Transferência da União Referente à Comp Financeira de Recursos Minerais 26.229,01 26.229,01 0,00 26.229,01\n709 - Transferência da União referente à Comp Financeira de Recursos Hídricos 0,00 0,00 0,00 0,00\n711 - Demais Transferências Obrigatórias não Decorrentes de Repartições de Receitas 1.223.084,64 1.223.084,64 0,00"
+      ],
+      "edition": "3.267",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2024-06-20/0403c0fed159472fbacad98ff57bf42b643d3321.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2023-09-13",
+      "scraped_at": "2023-11-17T22:23:35.365838",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2023-09-13/b45fd0eae2f037c20cf443f9e4e87f8f4db49161.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "642/0001-69, com sede na Cascalheira Xavier Lot. Santana, s/n, \nAloisio Conrado, Ipiaú- Bahia, CEP: 45.570-000, Coordenadas Geográficas: Latitude 14° 7'33.52\"S e \nLongitude 39°44'39.65\"O, com área equivalente a 6,25 hectares, para exercer a atividade B3: Minerais \nUtilizados na Construção Civil, Ornamentos e Outros, B 3.1 – Areias, Cascalhos, Filitos e Saibro. Com \nprevisão de lavrar 60.000,00t/ano, está enquadrado na Resolução CEPRAM Nº 4.579, de 06 de março de \n2018, por um período de 3 (três) anos, contado"
+      ],
+      "edition": "2.624",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2023-09-13/b45fd0eae2f037c20cf443f9e4e87f8f4db49161.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2025-06-25",
+      "scraped_at": "2025-06-26T02:25:43.479725",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2025-06-25/14e4d93ec8af6df891a539a1510dd0db4967b63a.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "DE TERCEIROS - PESSOA JURÍDICA\nR$ 45.000,001.500 - Recursos não Vinculados de Impostos\n\n12.001.15.451.7.1036-3.3.90.39.00.00.00.00 - OUTROS SERVIÇOS DE TERCEIROS - PESSOA JURÍDICA\nR$ 2.000,001.708 - Transf da União Ref. à Comp. Finan. de Recursos Minerais\n\n12.001.15.451.7.1036-4.4.90.51.00.00.00.00 - OBRAS E INSTALAÇÕES\nR$ 100.000,001.500 - Recursos não Vinculados de Impostos\n\n12.001.15.451.7.1036-4.4.90.51.00.00.00.00 - OBRAS E INSTALAÇÕES\nR$ 60.000,002.706 - Transferência Especial da União\n\n12.001"
+      ],
+      "edition": "4.034",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2025-06-25/14e4d93ec8af6df891a539a1510dd0db4967b63a.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2025-08-29",
+      "scraped_at": "2025-08-30T03:16:17.996289",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2025-08-29/62b2359d09d4093269df45fec9f059c8739d4b6a.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "70.000,001.704 - Transferência da União Referente a Royalties do Petróleo e Gás Natural\n\n12.001.15.451.7.2040-3.3.90.39.00.00.00.00 - OUTROS SERVIÇOS DE TERCEIROS - PESSOA JURÍDICA\nR$ 7.000,001.708 - Transf da União Ref. à Comp. Finan. de Recursos Minerais\n\n12.001.4.122.2.2101-3.1.90.13.00.00.00.00 - OBRIGAÇÕES PATRONAIS\nR$ 60.000,001.500 - Recursos não Vinculados de Impostos\n\n12.001.4.122.2.2110-3.3.90.39.00.00.00.00 - OUTROS SERVIÇOS DE TERCEIROS - PESSOA JURÍDICA\nR$ 3.000,001.500 - Recursos não"
+      ],
+      "edition": "4.199",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2025-08-29/62b2359d09d4093269df45fec9f059c8739d4b6a.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2913903",
+    "termo": "mineracao",
+    "params": {
+      "territory_ids": "2913903",
+      "querystring": "mineracao",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

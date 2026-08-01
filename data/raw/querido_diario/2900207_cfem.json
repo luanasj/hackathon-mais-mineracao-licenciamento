@@ -1,0 +1,60 @@
+{
+  "total_gazettes": 3,
+  "gazettes": [
+    {
+      "territory_id": "2900207",
+      "date": "2024-11-11",
+      "scraped_at": "2024-11-12T01:43:25.472045",
+      "url": "https://data.queridodiario.ok.org.br/2900207/2024-11-11/18f47e767533015f7910bf1ed73d0585b0f01a63.pdf",
+      "territory_name": "Abaré",
+      "state_code": "BA",
+      "excerpts": [
+        "Principal 4.300,00 \n\n1.7.1.2.00.0.0.00 Transferência da Compensação Financeira pela Exploração de Recursos Naturais 737.500,00 \n\n1.7.1.2.51.0.0.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 85.500,00 \n\n1.7.1.2.51.0.1.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 85.500,00 \n\n1.7.1.2.52.0.0.00 Cota-parte da Compensação Financeira pela Produção de Petróleo 652.000,00 \n\n1.7.1.2.52.4.0.00 Cota-Parte do Fundo Especial do Petróleo � FEP 652.000,00 \n\n1.7.1"
+      ],
+      "edition": "5745",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900207/2024-11-11/18f47e767533015f7910bf1ed73d0585b0f01a63.txt"
+    },
+    {
+      "territory_id": "2900207",
+      "date": "2023-12-12",
+      "scraped_at": "2024-06-13T14:31:13.919564",
+      "url": "https://data.queridodiario.ok.org.br/2900207/2023-12-12/810032062e56d8d471c7aea75ceae57515efa033.pdf",
+      "territory_name": "Abaré",
+      "state_code": "BA",
+      "excerpts": [
+        "ESPECIFICAÇÃO VALOR\n\nPREFEITURA MUNICIPAL DE ABARÉ\n\nEXERCÍCIO 2024\n\nPLANEJAMENTO GOVERNAMENTAL\n\nPREVISÃO DA RECEITA\n\n1.7.1.2.51.0.0.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM                   103.400,00 \n\n1.7.1.2.51.0.1.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal                   103.400,00 \n\n1.7.1.2.52.0.0.00 Cota-parte da Compensação Financeira pela Produção de Petróleo                   656.600,00 \n\n1.7.1.2.52.4.0.00 Cota-Parte do Fundo"
+      ],
+      "edition": "5407",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900207/2023-12-12/810032062e56d8d471c7aea75ceae57515efa033.txt"
+    },
+    {
+      "territory_id": "2900207",
+      "date": "2024-11-23",
+      "scraped_at": "2025-01-29T14:15:18.185710",
+      "url": "https://data.queridodiario.ok.org.br/2900207/2024-11-23/e1e496bdc43e4af358dcc91ce17cd6209e8cec9c.pdf",
+      "territory_name": "Abaré",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferência da Compensação Financeira pela Exploração de Recursos Naturais                      697.500,00 \n\n1.7.1.2.51.0.0.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM                        45.500,00 \n\n1.7.1.2.51.0.1.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal                        45.500,00 \n\n1.7.1.2.52.0.0.00 Cota-parte da Compensação Financeira pela Produção de Petróleo                      652.000,00 \n\n1.7.1.2.52.4.0.00 Cota-Parte"
+      ],
+      "edition": "5757",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900207/2024-11-23/e1e496bdc43e4af358dcc91ce17cd6209e8cec9c.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2900207",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2900207",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

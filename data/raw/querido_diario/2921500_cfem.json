@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 13,
+  "gazettes": [
+    {
+      "territory_id": "2921500",
+      "date": "2025-03-06",
+      "scraped_at": "2025-03-08T02:46:31.829130",
+      "url": "https://data.queridodiario.ok.org.br/2921500/2025-03-06/f8e53855a3edd351d163f4251d47bf229650a28e.pdf",
+      "territory_name": "Monte Santo",
+      "state_code": "BA",
+      "excerpts": [
+        "com a resolução do CONAMA de n° 10, de 06 de \ndezembro de 1990. \n\nA renovação da presente LICENÇA para extração mineral fica condicionada à comprovação da regularidade n o \npagamento da Compensação Financeira pela Exploração de Recursos Minerais - CFEM, de acordo com o Decreto N° 01, de 11  de \n\njaneiro de 1991. \nEsta Licença tem como base o artigo 11 do Código de Mineração combinado com a Lei Federal N° 6.567, de 24 de \n\nsetembro de 1978, artigo 1, item l, e em conformidade com a Portaria N° 266"
+      ],
+      "edition": "2.839",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2921500/2025-03-06/f8e53855a3edd351d163f4251d47bf229650a28e.txt"
+    },
+    {
+      "territory_id": "2921500",
+      "date": "2025-12-22",
+      "scraped_at": "2025-12-23T02:20:46.887892",
+      "url": "https://data.queridodiario.ok.org.br/2921500/2025-12-22/dc69853d39767484201b140e39d22f1e25b8131b.pdf",
+      "territory_name": "Monte Santo",
+      "state_code": "BA",
+      "excerpts": [
+        "768,00136.178,00 205.226,00\n\n1.7.1.2.51.0.0.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            14.792,00 15.308,00 13.588,00 15.652,00 12.900,00 15.996,00 13.244,00 12.556,00 172.000,0014.276,00 13.072,0012.212,00 18.404,00\n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            14.792,00 15.308,00 13.588,00 15.652,00 12.900,00 15.996,00 13.244,00 12.556,00 172.000,0014.276,00 13"
+      ],
+      "edition": "3.336",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2921500/2025-12-22/dc69853d39767484201b140e39d22f1e25b8131b.txt"
+    },
+    {
+      "territory_id": "2921500",
+      "date": "2024-08-07",
+      "scraped_at": "2024-08-08T00:30:17.111087",
+      "url": "https://data.queridodiario.ok.org.br/2921500/2024-08-07/1eb606763e0d2f114e923b50e80db55ef1f5eecc.pdf",
+      "territory_name": "Monte Santo",
+      "state_code": "BA",
+      "excerpts": [
+        " GERENCIA REGIONAL/BA, de acordo com a Portaria ANM nº 155/2016. \nA renovação da presente LICENÇA para extração mineral fica condicionada à comprovação da regularidade no pagamento da \n\nCompensação Financeira pela Exploração de Recursos Minerais – CFEM, de acordo com o Decreto N° 01, de 11 de janeiro de 1991. \nEsta Licença tem como base o artigo 11 do Código de Mineração combinado com a Lei Federal N° 6.567, de 24 de setembro de \n\n1978, artigo 1, item l, e em conformidade com a Portaria N° 266, de"
+      ],
+      "edition": "2.542",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2921500/2024-08-07/1eb606763e0d2f114e923b50e80db55ef1f5eecc.txt"
+    },
+    {
+      "territory_id": "2921500",
+      "date": "2023-12-27",
+      "scraped_at": "2023-12-27T21:58:22.491596",
+      "url": "https://data.queridodiario.ok.org.br/2921500/2023-12-27/c015a39b532d146a1503afe1f19c356adefd8b8b.pdf",
+      "territory_name": "Monte Santo",
+      "state_code": "BA",
+      "excerpts": [
+        "de Recursos Minerais - CFEM9.880,00 8.840,00 13.650,00 13.130,00 10.140,00 9.490,00 9.230,00 12.220,00 130.000,0010.270,00 10.010,008.710,00 14.430,00\n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal9.880,00 8.840,00 13.650,00 13.130,00 10.140,00 9.490,00 9.230,00 12.220,00 130.000,0010.270,00 10.010,008.710,00 14.430,00\n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo117.800,00 105.400,00 162.750"
+      ],
+      "edition": "2.177",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2921500/2023-12-27/c015a39b532d146a1503afe1f19c356adefd8b8b.txt"
+    },
+    {
+      "territory_id": "2921500",
+      "date": "2021-12-20",
+      "scraped_at": "2023-10-28T17:20:53.347622",
+      "url": "https://data.queridodiario.ok.org.br/2921500/2021-12-20/697371710a2c92005b5a10f13bcb2b406b23af62.pdf",
+      "territory_name": "Monte Santo",
+      "state_code": "BA",
+      "excerpts": [
+        "880,00 74.740,00 132.310,00 1.010.000,00\n\n171251000000      Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM\n\n7.560,00 11.040,00 8.400,00 8.400,00 10.800,00 9.840,00 10.800,00 9.360,00 8.640,00 10.560,00 8.880,00 15.720,00 120.000,00\n\n171251010000        Cota-parte da Compensação Financeira\npela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n7.560,00 11.040,00 8.400,00 8.400,00 10.800,00 9.840,00 10.800,00 9.360,00 8.640,00 10.560,00 8.880,00 15.720,00 120.000,00"
+      ],
+      "edition": "1.278",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2921500/2021-12-20/697371710a2c92005b5a10f13bcb2b406b23af62.txt"
+    },
+    {
+      "territory_id": "2921500",
+      "date": "2024-11-18",
+      "scraped_at": "2024-11-19T00:36:48.055148",
+      "url": "https://data.queridodiario.ok.org.br/2921500/2024-11-18/fcdaf6235082183f97de0a29ccf4fc413d821e06.pdf",
+      "territory_name": "Monte Santo",
+      "state_code": "BA",
+      "excerpts": [
+        "152.537,00132.727,00 219.891,00\n\n1.7.1.2.51.0.0.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            9.956,00 8.908,00 13.755,00 13.231,00 10.218,00 9.563,00 9.301,00 12.314,00 131.000,0010.349,00 10.087,008.777,00 14.541,00\n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            9.956,00 8.908,00 13.755,00 13.231,00 10.218,00 9.563,00 9.301,00 12.314,00 131.000,0010.349,00 10.087,008"
+      ],
+      "edition": "2.675",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2921500/2024-11-18/fcdaf6235082183f97de0a29ccf4fc413d821e06.txt"
+    },
+    {
+      "territory_id": "2921500",
+      "date": "2024-10-29",
+      "scraped_at": "2024-10-30T01:48:51.574676",
+      "url": "https://data.queridodiario.ok.org.br/2921500/2024-10-29/9e861080b9833d4df9be99de94c84b14145e3ff4.pdf",
+      "territory_name": "Monte Santo",
+      "state_code": "BA",
+      "excerpts": [
+        "Recursos Naturais \n\n131.000,00 1.7.1.2.51.0.0.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM \n\n131.000,00 1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - \nPrincipal \n\n131.000,00 1.7.1.2.51.0.1.00.00 1.708.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM \n- Principal \n\n1.550.000,00 1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo \n\n50.000"
+      ],
+      "edition": "2.648",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2921500/2024-10-29/9e861080b9833d4df9be99de94c84b14145e3ff4.txt"
+    },
+    {
+      "territory_id": "2921500",
+      "date": "2022-12-21",
+      "scraped_at": "2023-10-28T17:16:24.313664",
+      "url": "https://data.queridodiario.ok.org.br/2921500/2022-12-21/b20c0bada2d73a58f771cfe028274a9c14891adf.pdf",
+      "territory_name": "Monte Santo",
+      "state_code": "BA",
+      "excerpts": [
+        "160,00 896.040,00 6.840.000,00\n\n171251000000      Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM\n\n296.100,00 432.400,00 329.000,00 329.000,00 423.000,00 385.400,00 423.000,00 366.600,00 338.400,00 413.600,00 347.800,00 615.700,00 4.700.000,00\n\n171251010000        Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM - Principal\n\n296.100,00 432.400,00 329.000,00 329.000,00 423.000,00 385.400,00 423.000,00 366.600,00 338.400,00 413.600,00 347"
+      ],
+      "edition": "1.658",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2921500/2022-12-21/b20c0bada2d73a58f771cfe028274a9c14891adf.txt"
+    },
+    {
+      "territory_id": "2921500",
+      "date": "2022-12-12",
+      "scraped_at": "2023-10-28T17:16:39.248812",
+      "url": "https://data.queridodiario.ok.org.br/2921500/2022-12-12/368b1f5981044599a02ff457386ee4031fd0a7e4.pdf",
+      "territory_name": "Monte Santo",
+      "state_code": "BA",
+      "excerpts": [
+        "de  \n\nRecursos Naturais                                      \n6.840.000,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos  \nMinerais - CFEM                                    \n\n4.700.000,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos  \nMinerais - CFEM - Principal                      \n\n4.700.000,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo                                         "
+      ],
+      "edition": "1.646",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2921500/2022-12-12/368b1f5981044599a02ff457386ee4031fd0a7e4.txt"
+    },
+    {
+      "territory_id": "2921500",
+      "date": "2023-12-05",
+      "scraped_at": "2023-12-05T21:51:44.660301",
+      "url": "https://data.queridodiario.ok.org.br/2921500/2023-12-05/8b7c775aeec6d69344b5b229f1bc642c635ac166.pdf",
+      "territory_name": "Monte Santo",
+      "state_code": "BA",
+      "excerpts": [
+        " Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n2.430.000,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n130.000,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n130.000,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 1.550.000,00\n171252100000       Cota-parte da Compensação Financeira pela Produção de"
+      ],
+      "edition": "2.137",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2921500/2023-12-05/8b7c775aeec6d69344b5b229f1bc642c635ac166.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2921500",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2921500",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

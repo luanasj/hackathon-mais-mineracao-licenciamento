@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 35,
+  "gazettes": [
+    {
+      "territory_id": "2904506",
+      "date": "2021-11-26",
+      "scraped_at": "2023-10-18T23:17:29.393950",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2021-11-26/c46d8454f5fd16597f26a01c1dd784c75919b651.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "3.000,00 R$ 27.000,00 \nR$ \n\n22.500,00 \n\n \n\n \n\n \n\nEdição 570 | Ano 3\n26 de novembro de 2021\n\nPágina 13\n\nCertificação Digital: REPPRPBR-BZ3YUE4M-ONPIE9TK-3KCF8QYO\nVersão eletrônica disponível em: http://brotasdemacaubas.ba.gov.br\n\n\n\n \n \n\nGRUPO B - MINERAÇÃO EXCETO O GRUPO B3.1 \n\nCLASSE \n2* \n\nLICENÇA \nPRÉVIA \n\nLICENÇA DE \nINSTALAÇÃO \n\nLICENÇA DE \nOPERAÇÃO \n\nLICENÇA DE \nALTERAÇÃO \n\nLICENÇA DE \nREGULARIZAÇÃ\n\nO \nLICENÇA \n\nUNIFICADA \n\n(LP) (LI) (LO) (LA) (LR) (LU) \n\nR$ 3.500,00 R$ 3.500,00 R$ 3.500,00 R$"
+      ],
+      "edition": "570",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2021-11-26/c46d8454f5fd16597f26a01c1dd784c75919b651.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2021-12-22",
+      "scraped_at": "2023-10-18T23:17:15.070162",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2021-12-22/5b26a5eeab3fd442eca25ffa5194df3f54c8cfd0.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "391,00\n\n132101010000 ASPS - Transferências de Recursos SUS 480,22 480,22 480,22 480,22 480,22 480,22 480,22 480,22 480,80 480,80 480,80 480,80 5.765,00\n\n132101010000 Royalties/Fundo Especial do\nPetróleo/Compensação Financeira Exploração de\nRecursos Minerais\n\n164,18 164,18 164,18 164,18 164,18 164,18 164,18 164,18 164,38 164,38 164,38 164,38 1.971,00\n\n132101010000 Receitas de Impostos e Transferências de\nImpostos - Saúde - 15%\n\n119,54 119,54 119,54 119,54 119,54 119,54 119,54 119,54 119,68 119,68 119"
+      ],
+      "edition": "590",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2021-12-22/5b26a5eeab3fd442eca25ffa5194df3f54c8cfd0.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2023-12-27",
+      "scraped_at": "2023-12-27T21:29:43.892861",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2023-12-27/fda4693c8335cf1c3823a80dd773a93bf28744a5.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "Convênios ou Instrumentos\nCongêneres dos Estados\n\n2.295,71 2.295,71 2.295,71 2.295,71 2.295,71 2.295,71 2.295,71 2.295,71 2.298,47 2.298,47 2.298,47 2.298,47 27.559,56\n\n132101010000 Transferência da União Referente à Compensação\nFinanceira de Recursos Minerais\n\n3.037,50 3.037,50 3.037,50 3.037,50 3.037,50 3.037,50 3.037,50 3.037,50 3.041,15 3.041,15 3.041,15 3.041,15 36.464,58\n\n132101010000 Transferências da União Referentes a Cessão Onerosa\nde Petróleo – Lei  nº 13.885/2019\n\n706,70 706,70 706,70 706,70"
+      ],
+      "edition": "1.590",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2023-12-27/fda4693c8335cf1c3823a80dd773a93bf28744a5.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2024-12-04",
+      "scraped_at": "2024-12-05T00:43:39.317149",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2024-12-04/43697fc32814bb53d735b3bbc74687884ae581c1.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "Convênios ou Instrumentos\nCongêneres dos Estados\n\n2.286,07 2.341,05 2.118,23 1.999,58 2.508,88 2.048,78 2.479,95 2.320,79 2.242,66 2.106,65 2.827,20 3.657,71 28.937,54\n\n132101010000 Transferência da União Referente à Compensação\nFinanceira de Recursos Minerais\n\n3.024,74 3.097,48 2.802,67 2.645,69 3.319,55 2.710,78 3.281,27 3.070,68 2.967,31 2.787,35 3.740,72 4.839,58 38.287,81\n\n132101010000 Transferências da União Referentes a Cessão Onerosa\nde Petróleo – Lei  nº 13.885/2019\n\n703,73 720,65 652,06 615,54"
+      ],
+      "edition": "2.001",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2024-12-04/43697fc32814bb53d735b3bbc74687884ae581c1.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2025-12-11",
+      "scraped_at": "2025-12-12T02:26:20.890961",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2025-12-11/cc8d360acf8d297b2571d47da6567867900223ee.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "Convênios ou Instrumentos\nCongêneres dos Estados\n\n2.463,37 2.341,33 2.241,77 2.228,92 3.096,08 2.575,78 2.649,65 2.922,65 3.128,20 2.328,48 2.546,88 3.593,89 32.117,00\n\n132101010000 Transferência da União Referente à Compensação\nFinanceira de Recursos Minerais\n\n3.259,29 3.097,81 2.966,08 2.949,08 4.096,42 3.408,02 3.505,76 3.866,95 4.138,92 3.080,82 3.369,77 4.755,08 42.494,00\n\n132101010000 Transferências da União Referentes a Cessão Onerosa\nde Petróleo – Lei  nº 13.885/2019\n\n758,33 720,76 690,11 686,16"
+      ],
+      "edition": "2.684",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2025-12-11/cc8d360acf8d297b2571d47da6567867900223ee.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2024-11-06",
+      "scraped_at": "2024-11-07T01:26:24.489517",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2024-11-06/ee9a7256f5d10f19bc3f72051b598a3223b2bcae.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "025,92 \n\n17010000 - Outras Transferências de Convênios ou Instrumentos Congêneres dos Estados \n149.391,44 \n\n17060000 - Transferência Especial da União \n16.500,00 \n\n17080000 - Transferência da União Referente à Compensação Financeira de Recursos \nMinerais \n\n121.683,43 \n\n17150000 - Transferências Destinadas ao Setor Cultural - LC nº 195/2022 - Art. 5º - \nAudiovisual \n\n80.010,00 \n\n17160000 - Transferências Destinadas ao Setor cultural - LC nº 195/2022 - Art. 8º - Demais \nSetores da Cultura \n\n36.750"
+      ],
+      "edition": "1.967",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2024-11-06/ee9a7256f5d10f19bc3f72051b598a3223b2bcae.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2025-09-18",
+      "scraped_at": "2025-09-19T02:33:29.481168",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2025-09-18/bbd3b523f39927cfbee3e6a8ab45786c2abda476.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "nº 13.797.600/0001-74, \n\ncom sede na Praça dos Poderes, nº 95, Centro, CEP: 47560-000, representado pelo prefeito \n\nmunicipal Sr. Antônio Kleber Ribeiro, brasileiro, maior e capaz, residente neste município. \n\n \n\nCOMODANTE: COMERCIO E EXPORTAÇÃO MINERAÇÃO BAHIA QUARTZO, inscrito no CNPJ \n\nsob o nº 50.094.468/0001-60, com sede na Avenida Umbauba, 120, Galpão, Centro, Ipupiara-BA, \n\nCEP: 47590-000, representada pelo Sr. Odair Jose Pereira Costa, inscrito no CPF sob o nº \n\n015.xxx.xxx-06. \n\n \n\nOBJETO:"
+      ],
+      "edition": "2.538",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2025-09-18/bbd3b523f39927cfbee3e6a8ab45786c2abda476.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2021-12-16",
+      "scraped_at": "2023-10-18T23:17:15.083537",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2021-12-16/464140ca082b706fcb2ff58f889b94ea65174380.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "0128000 Fundo Estadual de Assistência Social – FEAS 41.732,00 \n0129000 Transferências de Recursos do Fundo Nacional de Assistência Social – FNAS 369.446,00 \n\n0142000 \nRoyalties/Fundo Especial do Petróleo/Compensação Financeira Exploração \nde Recursos Minerais \n\n216.242,00 \n\n0214000 Transferências de Recursos do Sistema Único de Saúde – SUS 4.970.954,00 \n0290000 Operações de Créditos Internas 1.852.920,00 \n\n6102000 Receitas de Impostos e Transferências de Impostos - Saúde - 15% 3.647.295,51 \n\n7101000 Receitas"
+      ],
+      "edition": "588",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2021-12-16/464140ca082b706fcb2ff58f889b94ea65174380.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2023-12-18",
+      "scraped_at": "2023-12-18T21:12:29.892396",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2023-12-18/11090020a12ae74e33ee4e2f13a390dd187690c8.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências de Convênios ou Instrumentos Congêneres da União \n64.786,59 \n\n17010000 - Outras Transferências de Convênios ou Instrumentos Congêneres dos Estados \n142.277,56 \n\n17080000 - Transferência da União Referente à Compensação Financeira de Recursos \nMinerais \n\n115.888,98 \n\n17200000 - Transferências da União Referentes às participações na exploração de Petróleo \ne Gás Natural destinadas ao FEP - Lei 9.478/1997 \n\n1.077.916,18 \n\n17210000 - Transferências da União Referentes a Cessão Onerosa de Petróleo"
+      ],
+      "edition": "1.575",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2023-12-18/11090020a12ae74e33ee4e2f13a390dd187690c8.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2024-10-16",
+      "scraped_at": "2024-10-17T01:30:03.807942",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2024-10-16/8ef0e0f867f75e927fbc38e696314a08a7547edb.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "litro diário (33 litros mensais por pessoa, considerando \n\n22 dias úteis no  mês). \n\n. \n3.2 ESPECIFICAÇÕES TÉCNICAS  \n\n \n\n3.2.1. A água mineral deve atender à classificação do Código de Águas Minerais \n\n(Decreto-Lei 7.841/45), do DNPM- Departamento Nacional de Produção Mineral, atual \n\nAgência Nacional de Mineração- ANM, autarquia vinculada ao Ministério de Minas e \n\nEnergia e deve atender às características microbiológicas e não conter concentrações \n\nEdição 1.945 | Ano 6\n16 de outubro de 2024\n\nPágina"
+      ],
+      "edition": "1.945",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2024-10-16/8ef0e0f867f75e927fbc38e696314a08a7547edb.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2904506",
+    "termo": "mineracao",
+    "params": {
+      "territory_ids": "2904506",
+      "querystring": "mineracao",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

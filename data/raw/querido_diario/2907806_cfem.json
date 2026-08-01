@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 11,
+  "gazettes": [
+    {
+      "territory_id": "2907806",
+      "date": "2024-12-26",
+      "scraped_at": "2024-12-27T01:17:08.112910",
+      "url": "https://data.queridodiario.ok.org.br/2907806/2024-12-26/e43507c5df0c3dd5c560aecea6e6bdf256da4e80.pdf",
+      "territory_name": "Cícero Dantas",
+      "state_code": "BA",
+      "excerpts": [
+        "00114.155,00 111.265,0096.815,00 160.395,00\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            760,00 680,00 1.050,00 1.010,00 780,00 730,00 710,00 940,00 10.000,00790,00 770,00670,00 1.110,00\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal            760,00 680,00 1.050,00 1.010,00 780,00 730,00 710,00 940,00 10.000,00790,00 770,00670,00 1.110,00\n\n1.7.1.2.52.0.0.00.00.00"
+      ],
+      "edition": "2.395",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907806/2024-12-26/e43507c5df0c3dd5c560aecea6e6bdf256da4e80.txt"
+    },
+    {
+      "territory_id": "2907806",
+      "date": "2025-12-18",
+      "scraped_at": "2025-12-19T02:33:16.507566",
+      "url": "https://data.queridodiario.ok.org.br/2907806/2025-12-18/0223dc6564704211fef245369c7632738bd28798.pdf",
+      "territory_name": "Cícero Dantas",
+      "state_code": "BA",
+      "excerpts": [
+        "000,00122.010,00 111.720,00104.370,00 157.290,00\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            86,00 89,00 79,00 91,00 75,00 93,00 77,00 73,00 1.000,0083,00 76,0071,00 107,00\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            86,00 89,00 79,00 91,00 75,00 93,00 77,00 73,00 1.000,0083,00 76,0071,00 107,00\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação"
+      ],
+      "edition": "2.858",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907806/2025-12-18/0223dc6564704211fef245369c7632738bd28798.txt"
+    },
+    {
+      "territory_id": "2907806",
+      "date": "2021-12-20",
+      "scraped_at": "2023-11-17T21:00:13.239417",
+      "url": "https://data.queridodiario.ok.org.br/2907806/2021-12-20/1de3a71f0e559a947ceb8e93b49fb3157b321337.pdf",
+      "territory_name": "Cícero Dantas",
+      "state_code": "BA",
+      "excerpts": [
+        "Compensação Financeira pela Exploração de Recursos Minerais - CFEM736,00 560,00 656,00 720,00 624,00 576,00 704,00 592,00 8.000,00560,00 720,00504,00 1.048,00\n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal736,00 560,00 656,00 720,00 624,00 576,00 704,00 592,00 8.000,00560,00 720,00504,00 1.048,00\n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo73.048,00 55.580,00 65.108,00 71.460,00 61.932,00 57.168,00"
+      ],
+      "edition": "1.166",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907806/2021-12-20/1de3a71f0e559a947ceb8e93b49fb3157b321337.txt"
+    },
+    {
+      "territory_id": "2907806",
+      "date": "2022-12-22",
+      "scraped_at": "2023-11-17T20:56:22.131364",
+      "url": "https://data.queridodiario.ok.org.br/2907806/2022-12-22/a04e2b6dc2f09b4bc7422906df1405133116d516.pdf",
+      "territory_name": "Cícero Dantas",
+      "state_code": "BA",
+      "excerpts": [
+        "Compensação Financeira pela Exploração de Recursos Minerais - CFEM184,00 140,00 164,00 180,00 156,00 144,00 176,00 148,00 2.000,00140,00 180,00126,00 262,00\n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal184,00 140,00 164,00 180,00 156,00 144,00 176,00 148,00 2.000,00140,00 180,00126,00 262,00\n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo 92.920,00 70.700,00 82.820,00 90.900,00 78.780,00 72.720,00 88"
+      ],
+      "edition": "1.492",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907806/2022-12-22/a04e2b6dc2f09b4bc7422906df1405133116d516.txt"
+    },
+    {
+      "territory_id": "2907806",
+      "date": "2021-12-16",
+      "scraped_at": "2023-11-17T21:00:19.178214",
+      "url": "https://data.queridodiario.ok.org.br/2907806/2021-12-16/2c20af4ec54ed9a4814ea2dbd5029877b889d020.pdf",
+      "territory_name": "Cícero Dantas",
+      "state_code": "BA",
+      "excerpts": [
+        "Naturais\n\n802.000,00   \n\n1.7.1.2.51.0.0.00.00 \nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM\n\n8.000,00   \n\n1.7.1.2.51.0.1.00.00 \nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n8.000,00   \n\n1.7.1.2.51.0.1.00.00 \n   Cota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n428.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo794.000,00  "
+      ],
+      "edition": "1.164",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907806/2021-12-16/2c20af4ec54ed9a4814ea2dbd5029877b889d020.txt"
+    },
+    {
+      "territory_id": "2907806",
+      "date": "2023-12-22",
+      "scraped_at": "2023-12-22T21:31:03.090706",
+      "url": "https://data.queridodiario.ok.org.br/2907806/2023-12-22/6dc75329ba1ba5fea1d31b6ce31b4e92b724cfbe.pdf",
+      "territory_name": "Cícero Dantas",
+      "state_code": "BA",
+      "excerpts": [
+        "Compensação Financeira pela Exploração de Recursos Minerais - CFEM380,00 340,00 525,00 505,00 390,00 365,00 355,00 470,00 5.000,00395,00 385,00335,00 555,00\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal380,00 340,00 525,00 505,00 390,00 365,00 355,00 470,00 5.000,00395,00 385,00335,00 555,00\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo81.092,00 72.556,00 112.035,00 107.767,00 83.226,00 77.891"
+      ],
+      "edition": "2.075",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907806/2023-12-22/6dc75329ba1ba5fea1d31b6ce31b4e92b724cfbe.txt"
+    },
+    {
+      "territory_id": "2907806",
+      "date": "2024-12-23",
+      "scraped_at": "2024-12-24T01:13:25.556534",
+      "url": "https://data.queridodiario.ok.org.br/2907806/2024-12-23/d1f42ff187aee744d5f529bcaaa4a06598c92b70.pdf",
+      "territory_name": "Cícero Dantas",
+      "state_code": "BA",
+      "excerpts": [
+        "00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM10.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal10.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal\n             \n\n1.708.000010.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo1.120.000,00   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte"
+      ],
+      "edition": "2.393",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907806/2024-12-23/d1f42ff187aee744d5f529bcaaa4a06598c92b70.txt"
+    },
+    {
+      "territory_id": "2907806",
+      "date": "2025-12-17",
+      "scraped_at": "2025-12-18T09:27:54.188876",
+      "url": "https://data.queridodiario.ok.org.br/2907806/2025-12-17/d3ba97f8387916e7e170ebbff09cc654ad52093b.pdf",
+      "territory_name": "Cícero Dantas",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM1.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n1.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n1.708.00001.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo1.416.000,00   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte"
+      ],
+      "edition": "2.855",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907806/2025-12-17/d3ba97f8387916e7e170ebbff09cc654ad52093b.txt"
+    },
+    {
+      "territory_id": "2907806",
+      "date": "2023-12-20",
+      "scraped_at": "2023-12-21T21:23:00.980919",
+      "url": "https://data.queridodiario.ok.org.br/2907806/2023-12-20/48d6631afdfe5b3ced464b7dcf30da7c6396e516.pdf",
+      "territory_name": "Cícero Dantas",
+      "state_code": "BA",
+      "excerpts": [
+        "00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM5.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal5.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal\n             \n\n1.708.00005.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo1.067.000,00   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte"
+      ],
+      "edition": "2.071",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907806/2023-12-20/48d6631afdfe5b3ced464b7dcf30da7c6396e516.txt"
+    },
+    {
+      "territory_id": "2907806",
+      "date": "2022-12-21",
+      "scraped_at": "2023-11-17T20:56:28.977569",
+      "url": "https://data.queridodiario.ok.org.br/2907806/2022-12-21/44859c95cb6c1532cf7477042ffdb4e9118abc5b.pdf",
+      "territory_name": "Cícero Dantas",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM2.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n2.000,00   \n\n1.7.1.2.51.0.1.00.00    Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais -\nCFEM - Principal\n\n1.708.00002.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo 1.010.000,00   \n\n1.7.1.2.52.1.0.00.00 Cota-parte da Compensação"
+      ],
+      "edition": "1.491",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2907806/2022-12-21/44859c95cb6c1532cf7477042ffdb4e9118abc5b.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2907806",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2907806",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 15,
+  "gazettes": [
+    {
+      "territory_id": "2927705",
+      "date": "2022-05-30",
+      "scraped_at": "2023-10-18T23:38:49.402331",
+      "url": "https://data.queridodiario.ok.org.br/2927705/2022-05-30/cd9c8648e4fde5f9efb1f6500e6012001241b6fb.pdf",
+      "territory_name": "Santa Cruz Cabrália",
+      "state_code": "BA",
+      "excerpts": [
+        "199,33 123.232,41 16,94 -35,12\nIPVA 446.103,24 245.379,34 204.234,44 44,99 16,77\nDedução FUNDEB -89.220,38 -49.075,57 -40.846,63 45,00 16,77\nITR 33.289,82 36.988,64 32.643,90 -11,11 11,75\nDedução FUNDEB -6.657,93 -7.397,69 -6.528,74 -11,11 11,75\n\nFEP/CFEM/ROYALTES/REC.HIDRICOS 257.011,25 144.452,29 132.859,27 43,80 8,03\nCIDE 14.978,48 5.546,37 12.923,00 62,97 -133,00\nDEMAIS TRANSF.UNIÃO 19.554,28 20.781,64 121.379,65 -6,28 -484,07\nTRANSF.ESTADO SAUDE 86.878,50 86.878,50 21.934,61 0,00 74,75\nTRANSF.ESTADO"
+      ],
+      "edition": "1.166",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927705/2022-05-30/cd9c8648e4fde5f9efb1f6500e6012001241b6fb.txt"
+    },
+    {
+      "territory_id": "2927705",
+      "date": "2023-10-24",
+      "scraped_at": "2023-10-24T22:55:15.438545",
+      "url": "https://data.queridodiario.ok.org.br/2927705/2023-10-24/8964712a8cd5ceb6df33087669db973facaf3566.pdf",
+      "territory_name": "Santa Cruz Cabrália",
+      "state_code": "BA",
+      "excerpts": [
+        "109.798,06 91.199,33 25,13 37,81\nIPVA 558.050,08 446.103,24 245.379,34 20,06 56,03\nDedução FUNDEB -111.609,76 -89.220,38 -49.075,57 20,06 56,03\nITR 35.216,96 33.289,82 36.988,64 5,47 -5,03\nDedução FUNDEB -7.043,34 -6.657,93 -7.397,69 5,47 -5,03\n\nFEP/CFEM/ROYALTES/REC.HIDRICOS 260.232,30 257.011,25 144.452,29 1,24 44,49\nCIDE 149,50 14.978,48 5.546,37 -9.919,05 -3.609,95\nDEMAIS TRANSF.UNIÃO 26.891,38 19.554,28 20.781,64 27,28 22,72\nTRANSF.ESTADO SAUDE 73.687,50 86.878,50 86.878,50 -17,90 -17,90\nTRANSF"
+      ],
+      "edition": "1.715",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927705/2023-10-24/8964712a8cd5ceb6df33087669db973facaf3566.txt"
+    },
+    {
+      "territory_id": "2927705",
+      "date": "2022-10-05",
+      "scraped_at": "2023-10-18T23:36:19.302143",
+      "url": "https://data.queridodiario.ok.org.br/2927705/2022-10-05/c2e375971757c0890bbf95ddaa21862badfb1a46.pdf",
+      "territory_name": "Santa Cruz Cabrália",
+      "state_code": "BA",
+      "excerpts": [
+        "17,97 9,17\n\n3. TRANSFERÊNCIAS\n\n15\n\n16\n\nEdição 1.274 | Ano 6\n05 de outubro de 2022\n\nPágina 14\n\nCertificação Digital: XH2Q0H2F-6JEMYU61-VHX8DJDS-GYVOQIPU\nVersão eletrônica disponível em: http://www.santacruzcabralia.ba.gov.br\n\n\n\n30/09/2022\n\n9\n\n17\n\nFEP/CFEM/ROYALTES/REC.HIDRICOS 569.133,53 337.049,22 216.476,32 40,78 35,77\nCIDE 21.488,66 9.046,26 16.831,83 57,90 -86,06\nDEMAIS TRANSF.UNIÃO 451.818,59 41.563,28 4.850.645,23 90,80 -11.570,51\nTRANSF.ESTADO SAUDE 169.257,00 231.676,00 86.622,11 -36,88 62,61"
+      ],
+      "edition": "1.274",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927705/2022-10-05/c2e375971757c0890bbf95ddaa21862badfb1a46.txt"
+    },
+    {
+      "territory_id": "2927705",
+      "date": "2023-10-23",
+      "scraped_at": "2023-10-23T22:31:13.141429",
+      "url": "https://data.queridodiario.ok.org.br/2927705/2023-10-23/f988a75a2e103eb94d683ceef91cf3272f6ccfb5.pdf",
+      "territory_name": "Santa Cruz Cabrália",
+      "state_code": "BA",
+      "excerpts": [
+        "56 -54,70\nIPVA 1.048.965,45 1.224.631,18 912.984,74 -16,75 12,96\nDedução FUNDEB -209.792,50 -244.925,32 -182.595,99 -16,75 12,96\nITR 41.169,74 155.096,25 126.205,47 -276,72 -206,55\nDedução FUNDEB -8.233,85 -31.019,11 -25.240,97 -276,73 -206,55\n\nFEP/CFEM/ROYALTES/REC.HIDRICOS 443.758,10 874.143,77 561.156,79 -96,99 -26,46\nCIDE 149,50 22.911,95 14.700,70 -15.225,72 -9.733,24\nDEMAIS TRANSF.UNIÃO 2.173.467,00 661.948,25 62.334,92 69,54 97,13\nTRANSF.ESTADO SAUDE 165.995,93 340.014,00 472.473,50 -104,83"
+      ],
+      "edition": "1.710",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927705/2023-10-23/f988a75a2e103eb94d683ceef91cf3272f6ccfb5.txt"
+    },
+    {
+      "territory_id": "2927705",
+      "date": "2022-03-17",
+      "scraped_at": "2023-10-18T23:39:47.588371",
+      "url": "https://data.queridodiario.ok.org.br/2927705/2022-03-17/01abd949e3543a6ea688254bfdc95ea4518255e4.pdf",
+      "territory_name": "Santa Cruz Cabrália",
+      "state_code": "BA",
+      "excerpts": [
+        "716,24 0,00\nSAÚDE - AFM - LC 173/2020 0,00 2.430.978,46 0,00\nSAÚDE - AFM - ´COVID-19 0,00 2.355.616,16 0,00\nSOCIAL - AFM - LC 173/2020 0,00 82.084,92 0,00\nSOCIAL - AFM - ´COVID-19 0,00 171.300,00 0,00\nSOCIAL - COMARCA TJBA 0,00 122.742,92 0,00\nFEP/CFEM/ROYALTES/REC.HIDRICOS 561.156,79 342.939,40 38,89\nFCBA 0,00 0,00 0,00\nCIDE 14.700,70 22.616,25 -53,84\nDEMAIS TRANSF.UNIÃO 0,00 334.374,24 0,00\nTRANSF.ESTADO SAUDE 472.473,50 313.234,69 33,70\nTRANSF.ESTADO ASSIST. SOCIAL 150.420,00 62.405,00 58,51\nTRANSF"
+      ],
+      "edition": "1.092",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927705/2022-03-17/01abd949e3543a6ea688254bfdc95ea4518255e4.txt"
+    },
+    {
+      "territory_id": "2927705",
+      "date": "2021-02-26",
+      "scraped_at": "2023-10-19T23:19:42.900624",
+      "url": "https://data.queridodiario.ok.org.br/2927705/2021-02-26/f04fc3fbf432e616859492b133c4160c3e25879f.pdf",
+      "territory_name": "Santa Cruz Cabrália",
+      "state_code": "BA",
+      "excerpts": [
+        "100,00 0,00\nSAÚDE - AFM - ´COVID-19 2.355.616,16 0,00 0,00 100,00 0,00\nSOCIAL - AFM - LC 173/2020 82.084,92 0,00 0,00 100,00 0,00\nSOCIAL - AFM - ́ COVID-19 171.300,00 0,00 0,00 100,00 0,00\nSOCIAL - COMARCA TJBA 122.742,92 0,00 0,00 100,00 0,00\nFEP/CFEM/ROYALTES/REC.HIDRICOS 342.939,40 350.536,40 350.972,74 -2,22 -0,12\nFCBA 0,00 0,00 23.403,00 0,00 0,00\nCIDE 22.616,25 27.226,60 45.393,21 -20,39 -66,72\nDOAÇÃO BB x FMDCA 40.000,00 576,64 493,85 98,56 40.000,00\nDEMAIS TRANSF.UNIÃO 294.374,24 0,00 0,00"
+      ],
+      "edition": "770",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927705/2021-02-26/f04fc3fbf432e616859492b133c4160c3e25879f.txt"
+    },
+    {
+      "territory_id": "2927705",
+      "date": "2022-08-17",
+      "scraped_at": "2023-10-18T23:37:05.476673",
+      "url": "https://data.queridodiario.ok.org.br/2927705/2022-08-17/f2b0f653e1d8b692798eb4deceed33789853ae1f.pdf",
+      "territory_name": "Santa Cruz Cabrália",
+      "state_code": "BA",
+      "excerpts": [
+        "Remuneração de Depósitos de Recursos Vinculados - Royalties - Principal 3.000,00 3.000,00 3 086,32 16 878.43 13.878,43 \n\n171251010000 - Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - 10 000,00 10.000,00 1.596,90 9.361,61 -638,39 \nCFEM - Principal \n\n171252110000 - Cota-parte da Compensação Financeira pela Produção de Petróleo — Lei n° 7.990/89 - 18 000.00 18.000.00 2.229.91 14.380,37 -3.619,63 \nPrincipal \n\n171252410000 - Cota-Parte do Fundo Especial do Petróleo — FEP - Principal"
+      ],
+      "edition": "1.237",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927705/2022-08-17/f2b0f653e1d8b692798eb4deceed33789853ae1f.txt"
+    },
+    {
+      "territory_id": "2927705",
+      "date": "2026-01-09",
+      "scraped_at": "2026-01-10T02:43:02.592327",
+      "url": "https://data.queridodiario.ok.org.br/2927705/2026-01-09/aa45d4fd6c862c4ffe44bf1f56b088aad003b3d9.pdf",
+      "territory_name": "Santa Cruz Cabrália",
+      "state_code": "BA",
+      "excerpts": [
+        "78 187.154,28 175.920,53 175.920,53 187.378,95 187.378,95 1.123.375,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n9.749,85 8.704,85 8.182,35 8.182,35 8.715,30 8.715,30 52.250,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n9.749,85 8.704,85 8.182,35 8.182,35 8.715,30 8.715,30 52.250,00\n\n171251010000 Transferência da União Referente à Compensação Financeira de Recursos\nMinerais"
+      ],
+      "edition": "2.525",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927705/2026-01-09/aa45d4fd6c862c4ffe44bf1f56b088aad003b3d9.txt"
+    },
+    {
+      "territory_id": "2927705",
+      "date": "2021-05-31",
+      "scraped_at": "2023-10-19T23:18:37.177835",
+      "url": "https://data.queridodiario.ok.org.br/2927705/2021-05-31/89c62b7f56ad539d76b207603865aea80e06ed92.pdf",
+      "territory_name": "Santa Cruz Cabrália",
+      "state_code": "BA",
+      "excerpts": [
+        "5YHEROAV-WAIEZDI8-BVKQQOTC-XHZBMSOO\nVersão eletrônica disponível em: http://www.santacruzcabralia.ba.gov.br\n\n\n\nITR 36.988,64 32.643,90 8.568,22 24.345,58 11,75 73,75 -184,14\nDedução FUNDEB -7.397,69 -6.528,74 -1.713,61 -4.869,06 11,75 73,75 -184,14\nFEP/CFEM/ROYALTES/REC.HIDRICOS 144.452,29 132.859,27 106.421,01 97.515,87 8,03 19,90 8,37\nFCBA 0,00 0,00 0,00 3.302,00 0,00 0,00 0,00\nCIDE 5.546,37 12.923,00 14.254,85 26.752,58 -133,00 -10,31 -87,67\nDEMAIS TRANSF.UNIÃO 20.781,64 121.379,65 1.119,39 8.934,09"
+      ],
+      "edition": "848",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927705/2021-05-31/89c62b7f56ad539d76b207603865aea80e06ed92.txt"
+    },
+    {
+      "territory_id": "2927705",
+      "date": "2021-09-27",
+      "scraped_at": "2023-10-18T23:43:06.175269",
+      "url": "https://data.queridodiario.ok.org.br/2927705/2021-09-27/f10ddcf086c3858293d7df364c0958619caaf895.pdf",
+      "territory_name": "Santa Cruz Cabrália",
+      "state_code": "BA",
+      "excerpts": [
+        "´COVID-19 0,00 1.592.411,68 0,00 0,00 0,00 0,00 0,00\nSOCIAL - AFM - LC 173/2020 0,00 61.742,58 0,00 0,00 0,00 0,00 0,00\nSOCIAL - AFM - ´COVID-19 0,00 171.300,00 0,00 0,00 0,00 0,00 0,00\nSOCIAL - COMARCA TJBA 0,00 122.742,92 0,00 0,00 0,00 0,00 0,00\nFEP/CFEM/ROYALTES/REC.HIDRICOS 337.049,22 216.476,32 229.104,27 211.479,75 35,77 32,03 7,69\nFCBA 0,00 0,00 0,00 8.347,28 0,00 0,00 0,00\nCIDE 9.046,26 16.831,83 20.815,66 39.141,70 -86,06 -130,10 -88,04\nDEMAIS TRANSF.UNIÃO 0,00 0,00 0,00 182.725,69 0,00 0,00"
+      ],
+      "edition": "935",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2927705/2021-09-27/f10ddcf086c3858293d7df364c0958619caaf895.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2927705",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2927705",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

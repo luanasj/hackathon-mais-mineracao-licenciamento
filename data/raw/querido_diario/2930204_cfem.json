@@ -1,0 +1,88 @@
+{
+  "total_gazettes": 5,
+  "gazettes": [
+    {
+      "territory_id": "2930204",
+      "date": "2025-12-18",
+      "scraped_at": "2025-12-19T03:14:14.506833",
+      "url": "https://data.queridodiario.ok.org.br/2930204/2025-12-18/28cf6f305cb69f7d09d757b492849c0d03a96553.pdf",
+      "territory_name": "Sento Sé",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos Hídricos 14.000.000,00\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 13.000.000,00\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 13.000.000,00\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 1.400.000,00\n\n1.7.1.2.52.4.0.00.00                Cota-Parte do Fundo"
+      ],
+      "edition": "2.066",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930204/2025-12-18/28cf6f305cb69f7d09d757b492849c0d03a96553.txt"
+    },
+    {
+      "territory_id": "2930204",
+      "date": "2024-12-24",
+      "scraped_at": "2024-12-25T01:23:30.016382",
+      "url": "https://data.queridodiario.ok.org.br/2930204/2024-12-24/b49c6f18825fa4edd1733381e433eb188aca043c.pdf",
+      "territory_name": "Sento Sé",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de Recursos Hídricos \n\n___________ Cota-parte da Compensação Financeira pela Exploração de Recursos F\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais \n\nCota-parte da CompensacãoJ^inanceira de Recursos Minerais - CFEM - Pri \nCota-parte da_Compensação Financeira pela Produção de Petróleo \n\nCota-Parte do Fundo Especial do Petróleo - FEP\n\nCota-Partejlo Fundo Especial do Petróleo FEP PrincipalTransferências de Recursos do Sistema Único de Saúde ^SUS   \n\nTransferências"
+      ],
+      "edition": "1.715",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930204/2024-12-24/b49c6f18825fa4edd1733381e433eb188aca043c.txt"
+    },
+    {
+      "territory_id": "2930204",
+      "date": "2022-12-22",
+      "scraped_at": "2023-10-18T23:52:26.611561",
+      "url": "https://data.queridodiario.ok.org.br/2930204/2022-12-22/4a98fbf556f9d8b5abf1cf094413c68388a14a90.pdf",
+      "territory_name": "Sento Sé",
+      "state_code": "BA",
+      "excerpts": [
+        "Territorial Rural - Principal_______\n\nTransferências das Compensações Financeiras pela Exploração de Recursos Na \nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais \n\nCota-parte da Compensação Financeira de Recursos Minerais - CFEM - Pri \nCota-parte da Compensação Financeira pela Produção de Petróleo\n\n______Cota-Parte do Fundo Especial do Petróleo - FEP__________________________\nCota-Parte do Fundo Especial do Petróleo FEP Principal \n\nTransferências de Recursos do Sistema Único"
+      ],
+      "edition": "1.153",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930204/2022-12-22/4a98fbf556f9d8b5abf1cf094413c68388a14a90.txt"
+    },
+    {
+      "territory_id": "2930204",
+      "date": "2023-12-27",
+      "scraped_at": "2023-12-27T22:14:48.429198",
+      "url": "https://data.queridodiario.ok.org.br/2930204/2023-12-27/800d8627cfe9ee50c8bbd90e2cba631203ca2518.pdf",
+      "territory_name": "Sento Sé",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM702.405,00 935.330,00 1.079.925,00 873.015,00 898.425,00 1.560.900,00 6.050.000,00\n\n1.7.1.2.51.0.1.00.00             Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal702.405,00 935.330,00 1.079.925,00 873.015,00 898.425,00 1.560.900,00 6.050.000,00\n\n1.7.1.2.51.0.1.00.00 Transferência da União Referente à Compensação Financeira de Recursos Minerais 702.405,00 935.330,00 1.079.925,00 873.015,00 898.425"
+      ],
+      "edition": "1.465",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930204/2023-12-27/800d8627cfe9ee50c8bbd90e2cba631203ca2518.txt"
+    },
+    {
+      "territory_id": "2930204",
+      "date": "2023-12-29",
+      "scraped_at": "2023-12-29T22:16:42.727178",
+      "url": "https://data.queridodiario.ok.org.br/2930204/2023-12-29/4d67741e436ae1902206e768ec12b6f8f0a25a48.pdf",
+      "territory_name": "Sento Sé",
+      "state_code": "BA",
+      "excerpts": [
+        "Financeira pela Exploração de Recursos Hídricos \n\nCota-parte da Compensação Financeira pela Exploração de Recursos F  \n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais \n\nCota-parte da Compensação Financeira de Recursos Minerais - CFEM - Pri \n\nCota-parte da Compensação Financeira pela Produção de Petróleo__\n\nCota-Parte do Fundo Especial do Petróleo^FEP\n\n_________Cota-Parte do Fundo Especial do Petróleo FEP Principal\nTransferências de Recursos do Sistema Único de Saúde - SUS__  __________"
+      ],
+      "edition": "1.466",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930204/2023-12-29/4d67741e436ae1902206e768ec12b6f8f0a25a48.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2930204",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2930204",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

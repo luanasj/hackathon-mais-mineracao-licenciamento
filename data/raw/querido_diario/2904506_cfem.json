@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 10,
+  "gazettes": [
+    {
+      "territory_id": "2904506",
+      "date": "2021-12-22",
+      "scraped_at": "2023-10-18T23:17:15.070162",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2021-12-22/5b26a5eeab3fd442eca25ffa5194df3f54c8cfd0.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "20 17.870,20 17.870,20 17.870,20 214.271,00\n\n171251000000      Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM\n\n1.867,59 1.867,59 1.867,59 1.867,59 1.867,59 1.867,59 1.867,59 1.867,59 1.869,83 1.869,83 1.869,83 1.869,83 22.420,00\n\n171251010000        Cota-parte da Compensação Financeira\npela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n1.867,59 1.867,59 1.867,59 1.867,59 1.867,59 1.867,59 1.867,59 1.867,59 1.869,83 1.869,83 1.869,83 1.869,83 22.420,00\n\n171251010000"
+      ],
+      "edition": "590",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2021-12-22/5b26a5eeab3fd442eca25ffa5194df3f54c8cfd0.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2023-12-27",
+      "scraped_at": "2023-12-27T21:29:43.892861",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2023-12-27/fda4693c8335cf1c3823a80dd773a93bf28744a5.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "96.522,20 96.522,20 96.522,20 1.157.340,58\n\n171251000000      Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM\n\n1.957,37 1.957,37 1.957,37 1.957,37 1.957,37 1.957,37 1.957,37 1.957,37 1.959,72 1.959,72 1.959,72 1.959,72 23.497,88\n\n171251010000        Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM - Principal\n\n1.957,37 1.957,37 1.957,37 1.957,37 1.957,37 1.957,37 1.957,37 1.957,37 1.959,72 1.959,72 1.959,72 1.959,72 23.497,88\n\n171251010000"
+      ],
+      "edition": "1.590",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2023-12-27/fda4693c8335cf1c3823a80dd773a93bf28744a5.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2024-12-04",
+      "scraped_at": "2024-12-05T00:43:39.317149",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2024-12-04/43697fc32814bb53d735b3bbc74687884ae581c1.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "91 47.467,39 63.702,81 82.415,91 652.024,63\n\n171251000000      Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM\n\n1.949,15 1.996,03 1.806,05 1.704,89 2.139,13 1.746,83 2.114,46 1.978,76 1.912,14 1.796,18 2.410,53 3.118,64 24.672,77\n\n171251010000        Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM - Principal\n\n1.949,15 1.996,03 1.806,05 1.704,89 2.139,13 1.746,83 2.114,46 1.978,76 1.912,14 1.796,18 2.410,53 3.118,64 24.672,77\n\n171251010000"
+      ],
+      "edition": "2.001",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2024-12-04/43697fc32814bb53d735b3bbc74687884ae581c1.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2021-11-18",
+      "scraped_at": "2023-10-18T23:17:32.366246",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2021-11-18/1eeb4c5066a7ff22c0f0d615bd1a970ea5b30c5e.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "de Recursos\nNaturais\n\n214.271,00 220.570,00 220.570,00 227.055,00 882.466,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais -\nCFEM\n\n22.420,00 23.079,00 23.079,00 23.758,00 92.336,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais\n- CFEM - Principal\n\n0142000 22.420,00 23.079,00 23.079,00 23.758,00 92.336,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 190.851,00 196.462"
+      ],
+      "edition": "561",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2021-11-18/1eeb4c5066a7ff22c0f0d615bd1a970ea5b30c5e.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2025-12-11",
+      "scraped_at": "2025-12-12T02:26:20.890961",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2025-12-11/cc8d360acf8d297b2571d47da6567867900223ee.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "19 52.465,13 57.386,00 80.977,22 723.657,00\n\n171251000000      Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM\n\n2.100,28 1.996,22 1.911,33 1.900,38 2.639,72 2.196,12 2.259,10 2.491,85 2.667,10 1.985,27 2.171,47 3.064,16 27.383,00\n\n171251010000        Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM - Principal\n\n2.100,28 1.996,22 1.911,33 1.900,38 2.639,72 2.196,12 2.259,10 2.491,85 2.667,10 1.985,27 2.171,47 3.064,16 27.383,00\n\n171251010000"
+      ],
+      "edition": "2.684",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2025-12-11/cc8d360acf8d297b2571d47da6567867900223ee.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2023-12-18",
+      "scraped_at": "2023-12-18T21:12:29.892396",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2023-12-18/11090020a12ae74e33ee4e2f13a390dd187690c8.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "Propriedade Territorial Rural - Principal -753,85\n15001001 Recurso não Vinculado de Imposto destinado a despesa com Manutenção e\nDesenvolvimento do  Ensino -753,85\n\n171251010000 - Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal 23.497,88\n17080000 Transferência da União Referente à Compensação Financeira de Recursos Minerais 23.497,88\n\n171252210000 - Cota-parte pelo Excedente da Produção do Petróleo – Lei nº 9.478/97, artigo 49, I e II - Principal 55.926,52\n17080000"
+      ],
+      "edition": "1.575",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2023-12-18/11090020a12ae74e33ee4e2f13a390dd187690c8.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2025-12-03",
+      "scraped_at": "2025-12-05T01:18:33.506851",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2025-12-03/1379888d8e32aa2c416cce96a0957d45614faa91.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "   Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n870.191,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n27.383,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n27.383,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 696.274,00\n171252200000       Cota-parte pelo Excedente da Produção do Petróleo – Lei nº"
+      ],
+      "edition": "2.676",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2025-12-03/1379888d8e32aa2c416cce96a0957d45614faa91.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2022-12-14",
+      "scraped_at": "2023-10-18T23:12:05.278301",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2022-12-14/5bde165c2b7954ca159b204367c6d4f56fb48642.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "Propriedade Territorial Rural - Principal -729,20\n15001001 Recurso não Vinculado de Imposto destinado a despesa com Manutenção e\nDesenvolvimento do  Ensino -729,20\n\n171251010000 - Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal 22.729,62\n17080000 Transferência da União Referente à Compensação Financeira de Recursos Minerais 22.729,62\n\n171252210000 - Cota-parte pelo Excedente da Produção do Petróleo – Lei nº 9.478/97, artigo 49, I e II - Principal 1.000,00\n17080000"
+      ],
+      "edition": "1.000",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2022-12-14/5bde165c2b7954ca159b204367c6d4f56fb48642.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2024-11-06",
+      "scraped_at": "2024-11-07T01:26:24.489517",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2024-11-06/ee9a7256f5d10f19bc3f72051b598a3223b2bcae.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "   Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n784.053,59\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n24.672,77\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n24.672,77\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 627.351,86\n171252200000       Cota-parte pelo Excedente da Produção do Petróleo – Lei nº"
+      ],
+      "edition": "1.967",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2024-11-06/ee9a7256f5d10f19bc3f72051b598a3223b2bcae.txt"
+    },
+    {
+      "territory_id": "2904506",
+      "date": "2021-12-16",
+      "scraped_at": "2023-10-18T23:17:15.083537",
+      "url": "https://data.queridodiario.ok.org.br/2904506/2021-12-16/464140ca082b706fcb2ff58f889b94ea65174380.pdf",
+      "territory_name": "Brotas de Macaúbas",
+      "state_code": "BA",
+      "excerpts": [
+        "   Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n214.271,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n22.420,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n22.420,00\n\nContabilis - Gestão Pública /   / Página 2 de 6\n\nEdição 588 | Ano 3\n16 de dezembro de 2021\n\nPágina 55\n\nCertificação Digital: YS3YCIYC-HDKIFLVR-BOXSYPQU-C5ZE9ECK\nVersão"
+      ],
+      "edition": "588",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2904506/2021-12-16/464140ca082b706fcb2ff58f889b94ea65174380.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2904506",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2904506",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

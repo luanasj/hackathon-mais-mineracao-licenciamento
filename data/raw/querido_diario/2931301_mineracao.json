@@ -1,0 +1,74 @@
+{
+  "total_gazettes": 4,
+  "gazettes": [
+    {
+      "territory_id": "2931301",
+      "date": "2021-03-29",
+      "scraped_at": "2023-10-25T09:35:44.938195",
+      "url": "https://data.queridodiario.ok.org.br/2931301/2021-03-29/e6d841df690dd2de7ec1c758529f0e47ece44a48.pdf",
+      "territory_name": "Tapiramutá",
+      "state_code": "BA",
+      "excerpts": [
+        "SAÚDE DE TAPIRAMUTÁ \n\nRua Mariano Alves - SN CEP 44840-000 – CNPJ 11.410.111/0001-92 \nContato: 74 98116-5081 E-mail: sec.saudetapiramut@gmail.com \n\n \n\nNOME GENÉRICO APRESENTAÇÃO NOME COMERCIAL \nSais para Reidratação \n\nOral \n\nPó Rehidrat \n\n \n4.3.2 Minerais  \n\nNOME GENÉRICO APRESENTAÇÃO NOME COMERCIAL \nSulfato Ferroso 40mg de \n\nFerro \n\nComprimido Fersil \n\nSulfato Ferroso \n\n125mg/ml \n\nComprimido  Fersil \n\n \n4.3.3 Suplementos Nutricionais  \n\nNOME GENÉRICO APRESENTAÇÃO NOME COMERCIAL \nÁcido Fólico 5mg"
+      ],
+      "edition": "77",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931301/2021-03-29/e6d841df690dd2de7ec1c758529f0e47ece44a48.txt"
+    },
+    {
+      "territory_id": "2931301",
+      "date": "2025-12-10",
+      "scraped_at": "2025-12-11T02:05:13.523779",
+      "url": "https://data.queridodiario.ok.org.br/2931301/2025-12-10/5db552e39a7fc63c3705c8e2f693fe5877e27e4f.pdf",
+      "territory_name": "Tapiramutá",
+      "state_code": "BA",
+      "excerpts": [
+        "000,00 0,00Transferência Especial da União \n\n1707 11.000,00 11.000,00 0,00Transferências da União - inciso I do art. 5º da Lei Complementar 173/2020 \n\n1708 2.000,00 2.000,00 0,00Transferência da União Referente à Compensação Financeira de Recursos\nMinerais \n\n1715 101.000,00 101.000,00 0,00Transferências Destinadas ao Setor Cultural - LC nº 195/2022 - Art. 5º -\nAudiovisual \n\n1716 51.000,00 51.000,00 0,00Transferências Destinadas ao Setor cultural - LC nº 195/2022 - Art. 8º -\nDemais Setoresda Cultura"
+      ],
+      "edition": "2.465",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931301/2025-12-10/5db552e39a7fc63c3705c8e2f693fe5877e27e4f.txt"
+    },
+    {
+      "territory_id": "2931301",
+      "date": "2024-12-18",
+      "scraped_at": "2024-12-19T06:45:13.537882",
+      "url": "https://data.queridodiario.ok.org.br/2931301/2024-12-18/353f4e4218616c0f552ca5b54b4a4e3e9bc14759.pdf",
+      "territory_name": "Tapiramutá",
+      "state_code": "BA",
+      "excerpts": [
+        "das Compensações Financeiras pela Exploração de Recursos\nNaturais              \n\n851.000,00   \n\n1.7.1.2.51.0.0.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais\n- CFEM              \n\n1.000,00   \n\n1.7.1.2.51.0.1.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal              \n\n1.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo              850.000,00   \n\n1.7.1.2.52.2.0.00.00 "
+      ],
+      "edition": "1.955",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931301/2024-12-18/353f4e4218616c0f552ca5b54b4a4e3e9bc14759.txt"
+    },
+    {
+      "territory_id": "2931301",
+      "date": "2024-12-17",
+      "scraped_at": "2024-12-18T01:36:32.833969",
+      "url": "https://data.queridodiario.ok.org.br/2931301/2024-12-17/d393bc3917f059873869a11ed1236e8d1092dbd2.pdf",
+      "territory_name": "Tapiramutá",
+      "state_code": "BA",
+      "excerpts": [
+        "das Compensações Financeiras pela Exploração de Recursos\nNaturais              \n\n851.000,00   \n\n1.7.1.2.51.0.0.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais\n- CFEM              \n\n1.000,00   \n\n1.7.1.2.51.0.1.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal              \n\n1.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo              850.000,00   \n\n1.7.1.2.52.2.0.00.00 "
+      ],
+      "edition": "1.953",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931301/2024-12-17/d393bc3917f059873869a11ed1236e8d1092dbd2.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2931301",
+    "termo": "mineracao",
+    "params": {
+      "territory_ids": "2931301",
+      "querystring": "mineracao",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

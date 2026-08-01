@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 12,
+  "gazettes": [
+    {
+      "territory_id": "2919603",
+      "date": "2024-11-01",
+      "scraped_at": "2024-11-02T02:23:44.272382",
+      "url": "https://data.queridodiario.ok.org.br/2919603/2024-11-01/8933120a63db59c509b5fe7c234651d951e94cca.pdf",
+      "territory_name": "Macajuba",
+      "state_code": "BA",
+      "excerpts": [
+        "663,00 84.469,0073.499,00 121.767,00\n\n1.7.1.2.51.0.0.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            9.120,00 8.160,00 12.600,00 12.120,00 9.360,00 8.760,00 8.520,00 11.280,00 120.000,009.480,00 9.240,008.040,00 13.320,00\n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal            9.120,00 8.160,00 12.600,00 12.120,00 9.360,00 8.760,00 8.520,00 11.280,00 120.000,009.480,00 9.240,008.040,00"
+      ],
+      "edition": "2.972",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919603/2024-11-01/8933120a63db59c509b5fe7c234651d951e94cca.txt"
+    },
+    {
+      "territory_id": "2919603",
+      "date": "2025-12-16",
+      "scraped_at": "2025-12-17T02:10:09.145383",
+      "url": "https://data.queridodiario.ok.org.br/2919603/2025-12-16/09a18a797031d7f70cc8c2341a6c8ed7cd45fbd0.pdf",
+      "territory_name": "Macajuba",
+      "state_code": "BA",
+      "excerpts": [
+        "400,0063.900,00 96.300,00\n\n1.7.1.2.51.0.0.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            17.200,00 17.800,00 15.800,00 18.200,00 15.000,00 18.600,00 15.400,00 14.600,00 200.000,0016.600,00 15.200,0014.200,00 21.400,00\n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            17.200,00 17.800,00 15.800,00 18.200,00 15.000,00 18.600,00 15.400,00 14.600,00 200.000,0016.600,00 15"
+      ],
+      "edition": "3.443",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919603/2025-12-16/09a18a797031d7f70cc8c2341a6c8ed7cd45fbd0.txt"
+    },
+    {
+      "territory_id": "2919603",
+      "date": "2021-12-14",
+      "scraped_at": "2023-10-16T22:00:35.528683",
+      "url": "https://data.queridodiario.ok.org.br/2919603/2021-12-14/855939105ca05ca401ec729c94c44348520f0834.pdf",
+      "territory_name": "Macajuba",
+      "state_code": "BA",
+      "excerpts": [
+        "- ANEXO I  RECEITA - MENSAL / 2022\n\n(Código / Descrição) JANEIRO FEVEREIRO MAIO JUNHO JULHO AGOSTO SETEMBRO OUTUBRO NOVEMBRO DEZEMBRO TOTALMARÇO ABRIL\n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal9.200,00 7.000,00 8.200,00 9.000,00 7.800,00 7.200,00 8.800,00 7.400,00 100.000,007.000,00 9.000,006.300,00 13.100,00\n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo30.360,00 23.100,00 27.060,00 29.700"
+      ],
+      "edition": "1.890",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919603/2021-12-14/855939105ca05ca401ec729c94c44348520f0834.txt"
+    },
+    {
+      "territory_id": "2919603",
+      "date": "2022-11-09",
+      "scraped_at": "2023-10-16T21:57:35.104567",
+      "url": "https://data.queridodiario.ok.org.br/2919603/2022-11-09/7d0fdf505bef2183ccdf087819cbe8c9bf648b74.pdf",
+      "territory_name": "Macajuba",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de Recursos Minerais - CFEM3.680,00 2.800,00 3.280,00 3.600,00 3.120,00 2.880,00 3.520,00 2.960,00 40.000,002.800,00 3.600,002.520,00 5.240,00\n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal3.680,00 2.800,00 3.280,00 3.600,00 3.120,00 2.880,00 3.520,00 2.960,00 40.000,002.800,00 3.600,002.520,00 5.240,00\n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo41.400,00 31.500,00 36.900,00 40.500"
+      ],
+      "edition": "2.136",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919603/2022-11-09/7d0fdf505bef2183ccdf087819cbe8c9bf648b74.txt"
+    },
+    {
+      "territory_id": "2919603",
+      "date": "2023-11-28",
+      "scraped_at": "2023-11-28T21:49:13.005907",
+      "url": "https://data.queridodiario.ok.org.br/2919603/2023-11-28/10153a5d8e0c0cfb87d690f1ad5f834ba9da14ae.pdf",
+      "territory_name": "Macajuba",
+      "state_code": "BA",
+      "excerpts": [
+        "pela Exploração de Recursos Minerais - CFEM6.080,00 5.440,00 8.400,00 8.080,00 6.240,00 5.840,00 5.680,00 7.520,00 80.000,006.320,00 6.160,005.360,00 8.880,00\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal6.080,00 5.440,00 8.400,00 8.080,00 6.240,00 5.840,00 5.680,00 7.520,00 80.000,006.320,00 6.160,005.360,00 8.880,00\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo70.376,00 62.968,00 97.230,00 93.526"
+      ],
+      "edition": "2.571",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919603/2023-11-28/10153a5d8e0c0cfb87d690f1ad5f834ba9da14ae.txt"
+    },
+    {
+      "territory_id": "2919603",
+      "date": "2022-10-10",
+      "scraped_at": "2023-10-16T21:57:46.116991",
+      "url": "https://data.queridodiario.ok.org.br/2919603/2022-10-10/95145d960b6b0e59eab076be699e3729e81c90a5.pdf",
+      "territory_name": "Macajuba",
+      "state_code": "BA",
+      "excerpts": [
+        "Recursos Naturais \n\n40.000,00  1.7.1.2.51.0.0.00.00  Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM \n\n40.000,00  1.7.1.2.51.0.1.00.00  Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - \nPrincipal \n\n40.000,00  1.7.1.2.51.0.1.00.00 17080000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - \nCFEM - Principal \n\n450.000,00  1.7.1.2.52.0.0.00.00  Cota-parte da Compensação Financeira pela Produção de Petróleo \n\n50.000,00"
+      ],
+      "edition": "2.118",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919603/2022-10-10/95145d960b6b0e59eab076be699e3729e81c90a5.txt"
+    },
+    {
+      "territory_id": "2919603",
+      "date": "2021-12-09",
+      "scraped_at": "2023-10-16T22:00:37.144520",
+      "url": "https://data.queridodiario.ok.org.br/2919603/2021-12-09/0ec63c6483248c7fbf46021f479fa1e4242328a8.pdf",
+      "territory_name": "Macajuba",
+      "state_code": "BA",
+      "excerpts": [
+        "Naturais\n\n430.000,00   \n\n1.7.1.2.51.0.0.00.00 \nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM\n\n100.000,00   \n\n1.7.1.2.51.0.1.00.00 \nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n100.000,00   \n\n1.7.1.2.51.0.1.00.00 \n   Cota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n42100.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo330.000,00"
+      ],
+      "edition": "1.887",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919603/2021-12-09/0ec63c6483248c7fbf46021f479fa1e4242328a8.txt"
+    },
+    {
+      "territory_id": "2919603",
+      "date": "2021-12-08",
+      "scraped_at": "2023-10-16T22:00:37.152495",
+      "url": "https://data.queridodiario.ok.org.br/2919603/2021-12-08/f0acb0191c9c2f14c4206491d354a06dde7655e7.pdf",
+      "territory_name": "Macajuba",
+      "state_code": "BA",
+      "excerpts": [
+        "Naturais\n\n430.000,00   \n\n1.7.1.2.51.0.0.00.00 \nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM\n\n100.000,00   \n\n1.7.1.2.51.0.1.00.00 \nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n100.000,00   \n\n1.7.1.2.51.0.1.00.00 \n   Cota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n42100.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo330.000,00"
+      ],
+      "edition": "1.886",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919603/2021-12-08/f0acb0191c9c2f14c4206491d354a06dde7655e7.txt"
+    },
+    {
+      "territory_id": "2919603",
+      "date": "2023-11-24",
+      "scraped_at": "2023-11-24T21:45:49.400513",
+      "url": "https://data.queridodiario.ok.org.br/2919603/2023-11-24/7f3d05b5e8500db31226cbb23096ca5ed72d025b.pdf",
+      "territory_name": "Macajuba",
+      "state_code": "BA",
+      "excerpts": [
+        "(Anexo 02, Lei nº 4.320/64)  \n\nDesdobramento Fontes\nCategoria\n\nEconômica\nConta\n\nFonte de\nRecurso\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal80.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal\n             \n\n1.708.000080.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo926.000,00   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte da"
+      ],
+      "edition": "2.566",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919603/2023-11-24/7f3d05b5e8500db31226cbb23096ca5ed72d025b.txt"
+    },
+    {
+      "territory_id": "2919603",
+      "date": "2025-11-18",
+      "scraped_at": "2025-11-20T02:07:17.740785",
+      "url": "https://data.queridodiario.ok.org.br/2919603/2025-11-18/686a3f2a7dbfd59335b6580fb5743c67153d77de.pdf",
+      "territory_name": "Macajuba",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM200.000,00   \n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n200.000,00   \n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n1.708.0000200.000,00   \n\n1.7.1.2.52.0.0.00.0000 Cota-parte da Compensação Financeira pela Produção de Petróleo700.000,00   \n\n1.7.1.2.52.4.0.00.0000 Cota-Parte"
+      ],
+      "edition": "3.420",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919603/2025-11-18/686a3f2a7dbfd59335b6580fb5743c67153d77de.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2919603",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2919603",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

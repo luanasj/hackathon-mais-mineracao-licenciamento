@@ -1,0 +1,116 @@
+{
+  "total_gazettes": 7,
+  "gazettes": [
+    {
+      "territory_id": "2914703",
+      "date": "2024-12-26",
+      "scraped_at": "2024-12-27T01:29:42.564023",
+      "url": "https://data.queridodiario.ok.org.br/2914703/2024-12-26/e29f2ecefcea7623a30766f3a32d8424134d6894.pdf",
+      "territory_name": "Itaberaba",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências das Compensações Financeiras pela Exploração de Recursos Naturais 1.385.926,02\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 17.198,12\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 17.198,12\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 1.368.727,90\n\n1.7.1.2.52.3.0.00.00                Cota-parte pela Participação"
+      ],
+      "edition": "2.162",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2914703/2024-12-26/e29f2ecefcea7623a30766f3a32d8424134d6894.txt"
+    },
+    {
+      "territory_id": "2914703",
+      "date": "2022-12-29",
+      "scraped_at": "2023-10-28T05:49:54.582916",
+      "url": "https://data.queridodiario.ok.org.br/2914703/2022-12-29/3c3894e86cfb4a2ce71064fdac0431cfe2602773.pdf",
+      "territory_name": "Itaberaba",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências das Compensações Financeiras pela Exploração de Recursos Naturais 1.443.035,00\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 15.810,00\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 15.810,00\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 1.427.225,00\n\n1.7.1.2.52.3.0.00.00                Cota-parte pela Participação"
+      ],
+      "edition": "309",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2914703/2022-12-29/3c3894e86cfb4a2ce71064fdac0431cfe2602773.txt"
+    },
+    {
+      "territory_id": "2914703",
+      "date": "2023-12-18",
+      "scraped_at": "2023-12-18T21:40:01.350952",
+      "url": "https://data.queridodiario.ok.org.br/2914703/2023-12-18/1b7305bbb2e750f089b5878b0b7efe414f976ea5.pdf",
+      "territory_name": "Itaberaba",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências das Compensações Financeiras pela Exploração de Recursos Naturais 2.739.161,39\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 16.379,16\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 16.379,16\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 2.722.782,23\n\n1.7.1.2.52.3.0.00.00                Cota-parte pela Participação"
+      ],
+      "edition": "1.205",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2914703/2023-12-18/1b7305bbb2e750f089b5878b0b7efe414f976ea5.txt"
+    },
+    {
+      "territory_id": "2914703",
+      "date": "2022-12-27",
+      "scraped_at": "2023-10-28T05:50:01.249004",
+      "url": "https://data.queridodiario.ok.org.br/2914703/2022-12-27/ee0d1a0f0b18cd31c821b5b8062a2b7aaf7a209f.pdf",
+      "territory_name": "Itaberaba",
+      "state_code": "BA",
+      "excerpts": [
+        "Financeiras pela Exploração de Recursos Na 1.443.035,00    \n\n1.7.1.2.51.0.0.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais 15.810,00    \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Pri 15.810,00    \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo 1.427.225,00    \n\n1.7.1.2.52.3.0.00.00 Cota-parte pela Participação Especial - Lei nº 9.478/97, artigo 50 28.283,00    \n\n1.7.1.2.52.3.1.00.00 Cota-parte"
+      ],
+      "edition": "305",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2914703/2022-12-27/ee0d1a0f0b18cd31c821b5b8062a2b7aaf7a209f.txt"
+    },
+    {
+      "territory_id": "2914703",
+      "date": "2022-12-29",
+      "scraped_at": "2023-10-28T05:50:01.235217",
+      "url": "https://data.queridodiario.ok.org.br/2914703/2022-12-29/a269012c11a049d8c8a91dd7924e6a3796a08f1f.pdf",
+      "territory_name": "Itaberaba",
+      "state_code": "BA",
+      "excerpts": [
+        "00         Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM2.347,78 2.320,91 2.559,64 3.016,55 2.265,57 3.299,55 15.810,00\n\n1.7.1.2.51.0.1.00.00             Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal2.347,78 2.320,91 2.559,64 3.016,55 2.265,57 3.299,55 15.810,00\n\n1.7.1.2.51.0.1.00.00 Transf. da União Ref. à Compen. Finan. de Recursos Minerais 2.347,78 2.320,91 2.559,64 3.016,55 2.265,57 3.299,55 15.810,00\n\n1.7.1.2.52.0.0.00.00     "
+      ],
+      "edition": "313",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2914703/2022-12-29/a269012c11a049d8c8a91dd7924e6a3796a08f1f.txt"
+    },
+    {
+      "territory_id": "2914703",
+      "date": "2023-12-27",
+      "scraped_at": "2023-12-27T21:48:08.534887",
+      "url": "https://data.queridodiario.ok.org.br/2914703/2023-12-27/39c19690082ad59d04b8716c5157d59aebeb7c72.pdf",
+      "territory_name": "Itaberaba",
+      "state_code": "BA",
+      "excerpts": [
+        "00         Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM1.901,62 2.532,22 2.923,68 2.363,51 2.432,31 4.225,82 16.379,16\n\n1.7.1.2.51.0.1.00.00             Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal1.901,62 2.532,22 2.923,68 2.363,51 2.432,30 4.225,82 16.379,16\n\n1.7.1.2.51.0.1.00.00 Transf. da União Ref. à Compen. Finan. de Recursos Minerais 1.901,62 2.532,22 2.923,68 2.363,51 2.432,30 4.225,82 16.379,15\n\n1.7.1.2.52.0.0.00.00     "
+      ],
+      "edition": "1.225",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2914703/2023-12-27/39c19690082ad59d04b8716c5157d59aebeb7c72.txt"
+    },
+    {
+      "territory_id": "2914703",
+      "date": "2024-12-30",
+      "scraped_at": "2024-12-31T02:17:27.866270",
+      "url": "https://data.queridodiario.ok.org.br/2914703/2024-12-30/dcc78770f87708950489e96ba5af780dd737a5ad.pdf",
+      "territory_name": "Itaberaba",
+      "state_code": "BA",
+      "excerpts": [
+        "00         Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM1.996,70 2.658,83 3.069,86 2.481,69 2.553,92 4.437,11 17.198,12\n\n1.7.1.2.51.0.1.00.00             Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal1.996,70 2.658,83 3.069,86 2.481,69 2.553,92 4.437,11 17.198,12\n\n1.7.1.2.51.0.1.00.00 Transf. da União Ref. à Compen. Finan. de Recursos Minerais 1.996,70 2.658,83 3.069,86 2.481,69 2.553,92 4.437,11 17.198,11\n\n1.7.1.2.52.0.0.00.00     "
+      ],
+      "edition": "2.174",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2914703/2024-12-30/dcc78770f87708950489e96ba5af780dd737a5ad.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2914703",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2914703",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

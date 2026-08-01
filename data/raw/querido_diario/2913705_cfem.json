@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 10,
+  "gazettes": [
+    {
+      "territory_id": "2913705",
+      "date": "2023-01-26",
+      "scraped_at": "2023-11-17T21:31:57.722159",
+      "url": "https://data.queridodiario.ok.org.br/2913705/2023-01-26/b632c849dae2e03130cbe8f29c82d6a85f4b8fac.pdf",
+      "territory_name": "Inhambupe",
+      "state_code": "BA",
+      "excerpts": [
+        "2.415,70 2.415,70 2.415,70 2.415,70 2.415,70 2.427,30 29.000,00\n132101010228 RDB Recursos Vinculados - Royalties/FEP 416,50 416,50 416,50 416,50 416,50 416,50 416,50 418,50 416,50 416,50 416,50 416,50 5.000,00\n132101010229 RDB Recursos Vinculados - CFEM 83,30 83,30 83,30 83,30 83,70 83,30 83,30 83,30 83,30 83,30 83,30 83,30 1.000,00\n132101010230 RDB Recursos Vinculados - Emenda Parlamentar - Transferência Especial da União 83,30 83,70 83,30 83,30 83,30 83,30 83,30 83,30 83,30 83,30 83,30 83,30 1.000"
+      ],
+      "edition": "2.076",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913705/2023-01-26/b632c849dae2e03130cbe8f29c82d6a85f4b8fac.txt"
+    },
+    {
+      "territory_id": "2913705",
+      "date": "2024-08-28",
+      "scraped_at": "2024-08-29T00:37:55.581176",
+      "url": "https://data.queridodiario.ok.org.br/2913705/2024-08-28/e334be15d4fbfedf95d7ea8c57bc606055c5503b.pdf",
+      "territory_name": "Inhambupe",
+      "state_code": "BA",
+      "excerpts": [
+        "00\n\n132101010036            Remuneração de Depósitos Bancários - Principal - Recursos Vinculados - Lei nº 14.399/2022 - Aldir\nBlanc\n\n17190000 15.000,00\n\n132101010039            Remuneração de Depósitos Bancários - Principal - Recursos Vinculados - CFEM - Comp. Fin.\nRecursos Minerais\n\n17080000 5.000,00\n\n132101010040            Remuneração de Depósitos Bancários - Principal - Recursos Vinculados - Piso da Enfermagem 16050000 10.000,00\n\n160000000000  Receita de Serviços 5.000,00\n161000000000   Serviços"
+      ],
+      "edition": "2.800",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913705/2024-08-28/e334be15d4fbfedf95d7ea8c57bc606055c5503b.txt"
+    },
+    {
+      "territory_id": "2913705",
+      "date": "2024-12-27",
+      "scraped_at": "2024-12-28T01:29:57.057532",
+      "url": "https://data.queridodiario.ok.org.br/2913705/2024-12-27/409e5ea20082b8db664b607f67cd25db539c351c.pdf",
+      "territory_name": "Inhambupe",
+      "state_code": "BA",
+      "excerpts": [
+        "00\n\n132101010036            Remuneração de Depósitos Bancários - Principal - Recursos Vinculados - Lei nº 14.399/2022 - Aldir\nBlanc\n\n17190000 15.000,00\n\n132101010039            Remuneração de Depósitos Bancários - Principal - Recursos Vinculados - CFEM - Comp. Fin.\nRecursos Minerais\n\n17080000 5.000,00\n\n132101010040            Remuneração de Depósitos Bancários - Principal - Recursos Vinculados - Piso da Enfermagem 16050000 10.000,00\n\n160000000000  Receita de Serviços 5.000,00\n161000000000   Serviços"
+      ],
+      "edition": "2.944",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913705/2024-12-27/409e5ea20082b8db664b607f67cd25db539c351c.txt"
+    },
+    {
+      "territory_id": "2913705",
+      "date": "2025-12-23",
+      "scraped_at": "2025-12-24T02:17:34.986534",
+      "url": "https://data.queridodiario.ok.org.br/2913705/2025-12-23/0b6ee9328569e79bdf916a2c54005c6d062f9a92.pdf",
+      "territory_name": "Inhambupe",
+      "state_code": "BA",
+      "excerpts": [
+        "Blanc 20.000,00\n132101100417            Remuneração de Depósitos Bancários - FEP (Fte 720) 20.000,00\n132101100418            Rendimentos de Depósitos Bancários - Alienação de Bens 5.000,00\n132101100419            Rendimentos de Depósitos Bancários - CFEM 2.000,00\n132101100420            Rendimentos de Depósitos Bancários - Outras Vinculações Legais 990,00\n132101200000       Remuneração de Depósitos Bancários - Salário Educação 40.000,00\n160000000000  Receita de Serviços 10.000,00\n161000000000   Serviços"
+      ],
+      "edition": "3.596",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913705/2025-12-23/0b6ee9328569e79bdf916a2c54005c6d062f9a92.txt"
+    },
+    {
+      "territory_id": "2913705",
+      "date": "2022-08-31",
+      "scraped_at": "2023-11-17T21:34:07.243177",
+      "url": "https://data.queridodiario.ok.org.br/2913705/2022-08-31/6519a98288da20ad7f81efad95fd7998ac52dd33.pdf",
+      "territory_name": "Inhambupe",
+      "state_code": "BA",
+      "excerpts": [
+        "132101010226            RDB Recursos Vinculados - FEAS 2.000,00\n132101010227            RDB Recursos Vinculados - FNAS 29.000,00\n132101010228            RDB Recursos Vinculados - Royalties/FEP 5.000,00\n132101010229            RDB Recursos Vinculados - CFEM 1.000,00\n132101010230            RDB Recursos Vinculados - Emenda Parlamentar - Transferência\n\nEspecial da União\n1.000,00\n\n132101010231            RDB Recursos Vinculados - Alienação de Bens 5.000,00\n132101010232            RDB Recursos Vinculados"
+      ],
+      "edition": "1.951",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913705/2022-08-31/6519a98288da20ad7f81efad95fd7998ac52dd33.txt"
+    },
+    {
+      "territory_id": "2913705",
+      "date": "2022-12-26",
+      "scraped_at": "2023-11-17T21:32:27.775195",
+      "url": "https://data.queridodiario.ok.org.br/2913705/2022-12-26/c6d9c1f5d202bff06e7710c50a73da6a25a65f6d.pdf",
+      "territory_name": "Inhambupe",
+      "state_code": "BA",
+      "excerpts": [
+        "132101010226            RDB Recursos Vinculados - FEAS 2.000,00\n132101010227            RDB Recursos Vinculados - FNAS 29.000,00\n132101010228            RDB Recursos Vinculados - Royalties/FEP 5.000,00\n132101010229            RDB Recursos Vinculados - CFEM 1.000,00\n132101010230            RDB Recursos Vinculados - Emenda Parlamentar - Transferência\n\nEspecial da União\n1.000,00\n\n132101010231            RDB Recursos Vinculados - Alienação de Bens 5.000,00\n132101010232            RDB Recursos Vinculados"
+      ],
+      "edition": "2.042",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913705/2022-12-26/c6d9c1f5d202bff06e7710c50a73da6a25a65f6d.txt"
+    },
+    {
+      "territory_id": "2913705",
+      "date": "2021-12-28",
+      "scraped_at": "2023-11-17T21:37:42.609288",
+      "url": "https://data.queridodiario.ok.org.br/2913705/2021-12-28/eb85a07c7b684f169b30fc9b6fa50a8f621b854b.pdf",
+      "territory_name": "Inhambupe",
+      "state_code": "BA",
+      "excerpts": [
+        "Vinculados - FEAS - 28 8228000 1.000,00 1.000,00 1.000,00 1.000,00 4.000,00\n132101010217            RDB Recursos Vinculados - FNAS - 29 9229000 5.000,00 5.000,00 5.000,00 5.000,00 20.000,00\n132101010218            RDB Recursos Vinculados - Royalties/FEP/CFEM - 42 9242000 1.000,00 1.000,00 1.000,00 1.000,00 4.000,00\n132101010219            RDB Recursos Vinculados - Emenda Parlamentar - Transferência Especial da\n\nUnião - 55\n9155000 2.000,00 2.000,00 2.000,00 2.000,00 8.000,00\n\n132101010220            RDB"
+      ],
+      "edition": "1.762",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913705/2021-12-28/eb85a07c7b684f169b30fc9b6fa50a8f621b854b.txt"
+    },
+    {
+      "territory_id": "2913705",
+      "date": "2023-08-29",
+      "scraped_at": "2023-11-17T21:26:55.501945",
+      "url": "https://data.queridodiario.ok.org.br/2913705/2023-08-29/4e03c7b86ef2d6ce61a770b71c87779abe9f5943.pdf",
+      "territory_name": "Inhambupe",
+      "state_code": "BA",
+      "excerpts": [
+        " Transferências das Compensações Financeiras pela Exploração de\nRecursos Naturais\n\n1.140.000,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n10.000,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n10.000,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 930.000,00\n171252100000       Cota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "2.354",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913705/2023-08-29/4e03c7b86ef2d6ce61a770b71c87779abe9f5943.txt"
+    },
+    {
+      "territory_id": "2913705",
+      "date": "2023-12-29",
+      "scraped_at": "2023-12-29T21:45:50.927296",
+      "url": "https://data.queridodiario.ok.org.br/2913705/2023-12-29/7f650f4eff6d6bef23f34a3287bc320123301ab4.pdf",
+      "territory_name": "Inhambupe",
+      "state_code": "BA",
+      "excerpts": [
+        " Transferências das Compensações Financeiras pela Exploração de\nRecursos Naturais\n\n1.140.000,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n10.000,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n10.000,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 930.000,00\n171252100000       Cota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "2.558",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913705/2023-12-29/7f650f4eff6d6bef23f34a3287bc320123301ab4.txt"
+    },
+    {
+      "territory_id": "2913705",
+      "date": "2022-01-06",
+      "scraped_at": "2023-11-17T21:37:34.905588",
+      "url": "https://data.queridodiario.ok.org.br/2913705/2022-01-06/5fcd1eba8ecb34527cdbc19746c8a45021cd9b76.pdf",
+      "territory_name": "Inhambupe",
+      "state_code": "BA",
+      "excerpts": [
+        "416,00 5.000,00\n\n   9229000 - Transferências de Recursos do Fundo\nNacional de Assistência Social - FNAS\n\n20,50 7,00 4,00 66,50 165,50 217,50 506,50 822,00 892,50 1.193,50 688,50 416,00 5.000,00\n\n132101010218 - RDB Recursos Vinculados -\nRoyalties/FEP/CFEM - 42\n\n17,90 17,50 27,10 35,80 54,00 68,10 83,40 103,80 122,40 159,40 227,30 83,30 1.000,00\n\n   9242000 - Royalties/Fundo Especial do\nPetróleo/Compensação Financeira Exploração de Recursos\nMinerais\n\n17,90 17,50 27,10 35,80 54,00 68,10 83,40 103,80 122"
+      ],
+      "edition": "1.768",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913705/2022-01-06/5fcd1eba8ecb34527cdbc19746c8a45021cd9b76.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2913705",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2913705",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

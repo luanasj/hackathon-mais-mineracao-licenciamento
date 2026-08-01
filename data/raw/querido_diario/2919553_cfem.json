@@ -1,0 +1,88 @@
+{
+  "total_gazettes": 5,
+  "gazettes": [
+    {
+      "territory_id": "2919553",
+      "date": "2024-12-09",
+      "scraped_at": "2025-01-29T14:59:08.261748",
+      "url": "https://data.queridodiario.ok.org.br/2919553/2024-12-09/3e8e8a1767db4051148191c3d92df20cbdfc08a1.pdf",
+      "territory_name": "Luís Eduardo Magalhães",
+      "state_code": "BA",
+      "excerpts": [
+        "7.1.2.00.0.0.00.00.00 \nTransferências das Compensações Financeiras pela Exploração de Recursos\nNaturais              \n\n2.030.000,00   \n\n1.7.1.2.51.0.0.00.00.00 Cot-Part da Comp.Financ.de Rec.Minerais-CFEM              30.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cot-Part da Comp.Financ.de Rec.Minerais-CFEM-Princ              30.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cot-Part da Comp.Financ.pela Produção de Petróleo              2.000.000,00   \n\n1.7.1.2.52.4.0.00.00.00 Cot-Part do Fun Especial do Petróleo-FEP"
+      ],
+      "edition": "5095",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919553/2024-12-09/3e8e8a1767db4051148191c3d92df20cbdfc08a1.txt"
+    },
+    {
+      "territory_id": "2919553",
+      "date": "2024-10-07",
+      "scraped_at": "2024-10-07T21:57:31.754335",
+      "url": "https://data.queridodiario.ok.org.br/2919553/2024-10-07/5960f3239a2b135eee9b94ce8f6ccfe52a6c2d0b.pdf",
+      "territory_name": "Luís Eduardo Magalhães",
+      "state_code": "BA",
+      "excerpts": [
+        "Financeiras pela Exploração de Recursos Naturais 1.677.459,23 1.432.000,00 1.698.000,00 1.782.900,00 1.872.045,001.780.534,24\n\n1.7.1.2.51.0.0.00.00.00 Cot-Part da Comp.Financ.de Rec.Minerais-CFEM 2.218,39 1.000,00 2.000,00 2.100,00 2.205,000,00\n\n1.7.1.2.51.0.1.00.00.00 Cot-Part da Comp.Financ.de Rec.Minerais-CFEM-Princ 2.218,39 1.000,00 2.000,00 2.100,00 2.205,000,00\n\n1.7.1.2.52.0.0.00.00.00 Cot-Part da Comp.Financ.pela Produção de Petróleo 1.675.240,84 1.431.000,00 1.696.000,00 1.780.800,00 1.869.840"
+      ],
+      "edition": "4980",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919553/2024-10-07/5960f3239a2b135eee9b94ce8f6ccfe52a6c2d0b.txt"
+    },
+    {
+      "territory_id": "2919553",
+      "date": "2023-12-19",
+      "scraped_at": "2024-03-22T13:54:08.436929",
+      "url": "https://data.queridodiario.ok.org.br/2919553/2023-12-19/d0f565449b1e2ce757a8358c8d042851ffc30646.pdf",
+      "territory_name": "Luís Eduardo Magalhães",
+      "state_code": "BA",
+      "excerpts": [
+        "Financeiras pela Exploração de Recursos Naturais 221.387,20 206.637,60 212.652,00 369.456,00 1.432.000,00255.612,00166.255,20\n\n1.7.1.2.51.0.0.00.00.00  Cot-Part da Comp.Financ.de Rec.Minerais-CFEM 154,60 144,30 148,50 258,00 1.000,00178,50116,10\n\n1.7.1.2.51.0.1.00.00.00  Cot-Part da Comp.Financ.de Rec.Minerais-CFEM-Princ 154,60 144,30 148,50 258,00 1.000,00178,50116,10\n\n1.7.1.2.52.0.0.00.00.00  Cot-Part da Comp.Financ.pela Produção de Petróleo 221.232,60 206.493,30 212.503,50 369.198,00 1.431.000,00255"
+      ],
+      "edition": "4533",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919553/2023-12-19/d0f565449b1e2ce757a8358c8d042851ffc30646.txt"
+    },
+    {
+      "territory_id": "2919553",
+      "date": "2024-12-13",
+      "scraped_at": "2025-01-29T15:00:02.302670",
+      "url": "https://data.queridodiario.ok.org.br/2919553/2024-12-13/af006fc45d61aa7ba5a5b78549fdfeea20e6de09.pdf",
+      "territory_name": "Luís Eduardo Magalhães",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de Recursos Naturais            324.800,00 324.800,00 324.800,00 406.000,00 2.030.000,00345.100,00304.500,00\n\n1.7.1.2.51.0.0.00.00.00  Cot-Part da Comp.Financ.de Rec.Minerais-CFEM            4.800,00 4.800,00 4.800,00 6.000,00 30.000,005.100,004.500,00\n\n1.7.1.2.51.0.1.00.00.00  Cot-Part da Comp.Financ.de Rec.Minerais-CFEM-Princ            4.800,00 4.800,00 4.800,00 6.000,00 30.000,005.100,004.500,00\n\n1.7.1.2.52.0.0.00.00.00  Cot-Part da Comp.Financ.pela Produção de Petróleo            320.000,00"
+      ],
+      "edition": "5109",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919553/2024-12-13/af006fc45d61aa7ba5a5b78549fdfeea20e6de09.txt"
+    },
+    {
+      "territory_id": "2919553",
+      "date": "2023-12-13",
+      "scraped_at": "2024-03-22T13:54:08.448662",
+      "url": "https://data.queridodiario.ok.org.br/2919553/2023-12-13/85a533d916f3301ee217c8811dc7a5cf702d4dd4.pdf",
+      "territory_name": "Luís Eduardo Magalhães",
+      "state_code": "BA",
+      "excerpts": [
+        "Financeiras pela Exploração de Recursos Naturais1.432.000,00   \n\n1.7.1.2.51.0.0.00.00.00 Cot-Part da Comp.Financ.de Rec.Minerais-CFEM1.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cot-Part da Comp.Financ.de Rec.Minerais-CFEM-Princ1.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cot-Part da Comp.Financ.de Rec.Minerais-CFEM-Princ              150000001.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cot-Part da Comp.Financ.pela Produção de Petróleo1.431.000,00   \n\n1.7.1.2.52.4.0.00.00.00 Cot-Part do Fun Especial do Petróleo-FEP1.431.000,00"
+      ],
+      "edition": "4524",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919553/2023-12-13/85a533d916f3301ee217c8811dc7a5cf702d4dd4.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2919553",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2919553",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

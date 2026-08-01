@@ -1,0 +1,116 @@
+{
+  "total_gazettes": 7,
+  "gazettes": [
+    {
+      "territory_id": "2928059",
+      "date": "2022-12-22",
+      "scraped_at": "2023-10-28T17:55:53.292101",
+      "url": "https://data.queridodiario.ok.org.br/2928059/2022-12-22/09f50ac7650bceedc95ef662fe49395a52708945.pdf",
+      "territory_name": "Santa Luzia",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM6.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n6.000,00   \n\n1.7.1.2.51.0.1.00.00.00    Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais -\nCFEM - Principal\n\n170800006.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo614.689,55   \n\n1.7.1.2.52.1.0.00.00.00 Cota-parte da Compensação"
+      ],
+      "edition": "440",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928059/2022-12-22/09f50ac7650bceedc95ef662fe49395a52708945.txt"
+    },
+    {
+      "territory_id": "2928059",
+      "date": "2024-12-24",
+      "scraped_at": "2025-01-29T23:35:58.963311",
+      "url": "https://data.queridodiario.ok.org.br/2928059/2024-12-24/0b7bb6ef0cf8d3c1a71185285c3925a01554e5b8.pdf",
+      "territory_name": "Santa Luzia",
+      "state_code": "BA",
+      "excerpts": [
+        "Financeira pela Exploração de Recursos\nHídricos - Principal              \n\n4.471,20   \n\n1.7.1.2.51.0.0.00.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais\n- CFEM              \n\n12.295,80   \n\n1.7.1.2.51.0.1.00.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal              \n\n12.295,80   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo              858.000,91   \n\n1.7.1.2.52.1.0.00.00.00 "
+      ],
+      "edition": "2680",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928059/2024-12-24/0b7bb6ef0cf8d3c1a71185285c3925a01554e5b8.txt"
+    },
+    {
+      "territory_id": "2928059",
+      "date": "2023-12-19",
+      "scraped_at": "2023-12-19T22:14:17.064084",
+      "url": "https://data.queridodiario.ok.org.br/2928059/2023-12-19/63e0a10c8de55665d390af97a31273d9f4594cbe.pdf",
+      "territory_name": "Santa Luzia",
+      "state_code": "BA",
+      "excerpts": [
+        "Financeira pela Exploração de Recursos\nHídricos - Principal              \n\n4.140,00   \n\n1.7.1.2.51.0.0.00.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais\n- CFEM              \n\n11.385,00   \n\n1.7.1.2.51.0.1.00.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal              \n\n11.385,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo              794.445,29   \n\n1.7.1.2.52.1.0.00.00.00 "
+      ],
+      "edition": "737",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928059/2023-12-19/63e0a10c8de55665d390af97a31273d9f4594cbe.txt"
+    },
+    {
+      "territory_id": "2928059",
+      "date": "2023-12-22",
+      "scraped_at": "2023-12-22T22:49:22.563112",
+      "url": "https://data.queridodiario.ok.org.br/2928059/2023-12-22/783515768f0226cd2f41e66f481927bb222764d7.pdf",
+      "territory_name": "Santa Luzia",
+      "state_code": "BA",
+      "excerpts": [
+        "Hídricos - Principal 136,62 344,03 480,65 285,66 354,38 640,04 1.120,6917090000 4.140,00 1.120,69\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 375,71 946,09 1.321,80 785,57 974,56 1.760,13 3.081,9311.385,00 3.081,93\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal 375,71 946,09 1.321,80 785,57 974,56 1.760,13 3.081,9317080000 11.385,00 3.081,93\n\nCota-parte da Compensação Financeira pela Produção de Petróleo 26.216,70 66"
+      ],
+      "edition": "741",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928059/2023-12-22/783515768f0226cd2f41e66f481927bb222764d7.txt"
+    },
+    {
+      "territory_id": "2928059",
+      "date": "2022-12-28",
+      "scraped_at": "2023-10-28T17:55:47.171136",
+      "url": "https://data.queridodiario.ok.org.br/2928059/2022-12-28/c00063f1c033cb068427098ab3d3602d43dc36f8.pdf",
+      "territory_name": "Santa Luzia",
+      "state_code": "BA",
+      "excerpts": [
+        "Hídricos - Principal 132,00 332,40 464,40 276,00 342,40 618,40 1.082,8017090000 4.000,00 1.082,80\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 198,00 498,60 696,60 414,00 513,60 927,60 1.624,206.000,00 1.624,20\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal 198,00 498,60 696,60 414,00 513,60 927,60 1.624,2017080000 6.000,00 1.624,20\n\nCota-parte da Compensação Financeira pela Produção de Petróleo 20.284,76 51.080,71"
+      ],
+      "edition": "444",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928059/2022-12-28/c00063f1c033cb068427098ab3d3602d43dc36f8.txt"
+    },
+    {
+      "territory_id": "2928059",
+      "date": "2024-12-26",
+      "scraped_at": "2025-01-29T23:37:45.181661",
+      "url": "https://data.queridodiario.ok.org.br/2928059/2024-12-26/0364c9d1b42fbc4145122d8f4bc774a8617837ec.pdf",
+      "territory_name": "Santa Luzia",
+      "state_code": "BA",
+      "excerpts": [
+        "         147,55 371,56 519,11 308,51 382,73 691,24 1.210,3517090000 4.471,20 1.210,35\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            405,76 1.021,78 1.427,54 848,41 1.052,52 1.900,93 3.328,4712.295,80 3.328,47\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            405,76 1.021,78 1.427,54 848,41 1.052,52 1.900,93 3.328,4717080000 12.295,80 3.328,47\n\nCota-parte da Compensação Financeira pela Produção de"
+      ],
+      "edition": "2685",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928059/2024-12-26/0364c9d1b42fbc4145122d8f4bc774a8617837ec.txt"
+    },
+    {
+      "territory_id": "2928059",
+      "date": "2021-12-23",
+      "scraped_at": "2023-10-28T17:58:25.619043",
+      "url": "https://data.queridodiario.ok.org.br/2928059/2021-12-23/f0a72c7a28cac915e01bb809ebca0f3dd542cbd8.pdf",
+      "territory_name": "Santa Luzia",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências das Compensações Financeiras pela Exploração de Recursos Naturais 2.000,00 0,00 0,00 0,00 2.000,00\n\n1.7.2.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 2.000,00 0,00 0,00 0,00 2.000,00\n\n1.7.2.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 2.000,00 0,00 0,00 0,00 2.000,00\n\n1.7.2.3.00.0.0.00.00.00 Transferências de Recursos do Sistema Único de Saúde - SUS 68.599,96 0,00 0,00 0,00 68.599,96\n\n1.7.2.3.50.0.0.00.00.00"
+      ],
+      "edition": "212",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928059/2021-12-23/f0a72c7a28cac915e01bb809ebca0f3dd542cbd8.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2928059",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2928059",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

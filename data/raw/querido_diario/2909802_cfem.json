@@ -1,0 +1,116 @@
+{
+  "total_gazettes": 7,
+  "gazettes": [
+    {
+      "territory_id": "2909802",
+      "date": "2022-01-13",
+      "scraped_at": "2023-10-28T05:22:47.613485",
+      "url": "https://data.queridodiario.ok.org.br/2909802/2022-01-13/abe00264e89aa88b1ff362b7479095447054ef67.pdf",
+      "territory_name": "Cruz das Almas",
+      "state_code": "BA",
+      "excerpts": [
+        "138.237,38 158.517,16 132.748,82 180.192,33 147.633,06 172.936,26 930.265,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n148,60 170,40 142,70 193,70 158,70 185,90 1.000,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n148,60 170,40 142,70 193,70 158,70 185,90 1.000,00\n\n171251010000 Transferência da União Referente à Compensação Financeira de Recursos\nMinerais\n\n148,60 170,40"
+      ],
+      "edition": "487",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909802/2022-01-13/abe00264e89aa88b1ff362b7479095447054ef67.txt"
+    },
+    {
+      "territory_id": "2909802",
+      "date": "2023-02-02",
+      "scraped_at": "2023-10-28T05:15:30.600389",
+      "url": "https://data.queridodiario.ok.org.br/2909802/2023-02-02/819273a1c1174c6fe450b80586f381bf69b8122e.pdf",
+      "territory_name": "Cruz das Almas",
+      "state_code": "BA",
+      "excerpts": [
+        "114.964,11 108.960,77 113.613,36 157.287,72 1.500.837,00\n\n171251000000      Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM\n\n98,13 121,07 107,73 106,47 122,32 135,25 128,16 112,59 106,47 100,91 105,22 145,67 1.390,00\n\n171251010000        Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM - Principal\n\n98,13 121,07 107,73 106,47 122,32 135,25 128,16 112,59 106,47 100,91 105,22 145,67 1.390,00\n\n171251010000 Transferência da União Referente"
+      ],
+      "edition": "1.139",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909802/2023-02-02/819273a1c1174c6fe450b80586f381bf69b8122e.txt"
+    },
+    {
+      "territory_id": "2909802",
+      "date": "2022-12-28",
+      "scraped_at": "2023-10-28T05:16:12.331935",
+      "url": "https://data.queridodiario.ok.org.br/2909802/2022-12-28/a3301420f5b5fe2ea9a2a10253d46b39150d2e81.pdf",
+      "territory_name": "Cruz das Almas",
+      "state_code": "BA",
+      "excerpts": [
+        "  Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n1.500.837,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n1.390,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n1.390,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 1.499.447,00\n171252100000       Cota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "1.079",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909802/2022-12-28/a3301420f5b5fe2ea9a2a10253d46b39150d2e81.txt"
+    },
+    {
+      "territory_id": "2909802",
+      "date": "2023-12-27",
+      "scraped_at": "2023-12-27T21:39:08.302493",
+      "url": "https://data.queridodiario.ok.org.br/2909802/2023-12-27/7818c58d646c65dcba5d6c271cc3c7d70a9a512b.pdf",
+      "territory_name": "Cruz das Almas",
+      "state_code": "BA",
+      "excerpts": [
+        "  Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n1.556.755,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n2.111,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n2.111,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 1.554.644,00\n171252100000       Cota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "1.749",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909802/2023-12-27/7818c58d646c65dcba5d6c271cc3c7d70a9a512b.txt"
+    },
+    {
+      "territory_id": "2909802",
+      "date": "2021-12-31",
+      "scraped_at": "2023-10-28T05:23:06.185819",
+      "url": "https://data.queridodiario.ok.org.br/2909802/2021-12-31/202c051d4b7562bc61e14b15b1bed9fb474d68a4.pdf",
+      "territory_name": "Cruz das Almas",
+      "state_code": "BA",
+      "excerpts": [
+        "171200000000    Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n930.265,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n1.000,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n1.000,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 929.265,00\n171252100000       Cota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "463",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909802/2021-12-31/202c051d4b7562bc61e14b15b1bed9fb474d68a4.txt"
+    },
+    {
+      "territory_id": "2909802",
+      "date": "2025-11-28",
+      "scraped_at": "2025-11-29T01:53:05.518950",
+      "url": "https://data.queridodiario.ok.org.br/2909802/2025-11-28/891c84cd964071eee7687d6d3e3a9c190535df39.pdf",
+      "territory_name": "Cruz das Almas",
+      "state_code": "BA",
+      "excerpts": [
+        "  Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n2.314.736,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n1.280,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n1.280,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 2.313.456,00\n171252100000       Cota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "3.228",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909802/2025-11-28/891c84cd964071eee7687d6d3e3a9c190535df39.txt"
+    },
+    {
+      "territory_id": "2909802",
+      "date": "2024-12-27",
+      "scraped_at": "2024-12-28T01:24:01.807110",
+      "url": "https://data.queridodiario.ok.org.br/2909802/2024-12-27/917826afcf4d1dacdd59d1e3f339234d499c48fd.pdf",
+      "territory_name": "Cruz das Almas",
+      "state_code": "BA",
+      "excerpts": [
+        " Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n1.262.833,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n14.647,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n14.647,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 1.248.186,00\n171252100000       Cota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "2.429",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909802/2024-12-27/917826afcf4d1dacdd59d1e3f339234d499c48fd.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2909802",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2909802",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

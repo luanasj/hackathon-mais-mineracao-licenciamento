@@ -1,0 +1,116 @@
+{
+  "total_gazettes": 7,
+  "gazettes": [
+    {
+      "territory_id": "2915601",
+      "date": "2024-12-20",
+      "scraped_at": "2024-12-21T01:47:31.522689",
+      "url": "https://data.queridodiario.ok.org.br/2915601/2024-12-20/f2e518fa9649faef7d4701c5753bac3298591836.pdf",
+      "territory_name": "Itamaraju",
+      "state_code": "BA",
+      "excerpts": [
+        "349.810,001.174.510,00 1.945.830,00\n\n1.7.1.2.51.0.0.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            2.280,00 2.040,00 3.150,00 3.030,00 2.340,00 2.190,00 2.130,00 2.820,00 30.000,002.370,00 2.310,002.010,00 3.330,00\n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal            2.280,00 2.040,00 3.150,00 3.030,00 2.340,00 2.190,00 2.130,00 2.820,00 30.000,002.370,00 2.310,002.010,00 3.330,00"
+      ],
+      "edition": "3.897",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2915601/2024-12-20/f2e518fa9649faef7d4701c5753bac3298591836.txt"
+    },
+    {
+      "territory_id": "2915601",
+      "date": "2025-12-22",
+      "scraped_at": "2025-12-23T02:09:37.693550",
+      "url": "https://data.queridodiario.ok.org.br/2915601/2025-12-22/c07e22f230b2b775ffb6d82f39507b230bc574ce.pdf",
+      "territory_name": "Itamaraju",
+      "state_code": "BA",
+      "excerpts": [
+        "068,001.266.853,00 1.909.201,00\n\n1.7.1.2.51.0.0.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            2.408,00 2.492,00 2.212,00 2.548,00 2.100,00 2.604,00 2.156,00 2.044,00 28.000,002.324,00 2.128,001.988,00 2.996,00\n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            2.408,00 2.492,00 2.212,00 2.548,00 2.100,00 2.604,00 2.156,00 2.044,00 28.000,002.324,00 2.128,001.988,00 2"
+      ],
+      "edition": "4.414",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2915601/2025-12-22/c07e22f230b2b775ffb6d82f39507b230bc574ce.txt"
+    },
+    {
+      "territory_id": "2915601",
+      "date": "2021-12-31",
+      "scraped_at": "2023-10-24T20:54:40.454256",
+      "url": "https://data.queridodiario.ok.org.br/2915601/2021-12-31/8bd95717be966761e85e91b99632d98ec541877d.pdf",
+      "territory_name": "Itamaraju",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de Recursos Minerais - CFEM3.680,00 2.800,00 3.280,00 3.600,00 3.120,00 2.880,00 3.520,00 2.960,00 40.000,002.800,00 3.600,002.520,00 5.240,00\n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal3.680,00 2.800,00 3.280,00 3.600,00 3.120,00 2.880,00 3.520,00 2.960,00 40.000,002.800,00 3.600,002.520,00 5.240,00\n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo570.400,00 434.000,00 508.400,00 558"
+      ],
+      "edition": "2.665",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2915601/2021-12-31/8bd95717be966761e85e91b99632d98ec541877d.txt"
+    },
+    {
+      "territory_id": "2915601",
+      "date": "2023-12-20",
+      "scraped_at": "2023-12-21T21:36:47.823993",
+      "url": "https://data.queridodiario.ok.org.br/2915601/2023-12-20/f2c2d33c886c869154dda0139341fa3a145813ab.pdf",
+      "territory_name": "Itamaraju",
+      "state_code": "BA",
+      "excerpts": [
+        "pela Exploração de Recursos Minerais - CFEM1.520,00 1.360,00 2.100,00 2.020,00 1.560,00 1.460,00 1.420,00 1.880,00 20.000,001.580,00 1.540,001.340,00 2.220,00\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Comp. Financ. pela Exploração de Recursos Minerais - CFEM - Principal1.520,00 1.360,00 2.100,00 2.020,00 1.560,00 1.460,00 1.420,00 1.880,00 20.000,001.580,00 1.540,001.340,00 2.220,00\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo1.235.000,00 1.105.000,00 1.706.250"
+      ],
+      "edition": "3.495",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2915601/2023-12-20/f2c2d33c886c869154dda0139341fa3a145813ab.txt"
+    },
+    {
+      "territory_id": "2915601",
+      "date": "2022-12-13",
+      "scraped_at": "2023-10-24T20:44:19.374386",
+      "url": "https://data.queridodiario.ok.org.br/2915601/2022-12-13/dbe6ccab168708912a56d98c27e8e5ffdf637505.pdf",
+      "territory_name": "Itamaraju",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de Recursos Minerais - CFEM1.840,00 1.400,00 1.640,00 1.800,00 1.560,00 1.440,00 1.760,00 1.480,00 20.000,001.400,00 1.800,001.260,00 2.620,00\n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal1.840,00 1.400,00 1.640,00 1.800,00 1.560,00 1.440,00 1.760,00 1.480,00 20.000,001.400,00 1.800,001.260,00 2.620,00\n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo 782.000,00 595.000,00 697.000,00 765"
+      ],
+      "edition": "3.049",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2915601/2022-12-13/dbe6ccab168708912a56d98c27e8e5ffdf637505.txt"
+    },
+    {
+      "territory_id": "2915601",
+      "date": "2021-12-30",
+      "scraped_at": "2023-10-24T20:54:40.459469",
+      "url": "https://data.queridodiario.ok.org.br/2915601/2021-12-30/af0e5c9fee61bbcd4e19ba49cfa91cae08373402.pdf",
+      "territory_name": "Itamaraju",
+      "state_code": "BA",
+      "excerpts": [
+        "Naturais\n\n6.240.000,00   \n\n1.7.1.2.51.0.0.00.00 \nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM\n\n40.000,00   \n\n1.7.1.2.51.0.1.00.00 \nCota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n40.000,00   \n\n1.7.1.2.51.0.1.00.00 \n   Cota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n4240.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo6.200.000,00"
+      ],
+      "edition": "2.664",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2915601/2021-12-30/af0e5c9fee61bbcd4e19ba49cfa91cae08373402.txt"
+    },
+    {
+      "territory_id": "2915601",
+      "date": "2025-12-19",
+      "scraped_at": "2025-12-20T02:39:59.042067",
+      "url": "https://data.queridodiario.ok.org.br/2915601/2025-12-19/dfd9db712464b1fc6be71c77095424588beac04f.pdf",
+      "territory_name": "Itamaraju",
+      "state_code": "BA",
+      "excerpts": [
+        "Scdeoo P dedo Teelterlol Rural - Pe9et ' 0doue) \n\nTranslorOncas das Cornpensaçães Financeiras podi Exploração do Recurso', Naturais \n\nColo-pala do Coerponoeçdo Fbre,roslre polo Eop609ç8e do Raeurooa 96no0.ls - CFEM \n\n(lcta-pusnte da Cornpxtnsaçdo Finani-anra oirO [epleraçde de Recueico Micros.. -CFEM-\nPnncip.iI \n\nColo-pata 40Com000085do Fleanelm pele 6044085dede Rereireos loneea(o - CEFU \nPrinr*9l \n\nCola.paoe da Compensaçao Finarirarira rola Prrotsçdo dc Prnts5lno \n\nCola-podado Conçeroeçdo Fin00000u polo"
+      ],
+      "edition": "4.411",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2915601/2025-12-19/dfd9db712464b1fc6be71c77095424588beac04f.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2915601",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2915601",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

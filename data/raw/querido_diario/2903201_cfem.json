@@ -1,0 +1,17 @@
+{
+  "total_gazettes": 0,
+  "gazettes": [],
+  "_meta": {
+    "codigo_ibge": "2903201",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2903201",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

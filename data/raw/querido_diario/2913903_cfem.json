@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 13,
+  "gazettes": [
+    {
+      "territory_id": "2913903",
+      "date": "2021-09-27",
+      "scraped_at": "2023-11-17T22:07:58.509162",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2021-09-27/c4fe24220fda9d2bac90cbfe1a204be586ff03e7.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "MUN. DE INFRA-ESTRUTURA E SERV. PÚBLICOS\n\n10.010.15.451.6.1013-4.4.90.51.00.00.00.00 - Obras e Instalações\nR$ 5.000,0000.01.0000.000 - Recursos Ordinários\n\n10.010.15.451.6.1015-4.4.90.51.00.00.00.00 - Obras e Instalações\nR$ 6.000,0000.02.0042.027 - CFEM - 42\n\n10.010.25.451.6.2055-3.3.90.39.00.00.00.00 - Outros Serviços de Terceiros - Pessoa Jurídica\nR$ 4.000,0000.01.0000.000 - Recursos Ordinários\n\n12.000 - SEC. MUN. DE INDÚSTRIA, COMERCIO E TURISMO\n12.012 - SEC. MUN. DE INDÚSTRIA, COMERCIO E TURISMO"
+      ],
+      "edition": "1.492",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2021-09-27/c4fe24220fda9d2bac90cbfe1a204be586ff03e7.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2021-12-30",
+      "scraped_at": "2023-11-17T22:05:58.717112",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2021-12-30/e33f82bfab0b305ef9c42e463373c012a1bbbd99.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "de Terceiros - Pessoa Jurídica\nR$ 900,0000.02.0042.027 - CFEM - 42\n\n10.010.15.122.10.2053-3.3.90.93.00.00.00.00 - Indenizações e Restituições\nR$ 5.000,0006.02.0000.015 - ORDINÁRIO-00\n\n10.010.15.451.6.1013-4.4.90.51.00.00.00.00 - Obras e Instalações\nR$ 148.000,0000.01.0000.000 - Recursos Ordinários\n\n10.010.15.451.6.1015-4.4.90.51.00.00.00.00 - Obras e Instalações\nR$ 9.000,0000.01.0000.000 - Recursos Ordinários\n\nR$ 24.000,0000.02.0042.027 - CFEM - 42\n10.010.15.451.6.1029-4.4.90.51.00.00.00.00 - Obras"
+      ],
+      "edition": "1.615",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2021-12-30/e33f82bfab0b305ef9c42e463373c012a1bbbd99.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2022-03-11",
+      "scraped_at": "2023-11-17T22:04:13.403116",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2022-03-11/8f84155205af39976ad9f1d60275f6466f75c929.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "Serviços de Terceiros - Pessoa Jurídica \n\n00.01.0000.000 - Recursos Ordinários \n\n00.01.0042.000 - Royalties/Fundo Especial do Petróleo/Compensação \n\n10.010.15.122.10.2053-3.3.90.47.00.00.00.00 - Obrigações Tributárias e Contributivas \n\n00.02.0042.027 - CFEM - 42 \n\n10.010.15.122.6.2054-3.1.90.11.00.00.00.00 - Vencimentos e Vantagens Fixas Pessoal Civil \n\n00.01.0000.000 - Recursos Ordinários \n\n10.010.15.451.6.1015-4.4.90.51.00.00.00.00 - Obras e Instalações \n\n09.02.0055.555 - TRANSFERÊNCIA ESPECIAL DA UNIÃO"
+      ],
+      "edition": "1.716",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2022-03-11/8f84155205af39976ad9f1d60275f6466f75c929.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2022-02-11",
+      "scraped_at": "2023-11-17T22:05:00.025756",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2022-02-11/0487ac35178e6227bfd6d8a67c154882449d041d.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "Jurídica\nR$ 400.000,0000.01.0000.000 - Recursos Ordinários\n\nR$ 29.776,0000.01.0042.000 - Royalties/Fundo Especial do Petróleo/Compensação\n10.010.15.122.10.2053-3.3.90.47.00.00.00.00 - Obrigações Tributárias e Contributivas\n\nR$ 10.000,0000.02.0042.027 - CFEM - 42\n10.010.15.122.6.2054-3.1.90.11.00.00.00.00 - Vencimentos e Vantagens Fixas Pessoal Civil\n\nR$ 65.000,0000.01.0000.000 - Recursos Ordinários\n10.010.15.451.6.1015-4.4.90.51.00.00.00.00 - Obras e Instalações\n\nR$ 107.593,3909.02.0055.555 - TRANSFERÊNCIA"
+      ],
+      "edition": "1.676",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2022-02-11/0487ac35178e6227bfd6d8a67c154882449d041d.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2023-01-27",
+      "scraped_at": "2023-11-17T22:30:18.644395",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2023-01-27/ff5371cad12b30e896d0ae43eecf953547ac99cf.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "986,92 113.925,90 173.941,59 1.299.041,00\n\n171251000000      Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM\n\n2.097,91 2.461,89 2.072,12 2.074,98 2.224,02 2.143,77 2.476,22 2.499,15 2.074,98 2.183,89 2.513,48 3.837,57 28.660,00\n\n171251010000        Cota-parte da Compensação Financeira pela\nExploração de Recursos Minerais - CFEM - Principal\n\n2.097,91 2.461,89 2.072,12 2.074,98 2.224,02 2.143,77 2.476,22 2.499,15 2.074,98 2.183,89 2.513,48 3.837,57 28.660,00\n\nContabilis"
+      ],
+      "edition": "2.201",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2023-01-27/ff5371cad12b30e896d0ae43eecf953547ac99cf.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2024-12-30",
+      "scraped_at": "2024-12-31T02:16:06.080664",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2024-12-30/84edefd0f9ac3aa32adaeb60582b396ae19f71b5.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "00.0.0.00 \n\n \nTransferência da Compensação Financeira pela Exploração de Recursos Naturais \n\n \n10.392.700,00 \n\n \n1.7.1.2.51.0.0.00 \n\n \nCota-parte da Compensação Financeira de Recursos Minerais - CFEM \n\n \n700.000,00 \n\n \n1.7.1.2.51.0.1.00 \n\n \nCota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal \n\n \n700.000,00 \n\n \n1.7.1.2.52.0.0.00 \n\n \nCota-parte da Compensação Financeira pela Produção de Petróleo \n\n \n9.692.700,00 \n\n \n1.7.1.2.52.1.0.00 \n\n \nCota-parte da Compensação Financeira"
+      ],
+      "edition": "3.631",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2024-12-30/84edefd0f9ac3aa32adaeb60582b396ae19f71b5.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2024-12-31",
+      "scraped_at": "2025-01-01T02:06:51.989185",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2024-12-31/ac959161c41b2119be47bcda1ff32540357781f0.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "00.0.0.00 \n\n \nTransferência da Compensação Financeira pela Exploração de Recursos Naturais \n\n \n10.392.700,00 \n\n \n1.7.1.2.51.0.0.00 \n\n \nCota-parte da Compensação Financeira de Recursos Minerais - CFEM \n\n \n700.000,00 \n\n \n1.7.1.2.51.0.1.00 \n\n \nCota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal \n\n \n700.000,00 \n\n \n1.7.1.2.52.0.0.00 \n\n \nCota-parte da Compensação Financeira pela Produção de Petróleo \n\n \n9.692.700,00 \n\n \n1.7.1.2.52.1.0.00 \n\n \nCota-parte da Compensação Financeira"
+      ],
+      "edition": "3.632",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2024-12-31/ac959161c41b2119be47bcda1ff32540357781f0.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2024-07-03",
+      "scraped_at": "2024-07-03T23:17:38.745650",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2024-07-03/eb7d0a6b8323fb74e38e8aa43bf5342a8a002b75.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "9.200,00 \n\n1.7.1.2.00.0.0.00 Transferência da Compensação Financeira pela Exploração de Recursos Naturais 11.404.000,00 \n\n1.7.1.2.51.0.0.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 13.500,00 \n\n1.7.1.2.51.0.1.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 13.500,00 \n\n1.7.1.2.52.0.0.00 Cota-parte da Compensação Financeira pela Produção de Petróleo 11.390.500,00 \n\n1.7.1.2.52.1.0.00 Cota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "3.300",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2024-07-03/eb7d0a6b8323fb74e38e8aa43bf5342a8a002b75.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2021-12-28",
+      "scraped_at": "2023-11-17T22:06:02.222329",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2021-12-28/2fa62457b295f23914e8111557619a0a07784d41.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "P.J.:\nIPIAÚ\n\nPREFEITURA MUNICIPAL IPIAU\n\nMunicípio:\n13.701.651/0001-50\n\nESTADO DA BAHIA 9Página: 7 /\n27/12/2021Data de Emissão:\n\n10.010.15.122.10.2053-3.3.90.39.00.00.00.00 - Outros Serviços de Terceiros - Pessoa Jurídica\nR$ 900,0000.02.0042.027 - CFEM - 42\n\n10.010.15.122.10.2053-3.3.90.93.00.00.00.00 - Indenizações e Restituições\nR$ 5.000,0006.02.0000.015 - ORDINÁRIO-00\n\n10.010.15.451.6.1013-4.4.90.51.00.00.00.00 - Obras e Instalações\nR$ 35.000,0000.01.0000.000 - Recursos Ordinários\n\n10.010.15.451"
+      ],
+      "edition": "1.610",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2021-12-28/2fa62457b295f23914e8111557619a0a07784d41.txt"
+    },
+    {
+      "territory_id": "2913903",
+      "date": "2021-12-06",
+      "scraped_at": "2023-11-17T22:06:34.770749",
+      "url": "https://data.queridodiario.ok.org.br/2913903/2021-12-06/48baf580fdb118fc0d7d330c15c57a649d1a8a51.pdf",
+      "territory_name": "Ipiaú",
+      "state_code": "BA",
+      "excerpts": [
+        "171200000000    Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n760.914,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n969,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n969,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 759.945,00\n171252100000       Cota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "1.581",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2913903/2021-12-06/48baf580fdb118fc0d7d330c15c57a649d1a8a51.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2913903",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2913903",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

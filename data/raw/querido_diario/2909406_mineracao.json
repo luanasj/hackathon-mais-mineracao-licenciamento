@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 11,
+  "gazettes": [
+    {
+      "territory_id": "2909406",
+      "date": "2025-12-22",
+      "scraped_at": "2025-12-23T01:59:54.089540",
+      "url": "https://data.queridodiario.ok.org.br/2909406/2025-12-22/590bb5724d5e2f226b6d44e78c677c96e7ccdaf4.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "1.01.02.05 Rendimentos - Fundos Inv. - Fonte: 720_FEP - Lei 9.478/1997              172000005.000,00   \n\n1.3.2.1.03.0.1.01.02.08 Rendimentos - Fundos Inv. - Fonte: 708_Comp. Financ. de Rec. Minerais -\nCFM\n\n1.000,00   \n\n1.3.2.1.03.0.1.01.02.08 Rendimentos - Fundos Inv. - Fonte: 708_Comp. Financ. de Rec. Minerais -\nCFM              \n\n170800001.000,00   \n\n1.3.2.1.03.0.1.01.02.10 Rendimentos - Fundos Inv. - Fonte: 749_Outras Vincul. de Transferências1.000,00   \n\n1.3.2.1.03.0.1.01.02.10 Rendimentos - Fundos"
+      ],
+      "edition": "754",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909406/2025-12-22/590bb5724d5e2f226b6d44e78c677c96e7ccdaf4.txt"
+    },
+    {
+      "territory_id": "2909406",
+      "date": "2025-12-30",
+      "scraped_at": "2025-12-31T05:21:29.544156",
+      "url": "s3://okbr-qd-migration//2909406/2025-12-30/a638bb3965fb5a81e6484cdb8f2f522122baa726.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "    49.830,00 59.862,00 109.692,00 45.276,00 43.362,00 88.638,00 198.330,00660.000,00 198.330,00\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            755,00 907,00 1.662,00 686,00 657,00 1.343,00 3.005,0010.000,00 3.005,00\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            755,00 907,00 1.662,00 686,00 657,00 1.343,00 3.005,0017080000 10.000,00 3.005,00\n\nCota-parte da Compensação Financeira pela Produção"
+      ],
+      "edition": "758",
+      "is_extra_edition": false,
+      "txt_url": "s3://okbr-qd-migration//2909406/2025-12-30/a638bb3965fb5a81e6484cdb8f2f522122baa726.txt"
+    },
+    {
+      "territory_id": "2909406",
+      "date": "2026-07-16",
+      "scraped_at": "2026-07-16T21:42:08.165902",
+      "url": "https://data.queridodiario.ok.org.br/2909406/2026-07-16/82d5b3991802913f709c5eb3ff131ceedb0f0e51.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "Recursos Naturais \n63.216,76 \n\n1706 Transferência Especial da União 2.064.348,50 \n1707 Transferências da União - inciso I do art. 5º da Lei \n\nComplementar 173/2020 \n4.285,10 \n\n1708 Transferência da União Referente à Compensação \nFinanceira de Recursos Minerais \n\n3.354,15 \n\n1719 Transferências da Política Nacional Aldir Blanc de \nFomento à Cultura - Lei nº14.399/2022 \n\n19.541,45 \n\n1749 Outras vinculações de transferências 1.541,04 \n1750 Recursos da Contribuição de Intervenção no Domínio \n\nEconômico - CIDE"
+      ],
+      "edition": "873",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909406/2026-07-16/82d5b3991802913f709c5eb3ff131ceedb0f0e51.txt"
+    },
+    {
+      "territory_id": "2909406",
+      "date": "2025-03-13",
+      "scraped_at": "2025-03-14T02:40:55.799404",
+      "url": "https://data.queridodiario.ok.org.br/2909406/2025-03-13/c30d2faf6c6a6f4fdbadb0883c9653000f082e0d.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "qualidade, de \norigem vegetal, sacarose de cana-de-\naçúcar, em embalagem saco de \npolietileno, atóxico, transparente e \nresistente, contendo peso liquido de 1 \nKg. \n\nKg 1125 R$ 4,72 R$ 5.310,00 \n\n2 \n\nARROZ INTEGRAL - Tipo 1 longo, rico em \nfibras e minerais, grãos inteiros. Isento \nde sujidades, materiais estranhos. Deve \npossuir data de fabricação e validade. A \nembalagem deve estar de acordo com a \nlegislação vigente. Acondicionado em \nembalagem de 1Kg. \n\nKg 5 R$ 6,66 R$ 33,30 \n\n3 \n\nARROZ TIPO 1 -"
+      ],
+      "edition": "556",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909406/2025-03-13/c30d2faf6c6a6f4fdbadb0883c9653000f082e0d.txt"
+    },
+    {
+      "territory_id": "2909406",
+      "date": "2025-04-02",
+      "scraped_at": "2025-04-03T02:08:20.493869",
+      "url": "https://data.queridodiario.ok.org.br/2909406/2025-04-02/a6b12b90c92d65c47218629897b01cc6c39c258d.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "qualidade, de \norigem vegetal, sacarose de cana-de-\naçúcar, em embalagem saco de \npolietileno, atóxico, transparente e \nresistente, contendo peso liquido de 1 \nKg. \n\nKg 1125 R$ 4,72 R$ 5.310,00 \n\n2 \n\nARROZ INTEGRAL - Tipo 1 longo, rico em \nfibras e minerais, grãos inteiros. Isento \nde sujidades, materiais estranhos. Deve \npossuir data de fabricação e validade. A \nembalagem deve estar de acordo com a \nlegislação vigente. Acondicionado em \nembalagem de 1Kg. \n\nKg 5 R$ 6,66 R$ 33,30 \n\n3 \n\nARROZ TIPO 1 -"
+      ],
+      "edition": "570",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909406/2025-04-02/a6b12b90c92d65c47218629897b01cc6c39c258d.txt"
+    },
+    {
+      "territory_id": "2909406",
+      "date": "2024-12-23",
+      "scraped_at": "2024-12-24T01:16:13.258045",
+      "url": "https://data.queridodiario.ok.org.br/2909406/2024-12-23/918934a7000fc4ec71307b25972939aaf5340ea9.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de Recursos Naturais405.000,00   \n\n1.7.1.2.51.0.0.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM5.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n5.000,00   \n\n1.7.1.2.51.0.1.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n170400005.000,00   \n\n1.7.1.2.52.0.0.00.00 Cota-parte da Compensação Financeira pela Produção"
+      ],
+      "edition": "492",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909406/2024-12-23/918934a7000fc4ec71307b25972939aaf5340ea9.txt"
+    },
+    {
+      "territory_id": "2909406",
+      "date": "2026-06-19",
+      "scraped_at": "2026-06-20T02:45:53.288892",
+      "url": "https://data.queridodiario.ok.org.br/2909406/2026-06-19/cbe6f5cbd79a447490ded50f066dd168be91e8a7.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "000,00 11.550,00 12.127,500,00\n\n1.3.2.1.03.0.1.01.02.05 Rendimentos - Fundos Inv. - Fonte: 720_FEP - Lei 9.478/1997 0,00 5.000,00 5.500,00 5.775,00 6.063,750,00\n\n1.3.2.1.03.0.1.01.02.08 Rendimentos - Fundos Inv. - Fonte: 708_Comp. Financ. de Rec. Minerais - CFM 0,00 1.000,00 1.100,00 1.155,00 1.212,750,00\n\n1.3.2.1.03.0.1.01.02.10 Rendimentos - Fundos Inv. - Fonte: 749_Outras Vincul. de Transferências 0,00 1.000,00 1.100,00 1.155,00 1.212,750,00\n\n1.3.2.1.03.0.1.01.02.11 Rendimentos - Fundos Inv. -"
+      ],
+      "edition": "862",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909406/2026-06-19/cbe6f5cbd79a447490ded50f066dd168be91e8a7.txt"
+    },
+    {
+      "territory_id": "2909406",
+      "date": "2025-10-01",
+      "scraped_at": "2025-10-02T03:09:23.903735",
+      "url": "https://data.queridodiario.ok.org.br/2909406/2025-10-01/dc6b28cb978497b2769293eac470c4ada7c30c9c.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "08RECURSOS ORDINARIOS - NÃO VINCULADOS\n\n16310000 4.237,90CONV. UNIAO-SAUDE\n\n17000000 8.814.837,66Outras Transf. de Conv. Repasse da Uniao\n\n17010000 555.165,26Outras Transf. de Conv. Repasse dos Estados\n\n17080000 46.616,93Compensação Financeira de Recursos Minerais - CFM\n\n17150000 8.475,81LC nº 195/2022 - Art. 5º - Audiovisual\n\n17160000 8.475,81LC nº 195/2022 - Art. 8º - Demais Setores da Cultura\n\n17190000 555.165,26Aldir Blanc de Fomento à Cultura - Lei nº 14.399/2022\n\n17200000 2.775.826,28FEP - Lei 9.478/1997"
+      ],
+      "edition": "706",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909406/2025-10-01/dc6b28cb978497b2769293eac470c4ada7c30c9c.txt"
+    },
+    {
+      "territory_id": "2909406",
+      "date": "2025-07-22",
+      "scraped_at": "2025-07-23T02:19:18.509288",
+      "url": "https://data.queridodiario.ok.org.br/2909406/2025-07-22/94e814738e231088cb8dd1723ab0e73547d3c765.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "polietileno, atóxico,\ntransparente\n\nresistente, contendo\npeso liquido de 1\n\nCRISTAL\n\nvegetal.1\n\nR$ 3.431,25PÉROLA\nR$ 3,05em 1125Kg\n\ne\n\nKa:\nARROZ INTEGRAL -\n\nTipo 1 longo, rico em\nfibras\n\ngrãos inteiros. Isento\nde sujidades, materiais\nestranhos.\n\nminerais,e\n\n2\nDeve\n\npossuir data de\nfabricação e validade.\nA embalagem deve\nestar de acordo com a\n\nlegislação vigente.\nAcondicionado em\n\nembalagem de IKg.\n\nKg CATARINÃO R$ 6,005\nR$ 30,00\n\nra\n\n.c\n\nDO\n•ÍD\n\nQ-\n\nEdição 668 | Ano 2025\n22 de julho de 2025\n\nPágina"
+      ],
+      "edition": "668",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909406/2025-07-22/94e814738e231088cb8dd1723ab0e73547d3c765.txt"
+    },
+    {
+      "territory_id": "2909406",
+      "date": "2023-01-25",
+      "scraped_at": "2023-11-17T20:28:34.410942",
+      "url": "https://data.queridodiario.ok.org.br/2909406/2023-01-25/aab1542c9307012d7fc0e604f4d1f908f0d3e077.pdf",
+      "territory_name": "Cotegipe",
+      "state_code": "BA",
+      "excerpts": [
+        "Embalagem lata com 420g que deve estar inviolada, não \napresentar estufamento, vazamento, corrosão interna e avaria, sem ferrugem ou \nviolação. (Embalagem 420g caixa com 24 unidades). \n\nCX 200 \n\n6 \nARROZ INTEGRAL - Tipo 1 longo, rico em fibras e minerais, grãos inteiros, isento de \nsujidades, materiais estranhos. Deve possuir data de fabricação e validade. A embalagem \ndeve estar de acordo com a legislação vigente. Acondicionado em embalagem de 1 kg. \n\nKG 30 \n\n7 \nARROZ TIPO 1 - Branco, beneficiado"
+      ],
+      "edition": "18",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909406/2023-01-25/aab1542c9307012d7fc0e604f4d1f908f0d3e077.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2909406",
+    "termo": "mineracao",
+    "params": {
+      "territory_ids": "2909406",
+      "querystring": "mineracao",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

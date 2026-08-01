@@ -5,11 +5,11 @@ __pycache__/
 *.pyc
 
 # artefatos de build
-app/dist/
+dist/
 *.tsbuildinfo
 
 # intermediários do pipeline (regeneráveis por `python pipeline/prep.py`)
-app/public/data/*.raw.geojson
+frontend/public/data/*.raw.geojson
 
 # sistema
 .DS_Store
