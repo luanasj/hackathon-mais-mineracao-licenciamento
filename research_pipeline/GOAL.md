@@ -2,7 +2,9 @@
 
 > **Status:** escopo definido, implementação não iniciada.
 > **Branch:** `feature/deep-research-pipeline`
-> **Documento de escopo — versão 1.0 — 2026-08-01**
+> **Documento de escopo — versão 1.2 — 2026-08-01**
+> *v1.2: prompt de pesquisa sem lista de municípios — pergunta em aberto, rigidez só no formato de saída (§5, §7.1).*
+> *v1.1: `licenciado_por` como indicador obrigatório (§6.4); universo ampliado para todos os municípios aptos (§7.1).*
 
 ---
 
@@ -36,10 +38,14 @@ retornou uma tabela com município, consórcio, titular, nível, modalidade e da
 
 > Produzir, de forma automatizada e reprodutível, um **JSON estruturado e validado** em que
 > cada registro é **uma licença ambiental de mineração concedida** por um município baiano
-> (isoladamente ou via consórcio) em um determinado ano, com `municipio` e `consorcio`
+> em um determinado ano, registrando explicitamente **se o licenciamento foi feito pelo próprio
+> município ou por meio de consórcio**, com `municipio` e `consorcio`
 > **normalizados contra as tabelas canônicas do nosso banco**, com `tipologia` mapeada ao
 > **vocabulário fechado do Anexo IV / Divisão B (CEPRAM)**, `mineral` normalizado, e
 > **procedência (fonte + data de consulta) obrigatória em toda linha**.
+
+**Universo:** todos os municípios baianos com competência para licenciar — não apenas os 10
+do MVP do backlog (§7.1).
 
 O produto final do pipeline é **o JSON estruturado**. Nada mais.
 
@@ -165,13 +171,19 @@ O prompt melhorado, em relação aos testes manuais, precisa **exigir explicitam
 
 1. **Uma linha por licença concedida**, não por município — o teste manual já fez isso certo no PROMPT 2 (Caturama aparece duas vezes) e errado no PROMPT 1.
 2. **Colunas fixas e nomeadas**, sempre nesta ordem:
-   `Município | Consórcio | Titular | Substância/Mineral | Tipologia | Nível (1/2/3) | Modalidade (LP/LI/LO/LAU/LU/Renovação) | Nº da licença/portaria | Data (AAAA-MM-DD) | Fonte (URL) | Trecho citado`
-3. **Data ISO ou `null`** — nunca `"Fevereiro/2025"` nem `"Ativa em 2026"`, que apareceram no teste manual e não são datas.
-4. **Toda linha com URL de fonte.** Sem fonte verificável, a linha não entra na tabela — vai para uma seção separada "Indícios não confirmados".
-5. **Proibição explícita de inferir o campo `nível`.** No PROMPT 2 todas as 8 linhas vieram "Nível 3", o que é suspeito de ser preenchimento por padrão. Se o nível não estiver no documento, deve vir `null`.
-6. **Proibição de ranquear.** O ranking é derivado em Python (§8). Pedir ranking ao LLM introduz variação e convida à invenção de linhas para preencher posições.
-7. **Fontes prioritárias declaradas:** diários oficiais municipais, sites e portarias dos consórcios públicos intermunicipais, publicações do CEPRAM/INEMA, SICOM/TCM-BA.
-8. **Cobertura explícita:** varrer os consórcios ambientais baianos conhecidos, e reportar explicitamente os que foram consultados sem resultado — silêncio ≠ ausência.
+   `Município | Consórcio | Órgão emissor | Licenciado por (município próprio / consórcio) | Titular | Substância/Mineral | Tipologia | Nível (1/2/3) | Modalidade (LP/LI/LO/LAU/LU/Renovação) | Nº da licença/portaria | Data (AAAA-MM-DD) | Fonte (URL) | Trecho citado`
+3. **Quem licenciou — município por conta própria ou via consórcio.** Indicador de primeira classe (§6.4). O relatório deve nomear o **órgão emissor** (secretaria municipal de meio ambiente vs. consórcio público) e citar o trecho que sustenta a atribuição. Sem evidência, `indeterminado` — nunca deduzir a partir do simples fato de o município integrar um consórcio.
+4. **Data ISO ou `null`** — nunca `"Fevereiro/2025"` nem `"Ativa em 2026"`, que apareceram no teste manual e não são datas.
+5. **Toda linha com URL de fonte.** Sem fonte verificável, a linha não entra na tabela — vai para uma seção separada "Indícios não confirmados".
+6. **Proibição explícita de inferir o campo `nível`.** No PROMPT 2 todas as 8 linhas vieram "Nível 3", o que é suspeito de ser preenchimento por padrão. Se o nível não estiver no documento, deve vir `null`.
+7. **Proibição de ranquear.** O ranking é derivado em Python (§8). Pedir ranking ao LLM introduz variação e convida à invenção de linhas para preencher posições.
+8. **Fontes prioritárias declaradas:** diários oficiais municipais, sites e portarias dos consórcios públicos intermunicipais, publicações do CEPRAM/INEMA, SICOM/TCM-BA.
+9. **Cobertura pedida em aberto:** "municípios da Bahia" — sem enumerar. O prompt **não carrega lista de municípios nem de consórcios**; quem descobre quais entes licenciaram é a pesquisa. Listas canônicas existem só no nó `normalize` (§6.2), nunca aqui.
+
+**O que o prompt trava é o formato de saída, não o universo pesquisado.** Colunas, ordem, tipos,
+regras de `null` e obrigatoriedade de fonte: rígidos. Quais municípios aparecem: livre.
+Injetar 417 nomes no prompt de pesquisa enviesaria o agente a preencher linhas por nome
+reconhecido e inflaria o contexto sem ganho de recall.
 
 Do lado do LLM estruturador, determinismo é forte: `temperature=0`, JSON mode, schema Pydantic,
 até **2 tentativas de reparo** com a mensagem de erro de validação realimentada.
@@ -193,6 +205,9 @@ com folga), JSON output e tool calls suportados, US$ 0,14/1M in · US$ 0,28/1M o
 {
   "municipio_raw": "Caturama",
   "consorcio_raw": "Consórcio Bacia do Paramirim",
+  "orgao_emissor_raw": "Consórcio Público Interfederativo da Bacia do Paramirim",
+  "licenciado_por_raw": "consorcio",
+  "licenciado_por_evidencia": "Licença assinada pelo Diretor Técnico do Consórcio...",
   "titular": "Empreendimento (Processo Técnico nº 013/2024)",
   "substancia_raw": "areia",
   "tipologia_raw": null,
@@ -261,6 +276,39 @@ Duas armadilhas conhecidas, a tratar no carregador:
 `data_source/BA-shapefile/BA.dbf` (SIGMINE/ANM) — o mesmo vocabulário que o resto do projeto
 usará no join espacial. Preserva-se sempre `substancia_raw`.
 
+### 6.4 `licenciado_por` — gestão própria vs. consórcio
+
+Indicador de política pública de primeira classe: mede a **capacidade institucional real** do
+município. Município que licencia sozinho tem estrutura própria; município que só licencia via
+consórcio depende de arranjo compartilhado. Cruzado com volume de licenças, mostra onde a
+competência municipal existe de fato e onde é delegada.
+
+```
+licenciado_por ∈ { "municipio_proprio", "consorcio", "indeterminado" }
+```
+
+Discriminador é o **órgão emissor**, não o vínculo consorcial:
+
+| Sinal no documento | Valor |
+|---|---|
+| Emitida por secretaria/órgão ambiental municipal; portaria assinada por autoridade do município | `municipio_proprio` |
+| Emitida pelo consórcio; portaria assinada por autoridade consorcial; numeração do consórcio | `consorcio` |
+| Órgão emissor não identificável na fonte | `indeterminado` |
+
+Regra dura, e é a que mais importa: **integrar um consórcio não implica ter licenciado por meio
+dele.** Municípios consorciados licenciam por conta própria com frequência. A atribuição exige
+evidência textual — sem ela, `indeterminado`.
+
+Campos correlatos, sempre presentes:
+
+- `orgao_emissor_raw` — nome do órgão como aparece na fonte
+- `licenciado_por_evidencia` — trecho que sustenta a atribuição
+- `licenciado_por_confianca` — float 0–1
+
+Consequência: `consorcio_id` pode estar preenchido com `licenciado_por = "municipio_proprio"` —
+significa "município X, integrante do consórcio Y, licenciou sozinho". Combinação válida e
+informativa, não erro. Validador não deve rejeitá-la.
+
 ---
 
 ## 7. Dados canônicos e o carregador com mapeamento
@@ -300,6 +348,33 @@ baianos a partir de `data_source/Malha municipal IBGE-BA/BA_Municipios_2025.dbf`
 o repositório não tem nenhuma lista de consórcios intermunicipais, e essa é a maior lacuna
 de dados de referência do projeto.
 
+### 7.1 Universo de municípios
+
+**Todos os municípios baianos aptos a licenciar** — não os 10 do MVP do `BACKLOG.md`.
+Os 10 permanecem como fixtures do motor de enquadramento; não limitam esta pesquisa.
+
+Duas populações, ambas no escopo:
+
+1. municípios com gestão ambiental própria habilitada (licenciam sozinhos);
+2. municípios atendidos por consórcio público intermunicipal.
+
+Elas se sobrepõem — daí o §6.4. Um município pode aparecer nas duas.
+
+**O universo não é injetado no prompt de pesquisa.** Pergunta vai em aberto — "municípios da
+Bahia" — e a pesquisa devolve quem de fato licenciou. Listas canônicas atuam **só depois**, no
+nó `normalize` (§6.2), para amarrar os nomes encontrados aos ids do banco.
+
+Campos opcionais em `municipios.json`, mapeáveis em `ref_mapping.yaml`:
+
+```yaml
+  fields:
+    apto_licenciar: apto_licenciar      # opcional
+    nivel_habilitacao: nivel            # opcional; 1 | 2 | 3
+```
+
+Uso: enriquecer a saída e sinalizar no manifesto quando a pesquisa atribuir licença a município
+marcado como não apto — divergência que merece olho humano. Nunca filtra a pesquisa.
+
 ---
 
 ## 8. Saída — o produto final
@@ -316,6 +391,12 @@ Um registro = **uma licença concedida**. O ranking é derivado, nunca pedido ao
     "modelo_estruturacao": "deepseek-v4-flash",
     "run_id": "2025_20260801T143200Z",
     "total_licencas": 8,
+    "total_por_licenciado_por": {
+      "municipio_proprio": 3,
+      "consorcio": 4,
+      "indeterminado": 1
+    },
+    "municipios_com_licenca": 6,
     "avisos": ["consorcio_match_confianca < 0.7 em 1 registro"]
   },
   "licencas": [
@@ -331,6 +412,10 @@ Um registro = **uma licença concedida**. O ranking é derivado, nunca pedido ao
       "consorcio_raw": "Consórcio Bacia do Paramirim",
       "consorcio_match_metodo": "exato",
       "consorcio_match_confianca": 1.0,
+      "licenciado_por": "consorcio",
+      "orgao_emissor_raw": "Consórcio Público Interfederativo da Bacia do Paramirim",
+      "licenciado_por_evidencia": "Licença assinada pelo Diretor Técnico do Consórcio...",
+      "licenciado_por_confianca": 0.95,
       "titular": "Empreendimento (Processo Técnico nº 013/2024)",
       "mineral": "AREIA",
       "substancia_raw": "areia",
@@ -349,7 +434,12 @@ Um registro = **uma licença concedida**. O ranking é derivado, nunca pedido ao
   ],
   "ranking_municipios": [
     { "posicao": 1, "municipio_id": "2907103", "municipio_nome": "Caturama",
-      "consorcio_nome": "Consórcio Bacia do Paramirim", "total_licencas": 2 }
+      "consorcio_nome": "Consórcio Bacia do Paramirim",
+      "total_licencas": 2,
+      "licencas_gestao_propria": 0,
+      "licencas_via_consorcio": 2,
+      "licencas_indeterminado": 0,
+      "modo_predominante": "consorcio" }
   ],
   "ranking_consorcios": [
     { "posicao": 1, "consorcio_id": "cons-bacia-paramirim", "total_licencas": 2,
@@ -357,6 +447,9 @@ Um registro = **uma licença concedida**. O ranking é derivado, nunca pedido ao
   ]
 }
 ```
+
+`ranking_consorcios` conta **só** `licenciado_por = "consorcio"` — senão infla o consórcio com
+licenças que o município emitiu sozinho. `ranking_municipios` conta tudo, discriminado por modo.
 
 `verificado: false` é sempre a saída do pipeline — atende à exigência do backlog
 (*"cada linha da base tem procedência"*) sem fingir uma verificação humana que não houve.
@@ -430,7 +523,9 @@ research_pipeline/
 | Cobertura variável entre execuções | Aceito por decisão de escopo. Travamos a forma, não os achados. O `run_id` mantém cada resultado auditável. |
 | `nivel_licenciamento` uniforme (todos "Nível 3" no teste manual) sugere preenchimento por padrão | Prompt proíbe inferência; sem documento, `null`. Um alerta é emitido se >90% das linhas tiverem o mesmo nível. |
 | API Deep Research em *preview* | ID do modelo fixado no manifesto; a camada de pesquisa fica atrás de uma interface para permitir troca. |
-| Municípios do teste (Caturama, Tremedal, Pintadas…) não intersectam os 10 do BACKLOG | Sinal de que a pesquisa e as fixtures do motor estão desalinhadas. Decidir mais adiante se o pipeline deve ser restringido aos 10 municípios do MVP. |
+| Municípios do teste (Caturama, Tremedal, Pintadas…) não intersectam os 10 do BACKLOG | Resolvido: escopo é **todos** os municípios aptos (§7.1). Os 10 são fixtures do motor, não recorte da pesquisa. |
+| Pergunta em aberto ("municípios da Bahia") pode render cobertura rasa | Aceito: enumerar 417 nomes no prompt enviesaria o agente a preencher linhas por nome reconhecido. Prompt prioriza fontes agregadoras (consórcios, CEPRAM/INEMA, TCM-BA). `municipios_com_licenca` no manifesto expõe cobertura real; queda brusca entre execuções vira aviso. Se ficar raso, fan-out por consórcio (custo × N). |
+| Consórcio creditado por licença que o município emitiu sozinho | `licenciado_por` exige evidência textual; `ranking_consorcios` conta só `"consorcio"`. Sem evidência, `indeterminado` — nunca deduzido do vínculo consorcial. |
 
 ---
 
@@ -448,3 +543,6 @@ research_pipeline/
 | 8 | Determinismo por prompt versionado + `temperature=0` + schema + até 2 reparos. |
 | 9 | Dois agentes DeepSeek `deepseek-v4-flash`: `extract` e `normalize`, com entradas disjuntas. |
 | 10 | `SqliteSaver` + artefatos por run em `research_pipeline/runs/<run_id>/`. |
+| 11 | `licenciado_por` (`municipio_proprio` / `consorcio` / `indeterminado`) é campo obrigatório, com órgão emissor, evidência e confiança. Nunca deduzido do vínculo consorcial. |
+| 12 | Universo = todos os municípios baianos aptos a licenciar, não os 10 do MVP do backlog. |
+| 13 | Prompt de pesquisa pergunta em aberto por "municípios da Bahia" — sem lista de municípios ou consórcios. Rígido no prompt é o **formato de saída**. Listas canônicas só no nó `normalize`. |
