@@ -1,17 +1,24 @@
 /**
- * Banco de provas do ESCOPO A.
+ * Banco de provas dos Escopos A e B, agora ligados.
  *
- * Provisório: o Escopo F substitui esta tela pela tela de consulta real (F.1),
- * com o mapa à esquerda. Até lá, isto existe para que A.5, A.6 e A.8 sejam
- * verificáveis por qualquer pessoa do time rodando `npm run dev`.
+ * O que mudou com o Escopo B: a seleção de área deixou de terminar num cartão
+ * de leitura e passou a alimentar o estado global (B.6). Escolher um processo
+ * na busca preenche substância e fase, deriva município e habilitação, e o
+ * parecer reavalia sozinho — sem botão de calcular, porque não há momento em
+ * que o parecer esteja desatualizado em relação ao formulário.
+ *
+ * Continua provisório: F.1 substitui esta pilha vertical pela tela de consulta
+ * com o mapa à esquerda, e F.2 substitui o `PainelParecer` pela tela de parecer.
  */
 
 import { useEffect, useState } from 'react'
 import { AlertTriangle } from 'lucide-react'
 
 import { BuscaProcesso } from '@/components/BuscaProcesso'
+import { FormularioCaracterizacao } from '@/components/FormularioCaracterizacao'
 import { MapaDesenho } from '@/components/MapaDesenho'
 import type { ResultadoDesenho } from '@/components/MapaDesenho'
+import { PainelParecer } from '@/components/PainelParecer'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -21,26 +28,27 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog'
-import { Separator } from '@/components/ui/separator'
+import { TooltipProvider } from '@/components/ui/tooltip'
 import { carregarIndice } from '@/lib/processos'
-import type { IndiceProcessos, RegistroIndice } from '@/lib/processos'
+import type { IndiceProcessos } from '@/lib/processos'
 import { VIRADAS } from '@/data/viradas'
-
-const nf = new Intl.NumberFormat('pt-BR', {
-  minimumFractionDigits: 2,
-  maximumFractionDigits: 2,
-})
-const pf = new Intl.NumberFormat('pt-BR', {
-  style: 'percent',
-  maximumFractionDigits: 1,
-})
+import { ProvedorFormulario, useFormulario } from '@/state/formulario'
 
 export default function App() {
+  return (
+    <TooltipProvider>
+      <ProvedorFormulario>
+        <Tela />
+      </ProvedorFormulario>
+    </TooltipProvider>
+  )
+}
+
+function Tela() {
+  const { despachar, estado } = useFormulario()
   const [indice, setIndice] = useState<IndiceProcessos | null>(null)
   const [erro, setErro] = useState<string | null>(null)
-  const [sel, setSel] = useState<RegistroIndice | null>(null)
   const [modoMapa, setModoMapa] = useState<'poligono' | 'ponto-raio' | null>(null)
-  const [areaManual, setAreaManual] = useState<ResultadoDesenho | null>(null)
 
   useEffect(() => {
     carregarIndice().then(setIndice, (e: unknown) => setErro(String(e)))
@@ -49,16 +57,17 @@ export default function App() {
   return (
     <main className="mx-auto flex max-w-4xl flex-col gap-8 p-8">
       <header className="flex flex-col gap-2">
-        <h1 className="text-kpi">Escopo A — busca por processo ANM</h1>
+        <h1 className="text-kpi">Motor de enquadramento licenciatório</h1>
         <p className="text-corpo text-muted-foreground">
-          Poligonais do SIGMINE recortadas aos 10 municípios da amostra, com
-          município derivado por interseção geométrica.
+          Escopo A — poligonal do SIGMINE · Escopo B — caracterização · o parecer
+          abaixo reavalia a cada campo.
         </p>
       </header>
 
+      {/* ESCOPO A — entrada de área */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-titulo">A.5 · A.6 — índice e busca</CardTitle>
+          <CardTitle className="text-titulo">Área a licenciar</CardTitle>
         </CardHeader>
         <CardContent>
           {erro && (
@@ -73,12 +82,12 @@ export default function App() {
           {indice && (
             <BuscaProcesso
               indice={indice}
-              onSelecionar={(r) => {
-                setSel(r)
-                setAreaManual(null)
-              }}
+              onSelecionar={(processo) =>
+                despachar({ tipo: 'selecionar-processo', processo })
+              }
               onDesenhar={() => setModoMapa('poligono')}
               onPontoRaio={() => setModoMapa('ponto-raio')}
+              processoSelecionado={estado.processo}
             />
           )}
         </CardContent>
@@ -89,17 +98,23 @@ export default function App() {
           <DialogHeader>
             <DialogTitle>
               {modoMapa === 'poligono'
-                ? 'A.9 — desenhar poligonal'
-                : 'A.9 — ponto e raio geodésico'}
+                ? 'Desenhar a poligonal'
+                : 'Ponto e raio geodésico'}
             </DialogTitle>
           </DialogHeader>
           {modoMapa && (
             <MapaDesenho
               modo={modoMapa}
               onCancelar={() => setModoMapa(null)}
-              onConcluir={(resultado) => {
-                setAreaManual(resultado)
-                setSel(null)
+              onConcluir={(r: ResultadoDesenho) => {
+                despachar({
+                  tipo: 'selecionar-area',
+                  area: {
+                    area_ha: r.area_ha,
+                    municipios: r.municipios,
+                    cruza_divisa: r.municipios.length > 1,
+                  },
+                })
                 setModoMapa(null)
               }}
             />
@@ -107,80 +122,25 @@ export default function App() {
         </DialogContent>
       </Dialog>
 
-      {areaManual && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-titulo">Área desenhada manualmente</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-4">
-            <dl className="grid grid-cols-2 gap-x-8 gap-y-2 text-corpo">
-              <Linha rotulo="Área" valor={`${nf.format(areaManual.area_ha)} ha`} num />
-            </dl>
-            <Separator />
-            <div className="flex flex-col gap-1">
-              <p className="text-nota font-medium">
-                Municípios atingidos — interseção calculada no cliente contra
-                municipios10.geojson, mesmo método de A.3
-              </p>
-              {areaManual.municipios.length === 0 ? (
-                <p className="text-corpo text-muted-foreground">
-                  Nenhum dos 10 municípios da amostra intercepta esta área.
-                </p>
-              ) : (
-                <p className="text-corpo">
-                  {areaManual.municipios
-                    .map((m) => `${m.nm_mun} ${pf.format(m.proporcao)}`)
-                    .join(' · ')}
-                </p>
-              )}
-              {areaManual.municipios.length > 1 && (
-                <Badge variant="outline" className="mt-2 w-fit">
-                  <AlertTriangle aria-hidden className="size-3" />
-                  poligonal cruza divisa municipal
-                </Badge>
-              )}
-            </div>
-          </CardContent>
-        </Card>
-      )}
+      {/* ESCOPO B */}
+      <FormularioCaracterizacao />
 
-      {sel && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="num text-titulo">{sel.processo}</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-4">
-            <dl className="grid grid-cols-2 gap-x-8 gap-y-2 text-corpo">
-              <Linha rotulo="Fase" valor={sel.fase} />
-              <Linha rotulo="Substância" valor={sel.substancia} />
-              <Linha rotulo="Titular" valor={sel.titular} />
-              <Linha rotulo="Área" valor={`${nf.format(sel.area_ha)} ha`} num />
-            </dl>
-            <Separator />
-            <div className="flex flex-col gap-1">
-              <p className="text-nota font-medium">
-                Municípios atingidos — derivado por interseção em A.3, não vem do
-                shapefile
-              </p>
-              <p className="text-corpo">{sel.municipios.join(' · ')}</p>
-              {sel.cruza_divisa && (
-                <Badge variant="outline" className="mt-2 w-fit">
-                  <AlertTriangle aria-hidden className="size-3" />
-                  poligonal cruza divisa municipal
-                </Badge>
-              )}
-            </div>
-          </CardContent>
-        </Card>
-      )}
+      {/* Saída do motor */}
+      <PainelParecer />
 
+      {/* A.8 — as quatro viradas, agora executáveis de ponta a ponta */}
       <Card>
         <CardHeader>
           <CardTitle className="text-titulo">
-            A.8 — as quatro viradas, embarcadas
+            As quatro viradas da demo
           </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-6">
+          <p className="text-nota text-muted-foreground">
+            Carregar uma virada só preenche a área e os campos do SIGMINE. A
+            tipologia e o porte continuam sendo escolha de quem apresenta — é
+            exatamente isso que a 2ª virada demonstra.
+          </p>
           {VIRADAS.map((v) => (
             <div key={v.n} className="flex flex-col gap-1">
               <div className="flex items-baseline gap-2">
@@ -192,9 +152,7 @@ export default function App() {
               </div>
               <p className="num text-nota text-muted-foreground">
                 {v.processo.processo} · {v.processo.substancia} ·{' '}
-                {v.processo.municipios
-                  .map((m) => `${m.nm_mun} ${pf.format(m.proporcao)}`)
-                  .join(' + ')}
+                {v.processo.municipios.map((m) => m.nm_mun).join(' + ')}
               </p>
               {v.pendencias.length > 0 && (
                 <ul className="ml-4 list-disc text-nota text-warn">
@@ -207,34 +165,20 @@ export default function App() {
                 variant="ghost"
                 size="sm"
                 className="w-fit px-0"
+                disabled={!indice}
                 onClick={() => {
                   const r = indice?.porNumero(v.processo.processo_norm)
-                  if (r) setSel(r)
+                  if (r) despachar({ tipo: 'selecionar-processo', processo: r })
                 }}
               >
-                carregar no painel acima
+                {estado.processo?.processo_norm === v.processo.processo_norm
+                  ? 'carregada'
+                  : 'carregar esta virada'}
               </Button>
             </div>
           ))}
         </CardContent>
       </Card>
     </main>
-  )
-}
-
-function Linha({
-  rotulo,
-  valor,
-  num,
-}: {
-  rotulo: string
-  valor: string
-  num?: boolean
-}) {
-  return (
-    <div className="flex flex-col">
-      <dt className="text-nota text-muted-foreground">{rotulo}</dt>
-      <dd className={num ? 'num' : undefined}>{valor}</dd>
-    </div>
   )
 }

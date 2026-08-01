@@ -7,7 +7,8 @@
  * diz por que o processo pode não estar ali.
  */
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import type { Feature } from 'geojson'
 import { CircleDot, PencilLine, Search } from 'lucide-react'
 
 import { Badge } from '@/components/ui/badge'
@@ -20,6 +21,7 @@ import {
   CommandList,
 } from '@/components/ui/command'
 import { Input } from '@/components/ui/input'
+import { MapaVisualizacao } from '@/components/MapaVisualizacao'
 import { interpretarEntrada } from '@/lib/processos'
 import type { IndiceProcessos, RegistroIndice } from '@/lib/processos'
 
@@ -35,6 +37,8 @@ export interface BuscaProcessoProps {
   onDesenhar: () => void
   /** Modo alternativo: usuário marca um ponto e informa um raio (A.9). */
   onPontoRaio: () => void
+  /** Processo selecionado no estado global — plota a poligonal abaixo da busca. */
+  processoSelecionado: RegistroIndice | null
 }
 
 export function BuscaProcesso({
@@ -42,8 +46,10 @@ export function BuscaProcesso({
   onSelecionar,
   onDesenhar,
   onPontoRaio,
+  processoSelecionado,
 }: BuscaProcessoProps) {
   const [entrada, setEntrada] = useState('')
+  const [geometria, setGeometria] = useState<Feature | null>(null)
 
   const { digitos, completo } = interpretarEntrada(entrada)
   const sugestoes = useMemo(
@@ -53,6 +59,20 @@ export function BuscaProcesso({
 
   // beco sem saída só existe quando o usuário digitou algo buscável e nada veio
   const semResultado = entrada.trim().length >= 3 && sugestoes.length === 0
+
+  useEffect(() => {
+    if (!processoSelecionado) {
+      setGeometria(null)
+      return
+    }
+    let cancelado = false
+    indice.geometria(processoSelecionado.processo_norm).then((f) => {
+      if (!cancelado) setGeometria(f)
+    })
+    return () => {
+      cancelado = true
+    }
+  }, [indice, processoSelecionado])
 
   return (
     <div className="flex flex-col gap-4">
@@ -89,6 +109,10 @@ export function BuscaProcesso({
           )}
         </p>
       </div>
+
+      {processoSelecionado && (
+        <MapaVisualizacao geometria={geometria} className="h-80 w-full overflow-hidden rounded-lg border" />
+      )}
 
       {entrada.trim().length >= 2 && (
         <Command shouldFilter={false} className="rounded-lg border">

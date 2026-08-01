@@ -18,9 +18,9 @@ acesso à informação que falta, em vez de chutar.
 | --- | --- |
 | **0 — Fundação** | ✅ repo, schemas congelados, fixtures, pipeline, licença |
 | **A — SIGMINE e processo ANM** | ✅ P0 completo (A.1–A.8) · 🚧 A.9 (P1), A.10 (P2) |
-| **B — Formulário** | 🚧 não iniciado |
+| **B — Formulário** | ✅ P0 completo (B.1–B.8) |
 | **C — Base de regras dos 10 municípios** | 🚧 caminho crítico, trabalho documental |
-| **D — Motor de match** | 🚧 não iniciado |
+| **D — Motor de match** | ⚠️ stub provisório em `app/src/lib/motor.ts` — assinatura final, corpo descartável (D.2–D.6 já utilizáveis) |
 | **E — Análise comparativa** | 🚧 não iniciado |
 | **F — Shell e interface** | 🚧 tela provisória de banco de provas |
 | **G — Integração com o gerador LAI** | 🚧 não iniciado |
@@ -92,6 +92,12 @@ app/
   src/lib/schemas.ts              ⚠️ CONTRATO CONGELADO (0.2)
   src/lib/processos.ts            índice e normalização de busca (A.5)
   src/data/viradas.ts             as 4 fixtures da demo (A.8)
+  src/lib/fatos.ts                formulário → FactBase (fronteira D.1)
+  src/lib/motor.ts                ⚠️ STUB do Escopo D — assinatura definitiva
+  src/lib/porte.ts                faixas, fronteiras e escala do controle (B.4)
+  src/lib/validacao.ts            pendências do formulário (B.7)
+  src/lib/vocabulario.ts          fases ANM e substâncias do recorte (B.2/B.3)
+  src/state/formulario.tsx        estado global único (B.6)
   src/data/fixtures.ts            dado provisório dos 4 schemas (0.3)
   src/components/                 interface
 documentation/BACKLOG.md        o plano

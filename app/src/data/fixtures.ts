@@ -158,6 +158,23 @@ export const REGRAS: Regra[] = [
     prioridade: 'P0',
   },
   {
+    // Sem esta regra a 2ª virada da demo não existe: acima da faixa delegada
+    // ninguém assumia a competência e o motor caía em INDETERMINADO por
+    // ausência de regra, que é diferente de ausência de fato.
+    // C.4 substitui pelo dispositivo real da LC 140/2011 e da resolução CEPRAM.
+    id: 'estadual-porte-acima-da-faixa-delegada',
+    descricao:
+      'Porte acima da faixa delegada ao município: a competência permanece com o Estado',
+    condicoes: [
+      { fato: 'faixa_porte', operador: 'em', valor: ['medio', 'grande', 'excepcional'] },
+      { fato: 'status_municipais_divergentes', operador: 'igual', valor: false },
+    ],
+    efeito: { instancia: 'ESTADUAL', orgao: 'INEMA' },
+    exige_fato: ['faixa_porte'],
+    fundamento: pendente('a confirmar por C.4', 'dispositivo pendente'),
+    prioridade: 'P0',
+  },
+  {
     id: 'condicional-divisa-status-divergente',
     descricao:
       'Poligonal repartida entre municípios com status de habilitação divergente',
