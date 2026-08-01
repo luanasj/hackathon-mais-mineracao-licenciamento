@@ -821,7 +821,7 @@ validar contra um `licencas_brutas` que já não é mais o que o nó anterior de
 
 ---
 
-## Patch 10 — `rank_and_emit`: ranking em Python puro, manifesto, diretório de run
+## Patch 10 — `rank_and_emit`: ranking em Python puro, manifesto, diretório de run ✅ feito
 
 **Objetivo:** produzir o artefato do §8 com ranking calculado em Python e estável entre execuções
 (AC5, AC6).
@@ -847,6 +847,41 @@ validar contra um `licencas_brutas` que já não é mais o que o nó anterior de
 `ranking_consorcios` ignora linhas `municipio_proprio`; empate de 3 sai `posicao 1,2,3` em ordem
 alfabética de nome dobrado; **embaralhar a lista de entrada 20 vezes produz JSON byte-idêntico**
 (AC5 e AC6 como teste unitário); colisões de slug recebem sufixo determinístico.
+
+**Feito.** Quatro desvios da prosa acima, todos decorrentes de decisões já tomadas em patches
+anteriores:
+
+1. **`emit.py` não tem `slug_licenca`.** O achado de escopo do patch 9 já atribuiu `id` dentro de
+   `normalize.py` (`_slug_licenca`), porque `validate_licencas` (patch 7) exige unicidade antes de
+   `emit.py` existir. Recriar a função aqui duplicaria a mesma lógica sem motivo — `rank_municipios`
+   e `rank_consorcios` só **leem** `id`/`municipio_id`/`consorcio_id`, nunca o geram. O teste "colisão
+   de slug recebe sufixo determinístico" que este patch previa foi para
+   `test_normalize_payload.py` (`test_colisao_de_slug_recebe_sufixo_deterministico`), onde a função
+   testada de fato mora.
+2. **`RankingConsorcio` não tem campo de nome (§8 não o lista).** A ordenação da decisão F ainda usa
+   `fold(consorcio_nome)` para desempate — lido de qualquer licença do grupo — só não o persiste no
+   registro final; quem fecha o desempate no JSON é o próprio `consorcio_id`.
+3. **Agregação de `avisos` é genérica, não a frase do exemplo do §8.** O `GOAL.md` mostra
+   `"consorcio_match_confianca < 0.7 em 1 registro"`, com o limiar embutido; reproduzir isso exigiria
+   `build_manifest` conhecer o `MatchingConfig` só para compor texto. A forma implementada é
+   `"{codigo} em {n} registro(s)"`, deduplicada por código e **contada** — deduplicar sem contar
+   esconderia se um problema é isolado ou sistêmico no run. `Meta.avisos` é `list[str]` sem formato
+   travado no schema, então a escolha não quebra contrato.
+4. **Três chaves novas em `config["configurable"]`:** `run_dir`, `modelo_pesquisa`,
+   `modelo_estruturacao`. Nenhuma existia antes porque nenhum nó anterior precisava de diretório de
+   run nem de nome de modelo — `graph.py`/`run.py` (patch 11) ainda não existem para as fornecer, e
+   `emit(state, config)` já precisa lê-las hoje para ter onde escrever e o que gravar em
+   `meta.modelo_*`. Mesmo padrão de `refs`/`structurer` (decisão 18): passam por `configurable`,
+   nunca pelo estado do grafo.
+
+`gerado_em` é derivado do `run_id` (`"2025_20260801T143200Z"` → `"2026-08-01T14:32:00Z"`), nunca do
+relógio — mesmo padrão de `data_consulta` no patch 9, e é o que faz `test_build_manifest_gerado_em_
+vem_do_run_id` e o teste de embaralhamento passarem sem mock de tempo.
+
+Não há `check_golden.py` para este nó: `emit` não chama LLM, então a tabela de sequenciamento já
+previa "não" na coluna Chave?. 11 testes novos (`test_emit.py`: 10, mais 1 em
+`test_normalize_payload.py`), **254 no total**, suíte inteira verde
+(`python -m pytest common research_pipeline`).
 
 ---
 
@@ -1003,7 +1038,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | 7 | Schemas + validador ✅ | não | `pytest test_validate.py` |
 | 8 | Estruturador fixture + `extract` + **fixture semente** ✅ | não | `check_golden extract` |
 | 9 | `normalize` + cruzamentos ✅ | não | `check_golden normalize` |
-| 10 | Ranking + manifesto | não | `pytest test_emit.py` |
+| 10 | Ranking + manifesto ✅ | não | `pytest test_emit.py` |
 | 11 | **Grafo + CLI + checkpointer + `--resume`/`--report`** | não | run offline completo, AC1–AC6+AC8 |
 | 12 | `deep_research_v1.md` | não | `pytest test_prompt_deep_research.py` |
 | 13 | DeepSeek real | sim, ~US$ 0,01 | offline passa; um run barato |

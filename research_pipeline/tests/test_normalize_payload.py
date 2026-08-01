@@ -113,3 +113,32 @@ def test_linha_sem_ambiguidade_nao_chama_o_estruturador(refs: ReferenceData) -> 
     normalize(state, config)
 
     assert registrador.user is None
+
+
+def test_colisao_de_slug_recebe_sufixo_deterministico(refs: ReferenceData) -> None:
+    """Patch 10 previa este teste em `test_emit.py`, mas o slug é atribuído em `normalize.py`
+    (achado de escopo do patch 9): duas licenças de Caturama, mesma modalidade e mesmo número
+    (o caso real seria dois registros distintos citando o mesmo processo) colidem no mesmo
+    `id` base e recebem sufixo `-2` determinístico, nunca um erro nem um `id` repetido."""
+    overrides = load_overrides()
+    matching_config = load_matching_config()
+    ref_index = build_ref_index(refs, overrides, matching_config)
+
+    brutas = [
+        _bruta("Caturama", "areia") | {"modalidade": "LAU", "numero_licenca": "01/2025"},
+        _bruta("Caturama", "areia") | {"modalidade": "LAU", "numero_licenca": "01/2025"},
+    ]
+    state = {"ano": 2025, "run_id": "2025_20260101T000000Z", "licencas_brutas": brutas}
+    config = {
+        "configurable": {
+            "refs": refs,
+            "ref_index": ref_index,
+            "matching_config": matching_config,
+            "structurer": _RegistraPayload(),
+        }
+    }
+
+    resultado = normalize(state, config)
+    ids = [linha["id"] for linha in resultado["licencas_normalizadas"]]
+    assert ids[0] == "2025-caturama-lau-01"
+    assert ids[1] == "2025-caturama-lau-01-2"
