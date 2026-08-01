@@ -1,0 +1,35 @@
+{
+  "name": "Hackathon Environment",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest",
+      "enableNonRootDocker": true,
+      "moby": true
+    }
+  },
+
+  "forwardPorts": [8000, 3000, 6379],
+  
+  "postCreateCommand": "npm install -g @anthropic-ai/claude-code && pip install -r requirements.txt",
+
+  "remoteEnv": {
+    "ENVIRONMENT": "development",
+    "PYTHONUNBUFFERED": "1"
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-azuretools.vscode-docker",
+        "humao.rest-client",
+        "tamasfe.even-better-toml"
+      ]
+    }
+  }
+}
