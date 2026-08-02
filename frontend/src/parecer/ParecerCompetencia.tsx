@@ -267,101 +267,87 @@ export default function ParecerCompetencia() {
 
             {/* Cadastro: o que veio do SIGMINE e o que dá para corrigir. */}
             {temArea && (
-              <>
-                <div
-                  className="pc-cadastro-grid"
-                  style={{
-                    marginTop: 26,
-                    borderTop: `1px solid ${CORES.linha}`,
-                    borderBottom: `1px solid ${CORES.linha}`,
-                  }}
-                >
-                  <Celula rotulo="Municípios atingidos" indice={0}>
-                    {municipios.length === 0 ? (
-                      <span style={{ color: CORES.cinza }}>—</span>
-                    ) : (
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                        {municipios.map((m) => {
-                          const incidencia = incidenciaDe(m)
-                          return (
-                            <div key={m}>
-                              <span style={{ fontFamily: SERIF, fontSize: 19 }}>{m}</span>
-                              {incidencia && (
-                                <span style={{ fontSize: 13, color: CORES.cinza, marginLeft: 8 }}>
-                                  {pct(incidencia.proporcao)} · {fmt2(incidencia.area_ha)} ha
-                                </span>
-                              )}
-                            </div>
-                          )
-                        })}
+              <div
+                style={{
+                  marginTop: 16,
+                  padding: '10px 0',
+                  borderTop: `1px solid ${CORES.linha}`,
+                  borderBottom: `1px solid ${CORES.linha}`,
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  alignItems: 'baseline',
+                  rowGap: 4,
+                  columnGap: 14,
+                  fontSize: 14,
+                }}
+              >
+                {municipios.length === 0 ? (
+                  <span style={{ color: CORES.cinza }}>
+                    {areaHa === null ? '—' : `${fmt2(areaHa)} ha`}
+                  </span>
+                ) : (
+                  municipios.map((m) => {
+                    const incidencia = incidenciaDe(m)
+                    return (
+                      <div key={m}>
+                        <span style={{ fontFamily: SERIF }}>{m}</span>
+                        <span style={{ fontSize: 12, color: CORES.cinza, marginLeft: 6 }}>
+                          {incidencia
+                            ? `${pct(incidencia.proporcao)} · ${fmt2(incidencia.area_ha)} ha`
+                            : areaHa === null
+                              ? ''
+                              : `${fmt2(areaHa)} ha`}
+                        </span>
                       </div>
-                    )}
-                  </Celula>
+                    )
+                  })
+                )}
 
-                  <Celula rotulo="Área da poligonal" indice={1}>
-                    <span style={{ fontFamily: SERIF, fontSize: 19 }}>
-                      {areaHa === null ? '—' : `${fmt2(areaHa)} ha`}
-                    </span>
-                    <div style={{ fontSize: 12, color: CORES.cinza, marginTop: 4 }}>
-                      {estado.origem === 'processo'
-                        ? 'SIGMINE/ANM'
-                        : 'derivada do desenho, interseção no cliente'}
-                    </div>
-                  </Celula>
-
-                  <Celula rotulo="Substância" indice={2}>
-                    {editando === 'substancia' ? (
-                      <SeletorLivre
-                        valor={estado.substancia}
-                        opcoes={[...SUBSTANCIAS_FREQUENTES]}
-                        onEscolher={(v) => {
-                          despachar({ tipo: 'substancia', valor: v })
-                          setEditando(null)
-                        }}
-                      />
-                    ) : (
-                      <ValorEditavel
-                        valor={estado.substancia}
-                        editado={estado.substancia_editada}
-                        temProcesso={estado.processo !== null}
-                        onEditar={() => setEditando('substancia')}
-                        onRestaurar={() =>
-                          despachar({ tipo: 'restaurar-sigmine', campo: 'substancia' })
-                        }
-                      />
-                    )}
-                    <AvisoCampo pendencias={pendencias} campo="substancia" />
-                  </Celula>
-
-                  <Celula rotulo="Fase na ANM" indice={3}>
-                    {editando === 'fase' ? (
-                      <SeletorLivre
-                        valor={estado.fase}
-                        opcoes={[...FASES_ANM]}
-                        onEscolher={(v) => {
-                          despachar({ tipo: 'fase', valor: v })
-                          setEditando(null)
-                        }}
-                      />
-                    ) : (
-                      <ValorEditavel
-                        valor={estado.fase}
-                        editado={estado.fase_editada}
-                        temProcesso={estado.processo !== null}
-                        onEditar={() => setEditando('fase')}
-                        onRestaurar={() => despachar({ tipo: 'restaurar-sigmine', campo: 'fase' })}
-                      />
-                    )}
-                    <AvisoCampo pendencias={pendencias} campo="fase" />
-                  </Celula>
+                <div>
+                  {editando === 'substancia' ? (
+                    <SeletorLivre
+                      valor={estado.substancia}
+                      opcoes={[...SUBSTANCIAS_FREQUENTES]}
+                      onEscolher={(v) => {
+                        despachar({ tipo: 'substancia', valor: v })
+                        setEditando(null)
+                      }}
+                    />
+                  ) : (
+                    <ValorEditavel
+                      valor={estado.substancia}
+                      editado={estado.substancia_editada}
+                      onEditar={() => setEditando('substancia')}
+                      onRestaurar={() =>
+                        despachar({ tipo: 'restaurar-sigmine', campo: 'substancia' })
+                      }
+                    />
+                  )}
+                  <AvisoCampo pendencias={pendencias} campo="substancia" />
                 </div>
 
-                {(estado.substancia_editada || estado.fase_editada) && (
-                  <div style={{ fontSize: 13, color: CORES.terraClara, marginTop: 10 }}>
-                    Corrigido manualmente — diverge do cadastro da ANM.
-                  </div>
-                )}
-              </>
+                <div>
+                  {editando === 'fase' ? (
+                    <SeletorLivre
+                      valor={estado.fase}
+                      opcoes={[...FASES_ANM]}
+                      onEscolher={(v) => {
+                        despachar({ tipo: 'fase', valor: v })
+                        setEditando(null)
+                      }}
+                    />
+                  ) : (
+                    <ValorEditavel
+                      valor={estado.fase}
+                      prefixo="Fase: "
+                      editado={estado.fase_editada}
+                      onEditar={() => setEditando('fase')}
+                      onRestaurar={() => despachar({ tipo: 'restaurar-sigmine', campo: 'fase' })}
+                    />
+                  )}
+                  <AvisoCampo pendencias={pendencias} campo="fase" />
+                </div>
+              </div>
             )}
 
             {/* Tipologia — define o parâmetro de porte, as faixas e os condicionais.
@@ -786,38 +772,6 @@ function AvisoCampo({
   return <Aviso erro={p.severidade === 'erro'}>{p.mensagem}</Aviso>
 }
 
-function Celula({
-  rotulo,
-  indice,
-  children,
-}: {
-  rotulo: string
-  indice: number
-  children: React.ReactNode
-}) {
-  return (
-    <div
-      style={{
-        padding: '16px 0 18px',
-        minHeight: 86,
-        borderTop: indice >= 2 ? `1px solid ${CORES.linhaSuave}` : 'none',
-      }}
-    >
-      <div
-        style={{
-          fontSize: 12,
-          letterSpacing: '.08em',
-          textTransform: 'uppercase',
-          color: CORES.terraClara,
-        }}
-      >
-        {rotulo}
-      </div>
-      <div style={{ marginTop: 8 }}>{children}</div>
-    </div>
-  )
-}
-
 /**
  * Valor de cadastro com a marca de origem. B.2: quando o usuário sobrescreve o
  * que veio do SIGMINE, o dado deixa de ser cadastro e vira declaração — e a
@@ -825,19 +779,19 @@ function Celula({
  */
 function ValorEditavel({
   valor,
+  prefixo = '',
   editado,
-  temProcesso,
   onEditar,
   onRestaurar,
 }: {
   valor: string
+  prefixo?: string
   editado: boolean
-  temProcesso: boolean
   onEditar: () => void
   onRestaurar: () => void
 }) {
   return (
-    <div>
+    <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, flexWrap: 'wrap' }}>
       <button
         type="button"
         onClick={onEditar}
@@ -847,41 +801,29 @@ function ValorEditavel({
           padding: 0,
           textAlign: 'left',
           fontFamily: SERIF,
-          fontSize: 19,
-          lineHeight: 1.25,
+          fontSize: 14,
           color: valor ? CORES.tinta : CORES.cinzaClaro,
         }}
       >
+        {prefixo}
         {valor || 'informar'}
       </button>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: 8,
-          fontSize: 12,
-          color: CORES.cinza,
-          marginTop: 4,
-        }}
-      >
-        <span>{editado ? 'declarado' : temProcesso ? 'SIGMINE/ANM' : 'a declarar'}</span>
-        {editado && temProcesso && (
-          <button
-            type="button"
-            onClick={onRestaurar}
-            style={{
-              background: 'none',
-              border: 'none',
-              padding: 0,
-              fontSize: 12,
-              color: CORES.verde,
-              textDecoration: 'underline',
-            }}
-          >
-            restaurar do SIGMINE
-          </button>
-        )}
-      </div>
+      {editado && (
+        <button
+          type="button"
+          onClick={onRestaurar}
+          style={{
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            fontSize: 11,
+            color: CORES.verde,
+            textDecoration: 'underline',
+          }}
+        >
+          restaurar do SIGMINE
+        </button>
+      )}
     </div>
   )
 }
@@ -1167,7 +1109,7 @@ function BarraPorte({
   const pos = (v: number) => (valorParaPosicao(v, teto) / PASSOS_SLIDER) * 100
 
   return (
-    <div style={{ marginTop: 34 }}>
+    <div style={{ marginTop: 14 }}>
       <div style={{ position: 'relative', height: 22, marginBottom: 4 }}>
         {limiares.map((l) => (
           <div

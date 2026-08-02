@@ -127,7 +127,7 @@ export function Pendente({
         borderRadius: 4,
       }}
     >
-      {texto}
+
     </span>
   )
 }
