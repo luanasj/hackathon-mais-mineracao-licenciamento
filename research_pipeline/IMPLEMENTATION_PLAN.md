@@ -995,7 +995,7 @@ O manifesto do run real traz os seis avisos que a "Verificação de ponta a pont
 
 ---
 
-## Patch 12 — `prompts/deep_research_v1.md` (texto puro, sem chave, revisável isolado)
+## Patch 12 — `prompts/deep_research_v1.md` (texto puro, sem chave, revisável isolado) ✅ feito
 
 **Objetivo:** aterrissar o artefato de maior risco humano sozinho, para ser discutido sem código no diff.
 
@@ -1013,6 +1013,28 @@ O manifesto do run real traz os seis avisos que a "Verificação de ponta a pont
 dentro de frase de proibição; e — o teste que de fato faz cumprir a decisão travada 13 —
 **no máximo 3 dos 417 nomes dobrados de município e nenhum dos 29 nomes/siglas de consórcio**
 aparecem como palavra inteira no prompt. Ninguém reintroduz a lista de 417 sem quebrar o teste.
+
+**Feito.**
+
+1. **`{{ANO}}` só cabe no título.** Uma primeira versão do texto repetia `{{ANO}}` dentro das
+   regras 1 e da abertura ("licenças concedidas em `{{ANO}}`"), o que já quebrava a própria
+   verificação do patch (`ocorre exatamente 1×`) antes de o teste existir. Reescrito para "no ano
+   acima" nas duas ocorrências fora do título — o placeholder aparece uma vez, no cabeçalho, e o
+   corpo do prompt se refere a ele por dêixis, não por repetição do token.
+2. **Regra 7 (proibição de ranking) precisou virar uma frase só.** A primeira redação separava
+   "Não ranqueie..." de uma segunda frase solta ("Ranking é calculado depois...") sem palavra de
+   proibição — o teste que confere "'ranking' só dentro de frase de proibição" opera por frase
+   (`re.split` em `.!?`), então a segunda frase falhava mesmo com a primeira correta. Fundidas em
+   uma frase única com travessão: `"Não ranqueie [...] — o ranking é calculado depois [...]"`.
+3. **Decisão 13 medida, não assumida.** Rodado `fold()` (patch 2) sobre o prompt inteiro e
+   comparado, palavra inteira com fronteira `\b`-like em regex, contra `fold(nome)` dos 417
+   municípios e 29 consórcios de `load_reference_data()` (patch 3) — zero colisões nos dois
+   lados. O teste aceita até 3 municípios (tolerância para topônimo que também é palavra comum
+   do vocabulário do prompt, ex. "central") mas zero consórcios, porque nome de consórcio não é
+   palavra do dia a dia e qualquer ocorrência ali é sinal de lista vazada, não coincidência.
+4. **276 testes** (era 271 no patch 11): 5 novos em `test_prompt_deep_research.py`, zero em
+   qualquer outro arquivo — este patch não toca código de nó, só acrescenta um `.md` e o teste
+   que o mede. Suíte inteira verde, nenhuma regressão.
 
 ---
 
@@ -1103,7 +1125,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | 9 | `normalize` + cruzamentos ✅ | não | `check_golden normalize` |
 | 10 | Ranking + manifesto ✅ | não | `pytest test_emit.py` |
 | 11 | **Grafo + CLI + checkpointer + `--resume`/`--report`** ✅ | não | run offline completo, AC1–AC6+AC8 |
-| 12 | `deep_research_v1.md` | não | `pytest test_prompt_deep_research.py` |
+| 12 | `deep_research_v1.md` ✅ | não | `pytest test_prompt_deep_research.py` |
 | 13 | DeepSeek real | sim, ~US$ 0,01 | offline passa; um run barato |
 | 14 | Gemini Deep Research | sim, US$ 1–3 | retomada provada offline; um run pago |
 
