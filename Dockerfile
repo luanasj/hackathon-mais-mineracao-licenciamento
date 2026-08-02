@@ -7,7 +7,7 @@ RUN apt-get update \
 
 WORKDIR /app
 
-COPY documentation/schema.sql documentation/seed.sql documentation/
+COPY documentation/schema.sql documentation/seed.sql documentation/seed_regras.sql documentation/
 COPY docker/entrypoint.sh entrypoint.sh
 RUN chmod +x entrypoint.sh
 

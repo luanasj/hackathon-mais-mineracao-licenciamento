@@ -1,2 +1,6 @@
 *.sh text eol=lf
+
+# Gerado por scripts/generate_seed_sql.py. Sem isto, regerar no Windows vs. Linux troca todos os
+# fins de linha e produz um diff de 34 mil linhas por cima das poucas que a rodada acrescentou.
+*.sql text eol=lf
 docker/entrypoint.sh text eol=lf

@@ -1,0 +1,225 @@
+{
+  "licencas_brutas": [
+    {
+      "consorcio_raw": "Consórcio Bacia do Paramirim",
+      "data_concessao": "2025-02-04",
+      "fonte_urls": [
+        "https://exemplo.invalid/paramirim/caturama-lau-01-2025"
+      ],
+      "licenciado_por_confianca": 0.95,
+      "licenciado_por_evidencia": "Licença assinada pelo Diretor Técnico do Consórcio Público Interfederativo da Bacia do Paramirim",
+      "licenciado_por_raw": "consorcio",
+      "modalidade": "LAU",
+      "modalidade_raw": "LAU",
+      "municipio_raw": "Caturama",
+      "nivel_licenciamento": null,
+      "numero_licenca": "01/2025",
+      "orgao_emissor_raw": "Consórcio Público Interfederativo da Bacia do Paramirim",
+      "substancia_raw": "Granito para britagem/agregados",
+      "tipologia_raw": null,
+      "titular": "Mineração Caturama Ltda. (Processo nº 013/2024)",
+      "trecho_citado": "Licença Ambiental Unificada Nº 01/2025, de 04 de fevereiro de 2025, para extração de granito destinado à britagem e produção de agregados, emitida pelo Consórcio Público Interfederativo da Bacia do Paramirim."
+    },
+    {
+      "consorcio_raw": "Consórcio Bacia do Paramirim",
+      "data_concessao": "2025-03-10",
+      "fonte_urls": [
+        "https://exemplo.invalid/caturama/li-07-2025"
+      ],
+      "licenciado_por_confianca": 0.9,
+      "licenciado_por_evidencia": "Portaria assinada pelo Secretário Municipal de Meio Ambiente de Caturama, município integrante do Consórcio Bacia do Paramirim",
+      "licenciado_por_raw": "municipio_proprio",
+      "modalidade": "LI",
+      "modalidade_raw": "LI",
+      "municipio_raw": "Caturama",
+      "nivel_licenciamento": 2,
+      "numero_licenca": "07/2025",
+      "orgao_emissor_raw": "Secretaria Municipal de Meio Ambiente de Caturama",
+      "substancia_raw": "areia",
+      "tipologia_raw": null,
+      "titular": "Extração Mineral Caturama EPP",
+      "trecho_citado": "Licença de Instalação Nº 07/2025 concedida pela Secretaria Municipal de Meio Ambiente de Caturama, município integrante do Consórcio Bacia do Paramirim, para extração de areia."
+    },
+    {
+      "consorcio_raw": null,
+      "data_concessao": "2025-01-15",
+      "fonte_urls": [
+        "https://exemplo.invalid/tremedal/lo-22-2025"
+      ],
+      "licenciado_por_confianca": 0.3,
+      "licenciado_por_evidencia": null,
+      "licenciado_por_raw": "indeterminado",
+      "modalidade": "LO",
+      "modalidade_raw": "LO",
+      "municipio_raw": "Tremedal",
+      "nivel_licenciamento": null,
+      "numero_licenca": "22/2025",
+      "orgao_emissor_raw": null,
+      "substancia_raw": "Granito para revestimento",
+      "tipologia_raw": null,
+      "titular": "Pedreira Tremedal Ltda.",
+      "trecho_citado": "Licença de Operação Nº 22/2025 para extração de granito destinado a revestimento, órgão emissor não identificado na fonte consultada."
+    },
+    {
+      "consorcio_raw": "CIVALERG",
+      "data_concessao": "2025-04-02",
+      "fonte_urls": [
+        "https://exemplo.invalid/civalerg/tremedal-lau-015-2025"
+      ],
+      "licenciado_por_confianca": 0.88,
+      "licenciado_por_evidencia": "Licença emitida pelo CIVALERG, numeração consorcial",
+      "licenciado_por_raw": "consorcio",
+      "modalidade": "LAU",
+      "modalidade_raw": "LAU",
+      "municipio_raw": "Tremedal",
+      "nivel_licenciamento": null,
+      "numero_licenca": "015/2025",
+      "orgao_emissor_raw": "CIVALERG",
+      "substancia_raw": "Granito para britagem/agregados",
+      "tipologia_raw": null,
+      "titular": "Agregados Tremedal S.A.",
+      "trecho_citado": "Licença Ambiental Unificada Nº 015/2025 emitida pelo CIVALERG para extração de granito destinado à britagem e produção de agregados."
+    },
+    {
+      "consorcio_raw": null,
+      "data_concessao": null,
+      "fonte_urls": [
+        "https://exemplo.invalid/pintadas/lp-03-2025"
+      ],
+      "licenciado_por_confianca": 0.85,
+      "licenciado_por_evidencia": "Portaria municipal assinada pelo Secretário de Meio Ambiente",
+      "licenciado_por_raw": "municipio_proprio",
+      "modalidade": "LP",
+      "modalidade_raw": "LP",
+      "municipio_raw": "Pintadas",
+      "nivel_licenciamento": 1,
+      "numero_licenca": "03/2025",
+      "orgao_emissor_raw": "Secretaria Municipal de Meio Ambiente de Pintadas",
+      "substancia_raw": "calcário",
+      "tipologia_raw": null,
+      "titular": "Extrativa Pintadas Ltda.",
+      "trecho_citado": "Licença Prévia Nº 03/2025, concedida em fevereiro de 2025, para lavra de calcário."
+    },
+    {
+      "consorcio_raw": "Consórcio Bacia do Paramirim",
+      "data_concessao": "2025-05-20",
+      "fonte_urls": [
+        "https://exemplo.invalid/ruybarbosa/lo-09-2025"
+      ],
+      "licenciado_por_confianca": 0.8,
+      "licenciado_por_evidencia": "Licença emitida pelo Consórcio Bacia do Paramirim, conforme portaria consorcial",
+      "licenciado_por_raw": "consorcio",
+      "modalidade": "LO",
+      "modalidade_raw": "LO",
+      "municipio_raw": "Ruy Barbosa",
+      "nivel_licenciamento": null,
+      "numero_licenca": "09/2025",
+      "orgao_emissor_raw": "Consórcio Público Interfederativo da Bacia do Paramirim",
+      "substancia_raw": "argila",
+      "tipologia_raw": null,
+      "titular": "Mineradora Ruy Barbosa Ltda.",
+      "trecho_citado": "Licença de Operação Nº 09/2025 emitida pelo Consórcio Público Interfederativo da Bacia do Paramirim para lavra de argila em Ruy Barbosa."
+    },
+    {
+      "consorcio_raw": null,
+      "data_concessao": "2025-06-01",
+      "fonte_urls": [
+        "https://exemplo.invalid/santabarbara/lo-11-2025"
+      ],
+      "licenciado_por_confianca": 0.2,
+      "licenciado_por_evidencia": null,
+      "licenciado_por_raw": "indeterminado",
+      "modalidade": "LO",
+      "modalidade_raw": "LO",
+      "municipio_raw": "Santa Bárbara",
+      "nivel_licenciamento": null,
+      "numero_licenca": "11/2025",
+      "orgao_emissor_raw": null,
+      "substancia_raw": "quartzito",
+      "tipologia_raw": null,
+      "titular": "Mineração Santa Bárbara Ltda.",
+      "trecho_citado": "Licença de Operação Nº 11/2025 para lavra de quartzito em Santa Bárbara; órgão emissor não identificável na fonte consultada."
+    },
+    {
+      "consorcio_raw": null,
+      "data_concessao": "2025-02-18",
+      "fonte_urls": [
+        "https://exemplo.invalid/caetite/lo-44-2025"
+      ],
+      "licenciado_por_confianca": 0.9,
+      "licenciado_por_evidencia": "Portaria assinada pela Secretaria Municipal de Meio Ambiente",
+      "licenciado_por_raw": "municipio_proprio",
+      "modalidade": "LO",
+      "modalidade_raw": "LO",
+      "municipio_raw": "Caetite",
+      "nivel_licenciamento": 3,
+      "numero_licenca": "44/2025",
+      "orgao_emissor_raw": "Secretaria Municipal de Meio Ambiente de Caetité",
+      "substancia_raw": "minério de ferro",
+      "tipologia_raw": null,
+      "titular": "Extrativa Caetité Ltda.",
+      "trecho_citado": "Licença de Operação Nº 44/2025 concedida pela Secretaria Municipal de Meio Ambiente de Caetité para lavra de minério de ferro."
+    },
+    {
+      "consorcio_raw": null,
+      "data_concessao": null,
+      "fonte_urls": [
+        "https://exemplo.invalid/regional/bacia-paramirim-panorama"
+      ],
+      "licenciado_por_confianca": 0.1,
+      "licenciado_por_evidencia": null,
+      "licenciado_por_raw": "indeterminado",
+      "modalidade": null,
+      "modalidade_raw": null,
+      "municipio_raw": "Bacia do Paramirim (Região)",
+      "nivel_licenciamento": null,
+      "numero_licenca": null,
+      "orgao_emissor_raw": null,
+      "substancia_raw": "diversos",
+      "tipologia_raw": null,
+      "titular": null,
+      "trecho_citado": "Panorama regional de licenciamento na Bacia do Paramirim, sem identificação de município específico para este registro."
+    },
+    {
+      "consorcio_raw": null,
+      "data_concessao": "2025-03-22",
+      "fonte_urls": [
+        "https://exemplo.invalid/aiquara/lau-05-2025"
+      ],
+      "licenciado_por_confianca": 0.75,
+      "licenciado_por_evidencia": "Portaria assinada pela Secretaria Municipal de Meio Ambiente de Aiquara",
+      "licenciado_por_raw": "municipio_proprio",
+      "modalidade": "LAU",
+      "modalidade_raw": "LAU",
+      "municipio_raw": "Aiquara",
+      "nivel_licenciamento": null,
+      "numero_licenca": "05/2025",
+      "orgao_emissor_raw": "Secretaria Municipal de Meio Ambiente de Aiquara",
+      "substancia_raw": "areia",
+      "tipologia_raw": null,
+      "titular": "Mineração Aiquara Ltda.",
+      "trecho_citado": "Licença Ambiental Unificada Nº 05/2025 concedida pela Secretaria Municipal de Meio Ambiente de Aiquara para extração de areia."
+    },
+    {
+      "consorcio_raw": "Consórcio Intermunicipal do Vale do Rio Gavião - CIVALERG",
+      "data_concessao": "2025-07-09",
+      "fonte_urls": [
+        "https://exemplo.invalid/civalerg/baixagrande-li-019-2025"
+      ],
+      "licenciado_por_confianca": 0.82,
+      "licenciado_por_evidencia": "Licença emitida pelo CIVALERG, numeração consorcial",
+      "licenciado_por_raw": "consorcio",
+      "modalidade": "LI",
+      "modalidade_raw": "LI",
+      "municipio_raw": "Baixa Grande",
+      "nivel_licenciamento": null,
+      "numero_licenca": "019/2025",
+      "orgao_emissor_raw": "Consórcio Intermunicipal do Vale do Rio Gavião - CIVALERG",
+      "substancia_raw": "cascalho",
+      "tipologia_raw": null,
+      "titular": "Baixa Grande Minérios Ltda.",
+      "trecho_citado": "Licença de Instalação Nº 019/2025 emitida pelo Consórcio Intermunicipal do Vale do Rio Gavião - CIVALERG para lavra de cascalho em Baixa Grande."
+    }
+  ],
+  "validation_errors": []
+}

@@ -5,6 +5,7 @@ Lê:
   data/processed/consorcios.json
   data/processed/municipios_habilitados.json
   data/processed/leis_por_municipio.json
+  data/processed/licencas/<run_id>.json   (produto do research_pipeline, um por rodada)
 
 Escreve:
   documentation/seed.sql — popula o schema de documentation/schema.sql
@@ -162,17 +163,92 @@ def gen_leis(out):
             )
 
 
+def gen_licencas(out):
+    """Produto do `research_pipeline`: um arquivo por rodada em `data/processed/licencas/`.
+
+    Append-only por desenho — cada rodada trimestral acrescenta um `pesquisa_run` com suas
+    licenças, e nenhuma rodada anterior é tocada. Ordenado por `run_id` para que regerar o
+    `seed.sql` com os mesmos arquivos produza o mesmo texto, byte a byte.
+
+    `ano_completo` é derivado, não lido do produto: o `research_pipeline` roda sempre por ano
+    inteiro e não sabe em que dia foi executado em relação ao ano que pesquisou. Quem sabe é o
+    `run_id`, que carrega o timestamp — uma rodada de 2026 executada em 2026 cobriu, no máximo,
+    parte do ano.
+    """
+    diretorio = DATA / "licencas"
+    if not diretorio.is_dir():
+        return
+
+    for caminho in sorted(diretorio.glob("*.json")):
+        with open(caminho, encoding="utf-8") as f:
+            produto = json.load(f)
+        meta = produto["meta"]
+        run_id = meta["run_id"]
+        ano_execucao = int(run_id.split("_", 1)[1][:4])
+        ano_completo = ano_execucao > meta["ano_referencia"]
+
+        out.append(
+            "INSERT INTO pesquisa_run (run_id, ano_referencia, ano_completo, gerado_em, "
+            "prompt_version, modelo_pesquisa, modelo_estruturacao, refs_data_consulta, "
+            "total_licencas, municipios_com_licenca) VALUES "
+            f"({sql_str(run_id)}, {sql_num(meta['ano_referencia'])}, {sql_bool(ano_completo)}, "
+            f"{sql_str(meta['gerado_em'])}, {sql_str(meta['prompt_version'])}, "
+            f"{sql_str(meta['modelo_pesquisa'])}, {sql_str(meta['modelo_estruturacao'])}, "
+            f"{sql_str(meta['refs_data_consulta'])}, {sql_num(meta['total_licencas'])}, "
+            f"{sql_num(meta['municipios_com_licenca'])});"
+        )
+
+        for aviso in meta.get("avisos", []):
+            codigo = aviso.split(" ", 1)[0]
+            out.append(
+                "INSERT INTO pesquisa_aviso (run_id, codigo, detalhe) VALUES "
+                f"({sql_str(run_id)}, {sql_str(codigo)}, {sql_str(aviso)});"
+            )
+
+        for lic in produto["licencas"]:
+            out.append(
+                "INSERT INTO licenca (id, run_id, codigo_ibge, municipio_nome, municipio_raw, "
+                "municipio_match_metodo, municipio_match_confianca, consorcio_id, consorcio_nome, "
+                "consorcio_raw, consorcio_match_metodo, consorcio_match_confianca, licenciado_por, "
+                "orgao_emissor_raw, licenciado_por_evidencia, licenciado_por_confianca, titular, "
+                "mineral, substancia_raw, tipologia_codigo, tipologia_nome, potencial_poluidor, "
+                "nivel_licenciamento, modalidade, modalidade_raw, numero_licenca, data_concessao, "
+                "fonte_urls, trecho_citado, data_consulta, verificado) VALUES "
+                f"({sql_str(lic['id'])}, {sql_str(run_id)}, {sql_str(lic['municipio_id'])}, "
+                f"{sql_str(lic['municipio_nome'])}, {sql_str(lic['municipio_raw'])}, "
+                f"{sql_str(lic['municipio_match_metodo'])}, {sql_num(lic['municipio_match_confianca'])}, "
+                f"{sql_str(lic['consorcio_id'])}, {sql_str(lic['consorcio_nome'])}, "
+                f"{sql_str(lic['consorcio_raw'])}, {sql_str(lic['consorcio_match_metodo'])}, "
+                f"{sql_num(lic['consorcio_match_confianca'])}, {sql_str(lic['licenciado_por'])}, "
+                f"{sql_str(lic['orgao_emissor_raw'])}, {sql_str(lic['licenciado_por_evidencia'])}, "
+                f"{sql_num(lic['licenciado_por_confianca'])}, {sql_str(lic['titular'])}, "
+                f"{sql_str(lic['mineral'])}, {sql_str(lic['substancia_raw'])}, "
+                f"{sql_str(lic['tipologia_codigo'])}, {sql_str(lic['tipologia_nome'])}, "
+                f"{sql_str(lic['potencial_poluidor'])}, {sql_num(lic['nivel_licenciamento'])}, "
+                f"{sql_str(lic['modalidade'])}, {sql_str(lic['modalidade_raw'])}, "
+                f"{sql_str(lic['numero_licenca'])}, {sql_str(lic['data_concessao'])}, "
+                f"{sql_str(json.dumps(lic['fonte_urls'], ensure_ascii=False))}, "
+                f"{sql_str(lic['trecho_citado'])}, {sql_str(lic['data_consulta'])}, "
+                f"{sql_bool(lic['verificado'])});"
+            )
+
+
 def main():
     out = ["-- Gerado por scripts/generate_seed_sql.py a partir de data/processed/. Não editar à mão.",
            "-- Uma única transação: ordem dos INSERT já respeita as FKs (municipio antes de",
-           "-- habilitacao_gac/ato_diario_oficial, termo_busca vem do schema.sql).",
+           "-- habilitacao_gac/ato_diario_oficial/licenca, termo_busca vem do schema.sql).",
            "BEGIN TRANSACTION;", ""]
     gen_cepram(out)
     gen_consorcios(out)
     gen_municipios_habilitacao(out)
     gen_leis(out)
+    gen_licencas(out)
     out.append("COMMIT;")
-    OUT.write_text("\n".join(out) + "\n", encoding="utf-8")
+    # newline="\n" explícito: sem ele o Python traduz \n para \r\n no Windows, e o mesmo comando
+    # rodado em máquinas diferentes reescreve o arquivo inteiro em vez de acrescentar as linhas da
+    # rodada nova — 34 mil linhas de diff que escondem as 26 que interessam. Junto com
+    # `*.sql text eol=lf` no .gitattributes, o seed passa a ter fim de linha estável.
+    OUT.write_text("\n".join(out) + "\n", encoding="utf-8", newline="\n")
     print(f"{len(out)} linhas escritas em {OUT}")
 
 
