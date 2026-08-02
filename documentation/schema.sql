@@ -10,6 +10,8 @@
 --      gac_habilitacao.json é gerado a partir dela por build_dataset.py.
 --      Modelados como UMA tabela: habilitacao_gac.)
 --   data/processed/leis_por_municipio.json
+--   data/processed/licencas/<run_id>.json  (produto do research_pipeline,
+--     um arquivo por rodada trimestral -> pesquisa_run + licenca)
 --
 -- Fora deste schema, por decisão de escopo: entidades ainda sem JSON real
 -- (Regra de competência, Parecer) e os JSON brutos por termo em
@@ -158,6 +160,115 @@ CREATE TABLE ato_diario_oficial (
 
 CREATE INDEX idx_ato_municipio ON ato_diario_oficial(codigo_ibge);
 CREATE INDEX idx_ato_termo ON ato_diario_oficial(termo);
+
+-- ---------------------------------------------------------------------
+-- Licenças concedidas — produto do research_pipeline (Gemini Deep Research
+-- + DeepSeek). Fonte: data/processed/licencas/<run_id>.json, um arquivo por
+-- rodada.
+--
+-- Append-only, mesma forma de habilitacao_gac: cada rodada trimestral
+-- ACRESCENTA um pesquisa_run e suas licenças, nunca sobrescreve as
+-- anteriores. É isso que torna a comparação entre trimestres possível —
+-- um UPSERT por licença apagaria a série histórica que se quer medir.
+-- ---------------------------------------------------------------------
+
+CREATE TABLE pesquisa_run (
+    run_id               TEXT PRIMARY KEY,   -- "2025_20260802T012043Z" (ano + timestamp UTC)
+    ano_referencia       INTEGER NOT NULL,
+    -- 0 quando a rodada cobriu um ano ainda em curso: a de 2026 rodada em
+    -- agosto/2026 traz Jan-Ago, e comparar a contagem dela com a de um ano
+    -- fechado sem esta coluna produziria a leitura errada de "queda".
+    ano_completo         INTEGER NOT NULL CHECK (ano_completo IN (0, 1)),
+    gerado_em            TEXT NOT NULL,      -- AAAA-MM-DDTHH:MM:SSZ, derivado do run_id
+    prompt_version       TEXT NOT NULL,      -- "deep_research_v1"
+    modelo_pesquisa      TEXT NOT NULL,      -- "deep-research-preview-04-2026" | "relatorio_salvo"
+    modelo_estruturacao  TEXT NOT NULL,      -- "deepseek-v4-flash" | "fixture"
+    refs_data_consulta   TEXT NOT NULL,      -- snapshot do GAC usado na normalização
+    total_licencas       INTEGER NOT NULL,
+    municipios_com_licenca INTEGER NOT NULL
+);
+
+CREATE TABLE licenca (
+    id                   TEXT NOT NULL,      -- slug, único dentro do run: "2025-caturama-lau-01"
+    run_id               TEXT NOT NULL REFERENCES pesquisa_run(run_id),
+
+    -- NULL quando o match de nome ficou abaixo do piso de 0.60 (decisão E):
+    -- "Bacia do Paramirim (Região)" não é município e não pode virar um.
+    codigo_ibge          TEXT REFERENCES municipio(codigo_ibge),
+    municipio_nome       TEXT,
+    municipio_raw        TEXT NOT NULL,      -- como o relatório escreveu
+    municipio_match_metodo TEXT NOT NULL CHECK (municipio_match_metodo IN ('exato', 'alias', 'fuzzy', 'inferido', 'nenhum')),
+    municipio_match_confianca NUMERIC NOT NULL,
+
+    consorcio_id         TEXT REFERENCES consorcio(consorcio_id),
+    consorcio_nome       TEXT,
+    consorcio_raw        TEXT,
+    consorcio_match_metodo TEXT NOT NULL CHECK (consorcio_match_metodo IN ('exato', 'alias', 'fuzzy', 'inferido', 'nenhum')),
+    consorcio_match_confianca NUMERIC NOT NULL,
+
+    -- Nunca deduzido do vínculo consorcial: exige evidência textual (§6.4).
+    licenciado_por       TEXT NOT NULL CHECK (licenciado_por IN ('municipio_proprio', 'consorcio', 'indeterminado')),
+    orgao_emissor_raw    TEXT,
+    licenciado_por_evidencia TEXT,
+    licenciado_por_confianca NUMERIC NOT NULL,
+
+    titular              TEXT,
+    mineral              TEXT,
+    substancia_raw       TEXT,
+    -- SEM foreign key para tipologia(codigo), e não por descuido: o
+    -- vocabulário do research_pipeline vem do Anexo IV completo (17 códigos)
+    -- e o seed.sql carrega só os 9 dos grupos B3/B4 extraídos do PDF. Medido:
+    -- B1.1.1, B1.1.2, B1.1.3, B1.2.1, B2.1, B2.2, B4.5 e B4.6 existem no
+    -- pipeline e não no banco — e a licença de Nordestina/2025 saiu com B2.2.
+    -- Uma FK aqui rejeitaria licenças reais para proteger uma tabela que está
+    -- incompleta; a incompletude é da tabela, não do dado.
+    tipologia_codigo     TEXT,
+    tipologia_nome       TEXT,
+    potencial_poluidor   TEXT,
+    nivel_licenciamento  INTEGER CHECK (nivel_licenciamento IN (1, 2, 3)),
+
+    -- 'Outra' não é uma sétima modalidade: é "fora das 6 do vocabulário".
+    -- Quem lê 'Outra' tem de ler modalidade_raw junto — é lá que está o que a
+    -- prefeitura escreveu ("Licença Específica", "Licença de Alteração").
+    modalidade           TEXT CHECK (modalidade IN ('LP', 'LI', 'LO', 'LAU', 'LU', 'Renovacao', 'Outra')),
+    modalidade_raw       TEXT,
+    numero_licenca       TEXT,
+    data_concessao       TEXT,               -- AAAA-MM-DD; NULL se a fonte não traz data completa
+
+    fonte_urls           TEXT NOT NULL,      -- JSON array: SQLite não tem lista e o §8 exige todas
+    trecho_citado        TEXT NOT NULL,      -- procedência obrigatória (AC2)
+    data_consulta        TEXT NOT NULL,      -- data do run, não do cadastro
+    verificado           INTEGER NOT NULL DEFAULT 0 CHECK (verificado IN (0, 1)),
+
+    PRIMARY KEY (run_id, id)
+);
+
+CREATE INDEX idx_licenca_municipio ON licenca(codigo_ibge);
+CREATE INDEX idx_licenca_run ON licenca(run_id);
+
+-- Avisos agregados do manifesto, um por código. Sem eles a comparação entre
+-- trimestres mostra que uma contagem mudou e não mostra por quê.
+CREATE TABLE pesquisa_aviso (
+    run_id               TEXT NOT NULL REFERENCES pesquisa_run(run_id),
+    codigo               TEXT NOT NULL,      -- "consorcio_match_confianca", "municipio_nao_apto"...
+    detalhe              TEXT NOT NULL,      -- texto agregado: "... em N registro(s)"
+    PRIMARY KEY (run_id, codigo)
+);
+
+-- Superfície de comparação entre rodadas: contagem por município e ano,
+-- discriminada por quem licenciou.
+CREATE VIEW licenca_por_municipio_ano AS
+SELECT
+    r.run_id,
+    r.ano_referencia,
+    r.ano_completo,
+    l.codigo_ibge,
+    l.municipio_nome,
+    l.licenciado_por,
+    COUNT(*) AS total_licencas
+FROM licenca l
+JOIN pesquisa_run r ON r.run_id = l.run_id
+GROUP BY r.run_id, r.ano_referencia, r.ano_completo, l.codigo_ibge, l.municipio_nome, l.licenciado_por;
 
 -- ---------------------------------------------------------------------
 -- Seed do vocabulário fechado de termos

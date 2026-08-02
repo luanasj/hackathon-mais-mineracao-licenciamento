@@ -1199,6 +1199,52 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 
 ---
 
+## Patch 15 — Licenças no banco, com histórico trimestral ✅ feito
+
+**Objetivo:** rodar 2025 e 2026, dar ao produto uma casa versionada e modelá-lo no banco de forma
+que rodadas trimestrais se acumulem em vez de se sobrescrever.
+
+**Feito**, com cinco registros:
+
+1. **`modalidade` fora do vocabulário deixou de derrubar a linha** (`GOAL.md` v1.5). Vira `"Outra"`
+   com a grafia original em `modalidade_raw`. Não era refinamento: **3 das 8 licenças de 2025 e 8
+   das 11 de 2026 se perdiam em silêncio** — `Licença Específica`, `Licença de Alteração`,
+   `LAU / LU`, `LP/LI`, `Dispensa`, `LO Corretiva`, `Licença de Regularização`. O `Literal`
+   recusava a linha em `extract`, ela queimava as 2 tentativas de reparo e sumia sem aparecer no
+   `validation_errors` do produto, porque o manifesto conta só o que sobreviveu. O run pago de 2026
+   teria devolvido 3 linhas úteis de 11. `"Outra"` não amplia o vocabulário do §5: diz "não é
+   nenhuma das 6", e `modalidade_raw` guarda o que o documento disse. Valor **não textual** no
+   campo continua erro duro — ali não há licença real por trás.
+2. **2025 não custou US$ 1–3.** O relatório bruto estava commitado desde o patch 14, então
+   `--report` + `--llm deepseek` reprocessou por ~US$ 0,01. Só 2026 pagou a pesquisa. Esse é o
+   retorno concreto do passo manual obrigatório do patch 14.
+3. **`data/processed/licencas/<run_id>.json`** — um arquivo por rodada, versionado. Fecha o
+   problema registrado no patch 14 (o produto nascia em `runs/`, que é gitignored) e é o mecanismo
+   da acumulação: nada é sobrescrito, cada trimestre acrescenta um arquivo.
+4. **Três tabelas + uma view no `schema.sql`**, na forma append-only de `habilitacao_gac`:
+   `pesquisa_run`, `licenca`, `pesquisa_aviso`, `licenca_por_municipio_ano`. `ano_completo` é
+   derivado do `run_id` (que carrega o timestamp), não lido do produto — o pipeline roda sempre por
+   ano inteiro e não sabe em que dia foi executado. Sem essa coluna, comparar 2026 parcial (11
+   licenças, Jan–Ago) com 2025 fechado (8) leria como alta, e comparar com um 2026 fechado leria
+   como queda.
+5. **`tipologia_codigo` ficou sem foreign key, por medição.** O vocabulário do pipeline vem do
+   Anexo IV completo (17 códigos); o `seed.sql` carrega só os 9 dos grupos B3/B4 extraídos do PDF.
+   Faltam `B1.1.1`, `B1.1.2`, `B1.1.3`, `B1.2.1`, `B2.1`, `B2.2`, `B4.5`, `B4.6` — e a licença de
+   Nordestina/2025 saiu com `B2.2`. Uma FK ali rejeitaria licença real para proteger uma tabela
+   incompleta; a incompletude é da tabela, não do dado. O motivo está no comentário do schema.
+
+Verificado no container real, não só em `/tmp`: `docker compose down -v && docker compose up
+--build` reconstrói o banco do zero e `sqlite-web` serve as duas rodadas em `:8080`.
+`PRAGMA foreign_key_check` limpo, zero municípios órfãos, gerador determinístico byte a byte.
+19 licenças, 14 municípios distintos, 4 avisos agregados. 333 testes.
+
+**Aberto:** o relatório traz modalidade composta numa célula só (`LAU / LU`, `LP/LI`) e o pipeline
+não a separa em duas — a linha fica `"Outra"` com o par inteiro em `modalidade_raw`. Nenhum dado se
+perde, mas quem quiser contar por modalidade terá de tratar isso. `custo_estimado_usd` no
+manifesto continua fora (herdado do patch 13).
+
+---
+
 ## Sequenciamento
 
 | # | Patch | Chave? | Verificação |
@@ -1218,6 +1264,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | 12 | `deep_research_v1.md` ✅ | não | `pytest test_prompt_deep_research.py` |
 | 13 | DeepSeek real ✅ | sim, ~US$ 0,01 | offline passa; um run barato |
 | 14 | Gemini Deep Research ✅ | sim, US$ 1–3 | retomada provada offline; um run pago |
+| 15 | Licenças no banco (2025+2026) ✅ | sim, US$ 1–3 (só 2026) | `docker compose up`, duas rodadas em `:8080` |
 
 AC8 aterrissa no patch 3. O caminho offline completo aterrissa no patch 11, **dois patches antes
 de qualquer cobrança**.
