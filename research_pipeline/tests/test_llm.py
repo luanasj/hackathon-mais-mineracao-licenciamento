@@ -11,7 +11,13 @@ from pathlib import Path
 
 import pytest
 
-from research_pipeline.llm import FixtureMissing, FixtureStructurer, get_structurer
+from research_pipeline.llm import (
+    FixtureMissing,
+    FixtureStructurer,
+    RecordingStructurer,
+    get_structurer,
+)
+from research_pipeline.llm_deepseek import DeepSeekStructurer
 
 # --------------------------------------------------------------------------- FixtureStructurer
 
@@ -104,11 +110,74 @@ def test_get_structurer_fixture() -> None:
     assert isinstance(get_structurer("fixture"), FixtureStructurer)
 
 
-def test_get_structurer_deepseek_nao_implementado() -> None:
-    with pytest.raises(NotImplementedError, match="patch 13"):
-        get_structurer("deepseek")
+def test_get_structurer_deepseek_retorna_deepseek_structurer(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.delenv("RP_FIXTURE_RECORD", raising=False)
+    assert isinstance(get_structurer("deepseek"), DeepSeekStructurer)
+
+
+def test_get_structurer_deepseek_grava_fixture_quando_env_ligado(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setenv("RP_FIXTURE_RECORD", "1")
+    assert isinstance(get_structurer("deepseek"), RecordingStructurer)
 
 
 def test_get_structurer_desconhecido() -> None:
     with pytest.raises(ValueError, match="bogus"):
         get_structurer("bogus")
+
+
+# --------------------------------------------------------------------------- RecordingStructurer
+
+
+class _StructurerFalso:
+    def __init__(self, resposta: dict) -> None:
+        self._resposta = resposta
+
+    def complete_json(self, *, system: str, user: str, tag: str, case: str | None = None) -> dict:
+        return self._resposta
+
+
+def test_recording_structurer_repassa_resposta_sem_alterar(tmp_path: Path) -> None:
+    interno = _StructurerFalso({"licencas": []})
+    gravador = RecordingStructurer(interno, fixtures_dir=tmp_path)
+
+    resposta = gravador.complete_json(system="sys", user="user", tag="extract")
+
+    assert resposta == {"licencas": []}
+
+
+def test_recording_structurer_grava_arquivo_por_tag(tmp_path: Path) -> None:
+    interno = _StructurerFalso({"licencas": ["x"]})
+    gravador = RecordingStructurer(interno, fixtures_dir=tmp_path)
+
+    gravador.complete_json(system="sys", user="user", tag="extract")
+
+    gravado = json.loads((tmp_path / "extract.json").read_text(encoding="utf-8"))
+    assert gravado["licencas"] == ["x"]
+    assert "prompt_sha" in gravado["_meta"]
+
+
+def test_recording_structurer_grava_arquivo_por_tag_e_case(tmp_path: Path) -> None:
+    interno = _StructurerFalso({"licencas": []})
+    gravador = RecordingStructurer(interno, fixtures_dir=tmp_path)
+
+    gravador.complete_json(system="sys", user="user", tag="normalize", case="ambiguo")
+
+    assert (tmp_path / "normalize__ambiguo.json").exists()
+    assert not (tmp_path / "normalize.json").exists()
+
+
+def test_recording_structurer_prompt_sha_bate_com_fixture_structurer(tmp_path: Path) -> None:
+    """`_meta.prompt_sha` gravado por `RecordingStructurer` tem de ser o mesmo formato que
+    `FixtureStructurer` confere — senão a fixture gravada dispara warning na primeira leitura."""
+    interno = _StructurerFalso({"licencas": []})
+    gravador = RecordingStructurer(interno, fixtures_dir=tmp_path)
+
+    gravador.complete_json(system="sys", user="user", tag="extract")
+
+    sha_esperado = hashlib.sha256(b"sys\nuser").hexdigest()
+    gravado = json.loads((tmp_path / "extract.json").read_text(encoding="utf-8"))
+    assert gravado["_meta"]["prompt_sha"] == sha_esperado

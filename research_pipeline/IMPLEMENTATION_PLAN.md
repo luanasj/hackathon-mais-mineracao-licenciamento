@@ -1038,9 +1038,36 @@ aparecem como palavra inteira no prompt. Ninguém reintroduz a lista de 417 sem 
 
 ---
 
-## Patch 13 — `DeepSeekStructurer` (primeira API real, ~US$ 0,01)
+## Patch 13 — `DeepSeekStructurer` ✅ feito (primeira API real, ~US$ 0,01)
 
 **Objetivo:** trocar o estruturador de fixture pelo modelo real, atrás do mesmo Protocol.
+
+**Feito**, offline (a chamada paga descrita em "Verificar" abaixo não foi executada nesta sessão —
+fica para quando `--llm deepseek` rodar de verdade contra a chave real):
+
+1. **Retentativa por duck typing em `status_code`, não `except openai.RateLimitError`.** A lib
+   `openai` expõe `status_code` em toda `APIStatusError` (429 e 5xx inclusive); checar o atributo
+   em vez do tipo exato deixou o teste injetar uma exceção falsa (`_ErroAPIFalso`) sem depender da
+   árvore de classes real da lib — mesmo raciocínio por trás de `Structurer` ser um `Protocol`.
+   4xx fora de 429 nunca retenta (chave errada, payload inválido — insistir só queima chamada).
+2. **`cliente=`/`sleep=` injetáveis no construtor.** Sem isso, testar retry/backoff exigiria rede
+   real ou mockar `ChatOpenAI` por dentro. Com injeção, `test_llm_deepseek.py` cobre 429, 5xx,
+   4xx-não-retentável, esgotamento de tentativas e backoff exponencial (`[1, 2, 4]`) sem sono real
+   e sem chave — `test_construir_sem_chave_no_ambiente_nao_quebra` confirma que só a *chamada*
+   exigiria chave, nunca a construção.
+3. **Custo/tokens ficam na instância (`tokens_entrada`/`tokens_saida`/`custo_usd`), não no
+   manifesto ainda.** `emit.py` só vê o `structurer` via `state`, e nenhum nó hoje repassa a
+   instância adiante do grafo para `build_manifest` somar `custo_usd` — plugar isso é trabalho do
+   patch que ligar a chamada real ao grafo de ponta a ponta (14), não deste, cujo escopo de
+   arquivos é só `llm.py` + `llm_deepseek.py`.
+4. **`RP_FIXTURE_RECORD=1` virou `RecordingStructurer` em `llm.py`**, não lógica nova dentro de
+   `FixtureStructurer` — grava `{tag}[__{case}].json` com `_meta.prompt_sha` no mesmo formato que
+   `FixtureStructurer` já sabia ler (o campo já existia desde o patch 8, sem uso até agora).
+5. **`run.py` não mudou.** `get_structurer(args.llm)` já era genérico desde o patch 11; nenhum
+   arquivo fora dos dois listados no plano precisou de edição.
+6. **291 testes (era 276 no patch 12).** 15 novos: 5 em `test_llm.py` (troca do teste de
+   `NotImplementedError`, que deixou de valer, por cobertura de `RecordingStructurer` e do
+   roteamento real) + 10 em `test_llm_deepseek.py`. Suíte inteira verde, zero regressão.
 
 **Arquivos**
 - **criar** `research_pipeline/llm_deepseek.py` — `ChatOpenAI(base_url="https://api.deepseek.com/v1",
@@ -1126,7 +1153,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | 10 | Ranking + manifesto ✅ | não | `pytest test_emit.py` |
 | 11 | **Grafo + CLI + checkpointer + `--resume`/`--report`** ✅ | não | run offline completo, AC1–AC6+AC8 |
 | 12 | `deep_research_v1.md` ✅ | não | `pytest test_prompt_deep_research.py` |
-| 13 | DeepSeek real | sim, ~US$ 0,01 | offline passa; um run barato |
+| 13 | DeepSeek real ✅ | sim, ~US$ 0,01 | offline passa; um run barato |
 | 14 | Gemini Deep Research | sim, US$ 1–3 | retomada provada offline; um run pago |
 
 AC8 aterrissa no patch 3. O caminho offline completo aterrissa no patch 11, **dois patches antes
