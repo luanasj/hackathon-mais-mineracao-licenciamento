@@ -28,7 +28,7 @@
  */
 import type { DatabaseSync } from 'node:sqlite'
 
-import type { LeiRelacionada } from './ranking-tipos.ts'
+import type { LeiRelacionada } from '@/lib/ranking-tipos'
 
 /** Quantos atos voltam por consulta. Evidência é ilustrativa, não exaustiva. */
 export const LIMITE_ATOS = 5

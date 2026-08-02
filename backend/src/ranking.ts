@@ -34,7 +34,7 @@ import type {
   LeiRelacionada,
   Motivo,
   RankingInstancias,
-} from './ranking-tipos.ts'
+} from '@/lib/ranking-tipos'
 
 // ---------------------------------------------------------------------------
 // Parâmetros

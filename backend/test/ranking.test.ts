@@ -22,7 +22,7 @@ import {
   subtrairMeses,
   type BasesRanking,
 } from '../src/ranking.ts'
-import type { EntradaRanking, LeiRelacionada } from '../src/ranking-tipos.ts'
+import type { EntradaRanking, LeiRelacionada } from '@/lib/ranking-tipos'
 
 const HOJE = '2026-08-02'
 

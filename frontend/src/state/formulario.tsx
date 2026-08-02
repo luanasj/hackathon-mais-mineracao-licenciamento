@@ -6,7 +6,13 @@
  * estado: é `useMemo` derivado dos fatos. Não existe caminho em que a tela de
  * parecer mostre algo que o formulário não esteja dizendo.
  *
- * Context + useReducer, zero dependência nova — roda com a rede desligada (DoD).
+ * Context + useReducer, zero dependência nova.
+ *
+ * O `parecer` (competência) continua sendo calculado aqui, no browser, e roda
+ * com a rede desligada — é o DoD original e o argumento central da demo. O
+ * `ranking` (viabilidade de protocolo) é a única coisa nesta tela que sai para
+ * a rede: depende de SQLite, que não existe no browser. Ele degrada sozinho
+ * (`estado: 'indisponivel'`) e não pode derrubar o resto — ver `lib/api.ts`.
  */
 
 import { createContext, use, useMemo, useReducer } from 'react'
@@ -15,6 +21,8 @@ import type { ReactNode } from 'react'
 import { construirFactBase, tipologiaPorId } from '@/lib/fatos'
 import { avaliar } from '@/lib/motor'
 import type { FactBase, Parecer, Tipologia } from '@/lib/schemas'
+import { useRanking } from '@/state/ranking'
+import type { EstadoRanking } from '@/state/ranking'
 import { ESTADO_INICIAL, CONDICIONAIS_VAZIAS } from '@/state/tipos'
 import type { AcaoFormulario, EstadoFormulario } from '@/state/tipos'
 
@@ -141,6 +149,15 @@ export interface ContextoFormulario {
   fatos: FactBase
   /** Saída do motor para o estado atual. Nunca é estado armazenado. */
   parecer: Parecer
+  /**
+   * Ranking de viabilidade, vindo do backend. `null` enquanto nada foi pedido.
+   *
+   * Pergunta diferente da de `parecer`: aquele diz quem TEM competência, este
+   * diz onde o protocolo tem mais chance de andar. Chega por rede porque
+   * depende de SQLite (licenças, consórcios, índice FTS5 dos atos) — e por isso
+   * pode vir `indisponivel` sem que nada mais na tela pare.
+   */
+  ranking: EstadoRanking
 }
 
 const Ctx = createContext<ContextoFormulario | null>(null)
@@ -153,14 +170,25 @@ export function ProvedorFormulario({ children }: { children: ReactNode }) {
     return { fatos, parecer: avaliar(fatos) }
   }, [estado])
 
+  const tipologia = tipologiaPorId(estado.tipologia_id)
+
+  const ranking = useRanking({
+    processo: estado.processo?.processo ?? null,
+    municipios: estado.area?.municipios ?? null,
+    tipologia,
+    producao: estado.porte_valor,
+    substancia: estado.substancia,
+  })
+
   const valor = useMemo<ContextoFormulario>(
     () => ({
       estado,
       despachar,
-      tipologia: tipologiaPorId(estado.tipologia_id),
+      tipologia,
       ...derivado,
+      ranking,
     }),
-    [estado, derivado],
+    [estado, derivado, tipologia, ranking],
   )
 
   return <Ctx value={valor}>{children}</Ctx>

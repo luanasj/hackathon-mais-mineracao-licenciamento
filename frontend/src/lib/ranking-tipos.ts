@@ -14,7 +14,7 @@
  *                (prioridade padrão MUNICÍPIO > ESTADO > FEDERAÇÃO)
  * A segunda consulta a primeira como trava (ver `ranking.ts`, passo 0).
  */
-import type { Fundamento } from '@/lib/schemas'
+import type { Fundamento } from './schemas'
 
 /**
  * As três instâncias ranqueadas. Nomes deliberadamente diferentes de
