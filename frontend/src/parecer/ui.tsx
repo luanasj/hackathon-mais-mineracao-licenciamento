@@ -141,7 +141,24 @@ export function Etiqueta({ children, cor }: { children: ReactNode; cor: string }
  * nunca "campo obrigatório". Não bloqueia nada: o motor devolve INDETERMINADO
  * com o fato nomeado, e este aviso é o par visível dessa lacuna no formulário.
  */
-export function Aviso({ children, erro = false }: { children: ReactNode; erro?: boolean }) {
+export function Aviso({
+  children,
+  erro = false,
+  fundoEscuro = false,
+}: {
+  children: ReactNode
+  erro?: boolean
+  /** Em cartão escuro (ex. tipologia) o cinza de texto some no fundo. */
+  fundoEscuro?: boolean
+}) {
+  const corTexto = erro
+    ? fundoEscuro
+      ? '#E89B8A'
+      : CORES.vermelho
+    : fundoEscuro
+      ? 'rgba(255,255,255,0.72)'
+      : CORES.cinzaEscuro
+  const corMarca = erro ? corTexto : fundoEscuro ? '#D8C09A' : CORES.terraClara
   return (
     <div
       role="status"
@@ -151,14 +168,11 @@ export function Aviso({ children, erro = false }: { children: ReactNode; erro?: 
         marginTop: 10,
         fontSize: 13.5,
         lineHeight: 1.5,
-        color: erro ? CORES.vermelho : CORES.cinzaEscuro,
+        color: corTexto,
         maxWidth: 560,
       }}
     >
-      <span
-        aria-hidden
-        style={{ flex: 'none', color: erro ? CORES.vermelho : CORES.terraClara }}
-      >
+      <span aria-hidden style={{ flex: 'none', color: corMarca }}>
         {erro ? '!' : '→'}
       </span>
       <span>{children}</span>

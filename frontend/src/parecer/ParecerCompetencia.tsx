@@ -32,6 +32,7 @@ import { pendenciaDe, validar } from '@/lib/validacao'
 import { useFormulario } from '@/state/formulario'
 import type { UsoHidrico } from '@/state/tipos'
 
+import BarraMarca from './BarraMarca'
 import BuscaProcesso from './BuscaProcesso'
 import MapaDesenho from './MapaDesenho'
 import type { ResultadoDesenho } from './MapaDesenho'
@@ -39,9 +40,8 @@ import MapaProcesso from './MapaProcesso'
 import type { MapaHandle, NivelZoom } from './MapaProcesso'
 import PainelParecer from './PainelParecer'
 import TelaInicial from './TelaInicial'
-import { CORES, SERIF, fmt, fmt2, nomeOrgao, pct } from './dados'
-import { baixarPedidoLai } from './lai'
-import { Aviso, Etiqueta, GrupoSegmentado, Pendente, estiloSegmento, s } from './ui'
+import { CORES, SERIF, fmt, fmt2, pct } from './dados'
+import { Aviso, GrupoSegmentado, Pendente, estiloSegmento, s } from './ui'
 
 const ZOOMS: { k: NivelZoom; rotulo: string }[] = [
   { k: 'bahia', rotulo: 'Bahia' },
@@ -158,89 +158,9 @@ export default function ParecerCompetencia() {
 
   return (
     <div style={{ minHeight: '100vh' }}>
-      <header
-        style={{
-          position: 'sticky',
-          top: 0,
-          zIndex: 30,
-          background: CORES.branco,
-          borderBottom: `2px solid ${CORES.terra}`,
-          padding: 'clamp(16px, 4vw, 30px) clamp(20px, 6vw, 56px)',
-        }}
-      >
-        {temArea && parecer.estado === 'DEFINIDA' && (
-          <div style={s.fade}>
-            <Etiqueta cor={CORES.verde}>competência definida</Etiqueta>
-            <div style={{ ...s.titulo, marginTop: 10 }}>
-              {nomeOrgao(parecer.orgao, municipioPrincipal)}
-            </div>
-          </div>
-        )}
-
-        {temArea && parecer.estado === 'CONDICIONAL' && (
-          <div style={s.fade}>
-            <Etiqueta cor={CORES.terraClara}>competência condicional</Etiqueta>
-            <div style={{ ...s.titulo, marginTop: 10 }}>
-              {nomeOrgao(parecer.orgao, municipioPrincipal)}
-            </div>
-            {parecer.alertas[0] && (
-              <div
-                style={{
-                  fontSize: 16,
-                  color: CORES.cinzaEscuro,
-                  marginTop: 10,
-                  maxWidth: 820,
-                  lineHeight: 1.5,
-                }}
-              >
-                {parecer.alertas[0].detalhe}
-              </div>
-            )}
-          </div>
-        )}
-
-        {temArea && parecer.estado === 'INDETERMINADO' && (
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              gap: 24,
-              ...s.fade,
-            }}
-          >
-            <div>
-              <Etiqueta cor={CORES.cinza}>
-                {parecer.fatos_faltantes.length > 0 ? 'falta um dado' : 'sem regra aplicável'}
-              </Etiqueta>
-              <div
-                style={{
-                  fontFamily: SERIF,
-                  fontSize: 'clamp(22px, 5vw, 30px)',
-                  lineHeight: 1.3,
-                  marginTop: 10,
-                  maxWidth: 820,
-                  textWrap: 'pretty',
-                }}
-              >
-                {parecer.fatos_faltantes[0]?.rotulo ??
-                  'Nenhuma regra da base concluiu com os fatos disponíveis.'}
-              </div>
-            </div>
-            {parecer.fatos_faltantes.length > 0 && (
-              <button
-                type="button"
-                className="pc-primario"
-                onClick={() => baixarPedidoLai(parecer)}
-                style={{ ...s.primario, flex: 'none' }}
-              >
-                Gerar pedido de acesso à informação
-              </button>
-            )}
-          </div>
-        )}
-      </header>
+      {/* Barra de marca. Não carrega veredito: o parecer inteiro vive na coluna
+          da direita, e repetir a conclusão aqui só roubava altura da tela. */}
+      <BarraMarca />
 
       <div className="pc-grid">
         {/* ----------------------------------------------------------------
@@ -392,7 +312,6 @@ export default function ParecerCompetencia() {
                   )}
                 </div>
               )}
-              <AvisoCampo pendencias={pendencias} campo="tipologia" />
             </div>
           </section>
 
@@ -763,13 +682,19 @@ function maiuscula(s2: string): string {
 function AvisoCampo({
   pendencias,
   campo,
+  fundoEscuro = false,
 }: {
   pendencias: Pendencia[]
   campo: CampoFormulario
+  fundoEscuro?: boolean
 }) {
   const p = pendenciaDe(pendencias, campo)
   if (!p) return null
-  return <Aviso erro={p.severidade === 'erro'}>{p.mensagem}</Aviso>
+  return (
+    <Aviso erro={p.severidade === 'erro'} fundoEscuro={fundoEscuro}>
+      {p.mensagem}
+    </Aviso>
+  )
 }
 
 /**

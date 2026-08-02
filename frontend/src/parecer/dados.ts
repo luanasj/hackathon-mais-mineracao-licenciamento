@@ -10,21 +10,21 @@
 import type { Instancia, Orgao } from '@/lib/schemas'
 
 export const CORES = {
-  fundo: '#F6F5F3',
-  painel: '#FBFAF9',
+  fundo: '#FCFCFB',
+  painel: '#FFFFFF',
   branco: '#FFFFFF',
   tinta: '#22201C',
   terra: '#6E4B2A',
   terraClara: '#8A6234',
   verde: '#4A5E36',
   vermelho: '#8C3A2B',
-  linha: '#DAD9D4',
-  linhaForte: '#C6C4BE',
-  linhaSuave: '#E9E8E3',
-  cinza: '#6B6862',
-  cinzaEscuro: '#55524C',
-  cinzaClaro: '#86847E',
-  barra: '#E3E2DD',
+  linha: '#C9C9C6',
+  linhaForte: '#ABABA7',
+  linhaSuave: '#DCDCD9',
+  cinza: '#5E5E5A',
+  cinzaEscuro: '#474744',
+  cinzaClaro: '#767672',
+  barra: '#D3D3D0',
   mar: '#E9EDF0',
   terraMapa: '#EEEDEA',
   bordaMapa: '#C4C2BC',
@@ -34,6 +34,7 @@ export const CORES = {
 
 export const SERIF = "'Source Serif 4', Georgia, serif"
 export const MONO = "'IBM Plex Mono', monospace"
+export const MARCA = "'Anton', 'IBM Plex Sans', sans-serif"
 
 // ---------------------------------------------------------------------------
 // Enquadramentos do mapa — [oeste, sul, leste, norte]
