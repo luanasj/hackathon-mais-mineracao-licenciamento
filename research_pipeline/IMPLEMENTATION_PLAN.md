@@ -1132,6 +1132,21 @@ e regravar fixtures com `RP_FIXTURE_RECORD=1`.
    salvo também precisa registrar contra qual redação de `deep_research_v1.md` ele é comparável.
    O mesmo texto viaja por `config["configurable"]["research_prompt"]`.
 
+**O run pago aconteceu** (`deep-research-preview-04-2026`, 2026-08-02) e o relatório está em
+`tests/fixtures/raw_report_2025_real.md`, 54k chars: 8 linhas na tabela principal com as 13
+colunas na ordem travada, mais a seção de indícios. Dois achados que só uma execução real expõe:
+
+- **`citations.json` guarda URLs de redirect do grounding**
+  (`vertexaisearch.cloud.google.com/grounding-api-redirect/…`), não as fontes finais, e esses
+  links expiram. Não afeta a procedência do produto — o `fonte_urls` de cada licença sai da coluna
+  "Fonte (URL)" da tabela, que traz o link real do diário oficial —, mas `citations.json` não
+  serve como arquivo de fonte a longo prazo. Quem precisar disso terá de resolver os redirects.
+- **O modelo estendeu o título da seção de descarte** para `## Indícios Não Confirmados e
+  Evidências Excluídas do Cômputo Principal`, com maiúsculas diferentes do
+  `## Indícios não confirmados` que o `deep_research_v1.md` pede. `extract` é um LLM lendo
+  markdown, não um parser de heading, então isto não quebrou nada — mas qualquer código futuro que
+  procure a seção por igualdade exata de string vai errar.
+
 327 testes, todos passando (+36 sobre o patch 13): 22 em `test_research_client.py`, 11 em
 `test_research_resume.py`, 3 em `test_run_cli.py`, mais os 4 de `test_research.py` que
 sobreviveram sem mudança de comportamento (só a mensagem de `ResearchNotConfigured` deixou de
