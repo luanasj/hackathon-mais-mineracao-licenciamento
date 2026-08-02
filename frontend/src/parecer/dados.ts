@@ -32,6 +32,16 @@ export const CORES = {
   carvaoForte: '#332F2B',
 } as const
 
+/**
+ * Raios de borda. `Cabecalho.tsx` já importava `RAIO` de cá, mas o token nunca
+ * chegou a existir no repositório — os valores seguem os que `ui.tsx` usa
+ * literalmente (`borderRadius: 6` nos campos e botões).
+ */
+export const RAIO = {
+  medio: 6,
+  pilula: 999,
+} as const
+
 export const SERIF = "'Source Serif 4', Georgia, serif"
 export const MONO = "'IBM Plex Mono', monospace"
 
@@ -100,7 +110,27 @@ export interface Contato {
  * de banco. Quando existir (ex.: tabela `orgao_contato`), substituir este
  * stub por consulta real. Até lá, retorna sempre "não levantado".
  */
-export const telefoneDe = (_orgao: string): string => '—'
+/**
+ * ⚠️ NÃO CONFERIDO. Telefones institucionais de referência, sem consulta
+ * registrada à fonte primária. A tela é obrigada a marcar isso — mesma regra
+ * de `Fundamento.verificado` (C.6).
+ *
+ * Restaurado: o merge `643df4c` trocou este mapa por um `telefoneDe` que
+ * devolvia `'—'` para tudo, e o backend importa `TELEFONES` daqui
+ * (`backend/src/server.ts`) para montar os contatos do ranking.
+ */
+export const TELEFONES: Record<string, string> = {
+  'INEMA — Licenciamento': '(71) 3118-4000',
+  'INEMA — Florestas e Biodiversidade': '(71) 3118-4270',
+  'INEMA — Recursos Hídricos': '(71) 3118-4144',
+  'IBAMA — Superintendência na Bahia': '(71) 3117-1000',
+  'Exército — SFPC/6': '(71) 3202-2000',
+  'ANM — Gerência Regional na Bahia': '(71) 3271-8600',
+  'IPHAN — Superintendência na Bahia': '(71) 3324-1400',
+  'SEMA-BA — Gestão Ambiental Compartilhada': '(71) 3115-6300',
+}
+
+export const telefoneDe = (orgao: string): string => TELEFONES[orgao] ?? '—'
 
 export const linkTel = (telefone: string) => `tel:+55${telefone.replace(/\D/g, '')}`
 
