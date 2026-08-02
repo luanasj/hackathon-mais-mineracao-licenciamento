@@ -1,0 +1,17 @@
+# Overrides manuais de alias — para grafia de terceiro que a dobra e a cascata mecânica de
+# `aliases.py` não alcançam. Vazio é o caso comum; cresce só quando o patch 6 medir uma colisão
+# real, não por antecipação.
+#
+# municipios:  {<codigo_ibge>: [alias, ...]}          — soma a `derive_municipio_aliases`.
+# consorcios:  {<consorcio_id>: {sigla, aliases}}     — `sigla` SOBRESCREVE a extraída
+#              mecanicamente (só para o caso raro de a fonte não trazer o separador);
+#              `aliases` SOMA aos derivados de `derive_consorcio_aliases`.
+
+municipios:
+  # Não é divergência GAC x IBGE — as duas fontes escrevem "Santa Terezinha", com Z (medido no
+  # patch 3, 0 divergências nos 417 municípios). O alias é para a grafia com S que aparece em
+  # texto de terceiro. Único ALIASES real, migrado (copiado, não removido) de
+  # `scripts/lib/municipios_ba.py:67`.
+  "2928505": ["santa teresinha"]
+
+consorcios: {}
