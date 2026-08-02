@@ -1,3 +1,6 @@
+https://drive.google.com/file/d/1MYH6XfVu5xNjuZIPSRSqJ3gb0RFKCA9x/view?usp=sharing
+
+
 # Motor de enquadramento licenciatório
 
 **Hackathon+ Mineração 2026 · Escopo A — Licenciamento**
