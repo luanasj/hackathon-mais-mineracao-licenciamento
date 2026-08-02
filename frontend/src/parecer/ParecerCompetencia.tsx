@@ -14,7 +14,6 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Feature } from 'geojson'
 
 import { TIPOLOGIAS } from '@/data/fixtures'
-import { habilitacaoDe, statusDe } from '@/lib/fatos'
 import {
   PASSOS_SLIDER,
   ROTULO_FAIXA,
@@ -26,9 +25,10 @@ import {
 } from '@/lib/porte'
 import type { IndiceProcessos, RegistroIndice } from '@/lib/processos'
 import { carregarIndice } from '@/lib/processos'
-import type { StatusHabilitacao, Tipologia } from '@/lib/schemas'
+import type { IncidenciaMunicipal, ProcessoProps, Tipologia } from '@/lib/schemas'
 import { FASES_ANM, SUBSTANCIAS_FREQUENTES } from '@/lib/vocabulario'
-import { validar } from '@/lib/validacao'
+import type { CampoFormulario, Pendencia } from '@/lib/validacao'
+import { pendenciaDe, validar } from '@/lib/validacao'
 import { useFormulario } from '@/state/formulario'
 import type { UsoHidrico } from '@/state/tipos'
 
@@ -38,12 +38,12 @@ import type { ResultadoDesenho } from './MapaDesenho'
 import MapaProcesso from './MapaProcesso'
 import type { MapaHandle, NivelZoom } from './MapaProcesso'
 import PainelParecer from './PainelParecer'
-import { CORES, SERIF, fmt, fmt2, nomeOrgao } from './dados'
+import TelaInicial from './TelaInicial'
+import { CORES, SERIF, fmt, fmt2, nomeOrgao, pct } from './dados'
 import { baixarPedidoLai } from './lai'
-import { Etiqueta, GrupoSegmentado, Pendente, estiloSegmento, s } from './ui'
+import { Aviso, Etiqueta, GrupoSegmentado, Pendente, estiloSegmento, s } from './ui'
 
 const ZOOMS: { k: NivelZoom; rotulo: string }[] = [
-  { k: 'brasil', rotulo: 'Brasil' },
   { k: 'bahia', rotulo: 'Bahia' },
   { k: 'area', rotulo: 'A área' },
 ]
@@ -54,20 +54,8 @@ const USOS_HIDRICOS: { k: UsoHidrico; rotulo: string }[] = [
   { k: 'barramento', rotulo: 'Barramento' },
 ]
 
-const ROTULO_STATUS: Record<StatusHabilitacao, string> = {
-  habilitado: 'habilitado no GAC',
-  nao_habilitado: 'não habilitado',
-  sem_evidencia: 'sem evidência pública',
-}
-
-const COR_STATUS: Record<StatusHabilitacao, string> = {
-  habilitado: CORES.verde,
-  nao_habilitado: CORES.vermelho,
-  sem_evidencia: CORES.terraClara,
-}
-
 export default function ParecerCompetencia() {
-  const { estado, despachar, tipologia, parecer, ms_avaliacao } = useFormulario()
+  const { estado, despachar, tipologia, parecer } = useFormulario()
 
   const [indice, setIndice] = useState<IndiceProcessos | null>(null)
   const [erroIndice, setErroIndice] = useState<string | null>(null)
@@ -115,6 +103,19 @@ export default function ParecerCompetencia() {
   const municipioPrincipal = municipios[0] ?? null
   const areaHa = estado.processo?.area_ha ?? estado.area?.area_ha ?? null
 
+  /**
+   * Quanto da poligonal cai em cada município. O índice de A.5 é enxuto de
+   * propósito e não carrega a proporção; ela vem da feição do SIGMINE, que já
+   * foi buscada para o mapa. Sem isso, quem consulta por processo — o caminho
+   * principal — via só a lista de nomes, sem saber se o segundo município leva
+   * 40% da área ou uma lasca de borda.
+   */
+  const incidencias: IncidenciaMunicipal[] =
+    (geometria?.properties as ProcessoProps | null)?.municipios ??
+    estado.area?.municipios ??
+    []
+  const incidenciaDe = (nome: string) => incidencias.find((m) => m.nm_mun === nome) ?? null
+
   const teto = tipologia ? tetoSlider(tipologia) : 0
   const porte = estado.porte_valor
   const faixaAtual = tipologia && porte !== null ? linhaFaixa(tipologia, porte) : null
@@ -139,6 +140,22 @@ export default function ParecerCompetencia() {
     setDesenhando(false)
   }
 
+  /**
+   * Sem área não há o que caracterizar: a tela inicial pede só o processo ou o
+   * desenho. Os dois desembocam aqui embaixo — pelo número, com o cadastro do
+   * SIGMINE preenchido; pelo desenho, com os mesmos campos em branco.
+   */
+  if (!temArea) {
+    return (
+      <TelaInicial
+        indice={indice}
+        erroIndice={erroIndice}
+        onSelecionar={selecionarProcesso}
+        onConcluirDesenho={concluirDesenho}
+      />
+    )
+  }
+
   return (
     <div style={{ minHeight: '100vh' }}>
       <header
@@ -151,19 +168,6 @@ export default function ParecerCompetencia() {
           padding: 'clamp(16px, 4vw, 30px) clamp(20px, 6vw, 56px)',
         }}
       >
-        {!temArea && (
-          <div
-            style={{
-              fontFamily: SERIF,
-              fontSize: 'clamp(22px, 5vw, 30px)',
-              color: CORES.cinza,
-              ...s.fade,
-            }}
-          >
-            Quem licencia esta operação
-          </div>
-        )}
-
         {temArea && parecer.estado === 'DEFINIDA' && (
           <div style={s.fade}>
             <Etiqueta cor={CORES.verde}>competência definida</Etiqueta>
@@ -259,115 +263,105 @@ export default function ParecerCompetencia() {
               onDesenhar={() => setDesenhando(true)}
             />
 
+            <AvisoCampo pendencias={pendencias} campo="area" />
+
             {/* Cadastro: o que veio do SIGMINE e o que dá para corrigir. */}
             {temArea && (
-              <>
-                <div
-                  className="pc-cadastro-grid"
-                  style={{
-                    marginTop: 26,
-                    borderTop: `1px solid ${CORES.linha}`,
-                    borderBottom: `1px solid ${CORES.linha}`,
-                  }}
-                >
-                  <Celula rotulo="Municípios atingidos" indice={0}>
-                    {municipios.length === 0 ? (
-                      <span style={{ color: CORES.cinza }}>—</span>
-                    ) : (
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                        {municipios.map((m) => {
-                          const st = statusDe(m)
-                          const incidencia = estado.area?.municipios.find((x) => x.nm_mun === m)
-                          return (
-                            <div key={m}>
-                              <span style={{ fontFamily: SERIF, fontSize: 19 }}>{m}</span>
-                              {incidencia && (
-                                <span style={{ fontSize: 13, color: CORES.cinza, marginLeft: 8 }}>
-                                  {fmt2(incidencia.proporcao * 100)}%
-                                </span>
-                              )}
-                              <div
-                                style={{ fontSize: 12, color: COR_STATUS[st], marginTop: 2 }}
-                              >
-                                {ROTULO_STATUS[st]}
-                                {habilitacaoDe(m)?.nivel ? ` · ${habilitacaoDe(m)?.nivel}` : ''}
-                              </div>
-                            </div>
-                          )
-                        })}
+              <div
+                style={{
+                  marginTop: 16,
+                  padding: '10px 0',
+                  borderTop: `1px solid ${CORES.linha}`,
+                  borderBottom: `1px solid ${CORES.linha}`,
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  alignItems: 'baseline',
+                  rowGap: 4,
+                  columnGap: 14,
+                  fontSize: 14,
+                }}
+              >
+                {municipios.length === 0 ? (
+                  <span style={{ color: CORES.cinza }}>
+                    {areaHa === null ? '—' : `${fmt2(areaHa)} ha`}
+                  </span>
+                ) : (
+                  municipios.map((m) => {
+                    const incidencia = incidenciaDe(m)
+                    return (
+                      <div key={m}>
+                        <span style={{ fontFamily: SERIF }}>{m}</span>
+                        <span style={{ fontSize: 12, color: CORES.cinza, marginLeft: 6 }}>
+                          {incidencia
+                            ? `${pct(incidencia.proporcao)} · ${fmt2(incidencia.area_ha)} ha`
+                            : areaHa === null
+                              ? ''
+                              : `${fmt2(areaHa)} ha`}
+                        </span>
                       </div>
-                    )}
-                  </Celula>
+                    )
+                  })
+                )}
 
-                  <Celula rotulo="Área da poligonal" indice={1}>
-                    <span style={{ fontFamily: SERIF, fontSize: 19 }}>
-                      {areaHa === null ? '—' : `${fmt2(areaHa)} ha`}
-                    </span>
-                    <div style={{ fontSize: 12, color: CORES.cinza, marginTop: 4 }}>
-                      {estado.origem === 'processo'
-                        ? 'SIGMINE/ANM'
-                        : 'derivada do desenho, interseção no cliente'}
-                    </div>
-                  </Celula>
-
-                  <Celula rotulo="Substância" indice={2}>
-                    {editando === 'substancia' ? (
-                      <SeletorLivre
-                        valor={estado.substancia}
-                        opcoes={[...SUBSTANCIAS_FREQUENTES]}
-                        onEscolher={(v) => {
-                          despachar({ tipo: 'substancia', valor: v })
-                          setEditando(null)
-                        }}
-                      />
-                    ) : (
-                      <ValorEditavel
-                        valor={estado.substancia}
-                        editado={estado.substancia_editada}
-                        temProcesso={estado.processo !== null}
-                        onEditar={() => setEditando('substancia')}
-                        onRestaurar={() =>
-                          despachar({ tipo: 'restaurar-sigmine', campo: 'substancia' })
-                        }
-                      />
-                    )}
-                  </Celula>
-
-                  <Celula rotulo="Fase na ANM" indice={3}>
-                    {editando === 'fase' ? (
-                      <SeletorLivre
-                        valor={estado.fase}
-                        opcoes={[...FASES_ANM]}
-                        onEscolher={(v) => {
-                          despachar({ tipo: 'fase', valor: v })
-                          setEditando(null)
-                        }}
-                      />
-                    ) : (
-                      <ValorEditavel
-                        valor={estado.fase}
-                        editado={estado.fase_editada}
-                        temProcesso={estado.processo !== null}
-                        onEditar={() => setEditando('fase')}
-                        onRestaurar={() => despachar({ tipo: 'restaurar-sigmine', campo: 'fase' })}
-                      />
-                    )}
-                  </Celula>
+                <div>
+                  {editando === 'substancia' ? (
+                    <SeletorLivre
+                      valor={estado.substancia}
+                      opcoes={[...SUBSTANCIAS_FREQUENTES]}
+                      onEscolher={(v) => {
+                        despachar({ tipo: 'substancia', valor: v })
+                        setEditando(null)
+                      }}
+                    />
+                  ) : (
+                    <ValorEditavel
+                      valor={estado.substancia}
+                      editado={estado.substancia_editada}
+                      onEditar={() => setEditando('substancia')}
+                      onRestaurar={() =>
+                        despachar({ tipo: 'restaurar-sigmine', campo: 'substancia' })
+                      }
+                    />
+                  )}
+                  <AvisoCampo pendencias={pendencias} campo="substancia" />
                 </div>
 
-                {(estado.substancia_editada || estado.fase_editada) && (
-                  <div style={{ fontSize: 13, color: CORES.terraClara, marginTop: 10 }}>
-                    Corrigido manualmente — diverge do cadastro da ANM.
-                  </div>
-                )}
-              </>
+                <div>
+                  {editando === 'fase' ? (
+                    <SeletorLivre
+                      valor={estado.fase}
+                      opcoes={[...FASES_ANM]}
+                      onEscolher={(v) => {
+                        despachar({ tipo: 'fase', valor: v })
+                        setEditando(null)
+                      }}
+                    />
+                  ) : (
+                    <ValorEditavel
+                      valor={estado.fase}
+                      prefixo="Fase: "
+                      editado={estado.fase_editada}
+                      onEditar={() => setEditando('fase')}
+                      onRestaurar={() => despachar({ tipo: 'restaurar-sigmine', campo: 'fase' })}
+                    />
+                  )}
+                  <AvisoCampo pendencias={pendencias} campo="fase" />
+                </div>
+              </div>
             )}
 
             {/* Tipologia — define o parâmetro de porte, as faixas e os condicionais.
                 Em destaque, acima do mapa: é a primeira decisão que reconfigura tudo
                 o que vem depois. */}
-            <div style={{ marginTop: 26 }}>
-              <label htmlFor="tipologia" style={s.rotuloCampo}>
+            <div
+              style={{
+                marginTop: 26,
+                background: CORES.carvao,
+                borderRadius: 14,
+                padding: '16px 20px 18px',
+              }}
+            >
+              <label htmlFor="tipologia" style={{ ...s.rotuloCampo, fontSize: 13, color: '#D8C09A' }}>
                 Tipo de operação
               </label>
               <SeletorTipologia
@@ -383,88 +377,22 @@ export default function ParecerCompetencia() {
                     alignItems: 'center',
                     gap: 10,
                     flexWrap: 'wrap',
-                    fontSize: 13,
-                    color: CORES.cinza,
+                    fontSize: 12,
+                    color: 'rgba(255,255,255,0.65)',
                     marginTop: 8,
                   }}
                 >
                   <span>
                     {tipologia.grupo} · potencial poluente {tipologia.potencial_poluente}
                   </span>
-                  {!tipologia.fundamento.verificado && <Pendente />}
+                  {/* C.6 — faixa de porte não conferida contra a CEPRAM não
+                      pode aparecer como se estivesse. */}
+                  {!tipologia.fundamento.verificado && (
+                    <Pendente cor="#E6C98A" corBorda="rgba(255,255,255,0.35)" />
+                  )}
                 </div>
               )}
-            </div>
-
-            {/* O mapa. Geometria real do SIGMINE, ou a poligonal desenhada. */}
-            <div style={{ marginTop: 26 }}>
-              <div style={{ marginBottom: 12 }}>
-                <GrupoSegmentado>
-                  {ZOOMS.map(({ k, rotulo }, i) => (
-                    <button
-                      type="button"
-                      key={k}
-                      onClick={() => setZoom(k)}
-                      disabled={k === 'area' && !geometria}
-                      style={{
-                        ...estiloSegmento(zoom === k, i === 0, false),
-                        opacity: k === 'area' && !geometria ? 0.45 : 1,
-                      }}
-                    >
-                      {rotulo}
-                    </button>
-                  ))}
-                </GrupoSegmentado>
-              </div>
-
-              <div style={{ position: 'relative' }}>
-                <MapaProcesso ref={mapaRef} geometria={geometria} nivel={zoom} />
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: 12,
-                    right: 12,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    border: `1px solid ${CORES.linhaForte}`,
-                    background: CORES.branco,
-                  }}
-                >
-                  <button
-                    type="button"
-                    className="pc-lupa"
-                    onClick={() => mapaRef.current?.escalar(1.7)}
-                    aria-label="Aproximar o mapa"
-                    style={botaoLupa}
-                  >
-                    +
-                  </button>
-                  <button
-                    type="button"
-                    className="pc-lupa"
-                    onClick={() => mapaRef.current?.escalar(1 / 1.7)}
-                    aria-label="Afastar o mapa"
-                    style={{ ...botaoLupa, borderTop: `1px solid ${CORES.linhaForte}` }}
-                  >
-                    −
-                  </button>
-                </div>
-              </div>
-
-
-              <button
-                type="button"
-                onClick={() => setDesenhando(true)}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  padding: '12px 0 0',
-                  color: CORES.verde,
-                  fontSize: 15,
-                }}
-              >
-                Desenhar ou marcar a área manualmente
-              </button>
+              <AvisoCampo pendencias={pendencias} campo="tipologia" />
             </div>
           </section>
 
@@ -555,9 +483,7 @@ export default function ParecerCompetencia() {
                       </span>
                     </>
                   ) : (
-                    <span style={{ fontSize: 15, color: CORES.cinza }}>
-                      Informe o porte para enquadrar a faixa.
-                    </span>
+                    <AvisoCampo pendencias={pendencias} campo="porte" />
                   )}
                 </div>
 
@@ -577,9 +503,9 @@ export default function ParecerCompetencia() {
 
           {/* Condicionais — só os que a tipologia ativa (B.5). */}
           {condicionais.length > 0 && (
-            <section style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+            <section style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 32 }}>
               {condicionais.includes('supressao_vegetacao') && (
-                <div>
+                <div style={{ flex: '1 1 260px' }}>
                   <div style={{ fontSize: 15, color: CORES.terra }}>
                     Supressão de vegetação nativa
                   </div>
@@ -633,16 +559,20 @@ export default function ParecerCompetencia() {
                           border: `1px solid ${CORES.linhaForte}`,
                           fontVariantNumeric: 'tabular-nums',
                           fontSize: 17,
+                          borderRadius: 6,
                         }}
                       />
                       <span style={{ fontSize: 15, color: CORES.cinza }}>hectares</span>
                     </div>
                   )}
+                  {estado.condicionais.supressao_vegetacao === true && (
+                    <AvisoCampo pendencias={pendencias} campo="supressao_ha" />
+                  )}
                 </div>
               )}
 
               {condicionais.includes('recurso_hidrico') && (
-                <div>
+                <div style={{ flex: '1 1 260px' }}>
                   <div style={{ fontSize: 15, color: CORES.terra }}>
                     Interferência em recurso hídrico
                   </div>
@@ -676,7 +606,7 @@ export default function ParecerCompetencia() {
               )}
 
               {condicionais.includes('explosivos') && (
-                <div>
+                <div style={{ flex: '1 1 260px' }}>
                   <div style={{ fontSize: 15, color: CORES.terra }}>
                     Uso de explosivos no desmonte
                   </div>
@@ -717,11 +647,82 @@ export default function ParecerCompetencia() {
             background: CORES.painel,
           }}
         >
+          {/* O mapa. Geometria real do SIGMINE, ou a poligonal desenhada. */}
+          <div style={{ marginBottom: 32 }}>
+            <div style={{ marginBottom: 12 }}>
+              <GrupoSegmentado>
+                {ZOOMS.map(({ k, rotulo }, i) => (
+                  <button
+                    type="button"
+                    key={k}
+                    onClick={() => setZoom(k)}
+                    disabled={k === 'area' && !geometria}
+                    style={{
+                      ...estiloSegmento(zoom === k, i === 0, false),
+                      opacity: k === 'area' && !geometria ? 0.45 : 1,
+                    }}
+                  >
+                    {rotulo}
+                  </button>
+                ))}
+              </GrupoSegmentado>
+            </div>
+
+            <div style={{ position: 'relative' }}>
+              <MapaProcesso ref={mapaRef} geometria={geometria} nivel={zoom} />
+              <div
+                style={{
+                  position: 'absolute',
+                  top: 12,
+                  right: 12,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  border: `1px solid ${CORES.linhaForte}`,
+                  background: CORES.branco,
+                  borderRadius: 4,
+                  overflow: 'hidden',
+                }}
+              >
+                <button
+                  type="button"
+                  className="pc-lupa"
+                  onClick={() => mapaRef.current?.escalar(1.7)}
+                  aria-label="Aproximar o mapa"
+                  style={botaoLupa}
+                >
+                  +
+                </button>
+                <button
+                  type="button"
+                  className="pc-lupa"
+                  onClick={() => mapaRef.current?.escalar(1 / 1.7)}
+                  aria-label="Afastar o mapa"
+                  style={{ ...botaoLupa, borderTop: `1px solid ${CORES.linhaForte}` }}
+                >
+                  −
+                </button>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setDesenhando(true)}
+              style={{
+                background: 'none',
+                border: 'none',
+                padding: '12px 0 0',
+                color: CORES.verde,
+                fontSize: 15,
+              }}
+            >
+              Desenhar ou marcar a área manualmente
+            </button>
+          </div>
+
           <PainelParecer
             parecer={parecer}
             temArea={temArea}
             municipioPrincipal={municipioPrincipal}
-            msAvaliacao={ms_avaliacao}
           />
         </div>
       </div>
@@ -753,36 +754,22 @@ function maiuscula(s2: string): string {
   return s2.charAt(0).toUpperCase() + s2.slice(1)
 }
 
-function Celula({
-  rotulo,
-  indice,
-  children,
+/**
+ * B.7 na tela. A validação já existia e era descartada — o formulário calculava
+ * as pendências e nunca as mostrava, então o usuário via o parecer dar
+ * INDETERMINADO sem saber qual campo seu resolveria isso. Fica ao lado do
+ * campo, não numa lista no rodapé: a mensagem só ajuda onde a ação acontece.
+ */
+function AvisoCampo({
+  pendencias,
+  campo,
 }: {
-  rotulo: string
-  indice: number
-  children: React.ReactNode
+  pendencias: Pendencia[]
+  campo: CampoFormulario
 }) {
-  return (
-    <div
-      style={{
-        padding: '16px 0 18px',
-        minHeight: 86,
-        borderTop: indice >= 2 ? `1px solid ${CORES.linhaSuave}` : 'none',
-      }}
-    >
-      <div
-        style={{
-          fontSize: 12,
-          letterSpacing: '.08em',
-          textTransform: 'uppercase',
-          color: CORES.terraClara,
-        }}
-      >
-        {rotulo}
-      </div>
-      <div style={{ marginTop: 8 }}>{children}</div>
-    </div>
-  )
+  const p = pendenciaDe(pendencias, campo)
+  if (!p) return null
+  return <Aviso erro={p.severidade === 'erro'}>{p.mensagem}</Aviso>
 }
 
 /**
@@ -792,19 +779,19 @@ function Celula({
  */
 function ValorEditavel({
   valor,
+  prefixo = '',
   editado,
-  temProcesso,
   onEditar,
   onRestaurar,
 }: {
   valor: string
+  prefixo?: string
   editado: boolean
-  temProcesso: boolean
   onEditar: () => void
   onRestaurar: () => void
 }) {
   return (
-    <div>
+    <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, flexWrap: 'wrap' }}>
       <button
         type="button"
         onClick={onEditar}
@@ -814,41 +801,29 @@ function ValorEditavel({
           padding: 0,
           textAlign: 'left',
           fontFamily: SERIF,
-          fontSize: 19,
-          lineHeight: 1.25,
+          fontSize: 14,
           color: valor ? CORES.tinta : CORES.cinzaClaro,
         }}
       >
+        {prefixo}
         {valor || 'informar'}
       </button>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: 8,
-          fontSize: 12,
-          color: CORES.cinza,
-          marginTop: 4,
-        }}
-      >
-        <span>{editado ? 'declarado' : temProcesso ? 'SIGMINE/ANM' : 'a declarar'}</span>
-        {editado && temProcesso && (
-          <button
-            type="button"
-            onClick={onRestaurar}
-            style={{
-              background: 'none',
-              border: 'none',
-              padding: 0,
-              fontSize: 12,
-              color: CORES.verde,
-              textDecoration: 'underline',
-            }}
-          >
-            restaurar do SIGMINE
-          </button>
-        )}
-      </div>
+      {editado && (
+        <button
+          type="button"
+          onClick={onRestaurar}
+          style={{
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            fontSize: 11,
+            color: CORES.verde,
+            textDecoration: 'underline',
+          }}
+        >
+          restaurar do SIGMINE
+        </button>
+      )}
     </div>
   )
 }
@@ -885,6 +860,7 @@ function SeletorLivre({
           background: CORES.branco,
           padding: '0 8px',
           fontSize: 16,
+          borderRadius: 6,
         }}
       />
       <datalist id={listaId}>
@@ -946,7 +922,9 @@ function SeletorTipologia({
           justifyContent: 'space-between',
           gap: 10,
           textAlign: 'left',
-          color: atual ? CORES.tinta : CORES.cinzaClaro,
+          background: CORES.cinzaEscuro,
+          border: 'none',
+          color: atual ? CORES.branco : 'rgba(255,255,255,0.5)',
           cursor: 'pointer',
         }}
       >
@@ -961,7 +939,7 @@ function SeletorTipologia({
             height: 0,
             borderLeft: '5px solid transparent',
             borderRight: '5px solid transparent',
-            borderTop: `6px solid ${CORES.terra}`,
+            borderTop: '6px solid #D8C09A',
             transform: aberto ? 'rotate(180deg)' : 'none',
           }}
         />
@@ -979,11 +957,12 @@ function SeletorTipologia({
             margin: '4px 0 0',
             padding: 0,
             listStyle: 'none',
-            background: CORES.branco,
-            border: `1px solid ${CORES.linhaForte}`,
-            boxShadow: '0 12px 28px rgba(34, 32, 28, .14)',
+            background: '#605D55',
+            border: '1px solid rgba(255,255,255,0.15)',
+            boxShadow: '0 12px 28px rgba(0,0,0,.3)',
             maxHeight: 360,
             overflowY: 'auto',
+            borderRadius: 8,
           }}
         >
           {tipologias.map((t) => (
@@ -992,7 +971,7 @@ function SeletorTipologia({
                 type="button"
                 role="option"
                 aria-selected={t.id === selecionadoId}
-                className="pc-opcao"
+                className="pc-opcao-escuro"
                 onClick={() => {
                   onEscolher(t.id)
                   setAberto(false)
@@ -1006,12 +985,13 @@ function SeletorTipologia({
                   padding: '12px 14px',
                   background: 'transparent',
                   border: 'none',
-                  borderBottom: `1px solid ${CORES.linhaSuave}`,
+                  borderBottom: '1px solid rgba(255,255,255,0.1)',
+                  color: CORES.branco,
                 }}
               >
                 <span
                   aria-hidden
-                  style={{ width: 14, flex: 'none', color: CORES.verde, fontSize: 14 }}
+                  style={{ width: 14, flex: 'none', color: '#9BC77F', fontSize: 14 }}
                 >
                   {t.id === selecionadoId ? '✓' : ''}
                 </span>
@@ -1067,6 +1047,7 @@ function Modal({
           maxHeight: '92vh',
           overflowY: 'auto',
           padding: 'clamp(20px, 4vw, 32px)',
+          borderRadius: 8,
         }}
       >
         <div
@@ -1082,7 +1063,15 @@ function Modal({
             type="button"
             onClick={onFechar}
             aria-label="Fechar"
-            style={{ background: 'none', border: 'none', fontSize: 22, color: CORES.cinza }}
+            style={{
+              width: 36,
+              height: 36,
+              background: CORES.linhaSuave,
+              border: 'none',
+              borderRadius: 6,
+              fontSize: 18,
+              color: CORES.cinzaEscuro,
+            }}
           >
             ✕
           </button>
@@ -1120,7 +1109,7 @@ function BarraPorte({
   const pos = (v: number) => (valorParaPosicao(v, teto) / PASSOS_SLIDER) * 100
 
   return (
-    <div style={{ marginTop: 34 }}>
+    <div style={{ marginTop: 14 }}>
       <div style={{ position: 'relative', height: 22, marginBottom: 4 }}>
         {limiares.map((l) => (
           <div

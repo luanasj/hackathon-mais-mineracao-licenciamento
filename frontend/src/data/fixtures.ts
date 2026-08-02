@@ -4,6 +4,12 @@
  * NÃO EDITAR À MÃO. Para atualizar, rode:
  *   .venv/Scripts/python.exe scripts/build_fixtures.py
  *
+ * Substituição: C.1 troca `TIPOLOGIAS`, C.4 troca `REGRAS`. C.2 já trocou
+ * `MUNICIPIOS` — ver `@/data/municipios_gac.ts`. Os tipos não mudam — é esse
+ * o ponto do congelamento em 0.2.
+ *
+ * Os nomes são reais do contexto baiano. Os NÚMEROS não são: as faixas de
+ * porte abaixo são plausíveis, não normativas.
  * Fontes:
  *   TIPOLOGIAS B3/B4 — data/processed/cepram_divisao_b_mineracao.json,
  *     extração verificada do PDF oficial (Resolução CEPRAM 4.327/2013,
@@ -24,12 +30,7 @@
  *     primária (C.6) ainda não ocorreu.
  */
 
-import type {
-  MunicipioHabilitacao,
-  Parecer,
-  Regra,
-  Tipologia,
-} from '@/lib/schemas'
+import type { Parecer, Regra, Tipologia } from '@/lib/schemas'
 
 /** Marca única para varrer o repo antes do congelamento e não sobrar nada. */
 export const FIXTURE = 'C-INTEGRADO-0.1' as const
@@ -389,111 +390,18 @@ export const TIPOLOGIAS: Tipologia[] = [
 ]
 
 // ---------------------------------------------------------------------------
-// MUNICIPIOS — 417, de data/processed/municipios_habilitados.json (GAC real)
-// tipologias_delegadas cruza o nivel do municipio com
-// tipologia_nivel_gestao de cada tipologia B3/B4 (unicas com esse dado no PDF).
-// B1/B2 nunca aparecem delegadas: o PDF nao publica nivel_gestao_municipal pra elas.
+// MUNICIPIOS — C.2 entregou. Ver `@/data/municipios_gac.ts` (417 municípios,
+// gerado por `pipeline/gerar_municipios.py` a partir do Sistema GAC real).
+// `tipologias_delegadas` ainda sai `[]` de lá — ver a nota no gerador.
 // ---------------------------------------------------------------------------
 
-export const MUNICIPIOS: MunicipioHabilitacao[] = [
-  {
-    cd_mun: '2900108',
-    nm_mun: 'Abaíra',
-    status: 'habilitado',
-    nivel: '3',
-    tipologias_delegadas: ['b3-1', 'b3-2', 'b3-3', 'b3-4', 'b3-5', 'b4-1', 'b4-2', 'b4-3', 'b4-4'],
-    ato: null,
-    vigencia_desde: null,
-    procedencia: {
-      fonte: 'GAC/SEMA-BA — CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO CIRCUITO DO DIAMANTE DA CHAPADA DIAMANTINA',
-      url: 'https://gestor.meioambiente.ba.gov.br/Consultas/ConsultaGAC/',
-      data_consulta: '2026-08-01',
-    },
-  },
-  {
-    cd_mun: '2900207',
-    nm_mun: 'Abaré',
-    status: 'habilitado',
-    nivel: '3',
-    tipologias_delegadas: ['b3-1', 'b3-2', 'b3-3', 'b3-4', 'b3-5', 'b4-1', 'b4-2', 'b4-3', 'b4-4'],
-    ato: null,
-    vigencia_desde: null,
-    procedencia: {
-      fonte: 'GAC/SEMA-BA — CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO DO SERTÃO BAIANO',
-      url: 'https://gestor.meioambiente.ba.gov.br/Consultas/ConsultaGAC/',
-      data_consulta: '2026-08-01',
-    },
-  },
-  {
-    cd_mun: '2900306',
-    nm_mun: 'Acajutiba',
-    status: 'habilitado',
-    nivel: '3',
-    tipologias_delegadas: ['b3-1', 'b3-2', 'b3-3', 'b3-4', 'b3-5', 'b4-1', 'b4-2', 'b4-3', 'b4-4'],
-    ato: null,
-    vigencia_desde: null,
-    procedencia: {
-      fonte: 'GAC/SEMA-BA — CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO LITORAL NORTE E AGRESTE BAIANO',
-      url: 'https://gestor.meioambiente.ba.gov.br/Consultas/ConsultaGAC/',
-      data_consulta: '2026-08-01',
-    },
-  },
-  {
-    cd_mun: '2900355',
-    nm_mun: 'Adustina',
-    status: 'habilitado',
-    nivel: '3',
-    tipologias_delegadas: ['b3-1', 'b3-2', 'b3-3', 'b3-4', 'b3-5', 'b4-1', 'b4-2', 'b4-3', 'b4-4'],
-    ato: null,
-    vigencia_desde: null,
-    procedencia: {
-      fonte: 'GAC/SEMA-BA — CONSORCIO INTERMUNICIPAL SEMIÁRIDO NORDESTE II - CISAN',
-      url: 'https://gestor.meioambiente.ba.gov.br/Consultas/ConsultaGAC/',
-      data_consulta: '2026-08-01',
-    },
-  },
-  {
-    cd_mun: '2900405',
-    nm_mun: 'Água Fria',
-    status: 'habilitado',
-    nivel: '3',
-    tipologias_delegadas: ['b3-1', 'b3-2', 'b3-3', 'b3-4', 'b3-5', 'b4-1', 'b4-2', 'b4-3', 'b4-4'],
-    ato: null,
-    vigencia_desde: null,
-    procedencia: {
-      fonte: 'GAC/SEMA-BA — CONSORCIO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO PORTAL DO SERTÃO',
-      url: 'https://gestor.meioambiente.ba.gov.br/Consultas/ConsultaGAC/',
-      data_consulta: '2026-08-01',
-    },
-  },
-  {
-    cd_mun: '2900504',
-    nm_mun: 'Érico Cardoso',
-    status: 'habilitado',
-    nivel: '3',
-    tipologias_delegadas: ['b3-1', 'b3-2', 'b3-3', 'b3-4', 'b3-5', 'b4-1', 'b4-2', 'b4-3', 'b4-4'],
-    ato: null,
-    vigencia_desde: null,
-    procedencia: {
-      fonte: 'GAC/SEMA-BA — CONSORCIO PÚBLICO DE DESENVOLVIMENTO SUSTENTÁVEL DO TERRITÓRIO BACIA DO PARAMIRIM',
-      url: 'https://gestor.meioambiente.ba.gov.br/Consultas/ConsultaGAC/',
-      data_consulta: '2026-08-01',
-    },
-  },
-  {
-    cd_mun: '2900603',
-    nm_mun: 'Aiquara',
-    status: 'nao_habilitado',
-    nivel: null,
-    tipologias_delegadas: [],
-    ato: null,
-    vigencia_desde: null,
-    procedencia: {
-      fonte: 'GAC/SEMA-BA — CONSORCIO INTERMUNICIPAL DO MÉDIO RIO DAS CONTAS - CIMURC',
-      url: 'https://gestor.meioambiente.ba.gov.br/Consultas/ConsultaGAC/',
-      data_consulta: '2026-08-01',
-    },
-  },
+export { MUNICIPIOS } from '@/data/municipios_gac'
+
+// ---------------------------------------------------------------------------
+// 3 regras — uma por caminho de precedência
+// ---------------------------------------------------------------------------
+
+export const REGRAS: Regra[] = [
   {
     cd_mun: '2900702',
     nm_mun: 'Alagoinhas',

@@ -43,7 +43,10 @@ export interface ResultadoDesenho {
 
 export interface MapaDesenhoProps {
   onConcluir: (resultado: ResultadoDesenho) => void
-  onCancelar: () => void
+  /** Ausente na tela inicial: lá o desenho não é um desvio, é o caminho. */
+  onCancelar?: () => void
+  altura?: number | string
+  rotuloConcluir?: string
 }
 
 const MODOS: { k: ModoDesenho; rotulo: string }[] = [
@@ -51,7 +54,12 @@ const MODOS: { k: ModoDesenho; rotulo: string }[] = [
   { k: 'ponto-raio', rotulo: 'Ponto e raio' },
 ]
 
-export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps) {
+export default function MapaDesenho({
+  onConcluir,
+  onCancelar,
+  altura = 380,
+  rotuloConcluir = 'Concluir',
+}: MapaDesenhoProps) {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const mapRef = useRef<maplibregl.Map | null>(null)
 
@@ -72,18 +80,44 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
       map = new maplibregl.Map({
         container: containerRef.current,
         style: ESTILO,
-        bounds: [
+        // `bounds` sozinho é enquadramento *contain*: a caixa da Bahia é quase
+        // quadrada e o container é largo e baixo, então o ajuste trava na
+        // altura e sobra fundo vazio nas laterais. `maxBounds` inverte isso —
+        // o constrain do MapLibre sobe o zoom até a caixa cobrir a moldura
+        // (`v = max(largura/Δlng, altura/Δlat)`) e refaz a conta a cada
+        // `resize()`. Também prende a câmera: não dá para arrastar nem afastar
+        // para fora da Bahia, que é o vazamento das extremidades.
+        maxBounds: [
           [CAIXA_BAHIA[0], CAIXA_BAHIA[1]],
           [CAIXA_BAHIA[2], CAIXA_BAHIA[3]],
         ],
-        fitBoundsOptions: { padding: 20 },
+        // Abre sobre a área com relevo, dentro do trecho travado acima.
+        bounds: [
+          [CAIXA_RELEVO[0], CAIXA_RELEVO[1]],
+          [CAIXA_RELEVO[2], CAIXA_RELEVO[3]],
+        ],
+        maxZoom: 16,
+        // O constrain de `maxBounds` é alinhado aos eixos: com rotação ou
+        // inclinação os cantos da tela saem da caixa e o fundo vaza de novo.
+        dragRotate: false,
+        pitchWithRotate: false,
+        touchPitch: false,
+        renderWorldCopies: false,
         attributionControl: false,
       })
+      map.touchZoomRotate.disableRotation()
+      map.keyboard.disableRotation()
     } catch {
       setFalhou(true)
       return
     }
     mapRef.current = map
+
+    // Canvas trava no tamanho do container no instante da construção — se o
+    // container mudar de tamanho depois (reflow de layout, troca de aba),
+    // o mapa fica com canvas velho, menor que a moldura. `resize()` refaz.
+    const observador = new ResizeObserver(() => map.resize())
+    observador.observe(containerRef.current)
 
     map.on('load', () => {
       // tinta hipsométrica por baixo, sombra por cima — mesma ordem de
@@ -159,6 +193,7 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
     })
 
     return () => {
+      observador.disconnect()
       try {
         map.remove()
       } catch {
@@ -266,7 +301,7 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
       {falhou ? (
         <div
           style={{
-            height: 380,
+            height: altura,
             width: '100%',
             border: `1px solid ${CORES.linhaForte}`,
             background: CORES.terraMapa,
@@ -278,6 +313,7 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
             fontSize: 15,
             color: CORES.cinzaEscuro,
             lineHeight: 1.55,
+            borderRadius: 8,
           }}
         >
           Este navegador não expõe WebGL2, necessário para desenhar no mapa. Use a busca por
@@ -286,7 +322,14 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
       ) : (
         <div
           ref={containerRef}
-          style={{ height: 380, width: '100%', border: `1px solid ${CORES.linhaForte}` }}
+          style={{
+            height: altura,
+            width: '100%',
+            border: `1px solid ${CORES.linhaForte}`,
+            background: CORES.terraMapa,
+            overflow: 'hidden',
+            borderRadius: 8,
+          }}
         />
       )}
 
@@ -340,30 +383,20 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
             type="button"
             onClick={limpar}
             disabled={calculando}
-            style={{
-              height: 46,
-              padding: '0 18px',
-              background: 'transparent',
-              border: `1px solid ${CORES.linhaForte}`,
-              fontSize: 15,
-            }}
+            style={{ ...s.secundario, height: 46, padding: '0 18px', fontSize: 15 }}
           >
             Limpar
           </button>
-          <button
-            type="button"
-            onClick={onCancelar}
-            disabled={calculando}
-            style={{
-              height: 46,
-              padding: '0 18px',
-              background: 'transparent',
-              border: `1px solid ${CORES.linhaForte}`,
-              fontSize: 15,
-            }}
-          >
-            Cancelar
-          </button>
+          {onCancelar && (
+            <button
+              type="button"
+              onClick={onCancelar}
+              disabled={calculando}
+              style={{ ...s.escuro, height: 46, padding: '0 18px', fontSize: 15 }}
+            >
+              Cancelar
+            </button>
+          )}
           <button
             type="button"
             className="pc-primario"
@@ -371,7 +404,7 @@ export default function MapaDesenho({ onConcluir, onCancelar }: MapaDesenhoProps
             disabled={!pronto || calculando}
             style={{ ...s.primario, height: 46, padding: '0 22px', opacity: pronto ? 1 : 0.5 }}
           >
-            {calculando ? 'Calculando…' : 'Concluir'}
+            {calculando ? 'Calculando…' : rotuloConcluir}
           </button>
         </div>
       </div>

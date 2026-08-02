@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #faf8f2;
+  background: #f6f5f3;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 }
 
 .pc-col-right {
-  border-left: 1px solid #dfdacd;
+  border-left: 1px solid #dad9d4;
   min-height: 900px;
 }
 
@@ -33,21 +33,36 @@ body {
 
   .pc-col-right {
     border-left: none;
-    border-top: 1px solid #dfdacd;
+    border-top: 1px solid #dad9d4;
     min-height: 0;
   }
 }
 
-/* Cadastro (Município/Área/Substância/Fase): 2 colunas, empilha em telas bem estreitas. */
-.pc-cadastro-grid {
+/* Tela inicial: número do processo à esquerda, mapa à direita. Empilha abaixo
+   de 900px, quando a coluna do mapa fica estreita demais para desenhar. */
+.ti-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 32px;
+  grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
+  column-gap: 40px;
+  align-items: start;
 }
 
-@media (max-width: 460px) {
-  .pc-cadastro-grid {
-    grid-template-columns: 1fr;
+.ti-col-mapa {
+  border-left: 1px solid #dad9d4;
+  padding-left: 40px;
+}
+
+@media (max-width: 900px) {
+  .ti-grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 30px;
+  }
+
+  .ti-col-mapa {
+    border-left: none;
+    border-top: 1px solid #dad9d4;
+    padding-left: 0;
+    padding-top: 30px;
   }
 }
 
@@ -135,7 +150,7 @@ input[type='range']::-webkit-slider-thumb {
   margin-top: -2px;
   border-radius: 50%;
   background: #4a5e36;
-  border: 2px solid #faf8f2;
+  border: 2px solid #f6f5f3;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
   cursor: grab;
 }
@@ -145,18 +160,22 @@ input[type='range']::-moz-range-thumb {
   height: 26px;
   border-radius: 50%;
   background: #4a5e36;
-  border: 2px solid #faf8f2;
+  border: 2px solid #f6f5f3;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
   cursor: grab;
 }
 
 /* Equivalentes aos `style-hover` do documento original. */
 .pc-primario:hover {
-  background: #37472a;
+  background: #332f2b;
 }
 
 .pc-opcao:hover {
-  background: #f4f1e8;
+  background: #f0efec;
+}
+
+.pc-opcao-escuro:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 button:disabled {
@@ -184,10 +203,20 @@ button:disabled {
   .pc-col-right {
     border: none;
   }
+
+  /* O caminho até a resposta sai inteiro no papel, com fatos, regras,
+     precedência e dispositivo — independente do que estava aberto na tela. */
+  .pc-etapa-detalhe {
+    display: block !important;
+  }
+
+  .maplibregl-map {
+    break-inside: avoid;
+  }
 }
 
 .pc-lupa:hover {
-  background: #ede8dc;
+  background: #e9e8e3;
 }
 
 .pc-toggle:hover {
