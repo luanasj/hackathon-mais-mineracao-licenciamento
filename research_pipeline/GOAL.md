@@ -4,6 +4,8 @@
 > **Branch:** `feature/deep-research-pipeline`
 > **Documento de escopo — versão 1.4 — 2026-08-01**
 > *v1.4: correções factuais verificadas contra os arquivos reais (encoding do DBF, `visualization`, sentinela do XLSX, substâncias ambíguas, sigla e prefixo de consórcio) e decisões E–H registradas (§12).*
+>
+> *v1.5: `modalidade` fora do vocabulário deixa de derrubar a linha — vira `"Outra"` com a grafia original em `modalidade_raw` (§6.1). Medido contra o relatório real de 2025, que perdia licenças em silêncio.*
 > *v1.3: dados canônicos reais em `data/processed/` — formato, aliases derivados e cruzamento município↔consórcio (§6.2, §7, §11).*
 > *v1.2: prompt de pesquisa sem lista de municípios — pergunta em aberto, rigidez só no formato de saída (§5, §7.1).*
 > *v1.1: `licenciado_por` como indicador obrigatório (§6.4); universo ampliado para todos os municípios aptos (§7.1).*
@@ -229,6 +231,16 @@ com folga), JSON output e tool calls suportados, US$ 0,14/1M in · US$ 0,28/1M o
 **Entrada:** relatório markdown cru + citações. **Não recebe as listas canônicas.**
 **Saída:** `list[LicencaBruta]` — transcrição fiel, nomes como aparecem no texto.
 
+**`modalidade` fora das 6 do §5 vira `"Outra"`, com a grafia original em `modalidade_raw`.** O
+prompt de pesquisa continua pedindo `LP/LI/LO/LAU/LU/Renovação` e o vocabulário continua fechado —
+o que muda é o destino do que não está nele. Recusar a linha (comportamento até v1.4) apagava
+licenças reais em silêncio: o relatório de 2025 traz `"Licença Específica"` e
+`"Licença de Alteração"` escritos por prefeituras, e cada um derrubava a linha inteira sem
+aparecer no `validation_errors` do produto, porque o manifesto conta só o que sobreviveu. `"Outra"`
+não é uma sétima modalidade: é a ausência de classificação, e quem a lê tem de ler
+`modalidade_raw` junto. Valor **não textual** no campo (número, objeto) continua erro duro — ali
+não há licença real por trás.
+
 ```json
 {
   "municipio_raw": "Caturama",
@@ -242,6 +254,7 @@ com folga), JSON output e tool calls suportados, US$ 0,14/1M in · US$ 0,28/1M o
   "tipologia_raw": null,
   "nivel_licenciamento": null,
   "modalidade": "LAU",
+  "modalidade_raw": "LAU",
   "numero_licenca": "01/2025",
   "data_concessao": "2025-02-04",
   "fonte_urls": ["https://..."],
@@ -579,6 +592,7 @@ Um registro = **uma licença concedida**. O ranking é derivado, nunca pedido ao
       "potencial_poluidor": "M",
       "nivel_licenciamento": null,
       "modalidade": "LAU",
+      "modalidade_raw": "LAU",
       "numero_licenca": "01/2025",
       "data_concessao": "2025-02-04",
       "fonte_urls": ["https://..."],

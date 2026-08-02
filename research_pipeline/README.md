@@ -67,16 +67,51 @@ python -m research_pipeline.run --resume 2025_20260801T143200Z
 `--resume` e `--report` são mutuamente exclusivos. `--poll-timeout` (padrão 3600 s) estourar não é
 perda: o `interaction_id` já está no checkpoint, e `--resume` recomeça o polling da mesma tarefa.
 
-### Passo manual obrigatório logo após um run pago
+## Ciclo trimestral — a rotina completa
 
-`research_pipeline/runs/` é gitignored. Sem isto, o artefato de US$ 1–3 se perde e toda iteração
-futura de prompt repaga:
+`research_pipeline/runs/` é gitignored: **o que não for copiado para fora do diretório do run se
+perde**, e o relatório perdido custa US$ 1–3 para refazer. Os cinco passos abaixo são um bloco, não
+uma sugestão.
 
 ```bash
+# 1. a pesquisa (US$ 1-3)
+python -m research_pipeline.run --ano <ano> --research gemini --llm deepseek
+
+# 2. o relatório bruto vira fixture versionada — sem isto o artefato pago some
 cp research_pipeline/runs/<run_id>/raw_report.md \
-   research_pipeline/tests/fixtures/raw_report_2025_real.md
-git add research_pipeline/tests/fixtures/raw_report_2025_real.md
+   research_pipeline/tests/fixtures/raw_report_<ano>_<AAAAQT>.md
+
+# 3. o produto vira dado versionado, um arquivo por rodada (nunca sobrescrever)
+cp research_pipeline/runs/<run_id>/licencas_<ano>.json \
+   data/processed/licencas/<run_id>.json
+
+# 4. regerar o seed do banco
+python scripts/generate_seed_sql.py
+
+# 5. reconstruir o banco
+docker compose down -v && docker compose up --build
+git add research_pipeline/tests/fixtures/ data/processed/licencas/ documentation/seed.sql
 ```
+
+O `-v` do passo 5 não é opcional: `docker/entrypoint.sh` **reusa** o banco existente no volume e
+não reprocessa o `seed.sql`. Sem apagar o volume, a rodada nova não aparece e nada avisa.
+
+**Cada rodada acrescenta, nenhuma substitui.** `data/processed/licencas/` guarda um arquivo por
+`run_id`, e o `run_id` já carrega ano e timestamp — é isso que faz a comparação entre trimestres
+existir. Sobrescrever o arquivo do trimestre anterior apagaria a série que se quer medir.
+
+### Reprocessar sem repagar
+
+Corrigir prompt de extração, schema ou matcher **não** exige nova pesquisa: o relatório bruto está
+versionado desde o passo 2.
+
+```bash
+python -m research_pipeline.run --ano <ano> \
+    --report research_pipeline/tests/fixtures/raw_report_<ano>_<AAAAQT>.md \
+    --llm deepseek                      # ~US$ 0,01
+```
+
+Depois repita os passos 3–5 com o `run_id` novo.
 
 ## Atualizar as fixtures de resposta do LLM
 
@@ -112,6 +147,28 @@ research_pipeline/runs/2025_20260801T143200Z/
 ```
 
 Checkpoints ficam em `research_pipeline/runs/checkpoints.db`, um `thread_id` por `run_id`.
+
+`citations.json` guarda URLs de *redirect* do grounding
+(`vertexaisearch.cloud.google.com/grounding-api-redirect/…`), que expiram. Não é problema de
+procedência: o `fonte_urls` de cada licença sai da coluna "Fonte (URL)" da tabela do relatório, com
+o link real do diário oficial. Mas `citations.json` não serve como arquivo de fontes a longo prazo.
+
+## No banco
+
+Depois do passo 4 do ciclo, o produto vira três tabelas em `documentation/schema.sql` —
+`pesquisa_run` (uma linha por rodada), `licenca` (uma por licença concedida) e `pesquisa_aviso` —
+mais a view `licenca_por_municipio_ano`. Navegáveis em `localhost:8080` (`sqlite-web`).
+
+```sql
+-- comparação entre rodadas
+SELECT ano_referencia, ano_completo, COUNT(*) AS licencas,
+       COUNT(DISTINCT codigo_ibge) AS municipios
+FROM licenca JOIN pesquisa_run USING (run_id)
+GROUP BY run_id ORDER BY ano_referencia;
+```
+
+`ano_completo = 0` marca a rodada de um ano ainda em curso. Comparar a contagem de um ano parcial
+com a de um ano fechado sem olhar essa coluna produz a leitura errada de "queda".
 
 ## Variáveis de ambiente
 

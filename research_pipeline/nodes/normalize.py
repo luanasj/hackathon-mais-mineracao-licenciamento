@@ -311,6 +311,7 @@ def normalize(state: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
                 "potencial_poluidor": tipologia.potencial_poluidor if tipologia else None,
                 "nivel_licenciamento": bruta["nivel_licenciamento"],
                 "modalidade": bruta["modalidade"],
+                "modalidade_raw": bruta["modalidade_raw"],
                 "numero_licenca": bruta["numero_licenca"],
                 "data_concessao": bruta["data_concessao"],
                 "fonte_urls": bruta["fonte_urls"],

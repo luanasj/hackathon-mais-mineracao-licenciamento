@@ -67,6 +67,14 @@ scraping (GAC, Querido Diário) → data/raw/*
     → scripts/generate_seed_sql.py
     → documentation/schema.sql + seed.sql → data/db/licenciamento.db (SQLite, via Docker)
     → NINGUÉM LÊ ISSO DE VOLTA. Fim de linha.
+
+PIPELINE 3 — licenças concedidas (research_pipeline, LangGraph, dado real e pago)
+Gemini Deep Research → raw_report.md (versionado em research_pipeline/tests/fixtures/)
+    → DeepSeek extract + normalize → validate → rank_and_emit
+    → research_pipeline/runs/<run_id>/licencas_<ano>.json  (gitignored)
+    → data/processed/licencas/<run_id>.json  (versionado, um arquivo por rodada trimestral)
+    → scripts/generate_seed_sql.py → tabelas pesquisa_run / licenca / pesquisa_aviso
+    → mesmo destino do Pipeline 2: inspeção humana no sqlite-web, não lido pelo motor.
 ```
 
 O motor de regras (`frontend/src/lib/motor.ts`) e os fatos (`frontend/src/data/fixtures.ts`) usam **exclusivamente** fixtures fictícias: **2 municípios, 2 tipologias, 4 regras**, todas com `fundamento.verificado: false` e comentário explícito "valor plausível, não normativo".

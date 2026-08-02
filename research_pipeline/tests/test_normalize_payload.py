@@ -54,6 +54,7 @@ def _bruta(municipio_raw: str, substancia_raw: str | None) -> dict[str, Any]:
         "tipologia_raw": None,
         "nivel_licenciamento": None,
         "modalidade": None,
+        "modalidade_raw": None,
         "numero_licenca": None,
         "data_concessao": None,
         "fonte_urls": ["https://exemplo.invalid/x"],
