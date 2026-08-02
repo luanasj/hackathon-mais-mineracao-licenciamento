@@ -131,6 +131,22 @@ def carregar_malha() -> gpd.GeoDataFrame:
         raise SystemExit(
             f"códigos IBGE da amostra ausentes na malha: {sorted(faltando)}"
         )
+
+    # A checagem de presença acima não pega troca de nome: 2928406 esteve por
+    # meses rotulado "Santaluz" na constante (é Santa Rita de Cássia), e como
+    # A.9 sobrescreve o nome da malha pelo da constante, o erro saía no
+    # artefato sem nada falhar. O join de habilitação é por nome — divergência
+    # aqui vira `sem_evidencia` silencioso lá na frente. Falha alto.
+    oficial = dict(zip(malha.CD_MUN, malha.NM_MUN))
+    divergentes = [
+        f"{cd}: constante={AMOSTRA[cd][0]!r} malha IBGE={oficial[cd]!r}"
+        for cd in CODIGOS
+        if oficial[cd] != AMOSTRA[cd][0]
+    ]
+    if divergentes:
+        raise SystemExit(
+            "nomes da amostra divergem da malha IBGE 2025:\n  " + "\n  ".join(divergentes)
+        )
     return malha
 
 
