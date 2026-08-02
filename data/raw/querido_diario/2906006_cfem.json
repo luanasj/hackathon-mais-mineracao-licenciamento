@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 21,
+  "gazettes": [
+    {
+      "territory_id": "2906006",
+      "date": "2023-07-10",
+      "scraped_at": "2023-07-10T21:06:00.643345",
+      "url": "https://data.queridodiario.ok.org.br/2906006/2023-07-10/690292fcf4939575645217069cfcca98d90a1dfc.pdf",
+      "territory_name": "Campo Formoso",
+      "state_code": "BA",
+      "excerpts": [
+        "17125100000000 Cota−parte da Compensação Financeira pela Exploração de Recursos Minerais − CFEM 540.672,33                      1.617.516,68                   252.049,01                      301.299,00                      313.893,30                     326.449,03                     339.506,99                      \n\n17125101000000 Cota−parte da Compensação Financeira pela Exploração de Recursos Minerais − CFEM − Principal 540.672,33                      1.617.516,68                   252.049,01   "
+      ],
+      "edition": "2.787",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906006/2023-07-10/690292fcf4939575645217069cfcca98d90a1dfc.txt"
+    },
+    {
+      "territory_id": "2906006",
+      "date": "2014-07-16",
+      "scraped_at": "2024-06-01T17:55:48.830687",
+      "url": "https://data.queridodiario.ok.org.br/2906006/2014-07-16/e9cf2bb8ac3a52ba922eb954ca0be32edb5cd82a.pdf",
+      "territory_name": "Campo Formoso",
+      "state_code": "BA",
+      "excerpts": [
+        "para prestação de serviços profissionais \nespecializados em consultoria, na área de mineração, para o fim especifico de revisar administrativamente e acompanhar os cálculos de repasse da \ncompensação financeira pela exploração de recursos minerais - cfem. Para atender as necessidades do município de Campo Formoso/BA., terá \nvigência até 31.12.2016. Em consonância com o que preceitua art. 25, inciso II, combinado com o art. 13, incisos II e III, ambos da Lei nº 8.666/93. \nCampo Formoso, 15/07/2014."
+      ],
+      "edition": "208",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906006/2014-07-16/e9cf2bb8ac3a52ba922eb954ca0be32edb5cd82a.txt"
+    },
+    {
+      "territory_id": "2906006",
+      "date": "2024-06-20",
+      "scraped_at": "2024-06-21T23:11:53.670999",
+      "url": "https://data.queridodiario.ok.org.br/2906006/2024-06-20/2b2f6ce24be17a6450a89f8893ccedd3e2dee7bf.pdf",
+      "territory_name": "Campo Formoso",
+      "state_code": "BA",
+      "excerpts": [
+        "     \n\n17125100000000 Cota−parte da Compensação Financeira pela Exploração de Recursos Minerais − CFEM 1.617.516,68                 252.049,01                    5.013.819,80                 5.201.838,04                5.384.422,56                5.572.877,35                 5.767.928,05                 \n\n17125101000000 Cota−parte da Compensação Financeira pela Exploração de Recursos Minerais − CFEM − Principal 1.617.516,68                 252.049,01                    5.013.819,80              "
+      ],
+      "edition": "3.377",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906006/2024-06-20/2b2f6ce24be17a6450a89f8893ccedd3e2dee7bf.txt"
+    },
+    {
+      "territory_id": "2906006",
+      "date": "2021-07-08",
+      "scraped_at": "2022-12-22T04:39:37.176952",
+      "url": "https://data.queridodiario.ok.org.br/2906006/2021-07-08/691db58820b8a0a6eb3dcd255cece810c7d52740.pdf",
+      "territory_name": "Campo Formoso",
+      "state_code": "BA",
+      "excerpts": [
+        " 1.327.586,28           1.370.732,84           \n\n17180220000000 Cota- parte da Compensação Financeira de Recursos Minerais - CFEM 445.390,94              381.638,31             540.672,33             643.912,00            666.448,92            689.774,63              712.192,31               \n\n17180221000000 Cota- parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 445.390,94              381.638,31             540.672,33             643.912,00            666.448,92          "
+      ],
+      "edition": "1.749",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906006/2021-07-08/691db58820b8a0a6eb3dcd255cece810c7d52740.txt"
+    },
+    {
+      "territory_id": "2906006",
+      "date": "2024-01-29",
+      "scraped_at": "2024-01-29T21:41:46.905974",
+      "url": "https://data.queridodiario.ok.org.br/2906006/2024-01-29/c29d66d5b0b967108f9cf9b342905830babf73ce.pdf",
+      "territory_name": "Campo Formoso",
+      "state_code": "BA",
+      "excerpts": [
+        "7.2.2.00.0.0.00.00.00 Transferências das Compensações Financeiras pela Exploração de Recur 70.462,29 70.429,62 50.404,87 50.470,21 40.572,17 44.328,84 326.668,00 \n\n1.7.2.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 70.462,29 70.429,62 50.404,87 50.470,21 40.572,17 44.328,84 326.668,00 \n\n1.7.2.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFE 70.462,29 70.429,62 50.404,87 50.470,21 40.572,17 44.328,84 326.668,00 \n\n1.7.2.3.00.0.0"
+      ],
+      "edition": "3.180",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906006/2024-01-29/c29d66d5b0b967108f9cf9b342905830babf73ce.txt"
+    },
+    {
+      "territory_id": "2906006",
+      "date": "2023-12-29",
+      "scraped_at": "2023-12-29T21:32:26.799819",
+      "url": "https://data.queridodiario.ok.org.br/2906006/2023-12-29/a014d019ea04944761e67713e8c38ccb129e7076.pdf",
+      "territory_name": "Campo Formoso",
+      "state_code": "BA",
+      "excerpts": [
+        "Financeiras pela Exploração de Recursos\nNaturais              \n\n2.280.551,00   \n\n1.7.1.2.51.0.0.00.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais\n- CFEM              \n\n772.551,00   \n\n1.7.1.2.51.0.1.00.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal              \n\n772.551,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo              1.508.000,00   \n\nPágina: 2 de 7 SIAFIC"
+      ],
+      "edition": "3.141",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906006/2023-12-29/a014d019ea04944761e67713e8c38ccb129e7076.txt"
+    },
+    {
+      "territory_id": "2906006",
+      "date": "2022-06-07",
+      "scraped_at": "2022-12-22T04:36:00.023544",
+      "url": "https://data.queridodiario.ok.org.br/2906006/2022-06-07/eb81bba2e42d737d0d23c8a6f39d9b7b11eab41d.pdf",
+      "territory_name": "Campo Formoso",
+      "state_code": "BA",
+      "excerpts": [
+        "em: http://campoformoso.ba.gov.br\n\n\n\n17125100000000 Cota−parte da Compensação Financeira pela Exploração de Recursos Minerais − CFEM 381.638,31        540.672,33           1.617.516,68        666.448,00           689.840,32           711.225,37         732.562,14             \n\n17125101000000 Cota−parte da Compensação Financeira pela Exploração de Recursos Minerais − CFEM − Principal 381.638,31        540.672,33           1.617.516,68        666.448,00           689.840,32           711.225,37    "
+      ],
+      "edition": "2.186",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906006/2022-06-07/eb81bba2e42d737d0d23c8a6f39d9b7b11eab41d.txt"
+    },
+    {
+      "territory_id": "2906006",
+      "date": "2025-12-16",
+      "scraped_at": "2025-12-17T00:53:18.274223",
+      "url": "https://data.queridodiario.ok.org.br/2906006/2025-12-16/261df207b7dd9a40ad73cf174830149347001bdd.pdf",
+      "territory_name": "Campo Formoso",
+      "state_code": "BA",
+      "excerpts": [
+        "651,28 290.085,85\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            144.184,18 123.070,86 140.575,07 158.079,28 153.748,34 157.357,46 151.041,50 165.658,42 1.804.558,00144.906,01 146.349,65169.267,54 150.319,69\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            144.184,18 123.070,86 140.575,07 158.079,28 153.748,34 157.357,46 151.041,50 165.658,42 1.804.558"
+      ],
+      "edition": "4.152",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906006/2025-12-16/261df207b7dd9a40ad73cf174830149347001bdd.txt"
+    },
+    {
+      "territory_id": "2906006",
+      "date": "2025-06-16",
+      "scraped_at": "2025-06-17T01:44:43.226804",
+      "url": "https://data.queridodiario.ok.org.br/2906006/2025-06-16/186aa6c51f69eadf9ce90a34dfbab2afe52cebf0.pdf",
+      "territory_name": "Campo Formoso",
+      "state_code": "BA",
+      "excerpts": [
+        "     \n\n17125100000000 Cota−parte da Compensação Financeira pela Exploração de Recursos Minerais − CFEM 252.049,01                    5.013.819,80                 2.448.622,69                3.500.901,00                3.654.940,64                 3.801.138,27                 3.943.680,95                 \n\n17125101000000 Cota−parte da Compensação Financeira pela Exploração de Recursos Minerais − CFEM − Principal 252.049,01                    5.013.819,80                 2.448.622,69              "
+      ],
+      "edition": "3.839",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906006/2025-06-16/186aa6c51f69eadf9ce90a34dfbab2afe52cebf0.txt"
+    },
+    {
+      "territory_id": "2906006",
+      "date": "2022-11-18",
+      "scraped_at": "2022-12-22T04:34:32.311986",
+      "url": "https://data.queridodiario.ok.org.br/2906006/2022-11-18/55cd3c8ef97194fdf9e32f3997829ef0817c8823.pdf",
+      "territory_name": "Campo Formoso",
+      "state_code": "BA",
+      "excerpts": [
+        "Compensações Financeiras pela Exploração de Recursos Naturais 3.557.851,00\n\n1.7.1.2.51.0.0.00.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 301.299,00\n\n1.7.1.2.51.0.1.00.00.00                   Cota-Parte da Compensação Financeira pela Exploração de recursos Minerais - CFEM - Principal301.299,00\n\n1.7.1.2.52.0.0.00.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 1.503.776,00\n\n1.7.1.2.52.4.0.00.00.00                Cota-Parte"
+      ],
+      "edition": "2.401",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2906006/2022-11-18/55cd3c8ef97194fdf9e32f3997829ef0817c8823.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2906006",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2906006",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

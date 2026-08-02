@@ -1,0 +1,78 @@
+{
+  "gerado_por": "pipeline/prep.py",
+  "crs_entrada": "EPSG:4674 (SIRGAS 2000)",
+  "crs_calculo_de_area": "+proj=aea +lat_1=-2 +lat_2=-22 +lat_0=-12 +lon_0=-54 +x_0=0 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
+  "limiar_sliver": {
+    "proporcao": 0.005,
+    "area_ha": 0.5
+  },
+  "municipios_amostra": [
+    {
+      "cd_mun": "2917508",
+      "nm_mun": "Jacobina",
+      "perfil": "ouro — maior produtor mineral do estado"
+    },
+    {
+      "cd_mun": "2917706",
+      "nm_mun": "Jaguarari",
+      "perfil": "cobre"
+    },
+    {
+      "cd_mun": "2920502",
+      "nm_mun": "Maracás",
+      "perfil": "vanádio"
+    },
+    {
+      "cd_mun": "2906006",
+      "nm_mun": "Campo Formoso",
+      "perfil": "cromo e ferroligas"
+    },
+    {
+      "cd_mun": "2925204",
+      "nm_mun": "Pojuca",
+      "perfil": "cromo e ferroligas"
+    },
+    {
+      "cd_mun": "2905206",
+      "nm_mun": "Caetité",
+      "perfil": "urânio e ferro — GATILHO FEDERAL"
+    },
+    {
+      "cd_mun": "2904605",
+      "nm_mun": "Brumado",
+      "perfil": "magnesita"
+    },
+    {
+      "cd_mun": "2915205",
+      "nm_mun": "Itagibá",
+      "perfil": "níquel"
+    },
+    {
+      "cd_mun": "2901353",
+      "nm_mun": "Andorinha",
+      "perfil": "preenchimento de ramo — perfil a confirmar"
+    },
+    {
+      "cd_mun": "2928406",
+      "nm_mun": "Santaluz",
+      "perfil": "preenchimento de ramo — perfil a confirmar"
+    }
+  ],
+  "contagens": {
+    "municipios_na_malha": 417,
+    "municipios_amostra": 10,
+    "processos_sigmine_bahia": 31488,
+    "processos_na_amostra": 2585,
+    "processos_cruzando_divisa": 746
+  },
+  "arquivos": {
+    "municipios10.geojson": {
+      "simplificacao": "8%",
+      "kb": 73.7
+    },
+    "processos.geojson": {
+      "simplificacao": null,
+      "kb": 3610.4
+    }
+  }
+}

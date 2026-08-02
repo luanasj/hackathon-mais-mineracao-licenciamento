@@ -1,0 +1,130 @@
+{
+  "total_gazettes": 8,
+  "gazettes": [
+    {
+      "territory_id": "2928802",
+      "date": "2023-06-29",
+      "scraped_at": "2023-08-31T22:16:47.881422",
+      "url": "https://data.queridodiario.ok.org.br/2928802/2023-06-29/daa7d842a6486eeab44bb56aea1831f506206dc6.pdf",
+      "territory_name": "Santo Estêvão",
+      "state_code": "BA",
+      "excerpts": [
+        "86.397,24 106.794,49 506.135,00 \nHidricos \n\n171251000000 Cota-parte da Compensação Financeira pela Exploração de Recursos 73,80 69,90 75,30 90,15 85,35 105,50 500,00 \nMinerais - CFEM \n\n171251010000 Cota-parte da Compensação Financeira pela Exploração de 73,80 69,90 75,30 90,15 85,35 105,50 500,00 \nRecursos Minerais - CFEM - Principal \n\n171251010000 Transferência da União Referente à Compensação Financeira de Recursos 73,80 69,90 75,30 90,15 85.35 105.50 500,00 \nMinerais \n\n171252000000 Cota-parte da"
+      ],
+      "edition": "1.939",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928802/2023-06-29/daa7d842a6486eeab44bb56aea1831f506206dc6.txt"
+    },
+    {
+      "territory_id": "2928802",
+      "date": "2024-01-12",
+      "scraped_at": "2024-01-12T22:19:03.601280",
+      "url": "https://data.queridodiario.ok.org.br/2928802/2024-01-12/5a7e5549310120bfaa30922f1db11160015f5384.pdf",
+      "territory_name": "Santo Estêvão",
+      "state_code": "BA",
+      "excerpts": [
+        "61.645,44 324.279,00 \nHídricos \n\n171251000000 Cota-parte da Compensação Financeira pela Exploração de Recursos 259,88 246,50 291,37 297,63 275,79 321,84 1.693,00 \nMinerais - CFEM \n\n171251010000 Cota-parte da Compensação Financeira pela Exploração de 259,88 246,50 291,37 297,63 275,79 321,84 1.693,00 \nRecursos Minerais - CFEM - Principal \n\n171251010000 Transferência da União Referente à Compensação Financeira de Recursos 259.88 246,50 291,37 297.63 275,79 321.84 1.693,00 \nMinerais \n\n171252000000 Cota-parte"
+      ],
+      "edition": "2.150",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928802/2024-01-12/5a7e5549310120bfaa30922f1db11160015f5384.txt"
+    },
+    {
+      "territory_id": "2928802",
+      "date": "2022-12-28",
+      "scraped_at": "2023-08-31T22:21:05.112220",
+      "url": "https://data.queridodiario.ok.org.br/2928802/2022-12-28/fa5c7451c7b9530da80045d31902c0fb6afafb07.pdf",
+      "territory_name": "Santo Estêvão",
+      "state_code": "BA",
+      "excerpts": [
+        "Hídricos\n\n74.705,53 70.757,67 76.223,93 91.256,14 86.397,24 106.794,49 506.135,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n73,80 69,90 75,30 90,15 85,35 105,50 500,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n73,80 69,90 75,30 90,15 85,35 105,50 500,00\n\n171251010000 Transferência da União Referente à Compensação Financeira de Recursos\nMinerais\n\n73,80 69,90 75,30 90,15"
+      ],
+      "edition": "1.746",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928802/2022-12-28/fa5c7451c7b9530da80045d31902c0fb6afafb07.txt"
+    },
+    {
+      "territory_id": "2928802",
+      "date": "2021-12-23",
+      "scraped_at": "2023-08-31T22:27:44.784403",
+      "url": "https://data.queridodiario.ok.org.br/2928802/2021-12-23/043ccb81dacc3bd7e1c78dcf20ab997e141739e0.pdf",
+      "territory_name": "Santo Estêvão",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferênda da União referente â Compensação Rnaneeira de Recursos\n43.711,64 39.499,42\n\nHídricos\n70,30\n\n171251000000 Cota-parte da Compensação Financeira pela Exploração de Recursos 82,50\n74,55\n\nMinerais • CFEM\n70.30\n\n171251010000 Cota^rte da Compensação Rnaneeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n82,50 74,55\n\n171251010000 Transferênda da União Referente à Compensação Financeira de Recursos\nMinerais\n\n82,50 74,55 70,30\n\n171252000000 Cota-parte da Compensação Financeira pela Produção"
+      ],
+      "edition": "1.418",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928802/2021-12-23/043ccb81dacc3bd7e1c78dcf20ab997e141739e0.txt"
+    },
+    {
+      "territory_id": "2928802",
+      "date": "2023-12-13",
+      "scraped_at": "2023-12-13T22:07:57.485273",
+      "url": "https://data.queridodiario.ok.org.br/2928802/2023-12-13/cc4dc5e6e872957b55e7479b2a5c9714b9436e21.pdf",
+      "territory_name": "Santo Estêvão",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos 324.279,00 \nHídricos - Principal \n\n171251000000 Cota-parte da Compensação Financeira pela Exploração de Recursos 1.693,00 \nMinerais - CFEM \n\n171251010000 Cota-parte da Compensação Financeira pela Exploração de Recursos 1.693,00 \nMinerais - CFEM - Principal \n\n171252000000 Cota-parte da Compensação Financeira pela Produção de Petróleo 1.548.509,00 \n\n171252100000 Cota-parte da Compensação Financeira pela Produção de Petróleo— Lei 40.551,00"
+      ],
+      "edition": "2.120",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928802/2023-12-13/cc4dc5e6e872957b55e7479b2a5c9714b9436e21.txt"
+    },
+    {
+      "territory_id": "2928802",
+      "date": "2022-12-22",
+      "scraped_at": "2023-08-31T22:21:12.798431",
+      "url": "https://data.queridodiario.ok.org.br/2928802/2022-12-22/a755ea816e3885276f59321dbdaebe1043596ed6.pdf",
+      "territory_name": "Santo Estêvão",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos 506.135,00 \nHídricos - Principal \n\n171251000000 Cota-parte da Compensação Financeira pela Exploração de Recursos 500,00 \nMinerais - CFEM \n\n171251010000 Cota-parte da Compensação Financeira pela Exploração de Recursos 500.00 \nMinerais - CFEM - Principal \n\n171252000000 Cota-parte da Compensação Financeira pela Produção de Petróleo 1.449.869,00 \n\n171252100000 Cota-parte da Compensação Financeira pela Produção de Petróleo - Lei 32.178,00"
+      ],
+      "edition": "1.742",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928802/2022-12-22/a755ea816e3885276f59321dbdaebe1043596ed6.txt"
+    },
+    {
+      "territory_id": "2928802",
+      "date": "2021-12-02",
+      "scraped_at": "2023-08-31T22:27:57.190142",
+      "url": "https://data.queridodiario.ok.org.br/2928802/2021-12-02/0ce21c9ca9c9e0358d01edc0ab2db49560e61856.pdf",
+      "territory_name": "Santo Estêvão",
+      "state_code": "BA",
+      "excerpts": [
+        "Financeira pela Exploração de Recursos\nHídricos\n\nCota-parte da Compensação Financeira pela Exploração de Recursos\nHídricos - Principal\n\nCota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\nCota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\nCota-parte da Compensação Financeira pela Produção de Petróleo\n\nCota-parte da Compensação Financeira pela Produção de Petróleo - Lei\nn® 7.990/89\n\nCota-parte da Compensação Financeira pela Produção"
+      ],
+      "edition": "1.404",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928802/2021-12-02/0ce21c9ca9c9e0358d01edc0ab2db49560e61856.txt"
+    },
+    {
+      "territory_id": "2928802",
+      "date": "2024-12-06",
+      "scraped_at": "2024-12-07T02:33:50.706604",
+      "url": "https://data.queridodiario.ok.org.br/2928802/2024-12-06/c911dc4fde13ebcbcf08b37869a8f896ff990c3f.pdf",
+      "territory_name": "Santo Estêvão",
+      "state_code": "BA",
+      "excerpts": [
+        "171200000000\ni\n\n1\n223 570,00\n\n171250000000\n\n223 570.00Cota-parte da Compení^ação Financeira pela Exploração de Recursos\nHídncos-I Pnncipal |\n\nCota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais-j CFEM ]\n\nCota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais | CFEM - Pnncipal *\n\nCota-parte da Compensação Financeira peia Produção de Petróleo ‘\nCota-parte da Compensação Financeira pela Produção de Petróleo - Lei\n\nn® 7 990/89\n\nCotajparte da Compensação Financeira pela Produção"
+      ],
+      "edition": "2.662",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2928802/2024-12-06/c911dc4fde13ebcbcf08b37869a8f896ff990c3f.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2928802",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2928802",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 139,
+  "gazettes": [
+    {
+      "territory_id": "2919207",
+      "date": "2020-09-17",
+      "scraped_at": "2024-03-22T12:40:02.701356",
+      "url": "https://data.queridodiario.ok.org.br/2919207/2020-09-17/62ea7c4c3543756603b9ffa65d80eeac03ea9f43.pdf",
+      "territory_name": "Lauro de Freitas",
+      "state_code": "BA",
+      "excerpts": [
+        "0210-1/07 Extração de madeira em florestas plantadas Nível de Risco III   \n  0210-1/08 Produção de carvão vegetal - florestas plantadas Nível de Risco III   \n  0210-1/09 Produção de casca de acácia-negra - florestas plantadas Nível de Risco II   \n\n  0210-1/99 Produção de produtos não madeireiros não especificados \nanteriormente em florestas plantadas \n\nNível de Risco II   \n \n\n    Produção florestal - florestas nativas     \n02.20-9   Produção florestal - florestas nativas     \n\n  0220-9/01 Extração de madeira"
+      ],
+      "edition": "1795",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919207/2020-09-17/62ea7c4c3543756603b9ffa65d80eeac03ea9f43.txt"
+    },
+    {
+      "territory_id": "2919207",
+      "date": "2023-04-20",
+      "scraped_at": "2024-03-22T12:47:43.063130",
+      "url": "https://data.queridodiario.ok.org.br/2919207/2023-04-20/e41f379e4fb8c1f7044c7b735b78e52dd8ae37b7.pdf",
+      "territory_name": "Lauro de Freitas",
+      "state_code": "BA",
+      "excerpts": [
+        "Esta edição encontra-se no site oficial deste ente.\n\n \n \n\n  0210-1/05 \n\nCultivo de espécies \nmadeireiras, exceto \neucalipto, acácia- \nnegra, pinus e teca \n\n1 1   1 1 \n\n  0210-1/06 \nCultivo de mudas \nem viveiros \nflorestais \n\n1 1   1 1 \n\n  0210-1/07 \nExtração de \nmadeira em \nflorestas plantadas \n\n1 3   1 3 \n\n  0210-1/08 \nProdução de \ncarvão vegetal - \nflorestas plantadas \n\n1 1   1 1 \n\n  0210-1/09 \nProdução de casca \nde acácia-negra - \nflorestas plantadas \n\n1 1   1 1 \n\n  0210-1/99 \n\nProdução de \nprodutos"
+      ],
+      "edition": "2514",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919207/2023-04-20/e41f379e4fb8c1f7044c7b735b78e52dd8ae37b7.txt"
+    },
+    {
+      "territory_id": "2919207",
+      "date": "2023-04-13",
+      "scraped_at": "2024-03-22T12:47:43.065370",
+      "url": "https://data.queridodiario.ok.org.br/2919207/2023-04-13/524f7e23a2286fb9621ba61ecfbb41b96bd12d35.pdf",
+      "territory_name": "Lauro de Freitas",
+      "state_code": "BA",
+      "excerpts": [
+        "\n0210-1/07 Extração de madeira em florestas plantadas 1 1   1 1 \n\n  \n0210-1/08 Produção de carvão vegetal - florestas plantadas 1 1   1 1 \n\n  \n0210-1/09 Produção de casca de acácia-negra - florestas \n\nplantadas \n1 1   \n\n1 \n1 \n\n  \n0210-1/99 Produção de produtos não madeireiros não \n\nespecificados anteriormente em florestas plantadas \n1 1   \n\n1 \n1 \n\nProdução florestal - florestas nativas           \n02.2\n0-9   \n\nProdução florestal - florestas nativas \n      \n\n  \n  \n\n  \n0220-9/01 Extração de madeira"
+      ],
+      "edition": "2509",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919207/2023-04-13/524f7e23a2286fb9621ba61ecfbb41b96bd12d35.txt"
+    },
+    {
+      "territory_id": "2919207",
+      "date": "2023-06-20",
+      "scraped_at": "2024-03-22T12:47:43.009637",
+      "url": "https://data.queridodiario.ok.org.br/2919207/2023-06-20/caa421b7c257f7ee69196243646de3d3a6bfe434.pdf",
+      "territory_name": "Lauro de Freitas",
+      "state_code": "BA",
+      "excerpts": [
+        "operador, exceto andaimes \n\n723,81 1.013,30 1.447,58 2.895,18 3.474,22 3.821,64 \n\n 7733100 Aluguel de máquinas e equipamentos para escritórios 723,81 1.013,30 1.447,58 2.895,18 3.474,22 3.821,64 \n\n 7739001 Aluguel de máquinas e equipamentos para extração de \n\nminérios e petróleo, sem operador \n\n723,81 1.013,30 1.447,58 2.895,18 3.474,22 3.821,64 \n\n 7729203 Aluguel de material médico 723,81 1.013,30 1.447,58 2.895,18 3.474,22 3.821,64 \n\n\n\nTerça-feira\n20 de Junho de 2023\n22 - Ano XI - Nº 2558\n\nLauro"
+      ],
+      "edition": "2558",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919207/2023-06-20/caa421b7c257f7ee69196243646de3d3a6bfe434.txt"
+    },
+    {
+      "territory_id": "2919207",
+      "date": "2023-01-31",
+      "scraped_at": "2024-03-22T12:49:07.652584",
+      "url": "https://data.queridodiario.ok.org.br/2919207/2023-01-31/c2001a347518b25c606337dd2a3f2d1ed685223f.pdf",
+      "territory_name": "Lauro de Freitas",
+      "state_code": "BA",
+      "excerpts": [
+        "1 \n\n  \n0210-1/07 Extração de madeira em florestas plantadas 1 1   1 1 \n\n  \n0210-1/08 Produção de carvão vegetal - florestas plantadas 1 1   1 1 \n\n  \n0210-1/09 Produção de casca de acácia-negra - florestas plantadas 1 1   1 1 \n\n  \n0210-1/99 Produção de produtos não madeireiros não especificados anteriormente em \n\nflorestas plantadas \n1 1   \n\n1 \n1 \n\nProdução florestal - florestas nativas           \n02.20-9 \n\n  \nProdução florestal - florestas nativas           \n\n  \n0220-9/01 Extração de madeira em florestas"
+      ],
+      "edition": "2457",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919207/2023-01-31/c2001a347518b25c606337dd2a3f2d1ed685223f.txt"
+    },
+    {
+      "territory_id": "2919207",
+      "date": "2015-05-13",
+      "scraped_at": "2024-03-22T12:18:10.373987",
+      "url": "https://data.queridodiario.ok.org.br/2919207/2015-05-13/b96bacbb6dad76ee4215c3c6430c51eb1e446a6c.pdf",
+      "territory_name": "Lauro de Freitas",
+      "state_code": "BA",
+      "excerpts": [
+        "Municipal de Meio Ambiente, Saneamento e Recursos \nHídricos – SEMARH a Licença Ambiental sob número 001/2014 Modalidade \nLicença Ambiental Simplificada com validade de 02 Anos a contar de \n02/01/2014 para produção de maquinas e equipamentos para extração mineral. \nLocalizada na Rua Dr. Barreto, no323, Lote 03, Quadra 01, Pitangueiras, Lauro \nde Freitas-BA. \n\nANA PAULA GARCIA DE ALBUQUERQUE torna público que recebeu da \nSecretaria Municipal de Meio Ambiente, Saneamento e Recursos Hídricos – \nSEMARH a"
+      ],
+      "edition": "368",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919207/2015-05-13/b96bacbb6dad76ee4215c3c6430c51eb1e446a6c.txt"
+    },
+    {
+      "territory_id": "2919207",
+      "date": "2017-12-08",
+      "scraped_at": "2024-03-22T12:32:23.033517",
+      "url": "https://data.queridodiario.ok.org.br/2919207/2017-12-08/18c672f7c3082df94c090e1b5be436d5deb40ef1.pdf",
+      "territory_name": "Lauro de Freitas",
+      "state_code": "BA",
+      "excerpts": [
+        "florestais 416,59 583,23 833,18 1.666,36\n0210-1/07 Extração de madeira em florestas plantadas 416,59 583,23 833,18 1.666,36\n0210-1/08 Produção de carvão vegetal - florestas plantadas 416,59 583,23 833,18 1.666,36\n0210-1/09 Produção de casca de acácia-negra - florestas plantadas 416,59 583,23 833,18 1.666,36\n\n0210-1/99\nProdução de produtos não-madeireiros não especificados anteriormente \nem florestas plantadas\n\n416,59 583,23 833,18 1.666,36\n\n0220-9/01 Extração de madeira em florestas nativas 416,59 583,23"
+      ],
+      "edition": "1059",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919207/2017-12-08/18c672f7c3082df94c090e1b5be436d5deb40ef1.txt"
+    },
+    {
+      "territory_id": "2919207",
+      "date": "2023-04-26",
+      "scraped_at": "2024-03-22T12:47:43.061823",
+      "url": "https://data.queridodiario.ok.org.br/2919207/2023-04-26/a201a1329386fc78bb3cedbcda69a32c290330f3.pdf",
+      "territory_name": "Lauro de Freitas",
+      "state_code": "BA",
+      "excerpts": [
+        "0210-1/07 Extração de madeira \nem florestas \nplantadas 1 3   1 3 \n\n  \n\n0210-1/08 Produção de carvão \nvegetal - florestas \nplantadas 1 1   1 1 \n\n  \n\n0210-1/09 Produção de casca \nde acácia-negra - \nflorestas plantadas 1 1   1 1 \n\n  \n\n0210-1/99 Produção de \nprodutos não \nmadeireiros não \nespecificados \n\nanteriormente em \nflorestas plantadas 1 1   1 1 \n\nProdução florestal - florestas nativas           \n\n02.20-9 \n\n  \n\nProdução florestal - \nflorestas nativas           \n\n  \n0220-9/01 Extração de madeira"
+      ],
+      "edition": "2517",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919207/2023-04-26/a201a1329386fc78bb3cedbcda69a32c290330f3.txt"
+    },
+    {
+      "territory_id": "2919207",
+      "date": "2022-06-17",
+      "scraped_at": "2024-03-22T12:52:07.854607",
+      "url": "https://data.queridodiario.ok.org.br/2919207/2022-06-17/9502783185af328923c91b2ee3f338673c5a4fd6.pdf",
+      "territory_name": "Lauro de Freitas",
+      "state_code": "BA",
+      "excerpts": [
+        " \n\nExtrativismo \n\nExtração de combustíveis minerais \n\nExtração de combustíveis vegetais \n\nExtração de minerais fósseis \n\nExtração de minerais metálicos (inclusive os preciosos) \n\nExtração de minerais não metálicos (inclusive de pedras preciosas e semipreciosas, de pedras e outros \n\nmateriais de construção, de sal marinho e de combustíveis minerais) \n\nExtração de minerais não metálicos, não especificados ou não classificados \n\nExtração de minérios de metais preciosos \n\nExtração de pedras e outros"
+      ],
+      "edition": "2282",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919207/2022-06-17/9502783185af328923c91b2ee3f338673c5a4fd6.txt"
+    },
+    {
+      "territory_id": "2919207",
+      "date": "2017-07-14",
+      "scraped_at": "2024-03-22T12:24:56.729778",
+      "url": "https://data.queridodiario.ok.org.br/2919207/2017-07-14/b90daaec9fde62cf2b7ae235d1c50474a993c194.pdf",
+      "territory_name": "Lauro de Freitas",
+      "state_code": "BA",
+      "excerpts": [
+        "pelo \nprazo de 02 (dois) anos a partir do dia 22 de maio de 2017 à RODODRILL TOOL\nINDÚSTRIA E COMÉRCIO LTDA, inscrita no CNPJ nº. 03.533.378/0001-49 para \natividade de fabricação de outras máquinas e equipamentos para uso na extração \nmineral, peças e acessórios, exceto na extração de petróleo, localizada no Loteamento \nJardim Aeroporto, Rua Dr. Barreto, nº. 323, Quadra l, Lote 03, Galpão 1, Pitangueiras, \nLauro de Freitas-BA, mediante o cumprimento da legislação vigente e das \ncondicionantes dispostas"
+      ],
+      "edition": "957",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2919207/2017-07-14/b90daaec9fde62cf2b7ae235d1c50474a993c194.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2919207",
+    "termo": "extracao mineral",
+    "params": {
+      "territory_ids": "2919207",
+      "querystring": "extracao mineral",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

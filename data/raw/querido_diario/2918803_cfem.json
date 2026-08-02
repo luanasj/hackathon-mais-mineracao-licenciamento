@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 12,
+  "gazettes": [
+    {
+      "territory_id": "2918803",
+      "date": "2023-03-06",
+      "scraped_at": "2023-10-16T21:35:54.372350",
+      "url": "https://data.queridodiario.ok.org.br/2918803/2023-03-06/01181a19df68e77666583c4a2d8a1a12c7cc7565.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "das Compensacoes Financeiras pela Exploracao de Recursos Naturais 277.051,09 697.665,00 974.716,09 579.288,62 718.653,71 1.297.942,33 2.272.658,428.395.487,37 2.272.658,42\n\nCota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM 53,26 134,11 187,37 111,35 138,14 249,49 436,861.613,82 436,86\n\nPágina: 2 de 2506/03/2023 - 09:42:34\n\nEdição 2.992 | Ano 4\n06 de março de 2023\n\nPágina 30\n\nCertificação Digital: WBBICV4E-9J86GD4H-ANVJEAIJ-O4DPEKWH\nVersão eletrônica disponível em: https://doem"
+      ],
+      "edition": "2.992",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918803/2023-03-06/01181a19df68e77666583c4a2d8a1a12c7cc7565.txt"
+    },
+    {
+      "territory_id": "2918803",
+      "date": "2022-01-27",
+      "scraped_at": "2023-10-16T21:40:54.682210",
+      "url": "https://data.queridodiario.ok.org.br/2918803/2022-01-27/dfaa2f1578577f93dd26c4177c3cb3149090e508.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "17180200000000 Transferência da Compensação Financeira pela Exploração de Recursos Naturais 6.762.050,32 10.785.205,76 4.023.155,44\n\n17180220000000 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 1.317,09 2.062,75 745,66\n\n17180221000000 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 1.317,09 2.062,75 745,6642 - ROYALTIES/FEP/COMP. FINANCEIRA P/ EXPL.\nREC. MIN.\n\n17180250000000 Cota-parte Royalties pela Participação Especial – Lei nº 9.478/97, artigo 50 6.266.831,74"
+      ],
+      "edition": "2.586",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918803/2022-01-27/dfaa2f1578577f93dd26c4177c3cb3149090e508.txt"
+    },
+    {
+      "territory_id": "2918803",
+      "date": "2022-11-23",
+      "scraped_at": "2023-10-16T21:37:27.635950",
+      "url": "https://data.queridodiario.ok.org.br/2918803/2022-11-23/7153e8cc5b9b402fb0b2753f48daf5335e41b909.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "Naturais \n\n1.613,82 1.7.1.2.51.0.0.00.00.00  Cota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM \n\n1.613,82 1.7.1.2.51.0.1.00.00.00  Cota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM - \n\nPrincipal \n\n1.613,82 1.7.1.2.51.0.1.00.00.00 1704000001 Cota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - \n\nCFEM - Principal \n\n8.393.873,55 1.7.1.2.52.0.0.00.00.00  Cota-parte da Compensacao Financeira pela Producao de Petroleo \n\n7"
+      ],
+      "edition": "2.867",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918803/2022-11-23/7153e8cc5b9b402fb0b2753f48daf5335e41b909.txt"
+    },
+    {
+      "territory_id": "2918803",
+      "date": "2024-02-27",
+      "scraped_at": "2024-02-27T22:38:03.674597",
+      "url": "https://data.queridodiario.ok.org.br/2918803/2024-02-27/1735d9647fd6eb4cc0c83cc05f4c77f84bc195ed.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "1.128,31 2.841,30 3.969,61 2.359,20 2.926,78 5.285,98 9.255,59170500000\n1\n\n34.191,33 9.255,59\n\nCota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM            41,01 103,26 144,27 85,74 106,37 192,11 336,381.242,64 336,38\n\nCota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM - Principal            41,01 103,26 144,27 85,74 106,37 192,11 336,38172000000\n0\n\n1.242,64 336,38\n\nCota-parte da Compensacao Financeira pela Producao de Petroleo         "
+      ],
+      "edition": "3.374",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918803/2024-02-27/1735d9647fd6eb4cc0c83cc05f4c77f84bc195ed.txt"
+    },
+    {
+      "territory_id": "2918803",
+      "date": "2022-06-28",
+      "scraped_at": "2023-10-16T21:38:56.933091",
+      "url": "https://data.queridodiario.ok.org.br/2918803/2022-06-28/90a98c1abd10fa7a45e3a1b1d68ada4edfcac68b.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "Naturais 0,00 7.170.478,16 7.963.533,05 8.931.102,32 10.123.404,48332.047,83\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM 0,00 1.396,64 1.551,11 1.739,57 1.971,803.903,26\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM - Principal 0,00 1.396,64 1.551,11 1.739,57 1.971,803.903,26\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensacao Financeira pela Producao de Petroleo 0,00 7.169.081,52 7.961"
+      ],
+      "edition": "2.748",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918803/2022-06-28/90a98c1abd10fa7a45e3a1b1d68ada4edfcac68b.txt"
+    },
+    {
+      "territory_id": "2918803",
+      "date": "2021-02-25",
+      "scraped_at": "2023-10-16T21:44:22.519622",
+      "url": "https://data.queridodiario.ok.org.br/2918803/2021-02-25/d94074f42e6c73f6898f112607d5631ef4bec29d.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "17180200000000 Transferência da Compensação Financeira pela Exploração de Recursos Naturais 527.539,52 7.214.230,65 6.686.691,13\n\n17180220000000 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 1.223,04 3.903,26 2.680,22\n\n17180221000000 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 1.223,04 3.903,26 2.680,2242 - ROYALTIES/FEP/COMP. FINANCEIRA P/ EXPL.\nREC. MIN.\n\n17180250000000 Cota-parte Royalties pela Participação Especial – Lei nº 9.478/97, artigo 50 67.683,84"
+      ],
+      "edition": "2.315",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918803/2021-02-25/d94074f42e6c73f6898f112607d5631ef4bec29d.txt"
+    },
+    {
+      "territory_id": "2918803",
+      "date": "2024-06-28",
+      "scraped_at": "2024-06-28T23:45:13.284399",
+      "url": "https://data.queridodiario.ok.org.br/2918803/2024-06-28/ee7ca772e21fa5d63871ddc075e998347a4c205c.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "Hidricos - Principal 0,00 34.191,33 35.432,48 36.672,62 37.956,160,00\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM 0,00 1.242,64 1.287,75 1.332,82 1.379,472.227,78\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM - Principal 0,00 1.242,64 1.287,75 1.332,82 1.379,472.227,78\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensacao Financeira pela Producao de Petroleo 1.679.163,58 10.901.755"
+      ],
+      "edition": "3.503",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918803/2024-06-28/ee7ca772e21fa5d63871ddc075e998347a4c205c.txt"
+    },
+    {
+      "territory_id": "2918803",
+      "date": "2025-06-26",
+      "scraped_at": "2025-06-27T03:12:26.589617",
+      "url": "https://data.queridodiario.ok.org.br/2918803/2025-06-26/6b68c7940fec54805590ba53610d2cef940b09bb.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "Hidricos - Principal 0,00 36.704,39 38.359,76 39.894,15 41.410,130,00\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM 17.448,87 1.333,97 1.394,13 1.449,90 1.505,000,00\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM - Principal 17.448,87 1.333,97 1.394,13 1.449,90 1.505,000,00\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensacao Financeira pela Producao de Petroleo 8.250.932,19 11.703"
+      ],
+      "edition": "3.789",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918803/2025-06-26/6b68c7940fec54805590ba53610d2cef940b09bb.txt"
+    },
+    {
+      "territory_id": "2918803",
+      "date": "2023-12-18",
+      "scraped_at": "2023-12-18T21:56:51.299443",
+      "url": "https://data.queridodiario.ok.org.br/2918803/2023-12-18/753ea1504919bf608de57dc5bf07b677b1cb2612.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM1.242,64   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM -\nPrincipal\n\n1.242,64   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensacao Financeira pela Exploracao de Recursos Minerais - CFEM\n- Principal              \n\n17040000011.242,64   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensacao Financeira pela Producao de Petroleo10.901.755,25   \n\n1.7.1.2.52.3.0.00.00.00 Cota-parte"
+      ],
+      "edition": "3.317",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918803/2023-12-18/753ea1504919bf608de57dc5bf07b677b1cb2612.txt"
+    },
+    {
+      "territory_id": "2918803",
+      "date": "2021-11-08",
+      "scraped_at": "2023-10-16T21:41:43.046772",
+      "url": "https://data.queridodiario.ok.org.br/2918803/2021-11-08/5b353df66efd5bb60a9acf5a650e60be59bdd7b1.pdf",
+      "territory_name": "Laje",
+      "state_code": "BA",
+      "excerpts": [
+        "17120000000000 Transferências das Compensações Financeiras pela Exploração de Recursos Naturais 7.170.478,16\n\n17125100000000 1.396,64Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n\n17125101000000 1.396,64Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n17125200000000 7.169.081,52Cota-parte da Compensação Financeira pela Produção de Petróleo\n\n17125230000000 6.645.348,38Cota-parte pela Participação Especial – Lei nº 9.478/97, artigo 50"
+      ],
+      "edition": "2.524",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2918803/2021-11-08/5b353df66efd5bb60a9acf5a650e60be59bdd7b1.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2918803",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2918803",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

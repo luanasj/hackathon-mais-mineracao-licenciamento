@@ -1,8 +1,24 @@
+# dependências
+node_modules/
+.venv/
 __pycache__/
 *.pyc
-node_modules/
+
+# artefatos de build
 dist/
+*.tsbuildinfo
+
+# intermediários do pipeline (regeneráveis por `python pipeline/prep.py`)
+frontend/public/data/*.raw.geojson
+
+# sistema
 .DS_Store
+
+# cache do Vite
+.vite/
+
+data/db/*.db
+data/db/*.db-journal
 
 # Segredos — .env.* pega .env.local, .env.production e o que mais aparecer;
 # a negação mantém o template rastreado.

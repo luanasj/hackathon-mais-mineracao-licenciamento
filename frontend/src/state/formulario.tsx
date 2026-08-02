@@ -1,0 +1,179 @@
+/**
+ * ESCOPO B.6 — estado global único.
+ *
+ * Critério de aceite: mudança em qualquer campo propaga sem recarregar, e o
+ * formulário e a tela de parecer leem a MESMA fonte. Por isso o parecer não é
+ * estado: é `useMemo` derivado dos fatos. Não existe caminho em que a tela de
+ * parecer mostre algo que o formulário não esteja dizendo.
+ *
+ * Context + useReducer, zero dependência nova — roda com a rede desligada (DoD).
+ */
+
+import { createContext, use, useMemo, useReducer } from 'react'
+import type { ReactNode } from 'react'
+
+import { construirFactBase, tipologiaPorId } from '@/lib/fatos'
+import { avaliar } from '@/lib/motor'
+import type { FactBase, Parecer, Tipologia } from '@/lib/schemas'
+import { ESTADO_INICIAL, CONDICIONAIS_VAZIAS } from '@/state/tipos'
+import type { AcaoFormulario, EstadoFormulario } from '@/state/tipos'
+
+// ---------------------------------------------------------------------------
+// Reducer
+// ---------------------------------------------------------------------------
+
+export function reducer(
+  estado: EstadoFormulario,
+  acao: AcaoFormulario,
+): EstadoFormulario {
+  switch (acao.tipo) {
+    case 'selecionar-processo':
+      // Selecionar processo REESCREVE substância e fase, inclusive por cima de
+      // edição manual anterior: o usuário trocou de área, e manter "urânio"
+      // digitado sobre um processo de granito seria mentira silenciosa.
+      return {
+        ...estado,
+        origem: 'processo',
+        processo: acao.processo,
+        area: null,
+        substancia: acao.processo.substancia,
+        substancia_editada: false,
+        fase: acao.processo.fase,
+        fase_editada: false,
+      }
+
+    case 'selecionar-area':
+      // Área desenhada não traz substância nem fase — o SIGMINE é que trazia.
+      // Os campos ficam em branco e passam a ser obrigatórios (B.7).
+      return {
+        ...estado,
+        origem: 'desenho',
+        area: acao.area,
+        processo: null,
+        substancia: '',
+        substancia_editada: false,
+        fase: '',
+        fase_editada: false,
+      }
+
+    case 'limpar-area':
+      return { ...estado, origem: 'nenhuma', processo: null, area: null }
+
+    case 'tipologia': {
+      if (acao.id === estado.tipologia_id) return estado
+      const nova = tipologiaPorId(acao.id)
+      // Trocar de tipologia troca o parâmetro de porte e a unidade. Manter o
+      // número anterior significaria ler "150.000" como t/ano numa tipologia
+      // medida em hectares. O porte zera, e o controle se recalibra.
+      const mantidos = camposCondicionaisMantidos(estado, nova)
+      return {
+        ...estado,
+        tipologia_id: acao.id,
+        porte_valor: null,
+        condicionais: mantidos,
+      }
+    }
+
+    case 'substancia':
+      return { ...estado, substancia: acao.valor, substancia_editada: true }
+
+    case 'fase':
+      return { ...estado, fase: acao.valor, fase_editada: true }
+
+    case 'porte':
+      return { ...estado, porte_valor: acao.valor }
+
+    case 'condicional':
+      return {
+        ...estado,
+        condicionais: {
+          ...estado.condicionais,
+          [acao.campo]: acao.valor,
+        } as EstadoFormulario['condicionais'],
+      }
+
+    case 'restaurar-sigmine': {
+      const p = estado.processo
+      if (!p) return estado
+      return acao.campo === 'substancia'
+        ? { ...estado, substancia: p.substancia, substancia_editada: false }
+        : { ...estado, fase: p.fase, fase_editada: false }
+    }
+
+    case 'reiniciar':
+      return ESTADO_INICIAL
+  }
+}
+
+/** Respostas condicionais que a nova tipologia ainda ativa sobrevivem. */
+function camposCondicionaisMantidos(
+  estado: EstadoFormulario,
+  nova: Tipologia | null,
+): EstadoFormulario['condicionais'] {
+  const ativos = nova?.campos_condicionais ?? []
+  const c = estado.condicionais
+  return {
+    supressao_vegetacao: ativos.includes('supressao_vegetacao')
+      ? c.supressao_vegetacao
+      : CONDICIONAIS_VAZIAS.supressao_vegetacao,
+    supressao_ha: ativos.includes('supressao_vegetacao')
+      ? c.supressao_ha
+      : CONDICIONAIS_VAZIAS.supressao_ha,
+    recurso_hidrico: ativos.includes('recurso_hidrico')
+      ? c.recurso_hidrico
+      : [],
+    explosivos: ativos.includes('explosivos')
+      ? c.explosivos
+      : CONDICIONAIS_VAZIAS.explosivos,
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Contexto
+// ---------------------------------------------------------------------------
+
+export interface ContextoFormulario {
+  estado: EstadoFormulario
+  despachar: (acao: AcaoFormulario) => void
+  /** Tipologia escolhida, já resolvida. */
+  tipologia: Tipologia | null
+  /** Os fatos que o motor recebe. Exibidos crus no painel "por quê?". */
+  fatos: FactBase
+  /** Saída do motor para o estado atual. Nunca é estado armazenado. */
+  parecer: Parecer
+  /** Milissegundos da última reavaliação — o aceite de B.4 é < 100 ms. */
+  ms_avaliacao: number
+}
+
+const Ctx = createContext<ContextoFormulario | null>(null)
+
+export function ProvedorFormulario({ children }: { children: ReactNode }) {
+  const [estado, despachar] = useReducer(reducer, ESTADO_INICIAL)
+
+  const derivado = useMemo(() => {
+    const t0 = performance.now()
+    const fatos = construirFactBase(estado)
+    const parecer = avaliar(fatos)
+    return { fatos, parecer, ms_avaliacao: performance.now() - t0 }
+  }, [estado])
+
+  const valor = useMemo<ContextoFormulario>(
+    () => ({
+      estado,
+      despachar,
+      tipologia: tipologiaPorId(estado.tipologia_id),
+      ...derivado,
+    }),
+    [estado, derivado],
+  )
+
+  return <Ctx value={valor}>{children}</Ctx>
+}
+
+export function useFormulario(): ContextoFormulario {
+  const ctx = use(Ctx)
+  if (!ctx) {
+    throw new Error('useFormulario precisa estar dentro de <ProvedorFormulario>')
+  }
+  return ctx
+}

@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 36,
+  "gazettes": [
+    {
+      "territory_id": "2926202",
+      "date": "2023-03-27",
+      "scraped_at": "2024-03-22T15:52:57.183971",
+      "url": "https://data.queridodiario.ok.org.br/2926202/2023-03-27/f87263196141cfc5d49d7433b8a1139ba692beed.pdf",
+      "territory_name": "Riachão das Neves",
+      "state_code": "BA",
+      "excerpts": [
+        "3.1.90.11.00 / 16600000 - Vencimentos e Vantagens Fixas - Pessoal Civil 2.700,00\n\nTotal por Ação: 2.700,00\n\nTotal por Unidade Orçamentária: 5.451,24\n\n0207000 - SEC. MUN. DE INFRAESTRUTURA E SERVIÇOS PÚBLICOS\n\n2.017 - GESTÃO DAS AÇÕES DO ROYALTIES - CFEM/FEP/CFH\n\n3.3.90.30.00 / 17080000 - Material de Consumo 47.200,80\n\nTotal por Ação: 47.200,80\n\nTotal por Unidade Orçamentária: 47.200,80\n\nTotal Suplementado: 638.375,67\n\nArt 2º. - A propósito cabe -me informar que para atender a suplementação acima,"
+      ],
+      "edition": "3137",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2926202/2023-03-27/f87263196141cfc5d49d7433b8a1139ba692beed.txt"
+    },
+    {
+      "territory_id": "2926202",
+      "date": "2023-09-22",
+      "scraped_at": "2024-03-22T15:47:55.975741",
+      "url": "https://data.queridodiario.ok.org.br/2926202/2023-09-22/24ca7a2f94bf8c2d05c6bc5c4540d4c9e4ac3aa4.pdf",
+      "territory_name": "Riachão das Neves",
+      "state_code": "BA",
+      "excerpts": [
+        "100,00\n\nTotal por Ação: 1.055.303,30\n\n2.012 - GESTÃO DAS AÇÕES DOS SERVIÇOS DE LIMPEZA PÚBLICA\n\n3.3.90.39.00 / 15000000 - Outros Servicos de Terceiros - Pessoa Juridica 200.489,06\n\nTotal por Ação: 200.489,06\n\n2.017 - GESTÃO DAS AÇÕES DO ROYALTIES - CFEM/FEP/CFH\n\n3.3.90.30.00 / 17040000 - Material de Consumo 4.800,00\n\n3.3.90.30.00 / 17080000 - Material de Consumo 4.800,00\n\nTotal por Ação: 9.600,00\n\nTotal por Unidade Orçamentária: 1.265.392,36\n\nTotal Suplementado: 6.067.966,53\n\nArt 2º. - A propósito"
+      ],
+      "edition": "3293",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2926202/2023-09-22/24ca7a2f94bf8c2d05c6bc5c4540d4c9e4ac3aa4.txt"
+    },
+    {
+      "territory_id": "2926202",
+      "date": "2022-07-24",
+      "scraped_at": "2024-03-22T15:48:12.019710",
+      "url": "https://data.queridodiario.ok.org.br/2926202/2022-07-24/d53363954b2dd4f2476f6cd24dcd972a8a95e035.pdf",
+      "territory_name": "Riachão das Neves",
+      "state_code": "BA",
+      "excerpts": [
+        "3.3.90.30.00 / 1500 - Material de Consumo 31.259,00\n\nTotal por Ação: 31.259,00\n\n2.016 - GESTÃO DAS AÇÕES DE INFRAESTRUTURA (CIDE)\n\n3.3.90.30.00 / 1750 - Material de Consumo 5.400,00\n\nTotal por Ação: 5.400,00\n\n2.017 - GESTÃO DAS AÇÕES DO ROYALTIES - CFEM/FEP/CFH\n\n3.3.90.30.00 / 1704 - Material de Consumo 4.000,00\n\nTotal por Ação: 4.000,00\n\nTotal por Unidade Orçamentária: 155.651,00\n\n0209000 - SEC. MUN. DE AGRICULTURA, PECUARIA E PESCA\n\n2.064 - GESTÃO DAS AÇÕES DA SECRETARIA DE AGRICULTURA E ABASTECIMENTO"
+      ],
+      "edition": "2949",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2926202/2022-07-24/d53363954b2dd4f2476f6cd24dcd972a8a95e035.txt"
+    },
+    {
+      "territory_id": "2926202",
+      "date": "2022-10-24",
+      "scraped_at": "2024-03-22T15:47:49.456251",
+      "url": "https://data.queridodiario.ok.org.br/2926202/2022-10-24/656000850e8e0e67cf20b755f459204b53c3dc20.pdf",
+      "territory_name": "Riachão das Neves",
+      "state_code": "BA",
+      "excerpts": [
+        "Outros Servicos de Terceiros - Pessoa Juridica 11.097,00\n\nTotal por Ação: 11.097,00\n\n2.016 - GESTÃO DAS AÇÕES DE INFRAESTRUTURA (CIDE)\n\n3.3.90.30.00 / 1750 - Material de Consumo 1.183,00\n\nTotal por Ação: 1.183,00\n\n2.017 - GESTÃO DAS AÇÕES DO ROYALTIES - CFEM/FEP/CFH\n\n3.3.90.30.00 / 1704 - Material de Consumo 68.405,00\n\nTotal por Ação: 68.405,00\n\nTotal por Unidade Orçamentária: 658.744,00\n\n0208000 - SECRETARIA MUNICIPAL DE TRANSPORTES\n\n2.007 - GESTÃO DAS AÇÕES DA SECRETARIA MUNICIPAL DE TRANSPORTES\n\n3.3"
+      ],
+      "edition": "3025",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2926202/2022-10-24/656000850e8e0e67cf20b755f459204b53c3dc20.txt"
+    },
+    {
+      "territory_id": "2926202",
+      "date": "2022-12-15",
+      "scraped_at": "2024-03-22T15:47:49.409383",
+      "url": "https://data.queridodiario.ok.org.br/2926202/2022-12-15/1f93d3bdcadc31dca0fd5b5bb098b47659f82a05.pdf",
+      "territory_name": "Riachão das Neves",
+      "state_code": "BA",
+      "excerpts": [
+        "A\n\nGESTÃO DAS AÇÕES DE MANUTENÇÃO DO SISTEMA VIÁRIO 96.000,002.014 A\n\nGESTÃO DAS AÇÕES DE MANUTENÇÃO DO SISTEMA DE ABASTECIMENTO DE ÁGUA 226.000,002.015 A\n\nGESTÃO DAS AÇÕES DE INFRAESTRUTURA (CIDE) 29.000,002.016 A\n\nGESTÃO DAS AÇÕES DO ROYALTIES - CFEM/FEP/CFH 706.000,002.017 A\n\nRESERVA DE CONTINGÊNCIA 200.000,002.018 A\n\nGESTÃO DAS AÇÕES DA SECRETARIA DE EDUCAÇÃO 751.000,002.019 A\n\nGESTÃO DAS AÇÕES DA EDUCAÇÃO BÁSICA - FUNDEB 70% 19.030.000,002.020 A\n\nGESTÃO DAS AÇÕES DA EDUCAÇÃO BÁSICA - FUNDEB"
+      ],
+      "edition": "3056",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2926202/2022-12-15/1f93d3bdcadc31dca0fd5b5bb098b47659f82a05.txt"
+    },
+    {
+      "territory_id": "2926202",
+      "date": "2023-12-23",
+      "scraped_at": "2024-03-22T15:47:55.886738",
+      "url": "https://data.queridodiario.ok.org.br/2926202/2023-12-23/1aaaa09342d36bef60f1a3cb0f78a2ccf82f3f2f.pdf",
+      "territory_name": "Riachão das Neves",
+      "state_code": "BA",
+      "excerpts": [
+        "Compensação Financeira pela Exploração de Recursos Minerais - CFEM140.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n140.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n17080000140.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo700.000,00   \n\n1.7.1.2.52.4.0.00.00.00 Cota-Parte"
+      ],
+      "edition": "3375",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2926202/2023-12-23/1aaaa09342d36bef60f1a3cb0f78a2ccf82f3f2f.txt"
+    },
+    {
+      "territory_id": "2926202",
+      "date": "2024-11-22",
+      "scraped_at": "2025-01-29T15:12:43.277250",
+      "url": "https://data.queridodiario.ok.org.br/2926202/2024-11-22/2792f2a67b8af1434199e84dbba5209e7fa0cf25.pdf",
+      "territory_name": "Riachão das Neves",
+      "state_code": "BA",
+      "excerpts": [
+        "Servicos de Terceiros - Pessoa Juridica 197.005,39\n\nTotal por Ação: 342.831,49\n\n2.016 - GESTÃO DAS AÇÕES DE INFRAESTRUTURA (CIDE)\n\n3.3.90.30.00 / 17500000 - Material de Consumo 9.770,00\n\nTotal por Ação: 9.770,00\n\n2.017 - GESTÃO DAS AÇÕES DO ROYALTIES - CFEM/FEP/CFH\n\n3.3.90.30.00 / 17200000 - Material de Consumo 124.019,90\n\nTotal por Ação: 124.019,90\n\nTotal por Unidade Orçamentária: 1.861.145,96\n\nPágina: 3 de 1522/11/2024 - 18:35:48 - 3795926  SIAFIC - FATOR SISTEMAS E CONSULTORIAS LTDA-ME - CNPJ: 08.003"
+      ],
+      "edition": "3677",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2926202/2024-11-22/2792f2a67b8af1434199e84dbba5209e7fa0cf25.txt"
+    },
+    {
+      "territory_id": "2926202",
+      "date": "2024-12-19",
+      "scraped_at": "2025-01-29T15:13:31.468382",
+      "url": "https://data.queridodiario.ok.org.br/2926202/2024-12-19/6a5d4125aa9a6f6f5e8dbb3a6f417b39b975c0f0.pdf",
+      "territory_name": "Riachão das Neves",
+      "state_code": "BA",
+      "excerpts": [
+        "Compensação Financeira pela Exploração de Recursos Minerais - CFEM140.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n140.000,00   \n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n17080000140.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo700.000,00   \n\n1.7.1.2.52.4.0.00.00.00 Cota-Parte"
+      ],
+      "edition": "3705",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2926202/2024-12-19/6a5d4125aa9a6f6f5e8dbb3a6f417b39b975c0f0.txt"
+    },
+    {
+      "territory_id": "2926202",
+      "date": "2023-01-03",
+      "scraped_at": "2024-03-22T15:54:37.298000",
+      "url": "https://data.queridodiario.ok.org.br/2926202/2023-01-03/95a6ae009d865aa2933128d285c7c73d547274f5.pdf",
+      "territory_name": "Riachão das Neves",
+      "state_code": "BA",
+      "excerpts": [
+        "000,00 56.000,00 105.000,00 56.000,00 49.000,00 105.000,00 210.000,00700.000,00 210.000,00\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 3.500,00 4.000,00 7.500,00 4.000,00 3.500,00 7.500,00 15.000,0050.000,00 15.000,00\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal 3.500,00 4.000,00 7.500,00 4.000,00 3.500,00 7.500,00 15.000,0017080000 50.000,00 15.000,00\n\nCota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "3067",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2926202/2023-01-03/95a6ae009d865aa2933128d285c7c73d547274f5.txt"
+    },
+    {
+      "territory_id": "2926202",
+      "date": "2024-01-22",
+      "scraped_at": "2024-03-22T15:47:52.842547",
+      "url": "https://data.queridodiario.ok.org.br/2926202/2024-01-22/2a68029b253bf8bbe542cc9bd723bf4149a32b97.pdf",
+      "territory_name": "Riachão das Neves",
+      "state_code": "BA",
+      "excerpts": [
+        "380,00\n\nTotal por Ação: 197.380,00\n\n2.013 - GESTÃO DAS AÇÕES DOS SERVIÇOS DE ILUMINAÇÃO PÚBLICA\n\n3.3.90.39.00 / 15000000 - Outros Servicos de Terceiros - Pessoa Juridica 285.228,00\n\nTotal por Ação: 285.228,00\n\n2.017 - GESTÃO DAS AÇÕES DO ROYALTIES - CFEM/FEP/CFH\n\n3.3.90.30.00 / 17040000 - Material de Consumo 47.521,00\n\n3.3.90.30.00 / 17080000 - Material de Consumo 12.806,00\n\nPágina: 3 de 1822/01/2024 - 08:56:22 - 3478686  SIAFIC - FATOR SISTEMAS E CONSULTORIAS LTDA-ME - CNPJ: 08.003.823/0001-82\n\n\n"
+      ],
+      "edition": "3397",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2926202/2024-01-22/2a68029b253bf8bbe542cc9bd723bf4149a32b97.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2926202",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2926202",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

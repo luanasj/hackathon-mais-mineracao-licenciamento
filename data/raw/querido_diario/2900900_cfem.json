@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 17,
+  "gazettes": [
+    {
+      "territory_id": "2900900",
+      "date": "2020-12-23",
+      "scraped_at": "2024-06-13T19:29:18.008352",
+      "url": "https://data.queridodiario.ok.org.br/2900900/2020-12-23/8028daadc365e11e599c1c182f4a992037cb7c33.pdf",
+      "territory_name": "Almadina",
+      "state_code": "BA",
+      "excerpts": [
+        "Rural - Principal\n171802000000000 165.541,36Transferência da Compensação Financeira pela Exploração de Recursos Naturais\n171802200000000 38.201,86Cota-parte da Compensação Financeira de Recursos Minerais - CFEM\n171802210000000 38.201,86Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal\n171802600000000 127.339,50Cota-Parte do Fundo Especial do Petróleo – FEP\n171802610000000 127.339,50Cota-Parte do Fundo Especial do Petróleo – FEP - Principal\n171803000000000 1.671.942,37Transfer"
+      ],
+      "edition": "2560",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900900/2020-12-23/8028daadc365e11e599c1c182f4a992037cb7c33.txt"
+    },
+    {
+      "territory_id": "2900900",
+      "date": "2019-01-11",
+      "scraped_at": "2024-06-13T20:13:48.319517",
+      "url": "https://data.queridodiario.ok.org.br/2900900/2019-01-11/ed71b53d8beb0acf7a688efdec26b6e02d7582c8.pdf",
+      "territory_name": "Almadina",
+      "state_code": "BA",
+      "excerpts": [
+        "- Principal\n\n171802000000000 146.887,00Transferência da Compensação Financeira pela Exploração de Recursos Naturais\n\n171802200000000 33.897,00Cota-parte da Compensação Financeira de Recursos Minerais - CFEM\n\n171802210000000 33.897,00Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal\n\n171802600000000 112.990,00Cota-Parte do Fundo Especial do Petróleo – FEP\n\n171802610000000 112.990,00Cota-Parte do Fundo Especial do Petróleo – FEP - Principal\n\n171803000000000 1.483.527,30Transferência"
+      ],
+      "edition": "1847",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900900/2019-01-11/ed71b53d8beb0acf7a688efdec26b6e02d7582c8.txt"
+    },
+    {
+      "territory_id": "2900900",
+      "date": "2020-01-07",
+      "scraped_at": "2024-06-13T20:16:53.765647",
+      "url": "https://data.queridodiario.ok.org.br/2900900/2020-01-07/86df9643dedc686f6782767ac099bbaae790596a.pdf",
+      "territory_name": "Almadina",
+      "state_code": "BA",
+      "excerpts": [
+        "Rural - Principal\n171802000000000 162.295,45Transferência da Compensação Financeira pela Exploração de Recursos Naturais\n171802200000000 37.452,80Cota-parte da Compensação Financeira de Recursos Minerais - CFEM\n171802210000000 37.452,80Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal\n171802600000000 124.842,65Cota-Parte do Fundo Especial do Petróleo – FEP\n171802610000000 124.842,65Cota-Parte do Fundo Especial do Petróleo – FEP - Principal\n171803000000000 1.639.149,35Transferência"
+      ],
+      "edition": "2206",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900900/2020-01-07/86df9643dedc686f6782767ac099bbaae790596a.txt"
+    },
+    {
+      "territory_id": "2900900",
+      "date": "2018-02-01",
+      "scraped_at": "2024-06-14T15:55:07.361308",
+      "url": "https://data.queridodiario.ok.org.br/2900900/2018-02-01/12fa0375251f3a56e356c1046121f93bf44f2982.pdf",
+      "territory_name": "Almadina",
+      "state_code": "BA",
+      "excerpts": [
+        "Territorial Rural - Principal\n\n171802000000 130.000,00Transferência da Compensação Financeira pela Exploração de Recursos Naturais\n\n171802200000 30.000,00Cota-parte da Compensação Financeira de Recursos Minerais - CFEM\n\n171802210000 30.000,00Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal\n\n171802600000 100.000,00Cota-Parte do Fundo Especial do Petróleo – FEP\n\n171802610000 100.000,00Cota-Parte do Fundo Especial do Petróleo – FEP - Principal\n\n171803000000 1.495.000,00Transferência"
+      ],
+      "edition": "1576",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900900/2018-02-01/12fa0375251f3a56e356c1046121f93bf44f2982.txt"
+    },
+    {
+      "territory_id": "2900900",
+      "date": "2019-04-08",
+      "scraped_at": "2024-06-13T19:42:54.617771",
+      "url": "https://data.queridodiario.ok.org.br/2900900/2019-04-08/0a241c39d54b020766ed821bcfd64815d78a5b08.pdf",
+      "territory_name": "Almadina",
+      "state_code": "BA",
+      "excerpts": [
+        "Rural - Principal\n171802000000000 146.887,00Transferência da Compensação Financeira pela Exploração de Recursos Naturais\n171802200000000 33.897,00Cota-parte da Compensação Financeira de Recursos Minerais - CFEM\n171802210000000 33.897,00Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal\n171802600000000 112.990,00Cota-Parte do Fundo Especial do Petróleo – FEP\n171802610000000 112.990,00Cota-Parte do Fundo Especial do Petróleo – FEP - Principal\n171803000000000 1.483.527,30Transferência"
+      ],
+      "edition": "1926",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900900/2019-04-08/0a241c39d54b020766ed821bcfd64815d78a5b08.txt"
+    },
+    {
+      "territory_id": "2900900",
+      "date": "2018-01-04",
+      "scraped_at": "2024-06-14T15:55:27.270651",
+      "url": "https://data.queridodiario.ok.org.br/2900900/2018-01-04/68f5af6a3fdbb9624336dacb75a3285605c233ce.pdf",
+      "territory_name": "Almadina",
+      "state_code": "BA",
+      "excerpts": [
+        "000,00       \n\n171802000000 Transferência da Compensação Financeira pela \nExploração de Recursos Naturais   130.000,00     \n\n171802200000 Cota-parte da Compensação Financeira de \nRecursos Minerais - CFEM  30.000,00      \n\n171802210000 Cota-parte da Compensação Financeira de Recursos Minerais \n- CFEM - Principal 30.000,00       \n\n171802600000 Cota-Parte do Fundo Especial do Petróleo – \nFEP  100.000,00      \n\n171802610000 Cota-Parte do Fundo Especial do Petróleo – \nFEP - Principal 100.000,00      "
+      ],
+      "edition": "1556",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900900/2018-01-04/68f5af6a3fdbb9624336dacb75a3285605c233ce.txt"
+    },
+    {
+      "territory_id": "2900900",
+      "date": "2021-12-24",
+      "scraped_at": "2024-06-13T20:27:06.295852",
+      "url": "https://data.queridodiario.ok.org.br/2900900/2021-12-24/579d99a15b88a5e47fd335d669f6359586bfe5e3.pdf",
+      "territory_name": "Almadina",
+      "state_code": "BA",
+      "excerpts": [
+        "001.7.1.1.52.0.1.02.00.00\nTransferências das Compensações Financeiras pela Exploração de Recursos\nNaturais\n\n0,00 0,00 0,00 176.000,00 0,00 0,00 0,001.7.1.2.00.0.0.00.00.00\n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais -\nCFEM\n\n0,00 0,00 0,00 0,00 0,00 0,00 0,001.7.1.2.51.0.0.00.00.00\n\nCota-parte da Compensação Financeira pela Produção de Petróleo 0,00 0,00 176.000,00 0,00 0,00 0,00 0,001.7.1.2.52.0.0.00.00.00\nCota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "3037",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900900/2021-12-24/579d99a15b88a5e47fd335d669f6359586bfe5e3.txt"
+    },
+    {
+      "territory_id": "2900900",
+      "date": "2014-12-22",
+      "scraped_at": "2024-06-13T17:51:02.648899",
+      "url": "https://data.queridodiario.ok.org.br/2900900/2014-12-22/97d91162ea26ee21b778bb5437ba7d81652dc2cf.pdf",
+      "territory_name": "Almadina",
+      "state_code": "BA",
+      "excerpts": [
+        "(Anexo 02, Lei Nº 4.320/64)\n\nOPTATIVO SUBALÍNEA ALÍNEA RUBRICA SUB-FONTE FONTE CATEGORIA\n                COTA PARTE COMPENSAÇHO FINANCEIRA DE REC HHDRICOS - 63.400,00 1.7.2.1.22.11.00.00 042\n\n                COTA-PARTE DA COMP FIN DE REC MINERAIS - CFEM - 42-RO 41.700,00 1.7.2.1.22.20.00.00 042\n\n                COTA PARTE ROHALTIES PARTICIPAÇHO ESP LEI 9,478/88 - 4 35.200,00 1.7.2.1.22.40.00.00 042\n\n                COTA-PARTE FUNDO ESPECIAL DO PETROLEO - 42-ROHALTIES 121.880,00 1.7.2.1.22.70.00.00"
+      ],
+      "edition": "923",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900900/2014-12-22/97d91162ea26ee21b778bb5437ba7d81652dc2cf.txt"
+    },
+    {
+      "territory_id": "2900900",
+      "date": "2015-12-29",
+      "scraped_at": "2024-06-13T18:41:43.278830",
+      "url": "https://data.queridodiario.ok.org.br/2900900/2015-12-29/c6cb00b8504b70d7ec564de8e0ef63356a5df224.pdf",
+      "territory_name": "Almadina",
+      "state_code": "BA",
+      "excerpts": [
+        " COTA-PARTE DO ITR - IMP. TERRITORIAL RURAL - 02-SAUDE 15% 2.250,00 1.7.2.1.01.05.00.00 002\n            TRANSF. COMPENS. FINANC. P/ EXPLOR. RECURSOS NATURAIS 219.000,00 1.7.2.1.22.00.00.00 0\n                COTA PARTE COMP. FINANC. REC. MINERAIS - CFEM - 42-ROY 80.000,00 1.7.2.1.22.20.00.00 042\n                COTA-PARTE DO ROYALTIES – Lei nº 7.990/89 - 42-ROYALTIES/ 39.000,00 1.7.2.1.22.30.00.00 042\n                COTA-PARTE DO FEP - 42-ROYALTIES/FUNDO ESP. PETRÓLEO 100.000,00 1.7.2.1.22.70.00"
+      ],
+      "edition": "1109",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900900/2015-12-29/c6cb00b8504b70d7ec564de8e0ef63356a5df224.txt"
+    },
+    {
+      "territory_id": "2900900",
+      "date": "2015-12-30",
+      "scraped_at": "2024-06-13T18:41:43.266415",
+      "url": "https://data.queridodiario.ok.org.br/2900900/2015-12-30/ad5b237e5cfcf43115f119fb965a185a8a8b7e2f.pdf",
+      "territory_name": "Almadina",
+      "state_code": "BA",
+      "excerpts": [
+        " COTA-PARTE DO ITR - IMP. TERRITORIAL RURAL - 02-SAUDE 15% 2.250,00 1.7.2.1.01.05.00.00 002\n            TRANSF. COMPENS. FINANC. P/ EXPLOR. RECURSOS NATURAIS 219.000,00 1.7.2.1.22.00.00.00 0\n                COTA PARTE COMP. FINANC. REC. MINERAIS - CFEM - 42-ROY 80.000,00 1.7.2.1.22.20.00.00 042\n                COTA-PARTE DO ROYALTIES – Lei nº 7.990/89 - 42-ROYALTIES/ 39.000,00 1.7.2.1.22.30.00.00 042\n                COTA-PARTE DO FEP - 42-ROYALTIES/FUNDO ESP. PETRÓLEO 100.000,00 1.7.2.1.22.70.00"
+      ],
+      "edition": "1112",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2900900/2015-12-30/ad5b237e5cfcf43115f119fb965a185a8a8b7e2f.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2900900",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2900900",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

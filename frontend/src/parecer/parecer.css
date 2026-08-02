@@ -1,0 +1,195 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #faf8f2;
+}
+
+body {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  color: #22201c;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Layout responsivo: as duas colunas empilham abaixo de 860px e sempre ocupam a largura da tela. */
+.pc-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  width: 100%;
+}
+
+.pc-col-right {
+  border-left: 1px solid #dfdacd;
+  min-height: 900px;
+}
+
+@media (max-width: 860px) {
+  .pc-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pc-col-right {
+    border-left: none;
+    border-top: 1px solid #dfdacd;
+    min-height: 0;
+  }
+}
+
+/* Cadastro (Município/Área/Substância/Fase): 2 colunas, empilha em telas bem estreitas. */
+.pc-cadastro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 32px;
+}
+
+@media (max-width: 460px) {
+  .pc-cadastro-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Comparativo Prefeitura × INEMA da competência condicional. */
+.pc-cond-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  column-gap: 30px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .pc-cond-grid {
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+  }
+
+  .pc-cond-grid .pc-divider {
+    display: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #4a5e36;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(74, 94, 54, 0.35);
+}
+
+a:hover {
+  color: #37472a;
+  border-bottom-color: #37472a;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid #4a5e36;
+  outline-offset: 3px;
+}
+
+@keyframes vfade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 22px;
+  background: transparent;
+}
+
+input[type='range']::-moz-range-track {
+  height: 22px;
+  background: transparent;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  margin-top: -2px;
+  border-radius: 50%;
+  background: #4a5e36;
+  border: 2px solid #faf8f2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
+  cursor: grab;
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #4a5e36;
+  border: 2px solid #faf8f2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
+  cursor: grab;
+}
+
+/* Equivalentes aos `style-hover` do documento original. */
+.pc-primario:hover {
+  background: #37472a;
+}
+
+.pc-opcao:hover {
+  background: #f4f1e8;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* O MapLibre injeta o próprio canvas; herdar a fonte do documento evita que o
+   controle de atribuição apareça com a fonte do sistema no meio da página. */
+.maplibregl-map {
+  font: inherit;
+}
+
+/* Exportar parecer em PDF = imprimir. Sai só a coluna do parecer, sem os
+   controles de entrada, que não fazem sentido no papel. */
+@media print {
+  .pc-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pc-nao-imprime,
+  .pc-grid > div:first-child {
+    display: none;
+  }
+
+  .pc-col-right {
+    border: none;
+  }
+}
+
+.pc-lupa:hover {
+  background: #ede8dc;
+}
+
+.pc-toggle:hover {
+  opacity: 0.72;
+}

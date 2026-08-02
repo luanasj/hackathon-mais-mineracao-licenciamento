@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 237,
+  "gazettes": [
+    {
+      "territory_id": "2910602",
+      "date": "2025-10-09",
+      "scraped_at": "2025-10-10T02:55:53.764165",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2025-10-09/0067bbb03f765f91b7423c21865c1eb7acdab006.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "\n\n\nEdição 1.408 | Ano 2025\n09 de outubro de 2025\n\nPágina 2\n\nÍNDICE DODIÁRIO\nLICENÇAAMBIENTAL\n\nLICENÇA AMBIENTAL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\nCertificação Digital: AW8LTRFU-BTCHZIIQ-F9YMSILA-Z5FTRGUY\nVersão eletrônica disponível em: https://doem.org.br/ba/esplanada\n\n\n\nESTADO DA BAHIA                                                            \nPREFEITURA MUNICIPAL"
+      ],
+      "edition": "1.408",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2025-10-09/0067bbb03f765f91b7423c21865c1eb7acdab006.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2024-08-26",
+      "scraped_at": "2024-08-27T00:07:33.851296",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2024-08-26/aee8ace67cd2781259fee0fcc3887cfaa810da86.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "de agosto de 2024\n\nPágina 2\n\nÍNDICE DO DIÁRIO\nPORTARIA\n\nPORTARIA N° 065/2024 - SEDUC. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\nLICENÇA AMBIENTAL\nLICENÇA AMBIENTAL. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\nAVISO\nAVISO DE TERMO ADITIVO . . . . . . . . . . . . . . . . . . ."
+      ],
+      "edition": "994",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2024-08-26/aee8ace67cd2781259fee0fcc3887cfaa810da86.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2026-07-22",
+      "scraped_at": "2026-07-22T21:51:58.871884",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2026-07-22/2c1e56edb045f1ec08c83c83891bb70001ab3fda.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "de 2026\n\nPágina 2\n\nÍNDICE\nDECRETO\n\nDECRETO Nº 107/2027 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\nLICENÇAAMBIENTAL\nLICENÇA AMBIENTAL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\nAVISO\nAVISO DE TERMO ADITIVO . . . . . . . . . . . . . . . . . . . . . . ."
+      ],
+      "edition": "1.773",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2026-07-22/2c1e56edb045f1ec08c83c83891bb70001ab3fda.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2023-03-14",
+      "scraped_at": "2023-10-28T05:32:57.137164",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2023-03-14/7ba50c70a64ec272082431a812124568cc34ce7a.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "\n\n\nEdição 532 | Ano 2023\n14 de março de 2023\n\nPágina 2\n\nÍNDICE DO DIÁRIO\nLICENÇA AMBIENTAL\n\nLICENÇA AMBIENTAL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\nAVISO\nAVISO DE EXTRATO DE CONTRATO - DISPENSA DE LICITAÇÃO N° 031/2023 - CONTRATO N° 055/2023\nAVISO DE EXTRATO DE CONTRATO - DISPENSA DE LICITAÇÃO N° 032/2023 - CONTRATO N° 059/2023\nAVISO DE TERMO ADITIVO . . . . . . . "
+      ],
+      "edition": "532",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2023-03-14/7ba50c70a64ec272082431a812124568cc34ce7a.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2023-09-14",
+      "scraped_at": "2023-10-28T05:31:05.019974",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2023-09-14/cfcb4e0cc830e2a3bdc570b66408a8aff5042591.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "\n\n\nEdição 699 | Ano 2023\n14 de setembro de 2023\n\nPágina 2\n\nÍNDICE DO DIÁRIO\nLICENÇA AMBIENTAL\n\nLICENÇA AMBIENTAL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\nCertificação Digital: LHGY6ES9-EG36EBHI-UZD0EB5R-QI0FVH9F\nVersão eletrônica disponível em: https://doem.org.br/ba/esplanada\n\n\n\n \nESTADO DA BAHIA                                                                        "
+      ],
+      "edition": "699",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2023-09-14/cfcb4e0cc830e2a3bdc570b66408a8aff5042591.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2025-07-29",
+      "scraped_at": "2025-07-30T02:45:19.470090",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2025-07-29/32cc91847c0e33e6bd3a306c4c6686c999862078.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "\n\n\nEdição 1.330 | Ano 2025\n29 de julho de 2025\n\nPágina 2\n\nÍNDICE DODIÁRIO\nAVISO\n\nAVISO DE RESULTADO - CHAMAMENTO PÚBLICO Nº 002/2025 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\nLICENÇAAMBIENTAL\nLICENÇA AMBIENTAL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\nCertificação Digital: DS1SYYPF-DY2SFPAI-XGHFYHIP-4SWWZSPH\nVersão eletrônica disponível"
+      ],
+      "edition": "1.330",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2025-07-29/32cc91847c0e33e6bd3a306c4c6686c999862078.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2021-12-20",
+      "scraped_at": "2023-10-28T05:36:28.956558",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2021-12-20/a07a43f6c90373de18a7384a2e4eb42563bc8576.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "........................................ 46 \n\nTÍTULO V ................................................................................................................................................................ 48 \n\nDOS DOCUMENTOS PARA O LICENCIAMENTO DO PARCELAMENTO ..................................................... 48 \n\nSeção I ................................................................................................................................................................"
+      ],
+      "edition": "227",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2021-12-20/a07a43f6c90373de18a7384a2e4eb42563bc8576.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2024-03-18",
+      "scraped_at": "2024-03-18T22:12:47.154543",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2024-03-18/236171fd169e837db23184f096cd166e94cfbbf3.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "\n\n\nEdição 840 | Ano 2024\n18 de março de 2024\n\nPágina 2\n\nÍNDICE DO DIÁRIO\nLICENÇA AMBIENTAL\n\nLICENÇA AMBIENTAL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nLICENÇA AMBIENTAL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\nDECRETO\nDECRETO. . . . . . . . "
+      ],
+      "edition": "840",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2024-03-18/236171fd169e837db23184f096cd166e94cfbbf3.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2023-12-18",
+      "scraped_at": "2023-12-19T21:39:09.057057",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2023-12-18/a875b19a5c66b0c7c4cf80f5eb736a06b7104edd.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "LICENÇA AMBIENTAL\n\nLICENÇA AMBIENTAL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\nCertificação Digital: 9MN72ZTB-UQO3AVZJ-OVZGXZRF-FS13Q2TI\nVersão eletrônica disponível em: http://doem.org.br/ba/esplanada\n\n\n\nESTADO DA BAHIA                                                             \nPREFEITURA MUNICIPAL DE ESPLANADA \nCNPJ – 13.885.231/0001-71 \n\n \n  \n\n \n\nLICENCIAMENTO AMBIENTAL"
+      ],
+      "edition": "764",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2023-12-18/a875b19a5c66b0c7c4cf80f5eb736a06b7104edd.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2022-02-08",
+      "scraped_at": "2023-10-28T05:36:08.249044",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2022-02-08/f315f85a932453d7c89159cd5f2a8c0b71b45ccc.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "\n\nEdição 257 | Ano 2022\n08 de fevereiro de 2022\n\nPágina 2\n\nÍNDICE DO DIÁRIO\nAVISO\n\nAVISO DE EXTRATO DO TERMO DE CREDENCIAMENTO . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\nLICENÇA AMBIENTAL\nLICENÇA AMBIENTAL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n\nCertificação Digital: C0GGQBRL-1JEQLH1R-N9ANKFOH-Q6YBJZ3F\nVersão eletrônica"
+      ],
+      "edition": "257",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2022-02-08/f315f85a932453d7c89159cd5f2a8c0b71b45ccc.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2910602",
+    "termo": "licenciamento ambiental",
+    "params": {
+      "territory_ids": "2910602",
+      "querystring": "licenciamento ambiental",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "total_gazettes": 3,
+  "gazettes": [
+    {
+      "territory_id": "2914505",
+      "date": "2024-04-23",
+      "scraped_at": "2024-04-23T23:13:36.378449",
+      "url": "https://data.queridodiario.ok.org.br/2914505/2024-04-23/9079dfa7ffd6963fc82480db4612430c94fb41a5.pdf",
+      "territory_name": "Irará",
+      "state_code": "BA",
+      "excerpts": [
+        "PROPOR  AÇÕES\nJUDICIAIS COM O PROPÓSITO DE: RECUPERAR O IMPOSTO DE RENDA INCIDENTE SOBRE AS\nAQUISIÇÕES DE BENS E SERVIÇOS;  INCREMENTAR  AS  RECEITAS  DO FPM E RECUPERAR OS\nVALORES  DOS  CALOTES  DOS  ÚLTIMOS  60  MESES;  INCREMENTAR  AS  RECEITAS  DA CFEM  E\nRECUPERAR  OS  VALORES  DOS  CALOTES  DOS  ÚLTIMOS  60  MESES;   REVISAR  AS  DÍVIDAS\nFEDERAIS/INSS,  VISANDO  AO  SEU  CANCELAMENTO  OU  À  REDUÇÃO  DOS  MONTANTES  DAS\nPRESTAÇÕES  DOS  PARCELAMENTOS;  PROSPECTAR,  IDENTIFICAR  E  QUANTIFICAR "
+      ],
+      "edition": "3.444",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2914505/2024-04-23/9079dfa7ffd6963fc82480db4612430c94fb41a5.txt"
+    },
+    {
+      "territory_id": "2914505",
+      "date": "2024-03-27",
+      "scraped_at": "2024-03-27T22:49:39.137550",
+      "url": "https://data.queridodiario.ok.org.br/2914505/2024-03-27/93772e639a864b8361ba198d2823b5383d6c7a3e.pdf",
+      "territory_name": "Irará",
+      "state_code": "BA",
+      "excerpts": [
+        "ADMINISTRATIVOS E/OU PROPOR AÇÕES JUDICIAIS COM O PROPÓSITO DE: RECUPERAR O IMPOSTO DE\n\nRENDA INCIDENTE SOBRE AS AQUISIÇÕES DE BENS E SERVIÇOS; INCREMENTAR AS RECEITAS DO FPM E RECUPERAR OS\n\nVALORES DOS CALOTES DOS ÚLTIMOS 60 MESES; INCREMENTAR AS RECEITAS DA CFEM E RECUPERAR OS VALORES DOS\n\nCALOTES DOS ÚLTIMOS 60 MESES; REVISAR AS DÍVIDAS FEDERAIS/INSS, VISANDO AO SEU CANCELAMENTO OU À\n\nREDUÇÃO DOS MONTANTES DAS PRESTAÇÕES DOS PARCELAMENTOS; PROSPECTAR, IDENTIFICAR E QUANTIFICAR\n\nATIVOS OCULTOS (CRÉDITOS DECORRENTES"
+      ],
+      "edition": "3.408",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2914505/2024-03-27/93772e639a864b8361ba198d2823b5383d6c7a3e.txt"
+    },
+    {
+      "territory_id": "2914505",
+      "date": "2024-03-28",
+      "scraped_at": "2024-03-29T22:36:20.109249",
+      "url": "https://data.queridodiario.ok.org.br/2914505/2024-03-28/25467d44b0cc6589adf8cefd894fd1d6f5c7d845.pdf",
+      "territory_name": "Irará",
+      "state_code": "BA",
+      "excerpts": [
+        "JUDICIAIS COM O\nPROPÓSITO  DE:  RECUPERAR  O  IMPOSTO  DE  RENDA  INCIDENTE  SOBRE  AS\nAQUISIÇÕES DE  BENS  E SERVIÇOS;  INCREMENTAR  AS  RECEITAS  DO  FPM  E\nRECUPERAR  OS  VALORES  DOS  CALOTES  DOS  ÚLTIMOS  60  MESES;\nINCREMENTAR  AS  RECEITAS  DA  CFEM  E  RECUPERAR  OS  VALORES  DOS\nCALOTES  DOS  ÚLTIMOS  60  MESES;   REVISAR  AS  DÍVIDAS  FEDERAIS/INSS,\nVISANDO  AO  SEU  CANCELAMENTO  OU  À  REDUÇÃO  DOS  MONTANTES  DAS\nPRESTAÇÕES  DOS  PARCELAMENTOS;  PROSPECTAR,  IDENTIFICAR  E\nQUANTIFICAR  ATIVOS"
+      ],
+      "edition": "3.412",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2914505/2024-03-28/25467d44b0cc6589adf8cefd894fd1d6f5c7d845.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2914505",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2914505",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

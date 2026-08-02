@@ -1,0 +1,13 @@
+services:
+  db:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - db-data:/data
+
+volumes:
+  db-data:
+    # named volume, não bind-mount: escrita direta do SQLite via bind-mount no
+    # Docker Desktop (Windows/Mac) dá "disk I/O error" no meio de transações
+    # grandes. Pra pegar o arquivo .db no host, ver README (docker cp).

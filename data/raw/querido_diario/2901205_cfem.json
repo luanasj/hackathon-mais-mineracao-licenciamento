@@ -1,0 +1,88 @@
+{
+  "total_gazettes": 5,
+  "gazettes": [
+    {
+      "territory_id": "2901205",
+      "date": "2024-12-31",
+      "scraped_at": "2025-01-29T22:59:37.775806",
+      "url": "https://data.queridodiario.ok.org.br/2901205/2024-12-31/4b5bdec15f399feef14e14efd7448d7cffd28a29.pdf",
+      "territory_name": "Anagé",
+      "state_code": "BA",
+      "excerpts": [
+        "00 Cota-Parte do Imposto Sobre a Propriedade Territorial Rural - Principal              150000008.000,00   \n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensacao Financeira de Recursos Minerais - CFEM - Principal50.000,00   \n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensacao Financeira de Recursos Minerais - CFEM - Principal              1704000050.000,00   \n\n1.7.1.2.52.3.1.00.00.00 Cota-parte Royalties Compensacao Financeira pela Producao de Petroleo Lei n 7.990/8912.600,00   \n\n1.7.1.2.52.3.1.00.00.00"
+      ],
+      "edition": "3471",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901205/2024-12-31/4b5bdec15f399feef14e14efd7448d7cffd28a29.txt"
+    },
+    {
+      "territory_id": "2901205",
+      "date": "2014-08-15",
+      "scraped_at": "2024-06-14T12:02:54.747903",
+      "url": "https://data.queridodiario.ok.org.br/2901205/2014-08-15/434035db70fb03cc1ec1e3ddb74c9c40a6592185.pdf",
+      "territory_name": "Anagé",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências da Compensação Financeira pela Exploração de Recursos Naturais 211.697,78 0,00\n1.7.2.1.22.11.00 - Cota-parte da Compensação Financeira de Recursos Hídricos\n1.7.2.1.22.20.00 - Cota-parte da Compensação Financeira de Recursos Minerais - CFEM\n1.7.2.1.22.30.00 - Cota-parte Royalties – Compensação Financeira pela Produção de Petróleo – Lei nº\n7.990/89\n1.7.2.1.22.40.00 - Cota-Parte Royalties pelo Excedente da Produção do Petróleo - Lei nº 9.478/97\nartigo 49 I e II 18.989,25\n\n1.7.2.1.22.50"
+      ],
+      "edition": "714",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901205/2014-08-15/434035db70fb03cc1ec1e3ddb74c9c40a6592185.txt"
+    },
+    {
+      "territory_id": "2901205",
+      "date": "2015-04-22",
+      "scraped_at": "2024-06-14T12:11:46.583912",
+      "url": "https://data.queridodiario.ok.org.br/2901205/2015-04-22/89f0554b601457e2cffdba111348ef52ba6331f7.pdf",
+      "territory_name": "Anagé",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências da Compensação Financeira pela\nExploração de Recursos Naturais 237.633,35 0,00 0,00 0,00\n\n1.7.2.1.22.11.00 - Cota-Parte da Compensação Financeira de Recursos\nHídricos\n1.7.2.1.22.20.00 - Cota-Parte da Compensação Financeira de Recursos\nMinerais - CFEM 1.829,72\n\n1.7.2.1.22.30.00 - Cota-Parte Royalties – Compensação Financeira\npela Produção de Petróleo – Lei nº 7.990/89\n1.7.2.1.22.40.00 - Cota-Parte Royalties pelo Excedente da Produção do\nPetróleo - Lei nº 9.478/97 artigo 49 I e II 21.290,44\n\n1.7"
+      ],
+      "edition": "786",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901205/2015-04-22/89f0554b601457e2cffdba111348ef52ba6331f7.txt"
+    },
+    {
+      "territory_id": "2901205",
+      "date": "2024-12-30",
+      "scraped_at": "2025-01-29T22:59:56.171436",
+      "url": "https://data.queridodiario.ok.org.br/2901205/2024-12-30/30b1603645b0dc19d6e90a04136b3bc2069a4ffd.pdf",
+      "territory_name": "Anagé",
+      "state_code": "BA",
+      "excerpts": [
+        "1.920.000,00 519.744,00\n\nCota-Parte do Imposto Sobre a Propriedade Territorial Rural - Principal            264,00 664,80 928,80 552,00 684,80 1.236,80 2.165,6015000000 8.000,00 2.165,60\n\nCota-parte da Compensacao Financeira de Recursos Minerais - CFEM - Principal            1.650,00 4.155,00 5.805,00 3.450,00 4.280,00 7.730,00 13.535,0017040000 50.000,00 13.535,00\n\nCota-parte Royalties Compensacao Financeira pela Producao de Petroleo Lei n 7.990/89            415,80 1.047,06 1.462,86 869,40 1.078"
+      ],
+      "edition": "3470",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901205/2024-12-30/30b1603645b0dc19d6e90a04136b3bc2069a4ffd.txt"
+    },
+    {
+      "territory_id": "2901205",
+      "date": "2021-12-10",
+      "scraped_at": "2024-06-14T12:41:04.355356",
+      "url": "https://data.queridodiario.ok.org.br/2901205/2021-12-10/69ec9ca0e18c19b5d92ae16d059090235f9d0d83.pdf",
+      "territory_name": "Anagé",
+      "state_code": "BA",
+      "excerpts": [
+        "– Receitas provenientes da venda de \n\npublicações ou outros materiais educativos;  \n\n \n\nIX – 25% (vinte e cinco por cento) dos recursos \n\ndistribuídos ao município de Anagé através da Compensação \n\nFinanceira pela Exploração de Recursos Minerais – CFEM; \n\n \n\nEsta edição encontra-se no site oficial deste ente.\n\nAnagé\n\nCERTIFICAÇÃO DIGITAL: DRYDTUUDRGAVX6SULAJDYQ\n\nSexta-feira\n10 de Dezembro de 2021\n48 - Ano  - Nº 2371\n\n\n\n�\n�\n�\n\n�\n�\n\nPREFEITURA MUNICIPAL DE ANAGÉ – SECRETARIA MUNICIPAL DE MEIO AMBIENTE"
+      ],
+      "edition": "2371",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901205/2021-12-10/69ec9ca0e18c19b5d92ae16d059090235f9d0d83.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2901205",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2901205",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

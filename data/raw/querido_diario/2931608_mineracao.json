@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 23,
+  "gazettes": [
+    {
+      "territory_id": "2931608",
+      "date": "2022-12-08",
+      "scraped_at": "2023-09-18T21:15:25.571980",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2022-12-08/5739e576ca9004ea7a6fd3094bf0780c796aae1b.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "Pequeno < \n\n10.000\nMédio >\n10.000 < \n35.000\nGrande > \n35.000\n\nG\n\nA3.2.2 Madeira  de  floresta\nnativa advinda de\nsupressão ou manejo\n\nMDC/mês Pequeno < \n10.000\nMédio >\n10.000 < \n35.000\nGrande > \n35.000\n\nG\n\nDIVISÃO B: MINERAÇÃO\nGrupo B1: Minerais Metálicos e não Metálicos\nB1.1 Minerais Metálicos\nB1.1.1 Ferro Produção Bruta de\n\nMinério\n(t/ano)\n\nPequeno < \n300.000\nMédio >\n300.000 < \n1.500.000\nGrande > \n1.500.000\n\nG\n\nB1.1.2 Manganês Produção Bruta de\nMinério\n\n(t/ano)\n\nPequeno < \n100.000\nMédio >\n100.000"
+      ],
+      "edition": "1.748",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2022-12-08/5739e576ca9004ea7a6fd3094bf0780c796aae1b.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2015-04-22",
+      "scraped_at": "2023-09-18T20:54:13.533361",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2015-04-22/554116e9626126dd3db7d6b92975a787df64fbed.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências da Compensação Financeira pela\nExploração de Recursos Naturais\n\n196.897,31 0,00 0,00 0,00\n\n1.7.2.1.22.11.00 - Cota-Parte da Compensação Financeira de Recursos\nHídricos\n\n1.7.2.1.22.20.00 - Cota-Parte da Compensação Financeira de Recursos\nMinerais - CFEM\n\n1.7.2.1.22.30.00 - Cota-Parte Royalties – Compensação Financeira\npela Produção de Petróleo – Lei nº 7.990/89\n\n18.136,29\n\n1.7.2.1.22.40.00 - Cota-Parte Royalties pelo Excedente da Produção do\nPetróleo - Lei nº 9.478/97 artigo 49 I e II\n\n1"
+      ],
+      "edition": "450",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2015-04-22/554116e9626126dd3db7d6b92975a787df64fbed.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2024-02-05",
+      "scraped_at": "2024-02-06T23:26:05.707196",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2024-02-05/c35b08bf28820ab567b0cad73a72cfdddaeaf806.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "VITALICIA 500ML - SEM GÁS- AGUA ADICIONADA DE SAIS MINERAIS SEM GÁS\n\n182 1.200,00 Unidades DIAS DAVILA DIAS DAVILA R$ 3,24 R$ 3.888,00 R$ 3,51 R$\n\n4.212,00\n\n7,6923\n\n%\n\nR$ 0,27\n\nDescrição: ÁGUA MINERAL VITALICIA 1,5 L - SEM GÁS- AGUA ADICIONADA DE SAIS MINERAIS SEM GÁS\n\n183 4.300,00 Unidades DIAS DAVILA DIAS DAVILA R$ 0,70 R$ 3.010,00 R$ 0,70 R$\n\n3.010,00\n\n0,0000\n\n%\n\nR$ 0,00\n\nDescrição: ÁGUA MINERAL VITALICIA 200ML - SEM GÁS- AGUA ADICIONADA DE SAIS MINERAIS SEM GÁS- 200 ML\n\n188 70,00 Unidades IMBASSAI"
+      ],
+      "edition": "2.032",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2024-02-05/c35b08bf28820ab567b0cad73a72cfdddaeaf806.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2024-05-09",
+      "scraped_at": "2024-05-09T23:06:51.097103",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2024-05-09/9dab20fe2500a94a588cc43fb6184a6dbafbf242.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "       Transferências das Compensações Financeiras pela Exploração de Recursos Naturais\n\n0,001.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n\n0,001.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal\n\n549.168,781.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo \n\n11.481,421.7.1.2.52.1.0.00.00                Cota-parte da Compensação"
+      ],
+      "edition": "2.096",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2024-05-09/9dab20fe2500a94a588cc43fb6184a6dbafbf242.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2024-12-02",
+      "scraped_at": "2024-12-03T02:57:52.185903",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2024-12-02/32651707d6b60ad86b86d18473ae7e1d1c20bea5.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "MINERAL VITALICIA 500ML SEM GÁS AGUA ADICIONADA DE SAIS MINERAIS SEM GÁS\n\n182 3.500,00 Unidades cristal cristal R$ 1,45 R$\n\n5.075,0000\n\nR$ 3,03 R$\n\n10.605,00\n\n52,1452\n\n%\n\nR$ 1,58\n\nDescrição: ÁGUA MINERAL VITALICIA 1,5 L SEM GÁS AGUA ADICIONADA DE SAIS MINERAIS SEM GÁS\n\n183 4.300,00 Unidades cristal cristal R$ 0,50 R$\n\n2.150,0000\n\nR$ 0,89 R$\n\n3.827,00\n\n43,8202\n\n%\n\nR$ 0,39\n\nDescrição: ÁGUA MINERAL VITALICIA 200ML SEM GÁS AGUA ADICIONADA DE SAIS MINERAIS SEM GÁS 200 ML\n\n184 2.100,00 Unidades refri refri R$"
+      ],
+      "edition": "2.249",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2024-12-02/32651707d6b60ad86b86d18473ae7e1d1c20bea5.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2014-05-02",
+      "scraped_at": "2023-09-18T20:56:10.936941",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2014-05-02/8aaa63ec7f3472c941c991ce7e92f64fa5480d4e.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "22.00.00 - Transferências da Compensação Financeira pela Exploração de Recursos Naturais 176.766,47\n\n1.7.2.1.22.11.00 - Cota-parte da Compensação Financeira de Recursos Hídricos\n\n1.7.2.1.22.20.00 - Cota-parte da Compensação Financeira de Recursos Minerais - CFEM\n\n1.7.2.1.22.30.00 - Cota-parte Royalties – Compensação Financeira pela Produção de Petróleo – Lei nº\n7.990/89\n\n16.176,01\n\n1.7.2.1.22.40.00 - Cota-Parte Royalties pelo Excedente da Produção do Petróleo - Lei nº 9.478/97\nartigo 49 I e II\n\n1"
+      ],
+      "edition": "330",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2014-05-02/8aaa63ec7f3472c941c991ce7e92f64fa5480d4e.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2021-03-12",
+      "scraped_at": "2023-09-18T21:09:45.467823",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2021-03-12/faa3bb7df07532efcd35a34ea6bf67bd406dc156.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "INSCRIÇÃO EM\nRESTOS A PAGAR NÃO\n\nPROCESSADOS DO\nEXERCÍCIO)\n\n(i)= (g - h )(g)=(a-(b+c+d+e) - f ) (h)\n\n2.016,80 0,00 0,00 0,00 0,00 2.016,80 0,00 25.065,1742 - Royalties/Fundo Especial do Petróleo/Compensação\nFinanceira pela Exploração de Recursos Minerais\n\n0,00 2.016,80\n\n648,63 0,00 0,00 0,00 0,00 648,63 0,00 0,0044 - Cessão Onerosa - volumes excedentes do Pré-Sal 0,00 648,63\n\nTOTAL (III) = (I + II) 2.878.785,42 58.809,64 2.830.562,70 31.304,46 315.809,27 -357.700,65 0,00 229.026,710,00 -357.700,65"
+      ],
+      "edition": "1.388",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2021-03-12/faa3bb7df07532efcd35a34ea6bf67bd406dc156.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2021-12-10",
+      "scraped_at": "2023-09-18T21:08:10.511812",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2021-12-10/6bfa7e4350bd78726dffc9e42adf04f402d2a415.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "§ 5° - Não se incluem  nos serviços custeados pela taxa referida no “caput” os resíduos de\n\nrecolhimento especial, tais como os industriais, os de natureza hospitalar, os entulhos de construção,\n\nos resíduos oriundos de varrição, capinação, poda, minerais, madeira, de eletroeletrônicos, de móveis,\n\nde limpeza de calçamento e vias, movimentação de terra, de aterros, entre outros, bem como, os\n\nRUA ANTONIO DOS SANTOS, S/N – CENTRO – CEP: 45465-000 – TEL.: 73-3279-2131/2281 – TEL/FAX: 73-3279-2128 CNPJ:"
+      ],
+      "edition": "1.535",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2021-12-10/6bfa7e4350bd78726dffc9e42adf04f402d2a415.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2024-12-04",
+      "scraped_at": "2024-12-05T01:27:55.624471",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2024-12-04/7f3fa3d9bf6786fe91a92973d0b3662682141407.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "R$ 9,99 R$ \n\n10.989,00 \n\n181 4.200,00 Unidades \nÁGUA MINERAL VITALICIA 500ML SEM GÁS AGUA \nADICIONADA DE SAIS MINERAIS SEM GÁS cristal  \n\nR$ 0,99 R$ \n4.158,00 \n\n182 3.500,00 Unidades \nÁGUA MINERAL VITALICIA 1,5 L SEM GÁS AGUA \nADICIONADA DE SAIS MINERAIS SEM GÁS cristal  \n\nR$ 1,45 R$ \n5.075,00 \n\n183 4.300,00 Unidades \nÁGUA MINERAL VITALICIA 200ML SEM GÁS AGUA \nADICIONADA DE SAIS MINERAIS SEM GÁS 200 ML cristal  \n\nR$ 0,50 R$ \n2.150,00 \n\n184 2.100,00 Unidades \nREFRIGERANTE TIPO COCACOLA, LARANJA, LIMÃO"
+      ],
+      "edition": "2.250",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2024-12-04/7f3fa3d9bf6786fe91a92973d0b3662682141407.txt"
+    },
+    {
+      "territory_id": "2931608",
+      "date": "2023-12-06",
+      "scraped_at": "2023-12-06T22:23:00.112580",
+      "url": "https://data.queridodiario.ok.org.br/2931608/2023-12-06/500a1f91ec3aa72637880fcb3348e5be25d81385.pdf",
+      "territory_name": "Teolândia",
+      "state_code": "BA",
+      "excerpts": [
+        "Valores expressos em R$\n\nCódigo Especificação Espécie Origem Categoria EconômicaDesdobramento\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 5.000,00\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 5.000,00\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 1.155.000,00\n\n1.7.1.2.52.1.0.00.00                Cota-parte da"
+      ],
+      "edition": "1.997",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931608/2023-12-06/500a1f91ec3aa72637880fcb3348e5be25d81385.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2931608",
+    "termo": "mineracao",
+    "params": {
+      "territory_ids": "2931608",
+      "querystring": "mineracao",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

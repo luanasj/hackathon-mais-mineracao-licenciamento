@@ -77,6 +77,11 @@ def build_leis_por_municipio() -> None:
                     "termo_encontrado": meta.get("termo"),
                     "data_de_coleta": meta.get("data_de_coleta"),
                     "fonte": meta.get("fonte"),
+                    # a busca do Querido Diário casa por palavra solta, não
+                    # frase exata — falso-positivo é esperado (ver docstring
+                    # de collect_querido_diario.py). Não afirmar na interface
+                    # sem alguém confirmar o excerto antes.
+                    "confirmado_manualmente": False,
                 }
             )
             vistos.add(gazette["url"])

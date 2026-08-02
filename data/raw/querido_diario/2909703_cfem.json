@@ -1,0 +1,102 @@
+{
+  "total_gazettes": 6,
+  "gazettes": [
+    {
+      "territory_id": "2909703",
+      "date": "2022-12-21",
+      "scraped_at": "2023-10-24T14:03:54.737540",
+      "url": "https://data.queridodiario.ok.org.br/2909703/2022-12-21/dc181d2828277c6370accffe7d89f369f4def1a6.pdf",
+      "territory_name": "Cristópolis",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências das Compensações Financeiras pela Exploração de Recursos\nNaturais\n\n652.000,00   \n\n1.7.1.2.51.0.0.00.00.0\n0 \n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais -\nCFEM\n\n1.000,00   \n\n1.7.1.2.51.0.1.00.00.0\n0 \n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais\n- CFEM - Principal\n\n1.000,00   \n\n1.7.1.2.52.0.0.00.00.0\n0 \n\nCota-parte da Compensação Financeira pela Produção de Petróleo651.000,00   \n\n1.7.1.2.52.1.0.00.00.0\n0 \n\nCota-parte da Compensação Financeira"
+      ],
+      "edition": "358",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909703/2022-12-21/dc181d2828277c6370accffe7d89f369f4def1a6.txt"
+    },
+    {
+      "territory_id": "2909703",
+      "date": "2025-07-01",
+      "scraped_at": "2025-07-02T02:51:51.226494",
+      "url": "https://data.queridodiario.ok.org.br/2909703/2025-07-01/1f007fd135c828d2fffaa87c8c90c310c469f610.pdf",
+      "territory_name": "Cristópolis",
+      "state_code": "BA",
+      "excerpts": [
+        "Recursos Naturais 577.582,73 502.000,00 517.060,00 535.157,10 556.563,380,00\n\n1.7.1.2.51.0.0.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 0,00 1.000,00 1.030,00 1.066,05 1.108,690,00\n\n1.7.1.2.51.0.1.00.00.00 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal 0,00 1.000,00 1.030,00 1.066,05 1.108,690,00\n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo 577.582,73 501.000,00 516.030"
+      ],
+      "edition": "1.019",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909703/2025-07-01/1f007fd135c828d2fffaa87c8c90c310c469f610.txt"
+    },
+    {
+      "territory_id": "2909703",
+      "date": "2023-12-28",
+      "scraped_at": "2023-12-28T21:30:06.148467",
+      "url": "https://data.queridodiario.ok.org.br/2909703/2023-12-28/39838eb54a61721085cf20bacaacc4a62089046f.pdf",
+      "territory_name": "Cristópolis",
+      "state_code": "BA",
+      "excerpts": [
+        "Compensações Financeiras pela Exploração de Recursos\nNaturais              \n\n622.000,00   \n\n1.7.1.2.51.0.0.00.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais\n- CFEM              \n\n1.000,00   \n\n1.7.1.2.51.0.1.00.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal              \n\n1.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo              621.000,00   \n\n1.7.1.2.52.1.0.00.00.00 \nCota-parte"
+      ],
+      "edition": "629",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909703/2023-12-28/39838eb54a61721085cf20bacaacc4a62089046f.txt"
+    },
+    {
+      "territory_id": "2909703",
+      "date": "2024-12-19",
+      "scraped_at": "2024-12-20T01:50:44.865849",
+      "url": "https://data.queridodiario.ok.org.br/2909703/2024-12-19/1b33abcc289a36e5f5e4c7cb0ae16fe0c4006a94.pdf",
+      "territory_name": "Cristópolis",
+      "state_code": "BA",
+      "excerpts": [
+        "Compensações Financeiras pela Exploração de Recursos\nNaturais              \n\n502.000,00   \n\n1.7.1.2.51.0.0.00.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais\n- CFEM              \n\n1.000,00   \n\n1.7.1.2.51.0.1.00.00.00 \nCota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal              \n\n1.000,00   \n\n1.7.1.2.52.0.0.00.00.00 Cota-parte da Compensação Financeira pela Produção de Petróleo              501.000,00   \n\n1.7.1.2.52.1.0.00.00.00 \nCota-parte"
+      ],
+      "edition": "867",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909703/2024-12-19/1b33abcc289a36e5f5e4c7cb0ae16fe0c4006a94.txt"
+    },
+    {
+      "territory_id": "2909703",
+      "date": "2026-01-02",
+      "scraped_at": "2026-01-02T13:26:08.403856",
+      "url": "s3://okbr-qd-migration//2909703/2026-01-02/498ce872d9609840862d6c77414b4e39396697f7.pdf",
+      "territory_name": "Cristópolis",
+      "state_code": "BA",
+      "excerpts": [
+        "114.331,52 104.175,64 122.119,74 623.060,0098.256,56101.870,32\n\n1.7.1.2.51.0.0.00.00.00  Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            136,06 189,01 172,22 201,87 1.030,00162,43168,41\n\n1.7.1.2.51.0.1.00.00.00  Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            136,06 189,01 172,22 201,87 1.030,00162,43168,41\n\n1.7.1.2.52.0.0.00.00.00  Cota-parte da Compensação Financeira pela Produção de Petróleo    "
+      ],
+      "edition": "1.157",
+      "is_extra_edition": false,
+      "txt_url": "s3://okbr-qd-migration//2909703/2026-01-02/498ce872d9609840862d6c77414b4e39396697f7.txt"
+    },
+    {
+      "territory_id": "2909703",
+      "date": "2025-10-30",
+      "scraped_at": "2025-10-31T02:57:38.789017",
+      "url": "https://data.queridodiario.ok.org.br/2909703/2025-10-30/3780415223f0e24c5a7bcc9d534d570be530651f.pdf",
+      "territory_name": "Cristópolis",
+      "state_code": "BA",
+      "excerpts": [
+        "690.781,63 2.619.806,54Transferências das Compensações Financeiras pela Exploração de\nRecursos Naturais\n\n1.7.1.2.00.0.0.00.00.00\n\n1.030,00 1.060,90 1.098,03 1.141,95 4.330,88Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n1.7.1.2.51.0.0.00.00.00\n\nPágina: 7 de 25 SIAFIC - \n\nEdição 1.117 | Ano 2025\n30 de outubro de 2025\n\nPágina 12\n\nCertificação Digital: DGTPTMBA-SYDVPJLY-Z8AVC935-EMQEVY00\nVersão eletrônica disponível em: https://doem.org.br/ba/cristopolis\n\n\n\nReceita"
+      ],
+      "edition": "1.117",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2909703/2025-10-30/3780415223f0e24c5a7bcc9d534d570be530651f.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2909703",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2909703",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

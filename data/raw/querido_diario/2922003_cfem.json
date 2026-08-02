@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 11,
+  "gazettes": [
+    {
+      "territory_id": "2922003",
+      "date": "2012-08-31",
+      "scraped_at": "2024-06-02T02:49:04.997873",
+      "url": "https://data.queridodiario.ok.org.br/2922003/2012-08-31/4590e6cbd12168cf32c7b39e0239a7369d60ab73.pdf",
+      "territory_name": "Mucuri",
+      "state_code": "BA",
+      "excerpts": [
+        "            100,00                100,00                -                      100,00                -                      -                      1.100,00            \n\n1721.22.20.00.00\n Cota-parte da Compensação Financeira de \nRecursos Minerais - CFEM \n\n-                      -                      -                      300,00                200,00                100,00                -                      100,00                100,00                200,00                -                    "
+      ],
+      "edition": "875",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2922003/2012-08-31/4590e6cbd12168cf32c7b39e0239a7369d60ab73.txt"
+    },
+    {
+      "territory_id": "2922003",
+      "date": "2025-12-12",
+      "scraped_at": "2025-12-13T01:35:20.951706",
+      "url": "https://data.queridodiario.ok.org.br/2922003/2025-12-12/5f20fe1b3eae837d0a0d00dd128591a39c2c4508.pdf",
+      "territory_name": "Mucuri",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos Hídricos 1.000,00\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 2.000,00\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 2.000,00\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 10.899.800,00\n\n1.7.1.2.52.1.0.00.00                Cota-parte da Compensação"
+      ],
+      "edition": "4.281",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2922003/2025-12-12/5f20fe1b3eae837d0a0d00dd128591a39c2c4508.txt"
+    },
+    {
+      "territory_id": "2922003",
+      "date": "2024-12-13",
+      "scraped_at": "2024-12-14T00:16:06.405799",
+      "url": "https://data.queridodiario.ok.org.br/2922003/2024-12-13/44312dcccd3ff4fafb2557b99d2591ff9436f1f1.pdf",
+      "territory_name": "Mucuri",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos Hídricos 1.000,00\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 2.000,00\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 2.000,00\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 13.298.800,00\n\n1.7.1.2.52.1.0.00.00                Cota-parte da Compensação"
+      ],
+      "edition": "4.010",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2922003/2024-12-13/44312dcccd3ff4fafb2557b99d2591ff9436f1f1.txt"
+    },
+    {
+      "territory_id": "2922003",
+      "date": "2022-12-06",
+      "scraped_at": "2023-10-16T22:21:16.407664",
+      "url": "https://data.queridodiario.ok.org.br/2922003/2022-12-06/ac3b0c40296617e0ff16429ecf84181a4c5c6047.pdf",
+      "territory_name": "Mucuri",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos Hídricos 10.000,00\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 2.000,00\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 2.000,00\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 13.835.200,00\n\n1.7.1.2.52.1.0.00.00                Cota-parte da Compensação"
+      ],
+      "edition": "3.369",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2922003/2022-12-06/ac3b0c40296617e0ff16429ecf84181a4c5c6047.txt"
+    },
+    {
+      "territory_id": "2922003",
+      "date": "2021-12-28",
+      "scraped_at": "2023-10-16T22:25:31.968196",
+      "url": "https://data.queridodiario.ok.org.br/2922003/2021-12-28/fd7d345e9002c9033ea23b7a64f44e180f526be6.pdf",
+      "territory_name": "Mucuri",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-parte da Compensação Financeira pela Exploração de Recursos Hídricos 10.000,00\n\n1.7.1.2.51.0.0.00.00             Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM 2.000,00\n\n1.7.1.2.51.0.1.00.00                   Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal 2.000,00\n\n1.7.1.2.52.0.0.00.00             Cota-parte da Compensação Financeira pela Produção de Petróleo 10.280.800,00\n\n1.7.1.2.52.1.0.00.00                Cota-parte da Compensação"
+      ],
+      "edition": "3.039",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2922003/2021-12-28/fd7d345e9002c9033ea23b7a64f44e180f526be6.txt"
+    },
+    {
+      "territory_id": "2922003",
+      "date": "2014-07-10",
+      "scraped_at": "2024-06-02T02:54:33.222511",
+      "url": "https://data.queridodiario.ok.org.br/2922003/2014-07-10/0862cbcc36cf9c325310f7a2a348baf53924da4b.pdf",
+      "territory_name": "Mucuri",
+      "state_code": "BA",
+      "excerpts": [
+        "Exploração de \nRecursos Naturais\n\n3.276.900,00                 \n\n1721.22.11.00.00 Cota-parte da Compensação Financeira de Recursos Hídricos 800,00                               \n\n1721.22.20.00.00 Cota-parte da Compensação Financeira de Recursos Minerais - CFEM 1.000,00                           \n\n1721.22.30.00.00 Cota-parte Royalties –  Compensação Financeira pela Produção de  \nPetróleo –  Lei  nº 7.990/89\n\n3.015.700,00                   \n\n1721.22.70.00.00 Cota-Parte do Fundo Especial do Petróleo – FEP 259"
+      ],
+      "edition": "1.231",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2922003/2014-07-10/0862cbcc36cf9c325310f7a2a348baf53924da4b.txt"
+    },
+    {
+      "territory_id": "2922003",
+      "date": "2022-12-23",
+      "scraped_at": "2023-10-16T22:21:03.848374",
+      "url": "https://data.queridodiario.ok.org.br/2922003/2022-12-23/19654147e77122cf56d373d9598872fce5a83f43.pdf",
+      "territory_name": "Mucuri",
+      "state_code": "BA",
+      "excerpts": [
+        "2.51.0.0.00.00         Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM232,20 309,20 357,00 288,60 297,00 516,00 2.000,00\n\n1.7.1.2.51.0.1.00.00             Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal232,20 309,20 357,00 288,60 297,00 516,00 2.000,00\n\n1.7.1.2.52.0.0.00.00         Cota-parte da Compensação Financeira pela Produção de Petróleo 1.606.266,72 2.138.921,92 2.469.583,20 1.996.419,36 2.054.527,20 3.569.481,60 13.835.200,00\n"
+      ],
+      "edition": "3.387",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2922003/2022-12-23/19654147e77122cf56d373d9598872fce5a83f43.txt"
+    },
+    {
+      "territory_id": "2922003",
+      "date": "2022-01-03",
+      "scraped_at": "2023-10-16T22:25:28.889926",
+      "url": "https://data.queridodiario.ok.org.br/2922003/2022-01-03/629e4296e47d84f72dc598ebc788c6e731f84199.pdf",
+      "territory_name": "Mucuri",
+      "state_code": "BA",
+      "excerpts": [
+        "2.51.0.0.00.00         Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM232,20 309,20 357,00 288,60 297,00 516,00 2.000,00\n\n1.7.1.2.51.0.1.00.00             Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal232,20 309,20 357,00 288,60 297,00 516,00 2.000,00\n\n1.7.1.2.52.0.0.00.00         Cota-parte da Compensação Financeira pela Produção de Petróleo 1.193.600,88 1.589.411,68 1.835.122,80 1.483.519,44 1.526.698,80 2.652.446,40 10.280.800,00\n"
+      ],
+      "edition": "3.045",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2922003/2022-01-03/629e4296e47d84f72dc598ebc788c6e731f84199.txt"
+    },
+    {
+      "territory_id": "2922003",
+      "date": "2023-12-28",
+      "scraped_at": "2023-12-29T22:02:07.010191",
+      "url": "https://data.queridodiario.ok.org.br/2922003/2023-12-28/dfd69146cc83635ca0ff874513179c2b79be66ac.pdf",
+      "territory_name": "Mucuri",
+      "state_code": "BA",
+      "excerpts": [
+        "2.51.0.0.00.00         Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM232,20 309,20 357,00 288,60 297,00 516,00 2.000,00\n\n1.7.1.2.51.0.1.00.00             Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal232,20 309,20 357,00 288,60 297,00 516,00 2.000,00\n\nPágina 3 de 10ROBERTO CARLOS \nFIGUEIREDO \n\nCOSTA:51974347672\n\nAssinado de forma digital por \n\nROBERTO CARLOS FIGUEIREDO \n\nCOSTA:51974347672 \n\nDados: 2023.12.28 16:13:42 -03'00'\n\nEdição"
+      ],
+      "edition": "3.737",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2922003/2023-12-28/dfd69146cc83635ca0ff874513179c2b79be66ac.txt"
+    },
+    {
+      "territory_id": "2922003",
+      "date": "2025-12-15",
+      "scraped_at": "2025-12-17T00:59:25.603242",
+      "url": "https://data.queridodiario.ok.org.br/2922003/2025-12-15/00d14bbdb71d45ec5f142663d89e82adc28cc285.pdf",
+      "territory_name": "Mucuri",
+      "state_code": "BA",
+      "excerpts": [
+        "2.51.0.0.00.00         Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM232,20 309,20 357,00 288,60 297,00 516,00 2.000,00\n\n1.7.1.2.51.0.1.00.00             Cota-parte da Compensação Financeira de Recursos Minerais - CFEM - Principal232,20 309,20 357,00 288,60 297,00 516,00 2.000,00\n\n1.7.1.2.52.0.0.00.00         Cota-parte da Compensação Financeira pela Produção de Petróleo 1.265.466,78 1.685.109,08 1.945.614,30 1.572.841,14 1.618.620,30 2.812.148,40 10.899.800,00\n"
+      ],
+      "edition": "4.282",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2922003/2025-12-15/00d14bbdb71d45ec5f142663d89e82adc28cc285.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2922003",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2922003",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

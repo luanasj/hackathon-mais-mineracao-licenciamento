@@ -1,0 +1,116 @@
+{
+  "total_gazettes": 7,
+  "gazettes": [
+    {
+      "territory_id": "2910602",
+      "date": "2025-12-30",
+      "scraped_at": "2025-12-31T05:25:39.275037",
+      "url": "s3://okbr-qd-migration//2910602/2025-12-30/20c74ab3c23bdf6a1a9aa43e5424226e86b8dffa.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "198,40 1.236,20462,00 2.427,60\n\n1.7.1.2.51.0.0.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            8.559,30 7.107,00 9.290,60 7.230,60 7.632,30 7.858,90 7.436,60 8.713,80 103.000,008.816,80 9.094,903.399,00 17.860,20\n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            8.559,30 7.107,00 9.290,60 7.230,60 7.632,30 7.858,90 7.436,60 8.713,80 103.000,008.816,80 9.094,903.399,00"
+      ],
+      "edition": "1.498",
+      "is_extra_edition": false,
+      "txt_url": "s3://okbr-qd-migration//2910602/2025-12-30/20c74ab3c23bdf6a1a9aa43e5424226e86b8dffa.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2024-12-30",
+      "scraped_at": "2024-12-31T01:52:46.488737",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2024-12-30/180d0e96001b99410f172a74a51b6d47c6e46e40.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "027,20 1.059,60396,00 2.080,80\n\n1.7.1.2.51.0.0.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM            7.562,10 6.279,00 8.208,20 6.388,20 6.743,10 6.943,30 6.570,20 7.698,60 91.000,007.789,60 8.035,303.003,00 15.779,40\n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal            7.562,10 6.279,00 8.208,20 6.388,20 6.743,10 6.943,30 6.570,20 7.698,60 91.000,007.789,60 8.035,303.003,00 15"
+      ],
+      "edition": "1.080",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2024-12-30/180d0e96001b99410f172a74a51b6d47c6e46e40.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2023-12-21",
+      "scraped_at": "2023-12-21T21:27:57.102506",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2023-12-21/72026b34703db2ccc7ef06580c269b1a5f3b0362.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM85.000,00   \n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n85.000,00   \n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n170885.000,00   \n\n1.7.1.2.52.0.0.00.0000 Cota-parte da Compensação Financeira pela Produção de Petróleo21.601.000,00   \n\n1.7.1.2.52.1.0.00.0000 Cota-parte da"
+      ],
+      "edition": "767",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2023-12-21/72026b34703db2ccc7ef06580c269b1a5f3b0362.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2024-12-27",
+      "scraped_at": "2024-12-28T01:25:48.905216",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2024-12-27/2f862807e9785f77c92ab957acf1afb4d3cf16b5.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM91.000,00   \n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n91.000,00   \n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM\n- Principal              \n\n170891.000,00   \n\n1.7.1.2.52.0.0.00.0000 Cota-parte da Compensação Financeira pela Produção de Petróleo20.336.000,00   \n\n1.7.1.2.52.1.0.00.0000 Cota-parte da"
+      ],
+      "edition": "1.076",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2024-12-27/2f862807e9785f77c92ab957acf1afb4d3cf16b5.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2022-12-29",
+      "scraped_at": "2023-10-28T05:33:36.171127",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2022-12-29/14ce7ada39f32936b409ccfaf2a1db48db59d4a2.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "da Compensação Financeira pela Exploração de Recursos Minerais - CFEM80.000,00   \n\n1.7.1.2.51.0.1.00.0000 Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM -\nPrincipal\n\n80.000,00   \n\n1.7.1.2.51.0.1.00.0000    Cota-parte da Compensação Financeira pela Exploração de Recursos Minerais -\nCFEM - Principal\n\n170880.000,00   \n\n1.7.1.2.52.0.0.00.0000 Cota-parte da Compensação Financeira pela Produção de Petróleo20.491.000,00   \n\n1.7.1.2.52.1.0.00.0000 Cota-parte da Compensação"
+      ],
+      "edition": "475",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2022-12-29/14ce7ada39f32936b409ccfaf2a1db48db59d4a2.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2025-12-08",
+      "scraped_at": "2025-12-09T01:46:50.025167",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2025-12-08/85647bc97c5f84a5d98288989a16a499a4b1bfac.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "             14.000,00                      15.000,00                      16.000,00                      17.000,00                      1709 62.000,00                   \n\nCota-parte da Compensação Financeira pela Exploração de Recursos Minerais - CFEM - Principal              103.000,00                    110.000,00                    116.000,00                    123.000,00                    1708 452.000,00                 \n\nCota-parte da Compensação Financeira pela Produção de Petróleo - Lei"
+      ],
+      "edition": "1.474",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2025-12-08/85647bc97c5f84a5d98288989a16a499a4b1bfac.txt"
+    },
+    {
+      "territory_id": "2910602",
+      "date": "2025-12-02",
+      "scraped_at": "2025-12-03T07:35:39.448343",
+      "url": "https://data.queridodiario.ok.org.br/2910602/2025-12-02/6a266b7a383b9b65f21d46b4d8b442528416dfe2.pdf",
+      "territory_name": "Esplanada",
+      "state_code": "BA",
+      "excerpts": [
+        "Cota-Parte do Imposto Sobre a Propriedade Territorial Rural - 1500 \nPrincipal \n\nCata-parte da Compensação Financeira peia Exploração de 1709 \nRecursos Hídricos - Principal \n\nCola-parte da Compensação Financeira pela Exploração de 1708 \nRecursos Minerais - CFEM - Principal \n\nCota-parte da Compensação Financeira pele PrOdução de Petróleo 1720 \n-Lei n° 7.990/89 - Principal \n\nCota-parte pelo Excedente da Produção do Petróleo - Lei n° 1720 \n9,478/97, artigo 49, I e II - Principal \n\nCota-Parte do Fundo Especial"
+      ],
+      "edition": "1.464",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2910602/2025-12-02/6a266b7a383b9b65f21d46b4d8b442528416dfe2.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2910602",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2910602",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

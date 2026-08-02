@@ -1,0 +1,46 @@
+{
+  "total_gazettes": 2,
+  "gazettes": [
+    {
+      "territory_id": "2929701",
+      "date": "2024-11-13",
+      "scraped_at": "2024-11-14T02:24:48.217276",
+      "url": "https://data.queridodiario.ok.org.br/2929701/2024-11-13/d766ddda0a8e2dc351ff46ca892625867f1fa89a.pdf",
+      "territory_name": "Sátiro Dias",
+      "state_code": "BA",
+      "excerpts": [
+        " Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n9.676.000,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n16.000,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n16.000,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 9.660.000,00\n171252100000       Cota-parte da Compensação Financeira pela Produção de Petróleo"
+      ],
+      "edition": "1.374",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2929701/2024-11-13/d766ddda0a8e2dc351ff46ca892625867f1fa89a.txt"
+    },
+    {
+      "territory_id": "2929701",
+      "date": "2025-09-26",
+      "scraped_at": "2025-09-27T03:28:02.548013",
+      "url": "https://data.queridodiario.ok.org.br/2929701/2025-09-26/b6c554be21032f09194cc5e1eab7f7eaca82ea22.pdf",
+      "territory_name": "Sátiro Dias",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n17.919.000,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n17.000,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n17.000,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 17.902.000,00\n171252100000       Cota-parte da Compensação Financeira pela Produção de"
+      ],
+      "edition": "1.697",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2929701/2025-09-26/b6c554be21032f09194cc5e1eab7f7eaca82ea22.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2929701",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2929701",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

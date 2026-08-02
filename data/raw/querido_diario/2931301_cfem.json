@@ -1,0 +1,60 @@
+{
+  "total_gazettes": 3,
+  "gazettes": [
+    {
+      "territory_id": "2931301",
+      "date": "2024-12-18",
+      "scraped_at": "2024-12-19T06:45:13.537882",
+      "url": "https://data.queridodiario.ok.org.br/2931301/2024-12-18/353f4e4218616c0f552ca5b54b4a4e3e9bc14759.pdf",
+      "territory_name": "Tapiramutá",
+      "state_code": "BA",
+      "excerpts": [
+        "de Depósitos Bancários - Aldir Blanc - Fte 1.719            \n \n\n10.000,00   \n\n1.3.2.1.01.0.1.01.40 \nRemuneração de Depósitos Bancários - SUS ESTADO - Fte \"1.621\"   \n          \n\n1.000,00   \n\n1.3.2.1.01.0.1.01.41 Remuneração de Depósitos Bancários - CFEM               1.000,00   \n\n1.3.2.1.01.0.1.02.00 \nRemuneração de Depósitos Bancários - Recursos não Vinculados -\nPrincipal              \n\n65.000,00   \n\n1.3.2.1.01.0.1.02.02 \nRemuneração de Depósitos Bancários - Recursos não Vinculados -\nREN - Principal"
+      ],
+      "edition": "1.955",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931301/2024-12-18/353f4e4218616c0f552ca5b54b4a4e3e9bc14759.txt"
+    },
+    {
+      "territory_id": "2931301",
+      "date": "2025-12-10",
+      "scraped_at": "2025-12-11T02:05:13.523779",
+      "url": "https://data.queridodiario.ok.org.br/2931301/2025-12-10/5db552e39a7fc63c3705c8e2f693fe5877e27e4f.pdf",
+      "territory_name": "Tapiramutá",
+      "state_code": "BA",
+      "excerpts": [
+        "de Depósitos Bancários - Aldir Blanc - Fte 1.719            \n \n\n10.000,00   \n\n1.3.2.1.01.0.1.01.40 \nRemuneração de Depósitos Bancários - SUS ESTADO - Fte \"1.621\"   \n          \n\n1.000,00   \n\n1.3.2.1.01.0.1.01.41 Remuneração de Depósitos Bancários - CFEM               1.000,00   \n\n1.3.2.1.01.0.1.02.00 \nRemuneração de Depósitos Bancários - Recursos não Vinculados -\nPrincipal              \n\n65.000,00   \n\n1.3.2.1.01.0.1.02.02 \nRemuneração de Depósitos Bancários - Recursos não Vinculados -\nREN - Principal"
+      ],
+      "edition": "2.465",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931301/2025-12-10/5db552e39a7fc63c3705c8e2f693fe5877e27e4f.txt"
+    },
+    {
+      "territory_id": "2931301",
+      "date": "2024-12-17",
+      "scraped_at": "2024-12-18T01:36:32.833969",
+      "url": "https://data.queridodiario.ok.org.br/2931301/2024-12-17/d393bc3917f059873869a11ed1236e8d1092dbd2.pdf",
+      "territory_name": "Tapiramutá",
+      "state_code": "BA",
+      "excerpts": [
+        "de Depósitos Bancários - Aldir Blanc - Fte 1.719            \n \n\n10.000,00   \n\n1.3.2.1.01.0.1.01.40 \nRemuneração de Depósitos Bancários - SUS ESTADO - Fte \"1.621\"   \n          \n\n1.000,00   \n\n1.3.2.1.01.0.1.01.41 Remuneração de Depósitos Bancários - CFEM               1.000,00   \n\n1.3.2.1.01.0.1.02.00 \nRemuneração de Depósitos Bancários - Recursos não Vinculados -\nPrincipal              \n\n65.000,00   \n\n1.3.2.1.01.0.1.02.02 \nRemuneração de Depósitos Bancários - Recursos não Vinculados -\nREN - Principal"
+      ],
+      "edition": "1.953",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2931301/2024-12-17/d393bc3917f059873869a11ed1236e8d1092dbd2.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2931301",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2931301",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

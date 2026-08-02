@@ -1,0 +1,158 @@
+{
+  "total_gazettes": 13,
+  "gazettes": [
+    {
+      "territory_id": "2930105",
+      "date": "2022-12-23",
+      "scraped_at": "2022-12-24T11:20:05.126490",
+      "url": "https://data.queridodiario.ok.org.br/2930105/2022-12-23/ed9448def755ed8260e9e782b1f532d17909aef7.pdf",
+      "territory_name": "Senhor do Bonfim",
+      "state_code": "BA",
+      "excerpts": [
+        "249.244,66 258.181,72 296.577,97 275.393,83 342.918,28 1.655.011,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n9.633,35 10.318,51 10.688,50 12.278,07 11.401,06 14.196,52 68.516,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n9.633,35 10.318,51 10.688,50 12.278,07 11.401,06 14.196,52 68.516,00\n\n171251010000 Transferência da União Referente à Compensação Financeira de Recursos"
+      ],
+      "edition": "3.307",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930105/2022-12-23/ed9448def755ed8260e9e782b1f532d17909aef7.txt"
+    },
+    {
+      "territory_id": "2930105",
+      "date": "2026-02-23",
+      "scraped_at": "2026-02-24T00:56:12.238132",
+      "url": "https://data.queridodiario.ok.org.br/2930105/2026-02-23/ad422a712eb0202d8a02bef4f1bc9f1ff58012d1.pdf",
+      "territory_name": "Senhor do Bonfim",
+      "state_code": "BA",
+      "excerpts": [
+        "                            \n\n290.472,79 314.780,99 2.042.706,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de \n\nRecursos Minerais - CFEM                                   \n\n45.006,73 48.773,11 316.503,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de \n\nRecursos Minerais - CFEM - Principal                     \n\n45.006,73 48.773,11 316.503,00\n\n171152000000      Cota-Parte do Imposto Sobre a Propriedade Territorial Rural                 1.321"
+      ],
+      "edition": "5.948",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930105/2026-02-23/ad422a712eb0202d8a02bef4f1bc9f1ff58012d1.txt"
+    },
+    {
+      "territory_id": "2930105",
+      "date": "2025-02-10",
+      "scraped_at": "2025-02-11T01:53:12.552983",
+      "url": "https://data.queridodiario.ok.org.br/2930105/2025-02-10/530b313940bec1368ac0b070c8727f5efa4eedf3.pdf",
+      "territory_name": "Senhor do Bonfim",
+      "state_code": "BA",
+      "excerpts": [
+        "Hídricos                                           \n\n543.671,67 517.572,49\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de \nRecursos Minerais - CFEM                                   \n\n340.952,24 324.584,69\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de \nRecursos Minerais - CFEM - Principal                     \n\n340.952,24 324.584,69\n\n171251010000 Transferência da União Referente à Compensação Financeira de \nRecursos Minerais\n\n340.952,24 324.584"
+      ],
+      "edition": "4.982",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930105/2025-02-10/530b313940bec1368ac0b070c8727f5efa4eedf3.txt"
+    },
+    {
+      "territory_id": "2930105",
+      "date": "2022-01-21",
+      "scraped_at": "2022-12-22T03:45:09.083045",
+      "url": "https://data.queridodiario.ok.org.br/2930105/2022-01-21/b3705aa2e081a644d0815e7f557d97045e484cde.pdf",
+      "territory_name": "Senhor do Bonfim",
+      "state_code": "BA",
+      "excerpts": [
+        "165.311,91 163.284,20 211.095,52 192.419,23 185.802,48 1.067.217,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n12.263,91 13.578,84 13.412,29 17.339,54 15.805,46 15.261,95 87.662,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de\nRecursos Minerais - CFEM - Principal\n\n12.263,91 13.578,84 13.412,29 17.339,54 15.805,46 15.261,95 87.662,00\n\n171251010000 Transferência da União Referente à Compensação Financeira de Recursos"
+      ],
+      "edition": "2.778",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930105/2022-01-21/b3705aa2e081a644d0815e7f557d97045e484cde.txt"
+    },
+    {
+      "territory_id": "2930105",
+      "date": "2024-02-02",
+      "scraped_at": "2024-02-02T22:50:37.845796",
+      "url": "https://data.queridodiario.ok.org.br/2930105/2024-02-02/49d067da83afa78d9274efb73ea2cd0dacdce060.pdf",
+      "territory_name": "Senhor do Bonfim",
+      "state_code": "BA",
+      "excerpts": [
+        "Hídricos                                           \n\n436.696,87 385.440,17\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de \nRecursos Minerais - CFEM                                   \n\n165.908,19 146.434,94\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de \nRecursos Minerais - CFEM - Principal                     \n\n165.908,19 146.434,94\n\nMUNICIPIO DE SENHOR DO BONFIM\nProgramação Financeira - Receita Bimestral\n\nExercício: 2024\nCódigo Especificação"
+      ],
+      "edition": "4.102",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930105/2024-02-02/49d067da83afa78d9274efb73ea2cd0dacdce060.txt"
+    },
+    {
+      "territory_id": "2930105",
+      "date": "2014-01-14",
+      "scraped_at": "2024-06-02T05:42:50.782041",
+      "url": "https://data.queridodiario.ok.org.br/2930105/2014-01-14/5a1a31201cb8553b182839c94c54fede4878d260.pdf",
+      "territory_name": "Senhor do Bonfim",
+      "state_code": "BA",
+      "excerpts": [
+        "00 8,40 8,40 16,80 9,60 10,80 20,40 37,20 37,2002\n\n          TRANSF.COMPENS.FINANC.EXPL.RECURSOS NATURAIS 376.000,00 26.320,00 26.320,00 52.640,00 30.080,00 33.840,00 63.920,00 116.560,00 116.560,00\n\n              COTA PARTE COMP. FINANC. REC.MIN. CFEM - ROYALTIES/FEP 1.000,00 70,00 70,00 140,00 80,00 90,00 170,00 310,00 310,0042\n\nSistema Desenvolvido pela ST Consultoria Ltda. (71) 3503-5400 Pag.: 2\n\nTerça-feira\n\nAno:2 Edição:\n14 de janeiro de 2014 Diário Oficial\n\nPrefeitura Municipal de Senhor do"
+      ],
+      "edition": "637",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930105/2014-01-14/5a1a31201cb8553b182839c94c54fede4878d260.txt"
+    },
+    {
+      "territory_id": "2930105",
+      "date": "2023-12-21",
+      "scraped_at": "2023-12-21T21:54:03.762615",
+      "url": "https://data.queridodiario.ok.org.br/2930105/2023-12-21/e270356d43dd6769ccf54d313cdb0d37900d3787.pdf",
+      "territory_name": "Senhor do Bonfim",
+      "state_code": "BA",
+      "excerpts": [
+        " Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n2.537.460,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n964.022,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n964.022,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 1.573.438,00\n171252400000       Cota-Parte do Fundo Especial do Petróleo – FEP 1.573"
+      ],
+      "edition": "4.020",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930105/2023-12-21/e270356d43dd6769ccf54d313cdb0d37900d3787.txt"
+    },
+    {
+      "territory_id": "2930105",
+      "date": "2022-11-25",
+      "scraped_at": "2022-12-22T03:41:22.620935",
+      "url": "https://data.queridodiario.ok.org.br/2930105/2022-11-25/8ec9429972f1fc56c54d98ca40bc24c9e60ec5da.pdf",
+      "territory_name": "Senhor do Bonfim",
+      "state_code": "BA",
+      "excerpts": [
+        " Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n1.655.011,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n68.516,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n68.516,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 1.586.495,00\n171252400000       Cota-Parte do Fundo Especial do Petróleo – FEP 1.586.495"
+      ],
+      "edition": "3.259",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930105/2022-11-25/8ec9429972f1fc56c54d98ca40bc24c9e60ec5da.txt"
+    },
+    {
+      "territory_id": "2930105",
+      "date": "2015-01-14",
+      "scraped_at": "2024-06-02T05:45:17.415106",
+      "url": "https://data.queridodiario.ok.org.br/2930105/2015-01-14/0f75279b3c62ec033476ca8d7e2d4c87926d09cc.pdf",
+      "territory_name": "Senhor do Bonfim",
+      "state_code": "BA",
+      "excerpts": [
+        "01 9.044,82 8.405,73 17.450,55 35.193,56 35.193,5600\n\n          TRANSF.COMPENS.FINANC.EXPL.RECURSOS NATUR 650.129,66 51.035,18 55.456,06 106.491,24 54.285,83 50.450,06 104.735,89 211.227,13 211.227,13\n\n              COTA PARTE COMP. FINANC. REC.MIN. CFEM - R 41.453,69 3.254,11 3.536,00 6.790,11 3.461,38 3.216,81 6.678,19 13.468,30 13.468,3042\n\n              COTA-PARTE DO FUNDO ESPECIAL DO PETRÓLEO 414.536,90 32.541,15 35.360,00 67.901,14 34.613,83 32.168,06 66.781,89 134.683,04 134.683,0442\n\n     "
+      ],
+      "edition": "840",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930105/2015-01-14/0f75279b3c62ec033476ca8d7e2d4c87926d09cc.txt"
+    },
+    {
+      "territory_id": "2930105",
+      "date": "2024-12-23",
+      "scraped_at": "2024-12-24T00:49:49.514720",
+      "url": "https://data.queridodiario.ok.org.br/2930105/2024-12-23/5f574384b479c11c4b1551ca33f472039bf0b0b8.pdf",
+      "territory_name": "Senhor do Bonfim",
+      "state_code": "BA",
+      "excerpts": [
+        "Transferências das Compensações Financeiras pela Exploração de\n\nRecursos Naturais\n3.675.941,00\n\n171251000000      Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM\n\n2.305.289,00\n\n171251010000        Cota-parte da Compensação Financeira pela Exploração de Recursos\nMinerais - CFEM - Principal\n\n2.305.289,00\n\n171252000000      Cota-parte da Compensação Financeira pela Produção de Petróleo 1.370.652,00\n171252400000       Cota-Parte do Fundo Especial do Petróleo – FEP 1.370"
+      ],
+      "edition": "4.876",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2930105/2024-12-23/5f574384b479c11c4b1551ca33f472039bf0b0b8.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2930105",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2930105",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

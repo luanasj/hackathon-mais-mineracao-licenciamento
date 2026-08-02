@@ -1,0 +1,144 @@
+{
+  "total_gazettes": 9,
+  "gazettes": [
+    {
+      "territory_id": "2905909",
+      "date": "2024-08-06",
+      "scraped_at": "2024-08-06T21:42:54.347799",
+      "url": "https://data.queridodiario.ok.org.br/2905909/2024-08-06/6d2f1c6f0cb3ff79a0b0f8c266de8804e1964e23.pdf",
+      "territory_name": "Campo Alegre de Lourdes",
+      "state_code": "BA",
+      "excerpts": [
+        "Municipal de Campo Alegre de Lourdes \n\nAvenida Abílio Dias da Silva, s/n, Bairro Joaquim Antunes da Silva, \nCEP: 47.220-000- Campo Alegre de Lourdes - Bahia \nCNPJ. 14.117.329/0001-41 Fone: (74) 3533.2365 \n\nSecretaria Municipal de Meio Ambiente \n\nLicença Ambiental Unificada - LU \n\nNe 002/2023 \nData de Emissão: 15/09/2023 \nEmpresa: POSTO LÍDER LTDA \nNome de Fantasia: Posto Líder \n\nData de Validade: 15/09/2026 \nCNPJ: 51.782.551/0001-95 EPP \n\nInscrição Estadual: \n\nA Secretaria Municipal de Meio Ambiente e Ordenamento"
+      ],
+      "edition": "84",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2905909/2024-08-06/6d2f1c6f0cb3ff79a0b0f8c266de8804e1964e23.txt"
+    },
+    {
+      "territory_id": "2905909",
+      "date": "2024-04-03",
+      "scraped_at": "2024-04-03T21:17:32.370903",
+      "url": "https://data.queridodiario.ok.org.br/2905909/2024-04-03/7af8f84cd5ca08a6b02c8b131551deb8fc0cbb77.pdf",
+      "territory_name": "Campo Alegre de Lourdes",
+      "state_code": "BA",
+      "excerpts": [
+        "Além da remuneração e das vantagens previstas nesta Lei, asseguram-se aos \nProcuradores do Município os seguintes direitos: \nI- ferias; \nII- licença e afastamento; \nIII- aposentadoria. \n \n\nParagrafo Único - O Procurador do Município de ferias ou licenciado não poderá exercer \nqualquer de suas funções. \n \n\nEdição 64 | Ano 5\n03 de abril de 2024\n\nPágina 22\n\nCertificação Digital: RNWW5SMG-GM6ZZDQQ-OBHBN22A-PSO5RWML\nVersão eletrônica disponível em: https://doem.org.br/ba/campoalegredelourdes\n\n\n\n \n\nMUNICÍPIO"
+      ],
+      "edition": "64",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2905909/2024-04-03/7af8f84cd5ca08a6b02c8b131551deb8fc0cbb77.txt"
+    },
+    {
+      "territory_id": "2905909",
+      "date": "2021-03-31",
+      "scraped_at": "2024-03-22T20:25:01.787863",
+      "url": "https://data.queridodiario.ok.org.br/2905909/2021-03-31/97a5aeae71f6c8e67e12c4a5f9001799a9ef4593.pdf",
+      "territory_name": "Campo Alegre de Lourdes",
+      "state_code": "BA",
+      "excerpts": [
+        "004,05 3,52\n\nHABITAÇÃO 60.000,00 30.000,00 0,00 0,00 30.000,00 0,00 30.000,000,00 0,000,00 0,00\n\nHabitação Urbana 60.000,00 30.000,00 0,00 0,00 30.000,00 0,00 30.000,000,00 0,000,00 0,00\n\nGESTÃO AMBIENTAL 2.000,00 2.000,00 0,00 0,00 2.000,00 0,00 2.000,000,00 0,000,00 0,00\n\nPreservação e Conservação Ambiental 2.000,00 2.000,00 0,00 0,00 2.000,00 0,00 2.000,000,00 0,000,00 0,00\n\nAGRICULTURA 121.000,00 91.000,00 0,00 0,00 91.000,00 0,00 91.000,000,00 0,000,00 0,00\n\nIrrigação 67.000,00 37.000,00 0,00 0"
+      ],
+      "edition": "12",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2905909/2021-03-31/97a5aeae71f6c8e67e12c4a5f9001799a9ef4593.txt"
+    },
+    {
+      "territory_id": "2905909",
+      "date": "2024-07-30",
+      "scraped_at": "2024-07-30T21:44:33.303134",
+      "url": "https://data.queridodiario.ok.org.br/2905909/2024-07-30/608395e7926ace53a4d3b12d587dbef235113e4c.pdf",
+      "territory_name": "Campo Alegre de Lourdes",
+      "state_code": "BA",
+      "excerpts": [
+        "000,00 0,00\n\nRecursos Hídricos 552.000,00 402.000,00 134.400,00 278.880,00 123.120,00 120.300,00 137.220,00264.780,00 0,000,31 0,34\n\nGESTÃO AMBIENTAL 360.000,00 360.000,00 0,00 0,00 360.000,00 0,00 360.000,000,00 0,000,00 0,00\n\nAdministração Geral 160.000,00 160.000,00 0,00 0,00 160.000,00 0,00 160.000,000,00 0,000,00 0,00\n\nPreservação e Conservação Ambiental 200.000,00 200.000,00 0,00 0,00 200.000,00 0,00 200.000,000,00 0,000,00 0,00\n\nAGRICULTURA 1.550.000,00 1.308.846,80 66.554,13 149.480,93 1.159"
+      ],
+      "edition": "80",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2905909/2024-07-30/608395e7926ace53a4d3b12d587dbef235113e4c.txt"
+    },
+    {
+      "territory_id": "2905909",
+      "date": "2024-11-29",
+      "scraped_at": "2024-11-29T21:56:04.126654",
+      "url": "https://data.queridodiario.ok.org.br/2905909/2024-11-29/077f45594b55dd0f56471a02f687ebb67835525f.pdf",
+      "territory_name": "Campo Alegre de Lourdes",
+      "state_code": "BA",
+      "excerpts": [
+        "00 0,00 0,00 0,00 0,00 0,000,00 0,000,00 0,00\n\nRecursos Hídricos 552.000,00 272.000,00 0,00 264.780,00 7.220,00 0,00 7.220,00264.780,00 0,000,18 0,19\n\nGESTÃO AMBIENTAL 360.000,00 0,00 0,00 0,00 0,00 0,00 0,000,00 0,000,00 0,00\n\nAdministração Geral 160.000,00 0,00 0,00 0,00 0,00 0,00 0,000,00 0,000,00 0,00\n\nPreservação e Conservação Ambiental 200.000,00 0,00 0,00 0,00 0,00 0,00 0,000,00 0,000,00 0,00\n\nAGRICULTURA 1.550.000,00 384.394,98 10.900,00 302.080,93 82.314,05 12.891,66 84.339,07300.055,91 0"
+      ],
+      "edition": "89",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2905909/2024-11-29/077f45594b55dd0f56471a02f687ebb67835525f.txt"
+    },
+    {
+      "territory_id": "2905909",
+      "date": "2024-01-31",
+      "scraped_at": "2024-03-22T20:26:43.186897",
+      "url": "https://data.queridodiario.ok.org.br/2905909/2024-01-31/e93b3b95348367e7a9c6643f6081a91aad1d0639.pdf",
+      "territory_name": "Campo Alegre de Lourdes",
+      "state_code": "BA",
+      "excerpts": [
+        "865.062,91 11.996,851,19 1,20\n\nHABITAÇÃO 30.310,00 310,00 0,00 0,00 310,00 0,00 310,000,00 0,000,00 0,00\n\nHabitação Urbana 30.310,00 310,00 0,00 0,00 310,00 0,00 310,000,00 0,000,00 0,00\n\nGESTÃO AMBIENTAL 2.000,00 2.000,00 0,00 0,00 2.000,00 0,00 2.000,000,00 0,000,00 0,00\n\nPreservação e Conservação Ambiental 2.000,00 2.000,00 0,00 0,00 2.000,00 0,00 2.000,000,00 0,000,00 0,00\n\nAGRICULTURA 95.000,00 9.000,00 0,00 5.000,00 4.000,00 0,00 9.000,000,00 5.000,000,00 0,00\n\nIrrigação 39.000,00 5.000,00 0,00"
+      ],
+      "edition": "51",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2905909/2024-01-31/e93b3b95348367e7a9c6643f6081a91aad1d0639.txt"
+    },
+    {
+      "territory_id": "2905909",
+      "date": "2023-02-01",
+      "scraped_at": "2024-03-22T20:27:14.826916",
+      "url": "https://data.queridodiario.ok.org.br/2905909/2023-02-01/33c079a2a8e029b6154cf1afad76aa407bc73f76.pdf",
+      "territory_name": "Campo Alegre de Lourdes",
+      "state_code": "BA",
+      "excerpts": [
+        "HABITAÇÃO 151.000,00 21.000,00 -20.000,00 0,00 21.000,00 0,00 21.000,000,00 0,000,00 0,00\n\nHabitação Urbana 151.000,00 21.000,00 -20.000,00 0,00 21.000,00 0,00 21.000,000,00 0,000,00 0,00\n\nGESTÃO AMBIENTAL 2.000,00 2.000,00 0,00 0,00 2.000,00 0,00 2.000,000,00 0,000,00 0,00\n\nPreservação e Conservação Ambiental 2.000,00 2.000,00 0,00 0,00 2.000,00 0,00 2.000,000,00 0,000,00 0,00\n\nAGRICULTURA 92.000,00 242.000,00 40.380,47 190.380,47 51.619,53 45.557,77 51.619,53190.380,47 0,000,16 0,16\n\nIrrigação 38.000"
+      ],
+      "edition": "20",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2905909/2023-02-01/33c079a2a8e029b6154cf1afad76aa407bc73f76.txt"
+    },
+    {
+      "territory_id": "2905909",
+      "date": "2023-01-19",
+      "scraped_at": "2024-03-22T20:27:14.831554",
+      "url": "https://data.queridodiario.ok.org.br/2905909/2023-01-19/40628e2e152e0a16df6cfb97f9d73ed2bb9b80b2.pdf",
+      "territory_name": "Campo Alegre de Lourdes",
+      "state_code": "BA",
+      "excerpts": [
+        "151.000,00 21.000,00 0,00 20.000,00 1.000,00 0,00 21.000,000,00 20.000,000,02 0,00\n\nHabitação Urbana 151.000,00 21.000,00 0,00 20.000,00 1.000,00 0,00 21.000,000,00 20.000,000,02 0,00\n\nGESTÃO AMBIENTAL 2.000,00 2.000,00 0,00 0,00 2.000,00 0,00 2.000,000,00 0,000,00 0,00\n\nPreservação e Conservação Ambiental 2.000,00 2.000,00 0,00 0,00 2.000,00 0,00 2.000,000,00 0,000,00 0,00\n\nAGRICULTURA 92.000,00 242.000,00 40.380,47 190.380,47 51.619,53 45.557,77 51.619,53190.380,47 0,000,17 0,18\n\nIrrigação 38.000"
+      ],
+      "edition": "19",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2905909/2023-01-19/40628e2e152e0a16df6cfb97f9d73ed2bb9b80b2.txt"
+    },
+    {
+      "territory_id": "2905909",
+      "date": "2025-05-27",
+      "scraped_at": "2025-05-27T21:43:01.932193",
+      "url": "https://data.queridodiario.ok.org.br/2905909/2025-05-27/9a9c487d0f92ebcc9d289de348217694bfcf6c1a.pdf",
+      "territory_name": "Campo Alegre de Lourdes",
+      "state_code": "BA",
+      "excerpts": [
+        "Prestador 8.087,80 0,00 0,00 0,00 0,0024.188,28\n\n1.1.2.1.01.0.1.04.00 Taxa de Licença para Execução de Obras 4.176,00 0,00 0,00 0,00 0,000,00\n\n1.1.2.1.04.0.0.00.00 Taxa de Controle e Fiscalização Ambiental 0,00 20.000,00 22.000,00 22.858,00 23.722,030,00\n\n1.1.2.1.04.0.1.00.00 Taxa de Controle e Fiscalização Ambiental - Principal 0,00 20.000,00 22.000,00 22.858,00 23.722,030,00\n\n1.1.2.1.50.0.0.00.00 Taxa de Fiscalização de Vigilância Sanitária 0,00 19.000,00 23.000,00 23.897,00 24.800,310,00\n\n1.1.2.1.50"
+      ],
+      "edition": "114",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2905909/2025-05-27/9a9c487d0f92ebcc9d289de348217694bfcf6c1a.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2905909",
+    "termo": "licenciamento ambiental",
+    "params": {
+      "territory_ids": "2905909",
+      "querystring": "licenciamento ambiental",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}

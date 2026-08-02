@@ -1,0 +1,32 @@
+{
+  "total_gazettes": 1,
+  "gazettes": [
+    {
+      "territory_id": "2901601",
+      "date": "2024-12-13",
+      "scraped_at": "2025-01-29T23:04:42.752265",
+      "url": "https://data.queridodiario.ok.org.br/2901601/2024-12-13/5131428b2e9fe0cdcb39b73da68d6ca6891682b0.pdf",
+      "territory_name": "Antas",
+      "state_code": "BA",
+      "excerpts": [
+        "Art. 5º - 3.500,00 \n\nAudiovisual - Lei Paulo Gustavo \n\n132101010415  Remuneração de Depósitos Bancários - LC nº 195/2022 – Art. 8º - \n\nDemais Setores da Cultura - Lei Paulo Gustavo \n\n \n2.000,00 \n\n \n\n132101010416 Remuneração de Depósitos Bancários - CFEM 100,00   \n\n139000000000 Demais Receitas Patrimoniais  10.000,00 \n\n139900000000 Outras Receitas Patrimoniais 10.000,00  \n\n139999000000 Outras Receitas Patrimoniais 10.000,00  \n\n139999010000 Outras Receitas Patrimoniais - Principal 10.000,00  \n\n139999010100"
+      ],
+      "edition": "2394",
+      "is_extra_edition": false,
+      "txt_url": "https://data.queridodiario.ok.org.br/2901601/2024-12-13/5131428b2e9fe0cdcb39b73da68d6ca6891682b0.txt"
+    }
+  ],
+  "_meta": {
+    "codigo_ibge": "2901601",
+    "termo": "cfem",
+    "params": {
+      "territory_ids": "2901601",
+      "querystring": "cfem",
+      "excerpt_size": 500,
+      "number_of_excerpts": 1,
+      "size": 10
+    },
+    "data_de_coleta": "2026-08-01",
+    "fonte": "https://api.queridodiario.ok.org.br/gazettes"
+  }
+}
