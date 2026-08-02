@@ -1,6 +1,6 @@
 -- Gerado por scripts/generate_seed_sql.py a partir de data/processed/. Não editar à mão.
 -- Uma única transação: ordem dos INSERT já respeita as FKs (municipio antes de
--- habilitacao_gac/ato_diario_oficial, termo_busca vem do schema.sql).
+-- habilitacao_gac/ato_diario_oficial/licenca, termo_busca vem do schema.sql).
 BEGIN TRANSACTION;
 
 INSERT INTO fonte_cepram (id, resolucao, publicacao, arquivo_fonte, secao, paginas_fonte, data_extracao, metodo, verificado) VALUES (1, 'Resolução CEPRAM nº 4.327, de 31 de outubro de 2013', 'Diário Oficial do Estado da Bahia, 3 de dezembro de 2013, Ano XCVIII, Nº 21.301', 'documentation/Resolucao-CEPRAM-4.327-2013.pdf', 'Anexo Único — Tipologia e Porte dos Empreendimentos e Atividades Sujeitos a Licença ou Autorização Ambiental — Competência Municipal — Divisão B: Mineração', '11-15', '2026-08-01', 'Extração direta de texto e tabela do PDF com pdfplumber, célula a célula. data_source/Anexo_IV_Divisao_B_Mineracao_Bahia.xlsx foi checada e DESCARTADA como fonte: seus limiares numéricos e sua matriz de Classe divergem deste PDF para as mesmas tipologias (ex. B3.1: planilha diz <150.000/500.000, este PDF diz <75.000/375.000) — confirmado com o usuário em 01/08/2026 que o PDF é a fonte correta, não a planilha.', 1);
