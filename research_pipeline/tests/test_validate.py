@@ -52,6 +52,7 @@ LICENCA_GOAL_8: dict[str, Any] = {
     "potencial_poluidor": "M",
     "nivel_licenciamento": None,
     "modalidade": "LAU",
+    "modalidade_raw": "LAU",
     "numero_licenca": "01/2025",
     "data_concessao": "2025-02-04",
     "fonte_urls": ["https://exemplo.invalid/caturama/lau-01-2025"],
@@ -329,9 +330,44 @@ def test_modalidade_normaliza(refs: ReferenceData, bruta: str, canonica: str) ->
     assert validas[0].modalidade == canonica
 
 
-@pytest.mark.parametrize("bruta", ["Licença Unificada", "LAU/2025", "Autorização", ""])
-def test_modalidade_fora_do_vocabulario_e_erro_duro(refs: ReferenceData, bruta: str) -> None:
+@pytest.mark.parametrize(
+    "bruta", ["Licença Unificada", "LAU/2025", "Autorização", "Licença Específica", "Licença de Alteração"]
+)
+def test_modalidade_fora_do_vocabulario_vira_outra_e_preserva_o_raw(
+    refs: ReferenceData, bruta: str
+) -> None:
+    """Antes era erro duro, e o relatório real de 2025 mostrou o preço: `Licença Específica` e
+    `Licença de Alteração` derrubavam a linha inteira, que sumia do produto sem aparecer em
+    `validation_errors` do JSON final. Perder a licença é pior que registrar `"Outra"` — e o
+    documento continua legível por `modalidade_raw`."""
+    validas, erros, _ = validate_licencas(
+        [_licenca(modalidade=bruta, modalidade_raw=None)], refs
+    )
+
+    assert erros == []
+    assert validas[0].modalidade == "Outra"
+    assert validas[0].modalidade_raw == bruta
+
+
+@pytest.mark.parametrize("bruta", ["", "   "])
+def test_modalidade_vazia_e_nula_sem_raw(refs: ReferenceData, bruta: str) -> None:
+    """String vazia não é "modalidade que não conhecemos", é campo ausente — vira `None` dos dois
+    lados, e não uma `"Outra"` com `modalidade_raw` em branco."""
+    validas, erros, _ = validate_licencas(
+        [_licenca(modalidade=bruta, modalidade_raw=None)], refs
+    )
+
+    assert erros == []
+    assert validas[0].modalidade is None
+    assert validas[0].modalidade_raw is None
+
+
+@pytest.mark.parametrize("bruta", [123, {}, []])
+def test_modalidade_nao_textual_continua_erro_duro(refs: ReferenceData, bruta: Any) -> None:
+    """Só *texto* fora do vocabulário vira `"Outra"`. Número ou objeto no campo é o LLM devolvendo
+    lixo estrutural, e isso não tem licença real por trás para preservar."""
     validas, erros, _ = validate_licencas([_licenca(modalidade=bruta)], refs)
+
     assert validas == []
     assert any("modalidade" in erro for erro in erros), erros
 

@@ -22,7 +22,19 @@ Duas decisões que o §8 impõe e que não são óbvias:
 `Modalidade` é o único campo com coerção. O §5 manda o prompt de pesquisa pedir `Renovação`, com
 til, e o produto final grava `"Renovacao"`, sem: `_normalizar_modalidade` dobra caixa e acento e
 mapeia as 6 formas conhecidas. É a mesma classe de operação que o `fold()` do patch 6 — mecânica,
-fechada, e não inventa valor: `"Licença Unificada"` continua erro duro.
+fechada, e não inventa valor.
+
+O que está **fora** dessas 6 formas vira `"Outra"`, com a grafia original preservada em
+`modalidade_raw`. Antes era erro duro, e o relatório real de 2025 provou que isso perde dado em
+silêncio: prefeituras escrevem `"Licença Específica"` e `"Licença de Alteração"`, o `Literal`
+recusava a linha inteira em `extract`, ela queimava as 2 tentativas de reparo e sumia do produto —
+sem aparecer em `validation_errors` do JSON final, porque o manifesto conta só o que sobreviveu.
+Perder a licença é pior erro que registrar uma modalidade que a norma não nomeia.
+
+`"Outra"` **não amplia o vocabulário**: o §5 do `GOAL.md` congelou a coluna como
+`LP/LI/LO/LAU/LU/Renovação`, e pôr `"Licença Específica"` no `Literal` seria afirmar, sem fonte
+normativa, que aquilo é uma modalidade — quando é a redação de uma prefeitura. `"Outra"` diz
+exatamente o que se sabe (não é nenhuma das 6) e `modalidade_raw` guarda o que o documento disse.
 """
 
 from __future__ import annotations
@@ -30,7 +42,7 @@ from __future__ import annotations
 import unicodedata
 from typing import Any, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 __all__ = [
     "Citation",
@@ -56,7 +68,9 @@ LicenciadoPor = Literal["municipio_proprio", "consorcio", "indeterminado"]
 """§6.4. Nunca deduzido do vínculo consorcial — exige evidência textual, e sem ela é
 `indeterminado`."""
 
-Modalidade = Literal["LP", "LI", "LO", "LAU", "LU", "Renovacao"]
+Modalidade = Literal["LP", "LI", "LO", "LAU", "LU", "Renovacao", "Outra"]
+"""As 6 do §5 mais `"Outra"`, que é a ausência de classificação, não uma sétima modalidade — ver o
+docstring do módulo. Quem lê `"Outra"` tem de ler `modalidade_raw` junto."""
 
 PotencialPoluidor = Literal["P", "M", "A"]
 """Os três do Art. 109. As 17 folhas medidas usam só `M` e `A`; o literal acompanha a matriz, não o
@@ -86,11 +100,34 @@ def _dobrar(texto: str) -> str:
 
 
 def _normalizar_modalidade(valor: Any) -> Any:
-    """`"Renovação"`, `"renovacao"`, `"lau"` -> a grafia canônica. Não-string passa intacto para o
-    `Literal` recusar com a mensagem de tipo do pydantic."""
+    """`"Renovação"`, `"renovacao"`, `"lau"` -> a grafia canônica; string fora das 6 -> `"Outra"`.
+
+    Não-string passa intacto para o `Literal` recusar com a mensagem de tipo do pydantic: `123` ou
+    `{}` no campo é o LLM devolvendo lixo estrutural, e isso continua erro duro. Só *texto* que não
+    está no vocabulário vira `"Outra"` — texto é o caso em que há uma licença real por trás.
+    """
     if not isinstance(valor, str):
         return valor
-    return _MODALIDADES_POR_DOBRA.get(_dobrar(valor), valor)
+    dobrado = _dobrar(valor)
+    if not dobrado:
+        return None
+    return _MODALIDADES_POR_DOBRA.get(dobrado, "Outra")
+
+
+def _preservar_modalidade_raw(dados: Any) -> Any:
+    """Copia a grafia original para `modalidade_raw` antes de `_normalizar_modalidade` agir.
+
+    `mode="before"` no **modelo**, não no campo: um `field_validator` só enxerga o próprio campo e
+    não teria como escrever noutro. Só preenche quando `modalidade_raw` está ausente — recarregar
+    um produto já emitido (o que `validate.py` e o carregador do banco fazem) não pode sobrescrever
+    o raw que já foi gravado pela grafia canônica que veio junto.
+    """
+    if not isinstance(dados, dict):
+        return dados
+    bruta = dados.get("modalidade")
+    if dados.get("modalidade_raw") is None and isinstance(bruta, str) and bruta.strip():
+        dados = {**dados, "modalidade_raw": bruta}
+    return dados
 
 
 class _Base(BaseModel):
@@ -125,11 +162,13 @@ class LicencaBruta(_Base):
     tipologia_raw: str | None = None
     nivel_licenciamento: NivelLicenciamento | None = None
     modalidade: Modalidade | None = None
+    modalidade_raw: str | None = None
     numero_licenca: str | None = None
     data_concessao: str | None = None
     fonte_urls: list[str] = Field(min_length=1)
     trecho_citado: str = Field(min_length=1)
 
+    _raw_modalidade = model_validator(mode="before")(_preservar_modalidade_raw)
     _norm_modalidade = field_validator("modalidade", mode="before")(_normalizar_modalidade)
 
 
@@ -164,6 +203,7 @@ class LicencaNormalizada(_Base):
     potencial_poluidor: PotencialPoluidor | None
     nivel_licenciamento: NivelLicenciamento | None
     modalidade: Modalidade | None
+    modalidade_raw: str | None
     numero_licenca: str | None
     data_concessao: str | None
     fonte_urls: list[str] = Field(min_length=1)
@@ -171,6 +211,7 @@ class LicencaNormalizada(_Base):
     data_consulta: str = Field(min_length=1)
     verificado: Literal[False]
 
+    _raw_modalidade = model_validator(mode="before")(_preservar_modalidade_raw)
     _norm_modalidade = field_validator("modalidade", mode="before")(_normalizar_modalidade)
 
 
