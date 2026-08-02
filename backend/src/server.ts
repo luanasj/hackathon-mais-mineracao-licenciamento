@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url'
 
 import cors from 'cors'
 import express from 'express'
-import type { Request, Response } from 'express'
+import type { NextFunction, Request, Response } from 'express'
 
 import { avaliar } from '@/lib/motor'
 import { construirFactBase } from '@/lib/fatos'
@@ -241,8 +241,42 @@ function normalizar(s: string): string {
     .trim()
 }
 
+// ---------------------------------------------------------------------------
+// SPA \u2014 mesma origem que a API, para o deploy de cont\u00eainer \u00fanico (Cloud Run)
+// ---------------------------------------------------------------------------
+
+/**
+ * Serve o bundle do Vite quando ele existe ao lado. Em desenvolvimento n\u00e3o
+ * existe (`vite dev` serve o frontend em 5173 e o proxy de `vite.config.ts`
+ * manda `/api` para c\u00e1), ent\u00e3o o bloco inteiro \u00e9 pulado e nada muda.
+ *
+ * Em produ\u00e7\u00e3o os dois v\u00e3o no mesmo cont\u00eainer: `api.ts` chama `/api/...` com
+ * caminho relativo, e caminho relativo s\u00f3 resolve se a origem for a mesma.
+ * \u00c9 isso que dispensa CORS e uma `VITE_API_URL` no build.
+ */
+const DIST = process.env.FRONTEND_DIST ?? path.resolve(__dirname_, '../../frontend/dist')
+
+if (fs.existsSync(DIST)) {
+  app.use(express.static(DIST))
+  // Middleware e n\u00e3o `app.get('*')`: o Express 5 usa path-to-regexp v8, onde
+  // o curinga solto deixou de ser rota v\u00e1lida e lan\u00e7a no boot.
+  app.use((req: Request, res: Response, next: NextFunction) => {
+    // HEAD junto com GET: verificadores de disponibilidade e crawlers usam
+    // HEAD, e uma rota de SPA respondendo 404 a eles é ruído.
+    if ((req.method !== 'GET' && req.method !== 'HEAD') || req.path.startsWith('/api/')) {
+      next()
+      return
+    }
+    res.sendFile(path.join(DIST, 'index.html'))
+  })
+} else {
+  console.warn(`[spa] ${DIST} n\u00e3o encontrado \u2014 servindo s\u00f3 a API.`)
+}
+
 const PORT = Number(process.env.PORT ?? 3001)
-app.listen(PORT, () => {
+// `0.0.0.0` explícito: o Cloud Run descarta o contêiner que não atende em
+// todas as interfaces na porta de $PORT.
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`backend ouvindo em http://localhost:${PORT}`)
   console.log(`  ${TIPOLOGIAS.length} tipologias, ${MUNICIPIOS.length} municípios`)
   console.log(

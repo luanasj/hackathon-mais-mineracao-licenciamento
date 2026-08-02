@@ -1,0 +1,44 @@
+# Contexto de build enviado ao Cloud Build. Sem este arquivo são 381 MB (+47 MB
+# de .git) subindo a cada deploy — com ele, ~30 MB.
+#
+# Regra: só entra o que o Dockerfile da raiz copia — frontend/, backend/ e os
+# quatro .sql de documentation/.
+
+.git
+.github
+
+# dependências: reinstaladas com `npm ci` dentro da imagem
+**/node_modules
+.venv
+
+# brutos do pipeline (54 MB de shapefiles). O que a aplicação consome já está
+# processado em frontend/public/data/, gerado por `pipeline/prep.py`.
+data_source/
+
+# o banco é assado na imagem a partir de documentation/*.sql; a cópia local
+# de data/db/ não vai junto, e data/raw/ e data/processed/ só servem aos scripts
+data/
+
+# bundle: reconstruído no stage `frontend`
+frontend/dist
+**/*.tsbuildinfo
+.vite/
+
+# etapas que não rodam em produção
+pipeline/
+research_pipeline/
+scripts/
+common/
+**/__pycache__
+**/*.pyc
+.pytest_cache/
+
+# PDFs das normas (2,4 MB) — fonte documental, não insumo de runtime
+documentation/*.pdf
+
+# segredos: o backend não lê nenhum, e isto garante que não vazem para a imagem
+.env
+.env.*
+!.env.example
+
+.DS_Store

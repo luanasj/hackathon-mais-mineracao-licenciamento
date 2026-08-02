@@ -1,6 +1,10 @@
 services:
   db:
-    build: .
+    # O `Dockerfile` da raiz passou a ser o da aplicação (deploy no Cloud Run,
+    # que procura por ele sem flag). Este serviço é só o browser sqlite-web.
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.sqliteweb
     ports:
       - "8080:8080"
     volumes:
