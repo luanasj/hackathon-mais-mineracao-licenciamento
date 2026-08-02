@@ -180,7 +180,14 @@ def build_manifest(
 def emit(state: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
     """`(state, config) -> {"output_path": ..., "manifest_path": ...}`. Escreve
     `licencas_<ano>.json` (o `Produto` do §8) e `manifest.json` no diretório do run
-    (`config["configurable"]["run_dir"]`, o mesmo padrão de `refs`/`structurer` — decisão 18)."""
+    (`config["configurable"]["run_dir"]`, o mesmo padrão de `refs`/`structurer` — decisão 18).
+
+    `refs.avisos` (patch 4 — as células malformadas do XLSX, ex. `tipologia_porte_ausente:B4.2:*`)
+    entra aqui, não em `normalize`/`validate`: é aviso sobre o **vocabulário carregado**, não sobre
+    uma licença, e só este nó vê tanto `refs` quanto o `avisos` acumulado do lote. Sem isso, a
+    verificação de ponta a ponta do patch 11 (que espera `tipologia_porte_ausente:B4.2:*` visível
+    no manifesto de todo run) nunca teria de onde vir — nenhum nó anterior existia com os dois ao
+    mesmo tempo antes do grafo (patch 11) ligar tudo."""
     configurable = config["configurable"]
     refs: ReferenceData = configurable["refs"]
     run_dir = Path(configurable["run_dir"])
@@ -189,7 +196,7 @@ def emit(state: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
 
     ano = state["ano"]
     run_id = state["run_id"]
-    avisos = state.get("avisos", [])
+    avisos = [*state.get("avisos", []), *refs.avisos]
     licencas = [LicencaNormalizada.model_validate(bruta) for bruta in state["licencas_normalizadas"]]
 
     meta = build_manifest(

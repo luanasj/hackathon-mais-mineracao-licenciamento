@@ -885,7 +885,7 @@ previa "não" na coluna Chave?. 11 testes novos (`test_emit.py`: 10, mais 1 em
 
 ---
 
-## Patch 11 — Grafo, CLI, checkpointer, `--resume`, `--report` — pipeline offline completo
+## Patch 11 — Grafo, CLI, checkpointer, `--resume`, `--report` — pipeline offline completo ✅ feito
 
 **Objetivo:** `python -m research_pipeline.run` produz o JSON final a partir de um relatório salvo,
 **sem chave e sem gasto**, satisfazendo AC1–AC6 e AC8.
@@ -929,6 +929,69 @@ python -m research_pipeline.run --resume 2025_<ts> --llm fixture --runs-dir /tmp
 ```
 completa sem reinvocar o nó de pesquisa (contador de chamadas no teste) — a metade offline do AC7.
 E `python -m research_pipeline.run --dry-run` como pré-voo barato antes de qualquer gasto.
+
+**Feito.** Os três arquivos (`nodes/research.py`, `graph.py`, `run.py`) mais
+`tests/test_acceptance_offline.py` e `tests/test_research.py`, com cinco achados que a prosa acima
+não previa:
+
+1. **`extract`/`normalize`/`emit` anotados `config: dict[str, Any]` quebram como nó real do
+   `StateGraph`.** O `LangGraph` decide se o segundo parâmetro de um nó é o `config` injetável
+   **pela anotação de tipo**, não pela posição: qualquer coisa que não seja `RunnableConfig` (ou
+   nenhuma anotação) faz o `StateGraph` concluir que o nó só aceita `state`, e a chamada real
+   falha com `TypeError: ...() missing 1 required positional argument: 'config'` — medido
+   registrando os três nós direto no grafo, sem tratamento. Isso não apareceu nos patches 8–10
+   porque nada ali chamava esses nós **através** de um `StateGraph` — só direto, como função Python
+   comum (`check_golden.py`, os testes). Reanotar os módulos originais os acoplaria ao LangGraph só
+   para satisfazer essa inspeção; a correção ficou em `graph.py`: `_sem_anotacao(no)` devolve cada
+   nó por trás de um wrapper `(state, config)` sem anotação, o formato que o `StateGraph`
+   reconhece, sem tocar em nenhum módulo que `check_golden.py` ainda chama como função pura.
+2. **Não existe nó `load_refs`,** ao contrário do que a prosa do plano (e o diagrama antigo do
+   §3) sugeriam. `config` é o mesmo objeto do início ao fim de um `invoke()` — nenhum nó pode
+   reescrevê-lo para os nós seguintes — então um nó cujo único papel fosse "carregar `refs` no
+   `config`" não teria como entregar o resultado a ninguém. `load_reference_data()` roda em
+   `run.py:main()`, antes de montar `structurer`/`ref_index`/`checkpointer` e antes do primeiro
+   `invoke()`: é essa ordem, não um nó, que garante o AC8 ("falhar antes de gastar").
+3. **`refs.avisos` (patch 4 — as duas células malformadas do XLSX, `tipologia_porte_ausente:B4.2:*`)
+   não estava ligado a nada.** Nenhum nó dos patches 4–10 via ao mesmo tempo `refs` e o `avisos`
+   acumulado do lote — a "Verificação de ponta a ponta" do próprio plano já esperava esse aviso no
+   manifesto final, mas nenhum código o produzia. Corrigido em `nodes/emit.py` (não em `graph.py`):
+   `avisos = [*state.get("avisos", []), *refs.avisos]`, porque `emit` é o primeiro (e único) nó com
+   os dois em mãos. Onze testes de `test_emit.py` continuam batendo porque nenhum fixa a lista
+   completa de avisos — só formato de agregação e contagem.
+4. **`validation_errors` não realimenta `normalize`/`extract` no reparo.** A prosa do plano dizia
+   "erros de validação são realimentados literalmente como mensagem extra", mas nenhum dos dois nós
+   aceita esse parâmetro hoje, e nenhum patch anterior listava modificá-los. Adicionar um campo que
+   ninguém lê seria scaffolding sem uso — o mesmo princípio que manteve `custo_estimado_usd` fora do
+   manifesto no patch 10. O que o `repair` desta versão garante é real e testado: a contagem de
+   tentativas (`repair_attempts`, máximo `REPAIR_ATTEMPTS_MAXIMO = 2`, §5) e o roteamento para o nó
+   certo (`normalize`, exceto no caso degenerado de `licencas_brutas` vazia, que volta a `extract`).
+   O canal de mensagem entra quando existir um `Structurer` real (patch 13) que o leia.
+5. **`repair`/`apos_validate`/`apos_repair`/`validate_node` são públicos, não `_privados`.** Toda
+   função testada direto neste projeto até aqui é pública (`build_manifest`, `validate_licencas`,
+   `derive_consorcio_aliases`...) — nenhum teste anterior importa símbolo com `_` na frente. O
+   roteamento do grafo é lógica pura (decisão D) e vale o mesmo tratamento.
+
+`run.py`: `--resume` e `--report` são mutuamente exclusivos (erro explícito, não comportamento
+ambíguo); `--ano` só é lido fora de `--resume` — o ano mora no prefixo do próprio `run_id`.
+`--research gemini` devolve erro nomeando o patch 14, em vez de tentar e falhar fundo dentro do
+grafo. Confirmado por experimento isolado com `SqliteSaver` (não só lido na documentação): um nó
+que já completou não é reexecutado numa retomada (`invoke(None, config)` numa *thread* concluída é
+no-op, zero nós chamados) — é o que faz o teste do AC7 funcionar sem simular um crash a meio do
+grafo.
+
+17 testes novos (`test_acceptance_offline.py`: 13, `test_research.py`: 4), **271 no total**, suíte
+inteira verde. Comando de ponta a ponta rodado de verdade, não só descrito:
+```
+python -m research_pipeline.run --dry-run
+python -m research_pipeline.run --ano 2025 \
+  --report research_pipeline/tests/fixtures/raw_report_2025_seed.md --llm fixture --runs-dir /tmp/rp-runs
+python -m research_pipeline.run --resume <run_id> --llm fixture --runs-dir /tmp/rp-runs
+RP_LLM=fixture python -m research_pipeline.tools.check_golden extract
+RP_LLM=fixture python -m research_pipeline.tools.check_golden normalize
+```
+O manifesto do run real traz os seis avisos que a "Verificação de ponta a ponta" do plano promete:
+`consorcio_divergente`, `consorcio_inesperado`, `municipio_nao_resolvido`, `municipio_nao_apto`,
+`consorcio_match_confianca` e `tipologia_porte_ausente` (achado 3 acima) — nenhum ausente.
 
 ---
 
@@ -1039,7 +1102,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | 8 | Estruturador fixture + `extract` + **fixture semente** ✅ | não | `check_golden extract` |
 | 9 | `normalize` + cruzamentos ✅ | não | `check_golden normalize` |
 | 10 | Ranking + manifesto ✅ | não | `pytest test_emit.py` |
-| 11 | **Grafo + CLI + checkpointer + `--resume`/`--report`** | não | run offline completo, AC1–AC6+AC8 |
+| 11 | **Grafo + CLI + checkpointer + `--resume`/`--report`** ✅ | não | run offline completo, AC1–AC6+AC8 |
 | 12 | `deep_research_v1.md` | não | `pytest test_prompt_deep_research.py` |
 | 13 | DeepSeek real | sim, ~US$ 0,01 | offline passa; um run barato |
 | 14 | Gemini Deep Research | sim, US$ 1–3 | retomada provada offline; um run pago |
