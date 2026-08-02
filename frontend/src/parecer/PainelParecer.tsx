@@ -186,7 +186,6 @@ export default function PainelParecer({
         </div>
       </div>
 
-      <Caminho parecer={parecer} />
 
       <button
         type="button"
@@ -220,188 +219,7 @@ export default function PainelParecer({
  * um não sabia que o outro existia, nem em que ordem lê-los. Aqui a numeração
  * declara a ordem, e o resumo de cada etapa é legível sem abrir nada.
  */
-function Caminho({ parecer }: { parecer: Parecer }) {
-  const [aberta, setAberta] = useState<number | null>(null)
-  const alternar = (n: number) => setAberta((a) => (a === n ? null : n))
 
-  const fatos = Object.values(parecer.fatos)
-  const disparadas = parecer.rastro.filter((p) => p.disparou)
-  const concorrentes = new Set(parecer.fatores_concorrentes.map((f) => f.regra_id))
-  const vencedora = disparadas.find((p) => !concorrentes.has(p.regra_id)) ?? null
-  const fundamentos = fundamentosDoParecer(parecer)
-
-  return (
-    <div style={{ marginTop: 34 }}>
-      <div style={s.secao}>Como se chegou aqui</div>
-
-      <div style={{ marginTop: 14 }}>
-        <Etapa
-          n={1}
-          titulo="Os fatos apurados"
-          resumo={`${fatos.length} ${fatos.length === 1 ? 'fato alimentou' : 'fatos alimentaram'} o motor`}
-          aberta={aberta === 1}
-          aoAlternar={() => alternar(1)}
-          ultima={false}
-        >
-          {fatos.length === 0 ? (
-            <Vazio>Nenhum fato apurado ainda.</Vazio>
-          ) : (
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              {fatos.map((f) => (
-                <div
-                  key={f.chave}
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    gap: 20,
-                    padding: '12px 0',
-                    borderBottom: `1px solid ${CORES.linhaSuave}`,
-                  }}
-                >
-                  <div style={{ minWidth: 0 }}>
-                    <div style={{ fontSize: 15 }}>{rotuloFato(f.chave)}</div>
-                    <div style={{ ...s.mono, fontSize: 11.5, marginTop: 3, lineHeight: 1.5 }}>
-                      {f.origem}
-                      {f.procedencia && ` · ${f.procedencia.fonte}`}
-                      {f.procedencia && ` · consultado em ${dataBR(f.procedencia.data_consulta)}`}
-                    </div>
-                  </div>
-                  <span
-                    style={{
-                      fontSize: 15,
-                      textAlign: 'right',
-                      fontVariantNumeric: 'tabular-nums',
-                      flex: 'none',
-                      maxWidth: '45%',
-                    }}
-                  >
-                    {formatar(f.valor)}
-                  </span>
-                </div>
-              ))}
-            </div>
-          )}
-        </Etapa>
-
-        <Etapa
-          n={2}
-          titulo="As regras confrontadas"
-          resumo={`${disparadas.length} de ${parecer.rastro.length} ${
-            parecer.rastro.length === 1 ? 'regra disparou' : 'regras dispararam'
-          }`}
-          aberta={aberta === 2}
-          aoAlternar={() => alternar(2)}
-          ultima={false}
-        >
-          {parecer.rastro.length === 0 ? (
-            <Vazio>A base de regras está vazia.</Vazio>
-          ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
-              {parecer.rastro.map((passo) => (
-                <Regra key={passo.regra_id} passo={passo} />
-              ))}
-            </div>
-          )}
-        </Etapa>
-
-        <Etapa
-          n={3}
-          titulo="Quem prevaleceu"
-          resumo={
-            vencedora
-              ? ROTULO_INSTANCIA[parecer.instancia]
-              : 'nenhuma regra concluiu'
-          }
-          aberta={aberta === 3}
-          aoAlternar={() => alternar(3)}
-          ultima={false}
-        >
-          {!vencedora ? (
-            <Vazio>
-              Nenhuma regra da base concluiu com os fatos disponíveis — por isso a competência
-              fica indeterminada, em vez de ser atribuída por eliminação.
-            </Vazio>
-          ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-              <div>
-                <div style={{ ...s.etiqueta, fontSize: 11, color: CORES.verde }}>venceu</div>
-                <div style={{ fontSize: 16, lineHeight: 1.5, marginTop: 5 }}>
-                  {vencedora.descricao}
-                </div>
-                <div style={{ ...s.mono, marginTop: 4 }}>
-                  {ROTULO_INSTANCIA[parecer.instancia]}
-                </div>
-                <Fonte fundamento={vencedora.fundamento} />
-              </div>
-
-              {parecer.fatores_concorrentes.length === 0 ? (
-                <div style={{ fontSize: 14, color: CORES.cinza, lineHeight: 1.55 }}>
-                  Nenhuma outra regra disparou — não houve concorrência de precedência.
-                </div>
-              ) : (
-                <div>
-                  <div style={{ ...s.etiqueta, fontSize: 11, color: CORES.terraClara }}>
-                    também dispararam, e perderam a precedência
-                  </div>
-                  <div
-                    style={{ display: 'flex', flexDirection: 'column', gap: 16, marginTop: 10 }}
-                  >
-                    {parecer.fatores_concorrentes.map((f) => (
-                      <div key={f.regra_id} style={{ fontSize: 16, lineHeight: 1.5 }}>
-                        {f.descricao}
-                        <div style={{ ...s.mono, marginTop: 4 }}>
-                          {ROTULO_INSTANCIA[f.instancia]} · precedência {f.precedencia}
-                        </div>
-                        <Fonte fundamento={f.fundamento} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-        </Etapa>
-
-        <Etapa
-          n={4}
-          titulo="A base legal"
-          resumo={
-            fundamentos.length === 0
-              ? 'nenhum dispositivo citado'
-              : fundamentos.length === 1
-                ? fundamentos[0].norma
-                : `${fundamentos.length} dispositivos`
-          }
-          alerta={fundamentos.some((f) => !f.verificado)}
-          aberta={aberta === 4}
-          aoAlternar={() => alternar(4)}
-          ultima
-        >
-          {fundamentos.length === 0 ? (
-            <Vazio>
-              Sem regra vencedora não há dispositivo a citar. O parecer não afirma competência
-              sem norma que a sustente.
-            </Vazio>
-          ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-              {fundamentos.map((f) => (
-                <div key={`${f.norma}|${f.dispositivo}`}>
-                  <div style={{ fontSize: 16, lineHeight: 1.5 }}>{f.norma}</div>
-                  <div style={{ ...s.mono, marginTop: 3 }}>{f.dispositivo}</div>
-                  {!f.verificado && (
-                    <div style={{ marginTop: 6 }}>
-                      <Pendente texto="não conferido contra a fonte primária" />
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
-        </Etapa>
-      </div>
-    </div>
-  )
-}
 
 /**
  * Uma etapa do caminho. O trilho vertical à esquerda é o que faz as quatro
@@ -587,6 +405,12 @@ interface ContatoDerivado {
  * Quem entra na lista é consequência do parecer, não uma constante: o órgão
  * competente vem de `parecer.orgao`, e os acessórios vêm dos fatos que o
  * usuário declarou. Trocar a regra troca a lista.
+ *
+ * TODO: nomes de órgão abaixo (ex. "INEMA — Licenciamento") ainda são
+ * literais no código — não há tabela de contatos institucionais no schema
+ * (`documentation/schema.sql`). `telefone` já vem de `telefoneDe`, que é o
+ * ponto único a trocar por consulta ao banco quando a tabela existir; os
+ * nomes deveriam migrar para lá junto.
  */
 function contatosDe(parecer: Parecer, municipio: string | null): ContatoDerivado[] {
   const lista: ContatoDerivado[] = []

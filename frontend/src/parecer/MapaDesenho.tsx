@@ -80,18 +80,44 @@ export default function MapaDesenho({
       map = new maplibregl.Map({
         container: containerRef.current,
         style: ESTILO,
-        bounds: [
+        // `bounds` sozinho é enquadramento *contain*: a caixa da Bahia é quase
+        // quadrada e o container é largo e baixo, então o ajuste trava na
+        // altura e sobra fundo vazio nas laterais. `maxBounds` inverte isso —
+        // o constrain do MapLibre sobe o zoom até a caixa cobrir a moldura
+        // (`v = max(largura/Δlng, altura/Δlat)`) e refaz a conta a cada
+        // `resize()`. Também prende a câmera: não dá para arrastar nem afastar
+        // para fora da Bahia, que é o vazamento das extremidades.
+        maxBounds: [
           [CAIXA_BAHIA[0], CAIXA_BAHIA[1]],
           [CAIXA_BAHIA[2], CAIXA_BAHIA[3]],
         ],
-        fitBoundsOptions: { padding: 20 },
+        // Abre sobre a área com relevo, dentro do trecho travado acima.
+        bounds: [
+          [CAIXA_RELEVO[0], CAIXA_RELEVO[1]],
+          [CAIXA_RELEVO[2], CAIXA_RELEVO[3]],
+        ],
+        maxZoom: 16,
+        // O constrain de `maxBounds` é alinhado aos eixos: com rotação ou
+        // inclinação os cantos da tela saem da caixa e o fundo vaza de novo.
+        dragRotate: false,
+        pitchWithRotate: false,
+        touchPitch: false,
+        renderWorldCopies: false,
         attributionControl: false,
       })
+      map.touchZoomRotate.disableRotation()
+      map.keyboard.disableRotation()
     } catch {
       setFalhou(true)
       return
     }
     mapRef.current = map
+
+    // Canvas trava no tamanho do container no instante da construção — se o
+    // container mudar de tamanho depois (reflow de layout, troca de aba),
+    // o mapa fica com canvas velho, menor que a moldura. `resize()` refaz.
+    const observador = new ResizeObserver(() => map.resize())
+    observador.observe(containerRef.current)
 
     map.on('load', () => {
       // tinta hipsométrica por baixo, sombra por cima — mesma ordem de
@@ -167,6 +193,7 @@ export default function MapaDesenho({
     })
 
     return () => {
+      observador.disconnect()
       try {
         map.remove()
       } catch {
@@ -294,7 +321,13 @@ export default function MapaDesenho({
       ) : (
         <div
           ref={containerRef}
-          style={{ height: altura, width: '100%', border: `1px solid ${CORES.linhaForte}` }}
+          style={{
+            height: altura,
+            width: '100%',
+            border: `1px solid ${CORES.linhaForte}`,
+            background: CORES.terraMapa,
+            overflow: 'hidden',
+          }}
         />
       )}
 
