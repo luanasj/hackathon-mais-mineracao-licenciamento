@@ -160,6 +160,56 @@ CREATE INDEX idx_ato_municipio ON ato_diario_oficial(codigo_ibge);
 CREATE INDEX idx_ato_termo ON ato_diario_oficial(termo);
 
 -- ---------------------------------------------------------------------
+-- Regras de competência (Escopo D) — modelo relacional do tipo `Regra`
+-- congelado em frontend/src/lib/schemas.ts. O backend lê direto daqui em
+-- vez de importar frontend/src/data/fixtures.ts — nova lei de competência
+-- vira INSERT nestas 3 tabelas, nunca uma `Regra` nova escrita em TS.
+-- ---------------------------------------------------------------------
+
+CREATE TABLE regra (
+    id                          TEXT PRIMARY KEY,
+    descricao                   TEXT NOT NULL,
+    instancia                   TEXT NOT NULL CHECK (instancia IN ('UNIAO', 'ESTADUAL', 'MUNICIPAL', 'INDETERMINADA')),
+    orgao                       TEXT NOT NULL CHECK (orgao IN ('IBAMA', 'INEMA', 'MUNICIPIO', 'ANM', 'INDETERMINADO')),
+    precedencia                 INTEGER,               -- NULL = usa PRECEDENCIA[instancia] default do motor (D.3)
+    torna_condicional           INTEGER NOT NULL DEFAULT 0 CHECK (torna_condicional IN (0, 1)),
+    exige_fato                  TEXT,                  -- JSON array de chaves do FactBase; NULL = nenhuma
+    trilhas_elegiveis           TEXT,                  -- JSON array de ModalidadeTrilha; NULL = ainda não usado (Escopo E)
+    anuencias                   TEXT,                  -- JSON array de IDs de Anuencia; NULL = ainda não usado (Escopo C.7)
+    fundamento_norma            TEXT NOT NULL,
+    fundamento_dispositivo      TEXT NOT NULL,
+    fundamento_verificado       INTEGER NOT NULL CHECK (fundamento_verificado IN (0, 1)),
+    fundamento_data_conferencia TEXT,
+    prioridade                  TEXT CHECK (prioridade IN ('P0', 'P1', 'P2'))
+);
+
+-- Condições de uma regra — AND implícito (D.2). `ordem` fixa a ordem de
+-- avaliação exibida no rastro de execução (D.6).
+CREATE TABLE regra_condicao (
+    regra_id  TEXT NOT NULL REFERENCES regra(id),
+    ordem     INTEGER NOT NULL,
+    fato      TEXT NOT NULL,
+    operador  TEXT NOT NULL CHECK (operador IN ('igual', 'em', 'contem', 'maior', 'menor', 'entre', 'existe')),
+    valor     TEXT,             -- JSON-encoded ValorFato (string/número/booleano/array/[min,max])
+    negado    INTEGER NOT NULL DEFAULT 0 CHECK (negado IN (0, 1)),
+    PRIMARY KEY (regra_id, ordem)
+);
+
+-- Alertas emitidos quando a regra dispara (efeito.alertas)
+CREATE TABLE regra_alerta (
+    regra_id   TEXT NOT NULL REFERENCES regra(id),
+    ordem      INTEGER NOT NULL,
+    alerta_id  TEXT NOT NULL,
+    severidade TEXT NOT NULL CHECK (severidade IN ('info', 'atencao', 'critico')),
+    titulo     TEXT NOT NULL,
+    detalhe    TEXT NOT NULL,
+    PRIMARY KEY (regra_id, ordem)
+);
+
+CREATE INDEX idx_regra_condicao_regra ON regra_condicao(regra_id);
+CREATE INDEX idx_regra_alerta_regra ON regra_alerta(regra_id);
+
+-- ---------------------------------------------------------------------
 -- Seed do vocabulário fechado de termos
 -- ---------------------------------------------------------------------
 
