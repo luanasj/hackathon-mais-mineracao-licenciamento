@@ -9,14 +9,15 @@
  *
  * O número é o caminho comum, e é a única coisa na tela: campo único, no meio,
  * sem nada em volta para disputar atenção. O desenho é o caminho de exceção —
- * fica atrás de um botão e só abre o mapa quando pedido.
+ * fica atrás de um botão, e quando aberto reparte a tela: o campo desliza para
+ * a coluna da esquerda e o mapa ocupa a da direita (`.ti-split`).
  *
  * Os dois caminhos convergem no mesmo lugar: `selecionar-processo` chega com
  * substância e fase do SIGMINE, `selecionar-area` chega com eles em branco.
  * A tela seguinte é a mesma nos dois casos.
  */
 
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 
 import type { IndiceProcessos, RegistroIndice } from '@/lib/processos'
 
@@ -40,13 +41,14 @@ export default function TelaInicial({
   onConcluirDesenho,
 }: TelaInicialProps) {
   const [areaAberta, setAreaAberta] = useState(false)
-  const mapaRef = useRef<HTMLDivElement | null>(null)
+  // O mapa custa tiles e um canvas: só nasce quando pedido pela primeira vez.
+  // Depois disso fica montado, para que fechar não apague a poligonal.
+  const [mapaMontado, setMapaMontado] = useState(false)
 
-  // Abrir o mapa sem trazê-lo para o campo de visão deixaria a tela igual e o
-  // clique sem resposta — o container nasce abaixo da dobra.
-  useEffect(() => {
-    if (areaAberta) mapaRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  }, [areaAberta])
+  function abrirArea() {
+    setAreaAberta(true)
+    setMapaMontado(true)
+  }
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
@@ -56,93 +58,104 @@ export default function TelaInicial({
         style={{
           flex: 1,
           display: 'flex',
-          flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: areaAberta ? 'flex-start' : 'center',
-          padding: 'clamp(40px, 10vh, 96px) clamp(20px, 6vw, 56px) clamp(48px, 10vw, 96px)',
+          justifyContent: 'center',
+          padding: 'clamp(32px, 8vh, 80px) clamp(20px, 5vw, 48px) clamp(40px, 9vw, 88px)',
         }}
       >
-        {/* Caminho 1 — o número. */}
-        <div style={{ width: '100%', maxWidth: 720 }}>
-          <BuscaProcesso
-            destaque
-            indice={indice}
-            erroIndice={erroIndice}
-            selecionado={null}
-            onSelecionar={onSelecionar}
-            onDesenhar={() => setAreaAberta(true)}
-          />
+        <div className="ti-split" data-aberto={areaAberta}>
+          {/* Coluna 1 — o número. */}
+          <div style={{ minWidth: 0 }}>
+            <BuscaProcesso
+              destaque
+              indice={indice}
+              erroIndice={erroIndice}
+              selecionado={null}
+              onSelecionar={onSelecionar}
+              onDesenhar={() => {
+                setAreaAberta(true)
+                setMapaMontado(true)
+              }}
+            />
 
-          {/* Caminho 2 — o desenho. Fechado, é uma linha; aberto, é o mesmo
-              bloco de mapa de sempre. */}
-          {!areaAberta && (
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: 28 }}>
-              <button
-                type="button"
-                onClick={() => setAreaAberta(true)}
-                style={{
-                  height: 52,
-                  padding: '0 26px',
-                  background: 'transparent',
-                  border: `1px solid ${CORES.linhaForte}`,
-                  color: CORES.tinta,
-                  fontSize: 16,
-                  borderRadius: 8,
-                }}
-              >
-                Selecionar área
-              </button>
-            </div>
-          )}
-        </div>
+            {!areaAberta && (
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: 28 }}>
+                <button
+                  type="button"
+                  onClick={abrirArea}
+                  aria-expanded={false}
+                  aria-controls="painel-area"
+                  style={{
+                    height: 52,
+                    padding: '0 26px',
+                    background: 'transparent',
+                    border: `1px solid ${CORES.linhaForte}`,
+                    color: CORES.tinta,
+                    fontSize: 16,
+                    borderRadius: 8,
+                  }}
+                >
+                  Selecionar área
+                </button>
+              </div>
+            )}
+          </div>
 
-        {areaAberta && (
+          {/* Coluna 2 — o desenho. Fica montada mesmo fechada: desmontar
+              perderia a poligonal e o mapa recarregaria do zero a cada abre e
+              fecha. Fechada tem largura zero, e o `aria-hidden` mantém o leitor
+              de tela na mesma leitura que a vista. */}
           <div
-            ref={mapaRef}
-            style={{
-              width: '100%',
-              maxWidth: 1080,
-              marginTop: 40,
-              padding: 'clamp(18px, 3vw, 28px)',
-              background: CORES.branco,
-              border: `1px solid ${CORES.linhaForte}`,
-              borderRadius: 12,
-              animation: 'vfade 200ms ease',
-            }}
+            id="painel-area"
+            className="ti-painel-area"
+            aria-hidden={!areaAberta}
+            style={{ minWidth: 0 }}
           >
             <div
               style={{
-                display: 'flex',
-                alignItems: 'baseline',
-                justifyContent: 'space-between',
-                gap: 16,
-                marginBottom: 14,
+                padding: 'clamp(16px, 2.4vw, 24px)',
+                background: CORES.branco,
+                border: `1px solid ${CORES.linhaForte}`,
+                borderRadius: 12,
               }}
             >
-              <div style={{ fontSize: 15, color: CORES.terra }}>Área sem processo na ANM</div>
-              <button
-                type="button"
-                className="pc-toggle"
-                onClick={() => setAreaAberta(false)}
+              <div
                 style={{
-                  background: 'transparent',
-                  border: 'none',
-                  padding: 0,
-                  fontSize: 14,
-                  color: CORES.cinza,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  gap: 16,
+                  marginBottom: 12,
                 }}
               >
-                Fechar
-              </button>
+                <div style={{ fontSize: 15, color: CORES.terra }}>Área sem processo na ANM</div>
+                <button
+                  type="button"
+                  className="pc-toggle"
+                  onClick={() => setAreaAberta(false)}
+                  aria-label="Fechar o mapa"
+                  style={{
+                    background: 'transparent',
+                    border: 'none',
+                    padding: 0,
+                    fontSize: 14,
+                    color: CORES.cinza,
+                    lineHeight: 1,
+                  }}
+                >
+                  Fechar
+                </button>
+              </div>
+              {mapaMontado && (
+                <MapaDesenho
+                  altura="clamp(260px, 42vh, 420px)"
+                  rotuloConcluir="Usar esta área"
+                  onConcluir={onConcluirDesenho}
+                />
+              )}
             </div>
-
-            <MapaDesenho
-              altura="clamp(360px, 60vh, 600px)"
-              rotuloConcluir="Usar esta área"
-              onConcluir={onConcluirDesenho}
-            />
           </div>
-        )}
+        </div>
       </main>
     </div>
   )

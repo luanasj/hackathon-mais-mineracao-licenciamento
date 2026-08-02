@@ -244,11 +244,7 @@ export default function BuscaProcesso({
           <div style={{ fontFamily: SERIF, fontSize: 19 }}>
             Nenhum processo encontrado para “{entrada.trim()}”.
           </div>
-          <div style={{ fontSize: 15, color: CORES.cinza, marginTop: 8, lineHeight: 1.55 }}>
-            A amostra carregada cobre 10 municípios da Bahia. Se a área não tem processo na
-            ANM, ou está fora do recorte, desenhe a poligonal no mapa — os municípios
-            atingidos são derivados na hora, pela mesma interseção do pipeline.
-          </div>
+
           <button
             type="button"
             onClick={onDesenhar}
