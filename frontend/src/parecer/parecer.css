@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #f6f5f3;
+  background: #FCFCFB;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 }
 
 .pc-col-right {
-  border-left: 1px solid #dad9d4;
+  border-left: 1px solid #C9C9C6;
   min-height: 900px;
 }
 
@@ -33,36 +33,74 @@ body {
 
   .pc-col-right {
     border-left: none;
-    border-top: 1px solid #dad9d4;
+    border-top: 1px solid #C9C9C6;
     min-height: 0;
   }
 }
 
-/* Tela inicial: número do processo à esquerda, mapa à direita. Empilha abaixo
-   de 900px, quando a coluna do mapa fica estreita demais para desenhar. */
-.ti-grid {
+/* Tela inicial. Fechada, é uma coluna só — o número do processo, no meio da
+   tela. Aberta, a mesma coluna cede metade da largura e o mapa entra à direita:
+   é a mesma tela se partindo, não outra tela. A animação é da própria grade,
+   para que o campo caminhe até a esquerda em vez de saltar. */
+.ti-split {
   display: grid;
-  grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
-  column-gap: 40px;
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0fr);
+  column-gap: 0;
+  width: 100%;
+  max-width: 720px;
+  align-items: center;
+  transition:
+    grid-template-columns 520ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    column-gap 520ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    max-width 520ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.ti-col-mapa {
-  border-left: 1px solid #dad9d4;
-  padding-left: 40px;
+.ti-split[data-aberto='true'] {
+  max-width: 1240px;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  column-gap: 44px;
 }
 
+/* A coluna do mapa existe sempre: desmontá-la ao fechar perderia a poligonal
+   já desenhada. Fechada, some nas duas direções — só largura zero deixaria a
+   linha da grade com a altura do mapa, e o campo, centrado nessa linha alta,
+   ficaria abaixo do centro da tela. */
+.ti-painel-area {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 240ms ease,
+    max-height 480ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.ti-split[data-aberto='true'] .ti-painel-area {
+  max-height: 1200px;
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 220ms, 0ms;
+}
+
+/* Abaixo de 900px não há duas colunas a repartir: o mapa desce e a transição
+   é só de altura. */
 @media (max-width: 900px) {
-  .ti-grid {
+  .ti-split,
+  .ti-split[data-aberto='true'] {
     grid-template-columns: minmax(0, 1fr);
-    row-gap: 30px;
+    column-gap: 0;
+    max-width: 720px;
   }
 
-  .ti-col-mapa {
-    border-left: none;
-    border-top: 1px solid #dad9d4;
-    padding-left: 0;
-    padding-top: 30px;
+  .ti-split[data-aberto='true'] .ti-painel-area {
+    margin-top: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ti-split,
+  .ti-painel-area {
+    transition-duration: 1ms;
   }
 }
 
@@ -114,8 +152,7 @@ button {
 }
 
 :focus-visible {
-  outline: 2px solid #4a5e36;
-  outline-offset: 3px;
+  outline: none;
 }
 
 @keyframes vfade {
@@ -150,7 +187,7 @@ input[type='range']::-webkit-slider-thumb {
   margin-top: -2px;
   border-radius: 50%;
   background: #4a5e36;
-  border: 2px solid #f6f5f3;
+  border: 2px solid #FCFCFB;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
   cursor: grab;
 }
@@ -160,7 +197,7 @@ input[type='range']::-moz-range-thumb {
   height: 26px;
   border-radius: 50%;
   background: #4a5e36;
-  border: 2px solid #f6f5f3;
+  border: 2px solid #FCFCFB;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
   cursor: grab;
 }
@@ -171,7 +208,7 @@ input[type='range']::-moz-range-thumb {
 }
 
 .pc-opcao:hover {
-  background: #f0efec;
+  background: #EFEFED;
 }
 
 .pc-opcao-escuro:hover {
@@ -216,7 +253,7 @@ button:disabled {
 }
 
 .pc-lupa:hover {
-  background: #e9e8e3;
+  background: #DCDCD9;
 }
 
 .pc-toggle:hover {

@@ -24,6 +24,12 @@ export interface BuscaProcessoProps {
   selecionado: RegistroIndice | null
   onSelecionar: (registro: RegistroIndice) => void
   onDesenhar: () => void
+  /**
+   * Na tela inicial o campo é o único conteúdo da tela: cresce, centraliza e o
+   * rótulo vira etiqueta. Na tela de caracterização ele é um controle entre
+   * outros e mantém a escala normal.
+   */
+  destaque?: boolean
 }
 
 export default function BuscaProcesso({
@@ -32,6 +38,7 @@ export default function BuscaProcesso({
   selecionado,
   onSelecionar,
   onDesenhar,
+  destaque = false,
 }: BuscaProcessoProps) {
   const [entrada, setEntrada] = useState('')
   const [aberto, setAberto] = useState(false)
@@ -85,11 +92,23 @@ export default function BuscaProcesso({
 
   return (
     <div ref={containerRef} style={{ position: 'relative' }}>
-      <label htmlFor="anm" style={s.rotuloCampo}>
+      <label
+        htmlFor="anm"
+        style={
+          destaque
+            ? {
+                ...s.rotuloCampo,
+                ...s.etiqueta,
+                color: CORES.terraClara,
+                textAlign: 'center',
+              }
+            : s.rotuloCampo
+        }
+      >
         Processo da ANM
       </label>
 
-      <div style={{ display: 'flex', gap: 10, marginTop: 10 }}>
+      <div style={{ display: 'flex', gap: 10, marginTop: destaque ? 16 : 10 }}>
         <input
           id="anm"
           value={entrada}
@@ -107,7 +126,19 @@ export default function BuscaProcesso({
           role="combobox"
           aria-expanded={aberto && sugestoes.length > 0}
           aria-controls="sugestoes-processo"
-          style={{ ...s.campoTexto, flex: 1, minWidth: 0 }}
+          style={{
+            ...s.campoTexto,
+            flex: 1,
+            minWidth: 0,
+            ...(destaque
+              ? {
+                  height: 74,
+                  fontSize: 'clamp(20px, 4.4vw, 27px)',
+                  padding: '0 22px',
+                  borderRadius: 8,
+                }
+              : null),
+          }}
         />
         <button
           type="button"
@@ -117,8 +148,10 @@ export default function BuscaProcesso({
           style={{
             ...s.primario,
             flex: 'none',
-            height: 56,
-            padding: '0 24px',
+            height: destaque ? 74 : 56,
+            padding: destaque ? '0 30px' : '0 24px',
+            fontSize: destaque ? 18 : 16,
+            borderRadius: destaque ? 8 : 6,
             opacity: indice ? 1 : 0.5,
           }}
         >
@@ -211,11 +244,7 @@ export default function BuscaProcesso({
           <div style={{ fontFamily: SERIF, fontSize: 19 }}>
             Nenhum processo encontrado para “{entrada.trim()}”.
           </div>
-          <div style={{ fontSize: 15, color: CORES.cinza, marginTop: 8, lineHeight: 1.55 }}>
-            A amostra carregada cobre 10 municípios da Bahia. Se a área não tem processo na
-            ANM, ou está fora do recorte, desenhe a poligonal no mapa — os municípios
-            atingidos são derivados na hora, pela mesma interseção do pipeline.
-          </div>
+
           <button
             type="button"
             onClick={onDesenhar}

@@ -21,8 +21,8 @@ import { useMemo } from 'react'
 import type { Parecer, Severidade } from '@/lib/schemas'
 
 import { CORES, SERIF, linkTel, nomeOrgao, telefoneDe } from './dados'
-import { baixarPedidoLai } from './lai'
-import { Pendente, s } from './ui'
+import { baixarPedidoLai, linkEmailOrgao } from './lai'
+import { s } from './ui'
 
 const ROTULO_SEVERIDADE: Record<Severidade, string> = {
   info: 'informação',
@@ -151,7 +151,7 @@ export default function PainelParecer({
             key={c.orgao}
             style={{
               display: 'grid',
-              gridTemplateColumns: 'minmax(0, 1fr) auto',
+              gridTemplateColumns: 'minmax(0, 1fr) auto auto',
               gap: 24,
               alignItems: 'center',
               padding: '18px 0',
@@ -181,32 +181,29 @@ export default function PainelParecer({
                 {c.telefone}
               </a>
             )}
+            <a
+              href={linkEmailOrgao(parecer, c.orgao, c.motivo)}
+              className="pc-primario pc-nao-imprime"
+              style={{
+                ...s.primario,
+                height: 40,
+                padding: '0 16px',
+                fontSize: 14,
+                display: 'inline-flex',
+                alignItems: 'center',
+                whiteSpace: 'nowrap',
+                borderBottom: 'none',
+                color: CORES.branco,
+              }}
+            >
+              Enviar email
+            </a>
           </div>
         ))}
         <div style={{ fontSize: 12, color: CORES.cinzaClaro, marginTop: 10, lineHeight: 1.5 }}>
           Telefones de referência institucional, sem consulta registrada à fonte primária —
           confirmar antes de usar.
         </div>
-      </div>
-
-
-      <button
-        type="button"
-        className="pc-primario pc-nao-imprime"
-        onClick={() => window.print()}
-        style={{ ...s.primario, alignSelf: 'flex-start', marginTop: 40 }}
-      >
-        Exportar parecer em PDF
-      </button>
-
-      <div style={{ ...s.mono, fontSize: 12, marginTop: 22, lineHeight: 1.7 }}>
-        schema {parecer.schema_versao} · gerado em{' '}
-        {new Date(parecer.gerado_em).toLocaleString('pt-BR')}
-        {parecer.tem_fundamento_pendente && (
-          <div style={{ marginTop: 8 }}>
-            <Pendente texto="há fundamento não conferido nesta cadeia" />
-          </div>
-        )}
       </div>
     </div>
   )

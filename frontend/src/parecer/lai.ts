@@ -71,6 +71,53 @@ export function gerarPedidoLai(parecer: Parecer): string {
   ].join('\n')
 }
 
+/**
+ * Rascunho de email para um órgão da lista "Para quem ligar". Não há tabela de
+ * contatos institucionais no schema (`documentation/schema.sql`), então o
+ * destinatário fica em branco: o cliente de email abre com assunto e corpo
+ * prontos e quem envia preenche o endereço.
+ */
+export function linkEmailOrgao(parecer: Parecer, orgao: string, motivo: string): string {
+  const f = parecer.fatos
+  const contexto = [
+    ['Processo ANM', texto(f.processo?.valor)],
+    ['Titular', texto(f.titular?.valor)],
+    ['Substância', texto(f.substancia?.valor)],
+    ['Fase na ANM', texto(f.fase?.valor)],
+    ['Municípios atingidos pela poligonal', texto(f.municipios?.valor)],
+    ['Área da poligonal (ha)', texto(f.area_ha?.valor)],
+  ].filter(([, v]) => v !== null)
+
+  const pendencias = parecer.fatos_faltantes.map((x, i) => `${i + 1}. ${x.rotulo}?`)
+
+  const assunto = `Licenciamento ambiental — processo ANM ${texto(f.processo?.valor) ?? 'a identificar'}`
+
+  const corpo = [
+    `A ${orgao}`,
+    '',
+    'Senhores,',
+    '',
+    `Encaminho consulta referente ao licenciamento ambiental da atividade`,
+    `minerária abaixo identificada. Motivo do contato: ${motivo}.`,
+    '',
+    'IDENTIFICAÇÃO DA ATIVIDADE',
+    ...contexto.map(([k, v]) => `  ${k}: ${v}`),
+    ...(pendencias.length
+      ? ['', 'PONTOS EM ABERTO', ...pendencias]
+      : []),
+    '',
+    'Atenciosamente,',
+    '',
+    '_______________________________________',
+    'Nome e qualificação do requerente',
+    '',
+    `Gerado em ${new Date(parecer.gerado_em).toLocaleString('pt-BR')} a partir do parecer`,
+    `de competência (estado: ${parecer.estado}).`,
+  ].join('\n')
+
+  return `mailto:?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`
+}
+
 /** Baixa o pedido como arquivo de texto. Zero rede — tudo acontece no cliente. */
 export function baixarPedidoLai(parecer: Parecer) {
   const blob = new Blob([gerarPedidoLai(parecer)], { type: 'text/plain;charset=utf-8' })
