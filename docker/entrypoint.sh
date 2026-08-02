@@ -7,6 +7,7 @@ if [ ! -f "$DB_PATH" ]; then
     echo "Banco não existe em $DB_PATH — criando a partir de documentation/schema.sql + seed.sql..."
     sqlite3 "$DB_PATH" < /app/documentation/schema.sql
     sqlite3 "$DB_PATH" < /app/documentation/seed.sql
+    sqlite3 "$DB_PATH" < /app/documentation/seed_regras.sql
     echo "Banco criado."
 else
     echo "Banco já existe em $DB_PATH — reusando (delete o arquivo pra recriar do zero)."

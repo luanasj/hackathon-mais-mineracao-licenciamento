@@ -5,6 +5,11 @@
  * `frontend/src/lib` via alias `@/*` (ver tsconfig.json). Mesmo código que
  * roda no browser, mesma saída — o `Parecer` que sai daqui é byte-a-byte
  * comparável ao que a interface já produz sozinha.
+ *
+ * TIPOLOGIAS/MUNICIPIOS/REGRAS não vêm mais de `@/data/fixtures` (bundle
+ * TS estático) — vêm de `./db.ts`, que lê direto do SQLite já populado por
+ * `documentation/schema.sql`/`seed.sql`/`seed_regras.sql`. Nova lei de
+ * competência = linha nova no banco, não código novo aqui.
  */
 import cors from 'cors'
 import express from 'express'
@@ -12,9 +17,13 @@ import type { Request, Response } from 'express'
 
 import { avaliar } from '@/lib/motor'
 import { construirFactBase } from '@/lib/fatos'
-import { MUNICIPIOS, TIPOLOGIAS } from '@/data/fixtures'
 import { CONDICIONAIS_VAZIAS } from '@/state/tipos'
 import type { EstadoFormulario } from '@/state/tipos'
+import { carregarMunicipios, carregarRegras, carregarTipologias } from './db.ts'
+
+const TIPOLOGIAS = carregarTipologias()
+const MUNICIPIOS = carregarMunicipios()
+const REGRAS = carregarRegras()
 
 const app = express()
 app.use(cors())
@@ -76,7 +85,8 @@ app.post('/api/parecer', (req: Request, res: Response) => {
     condicionais: { ...CONDICIONAIS_VAZIAS, ...body.condicionais },
   }
 
-  const parecer = avaliar(construirFactBase(estado))
+  const fatos = construirFactBase(estado, { tipologias: TIPOLOGIAS, municipios: MUNICIPIOS })
+  const parecer = avaliar(fatos, { regras: REGRAS, tipologias: TIPOLOGIAS })
   res.json(parecer)
 })
 

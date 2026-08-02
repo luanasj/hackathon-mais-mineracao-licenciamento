@@ -260,6 +260,8 @@ function comPorte(fatos: FactBase, tipologia: Tipologia, valor: number): FactBas
 export interface OpcoesAvaliacao {
   /** Base de regras. Trocável para a suíte D.8 não depender das fixtures. */
   regras?: readonly Regra[]
+  /** Base de tipologias, para achar a tipologia do FactBase (limiares D.4). */
+  tipologias?: readonly Tipologia[]
 }
 
 /**
@@ -303,7 +305,7 @@ export function avaliar(fatos: FactBase, opts: OpcoesAvaliacao = {}): Parecer {
     estado = 'DEFINIDA'
   }
 
-  const tip = tipologiaPorId(String(valorDe(fatos, 'tipologia_id') ?? '') || null)
+  const tip = tipologiaPorId(String(valorDe(fatos, 'tipologia_id') ?? '') || null, opts.tipologias)
   const limiares = tip ? detectarLimiares(fatos, tip, regras) : []
 
   const rastro = disparos.map((d) => d.passo)
