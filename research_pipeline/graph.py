@@ -1,7 +1,12 @@
 """Grafo LangGraph — liga os nós num pipeline único, checkpoint por run (§3, §9 do GOAL.md).
 
-`research -> extract -> normalize -> validate -> {repair | rank_and_emit}`;
+`research_start -> research -> extract -> normalize -> validate -> {repair | rank_and_emit}`;
 `repair -> {extract | normalize}` fecha o laço do §5.
+
+`research_start` e `research` são dois nós, não um, porque o checkpoint só é gravado quando um nó
+retorna: o `interaction_id` precisa estar no disco **antes** do polling começar, ou uma morte no
+meio da espera repagaria os US$ 1–3 (AC7). Ver o docstring de `nodes/research.py`. Nos runs
+offline (`--report`/`--resume`) `research_start` devolve `{}` sem tocar em nada.
 
 `refs` não entra no estado (decisão 18/G): cada nó lê `config["configurable"]["refs"]`/
 `["ref_index"]`, montado uma vez por `run.py` antes do primeiro `invoke()` — `load_reference_data()`
@@ -45,7 +50,7 @@ from langgraph.graph.state import CompiledStateGraph
 from research_pipeline.nodes.emit import emit
 from research_pipeline.nodes.extract import extract
 from research_pipeline.nodes.normalize import normalize
-from research_pipeline.nodes.research import research
+from research_pipeline.nodes.research import research, research_start
 from research_pipeline.nodes.validate import validate_licencas
 from research_pipeline.refs import ReferenceData
 
@@ -129,6 +134,7 @@ def build_graph(checkpointer: BaseCheckpointSaver) -> CompiledStateGraph:
     """`(checkpointer) -> CompiledStateGraph`. `refs`/`ref_index`/`structurer`/`run_dir` chegam por
     `config["configurable"]` em todo `invoke()` (decisão 18) — nunca pelo estado."""
     grafo = StateGraph(PipelineState)
+    grafo.add_node("research_start", _sem_anotacao(research_start))
     grafo.add_node("research", _sem_anotacao(research))
     grafo.add_node("extract", _sem_anotacao(extract))
     grafo.add_node("normalize", _sem_anotacao(normalize))
@@ -136,7 +142,8 @@ def build_graph(checkpointer: BaseCheckpointSaver) -> CompiledStateGraph:
     grafo.add_node("repair", _sem_anotacao(repair))
     grafo.add_node("rank_and_emit", _sem_anotacao(emit))
 
-    grafo.add_edge(START, "research")
+    grafo.add_edge(START, "research_start")
+    grafo.add_edge("research_start", "research")
     grafo.add_edge("research", "extract")
     grafo.add_edge("extract", "normalize")
     grafo.add_edge("normalize", "validate")

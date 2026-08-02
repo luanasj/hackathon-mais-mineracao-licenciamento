@@ -1090,9 +1090,57 @@ e regravar fixtures com `RP_FIXTURE_RECORD=1`.
 
 ---
 
-## Patch 14 — Nó Gemini Deep Research (o único patch de US$ 1–3)
+## Patch 14 — Nó Gemini Deep Research (o único patch de US$ 1–3) ✅ feito
 
 **Objetivo:** a perna paga, com a retomada provada offline antes de uma chamada real.
+
+**Feito**, com seis registros — o primeiro muda o desenho do grafo:
+
+1. **O nó de pesquisa virou dois: `research_start` e `research`.** A especificação abaixo pedia um
+   nó com três ramos que gravasse o `interaction_id` "no checkpoint antes do primeiro poll". Isso é
+   impossível num nó só: o LangGraph grava o checkpoint quando o nó **retorna**, então um nó que
+   criasse a tarefa e pollasse por até uma hora só poria o `interaction_id` no disco depois do
+   polling terminar — exatamente o caso em que ele não serve mais para nada. Partido em dois,
+   `research_start` retorna `{"interaction_id": ...}`, o checkpoint fecha, e só então `research`
+   polla. O AC7 deixa de ser intenção e passa a ser mecânica. Medido em
+   `test_ac7_morrer_no_polling_e_retomar_nao_chama_start_duas_vezes`: cliente que levanta no
+   primeiro poll, `invoke` morre, `get_state(config).values["interaction_id"]` já está lá, segundo
+   `invoke` conclui com `starts == 1`.
+2. **`poll()` devolve `None` em vez de bloquear.** Quem espera é o nó, não o cliente — é lá que
+   `poll_timeout` mora e é lá que a desistência precisa acontecer sem perder o `interaction_id`.
+   `ResearchTimeout` é exceção própria e separada de `ResearchFailed` porque as duas pedem coisas
+   opostas do operador: a primeira é retomável por `--resume`, a segunda não.
+3. **Texto final sai de `Interaction.output_text`**, não de `steps[-1].content[0].text` como a
+   especificação previa. O acessor existe no SDK 2.16 e já concatena o conteúdo textual; o caminho
+   pelos `steps` ficou como fallback (varredura de trás para frente atrás do primeiro texto),
+   porque um passo final sem texto tornaria o índice fixo `[0]` frágil.
+4. **Os testes do cliente usam os tipos reais do `google-genai`** (`Interaction`, `ModelOutputStep`,
+   `TextContent`, `URLCitation`, `DeepResearchAgentConfig`), não duplos de mão — só o transporte é
+   falso. É o que faz a suíte falhar se um upgrade renomear `output_text`/`annotations`/
+   `start_index` ou mudar os literais de `status`, e é o que trava a correção 2 do patch 0:
+   `DeepResearchAgentConfig.model_validate` rejeitaria `visualization="none"` de volta.
+5. **`run.py` recusa `--research gemini` sem `GEMINI_API_KEY`, saindo `2` antes de criar `run_dir`**
+   — AC8 aplicado à perna paga. Não estava na especificação; entrou porque sem ela o `ValueError`
+   do `genai.Client` só apareceria como traceback dentro do nó, depois de o run já ter gravado
+   artefatos. **`test_run_cli.py` neutraliza `load_dotenv` em todos os seus testes**, e isso não é
+   higiene de isolamento: um `.env` real com a chave preenchida faz a guarda passar corretamente e
+   o run seguir para criar uma tarefa de US$ 1–3. Um teste que só limpasse `os.environ` mediria o
+   contrário do que pretende — e cobraria a diferença. Aprendido caro: verificar essa guarda pela
+   CLI com `env -u GEMINI_API_KEY` criou uma tarefa Deep Research real, porque `load_dotenv()`
+   repõe a chave a partir do arquivo.
+6. **`prompt.md` é gravado em todo run**, não só nos pagos (§9): um run offline sobre relatório
+   salvo também precisa registrar contra qual redação de `deep_research_v1.md` ele é comparável.
+   O mesmo texto viaja por `config["configurable"]["research_prompt"]`.
+
+327 testes, todos passando (+36 sobre o patch 13): 22 em `test_research_client.py`, 11 em
+`test_research_resume.py`, 3 em `test_run_cli.py`, mais os 4 de `test_research.py` que
+sobreviveram sem mudança de comportamento (só a mensagem de `ResearchNotConfigured` deixou de
+citar "patch 14"). Nenhum deles toca a rede ou lê uma chave.
+
+**Ainda em aberto, herdado do patch 13:** `custo_estimado_usd` continua fora de `manifest.json`.
+`DeepSeekStructurer` acumula tokens/custo na instância e `run.py` tem essa instância em mãos, mas
+`emit.py` lê só do `state` — fechar isso é passar o custo por `config["configurable"]` e somar o
+`usage` da interação Gemini, que o SDK expõe em `Interaction.usage`. Fica para quem retomar.
 
 **Arquivos**
 - **criar** `research_pipeline/research.py` — `ResearchClient` Protocol
@@ -1154,7 +1202,7 @@ US$ 1–3 se perde e toda iteração futura de prompt repaga.
 | 11 | **Grafo + CLI + checkpointer + `--resume`/`--report`** ✅ | não | run offline completo, AC1–AC6+AC8 |
 | 12 | `deep_research_v1.md` ✅ | não | `pytest test_prompt_deep_research.py` |
 | 13 | DeepSeek real ✅ | sim, ~US$ 0,01 | offline passa; um run barato |
-| 14 | Gemini Deep Research | sim, US$ 1–3 | retomada provada offline; um run pago |
+| 14 | Gemini Deep Research ✅ | sim, US$ 1–3 | retomada provada offline; um run pago |
 
 AC8 aterrissa no patch 3. O caminho offline completo aterrissa no patch 11, **dois patches antes
 de qualquer cobrança**.

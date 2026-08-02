@@ -1,5 +1,6 @@
-"""Nó `research` (patch 11) — puro, `tmp_path` como único I/O. Sem LLM: este nó não chama nenhum,
-nem nesta versão nem em nenhuma outra até o patch 14 trazer o cliente Gemini real.
+"""Nó `research` (patch 11) — os dois caminhos que não tocam a rede: relatório já no estado e
+relatório salvo em `run_dir`. `tmp_path` é o único I/O. O caminho pago (patch 14) e a invariante
+de retomada vivem em `test_research_resume.py`, com `FakeResearchClient`.
 """
 
 from __future__ import annotations
@@ -29,7 +30,7 @@ def test_le_relatorio_salvo_no_run_dir(tmp_path: Path) -> None:
 
 
 def test_levanta_sem_relatorio_em_nenhum_dos_dois_lugares(tmp_path: Path) -> None:
-    with pytest.raises(ResearchNotConfigured, match="patch 14"):
+    with pytest.raises(ResearchNotConfigured, match="--report PATH"):
         research({}, _config(tmp_path))
 
 

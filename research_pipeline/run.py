@@ -11,11 +11,17 @@ mutuamente exclusivas aqui: `--resume` continua uma *thread* já existente pelo 
 carrega `raw_report`), então injetar um relatório novo por cima seria ambíguo sobre qual dos dois
 prevalece. `--ano` é dispensado só quando `--resume` está presente — o ano mora no prefixo do
 próprio `run_id` (`f"{ano}_{timestamp}"`).
+
+`prompt.md` é gravado em **todo** run (§9), não só nos que pesquisam: é a substituição de `{{ANO}}`
+no `deep_research_v1.md` daquele momento, e um run offline sobre relatório salvo continua tendo de
+registrar contra qual prompt ele é comparável. O mesmo texto vai por `config["configurable"]
+["research_prompt"]` para o nó `research_start`, que é quem o envia — quando envia.
 """
 
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -28,17 +34,22 @@ from research_pipeline.aliases import load_overrides
 from research_pipeline.graph import build_graph
 from research_pipeline.llm import get_structurer
 from research_pipeline.matcher import build_ref_index, load_matching_config
-from research_pipeline.nodes.research import ResearchNotConfigured
+from research_pipeline.nodes.research import (
+    POLL_TIMEOUT_PADRAO,
+    ResearchNotConfigured,
+    ResearchTimeout,
+)
 from research_pipeline.refs import ReferenceData, load_reference_data
+from research_pipeline.research import AGENTE_PADRAO, ResearchFailed, get_research_client
 
 __all__ = ["main"]
 
 PROMPT_VERSION = "deep_research_v1"
-"""Nome do prompt de pesquisa (`prompts/deep_research_v1.md`, patch 12) — gravado em todo run
-mesmo antes de o arquivo existir, porque `emit.py` já exige `state["prompt_version"]` hoje."""
+"""Nome do prompt de pesquisa (`prompts/deep_research_v1.md`, patch 12) — gravado em todo run."""
+
+PROMPT_PATH = Path(__file__).resolve().parent / "prompts" / f"{PROMPT_VERSION}.md"
 
 _MODELO_ESTRUTURACAO = {"fixture": "fixture", "deepseek": "deepseek-v4-flash"}
-_MODELO_PESQUISA = {"none": "relatorio_salvo", "gemini": "deep-research-preview-04-2026"}
 
 _RUNS_DIR_PADRAO = Path("research_pipeline/runs")
 
@@ -50,11 +61,16 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser.add_argument("--report", type=Path, default=None, help="relatório salvo; pula deep_research")
     parser.add_argument("--llm", choices=["fixture", "deepseek"], default=None)
     parser.add_argument("--research", choices=["none", "gemini"], default=None)
+    parser.add_argument("--research-model", default=AGENTE_PADRAO)
+    parser.add_argument(
+        "--poll-timeout",
+        type=int,
+        default=POLL_TIMEOUT_PADRAO,
+        help="segundos de espera pela tarefa Deep Research; estourar não perde o interaction_id",
+    )
     parser.add_argument("--runs-dir", type=Path, default=_RUNS_DIR_PADRAO)
     parser.add_argument("--dry-run", action="store_true", help="só carregador + invariantes")
     args = parser.parse_args(argv)
-
-    import os
 
     if args.llm is None:
         args.llm = os.environ.get("RP_LLM", "fixture")
@@ -83,11 +99,14 @@ def main(argv: list[str] | None = None) -> int:
         _imprimir_resumo_refs(refs)
         return 0
 
-    if args.research == "gemini":
-        print("erro: --research gemini chega no patch 14", file=sys.stderr)
-        return 2
     if args.resume and args.report:
         print("erro: --resume e --report são mutuamente exclusivos", file=sys.stderr)
+        return 2
+    if args.research == "gemini" and not os.environ.get("GEMINI_API_KEY"):
+        # Mesma política do AC8: falhar antes de gastar. Sem esta guarda o `ValueError` do
+        # `genai.Client` só apareceria dentro do nó, como traceback, depois de o run já ter
+        # criado `run_dir` e gravado `prompt.md`.
+        print("erro: --research gemini exige GEMINI_API_KEY (ver .env.example)", file=sys.stderr)
         return 2
     if not args.resume and args.ano is None:
         print("erro: --ano é obrigatório fora de --resume", file=sys.stderr)
@@ -104,6 +123,9 @@ def main(argv: list[str] | None = None) -> int:
     run_dir = args.runs_dir / run_id
     run_dir.mkdir(parents=True, exist_ok=True)
 
+    research_prompt = PROMPT_PATH.read_text(encoding="utf-8").replace("{{ANO}}", str(ano))
+    (run_dir / "prompt.md").write_text(research_prompt, encoding="utf-8")
+
     entrada: dict[str, Any] | None
     if args.resume:
         entrada = None
@@ -118,6 +140,7 @@ def main(argv: list[str] | None = None) -> int:
     matching_config = load_matching_config()
     ref_index = build_ref_index(refs, overrides, matching_config)
     structurer = get_structurer(args.llm)
+    research_client = get_research_client(args.research, agente=args.research_model)
 
     args.runs_dir.mkdir(parents=True, exist_ok=True)
     checkpoints_path = args.runs_dir / "checkpoints.db"
@@ -130,14 +153,20 @@ def main(argv: list[str] | None = None) -> int:
                 "ref_index": ref_index,
                 "matching_config": matching_config,
                 "structurer": structurer,
+                "research_client": research_client,
+                "research_prompt": research_prompt,
+                "poll_timeout": args.poll_timeout,
                 "run_dir": run_dir,
-                "modelo_pesquisa": _MODELO_PESQUISA[args.research],
+                "run_id": run_id,
+                "modelo_pesquisa": (
+                    "relatorio_salvo" if args.research == "none" else args.research_model
+                ),
                 "modelo_estruturacao": _MODELO_ESTRUTURACAO[args.llm],
             }
         }
         try:
             resultado = grafo.invoke(entrada, config=config)
-        except ResearchNotConfigured as erro:
+        except (ResearchFailed, ResearchNotConfigured, ResearchTimeout) as erro:
             print(f"erro: {erro}", file=sys.stderr)
             return 1
 
