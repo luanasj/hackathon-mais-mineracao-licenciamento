@@ -4,19 +4,22 @@
  * Tudo aqui é leitura de `Parecer`. Nenhuma regra, limiar ou órgão está
  * escrito neste arquivo: se a tela mostra, o motor disse. É o que permite
  * trocar a base de regras (C.4) sem tocar em uma linha de interface.
+ *
+ * A procedência não é um apêndice: as quatro etapas de `Caminho` são a
+ * resposta à pergunta "por que isso?", na ordem em que uma pessoa a faria —
+ * o que se sabe, o que a norma pergunta, quem venceu, com base em quê.
  */
 
 import { useMemo, useState } from 'react'
 
 import { rotuloFato } from '@/lib/fatos'
+import { fundamentosDoParecer } from '@/lib/motor'
 import { ROTULO_FAIXA } from '@/lib/porte'
-import type { Fundamento, Parecer, Severidade, ValorFato } from '@/lib/schemas'
+import type { Fundamento, Parecer, PassoRastro, Severidade, ValorFato } from '@/lib/schemas'
 
-import { CORES, MONO, SERIF, fmt2, linkTel, nomeOrgao, telefoneDe } from './dados'
+import { CORES, MONO, ROTULO_INSTANCIA, SERIF, fmt2, linkTel, nomeOrgao, telefoneDe } from './dados'
 import { baixarPedidoLai } from './lai'
-import { Linha, Pendente, Recolhivel, s } from './ui'
-
-type Bloco = 'regras' | 'concorrentes' | 'fatos' | null
+import { Pendente, s } from './ui'
 
 const ROTULO_SEVERIDADE: Record<Severidade, string> = {
   info: 'informação',
@@ -35,25 +38,17 @@ export interface PainelParecerProps {
   parecer: Parecer
   temArea: boolean
   municipioPrincipal: string | null
-  msAvaliacao: number
 }
 
 export default function PainelParecer({
   parecer,
   temArea,
   municipioPrincipal,
-  msAvaliacao,
 }: PainelParecerProps) {
-  const [aberto, setAberto] = useState<Bloco>(null)
-
-  const alternar = (b: Exclude<Bloco, null>) => setAberto((a) => (a === b ? null : b))
-
   const contatos = useMemo(
     () => contatosDe(parecer, municipioPrincipal),
     [parecer, municipioPrincipal],
   )
-
-  const disparadas = parecer.rastro.filter((p) => p.disparou)
 
   if (!temArea) {
     return (
@@ -191,111 +186,10 @@ export default function PainelParecer({
         </div>
       </div>
 
-      <div style={{ marginTop: 22 }}>
-        <Recolhivel
-          titulo="Por que essa resposta"
-          contador={`${disparadas.length} de ${parecer.rastro.length} regras dispararam`}
-          aberto={aberto === 'regras'}
-          aoAlternar={() => alternar('regras')}
-        >
-          <ol
-            style={{
-              margin: 0,
-              padding: '0 0 0 24px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 22,
-            }}
-          >
-            {parecer.rastro.map((passo) => (
-              <li
-                key={passo.regra_id}
-                style={{ fontSize: 16, lineHeight: 1.5, opacity: passo.disparou ? 1 : 0.5 }}
-              >
-                <div>
-                  {passo.descricao}
-                  <span
-                    style={{
-                      fontSize: 13,
-                      color: passo.disparou ? CORES.verde : CORES.cinza,
-                      marginLeft: 8,
-                    }}
-                  >
-                    {passo.disparou ? 'disparou' : 'não disparou'}
-                  </span>
-                </div>
-
-                <ul
-                  style={{
-                    margin: '8px 0 0',
-                    padding: 0,
-                    listStyle: 'none',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: 4,
-                  }}
-                >
-                  {passo.avaliacoes.map((a, i) => (
-                    <li key={`${a.predicado.fato}-${i}`} style={{ ...s.mono, fontSize: 12.5 }}>
-                      {a.resultado ? '✓' : '✕'} {a.predicado.negado ? 'não ' : ''}
-                      {a.predicado.fato} {a.predicado.operador}
-                      {a.predicado.valor !== undefined && ` ${formatar(a.predicado.valor as ValorFato)}`}
-                      {' → '}
-                      {formatar(a.valor_observado)}
-                    </li>
-                  ))}
-                </ul>
-
-                <Fonte fundamento={passo.fundamento} />
-              </li>
-            ))}
-          </ol>
-        </Recolhivel>
-
-        {parecer.fatores_concorrentes.length > 0 && (
-          <Recolhivel
-            titulo="Fatores concorrentes"
-            contador={`${parecer.fatores_concorrentes.length} regra(s) venceram e perderam a precedência`}
-            aberto={aberto === 'concorrentes'}
-            aoAlternar={() => alternar('concorrentes')}
-          >
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-              {parecer.fatores_concorrentes.map((f) => (
-                <div key={f.regra_id} style={{ fontSize: 16, lineHeight: 1.5 }}>
-                  {f.descricao}
-                  <div style={{ ...s.mono, marginTop: 4 }}>
-                    {f.instancia} · precedência {f.precedencia}
-                  </div>
-                  <Fonte fundamento={f.fundamento} />
-                </div>
-              ))}
-            </div>
-          </Recolhivel>
-        )}
-
-        <Recolhivel
-          titulo="Fatos apurados"
-          contador={`${Object.keys(parecer.fatos).length} fatos alimentaram o motor`}
-          aberto={aberto === 'fatos'}
-          aoAlternar={() => alternar('fatos')}
-        >
-          <div>
-            {Object.values(parecer.fatos).map((f) => (
-              <Linha key={f.chave} rotulo={rotuloFato(f.chave)}>
-                <span style={{ fontVariantNumeric: 'tabular-nums' }}>{formatar(f.valor)}</span>
-                <div style={{ ...s.mono, fontSize: 12, marginTop: 3 }}>
-                  {f.origem}
-                  {f.procedencia && ` · ${f.procedencia.fonte}`}
-                </div>
-              </Linha>
-            ))}
-          </div>
-        </Recolhivel>
-      </div>
 
       <button
         type="button"
-        className="pc-primario"
+        className="pc-primario pc-nao-imprime"
         onClick={() => window.print()}
         style={{ ...s.primario, alignSelf: 'flex-start', marginTop: 40 }}
       >
@@ -304,14 +198,155 @@ export default function PainelParecer({
 
       <div style={{ ...s.mono, fontSize: 12, marginTop: 22, lineHeight: 1.7 }}>
         schema {parecer.schema_versao} · gerado em{' '}
-        {new Date(parecer.gerado_em).toLocaleString('pt-BR')} · reavaliado em{' '}
-        {msAvaliacao.toFixed(1)} ms
+        {new Date(parecer.gerado_em).toLocaleString('pt-BR')}
         {parecer.tem_fundamento_pendente && (
           <div style={{ marginTop: 8 }}>
             <Pendente texto="há fundamento não conferido nesta cadeia" />
           </div>
         )}
       </div>
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// O caminho — quatro etapas, na ordem em que a pergunta "por quê?" se desdobra
+// ---------------------------------------------------------------------------
+
+/**
+ * Substitui os três blocos independentes que existiam antes (rastro, fatores
+ * concorrentes, fatos apurados). Eram os mesmos dados, mas soltos: quem abria
+ * um não sabia que o outro existia, nem em que ordem lê-los. Aqui a numeração
+ * declara a ordem, e o resumo de cada etapa é legível sem abrir nada.
+ */
+
+
+/**
+ * Uma etapa do caminho. O trilho vertical à esquerda é o que faz as quatro
+ * lerem como sequência e não como quatro acordeões empilhados.
+ */
+function Etapa({
+  n,
+  titulo,
+  resumo,
+  alerta = false,
+  aberta,
+  aoAlternar,
+  ultima,
+  children,
+}: {
+  n: number
+  titulo: string
+  resumo: string
+  alerta?: boolean
+  aberta: boolean
+  aoAlternar: () => void
+  ultima: boolean
+  children: React.ReactNode
+}) {
+  return (
+    <div style={{ display: 'flex', gap: 16 }}>
+      <div style={{ flex: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div
+          aria-hidden
+          style={{
+            width: 28,
+            height: 28,
+            borderRadius: '50%',
+            border: `1px solid ${aberta ? CORES.verde : CORES.linhaForte}`,
+            background: aberta ? CORES.verde : 'transparent',
+            color: aberta ? CORES.branco : CORES.terra,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontFamily: SERIF,
+            fontSize: 15,
+            marginTop: 14,
+          }}
+        >
+          {n}
+        </div>
+        {!ultima && <div style={{ flex: 1, width: 1, background: CORES.linha, marginTop: 4 }} />}
+      </div>
+
+      <div style={{ flex: 1, minWidth: 0, borderBottom: ultima ? 'none' : `1px solid ${CORES.linhaSuave}` }}>
+        <button
+          type="button"
+          className="pc-toggle"
+          onClick={aoAlternar}
+          aria-expanded={aberta}
+          style={{
+            display: 'flex',
+            alignItems: 'baseline',
+            flexWrap: 'wrap',
+            gap: 12,
+            width: '100%',
+            background: 'transparent',
+            border: 'none',
+            padding: '16px 0',
+            textAlign: 'left',
+          }}
+        >
+          <span style={{ fontSize: 17 }}>{titulo}</span>
+          <span style={{ fontSize: 14, color: CORES.cinza }}>{resumo}</span>
+          {alerta && <Pendente />}
+          <span className="pc-nao-imprime" style={{ marginLeft: 'auto', fontSize: 14, color: CORES.verde }}>
+            {aberta ? 'ocultar' : 'ver'}
+          </span>
+        </button>
+        {/* Sempre no DOM, escondido por estilo: no papel o parecer tem de sair
+            com a cadeia inteira, e uma etapa fechada na tela não pode virar
+            fundamento omitido no PDF. `@media print` reabre todas. */}
+        <div
+          className="pc-etapa-detalhe"
+          style={{ padding: '2px 0 22px', display: aberta ? 'block' : 'none' }}
+        >
+          {children}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/** Uma regra do rastro, com os predicados que a fizeram passar ou parar. */
+function Regra({ passo }: { passo: PassoRastro }) {
+  return (
+    <div style={{ fontSize: 16, lineHeight: 1.5, opacity: passo.disparou ? 1 : 0.55 }}>
+      <div>
+        {passo.descricao}
+        <span
+          style={{
+            fontSize: 13,
+            color: passo.disparou ? CORES.verde : CORES.cinza,
+            marginLeft: 8,
+          }}
+        >
+          {passo.disparou ? 'disparou' : 'não disparou'}
+        </span>
+      </div>
+
+      <ul
+        style={{
+          margin: '8px 0 0',
+          padding: 0,
+          listStyle: 'none',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 4,
+        }}
+      >
+        {passo.avaliacoes.map((a, i) => (
+          <li key={`${a.predicado.fato}-${i}`} style={{ ...s.mono, fontSize: 12.5 }}>
+            {a.resultado ? '✓' : '✕'} {a.predicado.negado ? 'não ' : ''}
+            {a.predicado.fato} {a.predicado.operador}
+            {a.predicado.valor !== undefined && ` ${formatar(a.predicado.valor as ValorFato)}`}
+            {' → '}
+            {formatar(a.valor_observado)}
+          </li>
+        ))}
+      </ul>
+
+      <Fonte fundamento={passo.fundamento} />
     </div>
   )
 }
@@ -333,6 +368,19 @@ function Fonte({ fundamento }: { fundamento: Fundamento }) {
       {!fundamento.verificado && <Pendente />}
     </div>
   )
+}
+
+function Vazio({ children }: { children: React.ReactNode }) {
+  return (
+    <div style={{ fontSize: 15, color: CORES.cinza, lineHeight: 1.55, maxWidth: 560 }}>
+      {children}
+    </div>
+  )
+}
+
+function dataBR(iso: string): string {
+  const [ano, mes, dia] = iso.split('-')
+  return dia ? `${dia}/${mes}/${ano}` : iso
 }
 
 function formatar(v: ValorFato): string {
@@ -357,6 +405,12 @@ interface ContatoDerivado {
  * Quem entra na lista é consequência do parecer, não uma constante: o órgão
  * competente vem de `parecer.orgao`, e os acessórios vêm dos fatos que o
  * usuário declarou. Trocar a regra troca a lista.
+ *
+ * TODO: nomes de órgão abaixo (ex. "INEMA — Licenciamento") ainda são
+ * literais no código — não há tabela de contatos institucionais no schema
+ * (`documentation/schema.sql`). `telefone` já vem de `telefoneDe`, que é o
+ * ponto único a trocar por consulta ao banco quando a tabela existir; os
+ * nomes deveriam migrar para lá junto.
  */
 function contatosDe(parecer: Parecer, municipio: string | null): ContatoDerivado[] {
   const lista: ContatoDerivado[] = []

@@ -20,12 +20,31 @@ export const s = {
     lineHeight: 1.05,
   } satisfies CSSProperties,
   primario: {
-    background: CORES.verde,
+    background: CORES.carvao,
     color: CORES.branco,
     border: 'none',
     height: 54,
     padding: '0 26px',
     fontSize: 16,
+    borderRadius: 6,
+  } satisfies CSSProperties,
+  secundario: {
+    background: CORES.linhaSuave,
+    color: CORES.tinta,
+    border: `1px solid ${CORES.linhaForte}`,
+    height: 54,
+    padding: '0 26px',
+    fontSize: 16,
+    borderRadius: 6,
+  } satisfies CSSProperties,
+  escuro: {
+    background: CORES.carvaoForte,
+    color: CORES.branco,
+    border: 'none',
+    height: 54,
+    padding: '0 26px',
+    fontSize: 16,
+    borderRadius: 6,
   } satisfies CSSProperties,
   campoTexto: {
     height: 56,
@@ -34,6 +53,7 @@ export const s = {
     border: `1px solid ${CORES.linhaForte}`,
     fontSize: 19,
     fontVariantNumeric: 'tabular-nums',
+    borderRadius: 6,
   } satisfies CSSProperties,
   select: {
     width: '100%',
@@ -42,6 +62,7 @@ export const s = {
     background: CORES.branco,
     border: `1px solid ${CORES.linhaForte}`,
     fontSize: 18,
+    borderRadius: 6,
   } satisfies CSSProperties,
   fade: { animation: 'vfade 200ms ease' } satisfies CSSProperties,
   mono: { fontFamily: MONO, fontSize: 13, color: CORES.cinza } satisfies CSSProperties,
@@ -55,7 +76,7 @@ export function estiloSegmento(ativo: boolean, primeiro: boolean, alto = true): 
     padding: alto ? '0 20px' : '0 18px',
     border: 'none',
     borderLeft: primeiro ? 'none' : `1px solid ${CORES.linhaForte}`,
-    background: ativo ? CORES.verde : 'transparent',
+    background: ativo ? CORES.carvao : CORES.linhaSuave,
     color: ativo ? CORES.branco : CORES.tinta,
     fontSize: alto ? 16 : 15,
   }
@@ -71,6 +92,8 @@ export function GrupoSegmentado({ children }: { children: ReactNode }) {
         width: 'fit-content',
         maxWidth: '100%',
         background: CORES.branco,
+        borderRadius: 4,
+        overflow: 'hidden',
       }}
     >
       {children}
@@ -82,20 +105,29 @@ export function GrupoSegmentado({ children }: { children: ReactNode }) {
  * Marca de pendência. É o contrato de honestidade do projeto na tela: nada que
  * não foi conferido contra a fonte primária aparece sem esta etiqueta (C.6).
  */
-export function Pendente({ texto = 'a conferir' }: { texto?: string }) {
+export function Pendente({
+  texto = 'a conferir',
+  cor = CORES.terraClara,
+  corBorda = '#D8C09A',
+}: {
+  texto?: string
+  cor?: string
+  corBorda?: string
+}) {
   return (
     <span
       style={{
         fontSize: 11,
         letterSpacing: '.06em',
         textTransform: 'uppercase',
-        color: CORES.terraClara,
-        border: '1px solid #D8C09A',
+        color: cor,
+        border: `1px solid ${corBorda}`,
         padding: '2px 7px',
         whiteSpace: 'nowrap',
+        borderRadius: 4,
       }}
     >
-      {texto}
+
     </span>
   )
 }
@@ -104,71 +136,32 @@ export function Etiqueta({ children, cor }: { children: ReactNode; cor: string }
   return <div style={{ ...s.etiqueta, color: cor }}>{children}</div>
 }
 
-/** Bloco recolhível do painel direito. Um `aberto` por vez, controlado fora. */
-export function Recolhivel({
-  titulo,
-  contador,
-  aberto,
-  aoAlternar,
-  children,
-}: {
-  titulo: string
-  contador?: string
-  aberto: boolean
-  aoAlternar: () => void
-  children: ReactNode
-}) {
-  return (
-    <div style={{ borderBottom: `1px solid ${CORES.linha}` }}>
-      <button
-        type="button"
-        className="pc-toggle"
-        onClick={aoAlternar}
-        aria-expanded={aberto}
-        style={{
-          display: 'flex',
-          alignItems: 'baseline',
-          gap: 14,
-          width: '100%',
-          background: 'transparent',
-          border: 'none',
-          padding: '26px 0',
-          textAlign: 'left',
-        }}
-      >
-        <span style={s.secao}>{titulo}</span>
-        {contador && <span style={{ fontSize: 14, color: CORES.cinza }}>{contador}</span>}
-        <span style={{ marginLeft: 'auto', fontSize: 14, color: CORES.verde }}>
-          {aberto ? 'fechar' : 'abrir'}
-        </span>
-      </button>
-      {aberto && <div style={{ paddingBottom: 22 }}>{children}</div>}
-    </div>
-  )
-}
-
-/** Linha rótulo → valor, o par que o painel direito repete o tempo todo. */
-export function Linha({
-  rotulo,
-  valor,
-  children,
-}: {
-  rotulo: string
-  valor?: ReactNode
-  children?: ReactNode
-}) {
+/**
+ * Pendência do formulário (B.7). A mensagem sempre diz o que fazer e por quê —
+ * nunca "campo obrigatório". Não bloqueia nada: o motor devolve INDETERMINADO
+ * com o fato nomeado, e este aviso é o par visível dessa lacuna no formulário.
+ */
+export function Aviso({ children, erro = false }: { children: ReactNode; erro?: boolean }) {
   return (
     <div
+      role="status"
       style={{
         display: 'flex',
-        justifyContent: 'space-between',
-        gap: 20,
-        padding: '16px 0',
-        borderBottom: `1px solid ${CORES.linha}`,
+        gap: 8,
+        marginTop: 10,
+        fontSize: 13.5,
+        lineHeight: 1.5,
+        color: erro ? CORES.vermelho : CORES.cinzaEscuro,
+        maxWidth: 560,
       }}
     >
-      <span style={{ fontSize: 15, color: CORES.cinza }}>{rotulo}</span>
-      <span style={{ fontSize: 16, textAlign: 'right' }}>{valor ?? children}</span>
+      <span
+        aria-hidden
+        style={{ flex: 'none', color: erro ? CORES.vermelho : CORES.terraClara }}
+      >
+        {erro ? '!' : '→'}
+      </span>
+      <span>{children}</span>
     </div>
   )
 }
