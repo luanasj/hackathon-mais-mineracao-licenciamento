@@ -10,24 +10,26 @@
 import type { Instancia, Orgao } from '@/lib/schemas'
 
 export const CORES = {
-  fundo: '#FAF8F2',
-  painel: '#FFFDF8',
+  fundo: '#F6F5F3',
+  painel: '#FBFAF9',
   branco: '#FFFFFF',
   tinta: '#22201C',
   terra: '#6E4B2A',
   terraClara: '#8A6234',
   verde: '#4A5E36',
   vermelho: '#8C3A2B',
-  linha: '#DFDACD',
-  linhaForte: '#CBC4B4',
-  linhaSuave: '#EDE8DC',
+  linha: '#DAD9D4',
+  linhaForte: '#C6C4BE',
+  linhaSuave: '#E9E8E3',
   cinza: '#6B6862',
   cinzaEscuro: '#55524C',
-  cinzaClaro: '#8A8271',
-  barra: '#E7E2D5',
+  cinzaClaro: '#86847E',
+  barra: '#E3E2DD',
   mar: '#E9EDF0',
-  terraMapa: '#F1EEE6',
-  bordaMapa: '#C9C2B2',
+  terraMapa: '#EEEDEA',
+  bordaMapa: '#C4C2BC',
+  carvao: '#46443F',
+  carvaoForte: '#332F2B',
 } as const
 
 export const SERIF = "'Source Serif 4', Georgia, serif"

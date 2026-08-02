@@ -143,6 +143,7 @@ export default function BuscaProcesso({
             boxShadow: '0 12px 28px rgba(34, 32, 28, .14)',
             maxHeight: 340,
             overflowY: 'auto',
+            borderRadius: 8,
           }}
         >
           {sugestoes.map((r) => (
@@ -204,6 +205,7 @@ export default function BuscaProcesso({
             padding: 18,
             background: CORES.branco,
             border: `1px solid ${CORES.linhaForte}`,
+            borderRadius: 8,
           }}
         >
           <div style={{ fontFamily: SERIF, fontSize: 19 }}>
@@ -222,9 +224,10 @@ export default function BuscaProcesso({
               height: 46,
               padding: '0 18px',
               background: 'transparent',
-              border: `1px solid ${CORES.verde}`,
-              color: CORES.verde,
+              border: `1px solid ${CORES.carvao}`,
+              color: CORES.carvao,
               fontSize: 15,
+              borderRadius: 6,
             }}
           >
             Desenhar a área no mapa

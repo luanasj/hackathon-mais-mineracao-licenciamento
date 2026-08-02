@@ -14,7 +14,6 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Feature } from 'geojson'
 
 import { TIPOLOGIAS } from '@/data/fixtures'
-import { habilitacaoDe, statusDe } from '@/lib/fatos'
 import {
   PASSOS_SLIDER,
   ROTULO_FAIXA,
@@ -26,7 +25,7 @@ import {
 } from '@/lib/porte'
 import type { IndiceProcessos, RegistroIndice } from '@/lib/processos'
 import { carregarIndice } from '@/lib/processos'
-import type { IncidenciaMunicipal, ProcessoProps, StatusHabilitacao, Tipologia } from '@/lib/schemas'
+import type { IncidenciaMunicipal, ProcessoProps, Tipologia } from '@/lib/schemas'
 import { FASES_ANM, SUBSTANCIAS_FREQUENTES } from '@/lib/vocabulario'
 import type { CampoFormulario, Pendencia } from '@/lib/validacao'
 import { pendenciaDe, validar } from '@/lib/validacao'
@@ -54,18 +53,6 @@ const USOS_HIDRICOS: { k: UsoHidrico; rotulo: string }[] = [
   { k: 'lancamento', rotulo: 'Lançamento' },
   { k: 'barramento', rotulo: 'Barramento' },
 ]
-
-const ROTULO_STATUS: Record<StatusHabilitacao, string> = {
-  habilitado: 'habilitado no GAC',
-  nao_habilitado: 'não habilitado',
-  sem_evidencia: 'sem evidência pública',
-}
-
-const COR_STATUS: Record<StatusHabilitacao, string> = {
-  habilitado: CORES.verde,
-  nao_habilitado: CORES.vermelho,
-  sem_evidencia: CORES.terraClara,
-}
 
 export default function ParecerCompetencia() {
   const { estado, despachar, tipologia, parecer } = useFormulario()
@@ -295,7 +282,6 @@ export default function ParecerCompetencia() {
                     ) : (
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                         {municipios.map((m) => {
-                          const st = statusDe(m)
                           const incidencia = incidenciaDe(m)
                           return (
                             <div key={m}>
@@ -305,12 +291,6 @@ export default function ParecerCompetencia() {
                                   {pct(incidencia.proporcao)} · {fmt2(incidencia.area_ha)} ha
                                 </span>
                               )}
-                              <div
-                                style={{ fontSize: 12, color: COR_STATUS[st], marginTop: 2 }}
-                              >
-                                {ROTULO_STATUS[st]}
-                                {habilitacaoDe(m)?.nivel ? ` · ${habilitacaoDe(m)?.nivel}` : ''}
-                              </div>
                             </div>
                           )
                         })}
@@ -387,8 +367,15 @@ export default function ParecerCompetencia() {
             {/* Tipologia — define o parâmetro de porte, as faixas e os condicionais.
                 Em destaque, acima do mapa: é a primeira decisão que reconfigura tudo
                 o que vem depois. */}
-            <div style={{ marginTop: 26 }}>
-              <label htmlFor="tipologia" style={s.rotuloCampo}>
+            <div
+              style={{
+                marginTop: 26,
+                background: CORES.carvao,
+                borderRadius: 14,
+                padding: '16px 20px 18px',
+              }}
+            >
+              <label htmlFor="tipologia" style={{ ...s.rotuloCampo, fontSize: 13, color: '#D8C09A' }}>
                 Tipo de operação
               </label>
               <SeletorTipologia
@@ -404,8 +391,8 @@ export default function ParecerCompetencia() {
                     alignItems: 'center',
                     gap: 10,
                     flexWrap: 'wrap',
-                    fontSize: 13,
-                    color: CORES.cinza,
+                    fontSize: 12,
+                    color: 'rgba(255,255,255,0.65)',
                     marginTop: 8,
                   }}
                 >
@@ -414,7 +401,9 @@ export default function ParecerCompetencia() {
                   </span>
                   {/* C.6 — faixa de porte não conferida contra a CEPRAM não
                       pode aparecer como se estivesse. */}
-                  {!tipologia.fundamento.verificado && <Pendente />}
+                  {!tipologia.fundamento.verificado && (
+                    <Pendente cor="#E6C98A" corBorda="rgba(255,255,255,0.35)" />
+                  )}
                 </div>
               )}
               <AvisoCampo pendencias={pendencias} campo="tipologia" />
@@ -528,9 +517,9 @@ export default function ParecerCompetencia() {
 
           {/* Condicionais — só os que a tipologia ativa (B.5). */}
           {condicionais.length > 0 && (
-            <section style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+            <section style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 32 }}>
               {condicionais.includes('supressao_vegetacao') && (
-                <div>
+                <div style={{ flex: '1 1 260px' }}>
                   <div style={{ fontSize: 15, color: CORES.terra }}>
                     Supressão de vegetação nativa
                   </div>
@@ -584,6 +573,7 @@ export default function ParecerCompetencia() {
                           border: `1px solid ${CORES.linhaForte}`,
                           fontVariantNumeric: 'tabular-nums',
                           fontSize: 17,
+                          borderRadius: 6,
                         }}
                       />
                       <span style={{ fontSize: 15, color: CORES.cinza }}>hectares</span>
@@ -596,7 +586,7 @@ export default function ParecerCompetencia() {
               )}
 
               {condicionais.includes('recurso_hidrico') && (
-                <div>
+                <div style={{ flex: '1 1 260px' }}>
                   <div style={{ fontSize: 15, color: CORES.terra }}>
                     Interferência em recurso hídrico
                   </div>
@@ -630,7 +620,7 @@ export default function ParecerCompetencia() {
               )}
 
               {condicionais.includes('explosivos') && (
-                <div>
+                <div style={{ flex: '1 1 260px' }}>
                   <div style={{ fontSize: 15, color: CORES.terra }}>
                     Uso de explosivos no desmonte
                   </div>
@@ -703,6 +693,8 @@ export default function ParecerCompetencia() {
                   flexDirection: 'column',
                   border: `1px solid ${CORES.linhaForte}`,
                   background: CORES.branco,
+                  borderRadius: 4,
+                  overflow: 'hidden',
                 }}
               >
                 <button
@@ -926,6 +918,7 @@ function SeletorLivre({
           background: CORES.branco,
           padding: '0 8px',
           fontSize: 16,
+          borderRadius: 6,
         }}
       />
       <datalist id={listaId}>
@@ -987,7 +980,9 @@ function SeletorTipologia({
           justifyContent: 'space-between',
           gap: 10,
           textAlign: 'left',
-          color: atual ? CORES.tinta : CORES.cinzaClaro,
+          background: CORES.cinzaEscuro,
+          border: 'none',
+          color: atual ? CORES.branco : 'rgba(255,255,255,0.5)',
           cursor: 'pointer',
         }}
       >
@@ -1002,7 +997,7 @@ function SeletorTipologia({
             height: 0,
             borderLeft: '5px solid transparent',
             borderRight: '5px solid transparent',
-            borderTop: `6px solid ${CORES.terra}`,
+            borderTop: '6px solid #D8C09A',
             transform: aberto ? 'rotate(180deg)' : 'none',
           }}
         />
@@ -1020,11 +1015,12 @@ function SeletorTipologia({
             margin: '4px 0 0',
             padding: 0,
             listStyle: 'none',
-            background: CORES.branco,
-            border: `1px solid ${CORES.linhaForte}`,
-            boxShadow: '0 12px 28px rgba(34, 32, 28, .14)',
+            background: '#605D55',
+            border: '1px solid rgba(255,255,255,0.15)',
+            boxShadow: '0 12px 28px rgba(0,0,0,.3)',
             maxHeight: 360,
             overflowY: 'auto',
+            borderRadius: 8,
           }}
         >
           {tipologias.map((t) => (
@@ -1033,7 +1029,7 @@ function SeletorTipologia({
                 type="button"
                 role="option"
                 aria-selected={t.id === selecionadoId}
-                className="pc-opcao"
+                className="pc-opcao-escuro"
                 onClick={() => {
                   onEscolher(t.id)
                   setAberto(false)
@@ -1047,12 +1043,13 @@ function SeletorTipologia({
                   padding: '12px 14px',
                   background: 'transparent',
                   border: 'none',
-                  borderBottom: `1px solid ${CORES.linhaSuave}`,
+                  borderBottom: '1px solid rgba(255,255,255,0.1)',
+                  color: CORES.branco,
                 }}
               >
                 <span
                   aria-hidden
-                  style={{ width: 14, flex: 'none', color: CORES.verde, fontSize: 14 }}
+                  style={{ width: 14, flex: 'none', color: '#9BC77F', fontSize: 14 }}
                 >
                   {t.id === selecionadoId ? '✓' : ''}
                 </span>
@@ -1108,6 +1105,7 @@ function Modal({
           maxHeight: '92vh',
           overflowY: 'auto',
           padding: 'clamp(20px, 4vw, 32px)',
+          borderRadius: 8,
         }}
       >
         <div
@@ -1123,7 +1121,15 @@ function Modal({
             type="button"
             onClick={onFechar}
             aria-label="Fechar"
-            style={{ background: 'none', border: 'none', fontSize: 22, color: CORES.cinza }}
+            style={{
+              width: 36,
+              height: 36,
+              background: CORES.linhaSuave,
+              border: 'none',
+              borderRadius: 6,
+              fontSize: 18,
+              color: CORES.cinzaEscuro,
+            }}
           >
             ✕
           </button>

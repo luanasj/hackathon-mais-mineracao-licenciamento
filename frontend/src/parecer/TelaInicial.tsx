@@ -42,10 +42,10 @@ export default function TelaInicial({
         style={{
           borderBottom: `2px solid ${CORES.terra}`,
           background: CORES.branco,
-          padding: 'clamp(24px, 6vw, 48px) clamp(20px, 6vw, 56px)',
+          padding: 'clamp(24px, 6vw, 48px) clamp(20px, 6vw, 20px)',
         }}
       >
-        <div style={{ maxWidth: 920, margin: '0 auto' }}>
+        <div style={{ maxWidth: 1240, margin: '0 auto' }}>
           <div
             style={{
               fontSize: 13,
@@ -91,15 +91,7 @@ export default function TelaInicial({
           padding: 'clamp(28px, 6vw, 56px) clamp(20px, 6vw, 56px) clamp(48px, 10vw, 96px)',
         }}
       >
-        <div
-          style={{
-            maxWidth: 920,
-            margin: '0 auto',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 30,
-          }}
-        >
+        <div className="ti-grid" style={{ maxWidth: 1240, margin: '0 auto' }}>
           {/* Caminho 1 — o número. */}
           <section>
             <BuscaProcesso
@@ -111,41 +103,31 @@ export default function TelaInicial({
             />
           </section>
 
-          <Ou />
-
           {/* Caminho 2 — o desenho. Concluir aqui equivale a informar o número:
               a mesma tela de caracterização abre, só que sem nada preenchido. */}
-          <section ref={mapaRef}>
+          <section className="ti-col-mapa" ref={mapaRef}>
+            <div
+              style={{
+                fontSize: 12,
+                letterSpacing: '.14em',
+                textTransform: 'uppercase',
+                color: CORES.cinzaClaro,
+                marginBottom: 6,
+              }}
+            >
+              ou
+            </div>
             <div style={{ fontSize: 15, color: CORES.terra, marginBottom: 12 }}>
               Área sem processo na ANM
             </div>
             <MapaDesenho
-              altura="clamp(320px, 52vh, 520px)"
+              altura="clamp(360px, 60vh, 600px)"
               rotuloConcluir="Usar esta área"
               onConcluir={onConcluirDesenho}
             />
           </section>
         </div>
       </main>
-    </div>
-  )
-}
-
-function Ou() {
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-      <span style={{ flex: 1, height: 1, background: CORES.linha }} />
-      <span
-        style={{
-          fontSize: 12,
-          letterSpacing: '.14em',
-          textTransform: 'uppercase',
-          color: CORES.cinzaClaro,
-        }}
-      >
-        ou
-      </span>
-      <span style={{ flex: 1, height: 1, background: CORES.linha }} />
     </div>
   )
 }

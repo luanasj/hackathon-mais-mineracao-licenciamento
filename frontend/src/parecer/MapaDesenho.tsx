@@ -313,6 +313,7 @@ export default function MapaDesenho({
             fontSize: 15,
             color: CORES.cinzaEscuro,
             lineHeight: 1.55,
+            borderRadius: 8,
           }}
         >
           Este navegador não expõe WebGL2, necessário para desenhar no mapa. Use a busca por
@@ -327,6 +328,7 @@ export default function MapaDesenho({
             border: `1px solid ${CORES.linhaForte}`,
             background: CORES.terraMapa,
             overflow: 'hidden',
+            borderRadius: 8,
           }}
         />
       )}
@@ -381,13 +383,7 @@ export default function MapaDesenho({
             type="button"
             onClick={limpar}
             disabled={calculando}
-            style={{
-              height: 46,
-              padding: '0 18px',
-              background: 'transparent',
-              border: `1px solid ${CORES.linhaForte}`,
-              fontSize: 15,
-            }}
+            style={{ ...s.secundario, height: 46, padding: '0 18px', fontSize: 15 }}
           >
             Limpar
           </button>
@@ -396,13 +392,7 @@ export default function MapaDesenho({
               type="button"
               onClick={onCancelar}
               disabled={calculando}
-              style={{
-                height: 46,
-                padding: '0 18px',
-                background: 'transparent',
-                border: `1px solid ${CORES.linhaForte}`,
-                fontSize: 15,
-              }}
+              style={{ ...s.escuro, height: 46, padding: '0 18px', fontSize: 15 }}
             >
               Cancelar
             </button>

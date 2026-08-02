@@ -218,6 +218,7 @@ export default function MapaProcesso({ geometria, nivel, altura = 340, ref }: Ma
           fontSize: 15,
           color: CORES.cinzaEscuro,
           lineHeight: 1.55,
+          borderRadius: 8,
         }}
       >
         {falhou}
@@ -235,6 +236,8 @@ export default function MapaProcesso({ geometria, nivel, altura = 340, ref }: Ma
         width: '100%',
         border: `1px solid ${CORES.linhaForte}`,
         background: CORES.terraMapa,
+        borderRadius: 8,
+        overflow: 'hidden',
       }}
     />
   )
