@@ -20,7 +20,25 @@ AMOSTRA: dict[str, tuple[str, str, str]] = {
     "2904605": ("Brumado", "magnesita", "a confirmar por C.2"),
     "2915205": ("Itagibá", "níquel", "a confirmar por C.2"),
     "2901353": ("Andorinha", "preenchimento de ramo — perfil a confirmar", "a confirmar por C.2"),
-    "2928406": ("Santaluz", "preenchimento de ramo — perfil a confirmar", "a confirmar por C.2"),
+    # ⚠️ 2928406 é Santa Rita de Cássia na malha IBGE 2025, NÃO Santaluz
+    # (Santaluz é 2928000). A constante dizia "Santaluz" e `prep.py` sobrescreve
+    # o nome oficial da malha pelo daqui, então `municipios10.geojson` saía com
+    # o nome errado sob o código certo — enquanto `municipios_habilitados.json`
+    # e as licenças do research_pipeline usam o nome certo para o mesmo código.
+    # Como o join de habilitação é POR NOME (`frontend/src/lib/fatos.ts:95`), a
+    # divergência virava `sem_evidencia` silencioso.
+    #
+    # Corrigido o NOME, não o código: trocar o código mudaria `CODIGOS`, que
+    # filtra quais processos entram em `processos.geojson` (prep.py:236), e
+    # Santa Rita de Cássia é o município onde estão todos os 34 processos que
+    # cruzam a divisa BA/PI — a base do sinal de "dois estados". Se a intenção
+    # do recorte era mesmo Santaluz, a troca é para "2928000" e exige rodar
+    # `prep.py` de novo; é decisão de produto, não de correção de bug.
+    "2928406": (
+        "Santa Rita de Cássia",
+        "divisa BA/PI — 34 poligonais que saem do estado",
+        "a confirmar por C.2",
+    ),
 }
 
 CODIGOS = list(AMOSTRA.keys())
