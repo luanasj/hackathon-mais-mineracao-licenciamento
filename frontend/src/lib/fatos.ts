@@ -88,19 +88,31 @@ function dobrar(s: string): string {
  * Ausente da base ⇒ `sem_evidencia`, nunca `nao_habilitado`. A diferença é o
  * produto inteiro: "não encontramos evidência" é honesto e gera pedido LAI;
  * "não é habilitado" seria uma afirmação normativa sem fonte.
+ *
+ * `municipios` é injetável (default = fixture do bundle) para o backend poder
+ * passar a base real lida do SQLite (`backend/src/db.ts`) sem duplicar lógica.
  */
-export function habilitacaoDe(nome: string): MunicipioHabilitacao | null {
+export function habilitacaoDe(
+  nome: string,
+  municipios: readonly MunicipioHabilitacao[] = MUNICIPIOS,
+): MunicipioHabilitacao | null {
   const alvo = dobrar(nome)
-  return MUNICIPIOS.find((m) => dobrar(m.nm_mun) === alvo) ?? null
+  return municipios.find((m) => dobrar(m.nm_mun) === alvo) ?? null
 }
 
-export function statusDe(nome: string): StatusHabilitacao {
-  return habilitacaoDe(nome)?.status ?? 'sem_evidencia'
+export function statusDe(
+  nome: string,
+  municipios: readonly MunicipioHabilitacao[] = MUNICIPIOS,
+): StatusHabilitacao {
+  return habilitacaoDe(nome, municipios)?.status ?? 'sem_evidencia'
 }
 
-export function tipologiaPorId(id: string | null): Tipologia | null {
+export function tipologiaPorId(
+  id: string | null,
+  tipologias: readonly Tipologia[] = TIPOLOGIAS,
+): Tipologia | null {
   if (!id) return null
-  return TIPOLOGIAS.find((t) => t.id === id) ?? null
+  return tipologias.find((t) => t.id === id) ?? null
 }
 
 // ---------------------------------------------------------------------------
@@ -133,9 +145,9 @@ function fatosDeArea(e: EstadoFormulario): Fato[] {
 // Fatos declarados — o formulário
 // ---------------------------------------------------------------------------
 
-function fatosDeclarados(e: EstadoFormulario): Fato[] {
+function fatosDeclarados(e: EstadoFormulario, tipologias: readonly Tipologia[]): Fato[] {
   const out: Fato[] = []
-  const tip = tipologiaPorId(e.tipologia_id)
+  const tip = tipologiaPorId(e.tipologia_id, tipologias)
 
   if (e.substancia) {
     // Substância vem do SIGMINE; se o usuário sobrescreveu, deixa de ser
@@ -208,15 +220,19 @@ function fatosDeclarados(e: EstadoFormulario): Fato[] {
  * de concluir não é a discordância entre eles, é a ausência de habilitação
  * uniforme sob a mesma poligonal.
  */
-function fatosDeHabilitacao(e: EstadoFormulario): Fato[] {
+function fatosDeHabilitacao(
+  e: EstadoFormulario,
+  tipologias: readonly Tipologia[],
+  municipios: readonly MunicipioHabilitacao[],
+): Fato[] {
   const nomes: string[] =
     e.processo?.municipios ?? e.area?.municipios.map((m) => m.nm_mun) ?? []
   if (nomes.length === 0) return []
 
-  const status = nomes.map(statusDe)
+  const status = nomes.map((n) => statusDe(n, municipios))
   const principal = nomes[0] // já vem ordenado por proporção decrescente (A.3)
-  const hab = habilitacaoDe(principal)
-  const tip = tipologiaPorId(e.tipologia_id)
+  const hab = habilitacaoDe(principal, municipios)
+  const tip = tipologiaPorId(e.tipologia_id, tipologias)
 
   const semEvidencia = nomes.filter((_, i) => status[i] === 'sem_evidencia')
   const uniformeHabilitado =
@@ -246,7 +262,7 @@ function fatosDeHabilitacao(e: EstadoFormulario): Fato[] {
     // Competência abstrata não é habilitação concreta: o município pode estar
     // habilitado e ainda assim não ter ESTA tipologia entre as delegadas.
     const delegadaEmTodos = nomes.every((n) =>
-      (habilitacaoDe(n)?.tipologias_delegadas ?? []).includes(tip.id),
+      (habilitacaoDe(n, municipios)?.tipologias_delegadas ?? []).includes(tip.id),
     )
     out.push(
       fato('tipologia_delegada_ao_municipio', delegadaEmTodos, 'cadastro', procedencia),
@@ -260,13 +276,26 @@ function fatosDeHabilitacao(e: EstadoFormulario): Fato[] {
 // Entrada única
 // ---------------------------------------------------------------------------
 
-/** O FactBase completo do estado atual. É a única coisa que o motor recebe. */
-export function construirFactBase(e: EstadoFormulario): FactBase {
+/** Fontes de dado normativo, injetáveis para não depender do bundle. */
+export interface FontesFactBase {
+  tipologias?: readonly Tipologia[]
+  municipios?: readonly MunicipioHabilitacao[]
+}
+
+/**
+ * O FactBase completo do estado atual. É a única coisa que o motor recebe.
+ *
+ * Sem `fontes`, usa TIPOLOGIAS/MUNICIPIOS do bundle (frontend, SPA estático).
+ * O backend passa a base real lida do SQLite (`backend/src/db.ts`).
+ */
+export function construirFactBase(e: EstadoFormulario, fontes: FontesFactBase = {}): FactBase {
+  const tipologias = fontes.tipologias ?? TIPOLOGIAS
+  const municipios = fontes.municipios ?? MUNICIPIOS
   return comporFactBase(
     fatosDeProcesso(e),
     fatosDeArea(e),
-    fatosDeclarados(e),
-    fatosDeHabilitacao(e),
+    fatosDeclarados(e, tipologias),
+    fatosDeHabilitacao(e, tipologias, municipios),
   )
 }
 
