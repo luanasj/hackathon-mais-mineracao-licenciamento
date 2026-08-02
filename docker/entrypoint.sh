@@ -8,6 +8,8 @@ if [ ! -f "$DB_PATH" ]; then
     sqlite3 "$DB_PATH" < /app/documentation/schema.sql
     sqlite3 "$DB_PATH" < /app/documentation/seed.sql
     sqlite3 "$DB_PATH" < /app/documentation/seed_regras.sql
+    # Depois do seed: o `rebuild` do FTS5 indexa as linhas já inseridas.
+    sqlite3 "$DB_PATH" < /app/documentation/schema_fts.sql
     echo "Banco criado."
 else
     echo "Banco já existe em $DB_PATH — reusando (delete o arquivo pra recriar do zero)."

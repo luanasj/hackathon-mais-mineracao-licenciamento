@@ -19,5 +19,12 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "../frontend/src/lib", "../frontend/src/data", "../frontend/src/state"]
+  "include": [
+    "src",
+    "test",
+    "../frontend/src/lib",
+    "../frontend/src/data",
+    "../frontend/src/state",
+    "../frontend/src/parecer/dados.ts"
+  ]
 }
