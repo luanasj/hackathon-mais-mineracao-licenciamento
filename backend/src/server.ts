@@ -37,7 +37,7 @@ import {
 } from './db.ts'
 import { ranquear } from './ranking.ts'
 import type { BasesRanking } from './ranking.ts'
-import type { EntradaRanking, IncidenciaEntrada } from './ranking-tipos.ts'
+import type { EntradaRanking, IncidenciaEntrada } from '@/lib/ranking-tipos'
 
 const TIPOLOGIAS = carregarTipologias()
 const MUNICIPIOS = carregarMunicipios()

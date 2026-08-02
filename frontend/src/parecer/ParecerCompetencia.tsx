@@ -38,6 +38,7 @@ import type { ResultadoDesenho } from './MapaDesenho'
 import MapaProcesso from './MapaProcesso'
 import type { MapaHandle, NivelZoom } from './MapaProcesso'
 import PainelParecer from './PainelParecer'
+import PainelRanking from './PainelRanking'
 import TelaInicial from './TelaInicial'
 import { CORES, SERIF, fmt, fmt2, nomeOrgao, pct } from './dados'
 import { baixarPedidoLai } from './lai'
@@ -724,6 +725,12 @@ export default function ParecerCompetencia() {
             temArea={temArea}
             municipioPrincipal={municipioPrincipal}
           />
+
+          {/* Viabilidade de protocolo. Vem do backend e degrada sozinho se ele
+              não estiver no ar — nada acima desta linha depende de rede. */}
+          <div style={{ marginTop: 28, borderTop: `1px solid ${CORES.linha}`, paddingTop: 20 }}>
+            <PainelRanking />
+          </div>
         </div>
       </div>
 
